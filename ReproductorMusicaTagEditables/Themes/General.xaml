@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+
+    <Color x:Key="principal">#222222</Color>
+    <Color x:Key="secundario">#060708</Color>
+    
+    
+    <SolidColorBrush x:Key="bordeVentana" Color="#FF505050"/>
+    <SolidColorBrush x:Key="principalBrush" Color="#FF262626"/>
+    <SolidColorBrush x:Key="secundarioBrush" Color="#FF201F1F"/>
+
+    
+    
+    <LinearGradientBrush x:Key="gradientePrincipal" StartPoint="0,1" EndPoint="1,0">
+        <GradientStop Color="{StaticResource principal}" Offset="0"></GradientStop>
+        <GradientStop Color="{StaticResource secundario}" Offset="1"></GradientStop>
+    </LinearGradientBrush>
+
+
+</ResourceDictionary>
