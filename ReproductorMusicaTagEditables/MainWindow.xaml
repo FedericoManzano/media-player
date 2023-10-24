@@ -6,6 +6,8 @@
         xmlns:local="clr-namespace:ReproductorMusicaTagEditables"
         xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
         xmlns:mp="clr-namespace:ReproductorMusicaTagEditables.Controls.Menu"
+        xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
+        xmlns:view="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View"
         mc:Ignorable="d"
         Title="Reproductor de Música" Height="720" Width="1150"
         WindowStartupLocation="CenterScreen"
@@ -14,6 +16,19 @@
         Background="Transparent"
         MouseDown="Arrastrar_Ventana">
 
+
+    <Window.DataContext>
+        <viewModel:ReproductorViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type viewModel:PrincipalViewModel}">
+            <view:PrincipalView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:ArtistaViewModel}">
+            <view:ArtistaView/>
+        </DataTemplate>
+    </Window.Resources>
 
     <Border CornerRadius="10" 
             BorderBrush="{StaticResource bordeVentana}" 
@@ -28,26 +43,15 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <mp:Menu/>
+                <mp:Menu CommandInicio="{Binding PrincipalCommand}"
+                         CommandArtistas="{Binding ArtistasCommand}"/>
 
                 <!-- Main Section -->
                 <Grid Grid.Column="1" Margin="30">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="30"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="50"/>
-                        <RowDefinition Height="30"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="90"/>
-                    </Grid.RowDefinitions>
 
-                    <TextBlock Grid.Row="1" 
-                               Foreground="White"
-                               FontSize="35"
-                               VerticalAlignment="Center">
-                        Página Principal
-                    </TextBlock>
-                    
+                    <ContentControl Content="{Binding CurrentView}"/>
+
+
                 </Grid>
                 
             </Grid>

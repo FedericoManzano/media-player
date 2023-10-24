@@ -1,19 +1,17 @@
 ﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 {
     public abstract class ReproductorViewModelBase : ViewModelBase
     {
 
-        private List<string> _paths = new List<string>();
-        private List<Cancion> _canciones = new List<Cancion>();
-        private List<Cancion> _cancionesFiltradas = new List<Cancion>();
+        protected List<string> _paths = new List<string>();
+        protected List<Cancion> _canciones = new List<Cancion>();
+        protected List<Cancion> _cancionesFiltradas = new List<Cancion>();
+        protected string _titulo;
+
 
         public List<string> Paths 
         { 
@@ -42,6 +40,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                 OnPropertyChanged(nameof(CancionesFiltradas));
             } 
         }
+        public string Titulo { get => _titulo; set => _titulo = value; }
+
 
 
 

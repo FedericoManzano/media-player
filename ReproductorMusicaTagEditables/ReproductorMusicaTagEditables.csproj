@@ -106,6 +106,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Mvvm\View\ArtistaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mvvm\View\PrincipalView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\General.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -113,8 +121,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mvvm\Model\Cancion.cs" />
+    <Compile Include="Mvvm\ViewModel\ArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
+    <Compile Include="Mvvm\ViewModel\PrincipalViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />
+    <Compile Include="Mvvm\View\ArtistaView.xaml.cs">
+      <DependentUpon>ArtistaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\PrincipalView.xaml.cs">
+      <DependentUpon>PrincipalView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

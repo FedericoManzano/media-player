@@ -12,6 +12,8 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Themes\General.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\Menu\Menu.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\MainWindow.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Mvvm\View\ArtistaView.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Mvvm\View\PrincipalView.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\App.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\ReproductorMusicaTagEditables_MarkupCompile.cache
@@ -19,6 +21,8 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\App.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\Menu\Menu.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\MainWindow.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Mvvm\View\ArtistaView.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Mvvm\View\PrincipalView.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\ReproductorMusicaTagEditables.g.resources
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\ReproductorMusicaTagEditables.Properties.Resources.resources
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\ReproductorMusicaTagEditables.csproj.GenerateResource.cache

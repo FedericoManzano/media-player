@@ -39,8 +39,8 @@
             <!-- Botones del menú -->
             <RadioButton Style="{StaticResource btnMenu}" 
                          IsChecked="True"
-                         Command="{Binding ElementName=menuLateral,Path=Command}">
-                <StackPanel Orientation="Horizontal">
+                         Command="{Binding ElementName=menuLateral,Path=CommandInicio}">
+                <StackPanel Orientation="Horizontal" Cursor="">
                     <fa:IconImage Icon="List"
                                Style="{StaticResource iconoItemMenu}"></fa:IconImage>
                     <TextBlock Text="Todas las Pista" 
@@ -48,7 +48,7 @@
                 </StackPanel>
             </RadioButton>
             <RadioButton Style="{StaticResource btnMenu}"
-                         Command="{Binding ElementName=menuLateral,Path=Command}">
+                         Command="{Binding ElementName=menuLateral,Path=CommandArtistas}">
                 <StackPanel Orientation="Horizontal">
                     <fa:IconImage Icon="Person"
                    Style="{StaticResource iconoItemMenu}"></fa:IconImage>
@@ -57,7 +57,7 @@
                 </StackPanel>
             </RadioButton>
             <RadioButton Style="{StaticResource btnMenu}"
-                         Command="{Binding ElementName=menuLateral,Path=Command}">
+                         Command="{Binding ElementName=menuLateral,Path=CommandAlbumes}">
                 <StackPanel Orientation="Horizontal">
                     <fa:IconImage Icon="CompactDisc"
                                Style="{StaticResource iconoItemMenu}"></fa:IconImage>
@@ -66,12 +66,21 @@
                 </StackPanel>
             </RadioButton>
             <RadioButton Style="{StaticResource btnMenu}"
-                         Command="{Binding ElementName=menuLateral,Path=Command}">
+                         Command="{Binding ElementName=menuLateral,Path=CommandGeneros}">
                 <StackPanel Orientation="Horizontal">
                     <fa:IconImage Icon="VenusMars"
                    Style="{StaticResource iconoItemMenu}"></fa:IconImage>
                     <TextBlock Text="Géneros" 
                 Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}"
+                         Command="{Binding ElementName=menuLateral,Path=CommandListas}">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="VenusMars"
+                                   Style="{StaticResource iconoItemMenu}"></fa:IconImage>
+                    <TextBlock Text="Géneros" 
+                               Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
             </RadioButton>
         </StackPanel>

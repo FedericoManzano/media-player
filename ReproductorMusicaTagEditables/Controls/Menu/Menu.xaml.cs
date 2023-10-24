@@ -12,13 +12,52 @@ namespace ReproductorMusicaTagEditables.Controls.Menu
             InitializeComponent();
         }
 
-        public static readonly DependencyProperty CommandProperty =
-            DependencyProperty.Register("Command", typeof(ICommand), typeof(Menu));
+        public static readonly DependencyProperty CommandInicioProperty =
+            DependencyProperty.Register("CommandInicio", typeof(ICommand), typeof(Menu));
 
-        public ICommand Command
+        public ICommand CommandInicio
         {
-            get => (ICommand)GetValue(CommandProperty); 
-            set => SetValue(CommandProperty, value);
+            get => (ICommand)GetValue(CommandInicioProperty); 
+            set => SetValue(CommandInicioProperty, value);
         }
+
+
+        public static readonly DependencyProperty CommandArtistasProperty =
+            DependencyProperty.Register("CommandArtistas", typeof(ICommand), typeof(Menu));
+
+        public ICommand CommandArtistas
+        {
+            get => (ICommand)GetValue(CommandArtistasProperty);
+            set => SetValue(CommandArtistasProperty, value);
+        }
+
+        public static readonly DependencyProperty CommandAlbumesProperty =
+            DependencyProperty.Register("CommandAlbumes", typeof(ICommand), typeof(Menu));
+
+        public ICommand CommandAlbumes
+        {
+            get => (ICommand)GetValue(CommandAlbumesProperty);
+            set => SetValue(CommandAlbumesProperty, value);
+        }
+
+
+        public static readonly DependencyProperty CommandGenerosProperty =
+            DependencyProperty.Register("CommandGeneros", typeof(ICommand), typeof(Menu));
+
+        public ICommand CommandGeneros
+        {
+            get => (ICommand)GetValue(CommandGenerosProperty);
+            set => SetValue(CommandGenerosProperty, value);
+        }
+
+        public static readonly DependencyProperty CommandListasProperty =
+            DependencyProperty.Register("CommandListas", typeof(ICommand), typeof(Menu));
+
+        public ICommand CommandListas
+        {
+            get => (ICommand)GetValue(CommandListasProperty);
+            set => SetValue(CommandListasProperty, value);
+        }
+
     }
 }

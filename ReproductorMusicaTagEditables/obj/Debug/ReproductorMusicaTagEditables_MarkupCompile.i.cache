@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\App.xaml
-4-687075564
+61169565348
 
-121675226863
+16758054771
 171722907272
-Controls\Menu\MenuPrincipalTheme.xaml;Controls\Menu\Menu.xaml;MainWindow.xaml;Themes\General.xaml;
+Controls\Menu\MenuPrincipalTheme.xaml;Controls\Menu\Menu.xaml;MainWindow.xaml;Mvvm\View\ArtistaView.xaml;Mvvm\View\PrincipalView.xaml;Themes\General.xaml;
 
-False
+True
 
