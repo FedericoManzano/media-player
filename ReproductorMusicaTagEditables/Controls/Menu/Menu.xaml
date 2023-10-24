@@ -1,13 +1,13 @@
 ﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.Menu.Menu"
+              xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
-             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.Menu"
+            
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="250"
-             x:Name="menuLateral">
+             x:Name="menuLateral" Cursor="">
     <Control.Resources>
         <ResourceDictionary Source="/Controls/Menu/MenuPrincipalTheme.xaml"/>
     </Control.Resources>
@@ -21,7 +21,7 @@
             <!-- Logo -->
             <StackPanel Style="{StaticResource pilaElementos}">
                 <Border Style="{StaticResource logoBorde}">
-                    <fa:IconImage Icon="Music" 
+                    <fa:PackIconFontAwesome Kind="MusicSolid" 
                    Style="{StaticResource logoIcon}"/>
                 </Border>
                 <StackPanel Margin="7 0 0 0">
@@ -41,8 +41,8 @@
                          IsChecked="True"
                          Command="{Binding ElementName=menuLateral,Path=CommandInicio}">
                 <StackPanel Orientation="Horizontal" Cursor="">
-                    <fa:IconImage Icon="List"
-                               Style="{StaticResource iconoItemMenu}"></fa:IconImage>
+                    <fa:PackIconFontAwesome Kind="ListAltRegular"
+                               Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
                     <TextBlock Text="Todas las Pista" 
                             Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
@@ -50,8 +50,8 @@
             <RadioButton Style="{StaticResource btnMenu}"
                          Command="{Binding ElementName=menuLateral,Path=CommandArtistas}">
                 <StackPanel Orientation="Horizontal">
-                    <fa:IconImage Icon="Person"
-                   Style="{StaticResource iconoItemMenu}"></fa:IconImage>
+                    <fa:PackIconFontAwesome Kind="UserAltSolid"
+                   Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
                     <TextBlock Text="Artistas" 
                 Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
@@ -59,8 +59,8 @@
             <RadioButton Style="{StaticResource btnMenu}"
                          Command="{Binding ElementName=menuLateral,Path=CommandAlbumes}">
                 <StackPanel Orientation="Horizontal">
-                    <fa:IconImage Icon="CompactDisc"
-                               Style="{StaticResource iconoItemMenu}"></fa:IconImage>
+                    <fa:PackIconFontAwesome Kind="MusicSolid"
+                               Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
                     <TextBlock Text="Albumes" 
                             Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
@@ -68,8 +68,8 @@
             <RadioButton Style="{StaticResource btnMenu}"
                          Command="{Binding ElementName=menuLateral,Path=CommandGeneros}">
                 <StackPanel Orientation="Horizontal">
-                    <fa:IconImage Icon="VenusMars"
-                   Style="{StaticResource iconoItemMenu}"></fa:IconImage>
+                    <fa:PackIconFontAwesome Kind="VenusMarsSolid"
+                   Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
                     <TextBlock Text="Géneros" 
                 Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
@@ -77,9 +77,9 @@
             <RadioButton Style="{StaticResource btnMenu}"
                          Command="{Binding ElementName=menuLateral,Path=CommandListas}">
                 <StackPanel Orientation="Horizontal">
-                    <fa:IconImage Icon="VenusMars"
-                                   Style="{StaticResource iconoItemMenu}"></fa:IconImage>
-                    <TextBlock Text="Géneros" 
+                    <fa:PackIconFontAwesome Kind="PlusSolid"
+                                   Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
+                    <TextBlock Text="Mis Listas" 
                                Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
             </RadioButton>
