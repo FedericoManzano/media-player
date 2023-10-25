@@ -61,7 +61,8 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="120"/>
                     </Grid.RowDefinitions>
-
+                    
+                    <!-- Control de la ventana -->
                     <StackPanel Grid.Row="0">
                         <ventana:ManejadorVentana Margin="10"
                                                   Cerrar="Cerrar_App"

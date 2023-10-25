@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.TiempoTrack"
-             mc:Ignorable="d" >
+             mc:Ignorable="d" 
+             x:Name="infoTrack">
 
     <Control.Resources>
         <ResourceDictionary Source="/Controls/TiempoTrack/TiempoTrackTheme.xaml"/>
@@ -14,11 +15,11 @@
     <StackPanel Orientation="Horizontal"
             HorizontalAlignment="Center">
         <TextBlock Style="{StaticResource tiempoTrack}" 
-                   Text="00:00:00"/>
+                   Text="{Binding ElementName=infoTrack,Path=TiempoTranscurrido}"/>
         <TextBlock Style="{StaticResource tiempoTrack}" 
                    Text="/" Margin="10 0 10 0"/>
         <TextBlock Style="{StaticResource tiempoTrack}" 
-                   Text="00:00:00"/>
+                   Text="{Binding ElementName=infoTrack,Path=TiempoFaltante}"/>
     </StackPanel>
 
 

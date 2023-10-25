@@ -5,35 +5,50 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.PanelControlTrack"
-             mc:Ignorable="d">
-
-
+             mc:Ignorable="d"
+             x:Name="panelControl">
 
     <Control.Resources>
         <ResourceDictionary Source="/Controls/PanelControlTrack/PanelControlTheme.xaml"/>
     </Control.Resources>
 
+
     <Border MinWidth="150">
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
-                                             VerticalAlignment="Center">
-            <Button Style="{StaticResource btnPanel}">
-                <fa:PackIconFontAwesome Kind="BackwardSolid"/>
-            </Button>
-            <Button Style="{StaticResource btnPanel}">
-                <fa:PackIconFontAwesome Kind="PlaySolid"/>
-            </Button>
-            <Button Style="{StaticResource btnPanel}">
-                <fa:PackIconFontAwesome Kind="ForwardSolid"/>
-            </Button>
-            <Button Style="{StaticResource btnPanel}" Margin="60 0 0 0">
-                <fa:PackIconFontAwesome Kind="VolumeUpSolid"/>
-            </Button>
-            <Button Style="{StaticResource btnPanel}">
-                <fa:PackIconFontAwesome Kind="RandomSolid"/>
-            </Button>
-            <Button Style="{StaticResource btnPanel}">
-                <fa:PackIconFontAwesome Kind="ReplyAllSolid"/>
-            </Button>
+        <StackPanel>
+            <Border x:Name="contenedorVolumen"
+                    Style="{StaticResource bordeSliderVolumen}" 
+                    Visibility="Collapsed">
+                <Slider x:Name="sliderVolumen"
+                        Style="{DynamicResource SliderStyle1}"
+                        IsSelectionRangeEnabled="True"
+                        Minimum="0"
+                        Maximum="10"
+                        Width="200"/>
+            </Border>
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"
+                                     VerticalAlignment="Center">
+                <Button Style="{StaticResource btnPanel}" Click="OnClickAnterior">
+                    <fa:PackIconFontAwesome Kind="BackwardSolid"/>
+                </Button>
+                <Button Style="{StaticResource btnPanel}" Click="OnClickPlay">
+                    <fa:PackIconFontAwesome Kind="PlaySolid"/>
+                </Button>
+                <Button Style="{StaticResource btnPanel}" Click="OnClickSiguiente">
+                    <fa:PackIconFontAwesome Kind="ForwardSolid"/>
+                </Button>
+                <Button x:Name="btnVolumen" Style="{StaticResource btnPanel}" 
+                        Margin="60 0 0 0" 
+                        Click="Mostrar_Slider_Volumen">
+                    <fa:PackIconFontAwesome Kind="VolumeUpSolid"/>
+                </Button>
+                <Button Style="{StaticResource btnPanel}">
+                    <fa:PackIconFontAwesome Kind="RandomSolid"/>
+                </Button>
+                <Button Style="{StaticResource btnPanel}">
+                    <fa:PackIconFontAwesome Kind="ReplyAllSolid"/>
+                </Button>
+            </StackPanel>
         </StackPanel>
     </Border>
 </UserControl>

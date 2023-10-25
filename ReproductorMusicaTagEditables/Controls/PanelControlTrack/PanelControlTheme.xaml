@@ -5,10 +5,10 @@
     <Style x:Key="btnPanel" TargetType="Button">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="White"/>
-         
         <Setter Property="Width" Value="40"/>
         <Setter Property="Height" Value="40"/>
-
+        <Setter Property="Cursor" Value="Hand"/>
+        
         <Setter Property="Template" >
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -28,7 +28,17 @@
             </Trigger>
         </Style.Triggers>
     </Style>
-    
-    
+
+
+
+    <Style x:Key="bordeSliderVolumen" TargetType="Border">
+        <Setter Property="Background" Value="#1E2123"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Padding" Value="3"/>
+        <Setter Property="Margin" Value="140 -100 0 0"/>
+        <Setter Property="MaxHeight" Value="50"/>
+        <Setter Property="MaxWidth" Value="230"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
     
 </ResourceDictionary>
