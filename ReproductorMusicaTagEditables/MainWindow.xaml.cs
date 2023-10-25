@@ -21,5 +21,15 @@ namespace ReproductorMusicaTagEditables
                 DragMove();
             }
         }
+
+        private void Cerrar_App(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Minimizar_Ventana(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
     }
 }

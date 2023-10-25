@@ -7,6 +7,7 @@
         xmlns:pm="clr-namespace:ReproductorMusicaTagEditables.Controls.PanelControlTrack"
         xmlns:pinfo="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoArtista"
         xmlns:tiempo="clr-namespace:ReproductorMusicaTagEditables.Controls.TiempoTrack"
+        xmlns:ventana="clr-namespace:ReproductorMusicaTagEditables.Controls.ManejadorVentana"
         xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
         xmlns:view="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View"
         mc:Ignorable="d"
@@ -60,6 +61,12 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="120"/>
                     </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <ventana:ManejadorVentana Margin="10"
+                                                  Cerrar="Cerrar_App"
+                                                  Minimizar="Minimizar_Ventana"/>
+                    </StackPanel>
                     
                     <!-- Contenido de las páginas -->
                     <ContentControl Grid.Row="1" Content="{Binding CurrentView}"/>
