@@ -4,6 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:mp="clr-namespace:ReproductorMusicaTagEditables.Controls.Menu"
+        xmlns:pm="clr-namespace:ReproductorMusicaTagEditables.Controls.PanelControlTrack"
+        xmlns:pinfo="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoArtista"
+        xmlns:tiempo="clr-namespace:ReproductorMusicaTagEditables.Controls.TiempoTrack"
         xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
         xmlns:view="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View"
         mc:Ignorable="d"
@@ -15,10 +18,13 @@
         MouseDown="Arrastrar_Ventana">
 
 
+    <!-- Data context ../ViewModel/ReproductorViewModel.cs -->
     <Window.DataContext>
         <viewModel:ReproductorViewModel/>
     </Window.DataContext>
 
+    
+    <!-- Enlace de los viewModel con las view -->
     <Window.Resources>
         <DataTemplate DataType="{x:Type viewModel:PrincipalViewModel}">
             <view:PrincipalView/>
@@ -36,19 +42,72 @@
                 Background="{StaticResource gradientePrincipal}">
 
             <Grid >
+                <!-- 2 Columnas generales -->
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="250"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
+                
+                <!-- Menu lateral de la aplicación -->
                 <mp:Menu CommandInicio="{Binding PrincipalCommand}"
                          CommandArtistas="{Binding ArtistasCommand}"/>
 
                 <!-- Main Section -->
-                <Grid Grid.Column="1" Margin="30">
-                    <ContentControl Content="{Binding CurrentView}"/>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="120"/>
+                    </Grid.RowDefinitions>
+                    
+                    <!-- Contenido de las páginas -->
+                    <ContentControl Grid.Row="1" Content="{Binding CurrentView}"/>
+                    
+                    <!-- Control de track-->
+                    <Grid Grid.Row="2" Background="#1E2123">
+                        <Grid >
+                            <!-- Filas 2 de la grilla-->
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Columnas 3 -->
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <!-- Info de la cancion en curso 
+                            Su Artista, Album y nombre -->
+                            <pinfo:InfoArtista Margin="10 0 0 0" 
+                                               Grid.Column="0" 
+                                               Grid.RowSpan="2"/>
+
+                            <!-- Panel de control del track, volumen etc-->
+                            <pm:PanelControlMusica Grid.Column="1" 
+                                                   Grid.Row="0" 
+                                                   VerticalAlignment="Bottom" />
+
+                            <!-- Manejador del tiempo de pista -->
+                            <Slider Grid.Column="1" Grid.Row="1"
+                                    Style="{DynamicResource SliderStyle1}"
+                                    IsSelectionRangeEnabled="True"
+                                    VerticalAlignment="Top"
+                                    Margin="10 0 0 0"
+                                    Minimum="0"
+                                    Maximum="10"
+                                    Width="500"/>
+
+                            <!-- Tiempo transcurrido de la pista / 
+                            Tiempo que falta para que termina la pista-->
+                            <tiempo:TiempoTrack  Grid.Column="2" 
+                                                 Grid.RowSpan="2"/>
+                        </Grid>
+                    </Grid>
                 </Grid>
-                
             </Grid>
         </Border>
     </Border>

@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.InfoArtista.InfoArtista"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoArtista"
+             mc:Ignorable="d">
+
+    <Control.Resources>
+        <ResourceDictionary Source="/Controls/InfoArtista/InfoArtistaTheme.xaml"/>
+    </Control.Resources>
+    <StackPanel Orientation="Horizontal">
+        <Border Style="{StaticResource bordeBanner}">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/albumDesconocido.png"></ImageBrush>
+            </Border.Background>
+        </Border>
+        <StackPanel Margin="7 0 0 0" VerticalAlignment="Center"> 
+            <TextBlock Style="{StaticResource textoBanner}" Text="La Renga"/>
+            <TextBlock Style="{StaticResource textoBanner}" Text="Detonador de Sueños"/>
+            <TextBlock Style="{StaticResource textoBanner}" Text="Las Cosas que Hace"/>
+        </StackPanel>
+        
+    </StackPanel>
+</UserControl>

@@ -41,9 +41,5 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             } 
         }
         public string Titulo { get => _titulo; set => _titulo = value; }
-
-
-
-
     }
 }

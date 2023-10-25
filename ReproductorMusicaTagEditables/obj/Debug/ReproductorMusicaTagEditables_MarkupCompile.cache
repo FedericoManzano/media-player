@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\App.xaml
-61169565348
+13131141351
 
-15-1163723350
+18-410944623
 191081046989
-Controls\Menu\MenuPrincipalTheme.xaml;Controls\Menu\Menu.xaml;MainWindow.xaml;Mvvm\View\ArtistaView.xaml;Mvvm\View\PrincipalView.xaml;Themes\General.xaml;
+Controls\InfoArtista\InfoArtista.xaml;Controls\InfoArtista\InfoArtistaTheme.xaml;Controls\Menu\MenuPrincipalTheme.xaml;Controls\Menu\Menu.xaml;Controls\PanelControlTrack\PanelControlMusica.xaml;Controls\PanelControlTrack\PanelControlTheme.xaml;Controls\TiempoTrack\TiempoTrack.xaml;Controls\TiempoTrack\TiempoTrackTheme.xaml;MainWindow.xaml;Mvvm\View\ArtistaView.xaml;Mvvm\View\PrincipalView.xaml;Themes\General.xaml;Themes\SliderTheme.xaml;
 
 False
 
