@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -97,6 +98,20 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             return tag.Tag.DateTagged?.ToString(@"dd/MM/yyyy");
         }
 
+        public Cancion Clone()
+        {
+            return new Cancion
+            {
+                Path = this.Path,
+                Artista = this.Artista,
+                Titulo = this.Titulo,
+                Numero = this.Numero,
+                Genero = this.Genero,
+                FechaLanzamiento = this.FechaLanzamiento,
+                Duracion = this.Duracion,
+            };
+        }
+
         public override bool Equals(object obj)
         {
             if(obj.GetType() != typeof(Cancion)) return false;
@@ -115,6 +130,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Path);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(FechaLanzamiento);
             return hashCode;
+        }
+
+        public override string ToString()
+        {
+            return string.Format($"Número: {Numero}" + Environment.NewLine + $"Título: {Titulo}" + Environment.NewLine + $"Artista: {Artista}" + Environment.NewLine + $"Album: {Album}" + Environment.NewLine + $"Género: {Genero}" + Environment.NewLine + $"Fecha de Lanzamiento: {FechaLanzamiento}" + Environment.NewLine + $"Duración {Duracion}" + Environment.NewLine);
         }
     }
 }
