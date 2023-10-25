@@ -6,7 +6,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Themes/General.xaml"/>
-                <ResourceDictionary Source="/Themes/SliderTheme.xaml"/>
+                <ResourceDictionary Source="/Themes/SliderEstilos.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

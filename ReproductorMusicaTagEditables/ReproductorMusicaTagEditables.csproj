@@ -168,14 +168,20 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\SliderTheme.xaml">
+    <Page Include="Themes\SliderEstilos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mvvm\Model\Cancion.cs" />
+    <Compile Include="Mvvm\Repository\ArchivoImagen\ArchivoImagenBase.cs" />
+    <Compile Include="Mvvm\Repository\ArchivoImagen\IArchivoimagen\IArchivoImagen.cs" />
+    <Compile Include="Mvvm\Repository\ArchivoImagen\ImagenDefault.cs" />
+    <Compile Include="Mvvm\Repository\ArchivoImagen\ImagenDelArchivoAudio.cs" />
+    <Compile Include="Mvvm\Repository\ArchivoImagen\NuevaImagen.cs" />
     <Compile Include="Mvvm\ViewModel\ArtistaViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\Base\CancionActual.cs" />
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModel\PrincipalViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />

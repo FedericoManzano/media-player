@@ -90,19 +90,24 @@
 
                             <!-- Info de la cancion en curso 
                             Su Artista, Album y nombre -->
-                            <pinfo:InfoArtista Margin="10 0 0 0" 
+                            <pinfo:InfoArtista x:Name="infoArtista"
+                                               Margin="10 0 0 0" 
                                                Grid.Column="0" 
                                                Grid.RowSpan="2"/>
 
                             <!-- Panel de control del track, volumen etc-->
-                            <pm:PanelControlMusica Grid.Column="1" 
+                            <pm:PanelControlMusica x:Name="panelControlMusica"
+                                                   Grid.Column="1" 
                                                    Grid.Row="0" 
-                                                   VerticalAlignment="Bottom" />
+                                                   VerticalAlignment="Bottom" 
+                                                   ValorVolumen="5"/>
 
                             <!-- Manejador del tiempo de pista -->
-                            <Slider Grid.Column="1" Grid.Row="1"
-                                    Style="{DynamicResource SliderStyle1}"
+                            <Slider x:Name="sliderLineTime"
+                                    Grid.Column="1" 
+                                    Grid.Row="1"
                                     IsSelectionRangeEnabled="True"
+                                    SelectionEnd="{Binding ElementName=sliderLineTime, Path=Value}"
                                     VerticalAlignment="Top"
                                     Margin="10 0 0 0"
                                     Minimum="0"

@@ -11,8 +11,6 @@
 
     <StackPanel Orientation="Horizontal"
                 HorizontalAlignment="Right">
-        
-        
         <Button Style="{StaticResource btnManejadorVentanaMinimizar}" 
                 Tag="#BDFF58 " Cursor="Hand"
                 Click="OnMinimizar"/>

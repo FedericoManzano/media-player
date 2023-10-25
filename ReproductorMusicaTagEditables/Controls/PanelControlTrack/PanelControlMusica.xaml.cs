@@ -79,6 +79,18 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
         #endregion
 
 
+
+        public static DependencyProperty ValorVolumenProperty =
+            DependencyProperty.Register("ValorVolumen", typeof(double), typeof(PanelControlMusica));
+
+
+        public double ValorVolumen
+        {
+            get => (double) GetValue(ValorVolumenProperty);
+            set => SetValue(ValorVolumenProperty, value);
+        }
+
+
         private void Mostrar_Slider_Volumen(object sender, RoutedEventArgs e)
         {
             if(contenedorVolumen.Visibility == Visibility.Visible)

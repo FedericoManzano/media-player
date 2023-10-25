@@ -7,11 +7,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
     public abstract class ReproductorViewModelBase : ViewModelBase
     {
 
-        protected List<string> _paths = new List<string>();
-        protected List<Cancion> _canciones = new List<Cancion>();
-        protected List<Cancion> _cancionesFiltradas = new List<Cancion>();
+        protected static List<string> _paths = new List<string>();
+        protected static List<Cancion> _canciones = new List<Cancion>();
+        protected static List<Cancion> _cancionesFiltradas = new List<Cancion>();
         protected string _titulo;
-
+        private CancionActual cancionActual;
 
         public List<string> Paths 
         { 
@@ -41,5 +41,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             } 
         }
         public string Titulo { get => _titulo; set => _titulo = value; }
+        protected CancionActual CancionActual { get => cancionActual; set => cancionActual = value; }
     }
 }
