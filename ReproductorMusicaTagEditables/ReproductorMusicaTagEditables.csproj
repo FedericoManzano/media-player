@@ -171,6 +171,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\Pages\Theme\GeneralesPageTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\Pages\TodasLasCanciones.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -195,6 +199,12 @@
     <Compile Include="Mvvm\Repository\ArchivoImagen\ImagenDefault.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\ImagenDelArchivoAudio.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\NuevaImagen.cs" />
+    <Compile Include="Mvvm\Repository\CargaArchivos\CargarMusica.cs" />
+    <Compile Include="Mvvm\Repository\CargaArchivos\CargarMusicaDesdeDirectorio.cs" />
+    <Compile Include="Mvvm\Repository\CargaArchivos\CargarMusicaDesdeDragDrop.cs" />
+    <Compile Include="Mvvm\Repository\CargaArchivos\IMusica\CargarMusicaAdapter.cs" />
+    <Compile Include="Mvvm\Repository\CargaArchivos\IMusica\ICargarMusicaDirectorio.cs" />
+    <Compile Include="Mvvm\Repository\CargaArchivos\IMusica\ICargarMusicaDragDrop.cs" />
     <Compile Include="Mvvm\ViewModel\ArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Base\CancionActual.cs" />
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />

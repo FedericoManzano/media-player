@@ -5,10 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View.Pages"
       xmlns:tupla="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
+      xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TodasLasCanciones">
 
+
+    <Page.Resources>
+        <ResourceDictionary Source="/Mvvm/View/Pages/Theme/generalesPageTheme.xaml"/>
+    </Page.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
@@ -21,8 +27,25 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBlock Foreground="White" Text="Página Principal" FontSize="35"/>
-            <Button Margin="0 0 0 0" Grid.Column="1">Seleccionar</Button>
+            <TextBlock Style="{StaticResource tituloPrincipalPaginas}" 
+                       Text="Página Principal"/>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Right"
+                                        VerticalAlignment="Center" Orientation="Horizontal">
+                <Button  Style="{StaticResource btnSeleccionar}"
+                         Margin="0 0 10 0">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Style="{StaticResource btnIconSelecionar}" Kind="FolderPlusSolid"/>
+                        <TextBlock Text="Seleccionar"></TextBlock>
+                    </StackPanel>
+                </Button>
+
+                <Button  Style="{StaticResource btnSeleccionar}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Style="{StaticResource btnIconSelecionar}" Kind="TagSolid"/>
+                        <TextBlock Text="Tags"></TextBlock>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
         </Grid>
 
         <TextBlock Grid.Row="1" 
@@ -30,8 +53,6 @@
                    FontSize="15" 
                    Text="Todas las Canciones"
                    VerticalAlignment="Center"/>
-
-
 
         <ItemsControl Grid.Row="2" x:Name="itemList">
             <ItemsControl.ItemsPanel>

@@ -10,8 +10,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         protected static List<string> _paths = new List<string>();
         protected static List<Cancion> _canciones = new List<Cancion>();
         protected static List<Cancion> _cancionesFiltradas = new List<Cancion>();
+        private static CancionActual cancionActual;
         protected string _titulo;
-        private CancionActual cancionActual;
+        
 
         public List<string> Paths 
         { 

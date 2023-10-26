@@ -9,10 +9,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
     public class PrincipalViewModel:ReproductorViewModelBase
     {
-        public PrincipalViewModel() 
+        public PrincipalViewModel()
         {
             _titulo = "Página Principal";
         }
-
     }
 }
