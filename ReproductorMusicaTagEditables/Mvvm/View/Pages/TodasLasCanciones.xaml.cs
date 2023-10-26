@@ -73,7 +73,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         public TodasLasCanciones()
         {
             InitializeComponent();
-            itemList.ItemsSource = lPrueba;
         }
 
         private void InfoCancionTabla_PlayClick(object sender, EventArgs e)

@@ -25,6 +25,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
             
@@ -55,17 +56,20 @@
                     HorizontalAlignment="Right"
                     Click="OnAlbumClick"
                     Content="{Binding ElementName=infoCancion, Path=AlbumInfo}"/>
-            
+
+
             <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="7"  
+                       Grid.Column="7"
+                       Grid.ColumnSpan="2"
+                       Text="{Binding ElementName=infoCancion, Path=GeneroInfo}" 
+                       HorizontalAlignment="Right"/>
+
+            <TextBlock Style="{StaticResource txtInfoCancion}" 
+                       Grid.Column="9"  
                        Text="{Binding ElementName=infoCancion, Path=AnoInfo}" 
                        HorizontalAlignment="Right"/>
             
             
-            <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="8" 
-                       Text="{Binding ElementName=infoCancion, Path=DuracionInfo}" 
-                       HorizontalAlignment="Right"/>
         </Grid>
     </Border>
 </UserControl>

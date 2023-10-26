@@ -55,7 +55,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             string num = tag.Tag.Track > 0 ? tag.Tag.Track.ToString() : string.Empty;
             return num;
         }
-        
         private string ExtraerTitulo(TagLib.File tag, string path)
         {
 
@@ -67,27 +66,23 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             }
             return tit;
         }
-
         private string ExtraerArtista(TagLib.File tag)
         {
 #pragma warning disable CS0618 // El tipo o el miembro están obsoletos
-            string tit = tag.Tag.Artists != null ? tag.Tag.Artists[0]: string.Empty;
+            string tit = tag.Tag.Artists != null && tag.Tag.Artists.Length > 0 ? tag.Tag.Artists[0]: string.Empty;
 #pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             return tit;
         }
-
         private string ExtraerGenero(TagLib.File tag)
         {
             string tit = tag.Tag.Genres != null ? tag.Tag.Genres[0] : string.Empty;
             return tit;
         }
-
         private string ExtraerAlbum(TagLib.File tag)
         {
             string tit = tag.Tag.Album ?? string.Empty;
             return tit;
         }
-
         private string ExtraerDuracion(TagLib.File tag)
         {
             string tit = tag.Tag.Length ?? string.Empty;
@@ -95,7 +90,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         }
         private string ExtraerFechaLanzamiento (TagLib.File tag)
         {
-            return tag.Tag.DateTagged?.ToString(@"dd/MM/yyyy");
+            return tag.Tag.Year.ToString();
         }
         public Cancion Clone()
         {
@@ -110,14 +105,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                 Duracion = this.Duracion,
             };
         }
-
         public override bool Equals(object obj)
         {
             if(obj.GetType() != typeof(Cancion)) return false;
             if(obj == this) return true;
             return this.Path == ((Cancion) obj).Path;
         }
-
         public override int GetHashCode()
         {
             int hashCode = 236998955;
@@ -130,7 +123,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(FechaLanzamiento);
             return hashCode;
         }
-
         public override string ToString()
         {
             return string.Format($"Número: {Numero}" + Environment.NewLine + $"Título: {Titulo}" + Environment.NewLine + $"Artista: {Artista}" + Environment.NewLine + $"Album: {Album}" + Environment.NewLine + $"Género: {Genero}" + Environment.NewLine + $"Fecha de Lanzamiento: {FechaLanzamiento}" + Environment.NewLine + $"Duración {Duracion}" + Environment.NewLine);

@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View.Pages"
       xmlns:tupla="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
+      xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
@@ -14,6 +15,10 @@
     <Page.Resources>
         <ResourceDictionary Source="/Mvvm/View/Pages/Theme/generalesPageTheme.xaml"/>
     </Page.Resources>
+
+    <Page.DataContext>
+        <viewModel:PrincipalViewModel/>
+    </Page.DataContext>
     
     <Grid>
         <Grid.RowDefinitions>
@@ -32,7 +37,8 @@
             <StackPanel Grid.Column="1" HorizontalAlignment="Right"
                                         VerticalAlignment="Center" Orientation="Horizontal">
                 <Button  Style="{StaticResource btnSeleccionar}"
-                         Margin="0 0 10 0">
+                         Margin="0 0 10 0"
+                         Command="{Binding CargarArchivosCommand}">
                     <StackPanel Orientation="Horizontal">
                         <fa:PackIconFontAwesome Style="{StaticResource btnIconSelecionar}" Kind="FolderPlusSolid"/>
                         <TextBlock Text="Seleccionar"></TextBlock>
@@ -54,23 +60,25 @@
                    Text="Todas las Canciones"
                    VerticalAlignment="Center"/>
 
-        <ItemsControl Grid.Row="2" x:Name="itemList">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel />
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <tupla:InfoCancionTabla PlayClick="InfoCancionTabla_PlayClick"
-                                            TituloInfo="{Binding Titulo}"
-                                            ArtistaInfo="{Binding Artista}"
-                                            AlbumInfo="{Binding Album}"
-                                            AnoInfo="{Binding FechaLanzamiento}"
-                                            DuracionInfo="{Binding Duracion}"/>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+            <ItemsControl  x:Name="itemList" ItemsSource="{Binding CancionesFiltradas}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <tupla:InfoCancionTabla PlayClick="InfoCancionTabla_PlayClick"
+                                                TituloInfo="{Binding Titulo}"
+                                                ArtistaInfo="{Binding Artista}"
+                                                AlbumInfo="{Binding Album}"
+                                                GeneroInfo="{Binding Genero}"
+                                                AnoInfo="{Binding FechaLanzamiento}" Cursor=""/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
             
-        </ItemsControl>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </Page>

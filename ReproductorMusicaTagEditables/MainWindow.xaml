@@ -49,7 +49,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                
+
                 <!-- Menu lateral de la aplicación -->
                 <mp:Menu CommandInicio="{Binding PrincipalCommand}"
                          CommandArtistas="{Binding ArtistasCommand}"/>
@@ -61,17 +61,17 @@
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="120"/>
                     </Grid.RowDefinitions>
-                    
+
                     <!-- Control de la ventana -->
                     <StackPanel Grid.Row="0">
                         <ventana:ManejadorVentana Margin="10"
                                                   Cerrar="Cerrar_App"
                                                   Minimizar="Minimizar_Ventana"/>
                     </StackPanel>
-                    
+
                     <!-- Contenido de las páginas -->
                     <ContentControl Grid.Row="1" Content="{Binding CurrentView}"/>
-                    
+
                     <!-- Control de track-->
                     <Grid Grid.Row="2" Background="#1E2123">
                         <Grid >
@@ -101,7 +101,7 @@
                                                    Grid.Row="0" 
                                                    VerticalAlignment="Bottom" 
                                                    ValorVolumen="5"
-                                                   />
+                                                   PlayCommand="{Binding PlayCommand}"/>
 
                             <!-- Manejador del tiempo de pista -->
                             <Slider x:Name="sliderLineTime"
@@ -117,8 +117,21 @@
 
                             <!-- Tiempo transcurrido de la pista / 
                             Tiempo que falta para que termina la pista-->
-                            <tiempo:TiempoTrack  Grid.Column="2" 
+                            <tiempo:TiempoTrack  x:Name="controlTiempo"
+                                                 Grid.Column="2" 
                                                  Grid.RowSpan="2"/>
+
+                            <MediaElement x:Name="mediaReproductor" 
+                                  HorizontalAlignment="Left" 
+                                  Height="0"
+                                  Width="0"
+                                  VerticalAlignment="Top" 
+                                  LoadedBehavior="Manual" 
+                                  UnloadedBehavior="Stop"
+                                  MediaOpened="Inicio_Track"
+                                  MediaEnded="Final_Track"
+                                  Volume="{Binding ElementName=panelControlMusica, Path=ValorVolumen, Mode=TwoWay}"/>
+
                         </Grid>
                     </Grid>
                 </Grid>

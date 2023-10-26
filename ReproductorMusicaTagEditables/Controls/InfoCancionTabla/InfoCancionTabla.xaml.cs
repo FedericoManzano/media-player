@@ -105,5 +105,15 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             get => GetValue(DuracionProperty) as string;
             set => SetValue(DuracionProperty, value);
         }
+
+
+        public static readonly DependencyProperty GeneroProperty =
+              DependencyProperty.Register("GeneroInfo", typeof(string), typeof(InfoCancionTabla), new PropertyMetadata(string.Empty));
+
+        public string GeneroInfo
+        {
+            get => GetValue(GeneroProperty) as string;
+            set => SetValue(GeneroProperty, value);
+        }
     }
 }

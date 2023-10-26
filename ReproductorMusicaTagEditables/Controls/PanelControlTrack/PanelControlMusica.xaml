@@ -21,10 +21,8 @@
                 <Slider x:Name="sliderVolumen"
                         IsSelectionRangeEnabled="True"
                         Minimum="0"
-                        Maximum="100"
+                        Maximum="1"
                         Width="200"
-                        AutoToolTipPlacement="TopLeft" 
-                        AutoToolTipPrecision="0" 
                         ValueChanged="OnValueChanged"
                         Value="{Binding ElementName=panelControl, Path=ValorVolumen}">
                 </Slider>
@@ -37,7 +35,9 @@
                 <Button Style="{StaticResource btnPanel}" Click="OnClickAnterior">
                     <fa:PackIconFontAwesome Kind="BackwardSolid"/>
                 </Button>
-                <Button Style="{StaticResource btnPanel}" Click="OnClickPlay">
+                <Button Style="{StaticResource btnPanel}" 
+                        Click="OnClickPlay"
+                        Command="{Binding ElementName=panelControl, Path=PlayCommand}">
                     <fa:PackIconFontAwesome Kind="PlaySolid"/>
                 </Button>
                 <Button Style="{StaticResource btnPanel}" Click="OnClickSiguiente">
