@@ -100,7 +100,8 @@
                                                    Grid.Column="1" 
                                                    Grid.Row="0" 
                                                    VerticalAlignment="Bottom" 
-                                                   ValorVolumen="5"/>
+                                                   ValorVolumen="5"
+                                                   />
 
                             <!-- Manejador del tiempo de pista -->
                             <Slider x:Name="sliderLineTime"

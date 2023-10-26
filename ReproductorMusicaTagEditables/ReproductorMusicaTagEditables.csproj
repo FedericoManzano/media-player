@@ -95,6 +95,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\InfoCancionTabla\InfoCancionTabla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\InfoCancionTabla\InfoCancionTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\ManejadorVentana\ManejadorVentana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -138,6 +146,9 @@
     <Compile Include="Controls\InfoArtista\InfoArtista.xaml.cs">
       <DependentUpon>InfoArtista.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\InfoCancionTabla\InfoCancionTabla.xaml.cs">
+      <DependentUpon>InfoCancionTabla.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\ManejadorVentana\ManejadorVentana.xaml.cs">
       <DependentUpon>ManejadorVentana.xaml</DependentUpon>
     </Compile>
@@ -157,6 +168,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Mvvm\View\ArtistaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mvvm\View\Pages\TodasLasCanciones.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -187,6 +202,9 @@
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />
     <Compile Include="Mvvm\View\ArtistaView.xaml.cs">
       <DependentUpon>ArtistaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\Pages\TodasLasCanciones.xaml.cs">
+      <DependentUpon>TodasLasCanciones.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\PrincipalView.xaml.cs">
       <DependentUpon>PrincipalView.xaml</DependentUpon>
@@ -219,7 +237,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mvvm\ViewModel\Comandos\" />
-    <Folder Include="Mvvm\View\Pages\" />
     <Folder Include="Mvvm\View\Utils\" />
   </ItemGroup>
   <ItemGroup>

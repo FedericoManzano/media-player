@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\App.xaml
-151367793036
+181651350572
 
-26864290829
+282045589050
 191081046989
-Controls\InfoArtista\InfoArtista.xaml;Controls\InfoArtista\InfoArtistaTheme.xaml;Controls\ManejadorVentana\ManejadorVentana.xaml;Controls\ManejadorVentana\ManejadorVentanaTheme.xaml;Controls\Menu\MenuPrincipalTheme.xaml;Controls\Menu\Menu.xaml;Controls\PanelControlTrack\PanelControlMusica.xaml;Controls\PanelControlTrack\PanelControlTheme.xaml;Controls\TiempoTrack\TiempoTrack.xaml;Controls\TiempoTrack\TiempoTrackTheme.xaml;MainWindow.xaml;Mvvm\View\ArtistaView.xaml;Mvvm\View\PrincipalView.xaml;Themes\General.xaml;Themes\SliderEstilos.xaml;
+Controls\InfoArtista\InfoArtista.xaml;Controls\InfoArtista\InfoArtistaTheme.xaml;Controls\InfoCancionTabla\InfoCancionTabla.xaml;Controls\InfoCancionTabla\InfoCancionTheme.xaml;Controls\ManejadorVentana\ManejadorVentana.xaml;Controls\ManejadorVentana\ManejadorVentanaTheme.xaml;Controls\Menu\MenuPrincipalTheme.xaml;Controls\Menu\Menu.xaml;Controls\PanelControlTrack\PanelControlMusica.xaml;Controls\PanelControlTrack\PanelControlTheme.xaml;Controls\TiempoTrack\TiempoTrack.xaml;Controls\TiempoTrack\TiempoTrackTheme.xaml;MainWindow.xaml;Mvvm\View\ArtistaView.xaml;Mvvm\View\Pages\TodasLasCanciones.xaml;Mvvm\View\PrincipalView.xaml;Themes\General.xaml;Themes\SliderEstilos.xaml;
 
-False
+True
 

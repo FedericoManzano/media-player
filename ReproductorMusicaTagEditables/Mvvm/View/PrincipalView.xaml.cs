@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReproductorMusicaTagEditables.Mvvm.View.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.View
     /// </summary>
     public partial class PrincipalView : UserControl
     {
+        private TodasLasCanciones todasLasCanciones;
+
         public PrincipalView()
         {
             InitializeComponent();
+            todasLasCanciones = new TodasLasCanciones();
+            paginacion.NavigationService.Navigate(todasLasCanciones);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            paginacion.NavigationService.Navigate(new TodasLasCanciones());
         }
     }
 }

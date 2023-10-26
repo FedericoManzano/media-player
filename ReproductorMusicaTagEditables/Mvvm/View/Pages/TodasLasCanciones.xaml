@@ -1,0 +1,55 @@
+﻿<Page x:Class="ReproductorMusicaTagEditables.Mvvm.View.Pages.TodasLasCanciones"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View.Pages"
+      xmlns:tupla="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TodasLasCanciones">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Foreground="White" Text="Página Principal" FontSize="35"/>
+            <Button Margin="0 0 0 0" Grid.Column="1">Seleccionar</Button>
+        </Grid>
+
+        <TextBlock Grid.Row="1" 
+                   Foreground="White" 
+                   FontSize="15" 
+                   Text="Todas las Canciones"
+                   VerticalAlignment="Center"/>
+
+
+
+        <ItemsControl Grid.Row="2" x:Name="itemList">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <tupla:InfoCancionTabla PlayClick="InfoCancionTabla_PlayClick"
+                                            TituloInfo="{Binding Titulo}"
+                                            ArtistaInfo="{Binding Artista}"
+                                            AlbumInfo="{Binding Album}"
+                                            AnoInfo="{Binding FechaLanzamiento}"
+                                            DuracionInfo="{Binding Duracion}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            
+        </ItemsControl>
+    </Grid>
+</Page>

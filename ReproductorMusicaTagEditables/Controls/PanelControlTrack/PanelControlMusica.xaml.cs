@@ -1,17 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
 {
@@ -79,7 +70,7 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
         #endregion
 
 
-
+        #region Volumen Value
         public static DependencyProperty ValorVolumenProperty =
             DependencyProperty.Register("ValorVolumen", typeof(double), typeof(PanelControlMusica));
 
@@ -89,7 +80,58 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
             get => (double) GetValue(ValorVolumenProperty);
             set => SetValue(ValorVolumenProperty, value);
         }
+        #endregion
 
+
+        #region Play Command
+        public static readonly DependencyProperty PlayCommandProperty =
+            DependencyProperty.Register("PlayCommand",typeof(ICommand),typeof(PanelControlMusica));
+
+        public ICommand PlayCommand
+        {
+            get => GetValue(PlayCommandProperty) as ICommand;
+            set => SetValue(PlayCommandProperty, value);    
+        }
+        #endregion
+
+
+        #region Siguiente Command
+        public static readonly DependencyProperty SiguienteCommandProperty =
+            DependencyProperty.Register("SiguienteCommand", typeof(ICommand), typeof(PanelControlMusica));
+
+        public ICommand SiguienteCommand
+        {
+            get => GetValue(SiguienteCommandProperty) as ICommand;
+            set => SetValue(SiguienteCommandProperty, value);
+        }
+        #endregion
+
+        #region Atras Command
+        public static readonly DependencyProperty AtrasCommandProperty =
+                    DependencyProperty.Register("AtrasCommand", typeof(ICommand), typeof(PanelControlMusica));
+
+        public ICommand AtrasCommand
+        {
+            get => GetValue(AtrasCommandProperty) as ICommand;
+            set => SetValue(AtrasCommandProperty, value);
+        }
+        #endregion
+
+
+        public static RoutedEvent ValueChangeEvent = 
+            EventManager.RegisterRoutedEvent("ValueChanged", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(PanelControlMusica));
+
+        public event RoutedEventHandler ValueChanged
+        {
+            add => AddHandler(ValueChangeEvent,value);
+            remove => RemoveHandler(ValueChangeEvent,value);
+        }
+
+
+        public void OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            RaiseEvent(new RoutedEventArgs(ValueChangeEvent));
+        }
 
         private void Mostrar_Slider_Volumen(object sender, RoutedEventArgs e)
         {
@@ -103,6 +145,11 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
                 contenedorVolumen.Visibility = Visibility.Visible;
                 btnVolumen.Foreground = Brushes.Orange;
             }
+        }
+
+        private void sliderVolumen_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+
         }
     }
 }

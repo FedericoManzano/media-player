@@ -18,7 +18,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
 
 
 
-        Cancion()
+        public Cancion()
         {
             Numero = string.Empty;
             Titulo = string.Empty;
@@ -97,7 +97,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         {
             return tag.Tag.DateTagged?.ToString(@"dd/MM/yyyy");
         }
-
         public Cancion Clone()
         {
             return new Cancion

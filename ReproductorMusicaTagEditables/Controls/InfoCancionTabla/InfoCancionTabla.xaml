@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.InfoCancionTabla.InfoCancionTabla"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
+             xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d"
+             x:Name="infoCancion">
+
+
+    <Control.Resources>
+        <ResourceDictionary Source="/Controls/InfoCancionTabla/InfoCancionTheme.xaml"/>
+    </Control.Resources>
+    
+    <Border Style="{StaticResource bordeInfoCancion}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            
+            <Button Style="{StaticResource btnPlay}"
+                    Grid.Column="0"
+                    Click="OnPlayClick">
+                <fa:PackIconFontAwesome Style="{StaticResource iconPlay}" Kind="PlaySolid"/>
+            </Button>
+            
+            
+            <TextBlock Style="{StaticResource txtInfoCancion}" 
+                       Grid.Column="1" 
+                       Grid.ColumnSpan="3" 
+                       Text="{Binding ElementName=infoCancion, Path=TituloInfo}" />
+            
+            
+            <Button Style="{StaticResource btnArtista}"
+                    Grid.Column="3"
+                    Grid.ColumnSpan="2"  
+                    HorizontalAlignment="Right"
+                    Click="OnArtistaClick"
+                    Content="{Binding ElementName=infoCancion, Path=ArtistaInfo}"/>
+            
+            
+            <Button Style="{StaticResource btnArtista}"
+                    Grid.Column="5"
+                    Grid.ColumnSpan="2"  
+                    HorizontalAlignment="Right"
+                    Click="OnAlbumClick"
+                    Content="{Binding ElementName=infoCancion, Path=AlbumInfo}"/>
+            
+            <TextBlock Style="{StaticResource txtInfoCancion}" 
+                       Grid.Column="7"  
+                       Text="{Binding ElementName=infoCancion, Path=AnoInfo}" 
+                       HorizontalAlignment="Right"/>
+            
+            
+            <TextBlock Style="{StaticResource txtInfoCancion}" 
+                       Grid.Column="8" 
+                       Text="{Binding ElementName=infoCancion, Path=DuracionInfo}" 
+                       HorizontalAlignment="Right"/>
+        </Grid>
+    </Border>
+</UserControl>
