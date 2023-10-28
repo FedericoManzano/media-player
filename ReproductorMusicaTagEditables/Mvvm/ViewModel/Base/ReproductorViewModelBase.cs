@@ -1,100 +1,63 @@
 ﻿using Reproductor_Musica.Core;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
-using ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos;
 using System;
-using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Forms;
 using System.Windows.Input;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 {
     public abstract class ReproductorViewModelBase : ViewModelBase
     {
+        protected readonly static InfoReproductor irg = new InfoReproductor();
 
-        #region Miembros Protected
-        protected CargarMusica cargarMusica;
-        protected static List<string> _paths = new List<string>();
-        protected static List<Cancion> _canciones = new List<Cancion>();
-        protected static List<Cancion> _cancionesFiltradas = new List<Cancion>();
-        protected string _titulo;
-        protected static CancionActual cancionActual;
-        protected static MediaElement REPRODUCTOR_MEDIA;
-        #endregion
-
-        #region Propiedades
-        public List<string> Paths 
-        { 
-            get => _paths; 
-            set 
-            {
-                _paths = value;
-                OnPropertyChanged(nameof(Paths));
-            } 
-        }
-        public List<Cancion> Canciones 
-        { 
-            get => _canciones;
-            set 
-            { 
-                _canciones = value;
-                OnPropertyChanged(nameof(Canciones));
-            }
-        }
-        public List<Cancion> CancionesFiltradas 
+        public  InfoReproductor Irg
         {
-            get => _cancionesFiltradas; 
-            set 
-            {
-                _cancionesFiltradas = value; 
-                OnPropertyChanged(nameof(CancionesFiltradas));
-            } 
+            get => irg;  
         }
-        public string Titulo { get => _titulo; set => _titulo = value; }
-        protected CancionActual CancionActual { get => cancionActual; set => cancionActual = value; }
-        #endregion
 
-
-        public static void CargarReproductor(MediaElement me)
+        public  void CargarReproductor(MediaElement me)
         {
-            REPRODUCTOR_MEDIA = me;
+            Irg.Reproductor = me;
         }
 
-        public ICommand CargarArchivosCommand { get; }
+        public ICommand CargarMusicaCommand { get; }
         public ICommand PlayCommand { get; }
+
 
         public ReproductorViewModelBase ()
         {
-            cancionActual = new CancionActual();
-            CargarArchivosCommand = new RelayCommand(CargarArchivosAction);
-            PlayCommand = new RelayCommand(DarPlayAction);
+            CargarMusicaCommand = new RelayCommand(CargarMusicaAction);
+            PlayCommand = new RelayCommand(PlayAction);
         }
 
-        private void DarPlayAction(object obj)
+        private void PlayAction(object obj)
         {
-            if(CancionesFiltradas != null && CancionesFiltradas.Count > 0)
+            Cancion c = (Cancion)obj;
+            if(c != null)
             {
-                if(cancionActual.Index == -1 || cancionActual.Cancion == null)
+                if (Irg.CancionActual.Index >= 0)
                 {
-                    MessageBox.Show("entra");
-                    cancionActual.Index = 0;
-                    cancionActual.Cancion = CancionesFiltradas[cancionActual.Index];
-                    REPRODUCTOR_MEDIA.Source = new Uri(cancionActual.Cancion.Path);
-                    REPRODUCTOR_MEDIA.Play();
+                    Irg.CancionesFiltradas.Deseleccionar(Irg.CancionActual.Index);
                 }
+                Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexOf(c);
+                Irg.CancionActual.Cancion = c;
+                Irg.Reproductor.Source = new Uri(c.Path);
+                Irg.Reproductor.Play();
+                Irg.CancionesFiltradas.Seleccionar(Irg.CancionActual.Index);
             }
         }
 
-        private async void CargarArchivosAction(object obj)
+        private void CargarMusicaAction(object obj)
         {
-            FolderBrowserDialog dialog = new FolderBrowserDialog();
-            if(dialog.ShowDialog() == DialogResult.OK)
-            {
-                this.cargarMusica = new CargarMusicaDesdeDirectorio();
-                Paths = await this.cargarMusica.IniciarCargaReproductor(dialog.SelectedPath);
-                Canciones = await this.cargarMusica.CargarListadoDeCancionesAsync(Paths);
-                CancionesFiltradas = Canciones;
-            }
+            Irg.CargarMusicaSeleccion();
+        }
+
+
+        public void AgregarElementosAlFiltro()
+        {
+            Irg.AgregarElementosAlFiltro();
         }
     }
 }

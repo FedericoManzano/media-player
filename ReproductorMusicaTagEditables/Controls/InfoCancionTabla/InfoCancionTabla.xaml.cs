@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-
+using System.Windows.Input;
 
 namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
 {
@@ -114,6 +114,31 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
         {
             get => GetValue(GeneroProperty) as string;
             set => SetValue(GeneroProperty, value);
+        }
+
+        public static readonly DependencyProperty ColorTextoProperty =
+              DependencyProperty.Register("ColorTexto", typeof(string), typeof(InfoCancionTabla), new PropertyMetadata(string.Empty));
+
+        public string ColorTexto
+        {
+            get => GetValue(ColorTextoProperty) as string;
+            set => SetValue(ColorTextoProperty, value);
+        }
+
+        public static readonly DependencyProperty ParametroComandoProperty =
+            DependencyProperty.Register("ParametroComando", typeof(object), typeof(InfoCancionTabla));
+        public object ParametroComando
+        {
+            get => GetValue(ParametroComandoProperty);
+            set => SetValue(ParametroComandoProperty, value);
+        }
+
+        public static readonly DependencyProperty ComandoProperty =
+            DependencyProperty.Register("Comando", typeof(ICommand), typeof(InfoCancionTabla));
+        public ICommand Comando
+        {
+            get => (ICommand)GetValue(ComandoProperty);
+            set => SetValue(ComandoProperty, value);
         }
     }
 }

@@ -11,6 +11,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public ICommand PrincipalCommand { get; }
         public ICommand ArtistasCommand { get; }
+
+
         public ReproductorViewModelBase CurrentView
         {
             get => _currentView;
@@ -30,11 +32,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         private void MostrarAristasViewAction(object obj)
         {
+            Irg.CancionesFiltradas.Clear();
             this.CurrentView = new ArtistaViewModel();
         }
 
         private void MostrarPrincipalViewAction(object obj)
         {
+            AgregarElementosAlFiltro();
             this.CurrentView = new PrincipalViewModel();
         }
     }

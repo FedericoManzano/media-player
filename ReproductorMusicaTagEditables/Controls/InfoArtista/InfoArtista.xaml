@@ -16,9 +16,9 @@
 
 
         <StackPanel Margin="7 0 0 0" VerticalAlignment="Center"> 
-            <TextBlock Style="{StaticResource textoBanner}" Text="La Renga"/>
-            <TextBlock Style="{StaticResource textoBanner}" Text="Detonador de Sueños"/>
-            <TextBlock Style="{StaticResource textoBanner}" Text="Las Cosas que Hace"/>
+            <TextBlock Style="{StaticResource textoBanner}" Text="{Binding ElementName=infoArtista, Path=NombreArtista}"/>
+            <TextBlock Style="{StaticResource textoBanner}" Text="{Binding ElementName=infoArtista, Path=NombreAlbum}"/>
+            <TextBlock Style="{StaticResource textoBanner}" Text="{Binding ElementName=infoArtista, Path=TituloCancion}"/>
         </StackPanel>
         
     </StackPanel>

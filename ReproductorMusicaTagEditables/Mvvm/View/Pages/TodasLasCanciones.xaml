@@ -17,7 +17,7 @@
     </Page.Resources>
 
     <Page.DataContext>
-        <viewModel:PrincipalViewModel/>
+        <viewModel:PrincipalViewModel x:Name="panelPrincipal"/>
     </Page.DataContext>
     
     <Grid>
@@ -38,13 +38,12 @@
                                         VerticalAlignment="Center" Orientation="Horizontal">
                 <Button  Style="{StaticResource btnSeleccionar}"
                          Margin="0 0 10 0"
-                         Command="{Binding CargarArchivosCommand}">
+                         Command="{Binding CargarMusicaCommand}">
                     <StackPanel Orientation="Horizontal">
                         <fa:PackIconFontAwesome Style="{StaticResource btnIconSelecionar}" Kind="FolderPlusSolid"/>
                         <TextBlock Text="Seleccionar"></TextBlock>
                     </StackPanel>
                 </Button>
-
                 <Button  Style="{StaticResource btnSeleccionar}">
                     <StackPanel Orientation="Horizontal">
                         <fa:PackIconFontAwesome Style="{StaticResource btnIconSelecionar}" Kind="TagSolid"/>
@@ -60,8 +59,9 @@
                    Text="Todas las Canciones"
                    VerticalAlignment="Center"/>
 
-        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
-            <ItemsControl  x:Name="itemList" ItemsSource="{Binding CancionesFiltradas}">
+        <ScrollViewer x:Name="scrollCanciones" Grid.Row="2" VerticalScrollBarVisibility="Auto"
+                      IsMouseCaptureWithinChanged="Actualiza_El_Listado_Canciones">
+            <ItemsControl  x:Name="itemList" ItemsSource="{Binding Irg.CancionesFiltradas}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel />
@@ -69,12 +69,14 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <tupla:InfoCancionTabla PlayClick="InfoCancionTabla_PlayClick"
+                        <tupla:InfoCancionTabla Comando="{Binding ElementName=panelPrincipal, Path=PlayCommand}"
+                                                ParametroComando="{Binding .}"
                                                 TituloInfo="{Binding Titulo}"
                                                 ArtistaInfo="{Binding Artista}"
                                                 AlbumInfo="{Binding Album}"
                                                 GeneroInfo="{Binding Genero}"
-                                                AnoInfo="{Binding FechaLanzamiento}" Cursor=""/>
+                                                AnoInfo="{Binding FechaLanzamiento}"
+                                                ColorTexto="{Binding EstadoColor}"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             

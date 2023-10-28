@@ -12,7 +12,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public ArtistaViewModel()
         {
-            _titulo = "Página Principal";
+            Irg.TitutloVentana = "Página Principal";
         }
 
     }

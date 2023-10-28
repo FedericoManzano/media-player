@@ -5,8 +5,11 @@ using System.IO;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Model
 {
-    public class Cancion
+    public class Cancion: IComparable<Cancion>
     {
+
+        public static readonly string COLOR_TEXTO_DEFAULT = "White";
+
         public string Numero { get; set; } = string.Empty;
         public string Titulo { get; set; } = string.Empty;
         public string Artista { get; set; } = string.Empty;
@@ -15,7 +18,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         public string Path { get; set; } = string.Empty;
         public string Duracion { get; set; } = string.Empty;
         public string FechaLanzamiento { get; set;} = string.Empty;
-
+        public string EstadoColor { get; set; } = COLOR_TEXTO_DEFAULT;
 
 
         public Cancion()
@@ -27,6 +30,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             Path = string.Empty;
             Duracion = string.Empty;
             FechaLanzamiento = string.Empty;
+            EstadoColor = COLOR_TEXTO_DEFAULT;
         }
 
 
@@ -45,6 +49,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                     Album = ExtraerAlbum(tag),
                     Duracion = ExtraerDuracion(tag),
                     FechaLanzamiento = ExtraerFechaLanzamiento(tag),
+                    EstadoColor = COLOR_TEXTO_DEFAULT
                 };
             }
             return null;
@@ -109,7 +114,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         {
             if(obj.GetType() != typeof(Cancion)) return false;
             if(obj == this) return true;
-            return this.Path == ((Cancion) obj).Path;
+
+            Cancion n = obj as Cancion;
+
+            return 
+                this.Titulo  == n.Titulo && 
+                this.Artista    == n.Artista &&
+                this.Album      == n.Album && 
+                this.Genero     == n.Genero &&
+                this.FechaLanzamiento == n.FechaLanzamiento;
         }
         public override int GetHashCode()
         {
@@ -126,6 +139,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         public override string ToString()
         {
             return string.Format($"Número: {Numero}" + Environment.NewLine + $"Título: {Titulo}" + Environment.NewLine + $"Artista: {Artista}" + Environment.NewLine + $"Album: {Album}" + Environment.NewLine + $"Género: {Genero}" + Environment.NewLine + $"Fecha de Lanzamiento: {FechaLanzamiento}" + Environment.NewLine + $"Duración {Duracion}" + Environment.NewLine);
+        }
+
+        public int CompareTo(Cancion other)
+        {
+            return Titulo.CompareTo(other.Titulo);
         }
     }
 }

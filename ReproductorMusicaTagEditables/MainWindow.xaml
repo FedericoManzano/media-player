@@ -93,7 +93,10 @@
                             <pinfo:InfoArtista x:Name="infoArtista"
                                                Margin="10 0 0 0" 
                                                Grid.Column="0" 
-                                               Grid.RowSpan="2"/>
+                                               Grid.RowSpan="2"
+                                               NombreArtista="Desconocido"
+                                               NombreAlbum="Desconocido"
+                                               TituloCancion="..."/>
 
                             <!-- Panel de control del track, volumen etc-->
                             <pm:PanelControlMusica x:Name="panelControlMusica"

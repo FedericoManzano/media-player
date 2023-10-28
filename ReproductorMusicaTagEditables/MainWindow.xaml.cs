@@ -4,6 +4,7 @@ using ReproductorMusicaTagEditables.Mvvm.ViewModel;
 using System;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Threading;
 using Application = System.Windows.Application;
 
@@ -12,11 +13,14 @@ namespace ReproductorMusicaTagEditables
     public partial class MainWindow : Window
     {
         private DispatcherTimer timer;
+        private ReproductorViewModel reproductorViewModel;
         public MainWindow()
         {
             InitializeComponent();
             CargarImagenPorDefectoArtista();
-            ReproductorViewModel.CargarReproductor(mediaReproductor);
+            reproductorViewModel = (ReproductorViewModel)DataContext;
+            reproductorViewModel.CargarReproductor(mediaReproductor);
+            
             timer = new DispatcherTimer()
             {
                 Interval = TimeSpan.FromSeconds(1)
@@ -74,6 +78,7 @@ namespace ReproductorMusicaTagEditables
             }
             if (mediaReproductor.NaturalDuration.HasTimeSpan)
             {
+                CargarInfoArtista();
                 TimeSpan tiempoTotalPista = mediaReproductor.NaturalDuration.TimeSpan;
                 //txtTiempoTotal.Text = tiempoTotalPista.ToString(@"hh\:mm\:ss");
                 sliderLineTime.Maximum = tiempoTotalPista.TotalSeconds;
@@ -84,6 +89,23 @@ namespace ReproductorMusicaTagEditables
         private void Final_Track(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void CargarInfoArtista ()
+        {
+            //ImageBrush bImagen = ArchivoImagenBase
+            //                        .archivoImagenFabrica (ArchivoImagenBase.IMAGEN_DEL_ARCHIVO)
+            //                        .DameImagen(reproductorViewModel.CancionActual.Cancion.Path);
+            //if(bImagen != null)
+            //{
+            //    infoArtista.ImagenArtista = bImagen;
+            //}
+            //if(reproductorViewModel.CancionActual.Cancion != null)
+            //{
+            //    infoArtista.NombreArtista = reproductorViewModel.CancionActual.Cancion.Artista;
+            //    infoArtista.NombreAlbum = reproductorViewModel.CancionActual.Cancion.Album;
+            //    infoArtista.TituloCancion = reproductorViewModel.CancionActual.Cancion.Titulo;
+            //}  
         }
     }
 }
