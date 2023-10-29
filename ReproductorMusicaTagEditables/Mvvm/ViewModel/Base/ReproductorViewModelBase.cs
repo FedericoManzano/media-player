@@ -46,9 +46,55 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                 Irg.Reproductor.Source = new Uri(c.Path);
                 Irg.Reproductor.Play();
                 Irg.CancionesFiltradas.Seleccionar(Irg.CancionActual.Index);
+                Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
+                EstadosControl.PLAY = true;
+            } else
+            {
+                if(EstadosControl.PLAY)
+                {
+                    EstadosControl.PLAY = !EstadosControl.PLAY;
+                    Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PlaySolid;
+                    Irg.Reproductor.Pause();
+                }
+                else
+                {
+                    if(irg.CancionesFiltradas.Count > 0)
+                    {
+                        if (Irg.CancionActual.Index < 0)
+                        {
+                            Irg.CancionActual.Index = 0;
+                            Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
+                            Irg.Reproductor.Source = new Uri(Irg.CancionActual.Cancion.Path);
+                            Irg.Reproductor.Play();
+                            Irg.CancionesFiltradas.Seleccionar(Irg.CancionActual.Index);
+                            Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
+                            EstadosControl.PLAY = true;
+                        }
+                        else
+                        {
+                            Irg.Reproductor.Play();
+                            Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
+                            EstadosControl.PLAY = true;
+                        }
+                    }
+                }
             }
         }
 
+
+
+        public void Siguiente()
+        {
+            if (Irg.CancionesFiltradas.Count > Irg.CancionActual.Index + 1)
+            {
+                Irg.CancionesFiltradas.Deseleccionar(Irg.CancionActual.Index);
+                Irg.CancionActual.Index++;
+                Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+                Irg.Reproductor.Source = new Uri(Irg.CancionActual.Cancion.Path);
+                Irg.Reproductor.Play();
+                Irg.CancionesFiltradas.Seleccionar(Irg.CancionActual.Index);
+            }   
+        }
         private void CargarMusicaAction(object obj)
         {
             Irg.CargarMusicaSeleccion();

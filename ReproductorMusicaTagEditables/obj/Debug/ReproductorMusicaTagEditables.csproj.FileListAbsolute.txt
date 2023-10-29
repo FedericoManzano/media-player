@@ -56,3 +56,13 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\InfoCancionTabla\InfoCancionTabla.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\InfoCancionTabla\InfoCancionTheme.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Mvvm\View\Pages\Theme\GeneralesPageTheme.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\Debug\ControlzEx.dll
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\Debug\MahApps.Metro.dll
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\Debug\ControlzEx.pdb
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\Debug\ControlzEx.xml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\Debug\MahApps.Metro.pdb
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\Debug\MahApps.Metro.xml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\Debug\de\MahApps.Metro.resources.dll

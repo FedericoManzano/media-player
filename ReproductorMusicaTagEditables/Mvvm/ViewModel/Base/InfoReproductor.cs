@@ -1,4 +1,5 @@
-﻿using Reproductor_Musica.Core;
+﻿using MahApps.Metro.IconPacks;
+using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos;
 using System.Collections.Generic;
@@ -23,6 +24,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         private static List<string> _paths;
         private static List<Cancion> _canciones;
         private static ObservableCollection<Cancion> _cancionesFiltradas;
+        private static MahApps.Metro.IconPacks.PackIconFontAwesomeKind _iconoPlay;
+        private static bool _preloader;
 
 
         public string TitutloVentana 
@@ -51,13 +54,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             get => _canciones;
             set { _canciones = value; OnPropertyChanged(nameof(Canciones)); }
         }
+
         public ObservableCollection<Cancion> CancionesFiltradas
         {
             get => _cancionesFiltradas;
             set { _cancionesFiltradas = value; OnPropertyChanged(nameof(CancionesFiltradas)); }
         }
 
+        public PackIconFontAwesomeKind IconoPlay { get => _iconoPlay; set { _iconoPlay = value;OnPropertyChanged(nameof(IconoPlay)); } }
 
+        public bool Preloader { get => _preloader; set { _preloader = value; OnPropertyChanged(nameof(Preloader)); } }
 
         public InfoReproductor ()
         {
@@ -67,6 +73,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             Paths = new List<string>();
             Canciones = new List<Cancion>();
             CancionesFiltradas = new ObservableCollection<Cancion>();
+            IconoPlay = PackIconFontAwesomeKind.PlaySolid;
+            Preloader = false;
         }
 
         public void CargarReproductor (MediaElement me)
@@ -81,6 +89,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
+                Preloader = true;
                 if (System.IO.Directory.Exists(folderBrowserDialog.SelectedPath))
                 {
                     Raiz = folderBrowserDialog.SelectedPath;
@@ -93,32 +102,48 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                             CancionesFiltradas = new ObservableCollection<Cancion>(Canciones.GetRange(0, 100));
                         else
                             CancionesFiltradas = new ObservableCollection<Cancion>(Canciones);
+                        Preloader = false;
                     });
                 }
             }
         }
 
 
-        public void AgregarElementosAlFiltro()
+        public async void AgregarElementosAlFiltro()
         {
             int diferencia = Canciones.Count - CancionesFiltradas.Count;
             if (diferencia <= 0)
                 return;
 
-
-            if (diferencia > 20 && CancionesFiltradas.Count < Canciones.Count)
-            {
-                foreach (Cancion can in Canciones.GetRange(CancionesFiltradas.Count, 20))
+            Preloader = true;
+            await Task.Run(() =>
+            { 
+                if (Canciones.Count <= 100)
                 {
-                    CancionesFiltradas.Add(can);
+                    CancionesFiltradas = new ObservableCollection<Cancion>(Canciones);
                 }
-
-            }
-            else
-            {
-                for (int i = CancionesFiltradas.Count; i < Canciones.Count; i++)
+                else if (CancionesFiltradas.Count == 0 && Canciones.Count > 100)
                 {
-                    CancionesFiltradas.Add(Canciones[i]);
+                    CancionesFiltradas = new ObservableCollection<Cancion>(Canciones.GetRange(0, 100));
+                }
+                Preloader = false;
+            });
+
+            if(CancionesFiltradas.Count > 0)
+            {
+                if (diferencia > 20 && CancionesFiltradas.Count < Canciones.Count)
+                {
+                    foreach (Cancion can in Canciones.GetRange(CancionesFiltradas.Count, 20))
+                    {
+                        CancionesFiltradas.Add(can);
+                    }
+                }
+                else
+                {
+                    for (int i = CancionesFiltradas.Count; i < Canciones.Count; i++)
+                    {
+                        CancionesFiltradas.Add(Canciones[i]);
+                    }
                 }
             }
         }

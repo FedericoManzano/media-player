@@ -26,13 +26,15 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
             
             <Button Style="{StaticResource btnPlay}"
                     Grid.Column="0"
                     Command="{Binding ElementName=infoCancion, Path=Comando}"
-                    CommandParameter="{Binding ElementName=infoCancion, Path=ParametroComando}">
+                    CommandParameter="{Binding ElementName=infoCancion, Path=ParametroComando}"
+                    Click="OnPlayClick">
                 <fa:PackIconFontAwesome Style="{StaticResource iconPlay}" Kind="PlaySolid"/>
             </Button>
             
@@ -72,6 +74,12 @@
             <TextBlock Style="{StaticResource txtInfoCancion}" 
                        Grid.Column="9"  
                        Text="{Binding ElementName=infoCancion, Path=AnoInfo}" 
+                       HorizontalAlignment="Right"
+                       Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
+
+            <TextBlock Style="{StaticResource txtInfoCancion}" 
+                       Grid.Column="10"  
+                       Text="{Binding ElementName=infoCancion, Path=DuracionInfo}" 
                        HorizontalAlignment="Right"
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
         </Grid>

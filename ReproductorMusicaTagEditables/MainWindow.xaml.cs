@@ -1,11 +1,13 @@
 ﻿
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
-using ReproductorMusicaTagEditables.Mvvm.ViewModel;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Threading;
+
 using Application = System.Windows.Application;
 
 namespace ReproductorMusicaTagEditables
@@ -13,35 +15,34 @@ namespace ReproductorMusicaTagEditables
     public partial class MainWindow : Window
     {
         private DispatcherTimer timer;
-        private ReproductorViewModel reproductorViewModel;
+      
+        private TimeSpan tiempoTotalPista = new TimeSpan();
+
+
         public MainWindow()
         {
             InitializeComponent();
             CargarImagenPorDefectoArtista();
-            reproductorViewModel = (ReproductorViewModel)DataContext;
-            reproductorViewModel.CargarReproductor(mediaReproductor);
+           
+            reproViewModel.CargarReproductor(mediaReproductor);
             
             timer = new DispatcherTimer()
             {
-                Interval = TimeSpan.FromSeconds(1)
+                Interval = TimeSpan.FromSeconds(0.945)
             };
             timer.Tick += new EventHandler(Time_Track);
         }
 
         private void Time_Track(object sender, EventArgs e)
         {
-            sliderLineTime.Value = mediaReproductor.Position.TotalSeconds;
-            controlTiempo.TiempoTranscurrido = mediaReproductor.Position.ToString(@"hh\:mm\:ss");
-            /*if (Controles.PLAY)
+            
+            if (EstadosControl.PLAY)
             {
-                tiempoTotalPista = tiempoTotalPista.Subtract(unSegundo);
-                txtTiempoTotal.Text = tiempoTotalPista.ToString(@"hh\:mm\:ss");
+                sliderLineTime.Value = mediaReproductor.Position.TotalSeconds;
+                controlTiempo.TiempoTranscurrido = mediaReproductor.Position.TiempoFormato();
+                tiempoTotalPista = tiempoTotalPista.Subtract(TimeSpan.FromSeconds(1));
+                controlTiempo.TiempoFaltante = tiempoTotalPista.TiempoFormato();
             }
-            else
-            {
-                txtTiempoTotal.Text = myMediaElement.Position.ToString(@"hh\:mm\:ss");
-            }*/
-
         }
 
         private void Arrastrar_Ventana(object sender, MouseButtonEventArgs e)
@@ -64,9 +65,7 @@ namespace ReproductorMusicaTagEditables
 
         private void CargarImagenPorDefectoArtista ()
         {
-            infoArtista.ImagenArtista = ArchivoImagenBase
-                                            .archivoImagenFabrica(ArchivoImagenBase.DEFAULT)
-                                            .DameImagen();
+            infoArtista.ImagenArtista = DameImagenCancion();  
         }
 
         private void Inicio_Track(object sender, RoutedEventArgs e)
@@ -76,36 +75,50 @@ namespace ReproductorMusicaTagEditables
                 timer.Stop();
                 sliderLineTime.Value = 0;
             }
-            if (mediaReproductor.NaturalDuration.HasTimeSpan)
+            if (mediaReproductor.TieneTimeSpan())
             {
                 CargarInfoArtista();
-                TimeSpan tiempoTotalPista = mediaReproductor.NaturalDuration.TimeSpan;
-                //txtTiempoTotal.Text = tiempoTotalPista.ToString(@"hh\:mm\:ss");
-                sliderLineTime.Maximum = tiempoTotalPista.TotalSeconds;
+                tiempoTotalPista = mediaReproductor.TiempoTotalPista();
+                sliderLineTime.Maximum = mediaReproductor.TiempoTotalPista().TotalSeconds;
+                controlTiempo.TiempoFaltante = mediaReproductor.TiempoTotalPista().TiempoFormato();
                 timer.Start();
             }
         }
 
         private void Final_Track(object sender, RoutedEventArgs e)
         {
-
+            ReiniciarCamposTiempo();
+            timer.Stop();
+            reproViewModel.Siguiente();
         }
 
         private void CargarInfoArtista ()
         {
-            //ImageBrush bImagen = ArchivoImagenBase
-            //                        .archivoImagenFabrica (ArchivoImagenBase.IMAGEN_DEL_ARCHIVO)
-            //                        .DameImagen(reproductorViewModel.CancionActual.Cancion.Path);
-            //if(bImagen != null)
-            //{
-            //    infoArtista.ImagenArtista = bImagen;
-            //}
-            //if(reproductorViewModel.CancionActual.Cancion != null)
-            //{
-            //    infoArtista.NombreArtista = reproductorViewModel.CancionActual.Cancion.Artista;
-            //    infoArtista.NombreAlbum = reproductorViewModel.CancionActual.Cancion.Album;
-            //    infoArtista.TituloCancion = reproductorViewModel.CancionActual.Cancion.Titulo;
-            //}  
+            ImageBrush bImagen = DameImagenCancion();
+            infoArtista.ImagenArtista = bImagen;
+            if (reproViewModel.CancionActual() != null)
+            {
+                infoArtista.NombreArtista = reproViewModel.CancionActual().Artista;
+                infoArtista.NombreAlbum = reproViewModel.CancionActual().Album;
+                infoArtista.TituloCancion = reproViewModel.CancionActual().Titulo;
+            }
+        }
+
+        private ImageBrush DameImagenCancion()
+        {
+            ImageBrush bImagen = ArchivoImagenBase
+                                   .archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO)
+                                   .DameImagen(reproViewModel.CancionActual().Path) ?? ArchivoImagenBase
+                                   .archivoImagenFabrica(ArchivoImagenBase.DEFAULT)
+                                   .DameImagen();
+            return bImagen;
+        }
+
+
+        private void ReiniciarCamposTiempo ()
+        {
+            controlTiempo.TiempoFaltante = "00:00:00";
+            controlTiempo.TiempoTranscurrido = "00:00:00";
         }
     }
 }

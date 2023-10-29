@@ -14,20 +14,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         public TodasLasCanciones()
         {
             InitializeComponent();
-
-            // scrollCanciones.ScrollToVerticalOffset(principalViewModel.ScrollVertical);
-            //MessageBox.Show(panelPrincipal.Irg.CancionesFiltradas.Count + "");
+            panelPrincipal.AgregarElementosAlFiltro();
+            scrollCanciones.ScrollToVerticalOffset(panelPrincipal.ScrollVertical);
         }
 
         private void InfoCancionTabla_PlayClick(object sender, EventArgs e)
         {
-            
+            panelPrincipal.ScrollVertical = scrollCanciones.VerticalOffset;
         }
 
         private void Actualiza_El_Listado_Canciones(object sender, System.Windows.DependencyPropertyChangedEventArgs e)
         {
-            //PrincipalViewModel principalViewModel = (PrincipalViewModel)DataContext;
-            //principalViewModel.AgregarElementosAlFiltro();
+            panelPrincipal.AgregarElementosAlFiltro();
         }
 
         private void Cargar_Archivos_Directorio(object sender, System.Windows.RoutedEventArgs e)

@@ -37,9 +37,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         }
 
         private void MostrarPrincipalViewAction(object obj)
-        {
-            AgregarElementosAlFiltro();
-            this.CurrentView = new PrincipalViewModel();
+        { 
+           this.CurrentView = new PrincipalViewModel();
         }
     }
 }

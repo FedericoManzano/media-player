@@ -1,10 +1,5 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.Model;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
 {
@@ -13,7 +8,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
 
         public static void Seleccionar(this ObservableCollection<Cancion> canciones, int index)
         {
-            if (index >= 0)
+            if (index >= 0 && index < canciones.Count)
             {
                 Cancion c = canciones[index];
                 c.EstadoColor = "Red";
@@ -24,7 +19,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
 
         public static void Deseleccionar(this ObservableCollection<Cancion> canciones, int index)
         {
-            if (index >= 0)
+            if (index >= 0 && index < canciones.Count)
             {
                 Cancion c = canciones[index];
                 c.EstadoColor = "White";

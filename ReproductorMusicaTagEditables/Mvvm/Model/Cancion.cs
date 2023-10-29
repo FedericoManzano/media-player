@@ -1,4 +1,5 @@
 ﻿
+using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -47,7 +48,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                     Artista = ExtraerArtista(tag),
                     Genero = ExtraerGenero(tag),
                     Album = ExtraerAlbum(tag),
-                    Duracion = ExtraerDuracion(tag),
+                    Duracion = ExtraerDuracion(tag, path),
                     FechaLanzamiento = ExtraerFechaLanzamiento(tag),
                     EstadoColor = COLOR_TEXTO_DEFAULT
                 };
@@ -88,10 +89,22 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             string tit = tag.Tag.Album ?? string.Empty;
             return tit;
         }
-        private string ExtraerDuracion(TagLib.File tag)
+        private string ExtraerDuracion(TagLib.File tag, string path)
         {
-            string tit = tag.Tag.Length ?? string.Empty;
-            return tit;
+            NuevaImagen n = new NuevaImagen();
+            int modificador = 0;
+            byte[] b = n.ImagenAByte(path);
+
+            FileInfo fi = new FileInfo(path);
+
+            if (fi.Extension == ".m4a")
+                modificador = 16250;
+            else if (fi.Extension == ".mp3")
+                modificador = 16670;
+            TimeSpan duracion = TimeSpan.FromSeconds(b.Length / modificador);
+            if (duracion.Hours > 0)
+                return duracion.ToString(@"hh\:mm\:ss");
+            else return duracion.ToString(@"mm\:ss");
         }
         private string ExtraerFechaLanzamiento (TagLib.File tag)
         {
@@ -140,10 +153,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         {
             return string.Format($"Número: {Numero}" + Environment.NewLine + $"Título: {Titulo}" + Environment.NewLine + $"Artista: {Artista}" + Environment.NewLine + $"Album: {Album}" + Environment.NewLine + $"Género: {Genero}" + Environment.NewLine + $"Fecha de Lanzamiento: {FechaLanzamiento}" + Environment.NewLine + $"Duración {Duracion}" + Environment.NewLine);
         }
-
         public int CompareTo(Cancion other)
         {
             return Titulo.CompareTo(other.Titulo);
         }
+        
+
     }
 }

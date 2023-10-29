@@ -13,7 +13,7 @@
     </Control.Resources>
 
 
-    <Border MinWidth="150">
+    <Border MinWidth="150" CornerRadius="0 0 20 0">
         <StackPanel>
             <Border x:Name="contenedorVolumen"
                     Style="{StaticResource bordeSliderVolumen}" 
@@ -38,7 +38,7 @@
                 <Button Style="{StaticResource btnPanel}" 
                         Click="OnClickPlay"
                         Command="{Binding ElementName=panelControl, Path=PlayCommand}">
-                    <fa:PackIconFontAwesome Kind="PlaySolid"/>
+                    <fa:PackIconFontAwesome Kind="{Binding ElementName=panelControl,Path=IconPlay}"/>
                 </Button>
                 <Button Style="{StaticResource btnPanel}" Click="OnClickSiguiente">
                     <fa:PackIconFontAwesome Kind="ForwardSolid"/>

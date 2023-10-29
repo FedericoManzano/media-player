@@ -1,10 +1,9 @@
 ﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.Menu.Menu"
-              xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-            
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="250"
              x:Name="menuLateral" Cursor="">
@@ -41,9 +40,9 @@
                          IsChecked="True"
                          Command="{Binding ElementName=menuLateral,Path=CommandInicio}">
                 <StackPanel Orientation="Horizontal" Cursor="">
-                    <fa:PackIconFontAwesome Kind="ListAltRegular"
+                    <fa:PackIconFontAwesome Kind="HomeSolid"
                                Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
-                    <TextBlock Text="Todas las Pista" 
+                    <TextBlock Text="Inicio" 
                             Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
             </RadioButton>

@@ -9,9 +9,9 @@
     </Style>
 
     <Style x:Key="btnSeleccionar" TargetType="Button">
-        <Setter Property="Background" Value="#D4D4D4"/>
+        <Setter Property="Background" Value="#2A2E32"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
-        <Setter Property="Foreground" Value="#2C2C2C"/>
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="Width" Value="150"/>
         <Setter Property="Height" Value="35"/>
         <Setter Property="Cursor" Value="Hand"/>
@@ -30,7 +30,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="#E9E9EA"/>
+                <Setter Property="Background" Value="#42464B"/>
             </Trigger>
         </Style.Triggers>
         

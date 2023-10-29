@@ -51,8 +51,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.4.4.0\lib\net462\ControlzEx.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.UWP.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=2.0.0.0, Culture=neutral, PublicKeyToken=51482d6f650b2b3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.2.4.10\lib\net47\MahApps.Metro.dll</HintPath>
     </Reference>
     <Reference Include="MahApps.Metro.IconPacks.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.IconPacks.FontAwesome.4.11.0\lib\net47\MahApps.Metro.IconPacks.Core.dll</HintPath>
@@ -60,11 +66,18 @@
     <Reference Include="MahApps.Metro.IconPacks.FontAwesome, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.IconPacks.FontAwesome.4.11.0\lib\net47\MahApps.Metro.IconPacks.FontAwesome.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.19\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -193,6 +206,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mvvm\ExtensionMetodos\ControlTiempo.cs" />
+    <Compile Include="Mvvm\ExtensionMetodos\ReproductorViewModel.cs" />
     <Compile Include="Mvvm\ExtensionMetodos\Seleccionador.cs" />
     <Compile Include="Mvvm\Model\Cancion.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\ArchivoImagenBase.cs" />
@@ -208,6 +223,7 @@
     <Compile Include="Mvvm\Repository\CargaArchivos\IMusica\ICargarMusicaDragDrop.cs" />
     <Compile Include="Mvvm\ViewModel\ArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Base\CancionActual.cs" />
+    <Compile Include="Mvvm\ViewModel\Base\EstadosControl.cs" />
     <Compile Include="Mvvm\ViewModel\Base\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModel\PrincipalViewModel.cs" />

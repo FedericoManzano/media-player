@@ -21,7 +21,7 @@
 
     <!-- Data context ../ViewModel/ReproductorViewModel.cs -->
     <Window.DataContext>
-        <viewModel:ReproductorViewModel/>
+        <viewModel:ReproductorViewModel x:Name="reproViewModel"/>
     </Window.DataContext>
 
     
@@ -73,70 +73,75 @@
                     <ContentControl Grid.Row="1" Content="{Binding CurrentView}"/>
 
                     <!-- Control de track-->
-                    <Grid Grid.Row="2" Background="#1E2123">
-                        <Grid >
-                            <!-- Filas 2 de la grilla-->
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
+                    <Border CornerRadius="0 0 10 0" 
+                            Grid.Row="2" 
+                            Background="#1E2123"
+                            >
+                        <Grid  > 
+                            <Grid >
+                                <!-- Filas 2 de la grilla-->
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
 
-                            <!-- Columnas 3 -->
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
+                                <!-- Columnas 3 -->
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
 
-                            <!-- Info de la cancion en curso 
-                            Su Artista, Album y nombre -->
-                            <pinfo:InfoArtista x:Name="infoArtista"
-                                               Margin="10 0 0 0" 
-                                               Grid.Column="0" 
-                                               Grid.RowSpan="2"
-                                               NombreArtista="Desconocido"
-                                               NombreAlbum="Desconocido"
-                                               TituloCancion="..."/>
+                                <!-- Info de la cancion en curso 
+                                Su Artista, Album y nombre -->
+                                <pinfo:InfoArtista x:Name="infoArtista"
+                                                   Margin="10 0 0 0" 
+                                                   Grid.Column="0" 
+                                                   Grid.RowSpan="2"
+                                                   NombreArtista="Desconocido"
+                                                   NombreAlbum="Desconocido"
+                                                   TituloCancion="..."/>
 
-                            <!-- Panel de control del track, volumen etc-->
-                            <pm:PanelControlMusica x:Name="panelControlMusica"
-                                                   Grid.Column="1" 
-                                                   Grid.Row="0" 
-                                                   VerticalAlignment="Bottom" 
-                                                   ValorVolumen="5"
-                                                   PlayCommand="{Binding PlayCommand}"/>
+                                <!-- Panel de control del track, volumen etc-->
+                                <pm:PanelControlMusica x:Name="panelControlMusica"
+                               Grid.Column="1" 
+                               Grid.Row="0" 
+                               VerticalAlignment="Bottom" 
+                               ValorVolumen="5"
+                               IconPlay="{Binding Irg.IconoPlay}"
+                               PlayCommand="{Binding PlayCommand}"/>
 
-                            <!-- Manejador del tiempo de pista -->
-                            <Slider x:Name="sliderLineTime"
-                                    Grid.Column="1" 
-                                    Grid.Row="1"
-                                    IsSelectionRangeEnabled="True"
-                                    SelectionEnd="{Binding ElementName=sliderLineTime, Path=Value}"
-                                    VerticalAlignment="Top"
-                                    Margin="10 0 0 0"
-                                    Minimum="0"
-                                    Maximum="10"
-                                    Width="500"/>
+                                <!-- Manejador del tiempo de pista -->
+                                <Slider x:Name="sliderLineTime"
+                                        Grid.Column="1" 
+                                        Grid.Row="1"
+                                        IsSelectionRangeEnabled="True"
+                                        SelectionEnd="{Binding ElementName=sliderLineTime, Path=Value}"
+                                        VerticalAlignment="Top"
+                                        Margin="10 0 0 0"
+                                        Minimum="0"/>
 
-                            <!-- Tiempo transcurrido de la pista / 
-                            Tiempo que falta para que termina la pista-->
-                            <tiempo:TiempoTrack  x:Name="controlTiempo"
-                                                 Grid.Column="2" 
-                                                 Grid.RowSpan="2"/>
+                                <!-- Tiempo transcurrido de la pista / 
+                                Tiempo que falta para que termina la pista-->
+                                <tiempo:TiempoTrack  x:Name="controlTiempo"
+                                                     Grid.Column="2" 
+                                                     Grid.RowSpan="2"/>
 
-                            <MediaElement x:Name="mediaReproductor" 
-                                  HorizontalAlignment="Left" 
-                                  Height="0"
-                                  Width="0"
-                                  VerticalAlignment="Top" 
-                                  LoadedBehavior="Manual" 
-                                  UnloadedBehavior="Stop"
-                                  MediaOpened="Inicio_Track"
-                                  MediaEnded="Final_Track"
-                                  Volume="{Binding ElementName=panelControlMusica, Path=ValorVolumen, Mode=TwoWay}"/>
+                                <MediaElement x:Name="mediaReproductor" 
+                                              HorizontalAlignment="Left" 
+                                              Height="0"
+                                              Width="0"
+                                              VerticalAlignment="Top" 
+                                              LoadedBehavior="Manual" 
+                                              UnloadedBehavior="Stop"
+                                              MediaOpened="Inicio_Track"
+                                              MediaEnded="Final_Track"
+                                              Volume="{Binding ElementName=panelControlMusica, Path=ValorVolumen, Mode=TwoWay}"/>
 
+                            </Grid>
                         </Grid>
-                    </Grid>
+                    </Border>
+                    
                 </Grid>
             </Grid>
         </Border>

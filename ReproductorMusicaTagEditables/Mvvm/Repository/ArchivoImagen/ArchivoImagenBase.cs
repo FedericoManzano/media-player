@@ -32,7 +32,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen
         }
 
 
-        protected byte[] ImagenAByte(string path)
+        public byte[] ImagenAByte(string path)
         {
             if (File.Exists(path))
             { 

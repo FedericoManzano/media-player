@@ -1,4 +1,5 @@
 ﻿
+using MahApps.Metro.IconPacks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -6,11 +7,11 @@ using System.Windows.Media;
 
 namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
 {
-    
+
     public partial class PanelControlMusica : UserControl
     {
         public bool visibilidadSliderVolumen = false;
-        
+
         public PanelControlMusica()
         {
             InitializeComponent();
@@ -18,17 +19,17 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
 
 
         #region EventoAnterior Definición
-        public static readonly RoutedEvent AnteriorEvent = 
-            EventManager.RegisterRoutedEvent("AnteriorClick", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(PanelControlMusica));  
+        public static readonly RoutedEvent AnteriorEvent =
+            EventManager.RegisterRoutedEvent("AnteriorClick", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(PanelControlMusica));
 
 
         public event RoutedEventHandler AnteriorClick
         {
-            add => AddHandler(AnteriorEvent,value);
-            remove => RemoveHandler(AnteriorEvent,value);
+            add => AddHandler(AnteriorEvent, value);
+            remove => RemoveHandler(AnteriorEvent, value);
         }
 
-        public void OnClickAnterior (object sender, RoutedEventArgs e)
+        public void OnClickAnterior(object sender, RoutedEventArgs e)
         {
             RaiseEvent(new RoutedEventArgs(AnteriorEvent));
         }
@@ -45,7 +46,7 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
             add => AddHandler(SiguienteEvent, value);
             remove => RemoveHandler(SiguienteEvent, value);
         }
-        
+
 
         public void OnClickSiguiente(object sender, RoutedEventArgs e)
         {
@@ -77,7 +78,7 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
 
         public double ValorVolumen
         {
-            get => (double) GetValue(ValorVolumenProperty);
+            get => (double)GetValue(ValorVolumenProperty);
             set => SetValue(ValorVolumenProperty, value);
         }
         #endregion
@@ -85,12 +86,12 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
 
         #region Play Command
         public static readonly DependencyProperty PlayCommandProperty =
-            DependencyProperty.Register("PlayCommand",typeof(ICommand),typeof(PanelControlMusica));
+            DependencyProperty.Register("PlayCommand", typeof(ICommand), typeof(PanelControlMusica));
 
         public ICommand PlayCommand
         {
             get => GetValue(PlayCommandProperty) as ICommand;
-            set => SetValue(PlayCommandProperty, value);    
+            set => SetValue(PlayCommandProperty, value);
         }
         #endregion
 
@@ -118,13 +119,13 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
         #endregion
 
 
-        public static RoutedEvent ValueChangeEvent = 
+        public static RoutedEvent ValueChangeEvent =
             EventManager.RegisterRoutedEvent("ValueChanged", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(PanelControlMusica));
 
         public event RoutedEventHandler ValueChanged
         {
-            add => AddHandler(ValueChangeEvent,value);
-            remove => RemoveHandler(ValueChangeEvent,value);
+            add => AddHandler(ValueChangeEvent, value);
+            remove => RemoveHandler(ValueChangeEvent, value);
         }
 
 
@@ -135,7 +136,7 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
 
         private void Mostrar_Slider_Volumen(object sender, RoutedEventArgs e)
         {
-            if(contenedorVolumen.Visibility == Visibility.Visible)
+            if (contenedorVolumen.Visibility == Visibility.Visible)
             {
                 contenedorVolumen.Visibility = Visibility.Collapsed;
                 btnVolumen.Foreground = Brushes.White;
@@ -147,9 +148,13 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
             }
         }
 
-        private void sliderVolumen_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
+        public static DependencyProperty IconPlayProperty =
+            DependencyProperty.Register("IconPlay", typeof(MahApps.Metro.IconPacks.PackIconFontAwesomeKind), typeof(PanelControlMusica), new PropertyMetadata(MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PlaySolid));
 
+        public MahApps.Metro.IconPacks.PackIconFontAwesomeKind IconPlay
+        {
+            get => (MahApps.Metro.IconPacks.PackIconFontAwesomeKind)GetValue(IconPlayProperty);
+            set => SetValue(IconPlayProperty, value);
         }
     }
 }
