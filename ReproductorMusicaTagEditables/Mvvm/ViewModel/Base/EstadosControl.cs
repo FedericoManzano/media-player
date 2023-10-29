@@ -9,5 +9,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
     public class EstadosControl
     {
         public static bool PLAY = false; 
+        public static bool SLIDER_MOVE = false;
     }
 }

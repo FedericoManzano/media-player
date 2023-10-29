@@ -36,7 +36,7 @@ namespace ReproductorMusicaTagEditables
         private void Time_Track(object sender, EventArgs e)
         {
             
-            if (EstadosControl.PLAY)
+            if (EstadosControl.PLAY && !EstadosControl.SLIDER_MOVE)
             {
                 sliderLineTime.Value = mediaReproductor.Position.TotalSeconds;
                 controlTiempo.TiempoTranscurrido = mediaReproductor.Position.TiempoFormato();
@@ -119,6 +119,29 @@ namespace ReproductorMusicaTagEditables
         {
             controlTiempo.TiempoFaltante = "00:00:00";
             controlTiempo.TiempoTranscurrido = "00:00:00";
+        }
+
+        private void Comenzar_Arrastre_Slider_TimeLineSlider(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)
+        {
+            timer.Stop();
+            EstadosControl.SLIDER_MOVE = !EstadosControl.SLIDER_MOVE;
+        }
+
+        private void Finalizar_Arrastre_Slider_TimeLineSlider(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
+        {
+            if(EstadosControl.SLIDER_MOVE)
+            {
+                double posicionActual = mediaReproductor.Position.TotalSeconds;
+
+                mediaReproductor.Position = TimeSpan.FromSeconds( sliderLineTime.Value);
+
+                double posicionFinal = mediaReproductor.Position.TotalSeconds;
+
+                tiempoTotalPista = tiempoTotalPista.Subtract( TimeSpan.FromSeconds( posicionFinal - posicionActual));
+
+                EstadosControl.SLIDER_MOVE = !EstadosControl.SLIDER_MOVE;
+                timer.Start();
+            }
         }
     }
 }
