@@ -234,6 +234,11 @@
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModel\PrincipalViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\Utils\AccionReproductor.cs" />
+    <Compile Include="Mvvm\ViewModel\Utils\Anterior.cs" />
+    <Compile Include="Mvvm\ViewModel\Utils\IAccionReproductor.cs" />
+    <Compile Include="Mvvm\ViewModel\Utils\Play.cs" />
+    <Compile Include="Mvvm\ViewModel\Utils\Siguiente.cs" />
     <Compile Include="Mvvm\View\ArtistaView.xaml.cs">
       <DependentUpon>ArtistaView.xaml</DependentUpon>
     </Compile>
@@ -265,16 +270,13 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mvvm\Commands\IComandoPersonalizado\" />
-    <Folder Include="Mvvm\ViewModel\Comandos\" />
-    <Folder Include="Mvvm\ViewModel\Utils\" />
     <Folder Include="Mvvm\View\Utils\" />
-    <Folder Include="Sox\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

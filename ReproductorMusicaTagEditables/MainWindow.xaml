@@ -104,28 +104,29 @@
 
                                 <!-- Panel de control del track, volumen etc-->
                                 <pm:PanelControlMusica x:Name="panelControlMusica"
-                               Grid.Column="1" 
-                               Grid.Row="0" 
-                               VerticalAlignment="Bottom" 
-                               ValorVolumen="5"
-                               IconPlay="{Binding Irg.IconoPlay}"
-                               PlayCommand="{Binding PlayCommand}"/>
+                                                       Grid.Column="1" 
+                                                       Grid.Row="0" 
+                                                       VerticalAlignment="Bottom" 
+                                                       ValorVolumen="5"
+                                                       IconPlay="{Binding Irg.IconoPlay}"
+                                                       PlayCommand="{Binding PlayCommand}"
+                                                       SiguienteCommand="{Binding SiguienteCommand}"
+                                                       AtrasCommand="{Binding AnteriorCommand}"/>
 
                                 <!-- Manejador del tiempo de pista -->
                                 <Slider Style="{DynamicResource SliderStyle1}" x:Name="sliderLineTime"
-                                        
                                         Grid.Column="1" 
                                         Grid.Row="1"
-                                        IsSelectionRangeEnabled="True"
-                                        SelectionEnd="{Binding ElementName=sliderLineTime, Path=Value}"
                                         VerticalAlignment="Top"
+                                        IsSelectionRangeEnabled="True"
+                                        Margin="10 0 0 0"
+                                        IsMoveToPointEnabled="True"
+                                        Minimum="0"
+                                        SelectionEnd="{Binding ElementName=sliderLineTime, Path=Value}"
                                         Thumb.DragStarted="Comenzar_Arrastre_Slider_TimeLineSlider"
                                         Thumb.DragCompleted="Finalizar_Arrastre_Slider_TimeLineSlider"
                                         MouseLeftButtonUp="sliderLineTime_MouseLeftButtonUp"
-                                        PreviewMouseLeftButtonUp="sliderLineTime_MouseLeftButtonDown"
-                                        Margin="10 0 0 0"
-                                        IsMoveToPointEnabled="True"
-                                        Minimum="0"/>
+                                        PreviewMouseLeftButtonUp="sliderLineTime_MouseLeftButtonDown"/>
 
                                 <!-- Tiempo transcurrido de la pista / 
                                 Tiempo que falta para que termina la pista-->

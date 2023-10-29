@@ -1,10 +1,6 @@
-﻿using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
-using ReproductorMusicaTagEditables.Mvvm.Model;
-using ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos;
-using ReproductorMusicaTagEditables.Mvvm.ViewModel;
+﻿
 using System;
 using System.Windows.Controls;
-using System.Windows.Forms;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
 {

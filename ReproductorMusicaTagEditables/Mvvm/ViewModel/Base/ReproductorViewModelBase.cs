@@ -1,8 +1,8 @@
 ﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -24,86 +24,62 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 
         public ICommand CargarMusicaCommand { get; }
         public ICommand PlayCommand { get; }
+        public ICommand SiguienteCommand { get; }
+        public ICommand AnteriorCommand { get; }
 
 
         public ReproductorViewModelBase ()
         {
             CargarMusicaCommand = new RelayCommand(CargarMusicaAction);
+            SiguienteCommand = new RelayCommand(SiguienteAction, CanSiguienteAction);
+            AnteriorCommand = new RelayCommand(AnteriorAction, CanAnteriorAction);
             PlayCommand = new RelayCommand(PlayAction);
+        }
+
+        public bool CanAnteriorAction(object arg)
+        {
+            if (EstadosControl.RANDOM)
+            {
+                return Irg.CancionesFiltradas.Count > 0;
+            }
+            return Irg.CancionesFiltradas.Count > 0 && Irg.CancionActual.Index > 0;
+        }
+
+        public void AnteriorAction(object obj = null)
+        { 
+            AccionReproductor.Fabrica(AccionReproductor.ATRAS_ACCION)?.Ejecutar(Irg);
+        }
+
+        private bool CanSiguienteAction(object arg)
+        {
+            if(EstadosControl.RANDOM)
+            {
+                return Irg.CancionesFiltradas.Count > 0;
+            }
+            return Irg.CancionesFiltradas.Count > 0 && Irg.CancionActual.Index < Irg.CancionesFiltradas.Count - 1;
+        }
+
+        public void SiguienteAction(object obj = null)
+        {
+            AccionReproductor.Fabrica(AccionReproductor.SIGUIENTE_ACCION)?.Ejecutar(Irg);
         }
 
         private void PlayAction(object obj)
         {
             Cancion c = (Cancion)obj;
-            if(c != null)
-            {
-                if (Irg.CancionActual.Index >= 0)
-                {
-                    Irg.CancionesFiltradas.Deseleccionar(Irg.CancionActual.Index);
-                }
-                Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexOf(c);
-                Irg.CancionActual.Cancion = c;
-                Irg.Reproductor.Source = new Uri(c.Path);
-                Irg.Reproductor.Play();
-                Irg.CancionesFiltradas.Seleccionar(Irg.CancionActual.Index);
-                Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
-                EstadosControl.PLAY = true;
-            } else
-            {
-                if(EstadosControl.PLAY)
-                {
-                    EstadosControl.PLAY = !EstadosControl.PLAY;
-                    Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PlaySolid;
-                    Irg.Reproductor.Pause();
-                }
-                else
-                {
-                    if(irg.CancionesFiltradas.Count > 0)
-                    {
-                        if (Irg.CancionActual.Index < 0)
-                        {
-                            Irg.CancionActual.Index = 0;
-                            Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
-                            Irg.Reproductor.Source = new Uri(Irg.CancionActual.Cancion.Path);
-                            Irg.Reproductor.Play();
-                            Irg.CancionesFiltradas.Seleccionar(Irg.CancionActual.Index);
-                            Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
-                            EstadosControl.PLAY = true;
-                        }
-                        else
-                        {
-                            Irg.Reproductor.Play();
-                            Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
-                            EstadosControl.PLAY = true;
-                        }
-                    }
-                }
-            }
+            AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);
         }
 
 
-
-        public void Siguiente()
-        {
-            if (Irg.CancionesFiltradas.Count > Irg.CancionActual.Index + 1)
-            {
-                Irg.CancionesFiltradas.Deseleccionar(Irg.CancionActual.Index);
-                Irg.CancionActual.Index++;
-                Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
-                Irg.Reproductor.Source = new Uri(Irg.CancionActual.Cancion.Path);
-                Irg.Reproductor.Play();
-                Irg.CancionesFiltradas.Seleccionar(Irg.CancionActual.Index);
-            }   
-        }
         private void CargarMusicaAction(object obj)
         {
             Irg.CargarMusicaSeleccion();
         }
 
-
         public void AgregarElementosAlFiltro()
         {
             Irg.AgregarElementosAlFiltro();
         }
+
     }
 }

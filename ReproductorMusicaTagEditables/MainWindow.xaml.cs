@@ -91,7 +91,8 @@ namespace ReproductorMusicaTagEditables
         {
             ReiniciarCamposTiempo();
             timer.Stop();
-            reproViewModel.Siguiente();
+            
+            reproViewModel.SiguienteAction();
         }
 
         private void CargarInfoArtista ()
@@ -144,7 +145,6 @@ namespace ReproductorMusicaTagEditables
 
         private void sliderLineTime_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            
             mediaReproductor.Position = mediaReproductor.Position = TimeSpan.FromSeconds(sliderLineTime.Value); ;
             posicionFinalSlider = mediaReproductor.Position.TotalSeconds;
             tiempoTotalPista = tiempoTotalPista.Subtract(TimeSpan.FromSeconds(posicionFinalSlider - posicionInicialSlider));
