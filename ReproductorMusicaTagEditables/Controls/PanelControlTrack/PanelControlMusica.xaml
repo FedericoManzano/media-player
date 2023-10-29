@@ -21,6 +21,7 @@
                 <Slider x:Name="sliderVolumen"
                         Style="{DynamicResource SliderStyle1}"
                         IsSelectionRangeEnabled="True"
+                        SelectionEnd="{Binding ElementName=sliderVolumen, Path=Value}"
                         Minimum="0"
                         Maximum="0.5"
                         IsMoveToPointEnabled="True"
@@ -50,8 +51,10 @@
                         Click="Mostrar_Slider_Volumen">
                     <fa:PackIconFontAwesome Kind="VolumeUpSolid"/>
                 </Button>
-                <Button Style="{StaticResource btnPanel}">
-                    <fa:PackIconFontAwesome Kind="RandomSolid"/>
+                <Button x:Name="btnRandom"
+                        Style="{StaticResource btnPanel}"
+                        Click="Random_On_Off">
+                    <fa:PackIconFontAwesome x:Name="iconRandom" Kind="RandomSolid"/>
                 </Button>
                 <Button Style="{StaticResource btnPanel}">
                     <fa:PackIconFontAwesome Kind="ReplyAllSolid"/>

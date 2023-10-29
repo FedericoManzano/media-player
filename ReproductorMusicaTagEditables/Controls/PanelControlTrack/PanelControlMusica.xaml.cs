@@ -1,5 +1,6 @@
 ﻿
 using MahApps.Metro.IconPacks;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -144,7 +145,7 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
             else
             {
                 contenedorVolumen.Visibility = Visibility.Visible;
-                btnVolumen.Foreground = Brushes.Orange;
+                btnVolumen.Foreground = Brushes.Red;
             }
         }
 
@@ -155,6 +156,18 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
         {
             get => (MahApps.Metro.IconPacks.PackIconFontAwesomeKind)GetValue(IconPlayProperty);
             set => SetValue(IconPlayProperty, value);
+        }
+
+        private void Random_On_Off(object sender, RoutedEventArgs e)
+        {
+            EstadosControl.RANDOM = !EstadosControl.RANDOM;
+            if(EstadosControl.RANDOM) 
+            { 
+                iconRandom.Foreground = Brushes.Red;
+            } else
+            {
+                iconRandom.Foreground = Brushes.White;
+            }
         }
     }
 }
