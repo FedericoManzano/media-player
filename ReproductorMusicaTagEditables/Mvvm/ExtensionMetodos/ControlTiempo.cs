@@ -9,8 +9,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
 {
     public static class ControlTiempo
     {
-
-
         public static TimeSpan RestarSegundos (this TimeSpan origen, int segundos)
         {
             return origen.Subtract(new TimeSpan(0,0,segundos));

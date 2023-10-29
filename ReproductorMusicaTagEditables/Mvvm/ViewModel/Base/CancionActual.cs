@@ -11,6 +11,5 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
     {
         public int Index { get; set; } = -1;
         public Cancion Cancion { get; set; } = null;
-
     }
 }

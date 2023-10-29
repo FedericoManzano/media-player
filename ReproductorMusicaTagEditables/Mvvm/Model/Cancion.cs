@@ -1,16 +1,15 @@
 ﻿
-using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.WindowsAPICodePack.Shell;
+
 
 namespace ReproductorMusicaTagEditables.Mvvm.Model
 {
     public class Cancion: IComparable<Cancion>
     {
-
         public static readonly string COLOR_TEXTO_DEFAULT = "White";
-
         public string Numero { get; set; } = string.Empty;
         public string Titulo { get; set; } = string.Empty;
         public string Artista { get; set; } = string.Empty;
@@ -34,7 +33,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             EstadoColor = COLOR_TEXTO_DEFAULT;
         }
 
-
         public Cancion CrearCancion(string path)
         {
             if(System.IO.File.Exists(path))
@@ -55,7 +53,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             }
             return null;
         }
-
         private string ExtraerNumero(TagLib.File tag)
         {
             string num = tag.Tag.Track > 0 ? tag.Tag.Track.ToString() : string.Empty;
@@ -63,7 +60,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         }
         private string ExtraerTitulo(TagLib.File tag, string path)
         {
-
             string tit = tag.Tag.Title ?? string.Empty;
             if(tit == string.Empty)
             {
@@ -91,8 +87,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         }
         private string ExtraerDuracion(TagLib.File tag, string path)
         {
-            return "";
+            FileInfo fi = new FileInfo(path);
+            ShellObject shellObj =  ShellObject.FromParsingName(fi.FullName);
+            ulong? du = shellObj.Properties.System.Media.Duration.Value;
+            TimeSpan ts = TimeSpan.FromTicks((long)du.GetValueOrDefault(0UL));
+            return ts.ToString(@"mm\:ss");
         }
+        
+    
         private string ExtraerFechaLanzamiento (TagLib.File tag)
         {
             return tag.Tag.Year.ToString();
@@ -144,7 +146,5 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         {
             return Titulo.CompareTo(other.Titulo);
         }
-        
-
     }
 }

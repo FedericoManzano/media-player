@@ -129,7 +129,6 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
             remove => RemoveHandler(ValueChangeEvent, value);
         }
 
-
         public void OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             RaiseEvent(new RoutedEventArgs(ValueChangeEvent));

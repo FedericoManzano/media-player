@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
              xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d"
              x:Name="infoCancion">
@@ -16,6 +15,7 @@
     <Border Style="{StaticResource bordeInfoCancion}">
         <Grid>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -81,7 +81,11 @@
                        Text="{Binding ElementName=infoCancion, Path=AnoInfo}" 
                        HorizontalAlignment="Right"
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
-
+            <TextBlock Style="{StaticResource txtInfoCancion}" 
+                       Grid.Column="12"  
+                       Text="{Binding ElementName=infoCancion, Path=DuracionInfo}" 
+                       HorizontalAlignment="Right"
+                       Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
             
         </Grid>
     </Border>

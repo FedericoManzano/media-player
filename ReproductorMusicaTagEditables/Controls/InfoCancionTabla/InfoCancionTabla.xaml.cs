@@ -26,8 +26,6 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             RaiseEvent(new RoutedEventArgs(PlayClickEvent));
         }
 
-
-
         public static readonly RoutedEvent AritstaClickEvent =
             EventManager.RegisterRoutedEvent("ArtistaClick", RoutingStrategy.Bubble, typeof(EventHandler), typeof(InfoCancionTabla));
 
@@ -56,8 +54,6 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             RaiseEvent(new RoutedEventArgs(AlbumClickEvent));
         }
 
-
-
         public static readonly DependencyProperty NumeroProperty =
            DependencyProperty.Register("NumeroInfo", typeof(string), typeof(InfoCancionTabla), new PropertyMetadata(string.Empty));
 
@@ -67,7 +63,6 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             set => SetValue(NumeroProperty, value);
         }
 
-
         public static readonly DependencyProperty TituloProperty =
             DependencyProperty.Register("TituloInfo", typeof(string), typeof(InfoCancionTabla), new PropertyMetadata(string.Empty) );
 
@@ -76,8 +71,6 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             get => GetValue(TituloProperty) as string;
             set => SetValue(TituloProperty, value);
         }
-
-
 
         public static readonly DependencyProperty ArtistaProperty =
             DependencyProperty.Register("ArtistaInfo", typeof(string), typeof(InfoCancionTabla), new PropertyMetadata(string.Empty));
@@ -107,7 +100,6 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             set => SetValue(AnoProperty, value);
         }
 
-
         public static readonly DependencyProperty DuracionProperty =
               DependencyProperty.Register("DuracionInfo", typeof(string), typeof(InfoCancionTabla), new PropertyMetadata(string.Empty));
 
@@ -116,7 +108,6 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             get => GetValue(DuracionProperty) as string;
             set => SetValue(DuracionProperty, value);
         }
-
 
         public static readonly DependencyProperty GeneroProperty =
               DependencyProperty.Register("GeneroInfo", typeof(string), typeof(InfoCancionTabla), new PropertyMetadata(string.Empty));

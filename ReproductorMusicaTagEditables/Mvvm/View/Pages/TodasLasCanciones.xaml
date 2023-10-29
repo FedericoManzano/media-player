@@ -81,6 +81,7 @@
                                                 AlbumInfo="{Binding Album}"
                                                 GeneroInfo="{Binding Genero}"
                                                 AnoInfo="{Binding FechaLanzamiento}"
+                                                DuracionInfo="{Binding Duracion}"
                                                 ColorTexto="{Binding EstadoColor}"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
