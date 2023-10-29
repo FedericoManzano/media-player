@@ -54,11 +54,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             get => _canciones;
             set { _canciones = value; OnPropertyChanged(nameof(Canciones)); }
         }
-
         public ObservableCollection<Cancion> CancionesFiltradas
         {
             get => _cancionesFiltradas;
-            set { _cancionesFiltradas = value; OnPropertyChanged(nameof(CancionesFiltradas)); }
+            set 
+            { 
+                _cancionesFiltradas = value;
+                OnPropertyChanged(nameof(CancionesFiltradas));
+            }
         }
 
         public PackIconFontAwesomeKind IconoPlay { get => _iconoPlay; set { _iconoPlay = value;OnPropertyChanged(nameof(IconoPlay)); } }

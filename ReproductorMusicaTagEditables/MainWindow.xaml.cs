@@ -91,7 +91,6 @@ namespace ReproductorMusicaTagEditables
         {
             ReiniciarCamposTiempo();
             timer.Stop();
-            
             reproViewModel.SiguienteAction();
         }
 

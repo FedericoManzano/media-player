@@ -1,8 +1,6 @@
 ﻿using Reproductor_Musica.Core;
-using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
-using System;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -26,7 +24,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         public ICommand PlayCommand { get; }
         public ICommand SiguienteCommand { get; }
         public ICommand AnteriorCommand { get; }
-
 
         public ReproductorViewModelBase ()
         {
@@ -69,7 +66,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             Cancion c = (Cancion)obj;
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);
         }
-
 
         private void CargarMusicaAction(object obj)
         {

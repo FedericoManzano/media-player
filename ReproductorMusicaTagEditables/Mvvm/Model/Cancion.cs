@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using Microsoft.WindowsAPICodePack.Shell;
-
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Model
 {
@@ -42,10 +42,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                 {
                     Path = path,
                     Numero = ExtraerNumero(tag),
-                    Titulo = ExtraerTitulo(tag, path),
-                    Artista = ExtraerArtista(tag),
-                    Genero = ExtraerGenero(tag),
-                    Album = ExtraerAlbum(tag),
+                    Titulo = ExtraerTitulo(tag, path).Longitud(20),
+                    Artista = ExtraerArtista(tag).Longitud(20),
+                    Genero = ExtraerGenero(tag).Longitud(20),
+                    Album = ExtraerAlbum(tag).Longitud(20),
                     Duracion = ExtraerDuracion(tag, path),
                     FechaLanzamiento = ExtraerFechaLanzamiento(tag),
                     EstadoColor = COLOR_TEXTO_DEFAULT

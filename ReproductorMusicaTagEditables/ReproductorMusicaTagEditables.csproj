@@ -213,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Mvvm\ExtensionMetodos\ControlTiempo.cs" />
+    <Compile Include="Mvvm\ExtensionMetodos\FormatoCampos.cs" />
     <Compile Include="Mvvm\ExtensionMetodos\ReproductorViewModel.cs" />
     <Compile Include="Mvvm\ExtensionMetodos\Seleccionador.cs" />
     <Compile Include="Mvvm\Model\Cancion.cs" />
