@@ -91,20 +91,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         }
         private string ExtraerDuracion(TagLib.File tag, string path)
         {
-            NuevaImagen n = new NuevaImagen();
-            int modificador = 0;
-            byte[] b = n.ImagenAByte(path);
-
-            FileInfo fi = new FileInfo(path);
-
-            if (fi.Extension == ".m4a")
-                modificador = 16250;
-            else if (fi.Extension == ".mp3")
-                modificador = 16670;
-            TimeSpan duracion = TimeSpan.FromSeconds(b.Length / modificador);
-            if (duracion.Hours > 0)
-                return duracion.ToString(@"hh\:mm\:ss");
-            else return duracion.ToString(@"mm\:ss");
+            return "";
         }
         private string ExtraerFechaLanzamiento (TagLib.File tag)
         {

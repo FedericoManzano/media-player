@@ -57,6 +57,17 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
         }
 
 
+
+        public static readonly DependencyProperty NumeroProperty =
+           DependencyProperty.Register("NumeroInfo", typeof(string), typeof(InfoCancionTabla), new PropertyMetadata(string.Empty));
+
+        public string NumeroInfo
+        {
+            get => GetValue(NumeroProperty) as string;
+            set => SetValue(NumeroProperty, value);
+        }
+
+
         public static readonly DependencyProperty TituloProperty =
             DependencyProperty.Register("TituloInfo", typeof(string), typeof(InfoCancionTabla), new PropertyMetadata(string.Empty) );
 

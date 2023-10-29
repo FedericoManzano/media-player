@@ -112,7 +112,8 @@
                                PlayCommand="{Binding PlayCommand}"/>
 
                                 <!-- Manejador del tiempo de pista -->
-                                <Slider x:Name="sliderLineTime"
+                                <Slider Style="{DynamicResource SliderStyle1}" x:Name="sliderLineTime"
+                                        
                                         Grid.Column="1" 
                                         Grid.Row="1"
                                         IsSelectionRangeEnabled="True"
@@ -120,7 +121,10 @@
                                         VerticalAlignment="Top"
                                         Thumb.DragStarted="Comenzar_Arrastre_Slider_TimeLineSlider"
                                         Thumb.DragCompleted="Finalizar_Arrastre_Slider_TimeLineSlider"
+                                        MouseLeftButtonUp="sliderLineTime_MouseLeftButtonUp"
+                                        PreviewMouseLeftButtonUp="sliderLineTime_MouseLeftButtonDown"
                                         Margin="10 0 0 0"
+                                        IsMoveToPointEnabled="True"
                                         Minimum="0"/>
 
                                 <!-- Tiempo transcurrido de la pista / 

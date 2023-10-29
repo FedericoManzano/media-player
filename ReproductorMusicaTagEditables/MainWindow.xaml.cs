@@ -17,6 +17,8 @@ namespace ReproductorMusicaTagEditables
         private DispatcherTimer timer;
       
         private TimeSpan tiempoTotalPista = new TimeSpan();
+        private double posicionInicialSlider = 0;
+        private double posicionFinalSlider = 0;
 
 
         public MainWindow()
@@ -124,24 +126,35 @@ namespace ReproductorMusicaTagEditables
         private void Comenzar_Arrastre_Slider_TimeLineSlider(object sender, System.Windows.Controls.Primitives.DragStartedEventArgs e)
         {
             timer.Stop();
-            EstadosControl.SLIDER_MOVE = !EstadosControl.SLIDER_MOVE;
+            
         }
 
         private void Finalizar_Arrastre_Slider_TimeLineSlider(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
         {
-            if(EstadosControl.SLIDER_MOVE)
-            {
-                double posicionActual = mediaReproductor.Position.TotalSeconds;
+            
+            posicionInicialSlider = mediaReproductor.Position.TotalSeconds;
 
-                mediaReproductor.Position = TimeSpan.FromSeconds( sliderLineTime.Value);
+            mediaReproductor.Position = TimeSpan.FromSeconds( sliderLineTime.Value);
 
-                double posicionFinal = mediaReproductor.Position.TotalSeconds;
+            posicionFinalSlider = mediaReproductor.Position.TotalSeconds;
 
-                tiempoTotalPista = tiempoTotalPista.Subtract( TimeSpan.FromSeconds( posicionFinal - posicionActual));
+            tiempoTotalPista = tiempoTotalPista.Subtract( TimeSpan.FromSeconds( posicionFinalSlider - posicionInicialSlider));
+            timer.Start();
+        }
 
-                EstadosControl.SLIDER_MOVE = !EstadosControl.SLIDER_MOVE;
-                timer.Start();
-            }
+        private void sliderLineTime_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            
+            mediaReproductor.Position = mediaReproductor.Position = TimeSpan.FromSeconds(sliderLineTime.Value); ;
+            posicionFinalSlider = mediaReproductor.Position.TotalSeconds;
+            tiempoTotalPista = tiempoTotalPista.Subtract(TimeSpan.FromSeconds(posicionFinalSlider - posicionInicialSlider));
+            timer.Start();
+        }
+
+        private void sliderLineTime_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            posicionInicialSlider = mediaReproductor.Position.TotalSeconds;
+            timer.Stop();
         }
     }
 }

@@ -75,12 +75,12 @@
                         <tupla:InfoCancionTabla Comando="{Binding ElementName=panelPrincipal, Path=PlayCommand}"
                                                 ParametroComando="{Binding .}"
                                                 PlayClick="InfoCancionTabla_PlayClick"
+                                                NumeroInfo="{Binding Numero}"
                                                 TituloInfo="{Binding Titulo}"
                                                 ArtistaInfo="{Binding Artista}"
                                                 AlbumInfo="{Binding Album}"
                                                 GeneroInfo="{Binding Genero}"
                                                 AnoInfo="{Binding FechaLanzamiento}"
-                                                DuracionInfo="{Binding Duracion}"
                                                 ColorTexto="{Binding EstadoColor}"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

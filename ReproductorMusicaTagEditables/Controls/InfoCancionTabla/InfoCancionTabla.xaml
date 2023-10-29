@@ -27,6 +27,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             
             
@@ -37,17 +38,21 @@
                     Click="OnPlayClick">
                 <fa:PackIconFontAwesome Style="{StaticResource iconPlay}" Kind="PlaySolid"/>
             </Button>
-            
-            
+
             <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="1" 
+                       Grid.Column="1"  
+                       Text="{Binding ElementName=infoCancion, Path=NumeroInfo}" 
+                       Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
+
+            <TextBlock Style="{StaticResource txtInfoCancion}" 
+                       Grid.Column="2" 
                        Grid.ColumnSpan="3" 
                        Text="{Binding ElementName=infoCancion, Path=TituloInfo}" 
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
             
             
             <Button Style="{StaticResource btnArtista}"
-                    Grid.Column="3"
+                    Grid.Column="5"
                     Grid.ColumnSpan="2"  
                     HorizontalAlignment="Right"
                     Click="OnArtistaClick"
@@ -56,7 +61,7 @@
             
             
             <Button Style="{StaticResource btnArtista}"
-                    Grid.Column="5"
+                    Grid.Column="7"
                     Grid.ColumnSpan="2"  
                     HorizontalAlignment="Right"
                     Click="OnAlbumClick"
@@ -65,23 +70,19 @@
 
 
             <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="7"
+                       Grid.Column="9"
                        Grid.ColumnSpan="2"
                        Text="{Binding ElementName=infoCancion, Path=GeneroInfo}" 
                        HorizontalAlignment="Right"
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
 
             <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="9"  
+                       Grid.Column="11"  
                        Text="{Binding ElementName=infoCancion, Path=AnoInfo}" 
                        HorizontalAlignment="Right"
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
 
-            <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="10"  
-                       Text="{Binding ElementName=infoCancion, Path=DuracionInfo}" 
-                       HorizontalAlignment="Right"
-                       Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
+            
         </Grid>
     </Border>
 </UserControl>

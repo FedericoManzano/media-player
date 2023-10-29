@@ -30,7 +30,7 @@
         <Grid HorizontalAlignment="Center" UseLayoutRounding="True" VerticalAlignment="Center">
             <Ellipse x:Name="grid" Width="30" Height="30" StrokeThickness="10" Fill="White">
                 <Ellipse.Stroke>
-                    <SolidColorBrush Color="{StaticResource colorNaranjaLogo}" Opacity="0.5"/>
+                    <SolidColorBrush Color="Red" Opacity="0.5"/>
                 </Ellipse.Stroke>
             </Ellipse>
         </Grid>
@@ -84,9 +84,9 @@
                 </Grid.RowDefinitions>
                 <TickBar x:Name="TopTick" Fill="{TemplateBinding Foreground}" Height="4" Margin="0,0,0,2" Placement="Top" Grid.Row="0" Visibility="Collapsed"/>
                 <TickBar x:Name="BottomTick" Fill="{TemplateBinding Foreground}" Height="4" Margin="0,2,0,0" Placement="Bottom" Grid.Row="2" Visibility="Collapsed"/>
-                <Border x:Name="TrackBackground" Background="Orange" CornerRadius="2.5" BorderThickness="0" Height="4" Margin="15,0" Grid.Row="1" VerticalAlignment="center">
+                <Border x:Name="TrackBackground" Background="White" CornerRadius="2.5" BorderThickness="0" Height="4" Margin="15,0" Grid.Row="1" VerticalAlignment="center">
                     <Border x:Name="PART_SelectionRange" 
-                            Background="#dbf5e9"
+                            Background="red"
                             CornerRadius="1" 
                             HorizontalAlignment="Left">
 
@@ -129,7 +129,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="StilosSlider" TargetType="{x:Type Slider}">
+    <Style x:Key="SliderStyle1" TargetType="{x:Type Slider}">
         <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Transparent"/>

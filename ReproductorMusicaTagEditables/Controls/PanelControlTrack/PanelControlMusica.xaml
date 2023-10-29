@@ -19,9 +19,11 @@
                     Style="{StaticResource bordeSliderVolumen}" 
                     Visibility="Collapsed">
                 <Slider x:Name="sliderVolumen"
+                        Style="{DynamicResource SliderStyle1}"
                         IsSelectionRangeEnabled="True"
                         Minimum="0"
-                        Maximum="1"
+                        Maximum="0.5"
+                        IsMoveToPointEnabled="True"
                         Width="200"
                         ValueChanged="OnValueChanged"
                         Value="{Binding ElementName=panelControl, Path=ValorVolumen}">
