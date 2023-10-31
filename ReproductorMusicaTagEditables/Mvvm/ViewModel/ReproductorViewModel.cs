@@ -32,13 +32,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         private void MostrarAristasViewAction(object obj)
         {
-            Irg.CancionesFiltradas.Clear();
             this.CurrentView = new ArtistaViewModel();
         }
 
         private void MostrarPrincipalViewAction(object obj)
-        { 
-           this.CurrentView = new PrincipalViewModel();
+        {
+            this.CurrentView = new PrincipalViewModel();
         }
     }
 }

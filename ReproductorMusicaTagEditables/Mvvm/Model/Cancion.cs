@@ -87,14 +87,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         }
         private string ExtraerDuracion(TagLib.File tag, string path)
         {
-            FileInfo fi = new FileInfo(path);
-            ShellObject shellObj =  ShellObject.FromParsingName(fi.FullName);
-            ulong? du = shellObj.Properties.System.Media.Duration.Value;
+            ulong? du = CalculoTiempo.CalculoTiempo.CalcularDuracionCancion(path);
             TimeSpan ts = TimeSpan.FromTicks((long)du.GetValueOrDefault(0UL));
             return ts.ToString(@"mm\:ss");
         }
-        
-    
         private string ExtraerFechaLanzamiento (TagLib.File tag)
         {
             return tag.Tag.Year.ToString();

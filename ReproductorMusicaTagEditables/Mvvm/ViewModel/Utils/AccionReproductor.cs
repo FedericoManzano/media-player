@@ -1,10 +1,7 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.Model;
-using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
 {
@@ -24,7 +21,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
         };
 
 
-        public abstract void Ejecutar(InfoReproductor Irg, Cancion c = null);
+        public abstract void Ejecutar(InfoReproductor irg, Cancion c = null);
 
 
         public void ReproducirCancion(InfoReproductor Irg)
@@ -32,10 +29,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
             Irg.Reproductor.Source = new Uri(Irg.CancionActual.Cancion.Path);
             Irg.Reproductor.Play();
         }
-        public int IndexRandom(InfoReproductor Irg)
+        public int IndexRandom(ObservableCollection<Cancion> canciones)
         {
             Random r = new Random();
-            return r.Next(Irg.CancionesFiltradas.Count);
+            return r.Next(canciones.Count);
         }
 
 

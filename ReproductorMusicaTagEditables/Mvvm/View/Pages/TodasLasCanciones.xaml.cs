@@ -1,15 +1,20 @@
 ﻿
+using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
+using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
 {
     public partial class TodasLasCanciones : Page
     {
+        private Frame paginacion;
 
-        public TodasLasCanciones()
+        public TodasLasCanciones(Frame paginacion)
         {
             InitializeComponent();
+            this.paginacion = paginacion;
             panelPrincipal.AgregarElementosAlFiltro();
             scrollCanciones.ScrollToVerticalOffset(panelPrincipal.ScrollVertical);
         }
@@ -27,6 +32,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         private void Cargar_Archivos_Directorio(object sender, System.Windows.RoutedEventArgs e)
         {
             
+        }
+
+        private void InfoCancionTabla_ArtistaClick(object sender, EventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            
+            paginacion.NavigationService.Navigate(new InfoArtistaPage());
         }
     }
 }

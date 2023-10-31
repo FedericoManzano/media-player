@@ -8,9 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <TextBlock Grid.Row="1" 
-       Foreground="White"
-       FontSize="35"
-       VerticalAlignment="Center">
+                   Foreground="White"
+                   FontSize="35"
+                   VerticalAlignment="Center">
             Artistas
         </TextBlock>
     </Grid>

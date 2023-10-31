@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\App.xaml
-19-1587841856
+22-677776438
 
-45-1004621858
+53734917696
 28-162419828
-Controls\InfoArtista\InfoArtista.xaml;Controls\InfoArtista\InfoArtistaTheme.xaml;Controls\InfoCancionTabla\InfoCancionTabla.xaml;Controls\InfoCancionTabla\InfoCancionTheme.xaml;Controls\ManejadorVentana\ManejadorVentana.xaml;Controls\ManejadorVentana\ManejadorVentanaTheme.xaml;Controls\Menu\MenuPrincipalTheme.xaml;Controls\Menu\Menu.xaml;Controls\PanelControlTrack\PanelControlMusica.xaml;Controls\PanelControlTrack\PanelControlTheme.xaml;Controls\TiempoTrack\TiempoTrack.xaml;Controls\TiempoTrack\TiempoTrackTheme.xaml;MainWindow.xaml;Mvvm\View\ArtistaView.xaml;Mvvm\View\Pages\Theme\GeneralesPageTheme.xaml;Mvvm\View\Pages\TodasLasCanciones.xaml;Mvvm\View\PrincipalView.xaml;Themes\General.xaml;Themes\SliderEstilos.xaml;
+Controls\InfoArtistaPagina\InfoArtistaPageControl.xaml;Controls\InfoArtistaPagina\InfoArtistaPageTheme.xaml;Controls\InfoArtista\InfoArtista.xaml;Controls\InfoArtista\InfoArtistaTheme.xaml;Controls\InfoCancionTabla\InfoCancionTabla.xaml;Controls\InfoCancionTabla\InfoCancionTheme.xaml;Controls\ManejadorVentana\ManejadorVentana.xaml;Controls\ManejadorVentana\ManejadorVentanaTheme.xaml;Controls\Menu\MenuPrincipalTheme.xaml;Controls\Menu\Menu.xaml;Controls\PanelControlTrack\PanelControlMusica.xaml;Controls\PanelControlTrack\PanelControlTheme.xaml;Controls\TiempoTrack\TiempoTrack.xaml;Controls\TiempoTrack\TiempoTrackTheme.xaml;MainWindow.xaml;Mvvm\View\ArtistaView.xaml;Mvvm\View\Pages\Internas\InfoArtistaPage.xaml;Mvvm\View\Pages\Theme\GeneralesPageTheme.xaml;Mvvm\View\Pages\TodasLasCanciones.xaml;Mvvm\View\PrincipalView.xaml;Themes\General.xaml;Themes\SliderEstilos.xaml;
 
 False
 

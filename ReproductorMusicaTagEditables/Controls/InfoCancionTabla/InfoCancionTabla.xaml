@@ -81,6 +81,7 @@
                        Text="{Binding ElementName=infoCancion, Path=AnoInfo}" 
                        HorizontalAlignment="Right"
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
+            
             <TextBlock Style="{StaticResource txtInfoCancion}" 
                        Grid.Column="12"  
                        Text="{Binding ElementName=infoCancion, Path=DuracionInfo}" 

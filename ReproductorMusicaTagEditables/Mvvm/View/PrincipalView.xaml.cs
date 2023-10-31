@@ -26,13 +26,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.View
         public PrincipalView()
         {
             InitializeComponent();
-            todasLasCanciones = new TodasLasCanciones();
+            todasLasCanciones = new TodasLasCanciones(paginacion);
             paginacion.NavigationService.Navigate(todasLasCanciones);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            paginacion.NavigationService.Navigate(new TodasLasCanciones());
+            paginacion.NavigationService.Navigate(new TodasLasCanciones(paginacion));
         }
     }
 }

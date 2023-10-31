@@ -1,8 +1,10 @@
 ﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System.Windows.Controls;
 using System.Windows.Input;
+
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 {
@@ -53,7 +55,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             {
                 return Irg.CancionesFiltradas.Count > 0;
             }
-            return Irg.CancionesFiltradas.Count > 0 && Irg.CancionActual.Index < Irg.CancionesFiltradas.Count - 1;
+            return Irg.CancionesFiltradas.Count > 0 && Irg.CancionActual.Index < Irg.Canciones.Count - 1;
         }
 
         public void SiguienteAction(object obj = null)
