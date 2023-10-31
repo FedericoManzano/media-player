@@ -254,6 +254,7 @@
     <Compile Include="Mvvm\ViewModel\Base\Info\Metodos\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\PropiedadesListados\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
+    <Compile Include="Mvvm\ViewModel\InfoArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\PrincipalViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Utils\AccionReproductor.cs" />

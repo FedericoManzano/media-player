@@ -3,8 +3,6 @@ using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos;
 using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 
@@ -40,51 +38,33 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                     {
                         Partes = new ObservableCollection<Cancion>(Canciones);
                     }
-                    AgregarElementosAlFiltro();
                     Preloader = false;
                 }
             }
         }
 
 
-        public async void AgregarElementosAlFiltro()
+        public void AgregarElementosAlFiltro()
         {
             int diferencia = Canciones.Count - Partes.Count;
             if (diferencia <= 0)
                 return;
 
-            Preloader = true;
-            await Task.Run(() =>
-            { 
-                if (Canciones.Count < 50)
-                {
-                    
-                    Partes = new ObservableCollection<Cancion>(Canciones);
-                }
-                else if (Partes.Count == 0 && Canciones.Count > 50)
-                {
-                    Partes = new ObservableCollection<Cancion>(Canciones.GetRange(0, 50));
-                }
-                Preloader = false;
-            });
-
-            if(Partes.Count > 0)
+            if (diferencia > 20 && Partes.Count < Canciones.Count)
             {
-                if (diferencia > 20 && Partes.Count < Canciones.Count)
-                {
-                    foreach (Cancion can in Canciones.GetRange(Partes.Count, 20))
+                foreach (Cancion can in Canciones.GetRange(Partes.Count, 20))
                     {
                         Partes.Add(can);
                     }
-                }
-                else
-                {
-                    for (int i = Partes.Count; i < Canciones.Count; i++)
-                    {
-                        Partes.Add(Canciones[i]);
-                    }
-                }
             }
+            else
+            {
+                 for (int i = Partes.Count; i < Canciones.Count; i++)
+                 {
+                    Partes.Add(Canciones[i]);
+                 }
+            }
+            
         }
     }
 }

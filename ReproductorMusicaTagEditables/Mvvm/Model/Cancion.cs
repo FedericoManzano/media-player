@@ -20,6 +20,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         public string FechaLanzamiento { get; set;} = string.Empty;
         public string EstadoColor { get; set; } = COLOR_TEXTO_DEFAULT;
 
+        public ulong? DuracionLong { get; set; } = 0;
 
         public Cancion()
         {
@@ -48,7 +49,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                     Album = ExtraerAlbum(tag).Longitud(20),
                     Duracion = ExtraerDuracion(tag, path),
                     FechaLanzamiento = ExtraerFechaLanzamiento(tag),
-                    EstadoColor = COLOR_TEXTO_DEFAULT
+                    EstadoColor = COLOR_TEXTO_DEFAULT,
+                    DuracionLong = DuracionLong
                 };
             }
             return null;
@@ -87,8 +89,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         }
         private string ExtraerDuracion(TagLib.File tag, string path)
         {
-            ulong? du = CalculoTiempo.CalculoTiempo.CalcularDuracionCancion(path);
-            TimeSpan ts = TimeSpan.FromTicks((long)du.GetValueOrDefault(0UL));
+            DuracionLong = CalculoTiempo.CalculoTiempo.CalcularDuracionCancion(path);
+
+            TimeSpan ts = TimeSpan.FromTicks((long)DuracionLong.GetValueOrDefault(0UL));
             return ts.ToString(@"mm\:ss");
         }
         private string ExtraerFechaLanzamiento (TagLib.File tag)

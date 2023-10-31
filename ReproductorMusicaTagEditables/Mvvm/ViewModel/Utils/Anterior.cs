@@ -2,8 +2,6 @@
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
-using System.Collections.ObjectModel;
-
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
 {
     public class Anterior : AccionReproductor

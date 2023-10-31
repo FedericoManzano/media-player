@@ -7,11 +7,22 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       xmlns:infoArt="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoArtistaPagina"
+      xmlns:viewModel ="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       Title="InfoArtistaPage">
 
+    <Page.DataContext>
+        <viewModel:InfoArtistaViewModel x:Name="infoArtista"/>
+    </Page.DataContext>
     <Grid>
         <StackPanel>
-            <infoArt:InfoArtistaPageControl></infoArt:InfoArtistaPageControl>
+            <infoArt:InfoArtistaPageControl
+                NombreArtista="{Binding Artista.Nombre}"
+                Genero="{Binding Artista.Genero}"
+                CantidadAlbumes="{Binding Artista.CantidadAlbumes}"
+                HorasReproduccion="{Binding Artista.TiempoReproduccion}"
+                ImagenArtista="{Binding Artista.Imagen}"
+                PlayArtista="{Binding PlayArtistaCommand}"
+                />
         </StackPanel>
         
     </Grid>

@@ -32,6 +32,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         private void MostrarAristasViewAction(object obj)
         {
+            Irg.Partes.Clear();
             this.CurrentView = new ArtistaViewModel();
         }
 

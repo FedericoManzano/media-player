@@ -63,7 +63,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             AccionReproductor.Fabrica(AccionReproductor.SIGUIENTE_ACCION)?.Ejecutar(Irg);
         }
 
-        private void PlayAction(object obj)
+        protected void PlayAction(object obj)
         {
             Cancion c = (Cancion)obj;
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);

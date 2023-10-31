@@ -5,59 +5,55 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoArtistaPagina"
              xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             mc:Ignorable="d" >
+             mc:Ignorable="d" 
+             x:Name="infoArtista">
 
     <Control.Resources>
         <ResourceDictionary Source="/Controls/InfoArtistaPagina/InfoArtistaPageTheme.xaml" />
     </Control.Resources>
     
     
-    <Border CornerRadius="10" Margin="10" Background="#2A2E32" Padding="10">
+    <Border Style="{StaticResource bordePrincipal}">
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="210"/>
+                <ColumnDefinition Width="190"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Border CornerRadius="10" Width="200" Height="200">
-                <Border.Background>
-                    <ImageBrush ImageSource="/Images/laRenga.jpg"></ImageBrush>
-                </Border.Background>
-            </Border>
-            <fa:PackIconFontAwesome Kind="FolderOpenSolid" 
-                                    Width="25" Height="25"
-                                    VerticalAlignment="Bottom"
-                                    HorizontalAlignment="Right"
-                                    Foreground="White"
-                                    Margin="10"/>
+            <Border Style="{StaticResource bordeImagen}" Background="{Binding ElementName=infoArtista,Path=ImagenArtista}"/>
+
             <StackPanel Grid.Column="1" Margin="10 0 0 0">
-                <TextBlock Text="LA RENGA" Foreground="White" FontSize="50"/>
-                
-                <StackPanel Orientation="Horizontal" Margin="0 10 0 0">
-                    <TextBlock Text="10 Albumes" Foreground="White" FontSize="20"/>
-                    <TextBlock Text="·" Foreground="White" FontSize="20" Margin="10 0"/>
-                    <TextBlock Text="150 Canciones" Foreground="White" FontSize="20"/>
-                    <TextBlock Text="·" Foreground="White" FontSize="20" Margin="10 0"/>
-                    <TextBlock Text="14 Horas 15 minutos" Foreground="Gray" FontSize="20"/>
+                <TextBlock Style="{StaticResource nombreArtista}" Text="{Binding ElementName=infoArtista,Path=NombreArtista}"/>
+                <StackPanel Orientation="Horizontal" Margin="0 10">
+                    <TextBlock Text="Artista" 
+                               Style="{StaticResource txtDatos}"></TextBlock>
+                    <TextBlock Text="·" 
+                               Style="{StaticResource txtDatos}"
+                               Margin="10 0"></TextBlock>
+                    <TextBlock Text="{Binding ElementName=infoArtista,Path=Genero}" Foreground="Gray" Style="{StaticResource txtDatos}"></TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10">
-                    <TextBlock Text="Artista" FontSize="15" FontWeight="SemiBold" Foreground="White"></TextBlock>
-                    <TextBlock Text="·" FontSize="15" FontWeight="SemiBold" Foreground="White" Margin="10 0"></TextBlock>
-                    <TextBlock Text="Rock Nacional" FontSize="15"  Foreground="Gray"></TextBlock>
+                    <TextBlock Text="{Binding ElementName=infoArtista, Path=CantidadAlbumes}" 
+                                Style="{StaticResource txtDatos}"></TextBlock>
+                    <TextBlock Text="·" 
+                               Style="{StaticResource txtDatos}"
+                               Margin="10 0"></TextBlock>
+                    <TextBlock Text="{Binding ElementName=infoArtista, Path=HorasReproduccion}" Foreground="Gray" Style="{StaticResource txtDatos}"></TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10">
-                    <Button Style="{StaticResource btnPlayAll}">
+                    <Button Style="{StaticResource btnPlayAll}" Command="{Binding ElementName=infoArtista, Path=PlayArtista}">
                         <StackPanel Orientation="Horizontal">
-                            <fa:PackIconFontAwesome Kind="PlayCircleRegular"/>
-                            <TextBlock Text="PLAY" Margin="10 0 0 0"/>
+                            <fa:PackIconFontAwesome Kind="PlayCircleRegular" Margin="0 0 10 0"/>
+                            <TextBlock Text="Reproducir Todo"/>
                         </StackPanel>
-                       
                     </Button>
+
+
                     <Button Style="{StaticResource btnPlayAll}" 
-                            Background="#FF706E6E" Margin="10 0 0 0">
+                            Background="Gray" Margin="10 0 0 0">
                         <StackPanel Orientation="Horizontal">
-                            <fa:PackIconFontAwesome Kind="PlusSolid"/>
-                            <TextBlock Text="Agregar" Margin="10 0 0 0"/>
+                            <fa:PackIconFontAwesome Kind="PlusSolid" Margin="0 0 10 0"/>
+                            <TextBlock Text="Agregar"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>

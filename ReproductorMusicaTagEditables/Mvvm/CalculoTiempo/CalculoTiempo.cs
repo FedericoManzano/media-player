@@ -3,6 +3,7 @@ using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace ReproductorMusicaTagEditables.Mvvm.CalculoTiempo
 {
@@ -21,15 +22,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.CalculoTiempo
             return du;
         }
 
-        public static ulong? CalcularDuracionAlbum (List<Cancion> album)
+        public static ulong? CalcularDuracionAlbum (List<Cancion> canciones, string tituloAlbum)
         {
-           
-            ulong? du = 0;
-            foreach (Cancion e in album)
+            ulong?[] timepoAlbum = canciones.Where(c => tituloAlbum == c.Album)
+                                           .Select(c => CalcularDuracionCancion(c.Path)).ToArray();
+
+            ulong? tiempoTotal = 0;
+            foreach (ulong? t in timepoAlbum)
             {
-                du += CalcularDuracionCancion(e.Path);
-            }
-            return du;
+                tiempoTotal += t.Value;
+            }                              
+                                          
+            return tiempoTotal;
         }
     }
 }
