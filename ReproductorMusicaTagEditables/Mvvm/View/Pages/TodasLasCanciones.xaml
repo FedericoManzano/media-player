@@ -66,7 +66,8 @@
                    VerticalAlignment="Center"/>
 
         <ScrollViewer x:Name="scrollCanciones" Grid.Row="2" VerticalScrollBarVisibility="Auto"
-                      IsMouseCaptureWithinChanged="Actualiza_El_Listado_Canciones">
+                      IsMouseCaptureWithinChanged="Actualiza_El_Listado_Canciones"
+                      >
             <ItemsControl  x:Name="itemList" ItemsSource="{Binding Irg.Partes}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -87,7 +88,10 @@
                                                 GeneroInfo="{Binding Genero}"
                                                 AnoInfo="{Binding FechaLanzamiento}"
                                                 DuracionInfo="{Binding Duracion}"
-                                                ColorTexto="{Binding EstadoColor}"/>
+                                                ColorTexto="{Binding EstadoColor}">
+
+                                
+                        </tupla:InfoCancionTabla>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

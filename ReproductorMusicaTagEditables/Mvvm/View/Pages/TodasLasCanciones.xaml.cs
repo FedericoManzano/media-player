@@ -2,18 +2,18 @@
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
 {
     public partial class TodasLasCanciones : Page
     {
-        private Frame paginacion;
-
-        public TodasLasCanciones(Frame paginacion)
+        
+        public TodasLasCanciones()
         {
             InitializeComponent();
-            this.paginacion = paginacion;
+           
             panelPrincipal.AgregarElementosAlFiltro();
             scrollCanciones.ScrollToVerticalOffset(panelPrincipal.ScrollVertical);
         }
@@ -45,5 +45,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             InfoCancionTabla i = (InfoCancionTabla)sender;
             this.NavigationService.Navigate(new InfoAlbumPage(i.AlbumInfo));  
         }
+
+        
     }
 }

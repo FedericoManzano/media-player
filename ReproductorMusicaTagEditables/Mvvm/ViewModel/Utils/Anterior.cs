@@ -8,19 +8,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
     {
         public override void Ejecutar(InfoReproductor Irg, Cancion c = null)
         {
-            Irg.CancionesFiltradas.Deseleccionar(Irg.Partes, Irg.CancionActual.Index);
+            Irg.Deseleccionar();
            
             if (EstadosControl.RANDOM)
             {
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
-                Irg.CancionesFiltradas.Seleccionar(Irg.Partes, Irg.CancionActual.Index);
+                Irg.Seleccionar();
                 ReproducirCancion(Irg);
             }
             else if (Irg.CancionesFiltradas.Count > 0 && Irg.CancionActual.Index > 0)
             {
                 Irg.CancionActual.Index--;
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
-                Irg.CancionesFiltradas.Seleccionar(Irg.Partes, Irg.CancionActual.Index);
+                Irg.Seleccionar();
                 ReproducirCancion(Irg);
             }
         }

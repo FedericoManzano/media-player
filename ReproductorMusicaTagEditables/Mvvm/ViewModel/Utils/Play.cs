@@ -15,13 +15,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
             {
                 if (Irg.CancionActual.Index >= 0)
                 {
-                    Irg.CancionesFiltradas.Deseleccionar(Irg.Partes, Irg.CancionActual.Index);
+                    Irg.Deseleccionar();
                 }
                 Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexOf(c);
                 Irg.CancionActual.Cancion = c;
                 Irg.Reproductor.Source = new Uri(c.Path);
                 Irg.Reproductor.Play();
-                Irg.CancionesFiltradas.Seleccionar(Irg.Partes, Irg.CancionActual.Index);
+                Irg.Seleccionar();
                 Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
                 EstadosControl.PLAY = true;
             }
@@ -43,7 +43,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                             Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
                             Irg.Reproductor.Source = new Uri(Irg.CancionActual.Cancion.Path);
                             Irg.Reproductor.Play();
-                            Irg.CancionesFiltradas.Seleccionar(Irg.Partes, Irg.CancionActual.Index);
+                            Irg.Seleccionar();
                             Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
                             EstadosControl.PLAY = true;
                         }

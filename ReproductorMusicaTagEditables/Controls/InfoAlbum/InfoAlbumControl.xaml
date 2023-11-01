@@ -26,8 +26,7 @@
                     CornerRadius="10"
                     MouseEnter="borderTrigger_MouseEnter"
                     MouseLeave="borderTrigger_MouseLeave"
-                    Background="{Binding ElementName=infoAlbum, Path=ImagenAlbum}"
-                    >
+                    Background="{Binding ElementName=infoAlbum, Path=ImagenAlbum}">
 
                 <Border x:Name="bordeCapa" >
                     <Button Style="{StaticResource btnMenu}" 

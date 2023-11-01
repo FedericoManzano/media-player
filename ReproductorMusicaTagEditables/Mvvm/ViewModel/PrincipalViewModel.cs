@@ -9,13 +9,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
     public class PrincipalViewModel:ReproductorViewModelBase
     {
-        private static double _scrollVertical = 0;
+        
 
         public PrincipalViewModel()
         {
             Irg.TitutloVentana = "Página Principal";
         }
 
-        public double ScrollVertical { get => _scrollVertical; set => _scrollVertical = value; }
+        
     }
 }

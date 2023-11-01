@@ -51,9 +51,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     (
                         Irg.Canciones.Where(c => c.Album == a.Titulo).ToList()
                     );
-                Irg.Partes.Deseleccionar(Irg.CancionesFiltradas, Irg.CancionActual.Index);
-
+                Irg.Deseleccionar();
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
+                ScrollVertical = irg.SetScroll();
             }
         }
 

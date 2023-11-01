@@ -93,5 +93,85 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
             }
             
         }
+        public void Seleccionar ()
+        {
+
+            if(CancionActual.Index >= 0 && CancionActual.Cancion != null)
+            {
+                CancionActual.Cancion.EstadoColor = "Red";   
+                for(int i = 0; i < CancionesFiltradas.Count; i ++)
+                {
+                    if (CancionesFiltradas[i].Equals(CancionActual.Cancion))
+                    {
+                        CancionesFiltradas.RemoveAt(i);
+                        CancionesFiltradas.Insert(i, CancionActual.Cancion);
+                    }
+                }
+
+                for (int i = 0; i < Canciones.Count; i++)
+                {
+                    if (Canciones[i].Equals(CancionActual.Cancion))
+                    {
+                        Canciones[i].EstadoColor = "red";
+                    }
+                }
+
+
+                for (int i = 0; i < Partes.Count; i++)
+                {
+                    if (Partes[i].Equals(CancionActual.Cancion))
+                    {
+                        Partes.RemoveAt(i);
+                        Partes.Insert(i, CancionActual.Cancion);
+                    }
+                }
+            }
+        }
+        public void Deseleccionar()
+        {
+
+            if (CancionActual.Index >= 0 && CancionActual.Cancion != null)
+            {
+                CancionActual.Cancion.EstadoColor = "White";
+                for (int i = 0; i < CancionesFiltradas.Count; i++)
+                {
+                    if (CancionesFiltradas[i].Equals(CancionActual.Cancion))
+                    {
+                        CancionesFiltradas.RemoveAt(i);
+                        CancionesFiltradas.Insert(i, CancionActual.Cancion);
+                    }
+                }
+
+                for (int i = 0; i < Canciones.Count; i++)
+                {
+                    if (Canciones[i].Equals(CancionActual.Cancion))
+                    {
+                        Canciones[i].EstadoColor = "White";
+                    }
+                }
+
+
+                for (int i = 0; i < Partes.Count; i++)
+                {
+                    if (Partes[i].Equals(CancionActual.Cancion))
+                    {
+                        Partes.RemoveAt(i);
+                        Partes.Insert(i, CancionActual.Cancion);
+                    }
+                }
+            }
+        }
+
+        public double SetScroll()
+        {
+            for(int i = 0; i < Canciones.Count; i ++)
+            {
+                if (Canciones[i].Equals(CancionActual.Cancion))
+                {
+                    return (double) i * 45;
+                }
+            }
+            return 0;
+        }
     }
 }

@@ -2,6 +2,7 @@
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
+using System;
 using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -12,7 +13,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
     public abstract class ReproductorViewModelBase : ViewModelBase
     {
         protected readonly static InfoReproductor irg = new InfoReproductor();
-
+        private static double _scrollVertical = 0;
         public  InfoReproductor Irg
         {
             get => irg;  
@@ -22,6 +23,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         {
             Irg.Reproductor = me;
         }
+
+        public double ScrollVertical { get => _scrollVertical; set => _scrollVertical = value; }
 
         public ICommand CargarMusicaCommand { get; }
         public ICommand PlayCommand { get; }
@@ -50,6 +53,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         public void AnteriorAction(object obj = null)
         { 
             AccionReproductor.Fabrica(AccionReproductor.ATRAS_ACCION)?.Ejecutar(Irg);
+            ScrollVertical = irg.SetScroll();
         }
 
         private bool CanSiguienteAction(object arg)
@@ -64,6 +68,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         public void SiguienteAction(object obj = null)
         {
             AccionReproductor.Fabrica(AccionReproductor.SIGUIENTE_ACCION)?.Ejecutar(Irg);
+            ScrollVertical = irg.SetScroll();
         }
 
         protected void PlayAction(object obj)
@@ -72,6 +77,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             if (Irg.Canciones.Count != Irg.CancionesFiltradas.Count)
                 Irg.CancionesFiltradas = new ObservableCollection<Cancion>(Irg.Canciones);
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);
+            ScrollVertical = irg.SetScroll();
         }
 
         private void CargarMusicaAction(object obj)

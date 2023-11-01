@@ -10,6 +10,7 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
         public InfoCancionTabla()
         {
             InitializeComponent();
+            menuContexto.DataContext = this;
         }
 
         public static readonly RoutedEvent PlayClickEvent =

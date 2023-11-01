@@ -11,8 +11,8 @@
     <Control.Resources>
         <ResourceDictionary Source="/Controls/InfoCancionTabla/InfoCancionTheme.xaml"/>
     </Control.Resources>
-    
-    <Border Style="{StaticResource bordeInfoCancion}">
+
+    <Border Style="{StaticResource bordeInfoCancion}" Tag="{Binding ElementName=infoCancion}">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -90,5 +90,21 @@
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
             
         </Grid>
+        <Border.ContextMenu>
+            <ContextMenu x:Name="menuContexto" StaysOpen="true">
+                <MenuItem Header="Reproducior" 
+                          Command="{Binding  Parent.PlacementTarget.Tag.Comando,RelativeSource={RelativeSource Self }}"
+                          CommandParameter="{Binding Parent.PlacementTarget.Tag.ParametroComando, RelativeSource={RelativeSource Self}}">
+                    <MenuItem.Icon>
+                        <fa:PackIconFontAwesome Kind="PlaySolid" Foreground="Red" FontSize="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Ageregar lista">
+                    <MenuItem.Icon>
+                        <fa:PackIconFontAwesome Kind="ListSolid" FontSize="12" Foreground="DarkMagenta"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </ContextMenu>
+        </Border.ContextMenu>
     </Border>
 </UserControl>
