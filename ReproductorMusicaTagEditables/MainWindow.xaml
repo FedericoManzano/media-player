@@ -11,13 +11,13 @@
         xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
         xmlns:view="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View"
         mc:Ignorable="d"
-        Title="Reproductor de Música" Height="720" Width="1150"
+        Title="Reproductor de Música" Height="740" Width="1250"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
         AllowsTransparency="True"
         Background="Transparent"
-        MouseDown="Arrastrar_Ventana"
-        >
+        MouseDown="Arrastrar_Ventana">
 
 
     <!-- Data context ../ViewModel/ReproductorViewModel.cs -->

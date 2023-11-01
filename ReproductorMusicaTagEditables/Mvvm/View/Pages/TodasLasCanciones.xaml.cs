@@ -2,7 +2,6 @@
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
-using System.Windows;
 using System.Windows.Controls;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
@@ -38,8 +37,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         private void InfoCancionTabla_ArtistaClick(object sender, EventArgs e)
         {
             InfoCancionTabla i = (InfoCancionTabla)sender;
-            
-            paginacion.NavigationService.Navigate(new InfoArtistaPage(i.ArtistaInfo));
+            this.NavigationService.Navigate(new InfoArtistaPage(i.ArtistaInfo));
+        }
+
+        private void InfoCancionTabla_AlbumClick(object sender, EventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            this.NavigationService.Navigate(new InfoAlbumPage(i.AlbumInfo));  
         }
     }
 }

@@ -61,12 +61,13 @@
             </ItemsControl.ItemsPanel>
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <infoAlbum:InfoAlbumControl
+                    <infoAlbum:InfoAlbumControl MouseLeftButtonUp="InfoAlbumControl_MouseLeftButtonUp"
                         ImagenAlbum="{Binding Imagen}"
                         NombreAlbum="{Binding Titulo}"
                         AnoAlbum="{Binding Ano}"
                         PlayCommand="{Binding ElementName=infoArtista, Path=PlayAlbumCommand}"
                         PlayParameter="{Binding .}"/>
+                       
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

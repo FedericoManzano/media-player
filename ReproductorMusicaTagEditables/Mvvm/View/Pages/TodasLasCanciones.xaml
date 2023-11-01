@@ -79,6 +79,7 @@
                                                 ParametroComando="{Binding .}"
                                                 PlayClick="InfoCancionTabla_PlayClick"
                                                 ArtistaClick="InfoCancionTabla_ArtistaClick"
+                                                AlbumClick="InfoCancionTabla_AlbumClick"
                                                 NumeroInfo="{Binding Numero}"
                                                 TituloInfo="{Binding Titulo}"
                                                 ArtistaInfo="{Binding Artista}"
@@ -89,7 +90,6 @@
                                                 ColorTexto="{Binding EstadoColor}"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
-            
             </ItemsControl>
         </ScrollViewer>
     </Grid>

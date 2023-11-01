@@ -1,6 +1,7 @@
 ﻿
+using ReproductorMusicaTagEditables.Controls.InfoAlbum;
 using System.Windows.Controls;
-
+using System.Windows.Forms;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
 {
@@ -22,6 +23,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
             {
                 this.NavigationService.GoBack();
             }
+        }
+
+        private void InfoAlbumControl_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            InfoAlbumControl i = (InfoAlbumControl)sender;
+            this.NavigationService.Navigate(new InfoAlbumPage(i.NombreAlbum));
+            
         }
     }
 }

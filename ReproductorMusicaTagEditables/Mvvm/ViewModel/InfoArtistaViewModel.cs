@@ -1,6 +1,5 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.Model;
-using System.Windows.Documents;
 using System.Collections.Generic;
 using System.Windows.Input;
 using System.Linq;
@@ -12,7 +11,6 @@ using Reproductor_Musica.Core;
 using System.Collections.ObjectModel;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
-using System.Windows;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
@@ -78,29 +76,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public async void CargarInfoArtista(string artista)
         {
-            Albumes = new SortedSet<Album>
-            (
-                await Task.Run(() =>
-                {
-                    return irg.Canciones
-                       .Where(c => c.Artista == artista)
-                       .Select(c =>
-                       {
-                           return new Album
-                           {
-                               Artista = c.Artista,
-                               Titulo = c.Album,
-                               Ano = c.FechaLanzamiento,
-                               Genero = c.Genero,
-                               DuracionLong = CalcularDuracionAlbum(c.Album),
-                               PathImagen = c.Path
-                           };
-                       }).ToList();
-                })
-             ).ToList();
+            Albumes = await Irg.CargarListaAlbumes(artista);
 
 
-            await Task.Run(() => {
+            await Task.Run(() =>
+            {
                 Albumes.Sort(delegate (Album item1, Album item2)
                 {
                     return item1.Ano.CompareTo(item2.Ano);
@@ -122,21 +102,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 return a;
             }).ToList();
 
-        }
-
-
-        private ulong? CalcularDuracionAlbum(string titulo)
-        {
-            ulong? ret = 0;
-            foreach (Cancion c in Irg.Canciones)
-            {
-                if (c.Album == titulo)
-                {
-                    ret += c.DuracionLong;
-                }
-            }
-
-            return ret;
         }
 
         private string TiempoTotalDeReproduccion()

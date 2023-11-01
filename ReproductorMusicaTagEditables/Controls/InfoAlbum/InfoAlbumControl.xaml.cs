@@ -35,22 +35,6 @@ namespace ReproductorMusicaTagEditables.Controls.InfoAlbum
             set => SetValue(ImagenProperty, value); 
         }
 
-
-        public static RoutedEvent InfoAlbumClickEvent =
-            EventManager.RegisterRoutedEvent("InfoAlbumClick", RoutingStrategy.Bubble, typeof(EventHandler), typeof(InfoAlbumControl));
-    
-        public event EventHandler InfoAlbumClick
-        {
-            add => AddHandler(InfoAlbumClickEvent, value);
-            remove => RemoveHandler(InfoAlbumClickEvent, value);
-        }
-
-        public void OnInfoAlbumClick(object sender, RoutedEventArgs e)
-        {
-            RaiseEvent(new RoutedEventArgs(InfoAlbumClickEvent));
-        }
-
-
         public static DependencyProperty PlayCommandProperty =
             DependencyProperty.Register("PlayCommand", typeof(ICommand), typeof(InfoAlbumControl));
         public ICommand PlayCommand
@@ -85,6 +69,9 @@ namespace ReproductorMusicaTagEditables.Controls.InfoAlbum
             set => SetValue(AnoAlbumProperty, value);
         }
 
+
+
+
         private void borderTrigger_MouseEnter(object sender, MouseEventArgs e)
         {
             bordeCapa.Visibility = Visibility.Visible;
@@ -95,7 +82,8 @@ namespace ReproductorMusicaTagEditables.Controls.InfoAlbum
         {
             bordeCapa.Visibility = Visibility.Hidden;
             bordePrincipal.Background = Brushes.Transparent;
-       
         }
+
+
     }
 }

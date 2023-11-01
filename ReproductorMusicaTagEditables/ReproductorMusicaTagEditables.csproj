@@ -212,6 +212,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\Pages\Internas\InfoAlbumPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\Pages\Internas\InfoArtistaPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -266,6 +270,8 @@
     <Compile Include="Mvvm\ViewModel\Base\CancionActual.cs" />
     <Compile Include="Mvvm\ViewModel\Base\EstadosControl.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\Constructor\InfoReproductor.cs" />
+    <Compile Include="Mvvm\ViewModel\Base\Info\InfoAlbum\InfoReproductor.cs" />
+    <Compile Include="Mvvm\ViewModel\Base\Info\InfoArtista\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\PropiedadesIndividuales\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\Metodos\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\PropiedadesListados\InfoReproductor.cs" />
@@ -280,6 +286,9 @@
     <Compile Include="Mvvm\ViewModel\Utils\Siguiente.cs" />
     <Compile Include="Mvvm\View\ArtistaView.xaml.cs">
       <DependentUpon>ArtistaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\Pages\Internas\InfoAlbumPage.xaml.cs">
+      <DependentUpon>InfoAlbumPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\Pages\Internas\InfoArtistaPage.xaml.cs">
       <DependentUpon>InfoArtistaPage.xaml</DependentUpon>

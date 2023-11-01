@@ -26,7 +26,8 @@
                     CornerRadius="10"
                     MouseEnter="borderTrigger_MouseEnter"
                     MouseLeave="borderTrigger_MouseLeave"
-                    Background="{Binding ElementName=infoAlbum, Path=ImagenAlbum}">
+                    Background="{Binding ElementName=infoAlbum, Path=ImagenAlbum}"
+                    >
 
                 <Border x:Name="bordeCapa" >
                     <Button Style="{StaticResource btnMenu}" 
@@ -44,44 +45,4 @@
         </Grid>
     </Border>
     
-    <!--<Grid Margin="0 0 30 30">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="45"/>
-            <ColumnDefinition Width="45"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Border CornerRadius="7" 
-                Padding="3" 
-                Grid.Column="0" 
-                Grid.Row="0"
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2" 
-                Background="{Binding ElementName=infoAlbum, Path=ImagenAlbum}">
-        </Border>
-
-        <Button Style="{StaticResource btnFondo}" 
-                Grid.Column="0" Grid.Row="0"
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2" 
-                Click="OnInfoAlbumClick"/>
-
-        <Button Style="{StaticResource btnMenu}" 
-                Grid.Column="0" 
-                Grid.Row="0"
-                Command="{Binding ElementName=infoAlbum, Path=PlayCommand}"
-                CommandParameter="{Binding ElementName=infoAlbum, Path=PlayParameter}">
-
-            <fa:PackIconFontAwesome Kind="PlaySolid" 
-                                    Style="{StaticResource btnIcon}"/>
-        </Button>
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
-            <TextBlock Text="{Binding ElementName=infoAlbum, Path=NombreAlbum}" FontSize="10" Foreground="White"/>
-            <TextBlock Text="{Binding ElementName=infoAlbum, Path=AnoAlbum}" FontSize="10" Foreground="White"/>
-        </StackPanel>
-    </Grid>-->
 </UserControl>
