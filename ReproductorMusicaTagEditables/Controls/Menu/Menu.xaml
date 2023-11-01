@@ -38,7 +38,8 @@
             <!-- Botones del menú -->
             <RadioButton Style="{StaticResource btnMenu}" 
                          IsChecked="True"
-                         Command="{Binding ElementName=menuLateral,Path=CommandInicio}">
+                         Command="{Binding ElementName=menuLateral,Path=CommandInicio}"
+                         ToolTip="Inicio todas las pistas">
                 <StackPanel Orientation="Horizontal" Cursor="">
                     <fa:PackIconFontAwesome Kind="HomeSolid"
                                Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
@@ -47,7 +48,9 @@
                 </StackPanel>
             </RadioButton>
             <RadioButton Style="{StaticResource btnMenu}"
-                         Command="{Binding ElementName=menuLateral,Path=CommandArtistas}">
+                         Command="{Binding ElementName=menuLateral,Path=CommandArtistas}"
+                         ToolTip="Todos los artistas">
+                
                 <StackPanel Orientation="Horizontal">
                     <fa:PackIconFontAwesome Kind="UserAltSolid"
                    Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
@@ -56,7 +59,8 @@
                 </StackPanel>
             </RadioButton>
             <RadioButton Style="{StaticResource btnMenu}"
-                         Command="{Binding ElementName=menuLateral,Path=CommandAlbumes}">
+                         Command="{Binding ElementName=menuLateral,Path=CommandAlbumes}"
+                         ToolTip="Todos los albumes">
                 <StackPanel Orientation="Horizontal">
                     <fa:PackIconFontAwesome Kind="MusicSolid"
                                Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
@@ -65,7 +69,8 @@
                 </StackPanel>
             </RadioButton>
             <RadioButton Style="{StaticResource btnMenu}"
-                         Command="{Binding ElementName=menuLateral,Path=CommandGeneros}">
+                         Command="{Binding ElementName=menuLateral,Path=CommandGeneros}"
+                         ToolTip="Todos los géneros">
                 <StackPanel Orientation="Horizontal">
                     <fa:PackIconFontAwesome Kind="VenusMarsSolid"
                    Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
@@ -74,7 +79,8 @@
                 </StackPanel>
             </RadioButton>
             <RadioButton Style="{StaticResource btnMenu}"
-                         Command="{Binding ElementName=menuLateral,Path=CommandListas}">
+                         Command="{Binding ElementName=menuLateral,Path=CommandListas}"
+                         ToolTip="Crear lista de reproducción">
                 <StackPanel Orientation="Horizontal">
                     <fa:PackIconFontAwesome Kind="PlusSolid"
                                    Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>

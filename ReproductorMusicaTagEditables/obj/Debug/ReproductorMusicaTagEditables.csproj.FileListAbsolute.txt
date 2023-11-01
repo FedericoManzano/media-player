@@ -75,3 +75,7 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\ReproductorMusicaTagEditables.csproj.CopyComplete
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\ReproductorMusicaTagEditables.exe
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\ReproductorMusicaTagEditables.pdb
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\InfoAlbum\InfoAlbumTheme.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\InfoAlbum\InfoAlbumControl.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\InfoAlbum\InfoAlbumControl.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Themes\BotonNavegacionTheme.baml

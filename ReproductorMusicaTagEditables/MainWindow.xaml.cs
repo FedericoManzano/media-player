@@ -3,8 +3,10 @@ using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System;
+using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Threading;
 
@@ -24,6 +26,7 @@ namespace ReproductorMusicaTagEditables
         public MainWindow()
         {
             InitializeComponent();
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
             CargarImagenPorDefectoArtista();
            
             reproViewModel.CargarReproductor(mediaReproductor);
@@ -34,6 +37,10 @@ namespace ReproductorMusicaTagEditables
             };
             timer.Tick += new EventHandler(Time_Track);
         }
+
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessage(IntPtr hWn, int wPa, int wGm, int lParam);
 
         private void Time_Track(object sender, EventArgs e)
         {
@@ -49,7 +56,9 @@ namespace ReproductorMusicaTagEditables
 
         private void Arrastrar_Ventana(object sender, MouseButtonEventArgs e)
         {
-            if(e.LeftButton == MouseButtonState.Pressed)
+            WindowInteropHelper windowInteropHelper = new WindowInteropHelper(this);
+            SendMessage(windowInteropHelper.Handle, 161, 2, 0);
+            if (e.LeftButton == MouseButtonState.Pressed)
             {
                 DragMove();
             }

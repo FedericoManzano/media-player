@@ -42,13 +42,15 @@
                    IsActive="{Binding Irg.Preloader}"/>
                 <Button  Style="{StaticResource btnSeleccionar}"
                          Margin="0 0 10 0"
-                         Command="{Binding CargarMusicaCommand}">
+                         Command="{Binding CargarMusicaCommand}"
+                         ToolTip="Seleccionar directorio">
                     <StackPanel Orientation="Horizontal">
                         <fa:PackIconFontAwesome Style="{StaticResource btnIconSelecionar}" Kind="FolderPlusSolid"/>
                         <TextBlock Text="Seleccionar"></TextBlock>
                     </StackPanel>
                 </Button>
-                <Button  Style="{StaticResource btnSeleccionar}">
+                <Button  Style="{StaticResource btnSeleccionar}"
+                         ToolTip="Editar tags">
                     <StackPanel Orientation="Horizontal">
                         <fa:PackIconFontAwesome Style="{StaticResource btnIconSelecionar}" Kind="TagSolid"/>
                         <TextBlock Text="Tags"></TextBlock>

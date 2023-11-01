@@ -37,30 +37,37 @@
                 
                 <Button Style="{StaticResource btnPanel}" 
                         Click="OnClickAnterior"
-                        Command="{Binding ElementName=panelControl,Path=AtrasCommand}">
+                        Command="{Binding ElementName=panelControl,Path=AtrasCommand}"
+                        ToolTip="Pista Anterior">
+                        
                     <fa:PackIconFontAwesome Kind="BackwardSolid"/>
                 </Button>
                 <Button Style="{StaticResource btnPanel}" 
                         Click="OnClickPlay"
-                        Command="{Binding ElementName=panelControl, Path=PlayCommand}">
+                        Command="{Binding ElementName=panelControl, Path=PlayCommand}"
+                        ToolTip="Play / Pausa">
                     <fa:PackIconFontAwesome Kind="{Binding ElementName=panelControl,Path=IconPlay}"/>
                 </Button>
                 <Button Style="{StaticResource btnPanel}" 
                         Click="OnClickSiguiente"
-                        Command="{Binding ElementName=panelControl, Path=SiguienteCommand}">
+                        Command="{Binding ElementName=panelControl, Path=SiguienteCommand}"
+                        ToolTip="Cancion siguiente">
                     <fa:PackIconFontAwesome Kind="ForwardSolid"/>
                 </Button>
                 <Button x:Name="btnVolumen" Style="{StaticResource btnPanel}" 
                         Margin="60 0 0 0" 
-                        Click="Mostrar_Slider_Volumen">
+                        Click="Mostrar_Slider_Volumen"
+                        ToolTip="Volumen">
                     <fa:PackIconFontAwesome Kind="VolumeUpSolid"/>
                 </Button>
                 <Button x:Name="btnRandom"
                         Style="{StaticResource btnPanel}"
-                        Click="Random_On_Off">
+                        Click="Random_On_Off"
+                        ToolTip="Reprodución aleatoria">
                     <fa:PackIconFontAwesome x:Name="iconRandom" Kind="RandomSolid"/>
                 </Button>
-                <Button Style="{StaticResource btnPanel}">
+                <Button Style="{StaticResource btnPanel}"
+                        ToolTip="Repetir en circulos">
                     <fa:PackIconFontAwesome Kind="ReplyAllSolid"/>
                 </Button>
             </StackPanel>

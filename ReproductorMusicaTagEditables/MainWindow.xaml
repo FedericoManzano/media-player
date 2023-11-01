@@ -16,7 +16,8 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
-        MouseDown="Arrastrar_Ventana">
+        MouseDown="Arrastrar_Ventana"
+        >
 
 
     <!-- Data context ../ViewModel/ReproductorViewModel.cs -->

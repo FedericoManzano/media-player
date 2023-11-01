@@ -26,6 +26,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
 
         private void Actualiza_El_Listado_Canciones(object sender, System.Windows.DependencyPropertyChangedEventArgs e)
         {
+            panelPrincipal.ScrollVertical = scrollCanciones.VerticalOffset;
             panelPrincipal.AgregarElementosAlFiltro();
         }
 

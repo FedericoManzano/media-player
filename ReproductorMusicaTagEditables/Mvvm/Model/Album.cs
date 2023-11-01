@@ -24,11 +24,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             return Titulo.CompareTo(other.Titulo);
         }
 
-        public override bool Equals(object obj)
-        {
-            Album a = (Album) obj;
-            return Titulo.Equals(a.Titulo);
-        }
+      //  public override bool Equals(object obj)
+       // {
+         //   Album a = (Album) obj;
+           // return Titulo.Equals(a.Titulo);
+        //}
 
         public override int GetHashCode()
         {

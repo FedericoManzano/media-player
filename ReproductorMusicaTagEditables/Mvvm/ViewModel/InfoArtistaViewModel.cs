@@ -12,6 +12,7 @@ using Reproductor_Musica.Core;
 using System.Collections.ObjectModel;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
+using System.Windows;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
@@ -28,16 +29,34 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         public List<Album> Albumes
         {
             get => _albumes;
-            set { _albumes = value; OnPropertyChanged(nameof(Album)); }
+            set { _albumes = value; OnPropertyChanged(nameof(Albumes)); }
         }
 
 
         public ICommand PlayArtistaCommand { get; }
 
-
+        public ICommand PlayAlbumCommand { get; }
         public InfoArtistaViewModel()
         {
             PlayArtistaCommand = new RelayCommand(PlayArtistaAction, CanPlayArtistaAction);
+            PlayAlbumCommand = new RelayCommand(PlayAlbumAction);
+        }
+
+        
+
+        private void PlayAlbumAction(object obj)
+        {
+            if(obj != null)
+            {
+                Album a = (Album) obj;
+                Irg.CancionesFiltradas = new ObservableCollection<Cancion>
+                    (
+                        Irg.Canciones.Where(c => c.Album == a.Titulo).ToList()
+                    );
+                Irg.Partes.Deseleccionar(Irg.CancionesFiltradas, Irg.CancionActual.Index);
+
+                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
+            }
         }
 
         private bool CanPlayArtistaAction(object arg)
@@ -54,7 +73,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
             Irg.Partes.Deseleccionar(Irg.CancionesFiltradas, Irg.CancionActual.Index);
 
-            PlayAction(Irg.CancionesFiltradas[0]);
+            AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
         }
 
         public async void CargarInfoArtista(string artista)

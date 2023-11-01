@@ -8,12 +8,19 @@
       d:DesignHeight="450" d:DesignWidth="800"
       xmlns:infoArt="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoArtistaPagina"
       xmlns:viewModel ="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
+      xmlns:infoAlbum="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoAlbum"
+      xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       Title="InfoArtistaPage">
 
     <Page.DataContext>
         <viewModel:InfoArtistaViewModel x:Name="infoArtista"/>
     </Page.DataContext>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         <StackPanel>
             <infoArt:InfoArtistaPageControl
                 NombreArtista="{Binding Artista.Nombre}"
@@ -21,9 +28,48 @@
                 CantidadAlbumes="{Binding Artista.CantidadAlbumes}"
                 HorasReproduccion="{Binding Artista.TiempoReproduccion}"
                 ImagenArtista="{Binding Artista.Imagen}"
-                PlayArtista="{Binding PlayArtistaCommand}"
-                />
+                PlayArtista="{Binding PlayArtistaCommand}"/>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Style="{StaticResource btnNavegacion}" 
+                    Click="Button_Click"
+                    ToolTip="Página anterior">
+                <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
+                                        Style="{StaticResource btnIcon}"/>
+            </Button>
+            <TextBlock 
+                       Text="Biblioteca Del Artista" 
+                       Foreground="White" 
+                       Margin="10 10" 
+                       FontWeight="SemiBold" 
+                       FontSize="20"/>
         </StackPanel>
         
+        
+        
+        
+        
+        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+           <ItemsControl   x:Name="itemList" Margin="10" ItemsSource="{Binding Albumes}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <infoAlbum:InfoAlbumControl
+                        ImagenAlbum="{Binding Imagen}"
+                        NombreAlbum="{Binding Titulo}"
+                        AnoAlbum="{Binding Ano}"
+                        PlayCommand="{Binding ElementName=infoArtista, Path=PlayAlbumCommand}"
+                        PlayParameter="{Binding .}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </Page>

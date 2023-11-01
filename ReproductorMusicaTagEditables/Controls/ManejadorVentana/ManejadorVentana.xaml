@@ -13,13 +13,16 @@
                 HorizontalAlignment="Right">
         <Button Style="{StaticResource btnManejadorVentanaMinimizar}" 
                 Tag="#BDFF58 " Cursor="Hand"
-                Click="OnMinimizar"/>
+                Click="OnMinimizar"
+                ToolTip="Minimizar"/>
         <Button Style="{StaticResource btnManejadorVentanaMaximizar}" 
                 Tag="#F5FAB4"
-                Click="OnMaximizar"/>
+                Click="OnMaximizar"
+                ToolTip="Maximizar"/>
         <Button Style="{StaticResource btnManejadorVentanaCerrar}" 
                 Tag="#FD7F7F"
-                Click="OnCerrar"/>
+                Click="OnCerrar"
+                ToolTip="Cerrar"/>
     </StackPanel>
     
 </UserControl>

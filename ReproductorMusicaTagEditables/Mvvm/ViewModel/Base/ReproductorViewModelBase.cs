@@ -2,6 +2,7 @@
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
+using System.Collections.ObjectModel;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -33,6 +34,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             SiguienteCommand = new RelayCommand(SiguienteAction, CanSiguienteAction);
             AnteriorCommand = new RelayCommand(AnteriorAction, CanAnteriorAction);
             PlayCommand = new RelayCommand(PlayAction);
+            if(irg.Canciones.Count == 0)
+                Irg.CargaDesdeElRepositorioCanciones();
         }
 
         public bool CanAnteriorAction(object arg)
@@ -66,6 +69,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         protected void PlayAction(object obj)
         {
             Cancion c = (Cancion)obj;
+            if (Irg.Canciones.Count != Irg.CancionesFiltradas.Count)
+                Irg.CancionesFiltradas = new ObservableCollection<Cancion>(Irg.Canciones);
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);
         }
 

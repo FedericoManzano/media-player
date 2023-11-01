@@ -35,7 +35,8 @@
                     Grid.Column="0"
                     Command="{Binding ElementName=infoCancion, Path=Comando}"
                     CommandParameter="{Binding ElementName=infoCancion, Path=ParametroComando}"
-                    Click="OnPlayClick">
+                    Click="OnPlayClick"
+                    ToolTip="Reproducir track">
                 <fa:PackIconFontAwesome Style="{StaticResource iconPlay}" Kind="PlaySolid"/>
             </Button>
 

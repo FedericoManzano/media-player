@@ -13,6 +13,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
         {
             InitializeComponent();
             infoArtista.CargarInfoArtista(artista);
+            
+        }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
         }
     }
 }
