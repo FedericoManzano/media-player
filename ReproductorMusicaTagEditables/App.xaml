@@ -8,6 +8,7 @@
                 <ResourceDictionary Source="/Themes/General.xaml"/>
                 <ResourceDictionary Source="/Themes/SliderEstilos.xaml"/>
                 <ResourceDictionary Source="/Themes/BotonNavegacionTheme.xaml"/>
+                <ResourceDictionary Source="/Themes/CamposTexto.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

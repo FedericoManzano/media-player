@@ -14,14 +14,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             return this.NombreArtista.CompareTo(other.NombreArtista);
         }
 
-        public override bool Equals(object obj)
-        {
-            if(this == obj) return true;
-            if(obj.GetType().Equals(this.GetType())) return true;
-            AvatarArtista oth = obj as AvatarArtista;
-            return oth.NombreArtista.Equals(this.NombreArtista);
-        }
-
         public override int GetHashCode()
         {
             return 0;

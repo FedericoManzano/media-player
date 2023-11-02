@@ -21,11 +21,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
    
     public partial class InfoAlbumPage : Page
     {
-        private string  _nombreAlbum;
         public InfoAlbumPage(string nombreAlbum)
         {
             InitializeComponent();
-            this._nombreAlbum = nombreAlbum;
             infoAlbum.CargarInfoAlbum(nombreAlbum);
         }
 
@@ -38,7 +36,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if(this.NavigationService.CanGoBack)
-            {
+            {  
                 this.NavigationService.GoBack();
             }
            

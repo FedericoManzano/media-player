@@ -42,17 +42,32 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(a.PathImagen);
                 return a;
             }).ToList();
-
-
         }
 
-
+        public async void BuscarPorNombre(string artista)
+        {
+            if(!string.IsNullOrWhiteSpace(artista))
+            {
+                Avatars = await Task<List<AvatarArtista>>.Run(() =>
+                {
+                    return Avatars.Where(a =>
+                    {
+                        return a.NombreArtista.ToUpper().Contains(artista.ToUpper());
+                    }).ToList();
+                });
+            }
+            else
+            {
+                CargarListaDeAvataresArtistas();
+            }
+            
+        }
 
         private async Task<List<AvatarArtista>> CargarAvatares ()
         {
             return await Task.Run(() =>
             {
-                return Irg.Canciones.Select(c =>
+                return Irg.Canciones.Where(c=>System.IO.File.Exists(c.Path)).Select(c =>
                 {
                     return new AvatarArtista { NombreArtista = c.Artista, PathImagen = c.Path};
                 }).ToList();

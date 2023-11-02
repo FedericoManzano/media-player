@@ -5,9 +5,6 @@ using System.Windows.Forms;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
 {
-    /// <summary>
-    /// Lógica de interacción para InfoArtistaPage.xaml
-    /// </summary>
     public partial class InfoArtistaPage : Page
     {
         public InfoArtistaPage(string artista)
@@ -19,9 +16,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
 
         private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            infoArtista.Irg.Partes.Clear();
+            
             if(this.NavigationService.CanGoBack)
             {
+                infoArtista.Irg.Partes.Clear();
+                infoArtista.Irg.AgregarElementosAlFiltro();
                 this.NavigationService.GoBack();
             }
             

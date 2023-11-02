@@ -33,5 +33,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             AvatarArtistaControl i = (AvatarArtistaControl)sender;
             this.NavigationService.Navigate(new InfoArtistaPage(i.NombreArtista));
         }
+
+        private void CampoBuscadorControl_TextChange(object sender, RoutedEventArgs e)
+        {
+            todosLosArtistas.BuscarPorNombre(txtBusqueda.Texto);
+        }
     }
 }

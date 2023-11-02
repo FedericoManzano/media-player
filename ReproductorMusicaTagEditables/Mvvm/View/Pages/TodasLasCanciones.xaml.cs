@@ -2,7 +2,6 @@
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
-using System.Windows;
 using System.Windows.Controls;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages

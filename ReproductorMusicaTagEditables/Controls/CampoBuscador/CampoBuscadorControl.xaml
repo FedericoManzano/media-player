@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.CampoBuscador.CampoBuscadorControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoBuscador"
+             mc:Ignorable="d" 
+             xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks">
+
+
+    <Control.Resources>
+        <BooleanToVisibilityConverter x:Key="boolToVis"></BooleanToVisibilityConverter>
+    </Control.Resources>
+    
+    
+    <Grid  Width="300" HorizontalAlignment="Left" Margin="10,0,0,0">
+        <TextBlock Margin="20,22"
+               Foreground="#ccc"    
+               Width="45"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center"
+               IsHitTestVisible="True"
+               Panel.ZIndex="1"
+               Text="Buscar ..."
+               Visibility="{Binding ElementName=txtSearch, Path=Text.IsEmpty, Converter={StaticResource boolToVis}}"/>
+        <TextBox x:Name="txtSearch" 
+                 Style="{StaticResource campoBusqueda}" 
+                 Cursor="IBeam"
+                 Text="{Binding ElementName=campoBusqueda, Path=Texto}"
+                 Foreground="White"
+                 TextChanged="OnTextChange"/>
+        <fa:PackIconFontAwesome Kind="SearchSolid" 
+                  Width="15"
+                  Height="15"
+                  VerticalAlignment="Center"
+                  Margin="0 0 15 0"
+                  HorizontalAlignment="Right"
+                  Foreground="#ccc"/>
+    </Grid>
+</UserControl>

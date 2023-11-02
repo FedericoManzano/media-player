@@ -110,6 +110,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\CampoBuscador\CampoBuscadorControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\InfoAlbumPagina\InfoAlbumPaginaControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -193,6 +197,9 @@
     <Compile Include="Controls\AvatarArtista\AvatarArtistaControl.xaml.cs">
       <DependentUpon>AvatarArtistaControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CampoBuscador\CampoBuscadorControl.xaml.cs">
+      <DependentUpon>CampoBuscadorControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\InfoAlbumPagina\InfoAlbumPaginaControl.xaml.cs">
       <DependentUpon>InfoAlbumPaginaControl.xaml</DependentUpon>
     </Compile>
@@ -255,6 +262,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Themes\BotonNavegacionTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\CamposTexto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -68,7 +68,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 return Irg.Canciones.Where(c => c.Artista == Artista.Nombre).ToList();
             }));
 
-            Irg.Partes.Deseleccionar(Irg.CancionesFiltradas, Irg.CancionActual.Index);
+            Irg.Deseleccionar();
 
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
         }

@@ -17,7 +17,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                 await Task.Run(() =>
                 {
                     return Canciones
-                       .Where(c => c.Artista == artista)
+                       .Where(c => c.Artista == artista && System.IO.File.Exists(c.Path))
                        .Select(c =>
                        {
                            return new Album
