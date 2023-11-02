@@ -1,10 +1,12 @@
 ﻿
 
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Query.Dynamic;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 {
@@ -49,13 +51,24 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 
         public  void CargarCancionesAlbum (string titulo)
         {
-            Presentacion = new ObservableCollection<Cancion>
-            (
-                
-                Canciones.Where(c => c.Album == titulo).ToList()
-               
 
-            );     
+            List<Cancion> l =  Canciones.Where(c => c.Album == titulo).ToList();
+            l.Sort(delegate (Cancion c1, Cancion c2)
+            {
+                try
+                {
+                    int numero1 = int.Parse(c1.Numero);
+                    int numero2 = int.Parse(c2.Numero);
+                    return numero1.CompareTo(numero2);
+                }
+                catch (FormatException e)
+                {
+                    return c1.Titulo.CompareTo(c2.Titulo);
+                }
+            
+            });
+           
+            Presentacion = new ObservableCollection<Cancion>(l);
             
         }
     }

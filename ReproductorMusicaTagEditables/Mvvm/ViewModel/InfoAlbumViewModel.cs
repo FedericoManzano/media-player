@@ -60,24 +60,27 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public void CargarInfoAlbum(string album)
         {
-            Irg.CargarCancionesAlbum(album);
-            ulong? duracion = Irg.CalcularDuracionAlbum(album);
+           
+             Irg.CargarCancionesAlbum(album);
+             ulong? duracion = Irg.CalcularDuracionAlbum(album);
 
-            if (Irg.Presentacion.Count > 0) 
-            {
-                AlbumSeleccionado = new Album
-                {
-                    Artista = Irg.Presentacion[0].Artista,
-                    Titulo = album,
-                    Ano = Irg.Presentacion[0].FechaLanzamiento,
-                    Genero = Irg.Presentacion[0].Genero,
-                    DuracionLong = duracion,
-                    Duracion = TimeSpan.FromTicks((long)duracion.GetValueOrDefault(0UL)).ToString(@"hh\:mm\:ss") + " Horas",
-                    CantidadPistas = Irg.Presentacion.Count + " Canciones",
-                    Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(Irg.Presentacion[0].Path),
-                    PathImagen = Irg.Presentacion[0].Path
-                };
-            }
+             if (Irg.Presentacion.Count > 0)
+             {
+                 AlbumSeleccionado = new Album
+                 {
+                     Artista = Irg.Presentacion[0].Artista,
+                     Titulo = album,
+                     Ano = Irg.Presentacion[0].FechaLanzamiento,
+                     Genero = Irg.Presentacion[0].Genero,
+                     DuracionLong = duracion,
+                     Duracion = TimeSpan.FromTicks((long)duracion.GetValueOrDefault(0UL)).ToString(@"hh\:mm\:ss") + " Horas",
+                     CantidadPistas = Irg.Presentacion.Count + " Canciones",
+                     Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(Irg.Presentacion[0].Path),
+                     PathImagen = Irg.Presentacion[0].Path
+                 };
+             }
+            
+            
         }
     }
 }
