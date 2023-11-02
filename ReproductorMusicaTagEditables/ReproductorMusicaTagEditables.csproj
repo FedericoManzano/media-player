@@ -106,6 +106,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\AvatarArtista\AvatarArtistaControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\InfoAlbumPagina\InfoAlbumPaginaControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -186,6 +190,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controls\AvatarArtista\AvatarArtistaControl.xaml.cs">
+      <DependentUpon>AvatarArtistaControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\InfoAlbumPagina\InfoAlbumPaginaControl.xaml.cs">
       <DependentUpon>InfoAlbumPaginaControl.xaml</DependentUpon>
     </Compile>
@@ -239,6 +246,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\Pages\TodosLosArtistas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\PrincipalView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -264,6 +275,7 @@
     <Compile Include="Mvvm\ExtensionMetodos\Seleccionador.cs" />
     <Compile Include="Mvvm\Model\Album.cs" />
     <Compile Include="Mvvm\Model\Artista.cs" />
+    <Compile Include="Mvvm\Model\AvatarArtista.cs" />
     <Compile Include="Mvvm\Model\Cancion.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\ArchivoImagenBase.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\IArchivoimagen\IArchivoImagen.cs" />
@@ -291,6 +303,7 @@
     <Compile Include="Mvvm\ViewModel\InfoArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\PrincipalViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\TodosLosArtistasViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Utils\AccionReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Utils\Anterior.cs" />
     <Compile Include="Mvvm\ViewModel\Utils\IAccionReproductor.cs" />
@@ -307,6 +320,9 @@
     </Compile>
     <Compile Include="Mvvm\View\Pages\TodasLasCanciones.xaml.cs">
       <DependentUpon>TodasLasCanciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\Pages\TodosLosArtistas.xaml.cs">
+      <DependentUpon>TodosLosArtistas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\PrincipalView.xaml.cs">
       <DependentUpon>PrincipalView.xaml</DependentUpon>

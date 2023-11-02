@@ -20,7 +20,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
         private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             infoArtista.Irg.Partes.Clear();
-            this.NavigationService.Navigate(new TodasLasCanciones());
+            if(this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+            
         }
 
         private void InfoAlbumControl_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)

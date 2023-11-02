@@ -50,7 +50,7 @@
 
         <ScrollViewer x:Name="scrollCanciones" 
                       Grid.Row="2" VerticalScrollBarVisibility="Auto" >
-            <ItemsControl  x:Name="itemList" ItemsSource="{Binding Irg.CancionesFiltradas}">
+            <ItemsControl  x:Name="itemList" ItemsSource="{Binding Irg.Presentacion}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel />

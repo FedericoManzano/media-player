@@ -19,9 +19,6 @@ using System.Windows.Shapes;
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
 {
    
-    /// <summary>
-    /// Lógica de interacción para InfoAlbumPage.xaml
-    /// </summary>
     public partial class InfoAlbumPage : Page
     {
         private string  _nombreAlbum;

@@ -20,6 +20,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
             Canciones = new List<Cancion>();
             CancionesFiltradas = new ObservableCollection<Cancion>();
             Partes = new ObservableCollection<Cancion>();
+            Presentacion = new ObservableCollection<Cancion>();
         }
     }
 }

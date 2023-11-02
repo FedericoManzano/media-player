@@ -1,4 +1,5 @@
 ﻿
+using ReproductorMusicaTagEditables.Mvvm.View.Pages;
 using System.Windows.Controls;
 
 
@@ -12,6 +13,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View
         public ArtistaView()
         {
             InitializeComponent();
+            paginacion.NavigationService.Navigate(new TodosLosArtistas());
         }
     }
 }

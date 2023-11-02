@@ -125,6 +125,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                         Partes.Insert(i, CancionActual.Cancion);
                     }
                 }
+
+                for (int i = 0; i < Presentacion.Count; i++)
+                {
+                    if (Presentacion[i].Equals(CancionActual.Cancion))
+                    {
+                        Presentacion.RemoveAt(i);
+                        Presentacion.Insert(i, CancionActual.Cancion);
+                    }
+                }
             }
         }
         public void Deseleccionar()
@@ -157,6 +166,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                     {
                         Partes.RemoveAt(i);
                         Partes.Insert(i, CancionActual.Cancion);
+                    }
+                }
+
+                for (int i = 0; i < Presentacion.Count; i++)
+                {
+                    if (Presentacion[i].Equals(CancionActual.Cancion))
+                    {
+                        Presentacion.RemoveAt(i);
+                        Presentacion.Insert(i, CancionActual.Cancion);
                     }
                 }
             }

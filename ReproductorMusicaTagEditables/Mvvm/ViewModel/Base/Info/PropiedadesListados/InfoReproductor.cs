@@ -15,7 +15,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
         private static List<Cancion> _canciones;
         private static ObservableCollection<Cancion> _cancionesFiltradas;
         private static ObservableCollection<Cancion> _partes;
-
+        private static ObservableCollection<Cancion> _presentacion;
         public List<string> Paths
         {
             get => _paths;
@@ -50,6 +50,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
             {
                 _partes = value;
                 OnPropertyChanged(nameof(Partes));
+            }
+        }
+
+        public ObservableCollection<Cancion> Presentacion
+        {
+            get => _presentacion;
+            set
+            {
+                _presentacion = value;
+                OnPropertyChanged(nameof(Presentacion));
             }
         }
     }

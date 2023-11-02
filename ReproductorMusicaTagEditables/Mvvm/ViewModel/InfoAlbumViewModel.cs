@@ -36,20 +36,22 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             PlayAlbumCommand = new RelayCommand(PlayAlbumAction);
         }
 
-        public void PlayAlbumAction(object obj)
+        public void PlayAlbumAction(object obj = null)
         {
             if(obj != null)
             {
                 Cancion c = (Cancion)obj;
-                int index = Irg.CancionesFiltradas.IndexOf(c);
+                int index = Irg.Presentacion.IndexOf(c);
                 Irg.Deseleccionar();
                 Irg.CancionActual.Index = index;
                 Irg.CancionActual.Cancion = c;
+                Irg.CancionesFiltradas = Irg.Presentacion;
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionActual.Cancion);
             }
             else
             {
                 Irg.Deseleccionar();
+                Irg.CancionesFiltradas = Irg.Presentacion;
                 Irg.CancionActual.Index = 0;
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
@@ -61,19 +63,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             Irg.CargarCancionesAlbum(album);
             ulong? duracion = Irg.CalcularDuracionAlbum(album);
 
-            if (Irg.CancionesFiltradas.Count > 0) 
+            if (Irg.Presentacion.Count > 0) 
             {
                 AlbumSeleccionado = new Album
                 {
-                    Artista = Irg.CancionesFiltradas[0].Artista,
+                    Artista = Irg.Presentacion[0].Artista,
                     Titulo = album,
-                    Ano = Irg.CancionesFiltradas[0].FechaLanzamiento,
-                    Genero = Irg.CancionesFiltradas[0].Genero,
+                    Ano = Irg.Presentacion[0].FechaLanzamiento,
+                    Genero = Irg.Presentacion[0].Genero,
                     DuracionLong = duracion,
                     Duracion = TimeSpan.FromTicks((long)duracion.GetValueOrDefault(0UL)).ToString(@"hh\:mm\:ss") + " Horas",
-                    CantidadPistas = Irg.CancionesFiltradas.Count + " Canciones",
-                    Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(Irg.CancionesFiltradas[0].Path),
-                    PathImagen = Irg.CancionesFiltradas[0].Path
+                    CantidadPistas = Irg.Presentacion.Count + " Canciones",
+                    Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(Irg.Presentacion[0].Path),
+                    PathImagen = Irg.Presentacion[0].Path
                 };
             }
         }

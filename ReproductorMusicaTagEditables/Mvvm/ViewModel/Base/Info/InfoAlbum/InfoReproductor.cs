@@ -49,7 +49,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 
         public  void CargarCancionesAlbum (string titulo)
         {
-            CancionesFiltradas = new ObservableCollection<Cancion>
+            Presentacion = new ObservableCollection<Cancion>
             (
                 
                 Canciones.Where(c => c.Album == titulo).ToList()
