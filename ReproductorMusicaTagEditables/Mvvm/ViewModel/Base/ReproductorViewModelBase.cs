@@ -74,8 +74,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         protected void PlayAction(object obj)
         {
             Cancion c = (Cancion)obj;
-            if (Irg.Canciones.Count != Irg.CancionesFiltradas.Count)
-                Irg.CancionesFiltradas = new ObservableCollection<Cancion>(Irg.Canciones);
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);
             ScrollVertical = irg.SetScroll();
         }

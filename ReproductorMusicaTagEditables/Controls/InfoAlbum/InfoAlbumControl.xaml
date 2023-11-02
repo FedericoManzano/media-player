@@ -15,7 +15,7 @@
             CornerRadius="10" 
             Width="110" 
             Height="160" 
-            Margin="0 0 25 25"
+            Margin="0 0 20 20"
             Padding="3">
         <Grid>
             <Grid.RowDefinitions>

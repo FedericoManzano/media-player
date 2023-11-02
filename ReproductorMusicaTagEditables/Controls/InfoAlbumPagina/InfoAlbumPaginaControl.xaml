@@ -1,61 +1,73 @@
-﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.InfoArtistaPagina.InfoArtistaPageControl"
+﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.InfoAlbumPagina.InfoAlbumPaginaControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
              xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             mc:Ignorable="d" 
-             x:Name="infoArtista">
+             x:Name="infoAlbum">
 
     <Control.Resources>
-        <ResourceDictionary Source="/Controls/InfoArtistaPagina/InfoArtistaPageTheme.xaml" />
+        <ResourceDictionary Source="/Controls/InfoAlbumPagina/InfoAlbumPaginaTheme.xaml"/>
     </Control.Resources>
-
-
-    <Border Style="{StaticResource bordePrincipal}">
+    <Border Style="{StaticResource bordePrincipal}" >
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="190"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Border Style="{StaticResource bordeImagen}" Background="{Binding ElementName=infoArtista,Path=ImagenArtista}"/>
+
+
+            <Border Style="{StaticResource bordeImagen}" Background="{Binding ElementName=infoAlbum, Path=ImagenAlbum}"/>
 
             <StackPanel Grid.Column="1" Margin="10 0 0 0">
                 <TextBlock Style="{StaticResource nombreArtista}" 
-                           Text="{Binding ElementName=infoArtista,Path=NombreArtista}"/>
+                           Text="{Binding ElementName=infoAlbum, Path=NombreAlbum}"/>
+
                 <StackPanel Orientation="Horizontal" Margin="0 10">
                     <TextBlock Text="Artista" 
-                               Style="{StaticResource txtDatos}"></TextBlock>
+                               Style="{StaticResource txtDatos}" />
                     <TextBlock Text="·" 
                                Style="{StaticResource txtDatos}"
                                Margin="10 0"></TextBlock>
-                    <TextBlock Text="{Binding ElementName=infoArtista,Path=Genero}" Foreground="Gray" Style="{StaticResource txtDatos}"></TextBlock>
+                    <Button Content="{Binding ElementName=infoAlbum, Path=NombreArtista}" 
+                            Style="{StaticResource btnArtista}"
+                            Click="OnIrPaginaArtista">
+                        
+                    </Button>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10">
-                    <TextBlock Text="{Binding ElementName=infoArtista, Path=CantidadAlbumes}" 
-                                Style="{StaticResource txtDatos}"></TextBlock>
+                    <TextBlock Text="{Binding ElementName=infoAlbum, Path=CantidadCanciones}" 
+                                Style="{StaticResource txtDatos}" />
                     <TextBlock Text="·" 
                                Style="{StaticResource txtDatos}"
-                               Margin="10 0"></TextBlock>
-                    <TextBlock Text="{Binding ElementName=infoArtista, Path=HorasReproduccion}" Foreground="Gray" Style="{StaticResource txtDatos}"></TextBlock>
+                               Margin="10 0" />
+                    <TextBlock Text="{Binding ElementName=infoAlbum, Path=Horas}" Foreground="Gray" Style="{StaticResource txtDatos}"></TextBlock>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10">
-                    <Button Style="{StaticResource btnPlayAll}" 
-                            Command="{Binding ElementName=infoArtista, Path=PlayArtista}"
-                            ToolTip="Reproducir todas las canciones del artista">
+                    <Button Style="{StaticResource btnPlayAll}"
+                            Command="{Binding ElementName=infoAlbum, Path=ReproducirCommand}"
+                            CommandParameter="{Binding ElementName=infoAlbum, Path=ReproducirParamCommand}"
+                            ToolTip="Reproducir todas las canciones del álbum">
                         <StackPanel Orientation="Horizontal">
                             <fa:PackIconFontAwesome Kind="PlayCircleRegular" Margin="0 0 10 0"/>
                             <TextBlock Text="Reproducir Todo"/>
                         </StackPanel>
                     </Button>
-
-
                     <Button Style="{StaticResource btnPlayAll}" 
                             Background="Gray" Margin="10 0 0 0"
                             ToolTip="Agregar canciones del artista a lista de reproducción">
                         <StackPanel Orientation="Horizontal">
                             <fa:PackIconFontAwesome Kind="PlusSolid" Margin="0 0 10 0"/>
                             <TextBlock Text="Agregar"/>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{StaticResource btnPlayAll}" 
+                            Background="Gray" Margin="10 0 0 0"
+                            ToolTip="Modificar la metadata de los tracks.">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:PackIconFontAwesome Kind="TagSolid" Margin="0 0 10 0"/>
+                            <TextBlock Text="Modificar"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>

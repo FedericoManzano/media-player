@@ -106,6 +106,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\InfoAlbumPagina\InfoAlbumPaginaControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\InfoAlbumPagina\InfoAlbumPaginaTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\InfoAlbum\InfoAlbumControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -177,6 +185,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\InfoAlbumPagina\InfoAlbumPaginaControl.xaml.cs">
+      <DependentUpon>InfoAlbumPaginaControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\InfoAlbum\InfoAlbumControl.xaml.cs">
       <DependentUpon>InfoAlbumControl.xaml</DependentUpon>
@@ -276,6 +287,7 @@
     <Compile Include="Mvvm\ViewModel\Base\Info\Metodos\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\PropiedadesListados\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
+    <Compile Include="Mvvm\ViewModel\InfoAlbumViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\PrincipalViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />

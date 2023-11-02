@@ -5,10 +5,77 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas"
       mc:Ignorable="d" 
+      xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
+      xmlns:infoAlbum="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoAlbumPagina"
+      xmlns:tupla="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
+      xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="InfoAlbumPage" x:Name="infoAlbumPage">
 
+    <Page.DataContext>
+        <viewModel:InfoAlbumViewModel x:Name="infoAlbum"/>
+    </Page.DataContext>
     <Grid>
-        <TextBlock Text="Canciones del Album" Foreground="White"></TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <infoAlbum:InfoAlbumPaginaControl
+                IrPaginaArtista="InfoAlbumPaginaControl_IrPaginaArtista"
+                ReproducirCommand="{Binding ElementName=infoAlbum, Path=PlayAlbumCommand}"
+                ImagenAlbum="{Binding AlbumSeleccionado.Imagen}"
+                NombreAlbum="{Binding AlbumSeleccionado.Titulo}"
+                NombreArtista="{Binding AlbumSeleccionado.Artista}"
+                Horas="{Binding AlbumSeleccionado.Duracion}"
+                CantidadCanciones="{Binding AlbumSeleccionado.CantidadPistas}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 15 0 0">
+            <Button Style="{StaticResource btnNavegacion}" 
+                    Click="Button_Click"
+                    ToolTip="Página anterior">
+                <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
+                                Style="{StaticResource btnIcon}"/>
+            </Button>
+            <TextBlock 
+               Text="Canciones" 
+               Foreground="White" 
+               Margin="10 12" 
+               FontWeight="SemiBold" 
+               FontSize="20" />
+        </StackPanel>
+
+
+        <ScrollViewer x:Name="scrollCanciones" 
+                      Grid.Row="2" VerticalScrollBarVisibility="Auto" >
+            <ItemsControl  x:Name="itemList" ItemsSource="{Binding Irg.CancionesFiltradas}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <tupla:InfoCancionTabla 
+                                        ArtistaClick="InfoCancionTabla_ArtistaClick"
+                                        Comando="{Binding ElementName=infoAlbum, Path=PlayAlbumCommand}"
+                                        ParametroComando="{Binding .}"
+                                        NumeroInfo="{Binding Numero}"
+                                        TituloInfo="{Binding Titulo}"
+                                        ArtistaInfo="{Binding Artista}"
+                                        AlbumInfo="{Binding Album}"
+                                        GeneroInfo="{Binding Genero}"
+                                        AnoInfo="{Binding FechaLanzamiento}"
+                                        DuracionInfo="{Binding Duracion}"
+                                        ColorTexto="{Binding EstadoColor}">
+
+
+                        </tupla:InfoCancionTabla>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </Page>

@@ -2,6 +2,7 @@
 
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -33,7 +34,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
              ).ToList();
         }
 
-        private ulong? CalcularDuracionAlbum(string titulo)
+        public ulong? CalcularDuracionAlbum(string titulo)
         {
             ulong? ret = 0;
             foreach (Cancion c in Canciones)
@@ -44,6 +45,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                 }
             }
             return ret;
+        }
+
+        public  void CargarCancionesAlbum (string titulo)
+        {
+            CancionesFiltradas = new ObservableCollection<Cancion>
+            (
+                
+                Canciones.Where(c => c.Album == titulo).ToList()
+               
+
+            );     
+            
         }
     }
 }

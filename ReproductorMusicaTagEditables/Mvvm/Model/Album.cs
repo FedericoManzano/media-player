@@ -14,7 +14,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         public string  Ano{ get; set; }
         public string Genero { get; set;}
         public string CantidadPistas { get; set;}
-        public ulong? Duracion { get; set; }
+        public string Duracion { get; set; }
         public ulong? DuracionLong { get; set; }
         public ImageBrush Imagen {  get; set; }
         public string PathImagen {  get; set; } 
@@ -38,7 +38,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Ano);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Genero);
             hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(CantidadPistas);
-            hashCode = hashCode * -1521134295 + Duracion.GetHashCode();
+       
             hashCode = hashCode * -1521134295 + EqualityComparer<ImageBrush>.Default.GetHashCode(Imagen);
             return hashCode;
         }

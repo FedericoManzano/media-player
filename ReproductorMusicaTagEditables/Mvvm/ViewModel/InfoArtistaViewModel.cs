@@ -1,16 +1,16 @@
-﻿using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
-using ReproductorMusicaTagEditables.Mvvm.Model;
-using System.Collections.Generic;
-using System.Windows.Input;
-using System.Linq;
-using System;
-using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
-using System.Threading.Tasks;
-using System.Windows.Media;
-using Reproductor_Musica.Core;
-using System.Collections.ObjectModel;
-using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
+﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
+using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using System.Windows.Media;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
@@ -20,7 +20,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         private Artista _artista;
         private List<Album> _albumes;
 
-        public Artista Artista {
+        public Artista Artista
+        {
             get => _artista;
             set { _artista = value; OnPropertyChanged(nameof(Artista)); }
         }
@@ -40,13 +41,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             PlayAlbumCommand = new RelayCommand(PlayAlbumAction);
         }
 
-        
-
         private void PlayAlbumAction(object obj)
         {
-            if(obj != null)
+            if (obj != null)
             {
-                Album a = (Album) obj;
+                Album a = (Album)obj;
                 Irg.CancionesFiltradas = new ObservableCollection<Cancion>
                     (
                         Irg.Canciones.Where(c => c.Album == a.Titulo).ToList()
@@ -113,12 +112,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             }
             return TimeSpan.FromTicks((long)tiempoTotalRepro.GetValueOrDefault(0UL)).ToString(@"hh\:mm\:ss");
         }
-        
-        public ImageBrush DameImagenArtista ()
+
+        public ImageBrush DameImagenArtista()
         {
             foreach (Album a in Albumes)
             {
-                if(!string.IsNullOrEmpty(a.PathImagen))
+                if (!string.IsNullOrEmpty(a.PathImagen))
                 {
                     return ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(a.PathImagen);
                 }

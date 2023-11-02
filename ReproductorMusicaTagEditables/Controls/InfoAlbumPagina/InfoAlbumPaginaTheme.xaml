@@ -1,0 +1,92 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks">
+
+
+    <Style x:Key="bordePrincipal" TargetType="Border">
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Background" Value="#2A2E32"/>
+        <Setter Property="Padding" Value="10"/>
+    </Style>
+
+    <Style x:Key="bordeImagen" TargetType="Border">
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Height" Value="170"/>
+        <Setter Property="Width" Value="170"/>
+    </Style>
+
+
+    <Style x:Key="nombreArtista" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="28"/>
+    </Style>
+
+    <Style x:Key="txtDatos" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+
+    <Style x:Key="btnPlayAll" TargetType="Button">
+        <Setter Property="Background" Value="#FFC65017"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Width" Value="140"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        CornerRadius="3">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="Orange"/>
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+
+    <Style x:Key="btnIconPlayAll" TargetType="fa:PackIconFontAwesome">
+        <Setter Property="Foreground" Value="{Binding Path=Foreground, RelativeSource={RelativeSource AncestorType=Button}}"/>
+        <Setter Property="Margin" Value="0 0 8 0"/>
+    </Style>
+
+
+    <Style x:Key="btnArtista" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="DarkGray"/>
+        <Setter Property="FontStyle" Value="Normal"/>
+        <Setter Property="BorderBrush" Value="DarkGray"/>
+        <Setter Property="BorderThickness" Value="0 0 0 1"/>
+ 
+        <Setter Property="Template" >
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="0 0 0 1">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"></ContentPresenter>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="OrangeRed"/>
+                <Setter Property="BorderBrush" Value="OrangeRed"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

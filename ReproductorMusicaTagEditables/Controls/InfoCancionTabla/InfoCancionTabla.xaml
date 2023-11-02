@@ -61,13 +61,11 @@
                     Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
             
             
-            <Button Style="{StaticResource btnArtista}"
-                    Grid.Column="6"
-                    Grid.ColumnSpan="3"  
-                    HorizontalAlignment="Left"
+            <Button Style="{StaticResource btnArtista}" Grid.Column="6" Grid.ColumnSpan="3"  
                     Click="OnAlbumClick"
                     Content="{Binding ElementName=infoCancion, Path=AlbumInfo}"
-                    Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
+                    Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"
+                    HorizontalAlignment="Left"/>
 
 
             <TextBlock Style="{StaticResource txtInfoCancion}" 
@@ -92,7 +90,7 @@
         </Grid>
         <Border.ContextMenu>
             <ContextMenu x:Name="menuContexto" StaysOpen="true">
-                <MenuItem Header="Reproducior" 
+                <MenuItem Header="Reproducior"
                           Command="{Binding  Parent.PlacementTarget.Tag.Comando,RelativeSource={RelativeSource Self }}"
                           CommandParameter="{Binding Parent.PlacementTarget.Tag.ParametroComando, RelativeSource={RelativeSource Self}}">
                     <MenuItem.Icon>
@@ -101,7 +99,9 @@
                 </MenuItem>
                 <MenuItem Header="Ageregar lista">
                     <MenuItem.Icon>
-                        <fa:PackIconFontAwesome Kind="ListSolid" FontSize="12" Foreground="DarkMagenta"/>
+                        <fa:PackIconFontAwesome Kind="ListSolid" 
+                                                FontSize="12" 
+                                                Foreground="DarkMagenta"/>
                     </MenuItem.Icon>
                 </MenuItem>
             </ContextMenu>
