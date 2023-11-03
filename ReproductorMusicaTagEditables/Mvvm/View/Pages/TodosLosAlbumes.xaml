@@ -9,6 +9,7 @@
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:avatar="clr-namespace:ReproductorMusicaTagEditables.Controls.AvatarAlbum"
       xmlns:busqueda="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoBuscador"
+      xmlns:btnPag="clr-namespace:ReproductorMusicaTagEditables.Controls.Paginador"
       Title="TodosLosAlbumes">
 
     <Page.DataContext>
@@ -18,7 +19,8 @@
     <Grid Margin="15">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
-            <RowDefinition/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
@@ -35,11 +37,8 @@
                                        TextChange="txtBusqueda_TextChange"/>
         </Grid>
 
-
-
-
-
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Row="1">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" 
+                      Grid.Row="1">
             <ItemsControl ItemsSource="{Binding AvatarAlbums}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -48,14 +47,36 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <avatar:AvatarAlbumControl Margin="15 15" 
+                        <avatar:AvatarAlbumControl Margin="0 15 15 15" 
                                                    MouseLeftButtonUp="AvatarAlbumControl_MouseLeftButtonUp"
                                     ImagenAlbum="{Binding Imagen}"
-                                    NombreAlbum="{Binding NombreAlbum}"
-                                    AnoAlbum="{Binding Ano}"/>
+                                    NombreAlbum="{Binding Album}"
+                                    NombreArtista="{Binding Artista}"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
+
+
+        <ItemsControl ItemsSource="{Binding Paginacion}" 
+                      Grid.Row="2" 
+                      VerticalAlignment="Center"
+                      Margin="0 10 0 0">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <btnPag:BotonPaginador
+                        DarClick="BotonPaginador_DarClick"
+                        MouseLeftButtonUp="BotonPaginador_MouseLeftButtonUp"
+                        Inicial="{Binding Key}"
+                        Marcado="{Binding Value}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
     </Grid>
 </Page>

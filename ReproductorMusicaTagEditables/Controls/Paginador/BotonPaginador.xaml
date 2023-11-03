@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.Paginador.BotonPaginador"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.Paginador"
+             mc:Ignorable="d"
+             x:Name="botonPaginado">
+    <Control.Resources>
+        <ResourceDictionary Source="/Controls/Paginador/PaginacionTheme.xaml"/>
+    </Control.Resources>
+
+    <RadioButton Style="{StaticResource btnPaginado}"
+                 Content="{Binding ElementName=botonPaginado,Path=Inicial}"
+                 IsChecked="{Binding ElementName=botonPaginado, Path=Marcado}"
+                 Click="OnDarClick"/>
+</UserControl>

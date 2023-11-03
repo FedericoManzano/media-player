@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace ReproductorMusicaTagEditables.Controls.InfoAlbum
 {
@@ -69,9 +61,6 @@ namespace ReproductorMusicaTagEditables.Controls.InfoAlbum
             set => SetValue(AnoAlbumProperty, value);
         }
 
-
-
-
         private void borderTrigger_MouseEnter(object sender, MouseEventArgs e)
         {
             bordeCapa.Visibility = Visibility.Visible;
@@ -83,7 +72,5 @@ namespace ReproductorMusicaTagEditables.Controls.InfoAlbum
             bordeCapa.Visibility = Visibility.Hidden;
             bordePrincipal.Background = Brushes.Transparent;
         }
-
-
     }
 }

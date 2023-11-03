@@ -50,8 +50,8 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
                     <avatar:AvatarArtistaControl Margin="15 15" MouseLeftButtonUp="AvatarArtistaControl_MouseLeftButtonUp"
-                        ImagenArtista="{Binding ImagenArtista}"
-                        NombreArtista="{Binding NombreArtista}"/>
+                        ImagenArtista="{Binding Imagen}"
+                        NombreArtista="{Binding Artista}"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>        
         </ItemsControl>

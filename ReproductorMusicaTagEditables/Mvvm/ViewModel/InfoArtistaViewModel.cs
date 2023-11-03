@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -77,7 +78,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         {
             Albumes = await Irg.CargarListaAlbumes(artista);
 
-
+            if(Albumes.Count == 0)
+            {
+                MessageBox.Show($"El artista que está intentando acceder fue eliminado en tiempo de ejecución.");
+            }
             await Task.Run(() =>
             {
                 Albumes.Sort(delegate (Album item1, Album item2)
@@ -89,7 +93,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             Artista = new Artista
             {
                 Nombre = artista,
-                Genero = Albumes[0].Genero,
+                Genero = Albumes != null && Albumes.Count>0 ? Albumes[0].Genero : "",
                 CantidadAlbumes = Albumes.Count.ToString() + " Albumes",
                 TiempoReproduccion = TiempoTotalDeReproduccion() + " Horas",
                 Imagen = DameImagenArtista()

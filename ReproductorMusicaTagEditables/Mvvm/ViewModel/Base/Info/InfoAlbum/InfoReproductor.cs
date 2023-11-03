@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Query.Dynamic;
+using System.Windows;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 {
@@ -68,8 +69,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
             
             });
            
+            if(l.Count > 0 )
+            {
+                MessageBox.Show($"El álbum que está intentando acceder fué eliminado en tiempo de ejecución");
+            }
             Presentacion = new ObservableCollection<Cancion>(l);
-            
         }
     }
 }

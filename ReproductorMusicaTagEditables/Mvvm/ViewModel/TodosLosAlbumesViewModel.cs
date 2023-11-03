@@ -1,7 +1,10 @@
-﻿using ReproductorMusicaTagEditables.Mvvm.Model;
+﻿using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
+using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,10 +13,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     public class TodosLosAlbumesViewModel:ReproductorViewModelBase
     {
 
-        private List<AvatarAlbum> _avatarAlbums = new List<AvatarAlbum>();
+        private Dictionary<string, Dictionary<string, Cancion>> diccionarioalbumes = 
+                    new Dictionary<string, Dictionary<string, Cancion>>();
 
 
-        public List<AvatarAlbum> AvatarAlbums 
+        private Dictionary<string, bool> paginacion =
+                    new Dictionary<string, bool>();
+
+        private ObservableCollection<Cancion> _avatarAlbums = 
+                    new ObservableCollection<Cancion>();
+
+
+        public ObservableCollection<Cancion> AvatarAlbums 
         { 
             get => _avatarAlbums; 
             set
@@ -23,40 +34,52 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             } 
         }
 
+        public Dictionary<string, bool> Paginacion 
+        { 
+            get => paginacion;
+            set 
+            { 
+                paginacion = value;
+                OnPropertyChanged(nameof(Paginacion)); 
+            } 
+        }
 
         public async void CargarAvatarAlbumes()
         {
-            AvatarAlbums = await Task<List<AvatarAlbum>>.Run(() => new SortedSet<AvatarAlbum>
-            (
-                Irg.Canciones.Select(c => new AvatarAlbum { NombreAlbum = c.Album, Ano = c.FechaLanzamiento, PathImagen = c.Path }).ToList()
-
-            ).ToList());
-
-
             await Task.Run(() =>
             {
-                AvatarAlbums.Sort(delegate (AvatarAlbum a1, AvatarAlbum a2)
+                foreach ( var c in Irg.Canciones )
                 {
-                    return a1.NombreAlbum.CompareTo(a2.NombreAlbum);
-                });
-
+                    
+                    if (diccionarioalbumes.ContainsKey(c.Album.PrimeraLetraMayuscula()))
+                    {
+                        diccionarioalbumes[c.Album.PrimeraLetraMayuscula()][c.Album] = c;
+                    }
+                    else
+                    {
+                        diccionarioalbumes[c.Album.PrimeraLetraMayuscula()] = new Dictionary<string, Cancion>
+                        {
+                            [c.Album] = c
+                        };
+                    }
+                    Paginacion[c.Album.PrimeraLetraMayuscula()] = false;
+                    
+                }
             });
 
-
-
-            AvatarAlbums = AvatarAlbums.Select(a =>
+            if(diccionarioalbumes.Count> 0) 
             {
-                a.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(a.PathImagen);
-                return a;
-            }).ToList();
+                Paginacion = Paginacion.OrdenarPorClave();
+                Paginacion = Paginacion.MarcarClave(Paginacion.Keys.First());
+                AvatarAlbums = diccionarioalbumes.CargarImagenes(Paginacion.Keys.First());
+            }
         }
 
-        public async void BuscarPorAlbum(string Album)
+        public void BuscarPorAlbum(string inicialAlbum)
         {
-            if(string.IsNullOrWhiteSpace(Album)) 
-                CargarAvatarAlbumes();
-            else
-                AvatarAlbums = await Task<List<AvatarAlbum>>.Run(() => AvatarAlbums.Where(a => a.NombreAlbum.ToUpper().Contains(Album.ToUpper())).ToList());
+            Paginacion = Paginacion.DesmarcarTodos();
+            Paginacion = Paginacion.MarcarClave(inicialAlbum);
+            AvatarAlbums = diccionarioalbumes.CargarImagenes(inicialAlbum);
         }
 
     }

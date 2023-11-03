@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Media;
 using Microsoft.WindowsAPICodePack.Shell;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
+using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Model
 {
@@ -21,6 +23,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         public string EstadoColor { get; set; } = COLOR_TEXTO_DEFAULT;
 
         public ulong? DuracionLong { get; set; } = 0;
+
+        public ImageBrush Imagen {  get; set; }
 
         public Cancion()
         {
@@ -42,6 +46,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                 return new Cancion
                 {
                     Path = path,
+                  
                     Numero = ExtraerNumero(tag),
                     Titulo = ExtraerTitulo(tag, path).Longitud(20),
                     Artista = ExtraerArtista(tag).Longitud(20),

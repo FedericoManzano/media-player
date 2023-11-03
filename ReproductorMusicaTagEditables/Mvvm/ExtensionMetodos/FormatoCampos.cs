@@ -13,5 +13,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
         {
             return origen.Length > longitud ? origen.Substring(0, longitud) + "..." : origen;
         }
+
+        public static string PrimeraLetraMayuscula(this string origen)
+        {
+            return origen.First().ToString().ToUpper();
+        }
     }
 }

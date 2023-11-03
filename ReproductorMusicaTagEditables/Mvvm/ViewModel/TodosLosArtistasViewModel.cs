@@ -12,9 +12,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
     public class TodosLosArtistasViewModel:ReproductorViewModelBase
     {
-        public List<AvatarArtista> _artistas;
+        public List<Cancion> _artistas;
 
-        public List<AvatarArtista> Avatars 
+        public List<Cancion> Avatars 
         { 
             get => _artistas;
             set
@@ -26,20 +26,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         }
 
         public TodosLosArtistasViewModel() { 
-            Avatars = new List<AvatarArtista>();
+            Avatars = new List<Cancion>();
         }
 
         public async void CargarListaDeAvataresArtistas()
         {
-            Avatars = new SortedSet<AvatarArtista>
-                (
-                    await CargarAvatares()
-                ).ToList();
+            Avatars = await CargarAvatares();
+                
 
             Avatars = Avatars.Select(a =>
             {
-                a.ImagenArtista = ArchivoImagenBase.archivoImagenFabrica(
-                    ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(a.PathImagen);
+                a.Imagen = ArchivoImagenBase.archivoImagenFabrica(
+                    ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(a.Path);
                 return a;
             }).ToList();
         }
@@ -52,7 +50,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 {
                     return Avatars.Where(a =>
                     {
-                        return a.NombreArtista.ToUpper().Contains(artista.ToUpper());
+                        return a.Artista.ToUpper().Contains(artista.ToUpper());
                     }).ToList();
                 });
             }
@@ -63,15 +61,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             
         }
 
-        private async Task<List<AvatarArtista>> CargarAvatares ()
+        private async Task<List<Cancion>> CargarAvatares ()
         {
-            return await Task.Run(() =>
+            Dictionary<string, Cancion> d = new Dictionary<string, Cancion> ();
+
+            await Task.Run(() =>
             {
-                return Irg.Canciones.Where(c=>System.IO.File.Exists(c.Path)).Select(c =>
+                foreach (var c in Irg.Canciones)
                 {
-                    return new AvatarArtista { NombreArtista = c.Artista, PathImagen = c.Path};
-                }).ToList();
+                    d[c.Artista] = c;
+                }
             });
+
+            return d.Values.ToList();
         }
 
     }

@@ -62,6 +62,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         {
            
              Irg.CargarCancionesAlbum(album);
+             
              ulong? duracion = Irg.CalcularDuracionAlbum(album);
 
              if (Irg.Presentacion.Count > 0)

@@ -70,8 +70,6 @@
                                         AnoInfo="{Binding FechaLanzamiento}"
                                         DuracionInfo="{Binding Duracion}"
                                         ColorTexto="{Binding EstadoColor}">
-
-
                         </tupla:InfoCancionTabla>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

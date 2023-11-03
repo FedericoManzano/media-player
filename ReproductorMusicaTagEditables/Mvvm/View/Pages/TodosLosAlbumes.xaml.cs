@@ -1,25 +1,13 @@
 ﻿using ReproductorMusicaTagEditables.Controls.AvatarAlbum;
+using ReproductorMusicaTagEditables.Controls.Paginador;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
 {
-    /// <summary>
-    /// Lógica de interacción para TodosLosAlbumes.xaml
-    /// </summary>
     public partial class TodosLosAlbumes : Page
     {
         public TodosLosAlbumes()
@@ -37,6 +25,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         {
             AvatarAlbumControl i = (AvatarAlbumControl)sender;
             this.NavigationService.Navigate(new InfoAlbumPage(i.NombreAlbum));
+        }
+
+        private void BotonPaginador_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            MessageBox.Show("ssss");
+            BotonPaginador i = (BotonPaginador)sender;
+            todosLosAlbumes.BuscarPorAlbum(i.Inicial);
+        }
+
+        private void BotonPaginador_DarClick(object sender, System.EventArgs e)
+        {
+            BotonPaginador i = (BotonPaginador)sender;
+            todosLosAlbumes.BuscarPorAlbum(i.Inicial);
         }
     }
 }

@@ -54,13 +54,13 @@ namespace ReproductorMusicaTagEditables.Controls.AvatarAlbum
             set => SetValue(NombreAlbumProperty, value);
         }
 
-        public static DependencyProperty AnoAlbumProperty =
-            DependencyProperty.Register("AnoAlbum", typeof(string), typeof(AvatarAlbumControl));
+        public static DependencyProperty ArtistaProperty =
+            DependencyProperty.Register("NombreArtista", typeof(string), typeof(AvatarAlbumControl));
 
-        public string AnoAlbum
+        public string NombreArtista
         {
-            get => (string)GetValue(AnoAlbumProperty);
-            set => SetValue(AnoAlbumProperty, value);
+            get => (string)GetValue(ArtistaProperty);
+            set => SetValue(ArtistaProperty, value);
         }
     }
 }

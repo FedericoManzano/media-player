@@ -44,7 +44,5 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             InfoCancionTabla i = (InfoCancionTabla)sender;
             this.NavigationService.Navigate(new InfoAlbumPage(i.AlbumInfo));  
         }
-
-        
     }
 }

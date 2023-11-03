@@ -69,6 +69,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial
 
             }
 
+            listadoLeido = listadoLeido.Where(c => File.Exists(c.Path)).ToList();
             
             
             return listadoLeido;

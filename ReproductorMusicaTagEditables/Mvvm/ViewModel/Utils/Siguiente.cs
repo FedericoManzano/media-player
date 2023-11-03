@@ -3,6 +3,7 @@ using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
 {
@@ -10,11 +11,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
     {
         public override void Ejecutar(InfoReproductor Irg, Cancion c = null)
         {
+            
             Irg.Deseleccionar();
             if (EstadosControl.RANDOM)
             {
                 Irg.CancionActual.Index = IndexRandom(Irg.CancionesFiltradas);
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+
+                if (!System.IO.File.Exists(Irg.CancionActual.Cancion.Path))
+                {
+                    MessageBox.Show($"El Archivo {Irg.CancionActual.Cancion.Path} fué eliminado en tiempo de ejecucion.");
+                    return;
+                }
+                   
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
             }
@@ -22,6 +31,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
             {
                 Irg.CancionActual.Index++;
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+                if (!System.IO.File.Exists(Irg.CancionActual.Cancion.Path))
+                {
+                    MessageBox.Show($"El Archivo {Irg.CancionActual.Cancion.Path} fué eliminado en tiempo de ejecucion.");
+                    return;
+                }
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
             }
