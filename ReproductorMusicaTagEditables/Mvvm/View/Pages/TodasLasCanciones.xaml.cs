@@ -2,6 +2,7 @@
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
@@ -43,6 +44,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         {
             InfoCancionTabla i = (InfoCancionTabla)sender;
             this.NavigationService.Navigate(new InfoAlbumPage(i.AlbumInfo));  
+        }
+
+        private void InfoCancionTabla_AgregarClick(object sender, EventArgs e)
+        {
+            MessageBox.Show(((InfoCancionTabla)sender).TituloInfo + "");
         }
     }
 }

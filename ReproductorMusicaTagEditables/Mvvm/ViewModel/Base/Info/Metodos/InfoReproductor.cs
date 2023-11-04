@@ -13,6 +13,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 
     public  partial class InfoReproductor : ViewModelBase
     {
+
         public void CargarReproductor (MediaElement me)
         {
             Reproductor = me;
@@ -25,14 +26,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
-                Preloader = true;
                 if (System.IO.Directory.Exists(folderBrowserDialog.SelectedPath))
                 {
+                    Preloader = true;
+                    EstadoCarga = false;
                     Raiz = folderBrowserDialog.SelectedPath;
                     Paths = await cargarMusica.IniciarCargaReproductor(Raiz);
                     Canciones = await cargarMusica.CargarListadoDeCancionesAsync(Paths);
                     CancionesFiltradas = new ObservableCollection<Cancion>(Canciones);
-                    if(Canciones.Count > 50)
+                    if (Canciones.Count > 50)
                     {
                         Partes = new ObservableCollection<Cancion>(Canciones.GetRange(0, 50));
                     }
@@ -40,8 +42,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                     {
                         Partes = new ObservableCollection<Cancion>(Canciones);
                     }
+
                     Preloader = false;
                     RepositorioDeCanciones.GuardarCanciones(Canciones);
+                    EstadoCarga = true;
+                    
                 }
             }
         }
@@ -66,11 +71,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                     }
                 }
                 Preloader = false;
-
             });
         }
-
-
         public void AgregarElementosAlFiltro()
         {
             int diferencia = Canciones.Count - Partes.Count;
@@ -91,7 +93,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                     Partes.Add(Canciones[i]);
                  }
             }
-            
         }
         public void Seleccionar ()
         {

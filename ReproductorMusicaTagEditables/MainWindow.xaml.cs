@@ -1,8 +1,11 @@
 ﻿
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
+using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;

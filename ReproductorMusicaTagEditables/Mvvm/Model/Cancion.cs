@@ -38,6 +38,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             EstadoColor = COLOR_TEXTO_DEFAULT;
         }
 
+        public Cancion(Cancion c)
+        {
+            Numero = c.Numero;
+            Titulo = c.Titulo;
+            Artista = c.Artista;
+            Album = c.Album;
+            Path = c.Path;
+            FechaLanzamiento = c.FechaLanzamiento;
+            Duracion = c.Duracion;
+            DuracionLong = c.DuracionLong;
+            EstadoColor = c.EstadoColor;
+        }
+
         public Cancion CrearCancion(string path)
         {
             if(System.IO.File.Exists(path))

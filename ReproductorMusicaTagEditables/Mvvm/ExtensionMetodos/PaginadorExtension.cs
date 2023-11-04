@@ -1,12 +1,10 @@
-﻿using ReproductorMusicaTagEditables.Mvvm.Model;
+﻿
+using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
 {
@@ -36,16 +34,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
 
         public static ObservableCollection<Cancion> CargarImagenes (this Dictionary<string,Dictionary<string,Cancion>> origen, string key)
         {
-            ObservableCollection<Cancion> ret = new ObservableCollection<Cancion>(
-                origen[key].Values.ToList().Select(c =>
-                {
-                    c.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path);
-                    return c;
-                }).ToList()
-            );
-
+            ObservableCollection<Cancion> ret = new ObservableCollection<Cancion> ();
+            List<Cancion> listValores = new List<Cancion> (origen[key].Values.ToList());
+            for(int i = 0; i < listValores.Count; i ++)
+            {
+                Cancion c = new Cancion( listValores[i] );
+                c.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path);
+                ret.Add(c);
+            }
             return ret;
         } 
-
     }
 }

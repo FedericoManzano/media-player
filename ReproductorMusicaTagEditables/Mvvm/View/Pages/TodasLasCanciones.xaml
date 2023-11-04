@@ -3,17 +3,13 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View.Pages"
       xmlns:tupla="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
-      
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
-      
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="TodasLasCanciones">
-
 
     <Page.Resources>
         <ResourceDictionary Source="/Mvvm/View/Pages/Theme/generalesPageTheme.xaml"/>
@@ -71,8 +67,7 @@
         </Grid>
 
         <ScrollViewer x:Name="scrollCanciones" Grid.Row="2" VerticalScrollBarVisibility="Auto"
-                      IsMouseCaptureWithinChanged="Actualiza_El_Listado_Canciones"
-                      >
+                      IsMouseCaptureWithinChanged="Actualiza_El_Listado_Canciones">
             <ItemsControl  x:Name="itemList" ItemsSource="{Binding Irg.Partes}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -86,6 +81,7 @@
                                                 PlayClick="InfoCancionTabla_PlayClick"
                                                 ArtistaClick="InfoCancionTabla_ArtistaClick"
                                                 AlbumClick="InfoCancionTabla_AlbumClick"
+                                                AgregarClick="InfoCancionTabla_AgregarClick"
                                                 NumeroInfo="{Binding Numero}"
                                                 TituloInfo="{Binding Titulo}"
                                                 ArtistaInfo="{Binding Artista}"
@@ -94,8 +90,6 @@
                                                 AnoInfo="{Binding FechaLanzamiento}"
                                                 DuracionInfo="{Binding Duracion}"
                                                 ColorTexto="{Binding EstadoColor}">
-
-                                
                         </tupla:InfoCancionTabla>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

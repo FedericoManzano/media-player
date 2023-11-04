@@ -52,8 +52,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 
         public  void CargarCancionesAlbum (string titulo)
         {
-
-            List<Cancion> l =  Canciones.Where(c => c.Album == titulo).ToList();
+            List<Cancion> l = Canciones.Where(c => c.Album == titulo).ToList();
             l.Sort(delegate (Cancion c1, Cancion c2)
             {
                 try
@@ -69,7 +68,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
             
             });
            
-            if(l.Count > 0 )
+            if(l.Count == 0 )
             {
                 MessageBox.Show($"El álbum que está intentando acceder fué eliminado en tiempo de ejecución");
             }

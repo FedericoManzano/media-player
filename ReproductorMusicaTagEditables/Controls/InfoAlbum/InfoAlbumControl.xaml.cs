@@ -15,7 +15,9 @@ namespace ReproductorMusicaTagEditables.Controls.InfoAlbum
         public InfoAlbumControl()
         {
             InitializeComponent();
-           
+            bordeCapa.Visibility = Visibility.Hidden;
+            bordePrincipal.Background = Brushes.Transparent;
+
         }
 
 

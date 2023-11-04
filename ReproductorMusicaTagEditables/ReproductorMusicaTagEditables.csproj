@@ -259,11 +259,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\ListasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\Pages\Internas\InfoAlbumPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Mvvm\View\Pages\Internas\InfoArtistaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mvvm\View\Pages\ListasPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -329,6 +337,8 @@
     <Compile Include="Mvvm\Repository\CargaArchivos\IMusica\ICargarMusicaDirectorio.cs" />
     <Compile Include="Mvvm\Repository\CargaArchivos\IMusica\ICargarMusicaDragDrop.cs" />
     <Compile Include="Mvvm\Repository\CargaInicial\RepositorioDeCanciones.cs" />
+    <Compile Include="Mvvm\Repository\Listas\ListasExtends.cs" />
+    <Compile Include="Mvvm\Repository\Listas\ListasReproduccion.cs" />
     <Compile Include="Mvvm\ViewModel\AlbumesViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Base\CancionActual.cs" />
@@ -342,6 +352,7 @@
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModel\InfoAlbumViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoArtistaViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\ListasViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\PrincipalViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\TodosLosAlbumesViewModel.cs" />
@@ -357,11 +368,17 @@
     <Compile Include="Mvvm\View\ArtistaView.xaml.cs">
       <DependentUpon>ArtistaView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mvvm\View\ListasView.xaml.cs">
+      <DependentUpon>ListasView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Mvvm\View\Pages\Internas\InfoAlbumPage.xaml.cs">
       <DependentUpon>InfoAlbumPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\Pages\Internas\InfoArtistaPage.xaml.cs">
       <DependentUpon>InfoArtistaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\Pages\ListasPage.xaml.cs">
+      <DependentUpon>ListasPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\Pages\TodasLasCanciones.xaml.cs">
       <DependentUpon>TodasLasCanciones.xaml</DependentUpon>

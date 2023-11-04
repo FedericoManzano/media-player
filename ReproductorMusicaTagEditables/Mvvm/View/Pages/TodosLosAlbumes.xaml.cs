@@ -16,10 +16,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             todosLosAlbumes.CargarAvatarAlbumes();
         }
 
-        private void txtBusqueda_TextChange(object sender, RoutedEventArgs e)
-        {
-            todosLosAlbumes.BuscarPorAlbum(txtBusqueda.Texto);
-        }
+        
 
         private void AvatarAlbumControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -28,8 +25,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         }
 
         private void BotonPaginador_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            MessageBox.Show("ssss");
+        { 
             BotonPaginador i = (BotonPaginador)sender;
             todosLosAlbumes.BuscarPorAlbum(i.Inicial);
         }

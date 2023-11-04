@@ -3,7 +3,6 @@ using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
-using System.Collections.ObjectModel;
 using System.Windows;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
@@ -20,7 +19,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                     MessageBox.Show($"El Archivo {c.Path} fué eliminado en tiempo de ejecucion.");
                     return;
                 }
-                   
+
                 if (Irg.CancionActual.Index >= 0)
                 {
                     Irg.Deseleccionar();
@@ -43,18 +42,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 }
                 else
                 {
-                    if (!System.IO.File.Exists(Irg.CancionActual.Cancion.Path))
-                    {
-                        MessageBox.Show($"El Archivo {Irg.CancionActual.Cancion.Path} fué eliminado en tiempo de ejecucion.");
-                        return;
-                    }
-                        
                     if (Irg.CancionesFiltradas.Count > 0)
                     {
                         if (Irg.CancionActual.Index < 0)
                         {
                             Irg.CancionActual.Index = 0;
                             Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
+                            if (!System.IO.File.Exists(Irg.CancionActual.Cancion.Path))
+                            {
+                                MessageBox.Show($"El Archivo {Irg.CancionActual.Cancion.Path} fué eliminado en tiempo de ejecucion.");
+                                return;
+                            }
                             Irg.Reproductor.Source = new Uri(Irg.CancionActual.Cancion.Path);
                             Irg.Reproductor.Play();
                             Irg.Seleccionar();

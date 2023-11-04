@@ -10,9 +10,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
         private static CancionActual _cancionActual;
         private static MediaElement _reproductor;
         private static string _raiz;
+        private static bool _estadoCarga = true;
 
         private static MahApps.Metro.IconPacks.PackIconFontAwesomeKind _iconoPlay;
         private static bool _preloader;
+
+        public bool EstadoCarga
+        {
+            get => _estadoCarga;
+            set { _estadoCarga = value; OnPropertyChanged(nameof(EstadoCarga)); }
+        }
 
         public string TitutloVentana
         {

@@ -37,6 +37,9 @@
         <DataTemplate DataType="{x:Type viewModel:AlbumesViewModel}">
             <view:AlbumesView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:ListasViewModel}">
+            <view:ListasView/>
+        </DataTemplate>
     </Window.Resources>
 
     <Border CornerRadius="10" 
@@ -57,7 +60,8 @@
                 <!-- Menu lateral de la aplicación -->
                 <mp:Menu CommandInicio="{Binding PrincipalCommand}"
                          CommandArtistas="{Binding ArtistasCommand}"
-                         CommandAlbumes="{Binding AlbumesCommand}"/>
+                         CommandAlbumes="{Binding AlbumesCommand}"
+                         CommandListas="{Binding ListasCommand}"/>
 
                 <!-- Main Section -->
                 <Grid Grid.Column="1">

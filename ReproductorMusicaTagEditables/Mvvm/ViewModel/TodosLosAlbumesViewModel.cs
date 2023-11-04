@@ -44,30 +44,24 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             } 
         }
 
-        public async void CargarAvatarAlbumes()
+        public  void CargarAvatarAlbumes()
         {
-            await Task.Run(() =>
+            for(int i = 0; i < Irg.Canciones.Count; i ++)
             {
-                foreach ( var c in Irg.Canciones )
+                if (diccionarioalbumes.ContainsKey(Irg.Canciones[i].Album.PrimeraLetraMayuscula()))
                 {
-                    
-                    if (diccionarioalbumes.ContainsKey(c.Album.PrimeraLetraMayuscula()))
-                    {
-                        diccionarioalbumes[c.Album.PrimeraLetraMayuscula()][c.Album] = c;
-                    }
-                    else
-                    {
-                        diccionarioalbumes[c.Album.PrimeraLetraMayuscula()] = new Dictionary<string, Cancion>
-                        {
-                            [c.Album] = c
-                        };
-                    }
-                    Paginacion[c.Album.PrimeraLetraMayuscula()] = false;
-                    
+                    diccionarioalbumes[Irg.Canciones[i].Album.PrimeraLetraMayuscula()][Irg.Canciones[i].Album] = Irg.Canciones[i];
                 }
-            });
-
-            if(diccionarioalbumes.Count> 0) 
+                else
+                {
+                    diccionarioalbumes[Irg.Canciones[i].Album.PrimeraLetraMayuscula()] = new Dictionary<string, Cancion>
+                    {
+                        [Irg.Canciones[i].Album] = Irg.Canciones[i]
+                    };
+                }
+                Paginacion[Irg.Canciones[i].Album.PrimeraLetraMayuscula()] = false;
+            }
+            if (diccionarioalbumes.Count > 0)
             {
                 Paginacion = Paginacion.OrdenarPorClave();
                 Paginacion = Paginacion.MarcarClave(Paginacion.Keys.First());
@@ -81,6 +75,5 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             Paginacion = Paginacion.MarcarClave(inicialAlbum);
             AvatarAlbums = diccionarioalbumes.CargarImagenes(inicialAlbum);
         }
-
     }
 }

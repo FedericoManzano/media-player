@@ -80,8 +80,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                      PathImagen = Irg.Presentacion[0].Path
                  };
              }
-            
-            
         }
     }
 }

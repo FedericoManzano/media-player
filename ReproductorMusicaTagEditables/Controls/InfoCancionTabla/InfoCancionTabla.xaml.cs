@@ -143,5 +143,19 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             get => (ICommand)GetValue(ComandoProperty);
             set => SetValue(ComandoProperty, value);
         }
+
+        public static readonly RoutedEvent AgregarClickEvent =
+            EventManager.RegisterRoutedEvent("AgregarClick", RoutingStrategy.Bubble, typeof(EventHandler), typeof(InfoCancionTabla));
+
+        public event EventHandler AgregarClick
+        {
+            add => AddHandler(AgregarClickEvent, value);
+            remove => RemoveHandler(AgregarClickEvent, value);
+        }
+
+        public void OnAgregarClick(object sender, RoutedEventArgs e)
+        {
+            RaiseEvent(new RoutedEventArgs(AgregarClickEvent));
+        }
     }
 }

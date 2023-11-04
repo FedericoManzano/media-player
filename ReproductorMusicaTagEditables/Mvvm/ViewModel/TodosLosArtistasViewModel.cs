@@ -1,20 +1,25 @@
-﻿using ReproductorMusicaTagEditables.Mvvm.Model;
+﻿using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
+using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Documents;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
     public class TodosLosArtistasViewModel:ReproductorViewModelBase
     {
-        public List<Cancion> _artistas;
 
-        public List<Cancion> Avatars 
+        public Dictionary<string, Dictionary<string, Cancion>> _diccionadioArtistas;
+        private Dictionary<string, bool> paginador;
+
+
+        public ObservableCollection<Cancion> _artistas;
+
+        public ObservableCollection<Cancion> Avatars 
         { 
             get => _artistas;
             set
@@ -25,55 +30,52 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             }
         }
 
+        public Dictionary<string, bool> Paginador 
+        {
+            get => paginador;
+            set { paginador = value; OnPropertyChanged(nameof(Paginador)); } 
+        }
+
         public TodosLosArtistasViewModel() { 
-            Avatars = new List<Cancion>();
+            Avatars = new ObservableCollection<Cancion>();
+            _diccionadioArtistas = new Dictionary<string, Dictionary<string, Cancion>>();
+            Paginador = new Dictionary<string, bool>();
         }
 
-        public async void CargarListaDeAvataresArtistas()
+        public  void CargarListaDeAvataresArtistas()
         {
-            Avatars = await CargarAvatares();
-                
 
-            Avatars = Avatars.Select(a =>
-            {
-                a.Imagen = ArchivoImagenBase.archivoImagenFabrica(
-                    ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(a.Path);
-                return a;
-            }).ToList();
-        }
+            List<Cancion> canciones = Irg.Canciones;
 
-        public async void BuscarPorNombre(string artista)
-        {
-            if(!string.IsNullOrWhiteSpace(artista))
+            foreach (var c in canciones)
             {
-                Avatars = await Task<List<AvatarArtista>>.Run(() =>
+                if (_diccionadioArtistas.ContainsKey(c.Artista.PrimeraLetraMayuscula()))
                 {
-                    return Avatars.Where(a =>
-                    {
-                        return a.Artista.ToUpper().Contains(artista.ToUpper());
-                    }).ToList();
-                });
-            }
-            else
-            {
-                CargarListaDeAvataresArtistas();
-            }
-            
-        }
-
-        private async Task<List<Cancion>> CargarAvatares ()
-        {
-            Dictionary<string, Cancion> d = new Dictionary<string, Cancion> ();
-
-            await Task.Run(() =>
-            {
-                foreach (var c in Irg.Canciones)
-                {
-                    d[c.Artista] = c;
+                    _diccionadioArtistas[c.Artista.PrimeraLetraMayuscula()][c.Artista] = c;
                 }
-            });
+                else
+                {
+                    _diccionadioArtistas[c.Artista.PrimeraLetraMayuscula()] = new Dictionary<string, Cancion>
+                    {
+                        [c.Artista] = c
+                    };
+                }
+                Paginador[c.Artista.PrimeraLetraMayuscula()] = false;
+            }
 
-            return d.Values.ToList();
+            if (_diccionadioArtistas.Count > 0)
+            {
+                Paginador = Paginador.OrdenarPorClave();
+                Paginador = Paginador.MarcarClave(Paginador.Keys.First());
+                Avatars = _diccionadioArtistas.CargarImagenes(Paginador.Keys.First());
+            }
+        }
+
+        public void BuscarPorNombre(string artista)
+        {
+            Paginador = Paginador.DesmarcarTodos();
+            Paginador = Paginador.MarcarClave(artista);
+            Avatars = _diccionadioArtistas.CargarImagenes(artista);
         }
 
     }

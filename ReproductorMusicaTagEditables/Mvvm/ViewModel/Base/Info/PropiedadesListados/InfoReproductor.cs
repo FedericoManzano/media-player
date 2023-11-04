@@ -16,6 +16,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
         private static ObservableCollection<Cancion> _cancionesFiltradas;
         private static ObservableCollection<Cancion> _partes;
         private static ObservableCollection<Cancion> _presentacion;
+
+        private Dictionary<string, Dictionary<string, Cancion>> _diccionarioPaginado;
+        private static Dictionary<string, bool> _paginas;
+       
         public List<string> Paths
         {
             get => _paths;
@@ -61,6 +65,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                 _presentacion = value;
                 OnPropertyChanged(nameof(Presentacion));
             }
+        }
+
+        public  Dictionary<string, bool> Paginas 
+        { 
+            get => _paginas; 
+            set 
+            {
+                _paginas = value; OnPropertyChanged(nameof(Paginas));
+            } 
         }
     }
 }

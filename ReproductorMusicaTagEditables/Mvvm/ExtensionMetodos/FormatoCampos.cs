@@ -1,9 +1,6 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.Model;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
 {
@@ -11,11 +8,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
     {
         public static string Longitud(this string origen, int longitud)
         {
+            if (string.IsNullOrEmpty(origen))
+                return origen;
             return origen.Length > longitud ? origen.Substring(0, longitud) + "..." : origen;
         }
 
         public static string PrimeraLetraMayuscula(this string origen)
         {
+            if(string.IsNullOrEmpty(origen))
+                return origen;
             return origen.First().ToString().ToUpper();
         }
     }

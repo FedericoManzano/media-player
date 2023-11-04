@@ -1,4 +1,5 @@
 ﻿using ReproductorMusicaTagEditables.Controls.AvatarArtista;
+using ReproductorMusicaTagEditables.Controls.Paginador;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
 
         private void CampoBuscadorControl_TextChange(object sender, RoutedEventArgs e)
         {
-            todosLosArtistas.BuscarPorNombre(txtBusqueda.Texto);
+            ///todosLosArtistas.BuscarPorNombre(txtBusqueda.Texto);
+        }
+
+        private void BotonPaginador_DarClick(object sender, EventArgs e)
+        {
+            BotonPaginador botonPaginador = (BotonPaginador)sender;
+            todosLosArtistas.BuscarPorNombre(botonPaginador.Inicial);
         }
     }
 }
