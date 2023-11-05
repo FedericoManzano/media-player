@@ -1,6 +1,5 @@
 ﻿using Microsoft.WindowsAPICodePack.Shell;
 using ReproductorMusicaTagEditables.Mvvm.Model;
-using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;

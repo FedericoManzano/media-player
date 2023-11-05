@@ -1,0 +1,78 @@
+﻿<Window x:Class="ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias.CrearListaReproduccion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:campo="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoTexto"
+        xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="CrearListaReproduccion" Height="275" Width="450"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
+        x:Name="crearLista">
+
+    <Border CornerRadius="10" 
+        BorderBrush="{StaticResource bordeVentana}" 
+        BorderThickness="2">
+        <Grid Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Crear Lista" 
+                       Foreground="White" 
+                       FontSize="22" 
+                       VerticalAlignment="Center" />
+
+
+            <Grid Grid.Row="1" Cursor="">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="320"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <campo:CampoTextoControl x:Name="txtTitulo"
+                                         Margin="0,0,-108,75" 
+                                         Grid.RowSpan="2"
+                                         PlaceholderTexto="Título"
+                                         PlaceholderColor="#ccc"
+                                         Fondo="#2A2E32"
+                                         ColorTexto="White"
+                                         CambiandoTexto="CampoTextoControl_CambiandoTexto"/>
+
+                <Button Grid.Column="0" Grid.Row="1" 
+                        Style="{StaticResource btnGeneral}" 
+                        Margin="0,-20,168,20" Background="Red" Cursor="Hand"
+                        Click="Button_Click_1">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Kind="PlusSolid"/>
+                        <TextBlock Text="Crear" Margin="8 0 0 0"/>
+                    </StackPanel>
+                </Button>
+                <TextBlock x:Name="mensajeEstado"  Grid.Row="2" Text="" Foreground="White"
+                           VerticalAlignment="Bottom"
+                           FontSize="16"
+                           TextWrapping="Wrap"/>
+            </Grid>
+
+            <Grid Grid.Row="2" HorizontalAlignment="Right">
+                <Button Style="{StaticResource btnGeneral}" Click="Button_Click">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Kind="DoorOpenSolid"/>
+                        <TextBlock Text="Salir" Margin="8 0 0 0"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

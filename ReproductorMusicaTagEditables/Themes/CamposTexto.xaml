@@ -5,7 +5,8 @@
         <Setter Property="Background" Value="#2A2E32"/>
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Padding" Value="16 8"/>
+        <Setter Property="Padding" Value="16 12"/>
+        <Setter Property="MinWidth" Value="4"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="0 5"/>
 

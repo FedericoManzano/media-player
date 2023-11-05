@@ -40,9 +40,9 @@
                     <DataTemplate>
                         <avatar:AvatarAlbumControl Margin="0 15 15 15" 
                                                    MouseLeftButtonUp="AvatarAlbumControl_MouseLeftButtonUp"
-                                    ImagenAlbum="{Binding Imagen}"
-                                    NombreAlbum="{Binding Album}"
-                                    NombreArtista="{Binding Artista}"/>
+                                                    ImagenAlbum="{Binding Imagen}"
+                                                    NombreAlbum="{Binding Album}"
+                                                    NombreArtista="{Binding Artista}"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

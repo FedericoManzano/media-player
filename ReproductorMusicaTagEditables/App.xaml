@@ -9,6 +9,7 @@
                 <ResourceDictionary Source="/Themes/SliderEstilos.xaml"/>
                 <ResourceDictionary Source="/Themes/BotonNavegacionTheme.xaml"/>
                 <ResourceDictionary Source="/Themes/CamposTexto.xaml"/>
+                <ResourceDictionary Source="/Controls/CampoTexto/CampoTextoTheme.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

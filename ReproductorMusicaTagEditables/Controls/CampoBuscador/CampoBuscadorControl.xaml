@@ -13,7 +13,7 @@
     </Control.Resources>
     
     
-    <Grid  Width="300" HorizontalAlignment="Left" Margin="10,0,0,0">
+    <Grid HorizontalAlignment="Left" Margin="10,0,0,0">
         <TextBlock Margin="20,22"
                Foreground="#ccc"    
                Width="45"

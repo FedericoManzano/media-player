@@ -118,6 +118,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\CampoTexto\CampoTextoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CampoTexto\CampoTextoTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\InfoAlbumPagina\InfoAlbumPaginaControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -215,6 +223,9 @@
     <Compile Include="Controls\CampoBuscador\CampoBuscadorControl.xaml.cs">
       <DependentUpon>CampoBuscadorControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CampoTexto\CampoTextoControl.xaml.cs">
+      <DependentUpon>CampoTextoControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\InfoAlbumPagina\InfoAlbumPaginaControl.xaml.cs">
       <DependentUpon>InfoAlbumPaginaControl.xaml</DependentUpon>
     </Compile>
@@ -251,6 +262,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Mvvm\VentanasUtilitarias\CrearListaReproduccion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\AlbumesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -339,6 +354,9 @@
     <Compile Include="Mvvm\Repository\CargaInicial\RepositorioDeCanciones.cs" />
     <Compile Include="Mvvm\Repository\Listas\ListasExtends.cs" />
     <Compile Include="Mvvm\Repository\Listas\ListasReproduccion.cs" />
+    <Compile Include="Mvvm\VentanasUtilitarias\CrearListaReproduccion.xaml.cs">
+      <DependentUpon>CrearListaReproduccion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Mvvm\ViewModel\AlbumesViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Base\CancionActual.cs" />

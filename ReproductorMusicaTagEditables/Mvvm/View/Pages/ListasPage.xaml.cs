@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
     /// </summary>
     public partial class ListasPage : Page
     {
+        CrearListaReproduccion crearListaReproduccion = new CrearListaReproduccion();
         public ListasPage()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            crearListaReproduccion.ShowDialog();
         }
     }
 }

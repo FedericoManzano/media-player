@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 {
@@ -30,12 +31,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
         public static bool ExisteLista(string nombreLista)
         {
-            if(string.IsNullOrEmpty(nombreLista)) { return false; }
+            if (!Directory.Exists(PATH_LISTAS))
+                CrearDirectorio();
+            if (string.IsNullOrEmpty(nombreLista)) { return false; }
+          
             return File.Exists(nombreLista.Ruta());
         }
 
         public static bool Crear(string nombreLista)
         { 
+
             if (!Directory.Exists(PATH_LISTAS))
                 CrearDirectorio();
             if(string.IsNullOrEmpty(nombreLista)) return false;
