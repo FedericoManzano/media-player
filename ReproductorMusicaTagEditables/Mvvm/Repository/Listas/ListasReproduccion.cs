@@ -113,5 +113,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             }
             return true;
         }
+
+
+        public static List<Cancion> DameListadoCanciones (string nombreLista)
+        {
+            if (string.IsNullOrEmpty(nombreLista)) return new List<Cancion>();
+            if (!ExisteLista(nombreLista)) return new List<Cancion>();
+
+            List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta())) ?? new List<Cancion>();
+            return listado;
+        }
     }
 }

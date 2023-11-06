@@ -25,6 +25,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         public ListasPage()
         {
             InitializeComponent();
+            listasReproduccion.CargarListasReproduccion();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

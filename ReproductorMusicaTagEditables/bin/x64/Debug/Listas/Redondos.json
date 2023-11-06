@@ -1,0 +1,54 @@
+[
+  {
+    "Numero": "",
+    "Titulo": "La Oveja Negra",
+    "Artista": "BERSUIT",
+    "Album": "ARGENTINIDAD AL PALO",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\La Argentinidad\\La Oveja Negra.mp3",
+    "Duracion": "04:19",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2595360000,
+    "Imagen": null
+  },
+  {
+    "Numero": "9",
+    "Titulo": "La Pregunta",
+    "Artista": "BABASONICOS",
+    "Album": "GRANDES EXITOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Babasonicos\\Compilado\\La Pregunta.mp3",
+    "Duracion": "05:03",
+    "FechaLanzamiento": "2022",
+    "EstadoColor": "White",
+    "DuracionLong": 3038824489,
+    "Imagen": null
+  },
+  {
+    "Numero": "8",
+    "Titulo": "La Lanza",
+    "Artista": "BABASONICOS",
+    "Album": "GRANDES EXITOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Babasonicos\\Compilado\\La Lanza.mp3",
+    "Duracion": "03:17",
+    "FechaLanzamiento": "2022",
+    "EstadoColor": "White",
+    "DuracionLong": 1971722448,
+    "Imagen": null
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Boogie Man",
+    "Artista": "ACDC",
+    "Album": "BALLBREAKER",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Ballbreaker\\04 Boogie Man.mp3",
+    "Duracion": "04:07",
+    "FechaLanzamiento": "1995",
+    "EstadoColor": "White",
+    "DuracionLong": 2470138775,
+    "Imagen": null
+  }
+]

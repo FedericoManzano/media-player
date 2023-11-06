@@ -5,8 +5,43 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.ListaAvatar"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             x:Name="visorListas">
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Border x:Name="bordeDefecto" 
+                Grid.ColumnSpan="2" 
+                Grid.RowSpan="2"
+                CornerRadius="10"
+                Visibility="{Binding ElementName=visorListas, Path=ImagenDefectoVisible}">
+            <Border.Background>
+                <ImageBrush ImageSource="/Images/albumDesconocido.png"/>
+            </Border.Background>
+        </Border>
+
+        <Border x:Name="bordeImagen1" Grid.Column="0" Grid.Row="0" CornerRadius="10 0 0 0"
+                
+                Background="{Binding ElementName=visorListas, Path=ImagenUno}">
+        </Border>
+        <Border x:Name="bordeImagen2" Grid.Column="1" Grid.Row="0" CornerRadius="0 10 0 0"
+                
+                Background="{Binding ElementName=visorListas, Path=ImagenDos}">
+        </Border>
+        <Border x:Name="bordeImagen3" Grid.Column="0" Grid.Row="1" CornerRadius="0 0 0 10"
+               
+                Background="{Binding ElementName=visorListas, Path=ImagenTres}">
+        </Border>
+
+        <Border x:Name="bordeImagen4" Grid.Column="1" Grid.Row="1" CornerRadius="0 0 10 0"
+                Background="{Binding ElementName=visorListas, Path=ImagenCuatro}">
+        </Border>
     </Grid>
 </UserControl>

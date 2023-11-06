@@ -186,6 +186,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\ListaAvatar\ListaAvatarControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\ManejadorVentana\ManejadorVentana.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -260,6 +264,9 @@
     </Compile>
     <Compile Include="Controls\InfoCancionTabla\InfoCancionTabla.xaml.cs">
       <DependentUpon>InfoCancionTabla.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ListaAvatar\ListaAvatarControl.xaml.cs">
+      <DependentUpon>ListaAvatarControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ManejadorVentana\ManejadorVentana.xaml.cs">
       <DependentUpon>ManejadorVentana.xaml</DependentUpon>
@@ -356,8 +363,9 @@
     <Compile Include="Mvvm\ExtensionMetodos\Seleccionador.cs" />
     <Compile Include="Mvvm\Model\Album.cs" />
     <Compile Include="Mvvm\Model\Artista.cs" />
+    <Compile Include="Mvvm\Model\AvatarLista.cs" />
     <Compile Include="Mvvm\Model\Cancion.cs" />
-    <Compile Include="Mvvm\Model\Imagen.cs" />
+    <Compile Include="Mvvm\Model\ListaRep.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\ArchivoImagenBase.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\IArchivoimagen\IArchivoImagen.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\ImagenDefault.cs" />

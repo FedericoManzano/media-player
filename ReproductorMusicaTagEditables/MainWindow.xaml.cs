@@ -39,6 +39,11 @@ namespace ReproductorMusicaTagEditables
                 Interval = TimeSpan.FromSeconds(0.945)
             };
             timer.Tick += new EventHandler(Time_Track);
+
+            ListasReproduccion.AgregarCancion("Redondos", reproViewModel.Irg.Canciones[200]);
+            ListasReproduccion.AgregarCancion("Redondos", reproViewModel.Irg.Canciones[101]);
+            ListasReproduccion.AgregarCancion("Redondos", reproViewModel.Irg.Canciones[100]);
+            ListasReproduccion.AgregarCancion("Redondos", reproViewModel.Irg.Canciones[3]);
         }
 
 

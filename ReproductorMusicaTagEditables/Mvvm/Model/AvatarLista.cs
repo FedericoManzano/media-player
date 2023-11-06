@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Model
 {
-    internal class ListaReproduccion
+    internal class AvatarLista
     {
     }
 }
