@@ -43,6 +43,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                         Partes = new ObservableCollection<Cancion>(Canciones);
                     }
 
+                    if (Canciones.Count > 0)
+                    {
+                        IslistadoVisible = System.Windows.Visibility.Visible;
+                        IsMensajeVisible = System.Windows.Visibility.Collapsed;
+                    }
+
                     Preloader = false;
                     RepositorioDeCanciones.GuardarCanciones(Canciones);
                     EstadoCarga = true;
@@ -68,6 +74,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                     else
                     {
                         Partes = new ObservableCollection<Cancion>(Canciones);
+                    }
+                    if(Canciones.Count > 0)
+                    {
+                        IslistadoVisible = System.Windows.Visibility.Visible;
+                        IsMensajeVisible = System.Windows.Visibility.Collapsed;
                     }
                 }
                 Preloader = false;

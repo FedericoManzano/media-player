@@ -111,5 +111,15 @@ namespace ReproductorMusicaTagEditables.Controls.CampoTexto
         {
             txtBox.Focus();
         }
+
+        private void txtBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtPlaceholder.Visibility = Visibility.Collapsed;
+        }
+
+        private void txtBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            txtPlaceholder.Visibility = Visibility.Visible;
+        }
     }
 }

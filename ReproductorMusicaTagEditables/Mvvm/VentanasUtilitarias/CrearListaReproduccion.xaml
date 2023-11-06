@@ -32,7 +32,7 @@
                        VerticalAlignment="Center" />
 
 
-            <Grid Grid.Row="1" Cursor="">
+            <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="320"/>
                 </Grid.ColumnDefinitions>
@@ -52,14 +52,18 @@
 
                 <Button Grid.Column="0" Grid.Row="1" 
                         Style="{StaticResource btnGeneral}" 
-                        Margin="0,-20,168,20" Background="Red" Cursor="Hand"
+                        Margin="0,-20,168,30" 
+                        Background="Red"
                         Click="Button_Click_1">
                     <StackPanel Orientation="Horizontal">
                         <fa:PackIconFontAwesome Kind="PlusSolid"/>
-                        <TextBlock Text="Crear" Margin="8 0 0 0"/>
+                        <TextBlock Text="Crear" 
+                                   Margin="8 0 0 0"/>
                     </StackPanel>
                 </Button>
-                <TextBlock x:Name="mensajeEstado"  Grid.Row="2" Text="" Foreground="White"
+                <TextBlock x:Name="mensajeEstado"  
+                           Grid.Row="2" 
+                           Foreground="White"
                            VerticalAlignment="Bottom"
                            FontSize="16"
                            TextWrapping="Wrap"/>

@@ -63,11 +63,21 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Column="0" Text="Todas las canciones" Foreground="White" FontSize="25" Margin="0 -8 0 0 "/>
-            
         </Grid>
 
+
+        <TextBlock x:Name="txtSinCanciones" 
+                   Text="No hay canciones cargadas" 
+                   Foreground="#ccc" 
+                   Grid.Row="2"
+                   FontSize="22"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Visibility="{Binding Irg.IsMensajeVisible}"/>
+
         <ScrollViewer x:Name="scrollCanciones" Grid.Row="2" VerticalScrollBarVisibility="Auto"
-                      IsMouseCaptureWithinChanged="Actualiza_El_Listado_Canciones">
+                      IsMouseCaptureWithinChanged="Actualiza_El_Listado_Canciones"
+                      Visibility="{Binding Irg.IslistadoVisible}">
             <ItemsControl  x:Name="itemList" ItemsSource="{Binding Irg.Partes}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>

@@ -1,28 +1,25 @@
 ﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.CampoTexto.CampoTextoControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoTexto"
-             xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
              x:Name="campoTexto">
     <UserControl.Resources>
-        <BooleanToVisibilityConverter x:Key="boolAVis"></BooleanToVisibilityConverter>
+        <ResourceDictionary Source="/Controls/CampoTexto/CampoTextoTheme.xaml"/>
     </UserControl.Resources>
     <Grid>
         <TextBlock x:Name="txtPlaceholder" 
                    Text="{Binding ElementName=campoTexto, Path=PlaceholderTexto}" 
                    Style="{StaticResource placeholder}"
-                   Foreground="{Binding ElementName=campoTexto, Path=PlaceholderColor}"
-                   Visibility="{Binding ElementName=txtBox, Path=Text.IsEmpty, Converter={StaticResource boolAVis}}"/>
-        
+                   Foreground="{Binding ElementName=campoTexto, Path=PlaceholderColor}"/>
+      
         <TextBox x:Name="txtBox" 
                  Style="{StaticResource campoTextoBox}"
                  Text="{Binding ElementName=campoTexto, Path=Texto}"
                  Background="{Binding ElementName=campoTexto,Path=Fondo}"
                  BorderBrush="{Binding ElementName=campoTexto, Path=ColorBorde}"
                  Foreground="{Binding ElementName=campoTexto, Path=ColorTexto}"
-                 FontSize="16"
+                 FontSize="15"
+                 GotFocus="txtBox_GotFocus"
+                 LostFocus="txtBox_LostFocus"
                  TextChanged="OnTextChanged"/>
     </Grid>
 </UserControl>

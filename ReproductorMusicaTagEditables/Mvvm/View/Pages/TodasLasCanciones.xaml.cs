@@ -50,5 +50,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         {
             MessageBox.Show(((InfoCancionTabla)sender).TituloInfo + "");
         }
+
+        
     }
 }

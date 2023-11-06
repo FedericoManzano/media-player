@@ -9,7 +9,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     public class ListasViewModel:ReproductorViewModel
     {
 
-
+     //   private Dictionary<string, Lis> _
 
     }
 }

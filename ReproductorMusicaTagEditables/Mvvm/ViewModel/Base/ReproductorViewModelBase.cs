@@ -4,6 +4,7 @@ using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -14,6 +15,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
     {
         protected readonly static InfoReproductor irg = new InfoReproductor();
         private static double _scrollVertical = 0;
+
+        
+
         public  InfoReproductor Irg
         {
             get => irg;  
@@ -30,6 +34,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         public ICommand PlayCommand { get; }
         public ICommand SiguienteCommand { get; }
         public ICommand AnteriorCommand { get; }
+       
 
         public ReproductorViewModelBase ()
         {
@@ -39,6 +44,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             PlayCommand = new RelayCommand(PlayAction);
             if(irg.Canciones.Count == 0)
                 Irg.CargaDesdeElRepositorioCanciones();
+            
+
         }
 
         public bool CanAnteriorAction(object arg)
@@ -81,6 +88,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         private void CargarMusicaAction(object obj)
         {
             Irg.CargarMusicaSeleccion();
+            
         }
 
         public void AgregarElementosAlFiltro()

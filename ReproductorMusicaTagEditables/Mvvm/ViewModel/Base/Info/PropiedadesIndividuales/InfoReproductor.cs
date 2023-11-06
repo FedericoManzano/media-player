@@ -1,5 +1,6 @@
 ﻿using MahApps.Metro.IconPacks;
 using Reproductor_Musica.Core;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
@@ -14,6 +15,22 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 
         private static MahApps.Metro.IconPacks.PackIconFontAwesomeKind _iconoPlay;
         private static bool _preloader;
+
+
+        private Visibility _isMensajeVisible = Visibility.Visible;
+        private Visibility _islistadoVisible = Visibility.Collapsed;
+
+
+        public Visibility IsMensajeVisible
+        {
+            get => _isMensajeVisible;
+            set { _isMensajeVisible = value; OnPropertyChanged(nameof(IsMensajeVisible)); }
+        }
+        public Visibility IslistadoVisible
+        {
+            get => _islistadoVisible;
+            set { _islistadoVisible = value; OnPropertyChanged(nameof(IslistadoVisible)); }
+        }
 
         public bool EstadoCarga
         {
