@@ -1,5 +1,6 @@
 ﻿using ReproductorMusicaTagEditables.Controls.Paginador;
 using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
+using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,6 +40,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         {
             BotonPaginador i = (BotonPaginador)sender;
             listasReproduccion.ActualizarListas(i.Inicial);
+        }
+
+        private void ListaAvatarControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            this.NavigationService.Navigate(new InfoListasPage());
         }
     }
 }

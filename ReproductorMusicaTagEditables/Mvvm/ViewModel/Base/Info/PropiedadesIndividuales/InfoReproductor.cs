@@ -7,6 +7,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 {
     public partial class InfoReproductor:ViewModelBase
     {
+
+        public static readonly int PRINCIPAL = 0;
+        public static readonly int ARTISTAS = 1;
+        public static readonly int ALBUMES = 2;
+        public static readonly int GENERO = 3;
+        public static readonly int LISTAS = 4;
+
+        public static int PAGINA_ACTUAL = PRINCIPAL;
+
+
         private static string _titutloVentana;
         private static CancionActual _cancionActual;
         private static MediaElement _reproductor;

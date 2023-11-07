@@ -4,6 +4,7 @@ using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
 
@@ -11,15 +12,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
 {
     public partial class AgregarCancionesListas : Window
     {
-        private ReproductorViewModelBase ReproductorViewModelBase;
+        private ReproductorViewModelBase reproductorViewModelBase;
         private List<Cancion> listadoCancionesAgregar = new List<Cancion>();
-
+        private bool fallos = false;
 
 
         public AgregarCancionesListas(ReproductorViewModelBase reproductorViewModel)
         {
             InitializeComponent();
-            this.ReproductorViewModelBase = reproductorViewModel;
+            this.reproductorViewModelBase = reproductorViewModel;
         }
 
         public bool AgregarCancion(Cancion c)
@@ -53,26 +54,41 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
 
                 listadoCancionesAgregar.ForEach(c =>
                 {
-                    ReproductorViewModelBase.Irg.Canciones.ForEach(cl =>
+
+                    Cancion cl = BuscarCancion(c);
+                    if (cl.Titulo == c.Titulo)
                     {
-                        if (cl.Titulo == c.Titulo)
+                        if (lstListasRepro.Items.Count > 0)
                         {
-                            if (lstListasRepro.Items.Count > 0)
+                            if (lstListasRepro.SelectedIndex < 0 || !ListasReproduccion.AgregarCancion(lstListasRepro.Items[lstListasRepro.SelectedIndex].ToString(), cl))
                             {
-                                if(ListasReproduccion.AgregarCancion(lstListasRepro.Items[lstListasRepro.SelectedIndex].ToString(), cl))
-                                {
-                                    MostrarMensajeInfo($"La canción/s fueron agregadas a {lstListasRepro.Items[lstListasRepro.SelectedIndex]} con exito.");
-                                    Hide();
-                                } else
-                                {
-                                    MostrarMensajeError($"La cación/s que intenta agregar ya se encuentran en la lista seleccionada. ");
-                                }
+                                fallos = true;
                             }
                         }
-                    });
+                    }
                 });
             }
+            if(fallos)
+            {
+                MostrarMensajeError("Algunas o todas las pistas no pudieron agregarse a la lista seleccionada. Motivo: Probablemente ya se encuentren en la lista.");
+            }
+            else
+            {
+                MostrarMensajeInfo("Las Canciones seleccionadas Fueron agregadas a la lista seleccionada.");
+                
+            }
+
+            Hide();
+            fallos = false;
         }
+
+
+        private Cancion BuscarCancion(Cancion cancion)
+        {
+            List<Cancion> li = reproductorViewModelBase.Irg.Canciones.Where(cl => cl.Titulo == cancion.Titulo).ToList();
+            return li.Count > 0 ? li[0]:null;
+        }
+
 
         public void MostrarMensajeInfo(string mje)
         {

@@ -99,7 +99,8 @@
                                                 GeneroInfo="{Binding Genero}"
                                                 AnoInfo="{Binding FechaLanzamiento}"
                                                 DuracionInfo="{Binding Duracion}"
-                                                ColorTexto="{Binding EstadoColor}">
+                                                ColorTexto="{Binding EstadoColor}"
+                                                Habilitado="False">
                         </tupla:InfoCancionTabla>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

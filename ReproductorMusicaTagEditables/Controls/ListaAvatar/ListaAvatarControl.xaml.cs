@@ -1,21 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
+using System.Windows.Forms;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace ReproductorMusicaTagEditables.Controls.ListaAvatar
 {
-    public partial class ListaAvatarControl : UserControl
+    public partial class ListaAvatarControl :System.Windows.Controls.UserControl
     {
       
         public ListaAvatarControl()
@@ -82,5 +73,23 @@ namespace ReproductorMusicaTagEditables.Controls.ListaAvatar
             set => SetValue(CantidadProperty, value);
         }
 
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            var res =System.Windows.Forms.MessageBox.Show($"Esta seguro que desea eliminar la lista: {Nombre}", "Eliminado de lista", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if(res == DialogResult.Yes)
+            {
+                ListasReproduccion.Borrar(Nombre);
+            }
+        }
+
+        private void Border_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            bordePrincipal.Background = Brushes.Red;
+        }
+
+        private void Border_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            bordePrincipal.Background = Brushes.Transparent;
+        }
     }
 }

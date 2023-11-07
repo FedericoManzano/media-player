@@ -317,6 +317,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\Pages\Internas\InfoListasPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\Pages\ListasPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -428,6 +432,9 @@
     <Compile Include="Mvvm\View\Pages\Internas\InfoArtistaPage.xaml.cs">
       <DependentUpon>InfoArtistaPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mvvm\View\Pages\Internas\InfoListasPage.xaml.cs">
+      <DependentUpon>InfoListasPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Mvvm\View\Pages\ListasPage.xaml.cs">
       <DependentUpon>ListasPage.xaml</DependentUpon>
     </Compile>
@@ -490,6 +497,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\laRenga.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\listaDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\albumDefault.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

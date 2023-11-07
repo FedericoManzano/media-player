@@ -73,8 +73,9 @@
                             ImagenUno="{Binding Imagen1}"
                             ImagenDos="{Binding Imagen2}"
                             ImagenTres="{Binding Imagen3}"
-                            ImagenCuatro="{Binding Imagen4}"/>
-
+                            ImagenCuatro="{Binding Imagen4}"
+                            MouseLeftButtonUp="ListaAvatarControl_MouseLeftButtonUp"/>
+                            
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

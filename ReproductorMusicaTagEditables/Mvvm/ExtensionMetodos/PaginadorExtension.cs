@@ -29,7 +29,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             foreach (string ln in _diccionario[letra])
             {
                 List<Cancion> lista = ListasReproduccion.DameListadoCanciones(ln).Where(cancion => System.IO.File.Exists(cancion.Path)).ToList();
-                if(lista != null && lista.Count >= 4)
+                if (lista != null && lista.Count >= 4)
                 {
                     ListaRep r = new ListaRep
                     {
@@ -42,41 +42,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
                         Imagen4 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[3].Path),
                     };
                     ret.Add(r);
-                } else if(lista != null && lista.Count == 3)
-                {
-                    ListaRep r = new ListaRep
-                    {
-                        Nombre = ln,
-                        CantidadCanciones = lista.Count + " Canciones",
-                        Duracion = "",
-                        Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[0].Path),
-                        Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[1].Path),
-                        Imagen3 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[2].Path),
-                       
-                    };
-                    ret.Add(r);
-                } else if(lista != null && lista.Count == 2)
-                {
-                    ListaRep r = new ListaRep
-                    {
-                        Nombre = ln,
-                        CantidadCanciones = lista.Count + " Canciones",
-                        Duracion = "",
-                        Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[0].Path),
-                        Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[1].Path),
-                    };
-                    ret.Add(r);
-                } else if(lista != null && lista.Count == 1)
-                {
-                    ListaRep r = new ListaRep
-                    {
-                        Nombre = ln,
-                        CantidadCanciones = lista.Count + " Canciones",
-                        Duracion = "",
-                        Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[0].Path),
-                    };
-                    ret.Add(r);
-                } else if(lista != null && lista.Count == 0)
+                }
+                else
                 {
                     ListaRep r = new ListaRep
                     {

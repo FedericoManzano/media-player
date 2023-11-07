@@ -74,6 +74,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             return nombresListas;
         }
 
+
+        public bool EliminarLista(string nombreLista)
+        {
+            File.Delete(nombreLista.Ruta());
+            return true;
+        }
+
         public static bool AgregarCancion(string nombreLista, Cancion c)
         {  
             if(string.IsNullOrEmpty(nombreLista)) return false;
@@ -90,6 +97,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             
             
             listado.Add(c);
+       
             string ser = JsonConvert.SerializeObject(listado, Formatting.Indented);
             using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
             {

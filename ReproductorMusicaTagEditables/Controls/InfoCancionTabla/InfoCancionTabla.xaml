@@ -97,11 +97,19 @@
                         <fa:PackIconFontAwesome Kind="PlaySolid" Foreground="Red" FontSize="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Ageregar lista" Click="MenuItem_Click">
+                <MenuItem Header="Ageregar a lista" Click="MenuItem_Click">
                     <MenuItem.Icon>
                         <fa:PackIconFontAwesome Kind="ListSolid" 
                                                 FontSize="12" 
                                                 Foreground="DarkMagenta"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Click="MenuItem_Click_1" Header="Remover de lista"
+                          IsEnabled="{Binding Parent.PlacementTarget.Tag.Habilitado, RelativeSource={RelativeSource Self}}">
+                    <MenuItem.Icon>
+                        <fa:PackIconFontAwesome Kind="WindowCloseSolid" 
+                                FontSize="12" 
+                                Foreground="Black"/>
                     </MenuItem.Icon>
                 </MenuItem>
             </ContextMenu>

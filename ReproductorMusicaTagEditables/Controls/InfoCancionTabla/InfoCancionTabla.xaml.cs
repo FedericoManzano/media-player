@@ -158,6 +158,17 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             RaiseEvent(new RoutedEventArgs(AgregarClickEvent));
         }
 
+
+        public static DependencyProperty EncendidoProperty =
+            DependencyProperty.Register("Habilitado", typeof(bool), typeof(InfoCancionTabla), new PropertyMetadata(false));
+
+
+        public bool Habilitado
+        {
+            get => (bool)GetValue(EncendidoProperty);
+            set=> SetValue(EncendidoProperty, value);
+        }
+
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
            if( MainWindow.agregarCancionesListas.AgregarCancion(new Mvvm.Model.Cancion()
@@ -171,6 +182,11 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
                 Genero = GeneroInfo
             }))
                 MainWindow.agregarCancionesListas.Show();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Toca");
         }
     }
 }

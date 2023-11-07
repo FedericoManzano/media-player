@@ -3,53 +3,69 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              x:Name="visorListas">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="75"/>
-            <ColumnDefinition Width="75"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="90"/>
-            <RowDefinition Height="90"/>
-            <RowDefinition Height="60"/>
-        </Grid.RowDefinitions>
 
-        <Border x:Name="bordeDefecto" 
-                Grid.ColumnSpan="2" 
-                Grid.RowSpan="2"
-                CornerRadius="10">
-            <Border.Background>
-                <ImageBrush ImageSource="/Images/albumDesconocido.png"/>
-            </Border.Background>
-        </Border>
+    <Border x:Name="bordePrincipal" Cursor="Hand" Padding="5" CornerRadius="10"
+            MouseEnter="Border_MouseEnter"
+            MouseLeave="Border_MouseLeave">
+        <Grid Cursor="Hand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="75"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
 
-        <Border x:Name="bordeImagen1" Grid.Column="0" Grid.Row="0" CornerRadius="10 0 0 0"
-                
-                Background="{Binding ElementName=visorListas, Path=ImagenUno}">
-        </Border>
-        <Border x:Name="bordeImagen2" Grid.Column="1" Grid.Row="0" CornerRadius="0 10 0 0"
-                
-                Background="{Binding ElementName=visorListas, Path=ImagenDos}">
-        </Border>
-        <Border x:Name="bordeImagen3" Grid.Column="0" Grid.Row="1" CornerRadius="0 0 0 10"
-                Background="{Binding ElementName=visorListas, Path=ImagenTres}">
-        </Border>
-
-        <Border x:Name="bordeImagen4" Grid.Column="1" Grid.Row="1" CornerRadius="0 0 10 0"
-                Background="{Binding ElementName=visorListas, Path=ImagenCuatro}">
-        </Border>
-        <StackPanel Grid.Row="2" 
+            <Border x:Name="bordeDefecto" 
                     Grid.ColumnSpan="2" 
-                    Margin="0 5"
-                    HorizontalAlignment="Left">
-            <TextBlock Text="{Binding ElementName=visorListas, Path=Nombre}" 
-                       Foreground="White" 
-                       FontSize="18"/>
-            <TextBlock Text="{Binding ElementName=visorListas, Path=Cantidad}" 
-                       Foreground="#ccc" Margin="0 5"
-                       FontSize="11"/>
-        </StackPanel>
-    </Grid>
+                    Grid.RowSpan="2"
+                    CornerRadius="10">
+                <Border.Background>
+                    <ImageBrush ImageSource="/Images/albumDefault.png"/>
+                </Border.Background>
+            </Border>
+
+            <Border x:Name="bordeImagen1" Grid.Column="0" Grid.Row="0" CornerRadius="10 0 0 0"
+            
+            Background="{Binding ElementName=visorListas, Path=ImagenUno}">
+            </Border>
+            <Border x:Name="bordeImagen2" Grid.Column="1" Grid.Row="0" CornerRadius="0 10 0 0"
+            
+            Background="{Binding ElementName=visorListas, Path=ImagenDos}">
+            </Border>
+            <Border x:Name="bordeImagen3" Grid.Column="0" Grid.Row="1" CornerRadius="0 0 0 10"
+            Background="{Binding ElementName=visorListas, Path=ImagenTres}">
+            </Border>
+
+            <Border x:Name="bordeImagen4" Grid.Column="1" Grid.Row="1" CornerRadius="0 0 10 0"
+            Background="{Binding ElementName=visorListas, Path=ImagenCuatro}">
+            </Border>
+            <StackPanel Grid.Row="2" 
+                Grid.ColumnSpan="2" 
+                Margin="0 5"
+                HorizontalAlignment="Left">
+                <TextBlock Text="{Binding ElementName=visorListas, Path=Nombre}" 
+                   Foreground="White" 
+                   FontSize="18"/>
+                <TextBlock Text="{Binding ElementName=visorListas, Path=Cantidad}" 
+                   Foreground="#ccc" Margin="0 5"
+                   FontSize="11"/>
+            </StackPanel>
+            <Grid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Eliminar lista" Click="MenuItem_Click">
+                        <MenuItem.Icon>
+                            <fa:PackIconFontAwesome Kind="WindowCloseSolid"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </Grid.ContextMenu>
+        </Grid>
+    </Border>
+    
 </UserControl>
