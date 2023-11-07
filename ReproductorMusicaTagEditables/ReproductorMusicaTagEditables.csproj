@@ -289,6 +289,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Mvvm\VentanasUtilitarias\AgregarCancionesListas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\VentanasUtilitarias\CrearListaReproduccion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -380,6 +384,9 @@
     <Compile Include="Mvvm\Repository\CargaInicial\RepositorioDeCanciones.cs" />
     <Compile Include="Mvvm\Repository\Listas\ListasExtends.cs" />
     <Compile Include="Mvvm\Repository\Listas\ListasReproduccion.cs" />
+    <Compile Include="Mvvm\VentanasUtilitarias\AgregarCancionesListas.xaml.cs">
+      <DependentUpon>AgregarCancionesListas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Mvvm\VentanasUtilitarias\CrearListaReproduccion.xaml.cs">
       <DependentUpon>CrearListaReproduccion.xaml</DependentUpon>
     </Compile>

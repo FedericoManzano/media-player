@@ -109,3 +109,7 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\CampoTexto\CampoTextoTheme.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\CampoTexto\CampoTextoControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\CampoTexto\CampoTextoControl.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\ListaAvatar\ListaAvatarControl.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Controls\ListaAvatar\ListaAvatarControl.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Mvvm\VentanasUtilitarias\AgregarCancionesListas.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Debug\Mvvm\VentanasUtilitarias\AgregarCancionesListas.baml

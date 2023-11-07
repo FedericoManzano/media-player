@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace ReproductorMusicaTagEditables.Controls.ListaAvatar
 {
-    /// <summary>
-    /// Lógica de interacción para ListaAvatarControl.xaml
-    /// </summary>
     public partial class ListaAvatarControl : UserControl
     {
       
@@ -25,28 +22,6 @@ namespace ReproductorMusicaTagEditables.Controls.ListaAvatar
         {
             InitializeComponent();
         }
-
-        #region Visibilidad
-        public static DependencyProperty ImagenDefectoVisibleProperty =
-            DependencyProperty.Register("ImagenDefectoVisible", typeof(Visibility), typeof(ListaAvatarControl), new PropertyMetadata(Visibility.Visible));
-
-        public Visibility ImagenDefectoVisible
-        {
-            get => (Visibility) GetValue(ImagenDefectoVisibleProperty);
-            set => SetValue(ImagenDefectoVisibleProperty, value);
-        }
-
-
-        public static DependencyProperty ImagenesVisibleProperty =
-            DependencyProperty.Register("ImagenesVisible", typeof(Visibility), typeof(ListaAvatarControl), new PropertyMetadata(Visibility.Collapsed));
-
-        public Visibility ImagenesVisible
-        {
-            get => (Visibility)GetValue(ImagenesVisibleProperty);
-            set => SetValue(ImagenesVisibleProperty, value);
-        }
-
-        #endregion
 
 
         public static DependencyProperty ImagenUnoProperty =
@@ -87,5 +62,25 @@ namespace ReproductorMusicaTagEditables.Controls.ListaAvatar
             get => (ImageBrush)GetValue(ImagenCuatroProperty);
             set => SetValue(ImagenCuatroProperty, value);
         }
+
+        public static DependencyProperty NombreProperty =
+            DependencyProperty.Register("Nombre", typeof(string), typeof(ListaAvatarControl), new PropertyMetadata(string.Empty) );
+        
+        public string Nombre
+        {
+            get => GetValue(NombreProperty) as string;
+            set => SetValue(NombreProperty, value); 
+        }
+
+
+        public static DependencyProperty CantidadProperty =
+            DependencyProperty.Register("Cantidad", typeof(string), typeof(ListaAvatarControl), new PropertyMetadata(string.Empty));
+
+        public string Cantidad
+        {
+            get => GetValue(CantidadProperty) as string;
+            set => SetValue(CantidadProperty, value);
+        }
+
     }
 }

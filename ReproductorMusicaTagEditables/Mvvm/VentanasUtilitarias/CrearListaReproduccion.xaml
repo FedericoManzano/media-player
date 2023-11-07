@@ -16,67 +16,72 @@
     <Border CornerRadius="10" 
         BorderBrush="{StaticResource bordeVentana}" 
         BorderThickness="2">
-        <Grid Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
 
-            <TextBlock Text="Crear Lista" 
-                       Foreground="White" 
-                       FontSize="22" 
-                       VerticalAlignment="Center" />
-
-
-            <Grid Grid.Row="1">
+        <Border CornerRadius="10" 
+            Background="{StaticResource gradientePrincipal}">
+            <Grid Margin="10">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="320"/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
                     <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
 
-                <campo:CampoTextoControl x:Name="txtTitulo"
-                                         Margin="0,0,-108,75" 
-                                         Grid.RowSpan="2"
-                                         PlaceholderTexto="Título"
-                                         PlaceholderColor="#ccc"
-                                         Fondo="#2A2E32"
-                                         ColorTexto="White"
-                                         CambiandoTexto="CampoTextoControl_CambiandoTexto"/>
+                <TextBlock Text="Crear Lista" 
+               Foreground="White" 
+               FontSize="22" 
+               VerticalAlignment="Center" />
 
-                <Button Grid.Column="0" Grid.Row="1" 
-                        Style="{StaticResource btnGeneral}" 
-                        Margin="0,-20,168,30" 
-                        Background="Red"
-                        Click="Button_Click_1">
-                    <StackPanel Orientation="Horizontal">
-                        <fa:PackIconFontAwesome Kind="PlusSolid"/>
-                        <TextBlock Text="Crear" 
-                                   Margin="8 0 0 0"/>
-                    </StackPanel>
-                </Button>
-                <TextBlock x:Name="mensajeEstado"  
-                           Grid.Row="2" 
-                           Foreground="White"
-                           VerticalAlignment="Bottom"
-                           FontSize="16"
-                           TextWrapping="Wrap"/>
-            </Grid>
 
-            <Grid Grid.Row="2" HorizontalAlignment="Right">
-                <Button Style="{StaticResource btnGeneral}" Click="Button_Click">
-                    <StackPanel Orientation="Horizontal">
-                        <fa:PackIconFontAwesome Kind="DoorOpenSolid"/>
-                        <TextBlock Text="Salir" Margin="8 0 0 0"/>
-                    </StackPanel>
-                </Button>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="320"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <campo:CampoTextoControl x:Name="txtTitulo"
+                                 Margin="0,0,-108,75" 
+                                 Grid.RowSpan="2"
+                                 PlaceholderTexto="Título"
+                                 PlaceholderColor="#ccc"
+                                 Fondo="#2A2E32"
+                                 ColorTexto="White"
+                                 CambiandoTexto="CampoTextoControl_CambiandoTexto"/>
+
+                    <Button Grid.Column="0" Grid.Row="1" 
+                Style="{StaticResource btnGeneral}" 
+                Margin="0,-20,168,30" 
+                Background="Red"
+                Click="Button_Click_1">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:PackIconFontAwesome Kind="PlusSolid"/>
+                            <TextBlock Text="Crear" 
+                           Margin="8 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                    <TextBlock x:Name="mensajeEstado"  
+                   Grid.Row="2" 
+                   Foreground="White"
+                   VerticalAlignment="Bottom"
+                   FontSize="16"
+                   TextWrapping="Wrap"/>
+                </Grid>
+
+                <Grid Grid.Row="2" HorizontalAlignment="Right">
+                    <Button Style="{StaticResource btnGeneral}" Click="Button_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:PackIconFontAwesome Kind="DoorOpenSolid"/>
+                            <TextBlock Text="Salir" Margin="8 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                </Grid>
             </Grid>
-        </Grid>
+        </Border>
+        
     </Border>
 </Window>

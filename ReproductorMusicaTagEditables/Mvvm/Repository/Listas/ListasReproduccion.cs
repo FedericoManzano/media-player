@@ -59,6 +59,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
         public static List<string> ListadoNombres()
         {
+            if(!Directory.Exists(PATH_LISTAS))
+                CrearDirectorio();
             string[] archivos = Directory.GetFiles(PATH_LISTAS);
             if (archivos.Length == 0)
                 return new List<string>();

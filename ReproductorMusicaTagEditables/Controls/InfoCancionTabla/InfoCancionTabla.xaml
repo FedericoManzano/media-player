@@ -97,7 +97,7 @@
                         <fa:PackIconFontAwesome Kind="PlaySolid" Foreground="Red" FontSize="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Ageregar lista" Click="OnAgregarClick">
+                <MenuItem Header="Ageregar lista" Click="MenuItem_Click">
                     <MenuItem.Icon>
                         <fa:PackIconFontAwesome Kind="ListSolid" 
                                                 FontSize="12" 

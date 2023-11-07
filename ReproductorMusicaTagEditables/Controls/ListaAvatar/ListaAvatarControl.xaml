@@ -3,25 +3,23 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.ListaAvatar"
              mc:Ignorable="d" 
              x:Name="visorListas">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="75"/>
+            <ColumnDefinition Width="75"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
         <Border x:Name="bordeDefecto" 
                 Grid.ColumnSpan="2" 
                 Grid.RowSpan="2"
-                CornerRadius="10"
-                Visibility="{Binding ElementName=visorListas, Path=ImagenDefectoVisible}">
+                CornerRadius="10">
             <Border.Background>
                 <ImageBrush ImageSource="/Images/albumDesconocido.png"/>
             </Border.Background>
@@ -36,12 +34,22 @@
                 Background="{Binding ElementName=visorListas, Path=ImagenDos}">
         </Border>
         <Border x:Name="bordeImagen3" Grid.Column="0" Grid.Row="1" CornerRadius="0 0 0 10"
-               
                 Background="{Binding ElementName=visorListas, Path=ImagenTres}">
         </Border>
 
         <Border x:Name="bordeImagen4" Grid.Column="1" Grid.Row="1" CornerRadius="0 0 10 0"
                 Background="{Binding ElementName=visorListas, Path=ImagenCuatro}">
         </Border>
+        <StackPanel Grid.Row="2" 
+                    Grid.ColumnSpan="2" 
+                    Margin="0 5"
+                    HorizontalAlignment="Left">
+            <TextBlock Text="{Binding ElementName=visorListas, Path=Nombre}" 
+                       Foreground="White" 
+                       FontSize="18"/>
+            <TextBlock Text="{Binding ElementName=visorListas, Path=Cantidad}" 
+                       Foreground="#ccc" Margin="0 5"
+                       FontSize="11"/>
+        </StackPanel>
     </Grid>
 </UserControl>

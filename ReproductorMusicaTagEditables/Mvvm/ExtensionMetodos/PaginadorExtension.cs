@@ -1,6 +1,7 @@
 ﻿
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -19,6 +20,74 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
         {
             origen[key] = true;
             return new Dictionary<string, bool>(origen);
+        }
+
+
+        public static ObservableCollection<ListaRep> DameListadoReproduccion(this Dictionary<string, List<string>> _diccionario, string letra)
+        {
+            ObservableCollection<ListaRep> ret = new ObservableCollection<ListaRep>();
+            foreach (string ln in _diccionario[letra])
+            {
+                List<Cancion> lista = ListasReproduccion.DameListadoCanciones(ln).Where(cancion => System.IO.File.Exists(cancion.Path)).ToList();
+                if(lista != null && lista.Count >= 4)
+                {
+                    ListaRep r = new ListaRep
+                    {
+                        Nombre = ln,
+                        CantidadCanciones = lista.Count + " Canciones",
+                        Duracion = "",
+                        Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[0].Path),
+                        Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[1].Path),
+                        Imagen3 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[2].Path),
+                        Imagen4 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[3].Path),
+                    };
+                    ret.Add(r);
+                } else if(lista != null && lista.Count == 3)
+                {
+                    ListaRep r = new ListaRep
+                    {
+                        Nombre = ln,
+                        CantidadCanciones = lista.Count + " Canciones",
+                        Duracion = "",
+                        Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[0].Path),
+                        Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[1].Path),
+                        Imagen3 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[2].Path),
+                       
+                    };
+                    ret.Add(r);
+                } else if(lista != null && lista.Count == 2)
+                {
+                    ListaRep r = new ListaRep
+                    {
+                        Nombre = ln,
+                        CantidadCanciones = lista.Count + " Canciones",
+                        Duracion = "",
+                        Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[0].Path),
+                        Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[1].Path),
+                    };
+                    ret.Add(r);
+                } else if(lista != null && lista.Count == 1)
+                {
+                    ListaRep r = new ListaRep
+                    {
+                        Nombre = ln,
+                        CantidadCanciones = lista.Count + " Canciones",
+                        Duracion = "",
+                        Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[0].Path),
+                    };
+                    ret.Add(r);
+                } else if(lista != null && lista.Count == 0)
+                {
+                    ListaRep r = new ListaRep
+                    {
+                        Nombre = ln,
+                        CantidadCanciones = lista.Count + " Canciones",
+                        Duracion = "",
+                    };
+                    ret.Add(r);
+                }
+            }
+            return ret;
         }
 
 

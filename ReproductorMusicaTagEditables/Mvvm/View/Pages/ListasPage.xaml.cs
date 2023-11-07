@@ -1,4 +1,5 @@
-﻿using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
+﻿using ReproductorMusicaTagEditables.Controls.Paginador;
+using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,16 +22,23 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
     /// </summary>
     public partial class ListasPage : Page
     {
-        CrearListaReproduccion crearListaReproduccion = new CrearListaReproduccion();
+        CrearListaReproduccion crearListaReproduccion;
         public ListasPage()
         {
             InitializeComponent();
+            crearListaReproduccion = new CrearListaReproduccion(listasReproduccion);
             listasReproduccion.CargarListasReproduccion();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             crearListaReproduccion.ShowDialog();
+        }
+
+        private void BotonPaginador_DarClick(object sender, EventArgs e)
+        {
+            BotonPaginador i = (BotonPaginador)sender;
+            listasReproduccion.ActualizarListas(i.Inicial);
         }
     }
 }

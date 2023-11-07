@@ -48,6 +48,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         private void MostrarListasView(object obj)
         {
+            LimpiarInfoDePaginas();
             if (!Irg.Preloader)
             {
                 Irg.Partes.Clear();
@@ -57,7 +58,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         private void MostrarAlbumesView(object obj)
         {
-            if(!Irg.Preloader)
+            LimpiarInfoDePaginas();
+            if (!Irg.Preloader)
             {
                 Irg.Partes.Clear();
                 this.CurrentView = new AlbumesViewModel();
@@ -66,7 +68,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         private void MostrarAristasViewAction(object obj)
         {
-            if(!Irg.Preloader)
+            LimpiarInfoDePaginas();
+            if (!Irg.Preloader)
             {
                 Irg.Partes.Clear();
                 this.CurrentView = new ArtistaViewModel();
@@ -76,8 +79,25 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         private void MostrarPrincipalViewAction(object obj)
         {
+            LimpiarInfoDePaginas();
             if(!Irg.Preloader)
                 this.CurrentView = new PrincipalViewModel();
+        }
+
+
+        private void LimpiarInfoDePaginas()
+        {
+            ListasViewModel._diccionarioLista.Clear();
+            ListasViewModel._listas.Clear();
+            ListasViewModel._paginador.Clear();
+            TodosLosAlbumesViewModel.diccionarioalbumes.Clear();
+            TodosLosAlbumesViewModel.paginacion.Clear();
+            TodosLosAlbumesViewModel._avatarAlbums.Clear();
+            TodosLosArtistasViewModel._diccionadioArtistas.Clear();
+            TodosLosArtistasViewModel.paginador.Clear();
+            TodosLosArtistasViewModel._artistas.Clear();
+            InfoArtistaViewModel._albumes.Clear();
+            
         }
     }
 }

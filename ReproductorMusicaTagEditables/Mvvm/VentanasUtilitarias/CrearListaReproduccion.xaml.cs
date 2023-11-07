@@ -1,4 +1,5 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel;
 using System.Windows;
 using System.Windows.Media;
 
@@ -6,12 +7,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
 {
     public partial class CrearListaReproduccion : Window
     {
-        public CrearListaReproduccion()
+        private ListasViewModel lista;
+        public CrearListaReproduccion(ListasViewModel listasViewModel)
         {
             InitializeComponent();
             txtTitulo.Focus();
             mensajeEstado.Text = "Campo Vacío.";
             mensajeEstado.Foreground = Brushes.Red;
+            lista = listasViewModel;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -55,6 +58,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
                     ListasReproduccion.Crear(txtTitulo.Texto);
                     txtTitulo.Texto = "";
                     MensajeestadoOk();
+                    lista.CargarListasReproduccion();
                 }
                 else
                 {

@@ -3,6 +3,7 @@ using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
+using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System;
 using System.Collections.Generic;
@@ -25,11 +26,12 @@ namespace ReproductorMusicaTagEditables
         private double posicionInicialSlider = 0;
         private double posicionFinalSlider = 0;
 
-
+        public static AgregarCancionesListas agregarCancionesListas;
         public MainWindow()
         {
             InitializeComponent();
             this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+            agregarCancionesListas = new AgregarCancionesListas(reproViewModel);
             CargarImagenPorDefectoArtista();
            
             reproViewModel.CargarReproductor(mediaReproductor);
@@ -40,10 +42,7 @@ namespace ReproductorMusicaTagEditables
             };
             timer.Tick += new EventHandler(Time_Track);
 
-            ListasReproduccion.AgregarCancion("Redondos", reproViewModel.Irg.Canciones[200]);
-            ListasReproduccion.AgregarCancion("Redondos", reproViewModel.Irg.Canciones[101]);
-            ListasReproduccion.AgregarCancion("Redondos", reproViewModel.Irg.Canciones[100]);
-            ListasReproduccion.AgregarCancion("Redondos", reproViewModel.Irg.Canciones[3]);
+            
         }
 
 
@@ -148,11 +147,8 @@ namespace ReproductorMusicaTagEditables
 
         private void Finalizar_Arrastre_Slider_TimeLineSlider(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
         {
-            
             posicionInicialSlider = mediaReproductor.Position.TotalSeconds;
-
             mediaReproductor.Position = TimeSpan.FromSeconds( sliderLineTime.Value);
-
             posicionFinalSlider = mediaReproductor.Position.TotalSeconds;
 
             tiempoTotalPista = tiempoTotalPista.Subtract( TimeSpan.FromSeconds( posicionFinalSlider - posicionInicialSlider));

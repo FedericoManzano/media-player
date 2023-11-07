@@ -157,5 +157,20 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
         {
             RaiseEvent(new RoutedEventArgs(AgregarClickEvent));
         }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+           if( MainWindow.agregarCancionesListas.AgregarCancion(new Mvvm.Model.Cancion()
+            {
+                Numero = NumeroInfo,
+                Titulo = TituloInfo,
+                Album = AlbumInfo,
+                Artista = ArtistaInfo,
+                FechaLanzamiento = AnoInfo,
+                Duracion = DuracionInfo,
+                Genero = GeneroInfo
+            }))
+                MainWindow.agregarCancionesListas.Show();
+        }
     }
 }

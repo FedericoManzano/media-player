@@ -1,0 +1,28 @@
+[
+  {
+    "Numero": "5",
+    "Titulo": "Vencedores Vencidos",
+    "Artista": "PATRICIO REY",
+    "Album": "UN BAION PARA EL OJO...",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Redondos\\UnBaion\\5 Vencedores Vencidos.m4a",
+    "Duracion": "03:28",
+    "FechaLanzamiento": "1988",
+    "EstadoColor": "White",
+    "DuracionLong": 2084460000,
+    "Imagen": null
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Cover You in Oil",
+    "Artista": "ACDC",
+    "Album": "BALLBREAKER",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Ballbreaker\\02 Cover You in Oil.mp3",
+    "Duracion": "04:32",
+    "FechaLanzamiento": "1995",
+    "EstadoColor": "White",
+    "DuracionLong": 2726922448,
+    "Imagen": null
+  }
+]

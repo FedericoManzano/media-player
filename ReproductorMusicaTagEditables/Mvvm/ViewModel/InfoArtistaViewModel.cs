@@ -19,7 +19,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     {
 
         private Artista _artista;
-        private List<Album> _albumes;
+        public static List<Album> _albumes = new List<Album>();
 
         public Artista Artista
         {

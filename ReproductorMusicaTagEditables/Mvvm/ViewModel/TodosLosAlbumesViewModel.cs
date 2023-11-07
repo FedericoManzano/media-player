@@ -13,14 +13,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     public class TodosLosAlbumesViewModel:ReproductorViewModelBase
     {
 
-        private Dictionary<string, Dictionary<string, Cancion>> diccionarioalbumes = 
+        public static Dictionary<string, Dictionary<string, Cancion>> diccionarioalbumes = 
                     new Dictionary<string, Dictionary<string, Cancion>>();
 
 
-        private Dictionary<string, bool> paginacion =
+        public static Dictionary<string, bool> paginacion =
                     new Dictionary<string, bool>();
 
-        private ObservableCollection<Cancion> _avatarAlbums = 
+        public static ObservableCollection<Cancion> _avatarAlbums = 
                     new ObservableCollection<Cancion>();
 
 

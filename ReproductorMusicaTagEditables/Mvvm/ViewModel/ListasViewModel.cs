@@ -6,8 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
@@ -15,8 +13,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     public class ListasViewModel:ReproductorViewModel
     {
 
-        private Dictionary<string, List<ListaRep>> _diccionarioLista = new Dictionary<string, List<ListaRep>>();
-        private Dictionary<string, bool> _paginador = new Dictionary<string, bool>();
+        public static Dictionary<string, List<string>> _diccionarioLista = new Dictionary<string, List<string>>();
+        public static Dictionary<string, bool> _paginador = new Dictionary<string, bool>();
 
         public Dictionary<string, bool> Paginador 
         { 
@@ -24,9 +22,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             set { _paginador = value; OnPropertyChanged(nameof(Paginador)); } 
         }
 
-        
-
-        private ObservableCollection<ListaRep> _listas = new ObservableCollection<ListaRep>();
+        public static ObservableCollection<ListaRep> _listas = new ObservableCollection<ListaRep>();
 
         public ObservableCollection<ListaRep> Listas
         { 
@@ -38,21 +34,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public void CargarListasReproduccion()
         {
+            Listas.Clear();
+            _diccionarioLista.Clear();
             List<string> listasNombre = ListasReproduccion.ListadoNombres();
 
             foreach (var item in listasNombre)
             {
-                if(!_diccionarioLista.ContainsKey(item.PrimeraLetraMayuscula()))
+
+                if (!_diccionarioLista.ContainsKey(item.PrimeraLetraMayuscula()))
                 {
-                    _diccionarioLista[item.PrimeraLetraMayuscula()] = new List<ListaRep>();
+                    _diccionarioLista[item.PrimeraLetraMayuscula()] = new List<string>();
                 }
-           
-                _diccionarioLista[item.PrimeraLetraMayuscula()].Add(new ListaRep
-                {
-                    Nombre = item,
-                    CantidadCanciones = ListasReproduccion.DameListadoCanciones(item).Count.ToString(),
-                    Duracion = ""
-                });
+
+                _diccionarioLista[item.PrimeraLetraMayuscula()].Add(item);
 
                 Paginador[item.PrimeraLetraMayuscula()] = false;
             }
@@ -61,34 +55,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             {
                 Paginador = Paginador.OrdenarPorClave();
                 Paginador = Paginador.MarcarClave(Paginador.Keys.First());
-                
-                foreach(ListaRep r in _diccionarioLista[Paginador.Keys.First()])
-                {
-                    List<Cancion> l = ListasReproduccion.DameListadoCanciones(r.Nombre);
-                    if(l.Count >= 4) 
-                    {
-                    
-                        r.Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[0].Path);
-                        r.Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[1].Path);
-                        r.Imagen3 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[2].Path);
-                        r.Imagen4 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[3].Path);
-                    } else if(l.Count == 3) 
-                    {
-                        r.Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[0].Path);
-                        r.Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[1].Path);
-                        r.Imagen3 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[2].Path);
-                    } else if(l.Count == 2)
-                    {
-                        r.Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[0].Path);
-                        r.Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[1].Path);
-
-                    } else if(l.Count == 1)
-                    {
-                        r.Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[0].Path);
-                    }
-                    Listas.Add(r);
-                }
+                Listas = _diccionarioLista.DameListadoReproduccion(Paginador.Keys.First());
             }
         }
+
+        public void ActualizarListas(string letra)
+        {
+            Paginador.DesmarcarTodos();
+            Paginador = Paginador.MarcarClave(letra);
+            Listas = _diccionarioLista.DameListadoReproduccion(letra);
+        }
+
+
+       
     }
 }

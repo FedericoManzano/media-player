@@ -111,3 +111,5 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\ReproductorMusicaTagEditables.pdb
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Controls\ListaAvatar\ListaAvatarControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Controls\ListaAvatar\ListaAvatarControl.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Mvvm\VentanasUtilitarias\AgregarCancionesListas.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Mvvm\VentanasUtilitarias\AgregarCancionesListas.baml

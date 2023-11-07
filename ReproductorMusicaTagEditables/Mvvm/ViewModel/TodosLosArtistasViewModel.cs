@@ -13,11 +13,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     public class TodosLosArtistasViewModel:ReproductorViewModelBase
     {
 
-        public Dictionary<string, Dictionary<string, Cancion>> _diccionadioArtistas;
-        private Dictionary<string, bool> paginador;
+        public static Dictionary<string, Dictionary<string, Cancion>> _diccionadioArtistas = new Dictionary<string, Dictionary<string, Cancion>>();
+        public static Dictionary<string, bool> paginador = new Dictionary<string, bool>();
 
 
-        public ObservableCollection<Cancion> _artistas;
+        public static ObservableCollection<Cancion> _artistas = new ObservableCollection<Cancion>();
 
         public ObservableCollection<Cancion> Avatars 
         { 
@@ -37,9 +37,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         }
 
         public TodosLosArtistasViewModel() { 
-            Avatars = new ObservableCollection<Cancion>();
-            _diccionadioArtistas = new Dictionary<string, Dictionary<string, Cancion>>();
-            Paginador = new Dictionary<string, bool>();
+            
         }
 
         public  void CargarListaDeAvataresArtistas()
