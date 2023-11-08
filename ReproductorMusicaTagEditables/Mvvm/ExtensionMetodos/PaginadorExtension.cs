@@ -2,6 +2,7 @@
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -23,6 +24,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
         }
 
 
+        public static Cancion ElementoRandon(this List<Cancion> lista)
+        {
+            Random r = new Random();
+            return lista[r.Next(0, lista.Count)];
+        }
+
         public static ObservableCollection<ListaRep> DameListadoReproduccion(this Dictionary<string, List<string>> _diccionario, string letra)
         {
             ObservableCollection<ListaRep> ret = new ObservableCollection<ListaRep>();
@@ -36,10 +43,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
                         Nombre = ln,
                         CantidadCanciones = lista.Count + " Canciones",
                         Duracion = "",
-                        Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[0].Path),
-                        Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[1].Path),
-                        Imagen3 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[2].Path),
-                        Imagen4 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista[3].Path),
+                        Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista.ElementoRandon().Path),
+                        Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista.ElementoRandon().Path),
+                        Imagen3 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista.ElementoRandon().Path),
+                        Imagen4 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lista.ElementoRandon().Path),
                     };
                     ret.Add(r);
                 }
@@ -75,7 +82,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             for(int i = 0; i < listValores.Count; i ++)
             {
                 Cancion c = new Cancion( listValores[i] );
-                c.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path);
+                c.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path) ??
+                           ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
                 ret.Add(c);
             }
             return ret;

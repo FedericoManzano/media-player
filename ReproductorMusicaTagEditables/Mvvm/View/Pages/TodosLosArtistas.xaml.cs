@@ -10,6 +10,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -32,6 +33,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         private void AvatarArtistaControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             AvatarArtistaControl i = (AvatarArtistaControl)sender;
+            if (i.NombreArtista == "Desconocido")
+            {
+                System.Windows.Forms.MessageBox.Show("El artista al que intenta acceder es desconocido, por lo tanto, la metadata de los archivos de audio relacionados es inexistente. Puede solucionar esto desde el botón (EDITAR TAGS) de la pestaña 'Inicio' para agregar la información pertinente.", "Artista Desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             this.NavigationService.Navigate(new InfoArtistaPage(i.NombreArtista));
         }
 

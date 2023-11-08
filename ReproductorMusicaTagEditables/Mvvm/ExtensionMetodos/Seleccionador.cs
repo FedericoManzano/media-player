@@ -8,44 +8,22 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
 {
     public static class Seleccionador
     {
-        public static void Seleccionar(this ObservableCollection<Cancion> canciones, ObservableCollection<Cancion> general ,int index)
+        public static ObservableCollection<Cancion> Seleccionar(this ObservableCollection<Cancion> canciones ,int index)
         {
             if (index >= 0 && index < canciones.Count)
             {
-                Cancion c = canciones[index];
-                c.EstadoColor = "Red";
-                canciones.RemoveAt(index);
-                canciones.Insert(index, c);
-
-                for (int i = 0; i < general.Count; i++)
-                {
-                    if (general[i].Equals(c))
-                    {
-                        general.RemoveAt(i);
-                        general.Insert(i, c);
-                    }
-                }
+                canciones[index].EstadoColor = "Red";
             }
+            return canciones;
         }
 
-        public static void Deseleccionar(this ObservableCollection<Cancion> canciones, ObservableCollection<Cancion> general, int index)
+        public static ObservableCollection<Cancion> Deseleccionar(this ObservableCollection<Cancion> canciones)
         {
-            if (index >= 0 && index < canciones.Count)
+            foreach (var c in canciones)
             {
-                Cancion c = canciones[index];
                 c.EstadoColor = "White";
-                canciones.RemoveAt(index);
-                canciones.Insert(index, c);
-
-                for(int i = 0; i< general.Count; i ++)
-                {
-                    if (general[i].Equals(c))
-                    {
-                        general.RemoveAt(i);
-                        general.Insert(i, c);
-                    }
-                }
             }
+            return canciones;
         }
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Windows.Media;
 using Microsoft.WindowsAPICodePack.Shell;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
@@ -91,18 +92,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         private string ExtraerArtista(TagLib.File tag)
         {
 #pragma warning disable CS0618 // El tipo o el miembro están obsoletos
-            string tit = tag.Tag.Artists != null && tag.Tag.Artists.Length > 0 ? tag.Tag.Artists[0]: string.Empty;
+            string tit = tag.Tag.Artists != null && tag.Tag.Artists.Length > 0 ? tag.Tag.Artists[0]: "Desconocido";
 #pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             return tit;
         }
         private string ExtraerGenero(TagLib.File tag)
         {
-            string tit = tag.Tag.Genres != null ? tag.Tag.Genres[0] : string.Empty;
+            string tit = tag.Tag.Genres != null && tag.Tag.Genres.Length > 0? tag.Tag.Genres[0] : "Desconocido";
             return tit;
         }
         private string ExtraerAlbum(TagLib.File tag)
         {
-            string tit = tag.Tag.Album ?? string.Empty;
+            string tit = tag.Tag.Album ?? "Desconocido";
             return tit;
         }
         private string ExtraerDuracion(TagLib.File tag, string path)

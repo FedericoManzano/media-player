@@ -1,5 +1,4 @@
 ﻿using Reproductor_Musica.Core;
-using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
@@ -101,7 +100,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
             Albumes = Albumes.Select(a =>
             {
-                a.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(a.PathImagen);
+                a.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(a.PathImagen) ??
+                            ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
                 return a;
             }).ToList();
 
@@ -123,7 +123,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             {
                 if (!string.IsNullOrEmpty(a.PathImagen))
                 {
-                    return ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(a.PathImagen);
+                    return ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(a.PathImagen) ??
+                        ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
                 }
             }
 

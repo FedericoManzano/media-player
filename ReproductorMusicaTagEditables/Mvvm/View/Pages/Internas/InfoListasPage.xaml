@@ -4,9 +4,161 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas"
+      xmlns:infoLista="clr-namespace:ReproductorMusicaTagEditables.Controls.ListaAvatar"
+      xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
+      xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:infoCancion="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="InfoListasPage">
+      Title="InfoListasPage"
+      x:Name="listaRepro">
 
-    <TextBlock Text="ddadadadadada" Foreground="White"/>
+    <Page.DataContext>
+        <viewModel:ListaRepViewModel x:Name="listaRepViewModel"/>
+    </Page.DataContext>
+    
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="195"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border CornerRadius="10" Padding="7" Background="#2A2E32">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75"/>
+                        <ColumnDefinition Width="75"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="90"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Background="{Binding ListaRep.Imagen1}" Grid.Column="0" Grid.Row="0"/>
+                    <Border Background="{Binding ListaRep.Imagen2}" Grid.Column="0" Grid.Row="1"/>
+                    <Border Background="{Binding ListaRep.Imagen3}" Grid.Column="1" Grid.Row="0"/>
+                    <Border Background="{Binding ListaRep.Imagen4}" Grid.Column="1" Grid.Row="1"/>
+
+                    
+                </Grid>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="{Binding ListaRep.Nombre}"
+                               Foreground="White"
+                               FontSize="28"/>
+
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Cantidad de canciones"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="0 10 0 0"/>
+                        <TextBlock Text="·"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="10 10"/>
+
+                        <TextBlock Text="{Binding ListaRep.CantidadCanciones}"
+                                    Foreground="#ccc"
+                                    FontSize="16"
+                                    Margin="0 10 0 0"/>
+                        
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Duración"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="0 0 0 0"/>
+                        <TextBlock Text="·"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="10 0"/>
+
+                        <TextBlock Text="{Binding ListaRep.Duracion}"
+                                    Foreground="#ccc"
+                                    FontSize="16"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Fecha de creación"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="0 10 0 0"/>
+                        <TextBlock Text="·"
+                                   Foreground="White"
+                                   FontSize="16"
+                                   Margin="10 10"/>
+
+                        <TextBlock Text="{Binding FechaCreacion}"
+                                    Foreground="#ccc"
+                                    FontSize="16"
+                                    Margin="0 10"/>
+                    </StackPanel>
+
+                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                        <Button Style="{StaticResource btnGeneral}" Background="OrangeRed"
+                                Command="{Binding PlayCommandLista}">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:PackIconFontAwesome Kind="PlayCircleRegular" Foreground="Black" Style="{StaticResource btnGeneralIcon}"/>
+                                <TextBlock Text="Reproducir Todo" Foreground="Black" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 20 0 0">
+            <Button Style="{StaticResource btnNavegacion}" 
+                    Click="Button_Click"
+                    ToolTip="Página anterior">
+                <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
+                                Style="{StaticResource btnIcon}"/>
+            </Button>
+            <TextBlock 
+               Text="Canciones de la lista" 
+               Foreground="White" 
+               Margin="10 15 0 0" 
+               FontWeight="SemiBold" 
+               FontSize="20"/>
+        </StackPanel>
+
+        <ScrollViewer x:Name="scrollCanciones" Grid.Row="2" VerticalScrollBarVisibility="Auto"
+              
+              Visibility="{Binding Irg.IslistadoVisible}">
+            <ItemsControl  x:Name="itemList" ItemsSource="{Binding PresentacionLista}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <infoCancion:InfoCancionTabla
+                                        AlbumClick="InfoCancionTabla_AlbumClick"
+                                        ArtistaClick="InfoCancionTabla_ArtistaClick"
+                                        Comando="{Binding ElementName=listaRepViewModel, Path=PlayCommandLista}"
+                                        ParametroComando="{Binding .}"
+                                        NumeroInfo="{Binding Numero}"
+                                        TituloInfo="{Binding Titulo}"
+                                        ArtistaInfo="{Binding Artista}"
+                                        AlbumInfo="{Binding Album}"
+                                        GeneroInfo="{Binding Genero}"
+                                        AnoInfo="{Binding FechaLanzamiento}"
+                                        DuracionInfo="{Binding Duracion}"
+                                        ColorTexto="{Binding EstadoColor}"
+                                        Habilitado="True">
+                        </infoCancion:InfoCancionTabla>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+
+    </Grid>
 </Page>

@@ -40,6 +40,22 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
             
         }
 
+        public bool AgregarListaCanciones(List<Cancion> lista)
+        {
+            List<string> l = ListasReproduccion.ListadoNombres();
+            if (l.Count == 0)
+            {
+
+                MostrarMensajeError("No hay listas de reproducciones creadas. Dirijase a la opción 'Mis listas' del menú lateral.");
+                Hide();
+                return false;
+            }
+            listadoCancionesAgregar = lista;
+            lstAgregar.ItemsSource= listadoCancionesAgregar;
+            lstListasRepro.ItemsSource = l;
+            return true;
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if(lstListasRepro.Items.Count > 0 && lstListasRepro.SelectedIndex < 0)
@@ -78,8 +94,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
                 
             }
 
-            Hide();
+            Salir();
+        }
+
+        private void Salir()
+        {
+            listadoCancionesAgregar.Clear();
             fallos = false;
+            Hide();
         }
 
 
@@ -102,10 +124,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            listadoCancionesAgregar.Clear();
-            lstAgregar.SelectedIndex = -1;
-            lstListasRepro.SelectedIndex = -1;
-            Hide();
+            Salir();
         }
     }
 }

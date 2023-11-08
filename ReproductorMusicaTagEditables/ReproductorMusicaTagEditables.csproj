@@ -407,6 +407,7 @@
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModel\InfoAlbumViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoArtistaViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\ListaRepViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ListasViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\PrincipalViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />

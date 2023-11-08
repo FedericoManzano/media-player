@@ -1,4 +1,8 @@
-﻿using System;
+﻿
+using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
+using ReproductorMusicaTagEditables.Controls.ListaAvatar;
+using ReproductorMusicaTagEditables.Mvvm.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +19,35 @@ using System.Windows.Shapes;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
 {
-    /// <summary>
-    /// Lógica de interacción para InfoListasPage.xaml
-    /// </summary>
+    
     public partial class InfoListasPage : Page
     {
-        public InfoListasPage()
+       
+        public InfoListasPage(ListaAvatarControl listaAvatarControl)
         {
+            
             InitializeComponent();
+            listaRepViewModel.CargarInfoLista(listaAvatarControl);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(this.NavigationService.CanGoBack)
+            {
+                this.NavigationService.GoBack();
+            }
+        }
+
+        private void InfoCancionTabla_AlbumClick(object sender, EventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            this.NavigationService.Navigate(new InfoAlbumPage(i.AlbumInfo));
+        }
+
+        private void InfoCancionTabla_ArtistaClick(object sender, EventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            this.NavigationService.Navigate(new InfoArtistaPage(i.ArtistaInfo));
         }
     }
 }

@@ -1,26 +1,15 @@
-﻿using ReproductorMusicaTagEditables.Controls.Paginador;
+﻿using ReproductorMusicaTagEditables.Controls.ListaAvatar;
+using ReproductorMusicaTagEditables.Controls.Paginador;
 using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
 {
-    /// <summary>
-    /// Lógica de interacción para ListasPage.xaml
-    /// </summary>
     public partial class ListasPage : Page
     {
         CrearListaReproduccion crearListaReproduccion;
@@ -44,7 +33,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
 
         private void ListaAvatarControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
-            this.NavigationService.Navigate(new InfoListasPage());
+            ListaAvatarControl i = (ListaAvatarControl)sender;
+            this.NavigationService.Navigate(new InfoListasPage(i));
         }
     }
 }

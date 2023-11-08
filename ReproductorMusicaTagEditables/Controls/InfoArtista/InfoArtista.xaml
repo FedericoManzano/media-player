@@ -9,7 +9,7 @@
     <Control.Resources>
         <ResourceDictionary Source="/Controls/InfoArtista/InfoArtistaTheme.xaml"/>
     </Control.Resources>
-    <StackPanel Orientation="Horizontal">
+    <StackPanel Orientation="Horizontal" Cursor="Hand">
         <Border Style="{StaticResource bordeBanner}" 
                 Background="{Binding ElementName=infoArtista, Path=ImagenArtista}"/>
 

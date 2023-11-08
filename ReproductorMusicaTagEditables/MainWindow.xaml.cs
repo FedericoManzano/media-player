@@ -1,12 +1,9 @@
 ﻿
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
-using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
-using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Input;
@@ -150,7 +147,6 @@ namespace ReproductorMusicaTagEditables
             posicionInicialSlider = mediaReproductor.Position.TotalSeconds;
             mediaReproductor.Position = TimeSpan.FromSeconds( sliderLineTime.Value);
             posicionFinalSlider = mediaReproductor.Position.TotalSeconds;
-
             tiempoTotalPista = tiempoTotalPista.Subtract( TimeSpan.FromSeconds( posicionFinalSlider - posicionInicialSlider));
             timer.Start();
         }

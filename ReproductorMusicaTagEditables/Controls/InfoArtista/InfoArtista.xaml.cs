@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -50,5 +51,6 @@ namespace ReproductorMusicaTagEditables.Controls.InfoArtista
             get => GetValue(TituloCancionProperty) as string;
             set => SetValue(TituloCancionProperty, value);
         }
+
     }
 }

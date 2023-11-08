@@ -75,6 +75,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         }
 
 
+
+
         public bool EliminarLista(string nombreLista)
         {
             File.Delete(nombreLista.Ruta());
@@ -132,6 +134,31 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
             List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta())) ?? new List<Cancion>();
             return listado;
+        }
+
+
+        public static ulong? CalcularDuracionLista(string nombreLista)
+        {
+            List<Cancion> l = DameListadoCanciones(nombreLista);
+            if(l != null && l.Count > 0)
+            {
+                ulong? ret = 0;
+                foreach(var c in l)
+                {
+                    ret += c.DuracionLong;
+                }
+                return ret;
+            }
+            return 0;
+        }
+
+        public static string FechaCreacion(string nombreLista)
+        {
+            if(ExisteLista(nombreLista))
+            {
+                return File.GetCreationTime(nombreLista.Ruta()).ToString(@"dd/MM/yyyy");
+            }
+            return string.Empty;
         }
     }
 }

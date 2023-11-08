@@ -4,4 +4,10 @@ Reproductor de música realizado en un proyecto en WPF (Windows Platform Fundatio
 
 ## Dependencias 
 
-- 
+- [https://github.com/JamesNK/Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
+- [https://jkarger.de/mahapps.metro.docs.wyam](https://jkarger.de/mahapps.metro.docs.wyam)
+- [https://github.com/taglib/taglib](https://github.com/taglib/taglib)
+- [https://github.com/aybe/Windows-API-Code-Pack-1.1](https://github.com/aybe/Windows-API-Code-Pack-1.1)
+
+
+### Utilización
