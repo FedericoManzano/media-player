@@ -2,9 +2,6 @@
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
-using System;
-using System.Collections.ObjectModel;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -13,10 +10,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 {
     public abstract class ReproductorViewModelBase : ViewModelBase
     {
-        protected readonly static InfoReproductor irg = new InfoReproductor();
+        protected InfoReproductor irg;
         private static double _scrollVertical = 0;
-
-        
 
         public  InfoReproductor Irg
         {
@@ -38,6 +33,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 
         public ReproductorViewModelBase ()
         {
+            irg = InfoReproductor.DameInstancia();
             CargarMusicaCommand = new RelayCommand(CargarMusicaAction);
             SiguienteCommand = new RelayCommand(SiguienteAction, CanSiguienteAction);
             AnteriorCommand = new RelayCommand(AnteriorAction, CanAnteriorAction);
@@ -87,8 +83,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 
         private void CargarMusicaAction(object obj)
         {
-            Irg.CargarMusicaSeleccion();
-            
+            Irg.CargarMusicaSeleccion();            
         }
 
         public void AgregarElementosAlFiltro()

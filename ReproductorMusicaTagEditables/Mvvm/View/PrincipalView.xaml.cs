@@ -21,15 +21,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.View
     /// </summary>
     public partial class PrincipalView : UserControl
     {
+        TodasLasCanciones todasLasCanciones = new TodasLasCanciones();
+        public static Frame myFrame;
         public PrincipalView()
         {
             InitializeComponent();
+            myFrame = paginacion;
             paginacion.NavigationService.Navigate(new TodasLasCanciones());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            paginacion.NavigationService.Navigate(new TodasLasCanciones());
+            paginacion.NavigationService.Navigate(todasLasCanciones);
         }
     }
 }

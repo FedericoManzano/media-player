@@ -4,11 +4,14 @@ using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System;
+using System.Collections.ObjectModel;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
-    public class InfoAlbumViewModel:ReproductorViewModelBase
+    public class InfoAlbumViewModel:ReproductorViewModelBase,IRecolector.IRecolector
     {
 
         private Album _album;
@@ -53,28 +56,48 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             }
         }
 
-        public void CargarInfoAlbum(string album)
+        public async void CargarInfoAlbum(string album)
         {
-           
-             Irg.CargarCancionesAlbum(album);
+
+            Irg.Presentacion = new ObservableCollection<Cancion>(await Irg.CargarCancionesAlbum(album));
              
              ulong? duracion = Irg.CalcularDuracionAlbum(album);
 
              if (Irg.Presentacion.Count > 0)
              {
-                 AlbumSeleccionado = new Album
-                 {
-                     Artista = Irg.Presentacion[0].Artista,
-                     Titulo = album,
-                     Ano = Irg.Presentacion[0].FechaLanzamiento,
-                     Genero = Irg.Presentacion[0].Genero,
-                     DuracionLong = duracion,
-                     Duracion = TimeSpan.FromTicks((long)duracion.GetValueOrDefault(0UL)).ToString(@"hh\:mm\:ss") + " Horas",
-                     CantidadPistas = Irg.Presentacion.Count + " Canciones",
-                     Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(Irg.Presentacion[0].Path),
-                     PathImagen = Irg.Presentacion[0].Path
-                 };
+
+                var uiContext = TaskScheduler.FromCurrentSynchronizationContext();
+                AlbumSeleccionado = await Task<Album>.Factory.StartNew(() => { 
+                    return new Album
+                    {
+                        Artista = Irg.Presentacion[0].Artista,
+                        Titulo = album,
+                        Ano = Irg.Presentacion[0].FechaLanzamiento,
+                        Genero = Irg.Presentacion[0].Genero,
+                        DuracionLong = duracion,
+                        Duracion = TimeSpan.FromTicks((long)duracion.GetValueOrDefault(0UL)).ToString(@"hh\:mm\:ss") + " Horas",
+                        CantidadPistas = Irg.Presentacion.Count + " Canciones",
+                        Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(Irg.Presentacion[0].Path),
+                        PathImagen = Irg.Presentacion[0].Path
+                    };
+
+
+                }, CancellationToken.None, TaskCreationOptions.None, uiContext);
              }
+        }
+
+        public void Limpiar()
+        {
+            if (AlbumSeleccionado != null)
+            {
+                AlbumSeleccionado = new Album()
+                {
+                    Titulo = AlbumSeleccionado.Titulo,
+                    Artista = AlbumSeleccionado.Artista
+                };
+            }
+            Irg.Presentacion = new ObservableCollection<Cancion>();
+            System.GC.Collect();
         }
     }
 }

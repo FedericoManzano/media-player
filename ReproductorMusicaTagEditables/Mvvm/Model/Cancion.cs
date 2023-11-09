@@ -123,11 +123,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             {
                 Path = this.Path,
                 Artista = this.Artista,
+                Album = this.Album,
                 Titulo = this.Titulo,
                 Numero = this.Numero,
                 Genero = this.Genero,
                 FechaLanzamiento = this.FechaLanzamiento,
                 Duracion = this.Duracion,
+                DuracionLong = this.DuracionLong,
+                EstadoColor = this.EstadoColor,
             };
         }
         public override bool Equals(object obj)
@@ -162,7 +165,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         }
         public int CompareTo(Cancion other)
         {
-            return Titulo.CompareTo(other.Titulo);
+            return Album.CompareTo(other.Album);
         }
     }
 }

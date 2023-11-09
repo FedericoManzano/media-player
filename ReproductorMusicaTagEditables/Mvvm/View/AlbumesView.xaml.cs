@@ -21,10 +21,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.View
     /// </summary>
     public partial class AlbumesView : UserControl
     {
+        TodosLosAlbumes todosLosAlbumes = new TodosLosAlbumes();
         public AlbumesView()
         {
             InitializeComponent();
-            paginacion.NavigationService.Navigate(new TodosLosAlbumes());
+            paginacion.NavigationService.Navigate(todosLosAlbumes);
         }
     }
 }

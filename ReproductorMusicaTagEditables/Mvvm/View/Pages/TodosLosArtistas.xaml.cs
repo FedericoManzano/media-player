@@ -38,6 +38,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
                 System.Windows.Forms.MessageBox.Show("El artista al que intenta acceder es desconocido, por lo tanto, la metadata de los archivos de audio relacionados es inexistente. Puede solucionar esto desde el botón (EDITAR TAGS) de la pestaña 'Inicio' para agregar la información pertinente.", "Artista Desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            
             this.NavigationService.Navigate(new InfoArtistaPage(i.NombreArtista));
         }
 

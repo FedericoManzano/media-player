@@ -10,8 +10,9 @@
       xmlns:viewModel ="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:infoAlbum="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoAlbum"
       xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
-      Title="InfoArtistaPage">
-
+      Title="InfoArtistaPage"
+      Loaded="Page_Loaded"
+      Unloaded="Page_Unloaded">
     <Page.DataContext>
         <viewModel:InfoArtistaViewModel x:Name="infoArtista"/>
     </Page.DataContext>
@@ -49,7 +50,7 @@
         </StackPanel>
         
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
-           <ItemsControl   x:Name="itemList" ItemsSource="{Binding Albumes}">
+            <ItemsControl   x:Name="itemList" ItemsSource="{Binding Albumes}">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel/>
@@ -60,8 +61,8 @@
                         <infoAlbum:InfoAlbumControl 
                                 MouseLeftButtonUp="InfoAlbumControl_MouseLeftButtonUp"
                                 ImagenAlbum="{Binding Imagen}"
-                                NombreAlbum="{Binding Titulo}"
-                                AnoAlbum="{Binding Ano}"
+                                NombreAlbum="{Binding Album}"
+                                AnoAlbum="{Binding FechaLanzamiento}"
                                 PlayCommand="{Binding ElementName=infoArtista, Path=PlayAlbumCommand}"
                                 PlayParameter="{Binding .}"/>
                     </DataTemplate>

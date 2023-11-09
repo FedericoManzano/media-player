@@ -10,10 +10,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.View
     /// </summary>
     public partial class ArtistaView : UserControl
     {
+        TodosLosArtistas todosLosArtistas = new TodosLosArtistas();
         public ArtistaView()
         {
             InitializeComponent();
-            paginacion.NavigationService.Navigate(new TodosLosArtistas());
+            paginacion.NavigationService.Navigate(todosLosArtistas);
         }
     }
 }

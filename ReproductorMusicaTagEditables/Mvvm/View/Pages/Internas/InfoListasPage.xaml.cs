@@ -23,6 +23,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
     public partial class InfoListasPage : Page
     {
        
+      
         public InfoListasPage(ListaAvatarControl listaAvatarControl)
         {
             
@@ -40,14 +41,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
 
         private void InfoCancionTabla_AlbumClick(object sender, EventArgs e)
         {
-            InfoCancionTabla i = (InfoCancionTabla)sender;
-            this.NavigationService.Navigate(new InfoAlbumPage(i.AlbumInfo));
+            
         }
 
         private void InfoCancionTabla_ArtistaClick(object sender, EventArgs e)
         {
-            InfoCancionTabla i = (InfoCancionTabla)sender;
-            this.NavigationService.Navigate(new InfoArtistaPage(i.ArtistaInfo));
+            
         }
     }
 }

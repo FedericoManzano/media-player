@@ -10,7 +10,9 @@
       xmlns:tupla="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
       xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="InfoAlbumPage" x:Name="infoAlbumPage">
+      Title="InfoAlbumPage" x:Name="infoAlbumPage"
+      Loaded="infoAlbumPage_Loaded"
+      Unloaded="infoAlbumPage_Unloaded">
 
     <Page.DataContext>
         <viewModel:InfoAlbumViewModel x:Name="infoAlbum"/>

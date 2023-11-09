@@ -13,8 +13,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     public class ListasViewModel:ReproductorViewModel
     {
 
-        public static Dictionary<string, List<string>> _diccionarioLista = new Dictionary<string, List<string>>();
-        public static Dictionary<string, bool> _paginador = new Dictionary<string, bool>();
+        private Dictionary<string, List<string>> _diccionarioLista = new Dictionary<string, List<string>>();
+        private Dictionary<string, bool> _paginador = new Dictionary<string, bool>();
 
         public Dictionary<string, bool> Paginador 
         { 

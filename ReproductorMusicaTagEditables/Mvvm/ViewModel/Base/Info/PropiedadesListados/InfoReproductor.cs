@@ -11,14 +11,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 {
     public partial class InfoReproductor:ViewModelBase
     {
-        private static List<string> _paths;
-        private static List<Cancion> _canciones;
-        private static ObservableCollection<Cancion> _cancionesFiltradas;
-        private static ObservableCollection<Cancion> _partes;
-        private static ObservableCollection<Cancion> _presentacion;
+        private  List<string> _paths;
+        private  List<Cancion> _canciones;
+        private  ObservableCollection<Cancion> _cancionesFiltradas;
+        private  ObservableCollection<Cancion> _partes;
+        private  ObservableCollection<Cancion> _presentacion;
+        private List<Cancion> _albumes;
 
-        private Dictionary<string, Dictionary<string, Cancion>> _diccionarioPaginado;
-        private static Dictionary<string, bool> _paginas;
+        private Dictionary<string, bool> _paginas;
        
         public List<string> Paths
         {
@@ -75,5 +75,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                 _paginas = value; OnPropertyChanged(nameof(Paginas));
             } 
         }
+
+        public List<Cancion> Albumes { get => _albumes; set { _albumes = value; OnPropertyChanged(nameof(Albumes)); } }
     }
 }

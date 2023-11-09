@@ -17,18 +17,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
         public static int PAGINA_ACTUAL = PRINCIPAL;
 
 
-        private static string _titutloVentana;
-        private static CancionActual _cancionActual;
-        private static MediaElement _reproductor;
-        private static string _raiz;
-        private static bool _estadoCarga = true;
+        private  string _titutloVentana;
+        private  CancionActual _cancionActual;
+        private  MediaElement _reproductor;
+        private  string _raiz;
+        private  bool _estadoCarga = true;
 
-        private static MahApps.Metro.IconPacks.PackIconFontAwesomeKind _iconoPlay;
-        private static bool _preloader;
+        private  MahApps.Metro.IconPacks.PackIconFontAwesomeKind _iconoPlay;
+        private  bool _preloader;
 
 
-        private Visibility _isMensajeVisible = Visibility.Visible;
-        private Visibility _islistadoVisible = Visibility.Collapsed;
+        private  Visibility _isMensajeVisible = Visibility.Visible;
+        private  Visibility _islistadoVisible = Visibility.Collapsed;
 
 
         public Visibility IsMensajeVisible

@@ -2,7 +2,6 @@
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
-using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
 
@@ -43,6 +42,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
                 System.Windows.Forms.MessageBox.Show("El artista que intenta acceder es desconocido, por lo tanto, la metadata de los archivos de audio es inexistente. Puede solucionar esto desde el botón (EDITAR TAGS) de la pestaña 'Inicio' para agregar la información pertinente.", "Artista Desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            
             this.NavigationService.Navigate(new InfoArtistaPage(i.ArtistaInfo));
         }
 
@@ -54,6 +54,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
                 System.Windows.Forms.MessageBox.Show("El álbum al que intenta acceder es desconocido, por lo tanto, la metadata de los archivos de audio es inexistente. Puede solucionar esto desde el botón (EDITAR TAGS) de la pestaña 'Inicio' para agregar la información pertinente.", "Álbum Desconocido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+           
             this.NavigationService.Navigate(new InfoAlbumPage(i.AlbumInfo));  
         }
 
@@ -61,7 +62,5 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         {
             System.Windows.MessageBox.Show(((InfoCancionTabla)sender).TituloInfo + "");
         }
-
-        
     }
 }

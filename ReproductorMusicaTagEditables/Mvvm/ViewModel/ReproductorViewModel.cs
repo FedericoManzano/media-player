@@ -1,8 +1,11 @@
 ﻿using Reproductor_Musica.Core;
+using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.View;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Input;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
@@ -107,17 +110,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         private void LimpiarInfoDePaginas()
         {
-            ListasViewModel._diccionarioLista.Clear();
-            ListasViewModel._listas.Clear();
-            ListasViewModel._paginador.Clear();
-            TodosLosAlbumesViewModel.diccionarioalbumes.Clear();
-            TodosLosAlbumesViewModel.paginacion.Clear();
-            TodosLosAlbumesViewModel._avatarAlbums.Clear();
+            
+            
+            PrincipalView.myFrame.NavigationService.RemoveBackEntry();
+            PrincipalView.myFrame.Content = null;
+            
             TodosLosArtistasViewModel._diccionadioArtistas.Clear();
             TodosLosArtistasViewModel.paginador.Clear();
             TodosLosArtistasViewModel._artistas.Clear();
-            InfoArtistaViewModel._albumes.Clear();
-            
+            TodosLosAlbumesViewModel.paginacion.Clear();
+            TodosLosAlbumesViewModel.diccionarioalbumes.Clear();
+            TodosLosAlbumesViewModel._avatarAlbums.Clear();
+
+            System.GC.Collect();
         }
     }
 }

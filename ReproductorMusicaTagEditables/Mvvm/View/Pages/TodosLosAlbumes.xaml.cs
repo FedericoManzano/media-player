@@ -25,6 +25,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
                 System.Windows.Forms.MessageBox.Show("El álbum al que intenta acceder es desconocido, por lo tanto, la metadata de los archivos de audio es inexistente. Puede solucionar esto desde el botón (EDITAR TAGS) de la pestaña 'Inicio' para agregar la información pertinente.", "Álbum Desconocido",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 return;
             }
+            
             this.NavigationService.Navigate(new InfoAlbumPage(i.NombreAlbum));
         }
 
