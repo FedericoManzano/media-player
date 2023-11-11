@@ -1,7 +1,10 @@
 ﻿using Reproductor_Musica.Core;
+using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -12,7 +15,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
     {
         protected InfoReproductor irg;
         private static double _scrollVertical = 0;
-
+        private List<Cancion> _cancionesSeleccionadas = new List<Cancion>();
         public  InfoReproductor Irg
         {
             get => irg;  
@@ -91,5 +94,57 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             Irg.AgregarElementosAlFiltro();
         }
 
+        public void SeleccionarCancion(InfoCancionTabla infoCancionTabla)
+        {
+            if(infoCancionTabla != null && infoCancionTabla.EstaSeleccionado()) 
+            {
+                Cancion c = new Cancion()
+                {
+                    Numero = infoCancionTabla.NumeroInfo,
+                    Titulo = infoCancionTabla.TituloInfo,
+                    Artista = infoCancionTabla.ArtistaInfo,
+                    Album = infoCancionTabla.AlbumInfo,
+                    Duracion = infoCancionTabla.DuracionInfo,
+                    Genero = infoCancionTabla.GeneroInfo,
+                };
+                foreach(var cl in _cancionesSeleccionadas)
+                {
+                    if (cl.Titulo == c.Titulo && cl.Album == c.Album && cl.Artista == c.Artista)
+                        return;
+                }
+                _cancionesSeleccionadas.Add(c);
+            }
+        }
+
+        public void DeseleccionarCancion(InfoCancionTabla infoCancionTabla)
+        {
+            if (infoCancionTabla != null && infoCancionTabla.EstaSeleccionado())
+            {
+                Cancion c = new Cancion()
+                {
+                    Titulo = infoCancionTabla.TituloInfo,
+                    Artista = infoCancionTabla.ArtistaInfo,
+                    Album = infoCancionTabla.AlbumInfo,
+                    Duracion = infoCancionTabla.DuracionInfo,
+                    Genero = infoCancionTabla.GeneroInfo,
+                };
+
+                _cancionesSeleccionadas = _cancionesSeleccionadas.Where(cl=> c.Titulo != c.Titulo || c.Album != cl.Album).ToList();
+            }
+        }
+
+        public void DeseleccionarTodas ()
+        {
+            _cancionesSeleccionadas.Clear();    
+        }
+
+        public void CargarListadoEneditorListas ()
+        {
+            if(_cancionesSeleccionadas != null && _cancionesSeleccionadas.Count > 0)
+            {
+                MainWindow.agregarCancionesListas.AgregarListaCanciones(_cancionesSeleccionadas);
+                MainWindow.agregarCancionesListas.Show();
+            }
+        }
     }
 }

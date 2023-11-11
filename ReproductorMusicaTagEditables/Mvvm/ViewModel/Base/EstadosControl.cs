@@ -13,8 +13,5 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         public static bool SLIDER_MOVE = false;
         public static bool RANDOM = false;
         public static bool CAMBIO_PAGINA = true;
-
-
-
     }
 }

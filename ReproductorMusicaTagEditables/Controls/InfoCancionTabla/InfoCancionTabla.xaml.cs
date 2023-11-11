@@ -7,11 +7,16 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
 {
     public partial class InfoCancionTabla : UserControl
     {
+
+        private bool _seleccionado = false;
+
         public InfoCancionTabla()
         {
             InitializeComponent();
             menuContexto.DataContext = this;
         }
+
+        public bool Seleccionado { get => _seleccionado; set => _seleccionado = value; }
 
         public static readonly RoutedEvent PlayClickEvent =
             EventManager.RegisterRoutedEvent("PlayClick", RoutingStrategy.Bubble,typeof(EventHandler), typeof(InfoCancionTabla));
@@ -168,6 +173,8 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             get => (bool)GetValue(EncendidoProperty);
             set=> SetValue(EncendidoProperty, value);
         }
+        
+        
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -187,6 +194,24 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Toca");
+        }
+
+        private void Check_Click(object sender, RoutedEventArgs e)
+        {
+            Seleccionado = !Seleccionado;
+            if(!Seleccionado)
+            {
+                iconCheck.Kind = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.SquareRegular;
+            }
+            else
+            {
+                iconCheck.Kind = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.CheckSquareSolid;
+            }
+        }
+
+        public bool EstaSeleccionado()
+        {
+            return Seleccionado;
         }
     }
 }

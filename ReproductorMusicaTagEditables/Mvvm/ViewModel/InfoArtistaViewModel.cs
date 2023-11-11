@@ -1,5 +1,6 @@
 ﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Controls.InfoArtista;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial;
@@ -20,16 +21,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     public class InfoArtistaViewModel : ReproductorViewModelBase, IRecolector.IRecolector
     {
         private Artista _artista;
-
+       
         private List<Cancion>_albumes = new List<Cancion>();
+
+        
+
         public Artista Artista
         {
             get => _artista;
             set { _artista = value; OnPropertyChanged(nameof(Artista)); }
         }
         
-
-
         public ICommand PlayArtistaCommand { get; }
 
         public ICommand PlayAlbumCommand { get; }
@@ -38,6 +40,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             get => _albumes; 
             set { _albumes = value; OnPropertyChanged(nameof(Albumes)); } 
         }
+
+        
 
         public InfoArtistaViewModel()
         {
@@ -79,12 +83,37 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public async void CargarInfoArtista(string artista)
         {
-            Albumes =  await Irg.CargarListaAlbumes(artista);
-            
+            Albumes =  await CargarListadoAlbumes(artista);
+
             if (Albumes.Count == 0)
             {
                 MessageBox.Show($"El artista que está intentando acceder fue eliminado en tiempo de ejecución.");
             }
+
+            OrdenarPorFechaAlbumes();
+
+            Artista = await BuildArtista(artista);      
+        }
+
+        private async Task<Artista> BuildArtista(string artista)
+        {
+            var uiContext = TaskScheduler.FromCurrentSynchronizationContext();
+            return await Task<Artista>.Factory.StartNew(()=> {
+               return new Artista()
+               {
+                   Nombre = artista,
+                   Genero = Albumes != null && Albumes.Count > 0 ? Albumes[0].Genero : "",
+                   CantidadAlbumes = Albumes.Count.ToString() + " Albumes",
+                   TiempoReproduccion = TiempoTotalDeReproduccion() + " Horas",
+                   Imagen = DameImagenArtista()
+               };
+                
+                
+            }, CancellationToken.None, TaskCreationOptions.None, uiContext);
+        }
+
+        private async void OrdenarPorFechaAlbumes()
+        {
             await Task.Run(() =>
             {
                 Albumes.Sort(delegate (Cancion item1, Cancion item2)
@@ -92,15 +121,30 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     return item1.FechaLanzamiento.CompareTo(item2.FechaLanzamiento);
                 });
             });
+        }
 
-            Artista = new Artista
-            {
-                Nombre = artista,
-                Genero = Albumes != null && Albumes.Count > 0 ? Albumes[0].Genero : "",
-                CantidadAlbumes = Albumes.Count.ToString() + " Albumes",
-                TiempoReproduccion = TiempoTotalDeReproduccion() + " Horas",
-                Imagen = DameImagenArtista()
-            };       
+        private async Task<List<Cancion>> CargarListadoAlbumes (string artista)
+        {
+            var uiContext = TaskScheduler.FromCurrentSynchronizationContext();
+            return new SortedSet<Cancion>
+            (
+                await Task<List<Cancion>>.Factory.StartNew(() =>
+                {
+                    return Irg.Canciones
+                       .Where(c => c.Artista == artista && System.IO.File.Exists(c.Path))
+                       .Select(c =>
+                       {
+                           Cancion cc = c.Clone();
+                           cc.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path) ??
+                                ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
+                           return cc;
+
+
+                       }).ToList();
+                }, CancellationToken.None, TaskCreationOptions.None, uiContext)
+             ).ToList();
+
+            
         }
 
         private string TiempoTotalDeReproduccion()
@@ -108,9 +152,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             ulong? tiempoTotalRepro = 0;
             foreach (Cancion album in Albumes)
             {
-                tiempoTotalRepro += album.DuracionLong;
+                tiempoTotalRepro += album.DuracionAlbum();
             }
-            return TimeSpan.FromTicks((long)tiempoTotalRepro.GetValueOrDefault(0UL)).ToString(@"hh\:mm\:ss");
+            return tiempoTotalRepro.DuracionString(@"hh\:mm\:ss");
         }
 
         public ImageBrush DameImagenArtista()
@@ -129,17 +173,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public void Limpiar()
         {
-            if (Artista != null)
+            lock(Irg.Presentacion)
             {
-                Artista = new Artista()
+                if (Artista != null)
                 {
-                    Nombre = Artista.Nombre,
-                };
+                    Artista = new Artista()
+                    {
+                        Nombre = Artista.Nombre,
+                    };
+                }
+                Albumes = new System.Collections.Generic.List<Model.Cancion>();
+                System.GC.Collect();
             }
-
-
-            Albumes = new System.Collections.Generic.List<Model.Cancion>();
-            System.GC.Collect();
         }
     }
 }

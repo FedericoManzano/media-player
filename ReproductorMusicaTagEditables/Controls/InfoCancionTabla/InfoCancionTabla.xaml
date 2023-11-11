@@ -28,11 +28,15 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            
-            
+
+            <Button x:Name="btnCheck" Grid.Column="0" Style="{StaticResource btnPlay}"
+                    Click="Check_Click">
+                <fa:PackIconFontAwesome x:Name="iconCheck" Kind="SquareRegular" Width="15" Height="15"/>
+            </Button>
             <Button Style="{StaticResource btnPlay}"
-                    Grid.Column="0"
+                    Grid.Column="1"
                     Command="{Binding ElementName=infoCancion, Path=Comando}"
                     CommandParameter="{Binding ElementName=infoCancion, Path=ParametroComando}"
                     Click="OnPlayClick"
@@ -41,19 +45,19 @@
             </Button>
 
             <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="1"  
+                       Grid.Column="2"  
                        Text="{Binding ElementName=infoCancion, Path=NumeroInfo}" 
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
 
             <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="2" 
+                       Grid.Column="3" 
                        Grid.ColumnSpan="2" 
                        Text="{Binding ElementName=infoCancion, Path=TituloInfo}" 
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
             
             
             <Button Style="{StaticResource btnArtista}"
-                    Grid.Column="4"
+                    Grid.Column="5"
                     Grid.ColumnSpan="2"  
                     HorizontalAlignment="Right"
                     Click="OnArtistaClick"
@@ -61,7 +65,7 @@
                     Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
             
             
-            <Button Style="{StaticResource btnArtista}" Grid.Column="6" Grid.ColumnSpan="3"  
+            <Button Style="{StaticResource btnArtista}" Grid.Column="7" Grid.ColumnSpan="3"  
                     Click="OnAlbumClick"
                     Content="{Binding ElementName=infoCancion, Path=AlbumInfo}"
                     Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"
@@ -69,20 +73,20 @@
 
 
             <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="9"
+                       Grid.Column="10"
                        Grid.ColumnSpan="2"
                        Text="{Binding ElementName=infoCancion, Path=GeneroInfo}" 
                        HorizontalAlignment="Left"
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
 
             <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="11"  
+                       Grid.Column="12"  
                        Text="{Binding ElementName=infoCancion, Path=AnoInfo}" 
                        HorizontalAlignment="Right"
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
             
             <TextBlock Style="{StaticResource txtInfoCancion}" 
-                       Grid.Column="12"  
+                       Grid.Column="13"  
                        Text="{Binding ElementName=infoCancion, Path=DuracionInfo}" 
                        HorizontalAlignment="Right"
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>

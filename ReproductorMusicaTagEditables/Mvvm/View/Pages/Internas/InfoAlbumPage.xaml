@@ -39,7 +39,7 @@
                     Click="Button_Click"
                     ToolTip="Página anterior">
                 <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
-                                Style="{StaticResource btnIcon}"/>
+                                Style="{StaticResource btnIcon}" IsEnabled="{Binding BtnNavegacion}"/>
             </Button>
             <TextBlock 
                Text="Canciones" 

@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Windows;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 {
@@ -137,19 +139,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         }
 
 
-        public static ulong? CalcularDuracionLista(string nombreLista)
+        public static string CalcularDuracionLista(string nombreLista)
         {
             List<Cancion> l = DameListadoCanciones(nombreLista);
-            if(l != null && l.Count > 0)
-            {
-                ulong? ret = 0;
-                foreach(var c in l)
-                {
-                    ret += c.DuracionLong;
-                }
-                return ret;
-            }
-            return 0;
+            return l.DuracionString();
         }
 
         public static string FechaCreacion(string nombreLista)

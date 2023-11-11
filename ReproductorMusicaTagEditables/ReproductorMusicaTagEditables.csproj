@@ -399,8 +399,6 @@
     <Compile Include="Mvvm\ViewModel\Base\CancionActual.cs" />
     <Compile Include="Mvvm\ViewModel\Base\EstadosControl.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\Constructor\InfoReproductor.cs" />
-    <Compile Include="Mvvm\ViewModel\Base\Info\InfoAlbum\InfoReproductor.cs" />
-    <Compile Include="Mvvm\ViewModel\Base\Info\InfoArtista\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\PropiedadesIndividuales\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\Metodos\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\PropiedadesListados\InfoReproductor.cs" />
@@ -480,6 +478,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Mvvm\ViewModel\Filtros\" />
     <Folder Include="Mvvm\View\Utils\" />
   </ItemGroup>
   <ItemGroup>

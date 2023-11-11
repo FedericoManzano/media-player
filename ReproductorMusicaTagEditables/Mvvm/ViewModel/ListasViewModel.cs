@@ -39,8 +39,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             List<string> listasNombre = ListasReproduccion.ListadoNombres();
 
             foreach (var item in listasNombre)
-            {
-
+            { 
                 if (!_diccionarioLista.ContainsKey(item.PrimeraLetraMayuscula()))
                 {
                     _diccionarioLista[item.PrimeraLetraMayuscula()] = new List<string>();

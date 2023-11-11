@@ -62,5 +62,20 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         {
             System.Windows.MessageBox.Show(((InfoCancionTabla)sender).TituloInfo + "");
         }
+
+
+        private void InfoCancionTabla_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            if (i.EstaSeleccionado())
+                panelPrincipal.SeleccionarCancion(i);
+            else
+                panelPrincipal.DeseleccionarCancion(i);
+        }
+
+        private void btnCargar_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            panelPrincipal.CargarListadoEneditorListas();
+        }
     }
 }

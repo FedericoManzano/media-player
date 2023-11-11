@@ -3,7 +3,7 @@ using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
+
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
 {
@@ -26,36 +26,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
             CancionesFiltradas = new ObservableCollection<Cancion>();
             Partes = new ObservableCollection<Cancion>();
             Presentacion = new ObservableCollection<Cancion>();
-            Albumes = new List<Cancion>();
-
-        }
-
-
-
-        public InfoReproductor(
-            string tituloVentana, 
-            CancionActual cancionActual, 
-            string raiz, 
-            bool preloader, 
-            PackIconFontAwesomeKind iconPlay, 
-            List<string> paths, 
-            List<Cancion> canciones,
-            ObservableCollection<Cancion> cancionesFiltradas, 
-            ObservableCollection<Cancion> partes, 
-            ObservableCollection<Cancion> presentacion)
-        {
-            TitutloVentana = tituloVentana;
-            CancionActual = cancionActual;
-            Raiz = raiz;
-            Preloader = preloader;
-            IconoPlay = iconPlay;
-
-            Paths = paths;
-            Canciones = canciones;
-            CancionesFiltradas = cancionesFiltradas;
-            Partes = partes;
-            Presentacion = presentacion;
-        }
+        }     
 
         public static InfoReproductor DameInstancia()
         {

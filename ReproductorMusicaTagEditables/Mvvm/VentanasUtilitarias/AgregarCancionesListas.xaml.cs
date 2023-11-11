@@ -76,9 +76,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
                     {
                         if (lstListasRepro.Items.Count > 0)
                         {
-                            if (lstListasRepro.SelectedIndex < 0 || !ListasReproduccion.AgregarCancion(lstListasRepro.Items[lstListasRepro.SelectedIndex].ToString(), cl))
+                            if (lstListasRepro.SelectedIndex < 0)
                             {
                                 fallos = true;
+                            } else
+                            {
+                                ListasReproduccion.AgregarCancion(lstListasRepro.Items[lstListasRepro.SelectedIndex].ToString(), cl);
                             }
                         }
                     }
@@ -107,7 +110,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
 
         private Cancion BuscarCancion(Cancion cancion)
         {
-            List<Cancion> li = reproductorViewModelBase.Irg.Canciones.Where(cl => cl.Titulo == cancion.Titulo).ToList();
+            List<Cancion> li = reproductorViewModelBase.Irg.Canciones.Where(cl => cl.Titulo == cancion.Titulo && cl.Artista == cancion.Artista && cl.Album == cancion.Album).ToList();
             return li.Count > 0 ? li[0]:null;
         }
 

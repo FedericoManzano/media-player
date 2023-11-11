@@ -56,7 +56,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                 }
             }
         }
-
         public async void CargaDesdeElRepositorioCanciones()
         {
 
@@ -191,7 +190,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                 }
             }
         }
-
         public double SetScroll()
         {
             for(int i = 0; i < Canciones.Count; i ++)
