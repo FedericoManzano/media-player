@@ -1,6 +1,7 @@
 ﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System.Collections.Generic;
@@ -38,6 +39,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         public ReproductorViewModelBase ()
         {
             irg = InfoReproductor.DameInstancia();
+            ListasReproduccion.CrearListaFavoritos();
+
             CargarMusicaCommand = new RelayCommand(CargarMusicaAction);
             SiguienteCommand = new RelayCommand(SiguienteAction, CanSiguienteAction);
             AnteriorCommand = new RelayCommand(AnteriorAction, CanAnteriorAction);

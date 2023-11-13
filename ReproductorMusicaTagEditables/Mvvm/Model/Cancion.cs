@@ -10,22 +10,21 @@ using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Model
 {
-    public class Cancion: IComparable<Cancion>
+    public class Cancion : IComparable<Cancion>
     {
         public static readonly string COLOR_TEXTO_DEFAULT = "White";
         public string Numero { get; set; } = string.Empty;
         public string Titulo { get; set; } = string.Empty;
         public string Artista { get; set; } = string.Empty;
         public string Album { get; set; } = string.Empty;
-        public string Genero { get; set;} = string.Empty;
+        public string Genero { get; set; } = string.Empty;
         public string Path { get; set; } = string.Empty;
         public string Duracion { get; set; } = string.Empty;
-        public string FechaLanzamiento { get; set;} = string.Empty;
+        public string FechaLanzamiento { get; set; } = string.Empty;
         public string EstadoColor { get; set; } = COLOR_TEXTO_DEFAULT;
-
         public ulong? DuracionLong { get; set; } = 0;
-
-        public ImageBrush Imagen {  get; set; }
+        public ImageBrush Imagen { get; set; }
+        public int Cantidad { get; set; } = 0;
 
         public Cancion()
         {
@@ -67,7 +66,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                     Genero = ExtraerGenero(tag).Longitud(20),
                     Album = ExtraerAlbum(tag).Longitud(20),
                     DuracionLong = this.DuracionLong(path),
-                    Duracion = DuracionLong.DuracionString(@"mm\:ss"),
+                    Duracion = TimeSpan.FromTicks((long) CalculoTiempo.CalculoTiempo.CalcularDuracionCancion(path).GetValueOrDefault(0UL)).ToString(@"mm\:ss"),
                     FechaLanzamiento = ExtraerFechaLanzamiento(tag),
                     EstadoColor = COLOR_TEXTO_DEFAULT,
                 };
@@ -125,6 +124,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                 Duracion = this.Duracion,
                 DuracionLong = this.DuracionLong,
                 EstadoColor = this.EstadoColor,
+                Cantidad = this.Cantidad,
             };
         }
         public override bool Equals(object obj)

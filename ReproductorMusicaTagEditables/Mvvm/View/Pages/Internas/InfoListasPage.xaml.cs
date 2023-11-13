@@ -92,5 +92,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
             listaRepViewModel.Limpiar();
             listaRepViewModel.CargarInfoLista(_listaAvatarControl);
         }
+
+        private void scrollCanciones_IsMouseCaptureWithinChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            listaRepViewModel.ActualizarFiltro();
+        }
     }
 }

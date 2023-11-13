@@ -1,5 +1,6 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System.Windows;
@@ -35,6 +36,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
             }
+            ListasReproduccion.AgregarCancionAFavoritos(Irg.CancionActual.Cancion);
         }
     }
 }

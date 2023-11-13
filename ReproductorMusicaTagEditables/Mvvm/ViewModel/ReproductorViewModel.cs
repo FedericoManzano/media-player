@@ -29,6 +29,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         public ICommand ArtistasCommand { get; }
         public ICommand AlbumesCommand { get; }
         public ICommand ListasCommand { get; }
+        public ICommand FavoritosCommand { get; }
 
 
         public ReproductorViewModelBase CurrentView
@@ -47,7 +48,22 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             ArtistasCommand = new RelayCommand(MostrarAristasViewAction);
             AlbumesCommand = new RelayCommand (MostrarAlbumesView);
             ListasCommand = new RelayCommand(MostrarListasView);
+            FavoritosCommand = new RelayCommand(MostrarFavoritosView);
             this.CurrentView = new PrincipalViewModel();
+        }
+
+        private void MostrarFavoritosView(object obj)
+        {
+            if (InfoReproductor.PAGINA_ACTUAL != InfoReproductor.FAVORITOS)
+            {
+                InfoReproductor.PAGINA_ACTUAL = InfoReproductor.FAVORITOS;
+                LimpiarInfoDePaginas();
+                if (!Irg.Preloader)
+                {
+                    Irg.Partes.Clear();
+                    this.CurrentView = new FavoritosViewModel();
+                }
+            }
         }
 
         private void MostrarListasView(object obj)

@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
-using System.Runtime.CompilerServices;
 using System.Windows.Controls;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos

@@ -14,7 +14,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             {
                 canciones[index].EstadoColor = "Red";
             }
-            return canciones;
+            return new ObservableCollection<Cancion>( canciones);
         }
 
         public static ObservableCollection<Cancion> Deseleccionar(this ObservableCollection<Cancion> canciones)

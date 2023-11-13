@@ -319,7 +319,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\FavoritosView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\ListasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mvvm\View\Pages\FavoritosPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -417,6 +425,7 @@
     <Compile Include="Mvvm\ViewModel\Base\Info\Metodos\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\PropiedadesListados\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
+    <Compile Include="Mvvm\ViewModel\FavoritosViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoAlbumViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\IRecolector\IRecolector.cs" />
@@ -437,8 +446,14 @@
     <Compile Include="Mvvm\View\ArtistaView.xaml.cs">
       <DependentUpon>ArtistaView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mvvm\View\FavoritosView.xaml.cs">
+      <DependentUpon>FavoritosView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Mvvm\View\ListasView.xaml.cs">
       <DependentUpon>ListasView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\Pages\FavoritosPage.xaml.cs">
+      <DependentUpon>FavoritosPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\Pages\Internas\InfoAlbumPage.xaml.cs">
       <DependentUpon>InfoAlbumPage.xaml</DependentUpon>

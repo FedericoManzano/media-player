@@ -13,6 +13,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
         public static readonly int ALBUMES = 2;
         public static readonly int GENERO = 3;
         public static readonly int LISTAS = 4;
+        public static readonly int FAVORITOS = 5;
+
 
         public static int PAGINA_ACTUAL = PRINCIPAL;
 

@@ -1,5 +1,6 @@
 ﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Controls.ListaAvatar;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
@@ -9,6 +10,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls.WebParts;
 using System.Windows.Input;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
@@ -28,7 +30,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
 
         public ICommand PlayCommandLista { get; }
-        
+       
 
         public ListaRepViewModel ()
         {
@@ -41,11 +43,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         {
             ListaRep = await CrearInfoListaRep(listaAvatarControl);
             FechaCreacion = ListasReproduccion.FechaCreacion(ListaRep.Nombre);
-            Irg.Presentacion = new ObservableCollection<Cancion>(ListasReproduccion.DameListadoCanciones(ListaRep.Nombre));
+            Irg.Presentacion = new ObservableCollection<Cancion>(DameListaPorPartes(ListaRep.Nombre,0,10));
             Irg.Presentacion = new ObservableCollection<Cancion>(await ListadoCancionesFiltrado());
-            
+            ActualizarFiltro();
         }
 
+          
+        private List<Cancion> DameListaPorPartes(string nombre, int inicio, int final)
+        {
+            List<Cancion> l = ListasReproduccion.DameListadoCanciones(nombre);
+            return l.Count > final-inicio ? l.GetRange(inicio,final):l;
+        }
         private async Task<List<Cancion>> CargarListadoCanciones()
         {
             List<Cancion> cancions = await Task.Run(() => Irg.Presentacion.Select(c => c.Clone()).ToList());
@@ -93,29 +101,50 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             return true;
         }
 
-        private async void PlayActionLista(object obj)
+        private  void PlayActionLista(object obj)
         {
-            if(obj == null)
+            Irg.Deseleccionar();
+            Irg.CancionesFiltradas = new ObservableCollection<Cancion>(ListasReproduccion.DameListadoCanciones(ListaRep.Nombre));
+            if (obj == null)
             {
-                Irg.Deseleccionar();
-                Irg.CancionesFiltradas = new ObservableCollection<Cancion>(await CargarListadoCanciones());
                 Irg.CancionActual.Index = 0;
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
-                
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
                         .Ejecutar(irg, Irg.CancionesFiltradas[0]);
             } else
             {
                 Cancion c = (Cancion)obj;
-                int index = Irg.Presentacion.IndexOf(c);
-                Irg.Deseleccionar();
-                
+                int index = Irg.CancionesFiltradas.IndexOf(c);
+               
                 Irg.CancionActual.Index = index;
                 Irg.CancionActual.Cancion = c;
-                Irg.CancionesFiltradas = new ObservableCollection<Cancion>(await CargarListadoCanciones()); Irg.CancionesFiltradas = Irg.Presentacion;
+              
 
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
                         .Ejecutar(irg, Irg.CancionActual.Cancion);
+            }
+        }
+
+        public void ActualizarFiltro ()
+        {
+            List<Cancion> l = ListasReproduccion.DameListadoCanciones(ListaRep.Nombre);
+            int diferencia = l.Count - Irg.Presentacion.Count;
+            if (diferencia <= 0)
+                return;
+
+            if (diferencia > 20 && Irg.Presentacion.Count < l.Count)
+            {
+                foreach (Cancion can in l.ToList().GetRange(Irg.Presentacion.Count, 20))
+                {
+                    Irg.Presentacion.Add(can);
+                }
+            }
+            else
+            {
+                for (int i = Irg.Presentacion.Count; i < l.Count; i++)
+                {
+                    Irg.Presentacion.Add(l[i]);
+                }
             }
         }
 
@@ -123,6 +152,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         {
            ListaRep = new ListaRep();
            Irg.Presentacion = new ObservableCollection<Cancion>();
+           
            System.GC.Collect();   
         }
     }

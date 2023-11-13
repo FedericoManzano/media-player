@@ -59,5 +59,14 @@ namespace ReproductorMusicaTagEditables.Controls.Menu
             set => SetValue(CommandListasProperty, value);
         }
 
+        public static readonly DependencyProperty CommandFavoritosProperty =
+            DependencyProperty.Register("CommandFavoritos", typeof(ICommand), typeof(Menu));
+
+        public ICommand CommandFavoritos
+        {
+            get => (ICommand)GetValue(CommandFavoritosProperty);
+            set => SetValue(CommandFavoritosProperty, value);
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System.Collections.ObjectModel;
@@ -26,6 +27,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                    
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
+
             }
             else if (Irg.CancionesFiltradas.Count > Irg.CancionActual.Index + 1)
             {
@@ -39,6 +41,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
             }
+            ListasReproduccion.AgregarCancionAFavoritos(Irg.CancionActual.Cancion);
         }
     }
 }

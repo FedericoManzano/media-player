@@ -10,7 +10,8 @@
     "FechaLanzamiento": "1988",
     "EstadoColor": "White",
     "DuracionLong": 4474490000,
-    "Imagen": null
+    "Imagen": null,
+    "Cantidad": 0
   },
   {
     "Numero": "",
@@ -23,7 +24,8 @@
     "FechaLanzamiento": "1991",
     "EstadoColor": "White",
     "DuracionLong": 3871240000,
-    "Imagen": null
+    "Imagen": null,
+    "Cantidad": 0
   },
   {
     "Numero": "",
@@ -36,7 +38,8 @@
     "FechaLanzamiento": "2017",
     "EstadoColor": "White",
     "DuracionLong": 10884179591,
-    "Imagen": null
+    "Imagen": null,
+    "Cantidad": 0
   },
   {
     "Numero": "",
@@ -49,7 +52,8 @@
     "FechaLanzamiento": "2017",
     "EstadoColor": "White",
     "DuracionLong": 4850677551,
-    "Imagen": null
+    "Imagen": null,
+    "Cantidad": 0
   },
   {
     "Numero": "",
@@ -62,7 +66,8 @@
     "FechaLanzamiento": "2017",
     "EstadoColor": "White",
     "DuracionLong": 4077975510,
-    "Imagen": null
+    "Imagen": null,
+    "Cantidad": 0
   },
   {
     "Numero": "",
@@ -75,7 +80,8 @@
     "FechaLanzamiento": "2017",
     "EstadoColor": "White",
     "DuracionLong": 4010057142,
-    "Imagen": null
+    "Imagen": null,
+    "Cantidad": 0
   },
   {
     "Numero": "12",
@@ -88,7 +94,8 @@
     "FechaLanzamiento": "1992",
     "EstadoColor": "White",
     "DuracionLong": 4382040816,
-    "Imagen": null
+    "Imagen": null,
+    "Cantidad": 0
   },
   {
     "Numero": "12",
@@ -101,6 +108,21 @@
     "FechaLanzamiento": "2013",
     "EstadoColor": "White",
     "DuracionLong": 3664110000,
-    "Imagen": null
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Skies on Fire",
+    "Artista": "ACDC",
+    "Album": "BLACK ICE",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Black ice\\02 Skies on Fire.mp3",
+    "Duracion": "03:34",
+    "FechaLanzamiento": "2008",
+    "EstadoColor": "White",
+    "DuracionLong": 2142302040,
+    "Imagen": null,
+    "Cantidad": 0
   }
 ]

@@ -1,5 +1,6 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
@@ -31,6 +32,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 Irg.Seleccionar();
                 Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
                 EstadosControl.PLAY = true;
+                ListasReproduccion.AgregarCancionAFavoritos(c);
             }
             else
             {
@@ -58,6 +60,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                             Irg.Seleccionar();
                             Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
                             EstadosControl.PLAY = true;
+                            ListasReproduccion.AgregarCancionAFavoritos(Irg.CancionActual.Cancion);
                         }
                         else
                         {

@@ -1,10 +1,12 @@
 ﻿using Newtonsoft.Json;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Windows;
 
@@ -68,16 +70,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 return new List<string>();
             List<string> nombresListas = archivos.Where(s =>
             {
+
                 FileInfo fi = new FileInfo(s);
-                string e = fi.Extension;
-                if (e != EXT) return false;
-                return true;
+                if(Path.GetFileNameWithoutExtension(fi.Name) != "FAVORITOS")
+                {
+                    string e = fi.Extension;
+                    if (e != EXT) return false;
+                    return true;
+                } return false;
             }).Select(s => Path.GetFileNameWithoutExtension(s)).ToList();
             return nombresListas;
         }
-
-
-
 
         public bool EliminarLista(string nombreLista)
         {
@@ -153,6 +156,51 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 return File.GetCreationTime(nombreLista.Ruta()).ToString(@"dd/MM/yyyy");
             }
             return string.Empty;
+        }
+
+        public static void CrearListaFavoritos()
+        {
+            Crear("FAVORITOS");
+        }
+
+        public static bool AgregarCancionAFavoritos(Cancion c)
+        {
+            if(c == null) return false;
+            if(ExisteLista("FAVORITOS"))
+            {
+                List<Cancion> listaCanciones = DameListadoCanciones("FAVORITOS");
+                
+                c.Cantidad++;
+                Cancion cc = c.Clone();
+                cc.EstadoColor = "White";
+                int index = 0;
+                if( (index = listaCanciones.IndexOf(cc)) == -1)
+                {  
+                    listaCanciones.Add(cc);
+                }
+                else
+                {
+                    listaCanciones[index] = cc;
+                }
+                listaCanciones.Sort(delegate(Cancion c1, Cancion c2) {
+                    return c2.Cantidad.CompareTo(c1.Cantidad);
+                });
+                string listaTxt = JsonConvert.SerializeObject(listaCanciones, Formatting.Indented);
+                using (StreamWriter sw = new StreamWriter("FAVORITOS".Ruta()))
+                {
+                    sw.Write(listaTxt);
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static List<Cancion> DameListatoFavoritos()
+        {
+            List<Cancion> listaFav = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText("FAVORITOS".Ruta()));
+         
+            return listaFav == null ? new List<Cancion>(): listaFav;
+
         }
     }
 }
