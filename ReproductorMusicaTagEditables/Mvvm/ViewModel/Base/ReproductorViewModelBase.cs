@@ -5,6 +5,7 @@ using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -96,7 +97,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 
         public void SeleccionarCancion(InfoCancionTabla infoCancionTabla)
         {
-            if(infoCancionTabla != null && infoCancionTabla.EstaSeleccionado()) 
+            if(infoCancionTabla != null) 
             {
                 Cancion c = new Cancion()
                 {
@@ -107,18 +108,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                     Duracion = infoCancionTabla.DuracionInfo,
                     Genero = infoCancionTabla.GeneroInfo,
                 };
-                foreach(var cl in _cancionesSeleccionadas)
-                {
-                    if (cl.Titulo == c.Titulo && cl.Album == c.Album && cl.Artista == c.Artista)
-                        return;
-                }
-                _cancionesSeleccionadas.Add(c);
+                int index = _cancionesSeleccionadas.IndexOf(c);
+                if(index == -1)
+                    _cancionesSeleccionadas.Add(c);
             }
         }
 
+     
         public void DeseleccionarCancion(InfoCancionTabla infoCancionTabla)
         {
-            if (infoCancionTabla != null && infoCancionTabla.EstaSeleccionado())
+            if (infoCancionTabla != null)
             {
                 Cancion c = new Cancion()
                 {
@@ -128,11 +127,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                     Duracion = infoCancionTabla.DuracionInfo,
                     Genero = infoCancionTabla.GeneroInfo,
                 };
-
-                _cancionesSeleccionadas = _cancionesSeleccionadas.Where(cl=> c.Titulo != c.Titulo || c.Album != cl.Album).ToList();
+                
+              
+                _cancionesSeleccionadas.Remove(c);
             }
         }
 
+        public int CantidadSeleccionado ()
+        {
+            return _cancionesSeleccionadas.Count;
+        }
+         
         public void DeseleccionarTodas ()
         {
             _cancionesSeleccionadas.Clear();    

@@ -164,6 +164,24 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
         }
 
 
+
+
+        public static readonly RoutedEvent BorrarCancionEvent =
+            EventManager.RegisterRoutedEvent("BorrarClick", RoutingStrategy.Bubble, typeof(EventHandler), typeof(InfoCancionTabla));
+
+        public event EventHandler BorrarClick
+        {
+            add => AddHandler(BorrarCancionEvent, value);
+            remove => RemoveHandler(BorrarCancionEvent, value);
+        }
+
+        public void OnBorrarClick(object sender, RoutedEventArgs e)
+        {
+            RaiseEvent(new RoutedEventArgs(BorrarCancionEvent));
+        }
+
+
+
         public static DependencyProperty EncendidoProperty =
             DependencyProperty.Register("Habilitado", typeof(bool), typeof(InfoCancionTabla), new PropertyMetadata(false));
 
@@ -207,6 +225,11 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             {
                 iconCheck.Kind = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.CheckSquareSolid;
             }
+        }
+
+        public void Deseleccionar()
+        {
+            Seleccionado = false;
         }
 
         public bool EstaSeleccionado()

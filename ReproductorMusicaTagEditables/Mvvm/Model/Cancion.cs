@@ -134,12 +134,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
 
             Cancion n = obj as Cancion;
 
-            return 
-                this.Titulo  == n.Titulo && 
-                this.Artista    == n.Artista &&
-                this.Album      == n.Album && 
-                this.Genero     == n.Genero &&
-                this.FechaLanzamiento == n.FechaLanzamiento;
+            return
+                this.Titulo == n.Titulo &&
+                this.Artista == n.Artista &&
+                this.Album == n.Album;
         }
         public override int GetHashCode()
         {

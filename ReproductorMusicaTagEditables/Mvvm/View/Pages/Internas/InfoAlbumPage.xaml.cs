@@ -66,5 +66,36 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
         {
             infoAlbum.Limpiar();
         }
+
+        private void agregarControl_AgregarClick(object sender, EventArgs e)
+        {
+            infoAlbum.CargarListadoEneditorListas();
+        }
+
+        private void agregarControl_DesmarcarClick(object sender, EventArgs e)
+        {
+            infoAlbum.Limpiar();
+            infoAlbum.CargarInfoAlbum(nombreAlbum);
+            infoAlbum.DeseleccionarTodas();
+            agregarControl.Visibilidad = System.Windows.Visibility.Hidden;
+        }
+
+        private void InfoCancionTabla_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            if (i.EstaSeleccionado())
+            {
+                infoAlbum.SeleccionarCancion(i);
+                agregarControl.Visibilidad = System.Windows.Visibility.Visible;
+            }
+            else
+            {
+                infoAlbum.DeseleccionarCancion(i);
+                if (infoAlbum.CantidadSeleccionado() == 0 && agregarControl.Visibilidad == System.Windows.Visibility.Visible)
+                {
+                    agregarControl.Visibilidad = System.Windows.Visibility.Hidden;
+                }
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
 using System.Windows.Controls;
@@ -58,24 +59,38 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             this.NavigationService.Navigate(new InfoAlbumPage(i.AlbumInfo));  
         }
 
-        private void InfoCancionTabla_AgregarClick(object sender, EventArgs e)
-        {
-            System.Windows.MessageBox.Show(((InfoCancionTabla)sender).TituloInfo + "");
-        }
-
-
+       
         private void InfoCancionTabla_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             InfoCancionTabla i = (InfoCancionTabla)sender;
             if (i.EstaSeleccionado())
+            {
                 panelPrincipal.SeleccionarCancion(i);
+                agregarControl.Visibilidad = System.Windows.Visibility.Visible;
+            }
             else
+            {
                 panelPrincipal.DeseleccionarCancion(i);
+                if(panelPrincipal.CantidadSeleccionado() == 0 && agregarControl.Visibilidad == System.Windows.Visibility.Visible)
+                {
+                    agregarControl.Visibilidad = System.Windows.Visibility.Hidden;
+                }
+            }
         }
 
-        private void btnCargar_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void agregarControl_AgregarClick(object sender, EventArgs e)
         {
             panelPrincipal.CargarListadoEneditorListas();
         }
+
+        private void agregarControl_DesmarcarClick(object sender, EventArgs e)
+        {
+            panelPrincipal.Irg.Partes.Clear();
+            panelPrincipal.AgregarElementosAlFiltro();
+            panelPrincipal.DeseleccionarTodas();
+            agregarControl.Visibilidad = System.Windows.Visibility.Hidden;
+        }
+
+        
     }
 }

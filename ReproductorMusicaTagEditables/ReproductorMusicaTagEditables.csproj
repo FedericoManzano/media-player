@@ -126,6 +126,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\AgregarALista\AgregarAListaControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\AvatarAlbum\AvatarAlbumControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -186,6 +190,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\InfoListaPagina\InfoListaPaginaControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\ListaAvatar\ListaAvatarControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -238,6 +246,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controls\AgregarALista\AgregarAListaControl.xaml.cs">
+      <DependentUpon>AgregarAListaControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\AvatarAlbum\AvatarAlbumControl.xaml.cs">
       <DependentUpon>AvatarAlbumControl.xaml</DependentUpon>
     </Compile>
@@ -264,6 +275,9 @@
     </Compile>
     <Compile Include="Controls\InfoCancionTabla\InfoCancionTabla.xaml.cs">
       <DependentUpon>InfoCancionTabla.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InfoListaPagina\InfoListaPaginaControl.xaml.cs">
+      <DependentUpon>InfoListaPaginaControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\ListaAvatar\ListaAvatarControl.xaml.cs">
       <DependentUpon>ListaAvatarControl.xaml</DependentUpon>

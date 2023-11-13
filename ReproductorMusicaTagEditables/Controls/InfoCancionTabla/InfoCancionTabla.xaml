@@ -6,8 +6,6 @@
              xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d"
              x:Name="infoCancion">
-
-
     <Control.Resources>
         <ResourceDictionary Source="/Controls/InfoCancionTabla/InfoCancionTheme.xaml"/>
     </Control.Resources>
@@ -108,7 +106,7 @@
                                                 Foreground="DarkMagenta"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Click="MenuItem_Click_1" Header="Remover de lista"
+                <MenuItem Click="OnBorrarClick" Header="Remover de lista"
                           IsEnabled="{Binding Parent.PlacementTarget.Tag.Habilitado, RelativeSource={RelativeSource Self}}">
                     <MenuItem.Icon>
                         <fa:PackIconFontAwesome Kind="WindowCloseSolid" 

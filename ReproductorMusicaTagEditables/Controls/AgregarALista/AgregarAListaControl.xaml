@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.AgregarALista.AgregarAListaControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d"
+             xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             x:Name="agregarLista">
+
+    <Control.Resources>
+        <ResourceDictionary Source="/Controls/InfoArtistaPagina/InfoArtistaPageTheme.xaml"/>
+    </Control.Resources>
+    
+    <Border Visibility="{Binding ElementName=agregarLista, Path=Visibilidad}">
+        <StackPanel Orientation="Horizontal">
+            <Button Style="{StaticResource btnPlayAll}" 
+                    Background="#ccc"
+                    Click="OnDesmarcarClick">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="SquareRegular"/>
+                    <TextBlock Text="Desmarcar Todos" Margin="5 0 0 0"/>
+                </StackPanel>
+            </Button>
+            <Button Style="{StaticResource btnPlayAll}" 
+                    Margin="10 0 0 0" Click="OnAgregarClick">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="PlusSolid"/>
+                    <TextBlock Text="Agregar" Margin="5 0 0 0"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+    </Border>
+</UserControl>

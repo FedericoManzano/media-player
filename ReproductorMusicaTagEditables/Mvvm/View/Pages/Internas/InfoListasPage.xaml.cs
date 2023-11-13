@@ -1,11 +1,11 @@
 ﻿
-using ReproductorMusicaTagEditables.Controls.InfoAlbum;
-using ReproductorMusicaTagEditables.Controls.InfoArtista;
+
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Controls.ListaAvatar;
 using ReproductorMusicaTagEditables.Mvvm.Model;
-using ReproductorMusicaTagEditables.Mvvm.ViewModel;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -17,8 +17,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
     
     public partial class InfoListasPage : Page
     {
-
-
         private ListaAvatarControl _listaAvatarControl;
         public InfoListasPage(ListaAvatarControl listaAvatarControl)
         {
@@ -71,6 +69,28 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
         private void listaRepro_Unloaded(object sender, RoutedEventArgs e)
         {
             listaRepViewModel.Limpiar();
+        }
+
+        private void InfoCancionTabla_BorrarClick(object sender, EventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            Cancion c = new Cancion()
+            {
+                Titulo = i.TituloInfo,
+                Artista = i.ArtistaInfo,
+                Album = i.AlbumInfo,
+                Duracion = i.DuracionInfo,  
+                Genero = i.GeneroInfo,
+            };
+            if(ListasReproduccion.RemoverCancion(infoLista.Nombre, c))
+            {
+                int cantidad = int.Parse(Regex.Match( _listaAvatarControl.Cantidad, "^[0-9]+").Value);
+                cantidad--;
+                _listaAvatarControl.Cantidad = cantidad.ToString() + " Canciones";
+            }
+            
+            listaRepViewModel.Limpiar();
+            listaRepViewModel.CargarInfoLista(_listaAvatarControl);
         }
     }
 }

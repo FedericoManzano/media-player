@@ -119,7 +119,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
             List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta())) ?? new List<Cancion>();
 
-            listado = listado.Where(cl => cl.Titulo != c.Titulo).ToList();
+            listado.Remove(c);
+            MessageBox.Show(c.Titulo);
             string ser = JsonConvert.SerializeObject(listado, Formatting.Indented);
             using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
             {

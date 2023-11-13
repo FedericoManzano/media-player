@@ -8,6 +8,7 @@
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       xmlns:infoCancion="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"
+      xmlns:infoListaRep="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoListaPagina"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="InfoListasPage"
@@ -18,104 +19,27 @@
     <Page.DataContext>
         <viewModel:ListaRepViewModel x:Name="listaRepViewModel"/>
     </Page.DataContext>
-    
+
     <Grid Margin="15">
         <Grid.RowDefinitions>
-            <RowDefinition Height="195"/>
+            <RowDefinition Height="230"/>
             <RowDefinition Height="80"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Border CornerRadius="10" Padding="7" Background="#2A2E32">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="160"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="75"/>
-                        <ColumnDefinition Width="75"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="90"/>
-                        <RowDefinition Height="90"/>
-                    </Grid.RowDefinitions>
+        <infoListaRep:InfoListaPaginaControl x:Name="infoLista"
+                ImagenUno="{Binding ListaRep.Imagen1}"
+                ImagenDos="{Binding ListaRep.Imagen2}"
+                ImagenTres="{Binding ListaRep.Imagen3}"
+                ImagenCuatro="{Binding ListaRep.Imagen4}"
+                Nombre="{Binding ListaRep.Nombre}"
+                FechaCreacion="{Binding FechaCreacion}"
+                CancidadCanciones="{Binding ListaRep.CantidadCanciones}"
+                DuracionHoras="{Binding ListaRep.Duracion}"
+                ComandoPlay="{Binding PlayCommandLista}"/>
 
-                    <Border Background="{Binding ListaRep.Imagen1}" Grid.Column="0" Grid.Row="0"/>
-                    <Border Background="{Binding ListaRep.Imagen2}" Grid.Column="0" Grid.Row="1"/>
-                    <Border Background="{Binding ListaRep.Imagen3}" Grid.Column="1" Grid.Row="0"/>
-                    <Border Background="{Binding ListaRep.Imagen4}" Grid.Column="1" Grid.Row="1"/>
-
-                    
-                </Grid>
-                <StackPanel Grid.Column="1">
-                    <TextBlock Text="{Binding ListaRep.Nombre}"
-                               Foreground="White"
-                               FontSize="28"/>
-
-
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Cantidad de canciones"
-                                   Foreground="White"
-                                   FontSize="16"
-                                   Margin="0 10 0 0"/>
-                        <TextBlock Text="·"
-                                   Foreground="White"
-                                   FontSize="16"
-                                   Margin="10 10"/>
-
-                        <TextBlock Text="{Binding ListaRep.CantidadCanciones}"
-                                    Foreground="#ccc"
-                                    FontSize="16"
-                                    Margin="0 10 0 0"/>
-                        
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Duración"
-                                   Foreground="White"
-                                   FontSize="16"
-                                   Margin="0 0 0 0"/>
-                        <TextBlock Text="·"
-                                   Foreground="White"
-                                   FontSize="16"
-                                   Margin="10 0"/>
-
-                        <TextBlock Text="{Binding ListaRep.Duracion}"
-                                    Foreground="#ccc"
-                                    FontSize="16"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Fecha de creación"
-                                   Foreground="White"
-                                   FontSize="16"
-                                   Margin="0 10 0 0"/>
-                        <TextBlock Text="·"
-                                   Foreground="White"
-                                   FontSize="16"
-                                   Margin="10 10"/>
-
-                        <TextBlock Text="{Binding FechaCreacion}"
-                                    Foreground="#ccc"
-                                    FontSize="16"
-                                    Margin="0 10"/>
-                    </StackPanel>
-
-                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                        <Button Style="{StaticResource btnGeneral}" Background="OrangeRed"
-                                Command="{Binding PlayCommandLista}">
-                            <StackPanel Orientation="Horizontal">
-                                <fa:PackIconFontAwesome Kind="PlayCircleRegular" Foreground="Black" Style="{StaticResource btnGeneralIcon}"/>
-                                <TextBlock Text="Reproducir Todo" Foreground="Black" />
-                            </StackPanel>
-                        </Button>
-                    </StackPanel>
-                </StackPanel>
-            </Grid>
-        </Border>
-
-
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 20 0 0">
+        <StackPanel Grid.Row="1" 
+                    Orientation="Horizontal" 
+                    Margin="0 20 0 0">
             <Button Style="{StaticResource btnNavegacion}" 
                     Click="Button_Click"
                     ToolTip="Página anterior">
@@ -154,13 +78,12 @@
                                         AnoInfo="{Binding FechaLanzamiento}"
                                         DuracionInfo="{Binding Duracion}"
                                         ColorTexto="{Binding EstadoColor}"
+                                        BorrarClick="InfoCancionTabla_BorrarClick"
                                         Habilitado="True">
                         </infoCancion:InfoCancionTabla>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </ScrollViewer>
-
-
     </Grid>
 </Page>

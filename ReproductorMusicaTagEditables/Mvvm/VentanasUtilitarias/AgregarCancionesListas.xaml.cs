@@ -4,23 +4,41 @@ using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
 
 namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
 {
-    public partial class AgregarCancionesListas : Window
+    public partial class AgregarCancionesListas : Window, INotifyPropertyChanged
     {
         private ReproductorViewModelBase reproductorViewModelBase;
         private List<Cancion> listadoCancionesAgregar = new List<Cancion>();
         private bool fallos = false;
 
+        public List<Cancion> ListadoCancionesAgregar 
+        { 
+            get => listadoCancionesAgregar;
+            set 
+            { 
+                listadoCancionesAgregar = value;
+                OnPropertyChange(nameof(ListadoCancionesAgregar));
+            } 
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void OnPropertyChange(string property)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
+        }
 
         public AgregarCancionesListas(ReproductorViewModelBase reproductorViewModel)
         {
             InitializeComponent();
             this.reproductorViewModelBase = reproductorViewModel;
+            lstAgregar.ItemsSource = ListadoCancionesAgregar;
         }
 
         public bool AgregarCancion(Cancion c)
@@ -33,9 +51,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
                 Hide();
                 return false;
             }
-            listadoCancionesAgregar = new List<Cancion>() { c };
+            ListadoCancionesAgregar = new List<Cancion>() { c };
+            lstAgregar.ItemsSource = ListadoCancionesAgregar;
             lstListasRepro.ItemsSource = l;
-            lstAgregar.ItemsSource = listadoCancionesAgregar;
+          
             return true;
             
         }
@@ -50,8 +69,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
                 Hide();
                 return false;
             }
-            listadoCancionesAgregar = lista;
-            lstAgregar.ItemsSource= listadoCancionesAgregar;
+          
+            ListadoCancionesAgregar = new List<Cancion>(lista);
+            lstAgregar.ItemsSource= ListadoCancionesAgregar;
             lstListasRepro.ItemsSource = l;
             return true;
         }
@@ -68,7 +88,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
             {
                 lstAgregar.SelectAll();
 
-                listadoCancionesAgregar.ForEach(c =>
+                ListadoCancionesAgregar.ForEach(c =>
                 {
 
                     Cancion cl = BuscarCancion(c);
@@ -102,7 +122,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
 
         private void Salir()
         {
-            listadoCancionesAgregar.Clear();
             fallos = false;
             Hide();
         }

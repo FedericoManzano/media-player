@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
-    public class ListasViewModel:ReproductorViewModel
+    public class ListasViewModel:ReproductorViewModel, IRecolector.IRecolector 
     {
 
         private Dictionary<string, List<string>> _diccionarioLista = new Dictionary<string, List<string>>();
@@ -65,7 +65,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             Listas = _diccionarioLista.DameListadoReproduccion(letra);
         }
 
-
-       
+        public void Limpiar()
+        {
+            _diccionarioLista.Clear();
+            Paginador.Clear();
+            Listas.Clear();
+            System.GC.Collect();    
+        }
     }
 }

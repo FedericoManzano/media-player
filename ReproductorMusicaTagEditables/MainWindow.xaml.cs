@@ -35,7 +35,7 @@ namespace ReproductorMusicaTagEditables
             
             timer = new DispatcherTimer()
             {
-                Interval = TimeSpan.FromSeconds(0.945)
+                Interval = TimeSpan.FromSeconds(1)
             };
             timer.Tick += new EventHandler(Time_Track);
 

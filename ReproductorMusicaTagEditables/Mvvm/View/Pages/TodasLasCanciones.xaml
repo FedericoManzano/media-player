@@ -7,10 +7,10 @@
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:agregarCanciones="clr-namespace:ReproductorMusicaTagEditables.Controls.AgregarALista"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="TodasLasCanciones"
-      >
+      Title="TodasLasCanciones">
 
     <Page.Resources>
         <ResourceDictionary Source="/Mvvm/View/Pages/Theme/generalesPageTheme.xaml"/>
@@ -65,8 +65,16 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="0" Text="Todas las canciones" Foreground="White" FontSize="25" Margin="0 -8 0 0 "/>
-            <Button x:Name="btnCargar" Grid.Column="1" Click="btnCargar_Click">Cargar</Button>
+            <TextBlock Grid.Column="0" Text="Todas las canciones" 
+                       Foreground="White" 
+                       FontSize="25" 
+                       Margin="0 -8 0 0 "/>
+            <agregarCanciones:AgregarAListaControl  HorizontalAlignment="Right"
+                Grid.Column="1"
+                x:Name="agregarControl"
+                AgregarClick="agregarControl_AgregarClick"
+                DesmarcarClick="agregarControl_DesmarcarClick"/>
+            
         </Grid>
 
 
@@ -95,7 +103,6 @@
                                                 PlayClick="InfoCancionTabla_PlayClick"
                                                 ArtistaClick="InfoCancionTabla_ArtistaClick"
                                                 AlbumClick="InfoCancionTabla_AlbumClick"
-                                                AgregarClick="InfoCancionTabla_AgregarClick"
                                                 MouseLeave="InfoCancionTabla_MouseLeave"
                                                 NumeroInfo="{Binding Numero}"
                                                 TituloInfo="{Binding Titulo}"
