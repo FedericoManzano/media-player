@@ -43,6 +43,15 @@
                 <TextBlock Text="{Binding ElementName=infoAlbum, Path=AnoAlbum}" FontSize="10" Foreground="White"/>
             </StackPanel>
         </Grid>
+        <Border.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Agregar a lista" Click="MenuItem_Click">
+                    <MenuItem.Icon>
+                        <fa:PackIconFontAwesome Kind="ListAltRegular"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </ContextMenu>
+        </Border.ContextMenu>
     </Border>
     
 </UserControl>

@@ -1,4 +1,6 @@
 ﻿using ReproductorMusicaTagEditables.Controls.AvatarArtista;
+using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -61,6 +63,14 @@ namespace ReproductorMusicaTagEditables.Controls.AvatarAlbum
         {
             get => (string)GetValue(ArtistaProperty);
             set => SetValue(ArtistaProperty, value);
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            InfoReproductor i = InfoReproductor.DameInstancia();
+            List<Cancion> albums = i.Canciones.Where(c => c.Album == NombreAlbum && c.Artista == NombreArtista).ToList();
+            MainWindow.agregarCancionesListas.AgregarListaCanciones(albums);
+            MainWindow.agregarCancionesListas.Show();
         }
     }
 }

@@ -67,7 +67,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             return res.DuracionString(@"hh\:mm\:ss");
         }
 
-
         public static string DuracionString(this ObservableCollection<Cancion> cancions)
         {
             if (cancions == null || cancions.Count == 0)

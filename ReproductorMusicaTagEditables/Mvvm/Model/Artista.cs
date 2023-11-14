@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 using System.Windows.Media;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Model
@@ -14,7 +10,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         public string CantidadAlbumes { get; set; }
         public string TiempoReproduccion {  get; set; }
         public ImageBrush Imagen {  get; set; }
-
         public override bool Equals(object o)
         {
             if(this == o) return true;
@@ -22,7 +17,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             Artista other = (Artista)o;
             return this.Nombre.Equals(other.Nombre);
         }
-
         public override int GetHashCode() { return 0; }
     }
 }

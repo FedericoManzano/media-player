@@ -1,4 +1,8 @@
 ﻿
+using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -73,6 +77,14 @@ namespace ReproductorMusicaTagEditables.Controls.InfoAlbum
         {
             bordeCapa.Visibility = Visibility.Hidden;
             bordePrincipal.Background = Brushes.Transparent;
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            InfoReproductor i = InfoReproductor.DameInstancia();
+            List<Cancion> albums = i.Canciones.Where(c => c.Album == NombreAlbum).ToList();
+            MainWindow.agregarCancionesListas.AgregarListaCanciones(albums);
+            MainWindow.agregarCancionesListas.Show();
         }
     }
 }

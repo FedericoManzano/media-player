@@ -26,9 +26,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             get => _fechaCreacion; 
             set { _fechaCreacion = value; OnPropertyChanged(nameof(FechaCreacion)); } 
         }
-
-
-
         public ICommand PlayCommandLista { get; }
        
 

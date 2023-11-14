@@ -56,7 +56,8 @@
                     </Button>
                     <Button Style="{StaticResource btnPlayAll}" 
                             Background="Gray" Margin="10 0 0 0"
-                            ToolTip="Agregar canciones del artista a lista de reproducción">
+                            ToolTip="Agregar canciones del artista a lista de reproducción"
+                            Click="Button_Click">
                         <StackPanel Orientation="Horizontal">
                             <fa:PackIconFontAwesome Kind="PlusSolid" Margin="0 0 10 0"/>
                             <TextBlock Text="Agregar"/>

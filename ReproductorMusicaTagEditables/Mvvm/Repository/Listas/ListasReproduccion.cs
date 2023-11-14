@@ -2,6 +2,7 @@
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -163,6 +164,35 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             Crear("FAVORITOS");
         }
 
+        public static bool ActualizarListaReproduccion (string nombreLista)
+        {
+            if(nombreLista != null && !ExisteLista(nombreLista))
+                return false;
+            List<Cancion> cancions = DameListadoCanciones(nombreLista);
+            InfoReproductor i = InfoReproductor.DameInstancia();
+            List<Cancion> res = new List<Cancion> ();
+            foreach(Cancion c in i.Canciones)
+            {
+                foreach (Cancion cl in cancions)
+                {
+                    if(cl.Path == c.Path)
+                    {
+                        c.Cantidad = cl.Cantidad;
+                        res.Add(c);
+                    }
+                        
+                }
+            }
+            if(nombreLista == "FAVORITOS")
+            {
+                res.Sort(delegate (Cancion c1, Cancion c2) {
+                    return c2.Cantidad.CompareTo(c1.Cantidad);
+                });
+            }
+            GuardarListado(nombreLista, res);
+            return true;
+        }
+
         public static bool AgregarCancionAFavoritos(Cancion c)
         {
             if(c == null) return false;
@@ -193,6 +223,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 }
             }
             return false;
+        }
+
+        private static void GuardarListado (string nombreLista, List<Cancion> cancions)
+        {
+            string listaTxt = JsonConvert.SerializeObject(cancions, Formatting.Indented);
+            using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
+            {
+                sw.Write(listaTxt);
+            }
         }
 
         public static List<Cancion> DameListatoFavoritos()

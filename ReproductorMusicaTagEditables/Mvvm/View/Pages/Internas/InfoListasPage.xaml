@@ -35,7 +35,8 @@
                 FechaCreacion="{Binding FechaCreacion}"
                 CancidadCanciones="{Binding ListaRep.CantidadCanciones}"
                 DuracionHoras="{Binding ListaRep.Duracion}"
-                ComandoPlay="{Binding PlayCommandLista}"/>
+                ComandoPlay="{Binding PlayCommandLista}"
+                ActualizarClick="infoLista_ActualizarClick"/>
 
         <StackPanel Grid.Row="1" 
                     Orientation="Horizontal" >

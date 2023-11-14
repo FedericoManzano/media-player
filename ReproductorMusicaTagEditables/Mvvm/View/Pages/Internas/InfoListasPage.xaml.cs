@@ -97,5 +97,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
         {
             listaRepViewModel.ActualizarFiltro();
         }
+
+        private void infoLista_ActualizarClick(object sender, EventArgs e)
+        {
+            ListasReproduccion.ActualizarListaReproduccion(infoLista.Nombre);
+            listaRepViewModel.Limpiar();
+            listaRepViewModel.CargarInfoLista(_listaAvatarControl);
+        }
     }
 }

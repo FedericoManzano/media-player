@@ -94,10 +94,13 @@
                             <TextBlock Text="Reproducir todo" Margin="5 0 0 0"/>
                         </StackPanel>
                     </Button>
-                    <Button Style="{StaticResource btnPlayAll}" Margin="10 0 0 0" Background="Gray">
+                    <Button Style="{StaticResource btnPlayAll}" 
+                            Margin="10 0 0 0" 
+                            Background="Gray"
+                            Click="OnActualizarClick">
                         <StackPanel Orientation="Horizontal">
-                            <fa:PackIconFontAwesome Kind="EditRegular" />
-                            <TextBlock Text="Editar" Margin="5 0 0 0"/>
+                            <fa:PackIconFontAwesome Kind="UploadSolid" />
+                            <TextBlock Text="Actualizar" Margin="5 0 0 0"/>
                         </StackPanel>
                     </Button>
                 </StackPanel>

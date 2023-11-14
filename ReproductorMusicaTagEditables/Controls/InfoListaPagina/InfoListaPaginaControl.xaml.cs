@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -102,5 +103,20 @@ namespace ReproductorMusicaTagEditables.Controls.InfoListaPagina
             get => GetValue(ComandoPlayProperty) as ICommand;
             set => SetValue(ComandoPlayProperty, value);
         }
+
+
+        public static RoutedEvent ActualizarClickEvent = 
+            EventManager.RegisterRoutedEvent("ActualizarClick", RoutingStrategy.Bubble, typeof(EventHandler), typeof(InfoListaPaginaControl));
+    
+        public event EventHandler ActualizarClick
+        {
+            add { AddHandler(ActualizarClickEvent, value); }
+            remove {  RemoveHandler(ActualizarClickEvent, value);}
+        }
+
+        public void OnActualizarClick (object sender, RoutedEventArgs e)
+        {
+            RaiseEvent(new RoutedEventArgs(ActualizarClickEvent));  
+        } 
     }
 }
