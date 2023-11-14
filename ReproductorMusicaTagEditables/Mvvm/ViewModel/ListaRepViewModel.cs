@@ -45,7 +45,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             FechaCreacion = ListasReproduccion.FechaCreacion(ListaRep.Nombre);
             Irg.Presentacion = new ObservableCollection<Cancion>(DameListaPorPartes(ListaRep.Nombre,0,10));
             Irg.Presentacion = new ObservableCollection<Cancion>(await ListadoCancionesFiltrado());
-            ActualizarFiltro();
         }
 
           
@@ -146,13 +145,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     Irg.Presentacion.Add(l[i]);
                 }
             }
+            Irg.Seleccionar();
         }
 
         public void Limpiar()
         {
            ListaRep = new ListaRep();
            Irg.Presentacion = new ObservableCollection<Cancion>();
-           
            System.GC.Collect();   
         }
     }

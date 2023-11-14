@@ -34,6 +34,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public void CargarListasReproduccion()
         {
+            Irg.IsMensajeVisible = System.Windows.Visibility.Visible;
             Listas.Clear();
             _diccionarioLista.Clear();
             List<string> listasNombre = ListasReproduccion.ListadoNombres();
@@ -56,6 +57,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 Paginador = Paginador.MarcarClave(Paginador.Keys.First());
                 Listas = _diccionarioLista.DameListadoReproduccion(Paginador.Keys.First());
             }
+            if( _diccionarioLista.Count > 0 )
+                Irg.IsMensajeVisible = System.Windows.Visibility.Collapsed;
         }
 
         public void ActualizarListas(string letra)

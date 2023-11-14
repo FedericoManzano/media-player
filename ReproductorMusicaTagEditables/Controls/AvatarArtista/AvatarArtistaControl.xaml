@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.AvatarArtista"
              mc:Ignorable="d" x:Name="avatarArtist">
     <Grid>
         <Grid.RowDefinitions>
@@ -13,7 +12,9 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
         </Grid.ColumnDefinitions>
-        <Border Cursor="Hand" CornerRadius="100" Background="{Binding ElementName=avatarArtist, Path=ImagenArtista}"/>
+        <Border Cursor="Hand" 
+                CornerRadius="100" 
+                Background="{Binding ElementName=avatarArtist, Path=ImagenArtista}"/>
         <TextBlock Grid.Row="1" Text="{Binding ElementName=avatarArtist, Path=NombreArtista}"
                    Foreground="White"
                    FontSize="15"

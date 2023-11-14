@@ -28,6 +28,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
         {
             Irg.Reproductor.Source = new Uri(Irg.CancionActual.Cancion.Path);
             Irg.Reproductor.Play();
+            Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
         }
         public int IndexRandom(ObservableCollection<Cancion> canciones)
         {

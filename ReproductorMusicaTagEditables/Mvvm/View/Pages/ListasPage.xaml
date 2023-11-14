@@ -3,7 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View.Pages"
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:avatarLista="clr-namespace:ReproductorMusicaTagEditables.Controls.ListaAvatar"
       xmlns:btnPag="clr-namespace:ReproductorMusicaTagEditables.Controls.Paginador"
@@ -44,7 +43,6 @@
             <Button Grid.Column="1" 
                     HorizontalAlignment="Right" 
                     Style="{StaticResource btnNavegacion}"
-                    Margin="0 0 0 0"
                     Width="120"
                     Click="Button_Click">
 
@@ -60,6 +58,15 @@
             </Button>
         </Grid>
 
+        <TextBlock x:Name="txtSinCanciones" 
+                   Text="No hay canciones cargadas" 
+                   Foreground="#ccc" 
+                   Grid.Row="1"
+                   FontSize="22"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Visibility="{Binding Irg.IsMensajeVisible}"/>
+        
         <ScrollViewer VerticalScrollBarVisibility="Auto" 
               Grid.Row="1"
               Visibility="{Binding Irg.IslistadoVisible}">

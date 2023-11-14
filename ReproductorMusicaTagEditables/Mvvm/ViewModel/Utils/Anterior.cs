@@ -15,6 +15,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
            
             if (EstadosControl.RANDOM)
             {
+                Irg.CancionActual.Index = IndexRandom(Irg.CancionesFiltradas);
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
                 if (!System.IO.File.Exists(Irg.CancionActual.Cancion.Path))
                 {
@@ -36,6 +37,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
             }
+            
             ListasReproduccion.AgregarCancionAFavoritos(Irg.CancionActual.Cancion);
         }
     }

@@ -65,15 +65,16 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="0" Text="Todas las canciones" 
+            <TextBlock Grid.Column="0" 
+                       Text="Todas las canciones" 
                        Foreground="White" 
                        FontSize="25" 
                        Margin="0 -8 0 0 "/>
             <agregarCanciones:AgregarAListaControl  HorizontalAlignment="Right"
-                Grid.Column="1"
-                x:Name="agregarControl"
-                AgregarClick="agregarControl_AgregarClick"
-                DesmarcarClick="agregarControl_DesmarcarClick"/>
+                                                    Grid.Column="1"
+                                                    x:Name="agregarControl"
+                                                    AgregarClick="agregarControl_AgregarClick"
+                                                    DesmarcarClick="agregarControl_DesmarcarClick"/>
             
         </Grid>
 

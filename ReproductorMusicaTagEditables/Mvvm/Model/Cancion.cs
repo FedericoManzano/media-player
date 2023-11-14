@@ -2,11 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Windows.Media;
-using Microsoft.WindowsAPICodePack.Shell;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
-using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Model
 {
@@ -50,7 +47,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             DuracionLong = c.DuracionLong;
             EstadoColor = c.EstadoColor;
         }
-
         public Cancion CrearCancion(string path)
         {
             if(System.IO.File.Exists(path))
@@ -105,7 +101,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             string tit = tag.Tag.Album ?? "Desconocido";
             return tit;
         }
-        
         private string ExtraerFechaLanzamiento (TagLib.File tag)
         {
             return tag.Tag.Year.ToString();

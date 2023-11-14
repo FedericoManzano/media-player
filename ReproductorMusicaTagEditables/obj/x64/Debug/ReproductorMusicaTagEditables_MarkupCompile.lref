@@ -1,6 +1,5 @@
 ﻿
 
-FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Controls\AvatarArtista\AvatarArtistaControl.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Controls\CampoBuscador\CampoBuscadorControl.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Controls\InfoListaPagina\InfoListaPaginaControl.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Controls\ManejadorVentana\ManejadorVentana.xaml;;
@@ -10,7 +9,6 @@ FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagE
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\MainWindow.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\VentanasUtilitarias\AgregarCancionesListas.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\VentanasUtilitarias\CrearListaReproduccion.xaml;;
-FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\AlbumesView.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\ArtistaView.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\FavoritosView.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\FavoritosPage.xaml;;
@@ -21,5 +19,4 @@ FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagE
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\TodasLasCanciones.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\TodosLosAlbumes.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\TodosLosArtistas.xaml;;
-FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\PrincipalView.xaml;;
 
