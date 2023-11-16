@@ -182,6 +182,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\InfoCancionTablaTags\InfoCancionTablaTagsControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\InfoCancionTabla\InfoCancionTabla.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -273,6 +277,9 @@
     <Compile Include="Controls\InfoArtista\InfoArtista.xaml.cs">
       <DependentUpon>InfoArtista.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\InfoCancionTablaTags\InfoCancionTablaTagsControl.xaml.cs">
+      <DependentUpon>InfoCancionTablaTagsControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\InfoCancionTabla\InfoCancionTabla.xaml.cs">
       <DependentUpon>InfoCancionTabla.xaml</DependentUpon>
     </Compile>
@@ -308,6 +315,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Mvvm\VentanasUtilitarias\CrearListaReproduccion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mvvm\VentanasUtilitarias\EditarTags.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mvvm\VentanasUtilitarias\TagsThemes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -416,6 +431,9 @@
     <Compile Include="Mvvm\VentanasUtilitarias\CrearListaReproduccion.xaml.cs">
       <DependentUpon>CrearListaReproduccion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mvvm\VentanasUtilitarias\EditarTags.xaml.cs">
+      <DependentUpon>EditarTags.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Mvvm\ViewModel\AlbumesViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Base\CancionActual.cs" />
@@ -425,6 +443,7 @@
     <Compile Include="Mvvm\ViewModel\Base\Info\Metodos\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\Info\PropiedadesListados\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
+    <Compile Include="Mvvm\ViewModel\EditorTagsViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\FavoritosViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoAlbumViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoArtistaViewModel.cs" />

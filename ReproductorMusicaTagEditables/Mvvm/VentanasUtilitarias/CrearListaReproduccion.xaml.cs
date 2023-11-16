@@ -55,10 +55,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
             {
                 if (!ListasReproduccion.ExisteLista(txtTitulo.Texto))
                 {
-                    ListasReproduccion.Crear(txtTitulo.Texto);
-                    txtTitulo.Texto = "";
-                    MensajeestadoOk();
-                    lista.CargarListasReproduccion();
+                    if(ListasReproduccion.Crear(txtTitulo.Texto))
+                    {
+                        MessageBox.Show($"La lista {txtTitulo.Texto} fué creada exitosamente.");
+                        txtTitulo.Texto = "";
+                        
+                        lista.CargarListasReproduccion();
+                        Hide();
+                    }
                 }
                 else
                 {

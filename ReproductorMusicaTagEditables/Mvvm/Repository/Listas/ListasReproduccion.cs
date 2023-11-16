@@ -1,18 +1,19 @@
 ﻿using Newtonsoft.Json;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
-using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Windows;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 {
+    /// <summary>
+    /// Gestor de lista de reproducción 
+    /// </summary>
     public  class ListasReproduccion
     {
 
@@ -133,7 +134,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             return true;
         }
 
-
         public static List<Cancion> DameListadoCanciones (string nombreLista)
         {
             if (string.IsNullOrEmpty(nombreLista)) return new List<Cancion>();
@@ -142,7 +142,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta())) ?? new List<Cancion>();
             return listado;
         }
-
 
         public static string CalcularDuracionLista(string nombreLista)
         {
@@ -166,7 +165,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
         public static bool ActualizarListaReproduccion (string nombreLista)
         {
-            if(nombreLista != null && !ExisteLista(nombreLista))
+            if(string.IsNullOrEmpty(nombreLista) && !ExisteLista(nombreLista))
                 return false;
             List<Cancion> cancions = DameListadoCanciones(nombreLista);
             InfoReproductor i = InfoReproductor.DameInstancia();
@@ -178,6 +177,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                     if(cl.Path == c.Path)
                     {
                         c.Cantidad = cl.Cantidad;
+                        c.EstadoColor = "White";
                         res.Add(c);
                     }
                         
@@ -237,9 +237,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         public static List<Cancion> DameListatoFavoritos()
         {
             List<Cancion> listaFav = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText("FAVORITOS".Ruta()));
-         
             return listaFav == null ? new List<Cancion>(): listaFav;
-
         }
     }
 }

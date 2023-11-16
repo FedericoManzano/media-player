@@ -3,12 +3,12 @@
 
 
     <Style x:Key="campoTextoBox" TargetType="TextBox">
-        <Setter Property="MinWidth" Value="250"/>
-        <Setter Property="MinHeight" Value="35"/>
-        <Setter Property="MaxHeight" Value="40"/>
+        <Setter Property="MinWidth" Value="330"/>
+        <Setter Property="MinHeight" Value="40"/>
+        <Setter Property="MaxHeight" Value="45"/>
         <Setter Property="Panel.ZIndex" Value="-1"/>
-        <Setter Property="Padding" Value="4 8"/>
-
+        <Setter Property="Padding" Value="4 8 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
 
         <Setter Property="Template">
             <Setter.Value>
@@ -35,6 +35,8 @@
     <Style x:Key="placeholder" TargetType="TextBlock">
         <Setter Property="Margin" Value="10 0"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="MaxWidth" Value="45"/>
     </Style>
     
 </ResourceDictionary>

@@ -62,8 +62,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
 
         private void listaRepro_Loaded(object sender, RoutedEventArgs e)
         {
+            
             listaRepViewModel.Limpiar();
             listaRepViewModel.CargarInfoLista(_listaAvatarControl);
+            ListasReproduccion.ActualizarListaReproduccion(infoLista.Nombre);
         }
 
         private void listaRepro_Unloaded(object sender, RoutedEventArgs e)

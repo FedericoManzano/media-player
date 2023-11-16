@@ -1,6 +1,7 @@
 ﻿
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
+using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
 using System.Windows.Controls;
@@ -91,6 +92,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             agregarControl.Visibilidad = System.Windows.Visibility.Hidden;
         }
 
-        
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            EditarTags editor = new EditarTags();
+            editor.Show();
+        }
     }
 }

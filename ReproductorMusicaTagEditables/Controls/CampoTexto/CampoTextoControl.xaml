@@ -5,7 +5,7 @@
     <UserControl.Resources>
         <ResourceDictionary Source="/Controls/CampoTexto/CampoTextoTheme.xaml"/>
     </UserControl.Resources>
-    <Grid>
+    <Grid VerticalAlignment="Center" MinHeight="40" HorizontalAlignment="Left">
         <TextBlock x:Name="txtPlaceholder" 
                    Text="{Binding ElementName=campoTexto, Path=PlaceholderTexto}" 
                    Style="{StaticResource placeholder}"

@@ -90,7 +90,7 @@
                             Grid.Row="2" 
                             Background="#1E2123"
                             >
-                        <Grid  >
+                        <Grid>
                             <Grid >
                                 <!-- Filas 2 de la grilla-->
                                 <Grid.RowDefinitions>
