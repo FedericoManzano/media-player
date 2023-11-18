@@ -57,7 +57,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                     Path = path,
 
                     Numero = ExtraerNumero(tag),
-                    Titulo = ExtraerTitulo(tag, path).Longitud(20),
+                    Titulo = ExtraerTitulo(tag, path),
                     Artista = ExtraerArtista(tag).Longitud(20),
                     Genero = ExtraerGenero(tag).Longitud(20),
                     Album = ExtraerAlbum(tag).Longitud(20),

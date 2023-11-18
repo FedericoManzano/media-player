@@ -8,6 +8,7 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Forms;
+using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
 {
@@ -96,6 +97,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
                     agregarControl.Visibilidad = System.Windows.Visibility.Hidden;
                 }
             }
+        }
+
+        private void InfoAlbumPaginaControl_Modificar(object sender, EventArgs e)
+        {
+            EditarTags ed = new EditarTags(infoAlbum.Irg.Presentacion);
+            ed.ShowDialog();
         }
     }
 }

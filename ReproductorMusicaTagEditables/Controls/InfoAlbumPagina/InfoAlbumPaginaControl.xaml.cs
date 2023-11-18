@@ -118,6 +118,24 @@ namespace ReproductorMusicaTagEditables.Controls.InfoAlbumPagina
 
         #endregion
 
+        #region Evento Editar
+        public static RoutedEvent ModificarEvent =
+            EventManager.RegisterRoutedEvent("Modificar", RoutingStrategy.Bubble, typeof(EventHandler), typeof(InfoAlbumPaginaControl));
+        
+        public event EventHandler Modificar
+        {
+            add => AddHandler(ModificarEvent, value);   
+            remove => RemoveHandler(ModificarEvent, value); 
+        }
+
+
+        public void OnModificar(object sender, RoutedEventArgs e)
+        {
+            RaiseEvent(new RoutedEventArgs(ModificarEvent));    
+        }
+
+
+        #endregion
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             InfoReproductor i = InfoReproductor.DameInstancia();

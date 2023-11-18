@@ -64,8 +64,10 @@
                         </StackPanel>
                     </Button>
                     <Button Style="{StaticResource btnPlayAll}" 
-                            Background="Gray" Margin="10 0 0 0"
-                            ToolTip="Modificar la metadata de los tracks.">
+                            Background="Gray" 
+                            Margin="10 0 0 0"
+                            ToolTip="Modificar la metadata de los tracks."
+                            Click="OnModificar">
                         <StackPanel Orientation="Horizontal">
                             <fa:PackIconFontAwesome Kind="TagSolid" Margin="0 0 10 0"/>
                             <TextBlock Text="Modificar"/>

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="EditarTags" Height="720" Width="1170"
+        Title="EditarTags" Height="750" Width="1230"
         WindowStartupLocation="CenterScreen"
         xmlns:tupla="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags"
         xmlns:texto="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoTexto"
@@ -35,7 +35,7 @@
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="750"/>
+                    <ColumnDefinition Width="800"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
@@ -44,7 +44,6 @@
                         <RowDefinition Height="80"/>
                         <RowDefinition Height="80"/>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="80"/>
                     </Grid.RowDefinitions>
                     <TextBlock Text="Gestor de Tags"
                                FontSize="35" 
@@ -65,6 +64,19 @@
                             </StackPanel>
                         </Button>
                     </StackPanel>
+                    <StackPanel Grid.Row="2" VerticalAlignment="Center" 
+                                HorizontalAlignment="Center"
+                                Visibility="{Binding MjeVacio}">
+                        <TextBlock Text="No Hay Canciones seleccionadas" 
+                                   Foreground="White" FontSize="30" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"/>
+                        <TextBlock Text="Seleccione las canciones desde el botón seleccionar" 
+                                   Foreground="#ccc" FontSize="18" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"/>
+                    </StackPanel>
+                    
                     <ScrollViewer x:Name="scrollCanciones" 
                                   Grid.Row="2" 
                                   VerticalScrollBarVisibility="Auto">

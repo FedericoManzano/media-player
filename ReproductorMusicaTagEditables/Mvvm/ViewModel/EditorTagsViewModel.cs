@@ -12,6 +12,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Media;
 
@@ -106,11 +107,23 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         #endregion
 
+        private bool err = false;
+        private Visibility _mjeVacio = Visibility.Visible;
 
-
+        public Visibility MjeVacio
+        {
+            get => _mjeVacio;
+            set { _mjeVacio = value; OnPropertyChanged(nameof(MjeVacio)); }
+        }
 
         public void EditarTags ()
         {
+            if(CancionesSeleccionadas.Count <= 0)
+            {
+                System.Windows.Forms.MessageBox.Show(
+                           $"No hay canciones seleccionadas.", "Mensaje Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             InfoReproductor ir = InfoReproductor.DameInstancia();
             foreach (var c in CancionesSeleccionadas)
             {
@@ -134,16 +147,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                                 return c;
                             return cl;
                         }).ToList();
-                        Canciones = new ObservableCollection<Cancion>(Canciones);
-                        CancionesSeleccionadas.Clear();
-                        RepositorioDeCanciones.GuardarCanciones(ir.Canciones);
+
                     }
                     else
                     {
                         System.Windows.Forms.MessageBox.Show(
                             $"El archivo físico {c.Path} fué eliminado en tiempo de ejecución.", "Mensaje error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        err = true;
                     }
-
+                    
                 }
                 catch (IOException e)
                 {
@@ -155,7 +167,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                         "Mensaje error",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
+                    err = true;
                 }
+            }
+            Canciones = new ObservableCollection<Cancion>(Canciones);
+            RepositorioDeCanciones.GuardarCanciones(ir.Canciones);
+            CancionesSeleccionadas.Clear();
+            if(!err)
+            {
+                err = !err;
+                System.Windows.Forms.MessageBox.Show(
+                           $"Las canciones fueron editadas con exito", "Mensaje Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -240,6 +262,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             if(fc.ShowDialog() == DialogResult.OK)
             {
                 CancionesSeleccionadas.Clear();
+                MjeVacio = Visibility.Collapsed;
                 CargarMusica cargarMusica = new CargarMusicaDesdeDirectorio();
                 List<string> paths = new List<string>(await cargarMusica.IniciarCargaReproductor(fc.SelectedPath));
                 Canciones = new ObservableCollection<Cancion>(await cargarMusica.CargarListadoDeCancionesAsync(paths));        

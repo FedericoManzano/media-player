@@ -13,7 +13,7 @@
     <Style x:Key="txtInfoCancion" TargetType="TextBlock">
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontSize" Value="13"/>
-        
+        <Setter Property="HorizontalAlignment" Value="Left"/>
     </Style>
     
     <Style x:Key="btnPlay" TargetType="Button">

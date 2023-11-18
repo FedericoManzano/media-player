@@ -27,6 +27,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <RadioButton x:Name="btnSelector" Style="{StaticResource btnPlayRadio}"
                     Click="Button_Click">
@@ -38,20 +39,20 @@
             <TextBlock Grid.Column="2" 
                        Text="{Binding ElementName=infoCancion, Path=Titulo}" 
                        Style="{StaticResource txtInfoCancion}"
-                       Grid.ColumnSpan="3"/>
-            <TextBlock Grid.Column="5" 
+                       Grid.ColumnSpan="4"/>
+            <TextBlock Grid.Column="6" 
                        Text="{Binding ElementName=infoCancion, Path=Artista}" 
                        Style="{StaticResource txtInfoCancion}"
                        Grid.ColumnSpan="2"/>
-            <TextBlock Grid.Column="7" 
+            <TextBlock Grid.Column="8" 
                        Text="{Binding ElementName=infoCancion, Path=Album}" 
                        Style="{StaticResource txtInfoCancion}"
                        Grid.ColumnSpan="3"/>
-            <TextBlock Grid.Column="10" 
+            <TextBlock Grid.Column="11" 
                        Text="{Binding ElementName=infoCancion, Path=Genero}" 
                        Style="{StaticResource txtInfoCancion}"
                        Grid.ColumnSpan="3"/>
-            <TextBlock Grid.Column="13" 
+            <TextBlock Grid.Column="14" 
                        Text="{Binding ElementName=infoCancion, Path=Ano}" 
                        Style="{StaticResource txtInfoCancion}"/>
         </Grid>

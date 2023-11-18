@@ -3,6 +3,7 @@ using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
@@ -18,6 +19,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
         {
             InitializeComponent();
             
+        }
+
+
+
+        public EditarTags(ObservableCollection<Cancion> cancionesAlbum)
+        {
+            InitializeComponent();
+            editorTags.Canciones = new ObservableCollection<Cancion>(cancionesAlbum);
+            editorTags.MjeVacio = Visibility.Collapsed;
         }
 
         private bool _todosSeleccionados = false;
@@ -302,11 +312,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
                 {
                     Cancion c = (Cancion)i;
                     editorTags.CancionesSeleccionadas.Add(c);
-                    CargarCancionCampos(c);
                 }
-
-                DeshabilitarCampoNumero();
-                DeshabilitarCampoTitulo();
+                if(editorTags.CancionesSeleccionadas.Count > 0)
+                {
+                    editorTags.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(editorTags.CancionesSeleccionadas[0].Path);
+                    DeshabilitarCampoNumero();
+                    DeshabilitarCampoTitulo();
+                }
+                
             } else
             {
                 editorTags.IconoMarcado = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.SquareRegular;

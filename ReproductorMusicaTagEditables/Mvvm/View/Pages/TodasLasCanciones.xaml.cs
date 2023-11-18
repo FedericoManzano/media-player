@@ -95,7 +95,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             EditarTags editor = new EditarTags();
-            editor.Show();
+            editor.ShowDialog();
         }
     }
 }
