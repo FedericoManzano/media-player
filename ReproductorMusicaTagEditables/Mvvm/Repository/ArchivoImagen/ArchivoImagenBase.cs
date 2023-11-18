@@ -17,9 +17,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen
 
         protected BitmapImage bitmapImage = new BitmapImage();
 
-        public abstract ImageBrush DameImagen(string path);
+        public abstract ImageBrush DameImagen(string path = null);
 
-        public static IArchivoImagen archivoImagenFabrica(int opcionImagen, string path = null )
+        public static IArchivoimagen.IArchivoImagen archivoImagenFabrica(int opcionImagen, string path = null )
         {
             switch (opcionImagen)
             {

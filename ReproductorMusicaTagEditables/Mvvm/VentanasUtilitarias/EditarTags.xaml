@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="EditarTags" Height="720" Width="1100"
+        Title="EditarTags" Height="720" Width="1170"
         WindowStartupLocation="CenterScreen"
         xmlns:tupla="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags"
         xmlns:texto="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoTexto"
@@ -35,7 +35,7 @@
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="650"/>
+                    <ColumnDefinition Width="750"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
@@ -51,7 +51,7 @@
                                Foreground="White" VerticalAlignment="Center"/>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center"
                                 Grid.Row="1">
-                        <Button Style="{StaticResource btnPlayAll}" Background="#ccc">
+                        <Button Style="{StaticResource btnPlayAll}" Background="#ccc" Click="Button_Click_3">
                             <StackPanel Orientation="Horizontal">
                                 <fa:PackIconFontAwesome Kind="SquareRegular"/>
                                 <TextBlock Text="Marcar Todos" Margin="5 0 0 0"/>
@@ -65,8 +65,12 @@
                             </StackPanel>
                         </Button>
                     </StackPanel>
-                    <ScrollViewer x:Name="scrollCanciones" Grid.Row="2" VerticalScrollBarVisibility="Auto">
-                        <ItemsControl  x:Name="itemList" ItemsSource="{Binding Canciones}">
+                    <ScrollViewer x:Name="scrollCanciones" 
+                                  Grid.Row="2" 
+                                  VerticalScrollBarVisibility="Auto">
+                        <ItemsControl  x:Name="itemList" 
+                                       ItemsSource="{Binding Canciones}"
+                                       Tag="{Binding IconoMarcado}">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <StackPanel />
@@ -75,21 +79,19 @@
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
                                     <tupla:InfoCancionTablaTagsControl 
+                                        MouseLeave="InfoCancionTablaTagsControl_MouseLeave"
                                         Numero="{Binding Numero}"
                                         Titulo="{Binding Titulo}"
                                         Artista="{Binding Artista}"
                                         Album="{Binding Album}"
                                         Genero="{Binding Genero}"
-                                        Ano="{Binding FechaLanzamiento}">
+                                        Ano="{Binding FechaLanzamiento}"
+                                        IconMarcado="{Binding Path=Tag, RelativeSource={RelativeSource AncestorType=ItemsControl}  }">
                                     </tupla:InfoCancionTablaTagsControl>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
                     </ScrollViewer>
-                    <TextBlock Text="Mensaje de estado" Grid.Row="3"
-                               Foreground="LightGreen"
-                               FontSize="25"
-                               VerticalAlignment="Center"/>
                 </Grid>
                 <Grid Grid.Column="1" Margin="30 0 0 0">
                     <Grid.RowDefinitions>
@@ -102,7 +104,8 @@
                                 VerticalAlignment="Center"
                                 Grid.Row="1"
                                 Margin="5 0 0 0">
-                        <Button Style="{StaticResource btnPlayAll}" Background="Gray">
+                        <Button Style="{StaticResource btnPlayAll}" 
+                                Background="Gray" Click="Button_Click_2">
                             <StackPanel Orientation="Horizontal">
                                 <fa:PackIconFontAwesome Kind="BroomSolid"/>
                                 <TextBlock Text="Limpiar Campos" Margin="5 0 0 0"/>
@@ -117,49 +120,65 @@
                         </Button>
                     </StackPanel>
                     <StackPanel Grid.Row="2">
+                        
                         <texto:CampoTextoControl
-                            Fondo="#2A2E32"
-                            PlaceholderColor="#ccc"
-                            PlaceholderTexto="Nombre del archivo"
-                            ColorTexto="White"/>
-                        <texto:CampoTextoControl
+                            x:Name="txtNumero"
                             Fondo="#2A2E32"
                             PlaceholderColor="#ccc"
                             PlaceholderTexto="Número"
                             ColorTexto="White"
-                            Margin="0 10 0 0"/>
+                            Margin="0 10 0 0"
+                            Texto="{Binding Numero, Mode=TwoWay}"/>
                         <texto:CampoTextoControl
+                            x:Name="txtTitulo"
                              Fondo="#2A2E32"
                              PlaceholderColor="#ccc"
                              PlaceholderTexto="Título"
                              ColorTexto="White"
-                             Margin="0 10 0 0"/>
+                             Margin="0 10 0 0"
+                             Texto="{Binding Titulo, Mode=TwoWay}"/>
                         <texto:CampoTextoControl
+                            x:Name="txtArtista"
                              Fondo="#2A2E32"
                              PlaceholderColor="#ccc"
                              PlaceholderTexto="Artista"
                              ColorTexto="White"
-                             Margin="0 10 0 0"/>
+                             Margin="0 10 0 0"
+                            Texto="{Binding Artista, Mode=TwoWay}"/>
                         <texto:CampoTextoControl
+                              x:Name="txtAlbum"
                               Fondo="#2A2E32"
                               PlaceholderColor="#ccc"
                               PlaceholderTexto="Álbum"
                               ColorTexto="White"
-                              Margin="0 10 0 0"/>
+                              Margin="0 10 0 0"
+                            Texto="{Binding Album, Mode=TwoWay}"/>
                         <texto:CampoTextoControl
+                              x:Name="txtGenero"
                               Fondo="#2A2E32"
                               PlaceholderColor="#ccc"
-                              PlaceholderTexto="Fecha Lanzamiento"
+                              PlaceholderTexto="Género"
                               ColorTexto="White"
-                              Margin="0 10 0 0"/>
+                              Margin="0 10 0 0"
+                            Texto="{Binding Genero, Mode=TwoWay}"/>
+                        <texto:CampoTextoControl
+                              x:Name="txtAno"
+                              Fondo="#2A2E32"
+                              PlaceholderColor="#ccc"
+                              PlaceholderTexto="Año"
+                              ColorTexto="White"
+                              Margin="0 10 0 0"
+                            Texto="{Binding Ano, Mode=TwoWay}"/>
                         <StackPanel Orientation="Horizontal" Margin="0 15 0 0">
-                            <Border Width="100"
-                                    Height="100">
-                                <Border.Background>
-                                    <ImageBrush ImageSource="/Images/laRenga.jpg"/>
-                                </Border.Background>
+                            <Border Width="80"
+                                    Height="80"
+                                    Cursor="Hand"
+                                    MouseLeftButtonUp="imagenAlbum_MouseLeftButtonUp"
+                                    x:Name="imagenAlbum"
+                                    Background="{Binding Imagen, Mode=TwoWay}">
                             </Border>
-                            <Button Style="{StaticResource btnPlayAll}" 
+                            <Button Style="{StaticResource btnPlayAll}"
+                                    Click="Button_Click_1"
                                     Margin="10 0 0 0" Background="LightSkyBlue">
                                 <StackPanel Orientation="Horizontal">
                                     <fa:PackIconFontAwesome Kind="EditRegular"/>
@@ -170,7 +189,8 @@
 
                     </StackPanel>
                     <Grid Grid.Row="3" HorizontalAlignment="Right">
-                        <Button Style="{StaticResource btnPlayAll}" Background="Gray">
+                        <Button Style="{StaticResource btnPlayAll}" Background="Gray"
+                                Click="Button_Click_4">
                             <StackPanel Orientation="Horizontal">
                                 <fa:PackIconFontAwesome Kind="DoorClosedSolid"/>
                                 <TextBlock Text="Salir" Margin="5 0 0 0"/>

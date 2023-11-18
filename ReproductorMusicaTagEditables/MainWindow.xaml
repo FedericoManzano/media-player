@@ -88,8 +88,7 @@
                     <!-- Control de track-->
                     <Border CornerRadius="0 0 10 0" 
                             Grid.Row="2" 
-                            Background="#1E2123"
-                            >
+                            Background="#1E2123">
                         <Grid>
                             <Grid >
                                 <!-- Filas 2 de la grilla-->

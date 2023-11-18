@@ -17,6 +17,7 @@
                  Background="{Binding ElementName=campoTexto,Path=Fondo}"
                  BorderBrush="{Binding ElementName=campoTexto, Path=ColorBorde}"
                  Foreground="{Binding ElementName=campoTexto, Path=ColorTexto}"
+                 IsEnabled="{Binding ElementName=campoTexto, Path=Habilitado}"
                  FontSize="15"
                  GotFocus="txtBox_GotFocus"
                  LostFocus="txtBox_LostFocus"

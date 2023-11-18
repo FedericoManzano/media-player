@@ -49,6 +49,20 @@ namespace ReproductorMusicaTagEditables.Controls.CampoTexto
             set => SetValue(PlaceholderColorProperty, value);
         }
 
+
+        public static DependencyProperty HabilitadoProperty =
+            DependencyProperty.Register("Habilitado", typeof(bool), typeof(CampoTextoControl), new PropertyMetadata(true));
+
+
+        public bool Habilitado
+        {
+            get => (bool) GetValue(HabilitadoProperty);
+            set => SetValue(HabilitadoProperty, value);
+        }
+
+
+        public Visibility VisibilidadPaceholder { get; set; } = Visibility.Visible;
+
         #endregion
 
 
@@ -121,6 +135,15 @@ namespace ReproductorMusicaTagEditables.Controls.CampoTexto
         {
             if(string.IsNullOrEmpty(txtBox.Text))
                 txtPlaceholder.Visibility = Visibility.Visible;
+        }
+
+        public void DesaparecerPlaceholder ()
+        {
+            txtPlaceholder.Visibility = Visibility.Collapsed;
+        }
+        public void AparecerPlaceholder()
+        {
+            txtPlaceholder.Visibility = Visibility.Visible;
         }
     }
 }

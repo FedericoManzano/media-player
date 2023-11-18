@@ -798,65 +798,9 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "01 Thunderstruck (Li...",
-    "Artista": "ACDC",
-    "Album": "LIVE",
-    "Genero": "HARD ROCK",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\01 Thunderstruck (Live - 1991).mp3",
-    "Duracion": "06:35",
-    "FechaLanzamiento": "1992",
-    "EstadoColor": "White",
-    "DuracionLong": 3952326530,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "02 Shoot to Thrill (...",
-    "Artista": "ACDC",
-    "Album": "LIVE",
-    "Genero": "HARD ROCK",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\02 Shoot to Thrill (Live - 1991).mp3",
-    "Duracion": "05:20",
-    "FechaLanzamiento": "1992",
-    "EstadoColor": "White",
-    "DuracionLong": 3204963265,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "03 Back In Black (Li...",
-    "Artista": "ACDC",
-    "Album": "LIVE",
-    "Genero": "HARD ROCK",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\03 Back In Black (Live - 1991).mp3",
-    "Duracion": "04:26",
-    "FechaLanzamiento": "1992",
-    "EstadoColor": "White",
-    "DuracionLong": 2666318367,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "04 Who Made Who (Liv...",
-    "Artista": "ACDC",
-    "Album": "LIVE",
-    "Genero": "HARD ROCK",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\04 Who Made Who (Live - 1991).mp3",
-    "Duracion": "05:15",
-    "FechaLanzamiento": "1992",
-    "EstadoColor": "White",
-    "DuracionLong": 3150367346,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "05 Heatseeker (Live ...",
-    "Artista": "ACDC",
+    "Numero": "5",
+    "Titulo": "LIVE-ACDC",
+    "Artista": "acdc",
     "Album": "LIVE",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\05 Heatseeker (Live - 1991).mp3",
@@ -868,9 +812,9 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "06 The Jack (Live - ...",
-    "Artista": "ACDC",
+    "Numero": "6",
+    "Titulo": "LIVE",
+    "Artista": "acdc",
     "Album": "LIVE",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\06 The Jack (Live - 1991).mp3",
@@ -882,9 +826,9 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "07 Moneytalks (Live ...",
-    "Artista": "ACDC",
+    "Numero": "7",
+    "Titulo": "LIVE",
+    "Artista": "acdc",
     "Album": "LIVE",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\07 Moneytalks (Live - 1991).mp3",
@@ -896,98 +840,98 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "08 Hells Bells (Live...",
-    "Artista": "ACDC",
+    "Numero": "8",
+    "Titulo": "LIVE",
+    "Artista": "acdc",
     "Album": "LIVE",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\08 Hells Bells (Live - 1991).mp3",
     "Duracion": "06:00",
-    "FechaLanzamiento": "1992",
+    "FechaLanzamiento": "1993",
     "EstadoColor": "White",
     "DuracionLong": 3604114285,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "09 Dirty Deeds Done ...",
-    "Artista": "ACDC",
+    "Numero": "9",
+    "Titulo": "LIVE",
+    "Artista": "acdc",
     "Album": "LIVE",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\09 Dirty Deeds Done Dirt Cheap (Live - 1991).mp3",
     "Duracion": "05:02",
-    "FechaLanzamiento": "1992",
+    "FechaLanzamiento": "1993",
     "EstadoColor": "White",
     "DuracionLong": 3021322448,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "10 Whole Lotta Rosie...",
-    "Artista": "ACDC",
+    "Numero": "10",
+    "Titulo": "LIVE",
+    "Artista": "acdc",
     "Album": "LIVE",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\10 Whole Lotta Rosie (Live - 1991).mp3",
     "Duracion": "04:30",
-    "FechaLanzamiento": "1992",
+    "FechaLanzamiento": "1993",
     "EstadoColor": "White",
     "DuracionLong": 2700277551,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "11 You Shook Me All ...",
-    "Artista": "ACDC",
+    "Numero": "11",
+    "Titulo": "LIVE",
+    "Artista": "acdc",
     "Album": "LIVE",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\11 You Shook Me All Night Long (Live - 1991).mp3",
     "Duracion": "03:52",
-    "FechaLanzamiento": "1992",
+    "FechaLanzamiento": "1993",
     "EstadoColor": "White",
     "DuracionLong": 2326465306,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "12 Highway to Hell (...",
-    "Artista": "ACDC",
+    "Numero": "12",
+    "Titulo": "LIVE",
+    "Artista": "acdc",
     "Album": "LIVE",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\12 Highway to Hell (Live - 1991).mp3",
     "Duracion": "03:57",
-    "FechaLanzamiento": "1992",
+    "FechaLanzamiento": "1993",
     "EstadoColor": "White",
     "DuracionLong": 2372440816,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "13 T.N.T. (Live - 19...",
-    "Artista": "ACDC",
+    "Numero": "13",
+    "Titulo": "LIVE",
+    "Artista": "acdc",
     "Album": "LIVE",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\13 T.N.T. (Live - 1991).mp3",
     "Duracion": "03:47",
-    "FechaLanzamiento": "1992",
+    "FechaLanzamiento": "1993",
     "EstadoColor": "White",
     "DuracionLong": 2277355102,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "14 For Those About t...",
-    "Artista": "ACDC",
+    "Numero": "14",
+    "Titulo": "LIVE-ACDC",
+    "Artista": "acdc",
     "Album": "LIVE",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Live 1992\\14 For Those About to Rock (We Salute You) (Live - 1991).mp3",
     "Duracion": "07:17",
-    "FechaLanzamiento": "1992",
+    "FechaLanzamiento": "1993",
     "EstadoColor": "White",
     "DuracionLong": 4376816326,
     "Imagen": null,
@@ -2646,7 +2590,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "1",
     "Titulo": "Ades Tiempo",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2660,7 +2604,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "2",
     "Titulo": "Al Olor Del Hogar",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2674,7 +2618,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "3",
     "Titulo": "Coger No Es Amor",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2688,7 +2632,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "4",
     "Titulo": "Como Un Bolu",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2702,7 +2646,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "5",
     "Titulo": "Convalescencia En Va...",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2716,7 +2660,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "6",
     "Titulo": "El Baile De La Gambe...",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2730,7 +2674,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "7",
     "Titulo": "El Viento Trae Una C...",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2744,7 +2688,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "8",
     "Titulo": "Fisurar",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2758,7 +2702,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "9",
     "Titulo": "Hecho En Buenos Aire...",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2772,7 +2716,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "10",
     "Titulo": "La Argentinidad Al P...",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2786,7 +2730,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "11",
     "Titulo": "La Calavera",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2800,7 +2744,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "12",
     "Titulo": "La Oveja Negra",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2814,7 +2758,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "13",
     "Titulo": "La Soledad",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2828,7 +2772,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "14",
     "Titulo": "Mariscal Tito",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2842,7 +2786,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "15",
     "Titulo": "Murga De La Limousin...",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2856,7 +2800,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "16",
     "Titulo": "No Seas Parca",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2870,7 +2814,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "17",
     "Titulo": "Otra Sudestada",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2884,7 +2828,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "18",
     "Titulo": "Pajaro Negro",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2898,7 +2842,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "19",
     "Titulo": "Porno Star",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2912,7 +2856,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "20",
     "Titulo": "Shit Shit Money Mone...",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2926,7 +2870,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "21",
     "Titulo": "Va Por Chapultepec",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2940,7 +2884,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "22",
     "Titulo": "Y No Está Solo",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -2954,7 +2898,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "23",
     "Titulo": "Zi Zi Zi",
     "Artista": "BERSUIT",
     "Album": "ARGENTINIDAD AL PALO",
@@ -3850,8 +3794,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "01 Otro Viento Mejor",
+    "Numero": "1",
+    "Titulo": "Otro Viento Mejor",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -3864,8 +3808,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "02 Presión",
+    "Numero": "2",
+    "Titulo": "Presión",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -3878,8 +3822,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "03 Tres",
+    "Numero": "3",
+    "Titulo": "Tres",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -3892,8 +3836,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "04 Una Nueva Noche F...",
+    "Numero": "4",
+    "Titulo": "Una Nueva Noche F...",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -3906,8 +3850,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "05 Fantasía y Realid...",
+    "Numero": "5",
+    "Titulo": "Fantasía y Realid...",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -3920,8 +3864,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "06 Morir",
+    "Numero": "6",
+    "Titulo": "Morir",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -3934,8 +3878,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "07 Cristal",
+    "Numero": "7",
+    "Titulo": "Cristal",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -3948,8 +3892,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "08 Imposible",
+    "Numero": "8",
+    "Titulo": "Imposible",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -3962,8 +3906,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "09 Callejero de Boed...",
+    "Numero": "9",
+    "Titulo": "Callejero de Boed...",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -3976,8 +3920,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "10 Si Me Cansé",
+    "Numero": "10",
+    "Titulo": "Si Me Cansé",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -3990,8 +3934,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "11 Ahogados de Razón",
+    "Numero": "11",
+    "Titulo": "Ahogados de Razón",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -4004,8 +3948,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "12 Tiempo Perdido",
+    "Numero": "12",
+    "Titulo": "Tiempo Perdido",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -4032,8 +3976,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "14 Ilusión",
+    "Numero": "14",
+    "Titulo": "Ilusión",
     "Artista": "CALLEJEROS",
     "Album": "PRESION",
     "Genero": "ROCK NACIONAL",
@@ -4900,10 +4844,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "01 Black Night",
+    "Numero": "1",
+    "Titulo": "Black Night",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\01 Black Night.mp3",
     "Duracion": "03:27",
@@ -4914,10 +4858,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "02 Speed King",
+    "Numero": "2",
+    "Titulo": "Speed King",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\02 Speed King.mp3",
     "Duracion": "05:49",
@@ -4928,10 +4872,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "03 Fireball",
+    "Numero": "3",
+    "Titulo": "Fireball",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\03 Fireball.mp3",
     "Duracion": "03:23",
@@ -4942,10 +4886,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "04 Strange Kind Of W...",
+    "Numero": "4",
+    "Titulo": "Strange Kind Of W...",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\04 Strange Kind Of Woman.mp3",
     "Duracion": "03:53",
@@ -4956,10 +4900,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "05 Child in Time",
+    "Numero": "5",
+    "Titulo": "Child in Time",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\05 Child in Time.mp3",
     "Duracion": "10:19",
@@ -4970,10 +4914,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "06 Woman From Tokyo",
+    "Numero": "6",
+    "Titulo": "Woman From Tokyo",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\06 Woman From Tokyo.mp3",
     "Duracion": "05:46",
@@ -4984,10 +4928,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "07 Highway Star",
+    "Numero": "7",
+    "Titulo": "Highway Star",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\07 Highway Star.mp3",
     "Duracion": "06:08",
@@ -4998,10 +4942,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "08 Space Truckin'",
+    "Numero": "8",
+    "Titulo": "Space Truckin'",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\08 Space Truckin'.mp3",
     "Duracion": "04:32",
@@ -5012,10 +4956,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "09 Burn (2004 Remast...",
+    "Numero": "9",
+    "Titulo": "Burn (2004 Remast...",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\09 Burn (2004 Remaster).mp3",
     "Duracion": "04:30",
@@ -5026,10 +4970,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "10 Stormbringer (200...",
+    "Numero": "10",
+    "Titulo": "Stormbringer (200...",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\10 Stormbringer (2009 Remaster).mp3",
     "Duracion": "04:04",
@@ -5040,10 +4984,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "11 Demon's Eye",
+    "Numero": "11",
+    "Titulo": "Demon's Eye",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\11 Demon's Eye.mp3",
     "Duracion": "05:23",
@@ -5054,10 +4998,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "12 Smoke on the Wate...",
+    "Numero": "12",
+    "Titulo": "Smoke on the Wate...",
     "Artista": "DEEP PURPLE",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST-DEEP PURPLE",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\12 Smoke on the Water.mp3",
     "Duracion": "05:37",
@@ -5084,8 +5028,8 @@
   {
     "Numero": "2",
     "Titulo": "Longview",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\02 Longview.mp3",
     "Duracion": "03:47",
@@ -5098,8 +5042,8 @@
   {
     "Numero": "3",
     "Titulo": "Welcome to Paradise",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\03 Welcome to Paradise.mp3",
     "Duracion": "03:44",
@@ -5112,8 +5056,8 @@
   {
     "Numero": "4",
     "Titulo": "Basket Case",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\04 Basket Case.mp3",
     "Duracion": "03:01",
@@ -5126,8 +5070,8 @@
   {
     "Numero": "5",
     "Titulo": "When I Come Around",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\05 When I Come Around.mp3",
     "Duracion": "02:58",
@@ -5140,8 +5084,8 @@
   {
     "Numero": "6",
     "Titulo": "She",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\06 She.mp3",
     "Duracion": "02:14",
@@ -5154,8 +5098,8 @@
   {
     "Numero": "7",
     "Titulo": "Brain Stew",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\07 Brain Stew.mp3",
     "Duracion": "03:13",
@@ -5168,8 +5112,8 @@
   {
     "Numero": "8",
     "Titulo": "Hitchin' a Ride",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\08 Hitchin' a Ride.mp3",
     "Duracion": "02:51",
@@ -5182,8 +5126,8 @@
   {
     "Numero": "9",
     "Titulo": "Good Riddance (Time ...",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\09 Good Riddance (Time of Your Life).mp3",
     "Duracion": "02:33",
@@ -5196,8 +5140,8 @@
   {
     "Numero": "10",
     "Titulo": "Minority",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\10 Minority.mp3",
     "Duracion": "02:48",
@@ -5210,8 +5154,8 @@
   {
     "Numero": "11",
     "Titulo": "Warning",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\11 Warning.mp3",
     "Duracion": "03:41",
@@ -5224,8 +5168,8 @@
   {
     "Numero": "12",
     "Titulo": "American Idiot",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\12 American Idiot.mp3",
     "Duracion": "02:54",
@@ -5238,8 +5182,8 @@
   {
     "Numero": "13",
     "Titulo": "Holiday",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\13 Holiday.mp3",
     "Duracion": "03:52",
@@ -5252,8 +5196,8 @@
   {
     "Numero": "14",
     "Titulo": "Boulevard of Broken ...",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\14 Boulevard of Broken Dreams.mp3",
     "Duracion": "04:22",
@@ -5266,8 +5210,8 @@
   {
     "Numero": "15",
     "Titulo": "Wake Me up When Sept...",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\15 Wake Me up When September Ends.mp3",
     "Duracion": "04:45",
@@ -5280,8 +5224,8 @@
   {
     "Numero": "16",
     "Titulo": "Know Your Enemy",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\16 Know Your Enemy.mp3",
     "Duracion": "03:11",
@@ -5294,8 +5238,8 @@
   {
     "Numero": "17",
     "Titulo": "21 Guns",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\17 21 Guns.mp3",
     "Duracion": "05:22",
@@ -5308,8 +5252,8 @@
   {
     "Numero": "18",
     "Titulo": "Oh Love",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\18 Oh Love.mp3",
     "Duracion": "05:03",
@@ -5322,8 +5266,8 @@
   {
     "Numero": "19",
     "Titulo": "Bang Bang",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\19 Bang Bang.mp3",
     "Duracion": "03:25",
@@ -5336,8 +5280,8 @@
   {
     "Numero": "21",
     "Titulo": "Ordinary World (feat...",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\21 Ordinary World (feat. Miranda Lambert).mp3",
     "Duracion": "03:01",
@@ -5350,8 +5294,8 @@
   {
     "Numero": "22",
     "Titulo": "Back in the USA",
-    "Artista": "GREEN DAY",
-    "Album": "GRANDES EXITOS",
+    "Artista": "Green Day",
+    "Album": "Best-Green day",
     "Genero": "ROCK ALTERNATIVO",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Green Day\\22 Back in the USA.mp3",
     "Duracion": "02:36",
@@ -7353,7 +7297,7 @@
     "Numero": "",
     "Titulo": "01 Breaking the Law",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\01 Breaking the Law.mp3",
     "Duracion": "02:33",
@@ -7367,7 +7311,7 @@
     "Numero": "",
     "Titulo": "02  Hell Bent for Le...",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\02  Hell Bent for Leather.mp3",
     "Duracion": "02:38",
@@ -7381,7 +7325,7 @@
     "Numero": "",
     "Titulo": "03 Victim Of Changes",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\03 Victim Of Changes.mp3",
     "Duracion": "07:45",
@@ -7395,7 +7339,7 @@
     "Numero": "",
     "Titulo": "04 Metal Gods",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\04 Metal Gods.mp3",
     "Duracion": "04:05",
@@ -7409,7 +7353,7 @@
     "Numero": "",
     "Titulo": "05 Living After Midn...",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\05 Living After Midnight.mp3",
     "Duracion": "03:30",
@@ -7423,7 +7367,7 @@
     "Numero": "",
     "Titulo": "06 Painkiller",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\06 Painkiller.mp3",
     "Duracion": "06:08",
@@ -7437,7 +7381,7 @@
     "Numero": "",
     "Titulo": "07 Beyond the Realms...",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\07 Beyond the Realms of Death.mp3",
     "Duracion": "06:49",
@@ -7451,7 +7395,7 @@
     "Numero": "",
     "Titulo": "08 Turbo Lover (Rema...",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\08 Turbo Lover (Remastered).mp3",
     "Duracion": "05:34",
@@ -7465,7 +7409,7 @@
     "Numero": "",
     "Titulo": "09 The Ripper",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\09 The Ripper.mp3",
     "Duracion": "02:50",
@@ -7479,7 +7423,7 @@
     "Numero": "",
     "Titulo": "10 Diamonds and Rust",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\10 Diamonds and Rust.mp3",
     "Duracion": "03:27",
@@ -7493,7 +7437,7 @@
     "Numero": "",
     "Titulo": "11 The Sentinel with...",
     "Artista": "JUDAS PRIEST",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST JUDAS PRIEST",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Judas Priest\\11 The Sentinel with lyrics.mp3",
     "Duracion": "05:06",
@@ -9271,21 +9215,21 @@
     "Numero": "1",
     "Titulo": "2 + 2 = 3",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\01 2 + 2 = 3.mp3",
     "Duracion": "04:50",
     "FechaLanzamiento": "2001",
-    "EstadoColor": "White",
+    "EstadoColor": "red",
     "DuracionLong": 2907689795,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "2",
     "Titulo": "Al Que He Sangrado",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\02 Al Que He Sangrado.mp3",
     "Duracion": "02:32",
@@ -9299,7 +9243,7 @@
     "Numero": "3",
     "Titulo": "Arte Infernal",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\03 Arte Infernal.mp3",
     "Duracion": "03:17",
@@ -9313,7 +9257,7 @@
     "Numero": "4",
     "Titulo": "Balada Del Diablo Y ...",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\04 Balada Del Diablo Y La Muerte.mp3",
     "Duracion": "06:58",
@@ -9327,7 +9271,7 @@
     "Numero": "5",
     "Titulo": "Bien Alto",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\05 Bien Alto.mp3",
     "Duracion": "03:27",
@@ -9341,7 +9285,7 @@
     "Numero": "6",
     "Titulo": "Blues Cardíaco",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\06 Blues Cardíaco.mp3",
     "Duracion": "05:46",
@@ -9355,7 +9299,7 @@
     "Numero": "7",
     "Titulo": "Cuando Estés Acá",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\07 Cuando Estés Acá.mp3",
     "Duracion": "06:30",
@@ -9369,7 +9313,7 @@
     "Numero": "8",
     "Titulo": "Cuando Vendran",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\08 Cuando Vendran.mp3",
     "Duracion": "04:25",
@@ -9383,7 +9327,7 @@
     "Numero": "9",
     "Titulo": "El Cielo Del Desenga...",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\09 El Cielo Del Desengaño.mp3",
     "Duracion": "04:43",
@@ -9397,7 +9341,7 @@
     "Numero": "10",
     "Titulo": "El Circo Romano",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\10 El Circo Romano.mp3",
     "Duracion": "05:32",
@@ -9411,7 +9355,7 @@
     "Numero": "11",
     "Titulo": "El Final Es En Donde...",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\11 El Final Es En Donde Partí.mp3",
     "Duracion": "04:56",
@@ -9425,7 +9369,7 @@
     "Numero": "12",
     "Titulo": "El Hombre De La Estr...",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\12 El Hombre De La Estrella.mp3",
     "Duracion": "09:28",
@@ -9439,7 +9383,7 @@
     "Numero": "13",
     "Titulo": "El Mambo De La Botel...",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\13 El Mambo De La Botella.mp3",
     "Duracion": "04:59",
@@ -9453,7 +9397,7 @@
     "Numero": "14",
     "Titulo": "El Revelde",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\14 El Revelde.mp3",
     "Duracion": "03:58",
@@ -9467,7 +9411,7 @@
     "Numero": "15",
     "Titulo": "El Rey De La Triste ...",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\15 El Rey De La Triste Felicidad.mp3",
     "Duracion": "04:16",
@@ -9481,7 +9425,7 @@
     "Numero": "16",
     "Titulo": "El Terco",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\16 El Terco.mp3",
     "Duracion": "05:34",
@@ -9495,7 +9439,7 @@
     "Numero": "17",
     "Titulo": "El Twist Del Pibe",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\17 El Twist Del Pibe.mp3",
     "Duracion": "03:04",
@@ -9509,7 +9453,7 @@
     "Numero": "18",
     "Titulo": "En El Baldío",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\18 En El Baldío.mp3",
     "Duracion": "04:13",
@@ -9523,7 +9467,7 @@
     "Numero": "19",
     "Titulo": "En Pie",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\19 En Pie.mp3",
     "Duracion": "04:33",
@@ -9537,7 +9481,7 @@
     "Numero": "20",
     "Titulo": "Estalla",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\20 Estalla.mp3",
     "Duracion": "05:09",
@@ -9551,7 +9495,7 @@
     "Numero": "21",
     "Titulo": "Hablando De La Liber...",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\21 Hablando De La Libertad.mp3",
     "Duracion": "07:44",
@@ -9565,7 +9509,7 @@
     "Numero": "22",
     "Titulo": "Hey Hey, My My",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\22 Hey Hey, My My.mp3",
     "Duracion": "05:31",
@@ -9579,7 +9523,7 @@
     "Numero": "23",
     "Titulo": "La Vida, Las Mismas ...",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\23 La Vida, Las Mismas Calles.mp3",
     "Duracion": "03:15",
@@ -9593,7 +9537,7 @@
     "Numero": "24",
     "Titulo": "Lo Frágil De La Locu...",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\24 Lo Frágil De La Locura.mp3",
     "Duracion": "04:44",
@@ -9607,7 +9551,7 @@
     "Numero": "25",
     "Titulo": "Me Hice Canción",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\25 Me Hice Canción.mp3",
     "Duracion": "03:30",
@@ -9621,7 +9565,7 @@
     "Numero": "26",
     "Titulo": "Motoralmaisangre",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\26 Motoralmaisangre.mp3",
     "Duracion": "03:56",
@@ -9635,7 +9579,7 @@
     "Numero": "27",
     "Titulo": "Oportunidad Oportuna",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\27 Oportunidad Oportuna.mp3",
     "Duracion": "03:42",
@@ -9649,7 +9593,7 @@
     "Numero": "28",
     "Titulo": "Paja Brava",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\28 Paja Brava.mp3",
     "Duracion": "07:12",
@@ -9663,7 +9607,7 @@
     "Numero": "29",
     "Titulo": "Panic Show",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\29 Panic Show.mp3",
     "Duracion": "03:39",
@@ -9677,7 +9621,7 @@
     "Numero": "30",
     "Titulo": "Psilocybe Mexicana",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\30 Psilocybe Mexicana.mp3",
     "Duracion": "05:38",
@@ -9691,7 +9635,7 @@
     "Numero": "31",
     "Titulo": "Un Tiempo Fuera De C...",
     "Artista": "LA RENGA",
-    "Album": "LIVE",
+    "Album": "LIVE-LA RENGA",
     "Genero": "ROCK NACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\La Renga\\LIVE\\31 Un Tiempo Fuera De Casa.mp3",
     "Duracion": "02:53",
@@ -12866,10 +12810,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "01 Lynyrd Skynyrd-Th...",
+    "Numero": "1",
+    "Titulo": "The Ballad of Curtis...",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\01 Lynyrd Skynyrd-The Ballad of Curtis Loew.mp3",
     "Duracion": "04:51",
@@ -12880,10 +12824,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "03 Gimme Three Steps...",
+    "Numero": "2",
+    "Titulo": "Gimme Three Steps...",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\03 Gimme Three Steps-Lynyrd Skynyrd.mp3",
     "Duracion": "04:30",
@@ -12894,10 +12838,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "04 Lynyrd Skynyrd - ...",
+    "Numero": "3",
+    "Titulo": "Don't ask me no que...",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\04 Lynyrd Skynyrd - Don't ask me no questions.mp3",
     "Duracion": "03:26",
@@ -12908,10 +12852,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "05 On The Hunt - Lyn...",
+    "Numero": "4",
+    "Titulo": "On The Hunt",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\05 On The Hunt - Lynyrd Skynyrd.mp3",
     "Duracion": "05:27",
@@ -12922,10 +12866,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "07 Lynyrd Skynyrd - ...",
+    "Numero": "5",
+    "Titulo": "I need you",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\07 Lynyrd Skynyrd - I need you.mp3",
     "Duracion": "06:53",
@@ -12936,10 +12880,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "08 I Know A Little b...",
+    "Numero": "6",
+    "Titulo": "I Know A Little b...",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\08 I Know A Little by Lynyrd Skynyrd.mp3",
     "Duracion": "03:29",
@@ -12950,10 +12894,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "10 Lynyrd Skynyrd - ...",
+    "Numero": "7",
+    "Titulo": "What's Your Name",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\10 Lynyrd Skynyrd - What's Your Name.mp3",
     "Duracion": "03:31",
@@ -12964,10 +12908,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "12 Lynyrd Skynyrd- W...",
+    "Numero": "8",
+    "Titulo": "Was I Right or Wrong",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\12 Lynyrd Skynyrd- Was I Right or Wrong.mp3",
     "Duracion": "05:25",
@@ -12978,10 +12922,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "13 Simple Man - Lyny...",
+    "Numero": "9",
+    "Titulo": "Simple Man",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\13 Simple Man - Lynyrd Skynyrd - Lyrics HD.mp3",
     "Duracion": "05:50",
@@ -12992,10 +12936,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "14 Free Bird",
+    "Numero": "14",
+    "Titulo": "Free Bird",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\14 Free Bird.mp3",
     "Duracion": "09:07",
@@ -13006,10 +12950,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "15 Sweet Home Alabam...",
+    "Numero": "15",
+    "Titulo": "Sweet Home Alabam...",
     "Artista": "LYNYRD SKYNYRD",
-    "Album": "GRANDES EXITOS",
+    "Album": "BEST LYNYRD",
     "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Lynyrd Skynyrd\\15 Sweet Home Alabama.mp3",
     "Duracion": "04:44",
@@ -15249,7 +15193,7 @@
     "Numero": "",
     "Titulo": "Battery (R)",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\Battery (R).mp3",
     "Duracion": "05:16",
@@ -15263,7 +15207,7 @@
     "Numero": "",
     "Titulo": "Enter Sandman (R)",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\Enter Sandman (R).mp3",
     "Duracion": "05:40",
@@ -15277,7 +15221,7 @@
     "Numero": "",
     "Titulo": "Fade To Black (R)",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\Fade To Black (R).mp3",
     "Duracion": "06:57",
@@ -15291,7 +15235,7 @@
     "Numero": "",
     "Titulo": "Fuel (R)",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\Fuel (R).mp3",
     "Duracion": "04:29",
@@ -15305,7 +15249,7 @@
     "Numero": "",
     "Titulo": "Master Of Puppets (R...",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\Master Of Puppets (R).mp3",
     "Duracion": "08:35",
@@ -15319,7 +15263,7 @@
     "Numero": "",
     "Titulo": "Nothing Else Matters...",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\Nothing Else Matters (R).mp3",
     "Duracion": "06:29",
@@ -15333,7 +15277,7 @@
     "Numero": "",
     "Titulo": "One (R)",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\One (R).mp3",
     "Duracion": "07:26",
@@ -15347,7 +15291,7 @@
     "Numero": "",
     "Titulo": "One (R2)",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\One (R2).mp3",
     "Duracion": "07:25",
@@ -15361,7 +15305,7 @@
     "Numero": "",
     "Titulo": "Orion (R)",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\Orion (R).mp3",
     "Duracion": "08:23",
@@ -15375,7 +15319,7 @@
     "Numero": "",
     "Titulo": "Sad But True (R)",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\Sad But True (R).mp3",
     "Duracion": "05:31",
@@ -15389,7 +15333,7 @@
     "Numero": "",
     "Titulo": "Seek & Destroy (R)",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\Seek & Destroy (R).mp3",
     "Duracion": "06:55",
@@ -15403,7 +15347,7 @@
     "Numero": "",
     "Titulo": "The Unforgiven (R)",
     "Artista": "METALLICA",
-    "Album": "GRANDES EXITOS METAL...",
+    "Album": "BEST-METALLICA",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Grandes Exitos Metallica\\The Unforgiven (R).mp3",
     "Duracion": "06:27",
@@ -15666,10 +15610,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "01 Breadfan (Live)",
+    "Numero": "1",
+    "Titulo": "Breadfan",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\01 Breadfan (Live).mp3",
     "Duracion": "04:30",
@@ -15680,10 +15624,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "02 Master Of Puppets...",
+    "Numero": "2",
+    "Titulo": "Master Of Puppets...",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\02 Master Of Puppets (Live).mp3",
     "Duracion": "03:19",
@@ -15694,10 +15638,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "03 Wherever I May Ro...",
+    "Numero": "3",
+    "Titulo": "Wherever I May Ro...",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\03 Wherever I May Roam (Live).mp3",
     "Duracion": "07:30",
@@ -15708,10 +15652,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "04 Harvester Of Sorr...",
+    "Numero": "4",
+    "Titulo": "Harvester Of Sorr...",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\04 Harvester Of Sorrow (Live).mp3",
     "Duracion": "06:48",
@@ -15722,10 +15666,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "05 Fade To Black (Li...",
+    "Numero": "5",
+    "Titulo": "Fade To Black",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\05 Fade To Black (Live).mp3",
     "Duracion": "07:36",
@@ -15736,10 +15680,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "06 For Whom The Bell...",
+    "Numero": "6",
+    "Titulo": "For Whom The Bell...",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\06 For Whom The Bell Tolls (Live).mp3",
     "Duracion": "07:53",
@@ -15750,10 +15694,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "07 Seek & Destroy (L...",
+    "Numero": "7",
+    "Titulo": "Seek & Destroy",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\07 Seek & Destroy (Live).mp3",
     "Duracion": "10:37",
@@ -15764,10 +15708,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "08 Nothing Else Matt...",
+    "Numero": "8",
+    "Titulo": "Nothing Else Matt...",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\08 Nothing Else Matters (Live).mp3",
     "Duracion": "08:39",
@@ -15778,10 +15722,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "09 Creeping Death (L...",
+    "Numero": "9",
+    "Titulo": "Creeping Death",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\09 Creeping Death (Live).mp3",
     "Duracion": "07:06",
@@ -15792,10 +15736,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "10 Whiplash (Live)",
+    "Numero": "10",
+    "Titulo": "Whiplash",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\10 Whiplash (Live).mp3",
     "Duracion": "04:37",
@@ -15806,10 +15750,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "11 Sad But True (Liv...",
+    "Numero": "11",
+    "Titulo": "Sad But True",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\11 Sad But True (Live).mp3",
     "Duracion": "08:25",
@@ -15820,10 +15764,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "12 One (Live)",
+    "Numero": "12",
+    "Titulo": "One",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\12 One (Live).mp3",
     "Duracion": "07:00",
@@ -15834,10 +15778,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "13 Enter Sandman (Li...",
+    "Numero": "13",
+    "Titulo": "13 Enter Sandman",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\13 Enter Sandman (Live).mp3",
     "Duracion": "06:45",
@@ -15848,10 +15792,10 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "14 So What (Live)",
+    "Numero": "14",
+    "Titulo": "So What",
     "Artista": "METALLICA",
-    "Album": "LIVE 1994",
+    "Album": "LIVE-METALLICA 1994",
     "Genero": "HEAVY METAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live 1994\\14 So What (Live).mp3",
     "Duracion": "03:21",
@@ -15862,8 +15806,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "01 Hardwired (Live I...",
+    "Numero": "1",
+    "Titulo": "Hardwired (Live I...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -15876,8 +15820,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "02 No Remorse (Live ...",
+    "Numero": "2",
+    "Titulo": "No Remorse (Live ...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -15890,8 +15834,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "03 Holier Than Thou ...",
+    "Numero": "3",
+    "Titulo": "Holier Than Thou ...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -15904,8 +15848,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "04 Of Wolf And Man (...",
+    "Numero": "4",
+    "Titulo": "Of Wolf And Man (...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -15918,8 +15862,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "05 Fade To Black (Li...",
+    "Numero": "5",
+    "Titulo": "Fade To Black (Li...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -15932,8 +15876,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "06 Now That We're De...",
+    "Numero": "6",
+    "Titulo": "Now That We're De...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -15946,8 +15890,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "07 Fuel (Live In Bue...",
+    "Numero": "7",
+    "Titulo": "Fuel (Live In Bue...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -15960,8 +15904,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "08 The Unforgiven (L...",
+    "Numero": "8",
+    "Titulo": "The Unforgiven (L...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -15974,8 +15918,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "09 …And Justice For ...",
+    "Numero": "9",
+    "Titulo": "…And Justice For ...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -15988,8 +15932,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "10 Sad But True (Liv...",
+    "Numero": "11",
+    "Titulo": "Sad But True (Liv...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -16002,8 +15946,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "11 Cyanide (Live In ...",
+    "Numero": "12",
+    "Titulo": "Cyanide (Live In ...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -16016,8 +15960,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "12 All Nightmare Lon...",
+    "Numero": "13",
+    "Titulo": "All Nightmare Lon...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -16030,8 +15974,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "13 One (Live In Buen...",
+    "Numero": "14",
+    "Titulo": "One (Live In Buen...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -16044,8 +15988,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "14 Master Of Puppets...",
+    "Numero": "15",
+    "Titulo": "Master Of Puppets...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -16058,8 +16002,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "15 Damage, Inc. (Liv...",
+    "Numero": "16",
+    "Titulo": "Damage, Inc. (Liv...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -16072,8 +16016,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "16 Creeping Death (L...",
+    "Numero": "17",
+    "Titulo": "Creeping Death (L...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -16086,8 +16030,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "17 Nothing Else Matt...",
+    "Numero": "18",
+    "Titulo": "Nothing Else Matt...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -16100,8 +16044,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "18 Enter Sandman (Li...",
+    "Numero": "19",
+    "Titulo": "Enter Sandman (Li...",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -16114,8 +16058,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "19 Seek & Destroy",
+    "Numero": "20",
+    "Titulo": "Seek & Destroy",
     "Artista": "METALLICA",
     "Album": "LIVE ARGENTINA 1993 ...",
     "Genero": "HEAVY METAL",
@@ -26754,11 +26698,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "1",
     "Titulo": "Believe In Love",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\Believe In Love.mp3",
     "Duracion": "05:25",
     "FechaLanzamiento": "2011",
@@ -26768,11 +26712,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "2",
     "Titulo": "Big City Nights",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\Big City Nights.mp3",
     "Duracion": "04:11",
     "FechaLanzamiento": "2011",
@@ -26782,11 +26726,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "3",
     "Titulo": "I Can't Explain",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\I Can't Explain.mp3",
     "Duracion": "03:25",
     "FechaLanzamiento": "2011",
@@ -26796,11 +26740,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "4",
     "Titulo": "Loving You Sunday Mo...",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\Loving You Sunday Morning.mp3",
     "Duracion": "05:39",
     "FechaLanzamiento": "2011",
@@ -26810,11 +26754,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "5",
     "Titulo": "No One Like You",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\No One Like You.mp3",
     "Duracion": "04:00",
     "FechaLanzamiento": "2011",
@@ -26824,11 +26768,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "6",
     "Titulo": "Rhythm Of Love",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\Rhythm Of Love.mp3",
     "Duracion": "03:51",
     "FechaLanzamiento": "2011",
@@ -26838,11 +26782,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "7",
     "Titulo": "Rock You Like A Hurr...",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\Rock You Like A Hurricane (Live).mp3",
     "Duracion": "04:15",
     "FechaLanzamiento": "2011",
@@ -26852,11 +26796,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "8",
     "Titulo": "Send Me An Angel",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\Send Me An Angel.mp3",
     "Duracion": "04:33",
     "FechaLanzamiento": "2011",
@@ -26866,11 +26810,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "9",
     "Titulo": "Still Loving You",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\Still Loving You.mp3",
     "Duracion": "06:30",
     "FechaLanzamiento": "2011",
@@ -26880,11 +26824,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "10",
     "Titulo": "Tease Me Please Me",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\Tease Me Please Me.mp3",
     "Duracion": "04:47",
     "FechaLanzamiento": "2011",
@@ -26894,11 +26838,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "11",
     "Titulo": "The Zoo",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\The Zoo.mp3",
     "Duracion": "05:32",
     "FechaLanzamiento": "2011",
@@ -26908,11 +26852,11 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "12",
     "Titulo": "Wind Of Change",
     "Artista": "SCORPIONS",
-    "Album": "GRANDES EXITOS SCORP...",
-    "Genero": "Rock",
+    "Album": "BEST SCORPIONS",
+    "Genero": "ROCK INTERNACIONAL",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Scorpions\\Wind Of Change.mp3",
     "Duracion": "05:15",
     "FechaLanzamiento": "2011",

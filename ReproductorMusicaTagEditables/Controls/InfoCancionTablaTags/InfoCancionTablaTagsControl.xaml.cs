@@ -20,7 +20,25 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags
 
     public partial class InfoCancionTablaTagsControl : UserControl
     {
-        public bool Seleccionado { get; set; } = false;
+
+        public static DependencyProperty SeleccionadoProperty =
+            DependencyProperty.Register("Seleccionado", typeof(bool), typeof(InfoCancionTablaTagsControl), new PropertyMetadata(false));
+        public bool Seleccionado
+        {
+            get => (bool) GetValue(SeleccionadoProperty);
+            set => SetValue(SeleccionadoProperty, value);
+        }
+
+        public static DependencyProperty IconMarcadoProperty =
+            DependencyProperty.Register("IconMarcado", typeof(MahApps.Metro.IconPacks.PackIconFontAwesomeKind), typeof(InfoCancionTablaTagsControl), new PropertyMetadata(MahApps.Metro.IconPacks.PackIconFontAwesomeKind.SquareRegular));
+
+
+        public MahApps.Metro.IconPacks.PackIconFontAwesomeKind IconMarcado
+        {
+            get => (MahApps.Metro.IconPacks.PackIconFontAwesomeKind) GetValue(IconMarcadoProperty);
+            set=> SetValue(IconMarcadoProperty, value); 
+        }
+
         public InfoCancionTablaTagsControl()
         {
             InitializeComponent();
@@ -96,11 +114,11 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags
             Seleccionado = !Seleccionado;
             if(Seleccionado) 
             {
-                iconSelector.Kind = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.CheckSquareSolid;
+                IconMarcado = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.CheckSquareSolid;
             }
             else
             {
-                iconSelector.Kind = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.SquareRegular;
+                IconMarcado = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.SquareRegular;
             }
         }
     }

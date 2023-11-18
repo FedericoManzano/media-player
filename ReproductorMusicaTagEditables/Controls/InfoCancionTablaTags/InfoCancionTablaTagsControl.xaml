@@ -26,10 +26,12 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnSelector" Style="{StaticResource btnPlay}" Click="Button_Click">
-                <fa:PackIconFontAwesome Kind="SquareRegular" x:Name="iconSelector"/>
-            </Button>
+            <RadioButton x:Name="btnSelector" Style="{StaticResource btnPlayRadio}"
+                    Click="Button_Click">
+                <fa:PackIconFontAwesome Kind="{Binding ElementName=infoCancion, Path=IconMarcado}" x:Name="iconSelector"/>
+            </RadioButton>
             <TextBlock Grid.Column="1" 
                        Text="{Binding ElementName=infoCancion, Path=Numero}" 
                        Style="{StaticResource txtInfoCancion}"/>
@@ -48,8 +50,8 @@
             <TextBlock Grid.Column="10" 
                        Text="{Binding ElementName=infoCancion, Path=Genero}" 
                        Style="{StaticResource txtInfoCancion}"
-                       Grid.ColumnSpan="2"/>
-            <TextBlock Grid.Column="12" 
+                       Grid.ColumnSpan="3"/>
+            <TextBlock Grid.Column="13" 
                        Text="{Binding ElementName=infoCancion, Path=Ano}" 
                        Style="{StaticResource txtInfoCancion}"/>
         </Grid>
