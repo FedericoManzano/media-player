@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
         mc:Ignorable="d"
-        Title="EditarTags" Height="750" Width="1230"
+        Title="EditarTags" Height="770" Width="1260"
         WindowStartupLocation="CenterScreen"
         xmlns:tupla="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags"
         xmlns:texto="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoTexto"
@@ -13,10 +13,10 @@
         WindowStyle="None"
         AllowsTransparency="True"
         Background="Transparent"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize"
+        MouseDown="Window_MouseDown"
+        KeyUp="Window_KeyUp">
 
-    
-    
     <Window.Resources>
         <ResourceDictionary Source="/Mvvm/VentanasUtilitarias/TagsThemes.xaml"/>
     </Window.Resources>
@@ -35,7 +35,7 @@
 
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="800"/>
+                    <ColumnDefinition Width="850"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
@@ -45,19 +45,24 @@
                         <RowDefinition Height="80"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock Text="Gestor de Tags"
+                    <TextBlock 
+                               Text="Gestor de Tags"
                                FontSize="35" 
                                Foreground="White" VerticalAlignment="Center"/>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center"
                                 Grid.Row="1">
-                        <Button Style="{StaticResource btnPlayAll}" Background="#ccc" Click="Button_Click_3">
+                        <Button Style="{StaticResource btnPlayAll}" 
+                                Background="#ccc" 
+                                Click="Button_Click_3"
+                                ToolTip="Seleccionar todas las pistas o deseleccionar todas las pistas.">
                             <StackPanel Orientation="Horizontal">
                                 <fa:PackIconFontAwesome Kind="SquareRegular"/>
                                 <TextBlock Text="Marcar Todos" Margin="5 0 0 0"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource btnPlayAll}" 
-                                Margin="10 0 0 0" Click="Button_Click">
+                                Margin="10 0 0 0" Click="Button_Click"
+                                ToolTip="Seleccionar directorio donde se encuentran las canciones a editar.">
                             <StackPanel Orientation="Horizontal">
                                 <fa:PackIconFontAwesome Kind="FolderOpenSolid"/>
                                 <TextBlock Text="Seleccionar" Margin="5 0 0 0"/>
@@ -68,15 +73,16 @@
                                 HorizontalAlignment="Center"
                                 Visibility="{Binding MjeVacio}">
                         <TextBlock Text="No Hay Canciones seleccionadas" 
-                                   Foreground="White" FontSize="30" 
+                                   Foreground="White" 
+                                   FontSize="30" 
                                    HorizontalAlignment="Center" 
                                    VerticalAlignment="Center"/>
                         <TextBlock Text="Seleccione las canciones desde el botón seleccionar" 
-                                   Foreground="#ccc" FontSize="18" 
+                                   Foreground="#ccc" 
+                                   FontSize="18" 
                                    HorizontalAlignment="Center" 
                                    VerticalAlignment="Center"/>
                     </StackPanel>
-                    
                     <ScrollViewer x:Name="scrollCanciones" 
                                   Grid.Row="2" 
                                   VerticalScrollBarVisibility="Auto">
@@ -117,17 +123,21 @@
                                 Grid.Row="1"
                                 Margin="5 0 0 0">
                         <Button Style="{StaticResource btnPlayAll}" 
-                                Background="Gray" Click="Button_Click_2">
+                                Background="Gray" 
+                                Click="Button_Click_2"
+                                ToolTip="Limpiar los campos de texto.">
                             <StackPanel Orientation="Horizontal">
                                 <fa:PackIconFontAwesome Kind="BroomSolid"/>
                                 <TextBlock Text="Limpiar Campos" Margin="5 0 0 0"/>
                             </StackPanel>
                         </Button>
                         <Button Style="{StaticResource btnPlayAll}" 
-                                 Margin="10 0 0 0" Cursor="Hand">
+                                Margin="10 0 0 0" 
+                                Click="Button_Click_5"
+                                ToolTip="Generar los numeros de canciones en los traks seleccionados">
                             <StackPanel Orientation="Horizontal">
-                                <fa:PackIconFontAwesome Kind="TextHeightSolid"/>
-                                <TextBlock Text="Formatear" Margin="5 0 0 0"/>
+                                <fa:PackIconFontAwesome Kind="SortNumericDownAltSolid"/>
+                                <TextBlock Text="Números" Margin="5 0 0 0"/>
                             </StackPanel>
                         </Button>
                     </StackPanel>
@@ -135,70 +145,59 @@
                         
                         <texto:CampoTextoControl
                             x:Name="txtNumero"
-                            Fondo="#2A2E32"
-                            PlaceholderColor="#ccc"
+                            Style="{StaticResource campoTexto}"
                             PlaceholderTexto="Número"
-                            ColorTexto="White"
-                            Margin="0 10 0 0"
+                            ToolTip="Asignar número de track."
                             Texto="{Binding Numero, Mode=TwoWay}"/>
                         <texto:CampoTextoControl
-                            x:Name="txtTitulo"
-                             Fondo="#2A2E32"
-                             PlaceholderColor="#ccc"
+                             x:Name="txtTitulo"
+                             Style="{StaticResource campoTexto}"
+                             ToolTip="Asignar título de track."
                              PlaceholderTexto="Título"
-                             ColorTexto="White"
-                             Margin="0 10 0 0"
                              Texto="{Binding Titulo, Mode=TwoWay}"/>
                         <texto:CampoTextoControl
-                            x:Name="txtArtista"
-                             Fondo="#2A2E32"
-                             PlaceholderColor="#ccc"
+                             x:Name="txtArtista"
+                             Style="{StaticResource campoTexto}"
+                             ToolTip="Asignar nombre de artista de/los track/s."
                              PlaceholderTexto="Artista"
-                             ColorTexto="White"
-                             Margin="0 10 0 0"
-                            Texto="{Binding Artista, Mode=TwoWay}"/>
+                             Texto="{Binding Artista, Mode=TwoWay}"/>
                         <texto:CampoTextoControl
                               x:Name="txtAlbum"
-                              Fondo="#2A2E32"
-                              PlaceholderColor="#ccc"
+                              Style="{StaticResource campoTexto}"
+                              ToolTip="Asignar nombre del álbum de/los track/s."
                               PlaceholderTexto="Álbum"
-                              ColorTexto="White"
-                              Margin="0 10 0 0"
-                            Texto="{Binding Album, Mode=TwoWay}"/>
+                              Texto="{Binding Album, Mode=TwoWay}"/>
                         <texto:CampoTextoControl
                               x:Name="txtGenero"
-                              Fondo="#2A2E32"
-                              PlaceholderColor="#ccc"
-                              PlaceholderTexto="Género"
-                              ColorTexto="White"
-                              Margin="0 10 0 0"
-                            Texto="{Binding Genero, Mode=TwoWay}"/>
+                              Style="{StaticResource campoTexto}"
+                              ToolTip="Asignar género de/los track/s."
+                              Texto="{Binding Genero, Mode=TwoWay}"
+                              PlaceholderTexto="Género"/>
                         <texto:CampoTextoControl
                               x:Name="txtAno"
-                              Fondo="#2A2E32"
-                              PlaceholderColor="#ccc"
+                              Style="{StaticResource campoTexto}"
+                              ToolTip="Asignar año de lanzamiento de/los track/s."
                               PlaceholderTexto="Año"
-                              ColorTexto="White"
-                              Margin="0 10 0 0"
-                            Texto="{Binding Ano, Mode=TwoWay}"/>
-                        <StackPanel Orientation="Horizontal" Margin="0 15 0 0">
+                              Texto="{Binding Ano, Mode=TwoWay}"/>
+                        <StackPanel Orientation="Horizontal" 
+                                    Margin="0 15 0 0">
                             <Border Width="80"
                                     Height="80"
                                     Cursor="Hand"
-                                    MouseLeftButtonUp="imagenAlbum_MouseLeftButtonUp"
+                                    MouseLeftButtonDown="imagenAlbum_MouseLeftButtonUp"
                                     x:Name="imagenAlbum"
                                     Background="{Binding Imagen, Mode=TwoWay}">
                             </Border>
                             <Button Style="{StaticResource btnPlayAll}"
                                     Click="Button_Click_1"
-                                    Margin="10 0 0 0" Background="LightSkyBlue">
-                                <StackPanel Orientation="Horizontal">
+                                    Margin="10 0 0 0" Background="LightSkyBlue"
+                                    ToolTip="Editar las canciones seleccionadas con la información provista en los campos de arriba.">
+                                <StackPanel Orientation="Horizontal" Cursor="">
                                     <fa:PackIconFontAwesome Kind="EditRegular"/>
                                     <TextBlock Text="Editar" Margin="5 0 0 0"/>
                                 </StackPanel>
                             </Button>
                         </StackPanel>
-
                     </StackPanel>
                     <Grid Grid.Row="3" HorizontalAlignment="Right">
                         <Button Style="{StaticResource btnPlayAll}" Background="Gray"

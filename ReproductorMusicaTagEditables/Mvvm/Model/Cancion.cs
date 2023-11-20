@@ -23,16 +23,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         public ImageBrush Imagen { get; set; }
         public int Cantidad { get; set; } = 0;
 
+
         public Cancion()
         {
-            Numero = string.Empty;
-            Titulo = string.Empty;
-            Artista = string.Empty;
-            Album = string.Empty;
-            Path = string.Empty;
-            Duracion = string.Empty;
-            FechaLanzamiento = string.Empty;
-            EstadoColor = COLOR_TEXTO_DEFAULT;
+            Numero              = string.Empty;
+            Titulo              = string.Empty;
+            Artista             = string.Empty;
+            Album               = string.Empty;
+            Path                = string.Empty;
+            Duracion            = string.Empty;
+            FechaLanzamiento    = string.Empty;
+            EstadoColor =       COLOR_TEXTO_DEFAULT;
         }
 
         public Cancion(Cancion c)
@@ -46,6 +47,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             Duracion = c.Duracion;
             DuracionLong = c.DuracionLong;
             EstadoColor = c.EstadoColor;
+            Genero = c.Genero;
         }
         public Cancion CrearCancion(string path)
         {

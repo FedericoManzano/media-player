@@ -1,7 +1,6 @@
 ﻿using ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -20,8 +19,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
             InitializeComponent();
             
         }
-
-
 
         public EditarTags(ObservableCollection<Cancion> cancionesAlbum)
         {
@@ -119,10 +116,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            EditarCamposTags();
+        }
+        private void EditarCamposTags ()
+        {
             editorTags.EditarTags();
             LimpiarYHabilitarTodosLosCampos();
         }
-
 
         private void LimpiarYHabilitarTodosLosCampos ()
         {
@@ -214,8 +214,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
             txtNumero.Habilitado = true;
         }
 
-
-
         private void LimpiarCampoTitulo()
         {
             txtTitulo.Texto = "";
@@ -230,8 +228,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
         {
             txtTitulo.Habilitado = true;
         }
-
-
 
         private void LimpiarCampoArtista()
         {
@@ -334,6 +330,28 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
             editorTags.Canciones.Clear();
             LimpiarYHabilitarTodosLosCampos();
             Hide();
+        }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            editorTags.EstablecerNumerosDeAlbumes();
+            LimpiarYHabilitarTodosLosCampos();
+        }
+
+        private void Window_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter) 
+            {
+                EditarCamposTags();
+            }
         }
     }
 }

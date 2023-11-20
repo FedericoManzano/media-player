@@ -128,3 +128,7 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\ReproductorMusicaTagEditables.csproj.CopyComplete
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\ReproductorMusicaTagEditables.exe
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\ReproductorMusicaTagEditables.pdb
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Mvvm\View\Pages\TodosLosGeneros.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Mvvm\View\Pages\TodosLosGeneros.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Mvvm\View\GenerosView.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Mvvm\View\GenerosView.baml

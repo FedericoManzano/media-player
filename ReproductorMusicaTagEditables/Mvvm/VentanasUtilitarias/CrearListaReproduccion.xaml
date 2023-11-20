@@ -30,9 +30,9 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Text="Crear Lista" 
-               Foreground="White" 
-               FontSize="22" 
-               VerticalAlignment="Center" />
+                           Foreground="White" 
+                           FontSize="22" 
+                           VerticalAlignment="Center" />
 
 
                 <Grid Grid.Row="1">
@@ -44,7 +44,8 @@
                         <RowDefinition/>
                     </Grid.RowDefinitions>
 
-                    <campo:CampoTextoControl x:Name="txtTitulo"
+                    <campo:CampoTextoControl 
+                                x:Name="txtTitulo"
                                  Margin="0,0,-108,75" 
                                  Grid.RowSpan="2"
                                  PlaceholderTexto="Título"
@@ -54,22 +55,23 @@
                                  CambiandoTexto="CampoTextoControl_CambiandoTexto"/>
 
                     <Button Grid.Column="0" Grid.Row="1" 
-                Style="{StaticResource btnGeneral}" 
-                Margin="0,-20,168,30" 
-                Background="Red"
-                Click="Button_Click_1">
+                            Style="{StaticResource btnGeneral}" 
+                            Margin="0,-20,168,30" 
+                            Background="Red"
+                            Click="Button_Click_1">
+                        
                         <StackPanel Orientation="Horizontal">
                             <fa:PackIconFontAwesome Kind="PlusSolid"/>
-                            <TextBlock Text="Crear" 
-                           Margin="8 0 0 0"/>
+                            <TextBlock  Text="Crear" 
+                                        Margin="8 0 0 0"/>
                         </StackPanel>
                     </Button>
                     <TextBlock x:Name="mensajeEstado"  
-                   Grid.Row="2" 
-                   Foreground="White"
-                   VerticalAlignment="Bottom"
-                   FontSize="16"
-                   TextWrapping="Wrap"/>
+                               Grid.Row="2" 
+                               Foreground="White"
+                               VerticalAlignment="Bottom"
+                               FontSize="16"
+                               TextWrapping="Wrap"/>
                 </Grid>
 
                 <Grid Grid.Row="2" HorizontalAlignment="Right">
@@ -82,6 +84,5 @@
                 </Grid>
             </Grid>
         </Border>
-        
     </Border>
 </Window>

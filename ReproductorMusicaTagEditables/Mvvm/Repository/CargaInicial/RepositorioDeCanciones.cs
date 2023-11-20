@@ -49,7 +49,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial
             }
         }
 
-
         public static bool EstaVacio ()
         {
             return File.ReadAllBytes(PATH_ARCHIVO_CANCIONES).Length == 0;   

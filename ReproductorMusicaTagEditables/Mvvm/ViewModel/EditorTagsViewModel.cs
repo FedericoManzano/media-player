@@ -1,6 +1,5 @@
 ﻿using MahApps.Metro.IconPacks;
 using Reproductor_Musica.Core;
-using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos;
@@ -173,19 +172,68 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             Canciones = new ObservableCollection<Cancion>(Canciones);
             RepositorioDeCanciones.GuardarCanciones(ir.Canciones);
             CancionesSeleccionadas.Clear();
-            if(!err)
+        }
+
+        public void EstablecerNumerosDeAlbumes ()
+        {
+            if (CancionesSeleccionadas.Count <= 0)
+                return;
+            SortedSet<string> album = new SortedSet<string>
+            (
+                CancionesSeleccionadas.Select(e => e.Album).ToList()
+            );
+
+            if(album.Count == 1)
             {
-                err = !err;
-                System.Windows.Forms.MessageBox.Show(
-                           $"Las canciones fueron editadas con exito", "Mensaje Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                InfoReproductor ir = InfoReproductor.DameInstancia();
+                uint nroCancion = 1;
+                foreach(var c in CancionesSeleccionadas)
+                {
+                    try
+                    {
+                        if (File.Exists(c.Path))
+                        {
+                            var tag = TagLib.File.Create(c.Path);
+                            tag.Tag.Track = nroCancion;
+                            c.Numero = nroCancion.ToString();
+                            tag.Save();
+                            ir.Canciones = ir.Canciones.Select(cl =>
+                            {
+                                if (cl.Path == c.Path)
+                                    return c;
+                                return cl;
+                            }).ToList();
+                            nroCancion++;
+                        }
+                    }
+                    catch(IOException e)
+                    {
+                        System.Windows.Forms.MessageBox.Show
+                        (
+                                $"La canción {c.Titulo} se está reproduciendo justo en este momento. No puede editar sus Tags." +
+                                Environment.NewLine +
+                                Environment.NewLine +
+                                $"Exception: {e.Message}",
+                                "Mensaje error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning
+                        );
+                        err = true;
+                    }
+                    
+                }
+               
+                Canciones = new ObservableCollection<Cancion>(Canciones);
+                RepositorioDeCanciones.GuardarCanciones(ir.Canciones);
+                CancionesSeleccionadas.Clear();
             }
         }
 
 
-
         private void ModificarNumero(Cancion c, TagLib.File tag)
         {
-            if (!string.IsNullOrEmpty(Numero) && Regex.Match(Numero,"^([0-9]{1,5})$").Success)
+            if (!string.IsNullOrEmpty(Numero) && 
+                Regex.Match(Numero,"^([0-9]{1,5})$").Success)
             {
                 tag.Tag.Track = uint.Parse(Numero);
                 c.Numero = Numero;
@@ -233,7 +281,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         private void ModificarAno(Cancion c, TagLib.File tag)
         {
-            if (!string.IsNullOrEmpty(Ano) && Regex.Match(Ano, "^[0-9]{4}$").Success)
+            if (!string.IsNullOrEmpty(Ano) && 
+                Regex.Match(Ano, "^[0-9]{4}$").Success)
             {
                 tag.Tag.Year = uint.Parse(Ano);
                 c.FechaLanzamiento = Ano;

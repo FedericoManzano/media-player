@@ -10,8 +10,10 @@ FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagE
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\MainWindow.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\VentanasUtilitarias\CrearListaReproduccion.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\VentanasUtilitarias\EditarTags.xaml;;
+FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\VentanasUtilitarias\TagsThemes.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\ArtistaView.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\FavoritosView.xaml;;
+FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\GenerosView.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\FavoritosPage.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\Internas\InfoAlbumPage.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\Internas\InfoArtistaPage.xaml;;
@@ -20,4 +22,5 @@ FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagE
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\TodasLasCanciones.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\TodosLosAlbumes.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\TodosLosArtistas.xaml;;
+FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\TodosLosGeneros.xaml;;
 

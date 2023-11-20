@@ -338,6 +338,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\GenerosView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\ListasView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -378,6 +382,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\Pages\TodosLosGeneros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\PrincipalView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -408,7 +416,6 @@
     <Compile Include="Mvvm\ExtensionMetodos\Seleccionador.cs" />
     <Compile Include="Mvvm\Model\Album.cs" />
     <Compile Include="Mvvm\Model\Artista.cs" />
-    <Compile Include="Mvvm\Model\AvatarLista.cs" />
     <Compile Include="Mvvm\Model\Cancion.cs" />
     <Compile Include="Mvvm\Model\ListaRep.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\ArchivoImagenBase.cs" />
@@ -445,6 +452,8 @@
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModel\EditorTagsViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\FavoritosViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\Filtros\PaginadorAvanzado.cs" />
+    <Compile Include="Mvvm\ViewModel\GenerosViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoAlbumViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\IRecolector\IRecolector.cs" />
@@ -454,6 +463,7 @@
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\TodosLosAlbumesViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\TodosLosArtistasViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\TodosLosGenerosViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Utils\AccionReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Utils\Anterior.cs" />
     <Compile Include="Mvvm\ViewModel\Utils\IAccionReproductor.cs" />
@@ -467,6 +477,9 @@
     </Compile>
     <Compile Include="Mvvm\View\FavoritosView.xaml.cs">
       <DependentUpon>FavoritosView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\GenerosView.xaml.cs">
+      <DependentUpon>GenerosView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\ListasView.xaml.cs">
       <DependentUpon>ListasView.xaml</DependentUpon>
@@ -494,6 +507,9 @@
     </Compile>
     <Compile Include="Mvvm\View\Pages\TodosLosArtistas.xaml.cs">
       <DependentUpon>TodosLosArtistas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\Pages\TodosLosGeneros.xaml.cs">
+      <DependentUpon>TodosLosGeneros.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\PrincipalView.xaml.cs">
       <DependentUpon>PrincipalView.xaml</DependentUpon>
@@ -526,7 +542,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mvvm\ViewModel\Filtros\" />
     <Folder Include="Mvvm\View\Utils\" />
   </ItemGroup>
   <ItemGroup>

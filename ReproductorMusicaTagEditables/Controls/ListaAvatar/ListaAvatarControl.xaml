@@ -7,10 +7,12 @@
              mc:Ignorable="d" 
              x:Name="visorListas">
 
-    <Border x:Name="bordePrincipal" Cursor="Hand" Padding="5" CornerRadius="10"
+    <Border x:Name="bordePrincipal" 
+            Padding="5" 
+            CornerRadius="10"
             MouseEnter="Border_MouseEnter"
             MouseLeave="Border_MouseLeave">
-        <Grid Cursor="Hand">
+        <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="75"/>
                 <ColumnDefinition Width="75"/>
@@ -30,31 +32,46 @@
                 </Border.Background>
             </Border>
 
-            <Border x:Name="bordeImagen1" Grid.Column="0" Grid.Row="0" CornerRadius="10 0 0 0"
-            
-            Background="{Binding ElementName=visorListas, Path=ImagenUno}">
+            <Border x:Name="bordeImagen1" 
+                    Grid.Column="0" 
+                    Grid.Row="0" 
+                    CornerRadius="10 0 0 0"
+                    Background="{Binding ElementName=visorListas, Path=ImagenUno}">
             </Border>
-            <Border x:Name="bordeImagen2" Grid.Column="1" Grid.Row="0" CornerRadius="0 10 0 0"
-            
-            Background="{Binding ElementName=visorListas, Path=ImagenDos}">
+            <Border x:Name="bordeImagen2" 
+                    Grid.Column="1" 
+                    Grid.Row="0" 
+                    CornerRadius="0 10 0 0"
+                    Background="{Binding ElementName=visorListas, Path=ImagenDos}">
             </Border>
-            <Border x:Name="bordeImagen3" Grid.Column="0" Grid.Row="1" CornerRadius="0 0 0 10"
-            Background="{Binding ElementName=visorListas, Path=ImagenTres}">
+            <Border x:Name="bordeImagen3" 
+                    Grid.Column="0" 
+                    Grid.Row="1" 
+                    CornerRadius="0 0 0 10"
+                    Background="{Binding ElementName=visorListas, Path=ImagenTres}">
             </Border>
 
-            <Border x:Name="bordeImagen4" Grid.Column="1" Grid.Row="1" CornerRadius="0 0 10 0"
-            Background="{Binding ElementName=visorListas, Path=ImagenCuatro}">
+            <Border x:Name="bordeImagen4" 
+                    Grid.Column="1" 
+                    Grid.Row="1" 
+                    CornerRadius="0 0 10 0"
+                    Background="{Binding ElementName=visorListas, Path=ImagenCuatro}">
             </Border>
-            <StackPanel Grid.Row="2" 
+            <StackPanel 
+                Grid.Row="2" 
                 Grid.ColumnSpan="2" 
                 Margin="0 5"
                 HorizontalAlignment="Left">
+                
                 <TextBlock Text="{Binding ElementName=visorListas, Path=Nombre}" 
-                   Foreground="White" 
-                   FontSize="18"/>
+                           Foreground="White" 
+                           FontSize="14"
+                           FontWeight="SemiBold"/>
+                
                 <TextBlock Text="{Binding ElementName=visorListas, Path=Cantidad}" 
-                   Foreground="#ccc" Margin="0 5"
-                   FontSize="11"/>
+                           Foreground="#ccc" 
+                           Margin="0 5"
+                           FontSize="11"/>
             </StackPanel>
             <Grid.ContextMenu>
                 <ContextMenu>
@@ -67,5 +84,4 @@
             </Grid.ContextMenu>
         </Grid>
     </Border>
-    
 </UserControl>

@@ -15,18 +15,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         public ulong? DuracionLong { get; set; }
         public ImageBrush Imagen {  get; set; }
         public string PathImagen {  get; set; } 
-
         public int CompareTo(Album other)
         {
             return Titulo.CompareTo(other.Titulo);
         }
-
-      //  public override bool Equals(object obj)
-       // {
-         //   Album a = (Album) obj;
-           // return Titulo.Equals(a.Titulo);
-        //}
-
         public override int GetHashCode()
         {
             int hashCode = 1963190208;
@@ -39,7 +31,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             hashCode = hashCode * -1521134295 + EqualityComparer<ImageBrush>.Default.GetHashCode(Imagen);
             return hashCode;
         }
-
         public override string ToString()
         {
             return $"Artista: {Artista} - Titulo: {Titulo} - Imagen: {Imagen}";
