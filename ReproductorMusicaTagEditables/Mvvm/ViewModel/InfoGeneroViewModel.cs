@@ -1,5 +1,6 @@
 ﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Controls.ListaAvatar;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
@@ -88,6 +89,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         {
             
             Irg.Presentacion = new ObservableCollection<Cancion> (await DameCancionesDelGenero(genero));
+            List<Cancion> l = await DameTodasCancionesDelGenero(genero);
+
+            
             var context = TaskScheduler.FromCurrentSynchronizationContext();
             ListaRep r = await Task.Factory.StartNew(() =>
             {
@@ -95,11 +99,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 {
                     Nombre = genero,
                     CantidadCanciones = DameCantidadCanciones(genero) + " Canciones",
-                    Duracion = DameDuracionString(genero) + " Dias",
-                    Imagen1 = DameImagenNumero(0),
-                    Imagen2 = DameImagenNumero(1),
-                    Imagen3 = DameImagenNumero(2),
-                    Imagen4 = DameImagenNumero(3),
+                    Duracion = DameDuracionString(genero),
+                    Imagen1 = DameImagenNumero(l,l.IndexRan()),
+                    Imagen2 = DameImagenNumero(l,l.IndexRan()),
+                    Imagen3 = DameImagenNumero(l,l.IndexRan()),
+                    Imagen4 = DameImagenNumero(l,l.IndexRan()),
                 };
                 BtnNavegacion = true;
                 return rp;
@@ -107,11 +111,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             return r;
         }
 
-        private ImageBrush DameImagenNumero (int numero)
+        private ImageBrush DameImagenNumero (List<Cancion> l, int numero)
         {
-            if(numero < Irg.Presentacion.Count)
+            if(numero < l.Count)
             {
-                return ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(Irg.Presentacion[numero].Path);
+                return ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(l[numero].Path);
             }
             return null;
         }
@@ -124,7 +128,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 if(c.Genero == genero)
                     tiempo += c.DuracionLong;
             }
-            return TimeSpan.FromTicks((long)tiempo.GetValueOrDefault(0UL)).ToString(@"dd\:hh\:mm\:ss");
+            TimeSpan ts = TimeSpan.FromTicks((long)tiempo.GetValueOrDefault(0UL));
+            if(ts.Days > 0)
+            {
+                return ts.ToString(@"dd\:hh\:mm\:ss") + " Días";
+            }
+            return TimeSpan.FromTicks((long)tiempo.GetValueOrDefault(0UL)).ToString(@"hh\:mm\:ss") + " Horas";
         }
 
         private string DameCantidadCanciones(string genero)

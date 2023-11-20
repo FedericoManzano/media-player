@@ -1,5 +1,6 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Documents;
@@ -24,6 +25,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
                 c.EstadoColor = "White";
             }
             return canciones;
+        }
+
+
+        public static int IndexRan(this List<Cancion> origen)
+        {
+            Random r = new Random();
+            return r.Next(0,origen.Count);
         }
     }
 }

@@ -52,7 +52,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
         {
             if (timeLong == null || timeLong <= 0)
                 return "00:00:00";
-            return TimeSpan.FromTicks((long)timeLong.GetValueOrDefault(0UL)).ToString(formato);
+            TimeSpan ts = TimeSpan.FromTicks((long)timeLong.GetValueOrDefault(0UL));
+            if(ts.Days > 0)
+            {
+                return ts.ToString(@"dd\:hh\:mm\:ss") + " Días";
+            }
+            return ts.ToString(formato) + " Horas";
         }
 
         public static string DuracionString(this List<Cancion> cancions)
@@ -64,6 +69,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             {
                 res += c.DuracionLong;
             }
+
             return res.DuracionString(@"hh\:mm\:ss");
         }
 

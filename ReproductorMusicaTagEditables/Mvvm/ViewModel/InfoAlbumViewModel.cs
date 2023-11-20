@@ -124,7 +124,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     Titulo = album,
                     Ano = c.FechaLanzamiento,
                     Genero = c.Genero,
-                    Duracion = Irg.Presentacion.DuracionString() + " Horas",
+                    Duracion = Irg.Presentacion.DuracionString(),
                     CantidadPistas = Irg.Presentacion.Count + " Canciones",
                     Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path),
                     PathImagen = c.Path
