@@ -358,6 +358,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\Pages\Internas\InfoGeneroPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\Pages\Internas\InfoListasPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -456,6 +460,7 @@
     <Compile Include="Mvvm\ViewModel\GenerosViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoAlbumViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoArtistaViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\InfoGeneroViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\IRecolector\IRecolector.cs" />
     <Compile Include="Mvvm\ViewModel\ListaRepViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ListasViewModel.cs" />
@@ -492,6 +497,9 @@
     </Compile>
     <Compile Include="Mvvm\View\Pages\Internas\InfoArtistaPage.xaml.cs">
       <DependentUpon>InfoArtistaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\Pages\Internas\InfoGeneroPage.xaml.cs">
+      <DependentUpon>InfoGeneroPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\Pages\Internas\InfoListasPage.xaml.cs">
       <DependentUpon>InfoListasPage.xaml</DependentUpon>

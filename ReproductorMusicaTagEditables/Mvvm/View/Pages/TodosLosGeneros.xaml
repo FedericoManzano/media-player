@@ -60,7 +60,8 @@
                             ImagenTres="{Binding Imagen3}"
                             ImagenCuatro="{Binding Imagen4}"
                             Nombre="{Binding Nombre}"
-                            Cantidad="{Binding CantidadCanciones}"/>
+                            Cantidad="{Binding CantidadCanciones}"
+                            MouseLeftButtonUp="ListaAvatarControl_MouseLeftButtonUp"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>

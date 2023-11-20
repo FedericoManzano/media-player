@@ -38,9 +38,11 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 15 0 0">
             <Button Style="{StaticResource btnNavegacion}" 
                     Click="Button_Click"
-                    ToolTip="Página anterior">
+                    ToolTip="Página anterior"
+                    IsEnabled="{Binding BtnNavegacion}">
                 <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
-                                Style="{StaticResource btnIcon}" IsEnabled="{Binding BtnNavegacion}"/>
+                                Style="{StaticResource btnIcon}" 
+                                IsEnabled="{Binding BtnNavegacion}"/>
             </Button>
             <TextBlock 
                Text="Canciones" 

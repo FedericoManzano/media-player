@@ -1,4 +1,6 @@
-﻿using ReproductorMusicaTagEditables.Controls.Paginador;
+﻿using ReproductorMusicaTagEditables.Controls.ListaAvatar;
+using ReproductorMusicaTagEditables.Controls.Paginador;
+using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +44,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         private void Page_Unloaded(object sender, RoutedEventArgs e)
         {
             todosLosGeneros.Limpiar();
+        }
+
+        private void ListaAvatarControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            ListaAvatarControl i = (ListaAvatarControl) sender;
+            todosLosGeneros.Limpiar();
+            this.NavigationService.Navigate(new InfoGeneroPage(i.Nombre));
         }
     }
 }

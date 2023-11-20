@@ -38,8 +38,10 @@
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center" 
                         Orientation="Horizontal">
-                <mah:ProgressRing  Margin="0 0 10 0" Foreground="Red"
-                   IsActive="{Binding Irg.Preloader}"/>
+                <mah:ProgressRing  
+                    Margin="0 0 10 0" 
+                    Foreground="Red"
+                    IsActive="{Binding Irg.Preloader}"/>
                 <Button  Style="{StaticResource btnSeleccionar}"
                          Margin="0 0 10 0"
                          Command="{Binding CargarMusicaCommand}"
@@ -66,11 +68,21 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Grid.Column="0" 
-                       Text="Todas las canciones" 
-                       Foreground="White" 
-                       FontSize="25" 
-                       Margin="0 -8 0 0 "/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock 
+                           Text="Todas las Canciones" 
+                           VerticalAlignment="Center"
+                           Foreground="White" 
+                           FontSize="25" />
+                <TextBlock 
+                           Text="{Binding CantidadCanciones}" 
+                           VerticalAlignment="Center"
+                           Foreground="#ccc" 
+                           FontSize="16"
+                           Margin="0 4 0 0 "/>
+            </StackPanel>
+            
+            
             <agregarCanciones:AgregarAListaControl  HorizontalAlignment="Right"
                                                     Grid.Column="1"
                                                     x:Name="agregarControl"
