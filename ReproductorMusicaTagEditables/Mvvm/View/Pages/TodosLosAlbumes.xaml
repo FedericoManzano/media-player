@@ -3,7 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
@@ -49,8 +48,8 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <avatar:AvatarAlbumControl Margin="0 15 15 15" 
-                                                   MouseLeftButtonUp="AvatarAlbumControl_MouseLeftButtonUp"
+                        <avatar:AvatarAlbumControl  Margin="0 15 15 15" 
+                                                    MouseLeftButtonUp="AvatarAlbumControl_MouseLeftButtonUp"
                                                     ImagenAlbum="{Binding Imagen}"
                                                     NombreAlbum="{Binding Album}"
                                                     NombreArtista="{Binding Artista}"/>

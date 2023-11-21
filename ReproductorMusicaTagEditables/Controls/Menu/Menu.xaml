@@ -50,7 +50,6 @@
             <RadioButton Style="{StaticResource btnMenu}"
                          Command="{Binding ElementName=menuLateral,Path=CommandArtistas}"
                          ToolTip="Todos los artistas">
-                
                 <StackPanel Orientation="Horizontal">
                     <fa:PackIconFontAwesome Kind="UserAltSolid"
                    Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>

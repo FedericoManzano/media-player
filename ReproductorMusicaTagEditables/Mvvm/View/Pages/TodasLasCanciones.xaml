@@ -73,12 +73,12 @@
                            Text="Todas las Canciones" 
                            VerticalAlignment="Center"
                            Foreground="White" 
-                           FontSize="25" />
+                           FontSize="22" />
                 <TextBlock 
                            Text="{Binding CantidadCanciones}" 
                            VerticalAlignment="Center"
                            Foreground="#ccc" 
-                           FontSize="16"
+                           FontSize="12"
                            Margin="0 4 0 0 "/>
             </StackPanel>
             

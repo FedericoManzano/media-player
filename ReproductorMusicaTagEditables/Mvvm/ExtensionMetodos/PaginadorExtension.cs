@@ -23,21 +23,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             origen[key] = true;
             return new Dictionary<string, bool>(origen);
         }
-
         public static Cancion ElementoRandon(this List<Cancion> lista)
         {
             Random r = new Random();
             return lista[r.Next(0, lista.Count)];
         }
-
-
         private static List<Cancion> DameListadoGeneros(string genero)
         {
             InfoReproductor i = InfoReproductor.DameInstancia();
             return i.Canciones.Where(c => c.Genero == genero).ToList();
         }
-
-
         public static ObservableCollection<ListaRep> DameListadoGeneros(this Dictionary<string, List<string>> _diccionario, string letra)
         {
             ObservableCollection<ListaRep> ret = new ObservableCollection<ListaRep>();
@@ -71,9 +66,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             }
             return ret;
         }
-
-
-
 
         public static ObservableCollection<ListaRep> DameListadoReproduccion(this Dictionary<string, List<string>> _diccionario, string letra)
         {
