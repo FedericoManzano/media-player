@@ -98,6 +98,16 @@
                    Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
             </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}"
+                         Command="{Binding ElementName=menuLateral,Path=CommandDescargas}"
+                         ToolTip="Crear lista de reproducción">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="DownloadSolid"
+                                            Style="{StaticResource iconoItemMenu}"/>
+                    <TextBlock Text="Descargar" 
+                               Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
         </StackPanel>
     </Border>
 </UserControl>

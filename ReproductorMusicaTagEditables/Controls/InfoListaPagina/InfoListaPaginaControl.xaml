@@ -78,12 +78,15 @@
                                Style="{StaticResource txtDatos}" Foreground="#ccc"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 10 0 17">
-                    <TextBlock Text="Fecha de creación" 
+                    <TextBlock Visibility="{Binding ElementName=infoLista, Path=VisibilidadFecha}"
+                                Text="Fecha de creación" 
                                 Style="{StaticResource txtDatos}"/>
-                    <TextBlock Text="·" 
+                    <TextBlock Visibility="{Binding ElementName=infoLista, Path=VisibilidadFecha}"
+                               Text="·" 
                                Style="{StaticResource txtDatos}"
                                Margin="10 0"/>
-                    <TextBlock Text="{Binding ElementName=infoLista, Path=FechaCreacion}" 
+                    <TextBlock Visibility="{Binding ElementName=infoLista, Path=VisibilidadFecha}"
+                               Text="{Binding ElementName=infoLista, Path=FechaCreacion}" 
                                Style="{StaticResource txtDatos}" Foreground="#ccc"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">

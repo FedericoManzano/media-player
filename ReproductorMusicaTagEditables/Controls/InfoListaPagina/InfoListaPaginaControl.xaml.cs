@@ -1,5 +1,6 @@
 ﻿
 using System;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -8,7 +9,7 @@ using System.Windows.Media;
 namespace ReproductorMusicaTagEditables.Controls.InfoListaPagina
 {
 
-    public partial class InfoListaPaginaControl : UserControl
+    public partial class InfoListaPaginaControl : UserControl, INotifyPropertyChanged
     {
         public InfoListaPaginaControl()
         {
@@ -95,6 +96,11 @@ namespace ReproductorMusicaTagEditables.Controls.InfoListaPagina
         }
         #endregion
 
+
+        private Visibility _visibilidadFecha = Visibility.Visible;
+
+
+
         public static DependencyProperty ComandoPlayProperty =
             DependencyProperty.Register("ComandoPlay", typeof(ICommand), typeof(InfoListaPaginaControl));
 
@@ -103,11 +109,23 @@ namespace ReproductorMusicaTagEditables.Controls.InfoListaPagina
             get => GetValue(ComandoPlayProperty) as ICommand;
             set => SetValue(ComandoPlayProperty, value);
         }
-
+        public Visibility VisibilidadFecha 
+        { 
+            get => _visibilidadFecha;
+            set { _visibilidadFecha = value;OnPropertyChange(nameof(VisibilidadFecha)); } 
+        }
 
         public static RoutedEvent ActualizarClickEvent = 
             EventManager.RegisterRoutedEvent("ActualizarClick", RoutingStrategy.Bubble, typeof(EventHandler), typeof(InfoListaPaginaControl));
-    
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+
+        public void OnPropertyChange(string propertyName)
+        {
+            PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         public event EventHandler ActualizarClick
         {
             add { AddHandler(ActualizarClickEvent, value); }

@@ -27,7 +27,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
         {
             InitializeComponent();
             this._genero = genero;
-            infoGenero.CargarInfoGenero(genero);
         }
 
         private void scrollCanciones_IsMouseCaptureWithinChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -46,6 +45,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            infoLista.VisibilidadFecha = Visibility.Collapsed;
             infoGenero.Limpiar();
             infoGenero.CargarInfoGenero(_genero);
         }
@@ -84,6 +84,20 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
                     agregarControl.Visibilidad = System.Windows.Visibility.Hidden;
                 }
             }
+        }
+
+        private void InfoCancionTabla_AlbumClick(object sender, EventArgs e)
+        {
+            InfoCancionTabla i = ( InfoCancionTabla)sender;
+            infoGenero.Limpiar();
+            this.NavigationService.Navigate(new InfoAlbumPage(i.AlbumInfo));
+        }
+
+        private void InfoCancionTabla_ArtistaClick(object sender, EventArgs e)
+        {
+            InfoCancionTabla i = (InfoCancionTabla)sender;
+            infoGenero.Limpiar();
+            this.NavigationService.Navigate(new InfoArtistaPage(i.ArtistaInfo));
         }
     }
 }

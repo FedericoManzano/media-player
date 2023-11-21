@@ -84,6 +84,8 @@
                                         AnoInfo="{Binding FechaLanzamiento}"
                                         DuracionInfo="{Binding Duracion}"
                                         ColorTexto="{Binding EstadoColor}"
+                                        AlbumClick="InfoCancionTabla_AlbumClick"
+                                        ArtistaClick="InfoCancionTabla_ArtistaClick"
                                         MouseLeave="InfoCancionTabla_MouseLeave"
                                         Habilitado="False">
                         </infoCancion:InfoCancionTabla>
