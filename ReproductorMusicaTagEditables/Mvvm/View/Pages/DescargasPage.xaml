@@ -1,0 +1,151 @@
+﻿<Page x:Class="ReproductorMusicaTagEditables.Mvvm.View.Pages.DescargasPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
+      xmlns:campo="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoTexto"
+      xmlns:pre="http://metro.mahapps.com/winfx/xaml/controls"
+      xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      mc:Ignorable="d" 
+      xmlns:descarga="clr-namespace:ReproductorMusicaTagEditables.Controls.DescargarCancion"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DescargasPage"
+>
+
+
+    <Page.Resources>
+        <ResourceDictionary Source="/Mvvm/View/Pages/Theme/generalesPageTheme.xaml"/>
+    </Page.Resources>
+
+    <Page.DataContext>
+        <viewModel:DescargasViewModel x:Name="descargarViewModel"/>
+    </Page.DataContext>
+    
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+     
+        </Grid.RowDefinitions>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal" 
+                        VerticalAlignment="Center">
+                <fa:PackIconFontAwesome Kind="YoutubeBrands" 
+                                        Margin="0 7 10 0"
+                                        Width="80"
+                                        Height="80"
+                                        Foreground="Red"/>
+                <TextBlock Text="{Binding Irg.TitutloVentana}" 
+                           Foreground="White"
+                           FontSize="35"
+                           Margin="0 23"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <StackPanel>
+                <StackPanel Margin="0 15">
+                    <TextBlock Text="Formato" 
+                               Foreground="White"
+                               FontSize="18"
+                               Margin="0 15 0 0"/>
+                    <StackPanel Orientation="Horizontal" 
+                                x:Name="selectores" 
+                                Margin="0 15 0 0">
+                        <RadioButton x:Name="mp3"
+                                     IsChecked="true" 
+                                     Style="{StaticResource radioSelector}"
+                                     Click="RadioButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:PackIconFontAwesome x:Name="iconMp3"
+                                                        Kind="CircleSolid"
+                                                        Foreground="Red"/>
+                                <TextBlock Text="MP3" 
+                                           Foreground="Red" 
+                                           Margin="5 0 0 0"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="wav"
+                                     IsChecked="false" 
+                                     Style="{StaticResource radioSelector}"
+                                     Margin="10 0 0 0"
+                                     Click="RadioButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:PackIconFontAwesome x:Name="iconWav"
+                                                        Kind="CircleRegular"
+                                                        Foreground="Red"/>
+                                <TextBlock Text="WAV" 
+                                           Foreground="Red" 
+                                           Margin="5 0 0 0"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="m4a"
+                                     IsChecked="false" 
+                                     Style="{StaticResource radioSelector}"
+                                     Margin="10 0 0 0"
+                                     Click="RadioButton_Click">
+                            <StackPanel Orientation="Horizontal">
+                                <fa:PackIconFontAwesome x:Name="iconM4a"
+                                                        Kind="CircleRegular"
+                                                        Foreground="Red"/>
+                                <TextBlock Text="M4A" 
+                                           Foreground="Red" 
+                                           Margin="5 0 0 0"/>
+                            </StackPanel>
+                        </RadioButton>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <StackPanel>
+                    <TextBlock Text="URLs de videos a convertir" 
+                               Foreground="White"
+                               FontSize="18" 
+                               Margin="0 15"/>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                                Height="200">
+                        <ItemsControl x:Name="itemDescargas">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel/>
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" 
+                            Margin="0 30 0 0">
+                    <Button Style="{StaticResource btnGeneral}"
+                            Background="Red"
+                            Foreground="White"
+                            Click="Editar_Tags_Canciones">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:PackIconFontAwesome Style="{StaticResource btnIcon}" Kind="TagSolid"/>
+                            <TextBlock Text="Editar" Foreground="White" Margin="5 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{StaticResource btnGeneral}"
+                            Background="Gray"
+                            Foreground="Black"
+                            Margin="10 0"
+                            Click="Mover_Archivos">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:PackIconFontAwesome Style="{StaticResource btnIcon}" Kind="DirectionsSolid" Foreground="Black"/>
+                            <TextBlock Text="Mover" Foreground="Black" Margin="5 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+            
+        </Grid>
+    </Grid>
+</Page>

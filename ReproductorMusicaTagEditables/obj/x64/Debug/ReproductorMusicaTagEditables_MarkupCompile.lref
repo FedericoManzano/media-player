@@ -1,6 +1,7 @@
 ﻿
 
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Controls\CampoBuscador\CampoBuscadorControl.xaml;;
+FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Controls\DescargarCancion\DescargarCancionControl.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Controls\InfoCancionTablaTags\InfoCancionTablaTagsControl.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Controls\InfoListaPagina\InfoListaPaginaControl.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Controls\ManejadorVentana\ManejadorVentana.xaml;;
@@ -12,8 +13,10 @@ FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagE
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\VentanasUtilitarias\EditarTags.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\VentanasUtilitarias\TagsThemes.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\ArtistaView.xaml;;
+FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\DescargasView.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\FavoritosView.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\GenerosView.xaml;;
+FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\DescargasPage.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\FavoritosPage.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\Internas\InfoAlbumPage.xaml;;
 FC:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\Pages\Internas\InfoArtistaPage.xaml;;

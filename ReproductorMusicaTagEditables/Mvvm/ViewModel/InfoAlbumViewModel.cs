@@ -129,7 +129,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path),
                     PathImagen = c.Path
                 };
-            }, CancellationToken.None, TaskCreationOptions.None, uiContext);
+            },CancellationToken.None, TaskCreationOptions.None, uiContext );
             BtnNavegacion = true;
             return a;
         }

@@ -75,7 +75,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         }
         private async  Task<List<Cancion>> DameCancionesDelGenero(string genero)
         {
-            return await Task.Run(() => Irg.Canciones.Where(c => c.Genero == genero).ToList().GetRange(0,10));
+            List<Cancion> l = await Task.Run(() => Irg.Canciones.Where(c => c.Genero == genero).ToList());
+            if(l.Count > 10)
+                return l.GetRange(0,10);
+            else
+                return l;
         }
 
         public async void CargarInfoGenero(string genero) 

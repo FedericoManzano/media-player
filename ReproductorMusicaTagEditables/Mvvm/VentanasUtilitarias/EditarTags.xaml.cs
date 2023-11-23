@@ -78,7 +78,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
             SetearAno(c.FechaLanzamiento);
          
             imagenAlbum.Background = 
-                ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path);
+                ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path) ??
+                ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
             FormatearSeleccion();
         }
         
@@ -311,7 +312,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
                 }
                 if(editorTags.CancionesSeleccionadas.Count > 0)
                 {
-                    editorTags.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(editorTags.CancionesSeleccionadas[0].Path);
+                    editorTags.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(editorTags.CancionesSeleccionadas[0].Path)??
+                        ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
                     DeshabilitarCampoNumero();
                     DeshabilitarCampoTitulo();
                 }

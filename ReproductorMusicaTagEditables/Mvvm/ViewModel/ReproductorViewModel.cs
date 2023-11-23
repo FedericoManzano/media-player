@@ -28,7 +28,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         public ICommand ListasCommand { get; }
         public ICommand FavoritosCommand { get; }
         public ICommand GenerosCommand { get; }
-
+        public ICommand DescargasCommand { get; }
 
         public ReproductorViewModelBase CurrentView
         {
@@ -48,7 +48,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             ListasCommand = new RelayCommand(MostrarListasView);
             FavoritosCommand = new RelayCommand(MostrarFavoritosView);
             GenerosCommand = new RelayCommand(MostrarGenerosView);
+            DescargasCommand = new RelayCommand(MostrarDescargasView);
             this.CurrentView = new PrincipalViewModel();
+        }
+
+        private void MostrarDescargasView(object obj)
+        {
+            InfoReproductor.PAGINA_ACTUAL = InfoReproductor.DESCARGAS;
+            LimpiarInfoDePaginas();
+            if (!Irg.Preloader)
+            {
+                Irg.Partes.Clear();
+                this.CurrentView = new DescargasViewModel();
+            }
         }
 
         private void MostrarGenerosView(object obj)
@@ -101,9 +113,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     Irg.Partes.Clear();
                     this.CurrentView = new AlbumesViewModel();
                 }
-            }
-
-            
+            }            
         }
 
         private void MostrarAristasViewAction(object obj)

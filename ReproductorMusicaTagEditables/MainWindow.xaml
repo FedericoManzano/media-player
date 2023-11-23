@@ -46,6 +46,9 @@
         <DataTemplate DataType="{x:Type viewModel:GenerosViewModel}">
             <view:GenerosView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:DescargasViewModel}">
+            <view:DescargasView/>
+        </DataTemplate>
     </Window.Resources>
 
     <Border CornerRadius="10" 
@@ -69,7 +72,8 @@
                          CommandAlbumes="{Binding AlbumesCommand}"
                          CommandListas="{Binding ListasCommand}"
                          CommandFavoritos="{Binding FavoritosCommand}"
-                         CommandGeneros="{Binding GenerosCommand}"/>
+                         CommandGeneros="{Binding GenerosCommand}"
+                         CommandDescargas="{Binding DescargasCommand}"/>
 
                 <!-- Main Section -->
                 <Grid Grid.Column="1">

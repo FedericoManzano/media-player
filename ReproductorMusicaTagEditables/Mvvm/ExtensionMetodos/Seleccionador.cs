@@ -1,9 +1,8 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.Model;
-using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Windows.Documents;
+
 
 namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
 {

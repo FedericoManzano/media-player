@@ -104,7 +104,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                    Nombre = artista,
                    Genero = Albumes != null && Albumes.Count > 0 ? Albumes[0].Genero : "",
                    CantidadAlbumes = Albumes.Count.ToString() + " Albumes",
-                   TiempoReproduccion = TiempoTotalDeReproduccion() + " Horas",
+                   TiempoReproduccion = TiempoTotalDeReproduccion(),
                    Imagen = DameImagenArtista()
                };
                 

@@ -101,7 +101,9 @@
                    HorizontalAlignment="Center"
                    Visibility="{Binding Irg.IsMensajeVisible}"/>
 
-        <ScrollViewer x:Name="scrollCanciones" Grid.Row="2" VerticalScrollBarVisibility="Auto"
+        <ScrollViewer x:Name="scrollCanciones"
+                      Grid.Row="2" 
+                      VerticalScrollBarVisibility="Auto"
                       IsMouseCaptureWithinChanged="Actualiza_El_Listado_Canciones"
                       Visibility="{Binding Irg.IslistadoVisible}">
             <ItemsControl  x:Name="itemList" ItemsSource="{Binding Irg.Partes}">

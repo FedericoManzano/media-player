@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.DescargarCancion.DescargarCancionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.DescargarCancion"
+             xmlns:campo="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoTexto"
+             xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:control="http://metro.mahapps.com/winfx/xaml/controls"
+             mc:Ignorable="d"
+             x:Name="descarga">
+
+    <StackPanel Orientation="Horizontal">
+        <campo:CampoTextoControl
+            PlaceholderTexto="Ruta"
+            PlaceholderColor="#ccc"
+            ColorTexto="White"
+            Fondo="#2A2E32"
+            Ancho="300"
+            Texto="{Binding ElementName=descarga, Path=Texto,Mode=TwoWay}"/>
+        <Button Style="{StaticResource btnGeneral}" 
+                Margin="10 0 0 0"
+                Click="OnClick"
+                IsEnabled="{Binding ElementName=descarga, Path=Habilitado}">
+            <StackPanel Orientation="Horizontal">
+                <fa:PackIconFontAwesome Style="{StaticResource btnIcon}" 
+                                        Kind="DownloadSolid" />
+                <TextBlock Text="Convertir" Foreground="White" Margin="5 0 0 0"/>
+            </StackPanel>
+        </Button>
+        <control:ProgressRing IsActive="{Binding ElementName=descarga, Path=EsVisible}" 
+                              Foreground="Red" 
+                              Margin="10 0 0 0"
+                              Width="15"
+                              Height="15"
+                              />
+        <fa:PackIconFontAwesome Kind="{Binding ElementName=descarga, Path=IconoEstado}"
+                                Foreground="{Binding ElementName=descarga, Path=ColorEstado}"
+                                Margin="10"
+                                Visibility="{Binding ElementName=descarga, Path=Ok}"/>
+        
+    </StackPanel>
+</UserControl>

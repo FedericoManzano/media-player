@@ -3,7 +3,7 @@
 
 
     <Style x:Key="campoTextoBox" TargetType="TextBox">
-        <Setter Property="MinWidth" Value="295"/>
+        <Setter Property="MinWidth" Value="300"/>
         <Setter Property="MinHeight" Value="40"/>
         <Setter Property="MaxHeight" Value="45"/>
         <Setter Property="Panel.ZIndex" Value="-1"/>

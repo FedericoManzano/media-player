@@ -5,6 +5,7 @@
     <UserControl.Resources>
         <ResourceDictionary Source="/Controls/CampoTexto/CampoTextoTheme.xaml"/>
     </UserControl.Resources>
+    
     <Grid VerticalAlignment="Center" MinHeight="40" HorizontalAlignment="Left">
         <TextBlock x:Name="txtPlaceholder" 
                    Text="{Binding ElementName=campoTexto, Path=PlaceholderTexto}" 
@@ -18,6 +19,7 @@
                  BorderBrush="{Binding ElementName=campoTexto, Path=ColorBorde}"
                  Foreground="{Binding ElementName=campoTexto, Path=ColorTexto}"
                  IsEnabled="{Binding ElementName=campoTexto, Path=Habilitado}"
+                 Width="{Binding ElementName=campoTexto, Path=Ancho}"
                  FontSize="15"
                  GotFocus="txtBox_GotFocus"
                  LostFocus="txtBox_LostFocus"

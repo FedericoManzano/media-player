@@ -7,7 +7,6 @@
       d:DesignHeight="450" d:DesignWidth="800"
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:avatar="clr-namespace:ReproductorMusicaTagEditables.Controls.AvatarAlbum"
-      xmlns:busqueda="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoBuscador"
       xmlns:btnPag="clr-namespace:ReproductorMusicaTagEditables.Controls.Paginador"
       Title="TodosLosAlbumes">
 

@@ -76,6 +76,16 @@ namespace ReproductorMusicaTagEditables.Controls.CampoTexto
         }
 
 
+        public static DependencyProperty AnchoProperty =
+            DependencyProperty.Register("Ancho", typeof(string), typeof(CampoTextoControl), new PropertyMetadata(string.Empty));
+
+        public string Ancho
+        {
+            get => GetValue(AnchoProperty) as string;
+            set => SetValue(AnchoProperty, value);
+        }
+
+
         public static DependencyProperty FondoProperty =
             DependencyProperty.Register("Fondo", typeof(string), typeof(CampoTextoControl), new PropertyMetadata(string.Empty));
 
