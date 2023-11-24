@@ -39,22 +39,27 @@
             <TextBlock Grid.Column="2" 
                        Text="{Binding ElementName=infoCancion, Path=Titulo}" 
                        Style="{StaticResource txtInfoCancion}"
-                       Grid.ColumnSpan="4"/>
+                       Grid.ColumnSpan="4"
+                       HorizontalAlignment="Left"/>
             <TextBlock Grid.Column="6" 
                        Text="{Binding ElementName=infoCancion, Path=Artista}" 
                        Style="{StaticResource txtInfoCancion}"
-                       Grid.ColumnSpan="2"/>
+                       Grid.ColumnSpan="2"
+                       HorizontalAlignment="Center"/>
             <TextBlock Grid.Column="8" 
                        Text="{Binding ElementName=infoCancion, Path=Album}" 
                        Style="{StaticResource txtInfoCancion}"
-                       Grid.ColumnSpan="3"/>
+                       Grid.ColumnSpan="3"
+                       HorizontalAlignment="Center"/>
             <TextBlock Grid.Column="11" 
                        Text="{Binding ElementName=infoCancion, Path=Genero}" 
                        Style="{StaticResource txtInfoCancion}"
-                       Grid.ColumnSpan="3"/>
+                       Grid.ColumnSpan="3"
+                       HorizontalAlignment="Center"/>
             <TextBlock Grid.Column="14" 
                        Text="{Binding ElementName=infoCancion, Path=Ano}" 
-                       Style="{StaticResource txtInfoCancion}"/>
+                       Style="{StaticResource txtInfoCancion}"
+                       HorizontalAlignment="Right"/>
         </Grid>
     </Border>
 </UserControl>

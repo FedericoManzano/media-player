@@ -32,7 +32,7 @@
 
 
         <TextBlock x:Name="txtSinCanciones" 
-                   Text="No hay canciones cargadas" 
+                   Text="No hay artistas cargados" 
                    Foreground="#ccc" 
                    Grid.Row="1"
                    FontSize="22"

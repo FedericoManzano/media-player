@@ -26,6 +26,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             d.Click += DescargarCancionControl_Click;
             
             itemDescargas.Items.Add(d);
+            descargarViewModel.MostrarNotificacion();
         }
 
         private void RadioButton_Click(object sender, RoutedEventArgs e)
@@ -38,7 +39,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
                 MahApps.Metro.IconPacks.PackIconFontAwesome i = r.FindChild<MahApps.Metro.IconPacks.PackIconFontAwesome>();
                 i.Kind = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.CircleSolid;
                 r.IsChecked = true;
-                MessageBox.Show(r.Name);
+                
                 if(r.Name  == "mp3")
                     descargarViewModel.ExtensionAudio = ".mp3";
                 if(r.Name as string == "m4a")

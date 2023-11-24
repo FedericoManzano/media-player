@@ -4,14 +4,10 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
-      xmlns:campo="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoTexto"
-      xmlns:pre="http://metro.mahapps.com/winfx/xaml/controls"
       xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       mc:Ignorable="d" 
-      xmlns:descarga="clr-namespace:ReproductorMusicaTagEditables.Controls.DescargarCancion"
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="DescargasPage"
->
+      Title="DescargasPage">
 
 
     <Page.Resources>
@@ -21,16 +17,19 @@
     <Page.DataContext>
         <viewModel:DescargasViewModel x:Name="descargarViewModel"/>
     </Page.DataContext>
-    
+
     <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="76*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
-     
         </Grid.RowDefinitions>
 
 
-        <Grid>
+        <Grid Grid.ColumnSpan="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
@@ -42,27 +41,38 @@
                                         Width="80"
                                         Height="80"
                                         Foreground="Red"/>
+                
                 <TextBlock Text="{Binding Irg.TitutloVentana}" 
                            Foreground="White"
                            FontSize="35"
                            Margin="0 23"/>
+                
+                <fa:PackIconFontAwesome Kind="BellSolid" VerticalAlignment="Center"
+                                        Width="35" Height="35" Margin="10 0 0 0"
+                                        Foreground="Red"
+                                        Visibility="{Binding NotificacionCancion}"
+                                        ToolTip="Existen canciones descargadas y convertidas. Las puede ver desde el botón editar."/>
+                
             </StackPanel>
         </Grid>
 
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="1" Grid.ColumnSpan="2">
             <StackPanel>
                 <StackPanel Margin="0 15">
                     <TextBlock Text="Formato" 
                                Foreground="White"
                                FontSize="18"
                                Margin="0 15 0 0"/>
+                    
                     <StackPanel Orientation="Horizontal" 
                                 x:Name="selectores" 
                                 Margin="0 15 0 0">
                         <RadioButton x:Name="mp3"
                                      IsChecked="true" 
                                      Style="{StaticResource radioSelector}"
-                                     Click="RadioButton_Click">
+                                     Click="RadioButton_Click"
+                                     IsEnabled="{Binding HabilitarBotones}"
+                                     ToolTip="Convertir a mp3">
                             <StackPanel Orientation="Horizontal">
                                 <fa:PackIconFontAwesome x:Name="iconMp3"
                                                         Kind="CircleSolid"
@@ -76,7 +86,9 @@
                                      IsChecked="false" 
                                      Style="{StaticResource radioSelector}"
                                      Margin="10 0 0 0"
-                                     Click="RadioButton_Click">
+                                     Click="RadioButton_Click"
+                                     IsEnabled="{Binding HabilitarBotones}"
+                                     ToolTip="Convertir a wav">
                             <StackPanel Orientation="Horizontal">
                                 <fa:PackIconFontAwesome x:Name="iconWav"
                                                         Kind="CircleRegular"
@@ -90,7 +102,9 @@
                                      IsChecked="false" 
                                      Style="{StaticResource radioSelector}"
                                      Margin="10 0 0 0"
-                                     Click="RadioButton_Click">
+                                     Click="RadioButton_Click"
+                                     IsEnabled="{Binding HabilitarBotones}"
+                                     ToolTip="Convertir a m4a">
                             <StackPanel Orientation="Horizontal">
                                 <fa:PackIconFontAwesome x:Name="iconM4a"
                                                         Kind="CircleRegular"
@@ -109,7 +123,6 @@
                                Foreground="White"
                                FontSize="18" 
                                Margin="0 15"/>
-
                     <ScrollViewer VerticalScrollBarVisibility="Auto"
                                 Height="200">
                         <ItemsControl x:Name="itemDescargas">
@@ -121,12 +134,15 @@
                         </ItemsControl>
                     </ScrollViewer>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal" 
                             Margin="0 30 0 0">
                     <Button Style="{StaticResource btnGeneral}"
                             Background="Red"
                             Foreground="White"
-                            Click="Editar_Tags_Canciones">
+                            Click="Editar_Tags_Canciones"
+                            IsEnabled="{Binding HabilitarBotones}"
+                            ToolTip="Editar archivos descargados">
                         <StackPanel Orientation="Horizontal">
                             <fa:PackIconFontAwesome Style="{StaticResource btnIcon}" Kind="TagSolid"/>
                             <TextBlock Text="Editar" Foreground="White" Margin="5 0 0 0"/>
@@ -137,15 +153,22 @@
                             Background="Gray"
                             Foreground="Black"
                             Margin="10 0"
-                            Click="Mover_Archivos">
+                            Click="Mover_Archivos"
+                            IsEnabled="{Binding HabilitarBotones}"
+                            ToolTip="Mover archivos a una ruta seleccionada">
                         <StackPanel Orientation="Horizontal">
                             <fa:PackIconFontAwesome Style="{StaticResource btnIcon}" Kind="DirectionsSolid" Foreground="Black"/>
                             <TextBlock Text="Mover" Foreground="Black" Margin="5 0 0 0"/>
                         </StackPanel>
                     </Button>
+                    <StackPanel>
+                        <TextBlock Text="No Cambie de página mientras el proceso de descarga está activo."
+                                   Foreground="Red"
+                                   FontSize="15"
+                                   Visibility="{Binding MjeDescargaActivado}"/>
+                    </StackPanel>
                 </StackPanel>
             </StackPanel>
-            
         </Grid>
     </Grid>
 </Page>

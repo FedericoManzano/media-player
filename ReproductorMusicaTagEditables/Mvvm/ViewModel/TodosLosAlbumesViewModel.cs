@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
@@ -46,7 +47,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public  void CargarAvatarAlbumes()
         {
-            for(int i = 0; i < Irg.Canciones.Count; i ++)
+            Irg.IsMensajeVisible = Visibility.Visible;
+            for (int i = 0; i < Irg.Canciones.Count; i ++)
             {
                 if (diccionarioalbumes.ContainsKey(Irg.Canciones[i].Album.PrimeraLetraMayuscula()))
                 {
@@ -66,6 +68,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 Paginacion = Paginacion.OrdenarPorClave();
                 Paginacion = Paginacion.MarcarClave(Paginacion.Keys.First());
                 AvatarAlbums = diccionarioalbumes.CargarImagenes(Paginacion.Keys.First());
+                Irg.IsMensajeVisible = Visibility.Collapsed;
             }
         }
 

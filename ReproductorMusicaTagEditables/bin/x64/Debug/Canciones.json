@@ -1299,7 +1299,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2788320000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "2",
@@ -1313,7 +1313,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1928097959,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "3",
@@ -1327,7 +1327,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2405877551,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "4",
@@ -1341,7 +1341,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1886302040,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "5",
@@ -1355,7 +1355,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2606236734,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "6",
@@ -1369,7 +1369,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1609665306,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "7",
@@ -1383,7 +1383,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1874808163,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "8",
@@ -1467,7 +1467,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2152228571,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "14",
@@ -2153,7 +2153,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2204212244,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "12",
@@ -2909,7 +2909,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2325600000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "20",
@@ -3104,6 +3104,188 @@
     "FechaLanzamiento": "1998",
     "EstadoColor": "White",
     "DuracionLong": 2126367346,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "1",
+    "Titulo": "Andan Yugando",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\Andan Yugando.mp3",
+    "Duracion": "03:21",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2012499358,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Barriletes",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\Barriletes.mp3",
+    "Duracion": "04:57",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2974073076,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "3",
+    "Titulo": "En La Ribera",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\En La Ribera.mp3",
+    "Duracion": "05:04",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 3044537179,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Esperando El Impacto",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\Esperando El Impacto.mp3",
+    "Duracion": "03:42",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2228712820,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "5",
+    "Titulo": "Inundación",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\Inundación.mp3",
+    "Duracion": "04:43",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2839844230,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "6",
+    "Titulo": "La Flor De Mis Heridas",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\La Flor De Mis Heridas.mp3",
+    "Duracion": "04:26",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2663015384,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "7",
+    "Titulo": "Madre Hay Una Sola",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\Madre Hay Una Sola.mp3",
+    "Duracion": "04:20",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2609698717,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "8",
+    "Titulo": "Me Duele Festejar",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\Me Duele Festejar.mp3",
+    "Duracion": "03:03",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 1834330769,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "9",
+    "Titulo": "O Vas A Misa ...",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\O Vas A Misa ....mp3",
+    "Duracion": "03:28",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2082962820,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "10",
+    "Titulo": "Sencillamente",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\Sencillamente.mp3",
+    "Duracion": "05:15",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 3152241666,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "11",
+    "Titulo": "Vamo' En La Salud",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\Vamo' En La Salud.mp3",
+    "Duracion": "02:57",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 1777263461,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "12",
+    "Titulo": "Y Llegará La Paz",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\Y Llegará La Paz.mp3",
+    "Duracion": "04:50",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2909771794,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "13",
+    "Titulo": "Yo",
+    "Artista": "BERSUIT",
+    "Album": "TESTOSTERONA",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Bersuit\\Testosterona\\Yo.mp3",
+    "Duracion": "03:30",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2105736538,
     "Imagen": null,
     "Cantidad": 0
   },
@@ -4579,6 +4761,188 @@
   },
   {
     "Numero": "1",
+    "Titulo": "Adiós",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Adiós (HQ).mp3",
+    "Duracion": "04:00",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2401255128,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Al Fin Sucede",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Al Fin Sucede (HQ).mp3",
+    "Duracion": "03:35",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2154766025,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "3",
+    "Titulo": "Bomba de Tiempo",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Bomba de Tiempo (HQ).mp3",
+    "Duracion": "05:20",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 3201003846,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Caravana",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Caravana (HQ).mp3",
+    "Duracion": "04:17",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2570582051,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "5",
+    "Titulo": "Crimen",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Crimen (HQ).mp3",
+    "Duracion": "03:55",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2359994871,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "6",
+    "Titulo": "Dios Nos Libre",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Dios Nos Libre (HQ).mp3",
+    "Duracion": "04:39",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2790814102,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "7",
+    "Titulo": "Jugo de Luna",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Jugo de Luna (HQ).mp3",
+    "Duracion": "04:13",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2534144230,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "8",
+    "Titulo": "La Excepción",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - La Excepción (HQ).mp3",
+    "Duracion": "04:16",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2564955769,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "9",
+    "Titulo": "Lago En El Cielo",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Lago En El Cielo (HQ).mp3",
+    "Duracion": "05:18",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 3180641666,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "10",
+    "Titulo": "Me Quedo Aquí",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Me Quedo Aquí (HQ).mp3",
+    "Duracion": "03:42",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2227105128,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "11",
+    "Titulo": "Medium",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Medium (HQ).mp3",
+    "Duracion": "05:42",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 3426594871,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "12",
+    "Titulo": "Otra Piel",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Otra Piel (HQ).mp3",
+    "Duracion": "04:48",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2883247435,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "13",
+    "Titulo": "Uno Entre Mil",
+    "Artista": "CERATI",
+    "Album": "ADIOS",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Cerati\\Gustavo Cerati - Uno Entre Mil (HQ).mp3",
+    "Duracion": "04:16",
+    "FechaLanzamiento": "2004",
+    "EstadoColor": "White",
+    "DuracionLong": 2564955769,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "1",
     "Titulo": "Bad Moon Rising (Remastered 1985)",
     "Artista": "CREEDENCE",
     "Album": "CLEAR WATHER REVIVAL",
@@ -5728,7 +6092,7 @@
   {
     "Numero": "1",
     "Titulo": "Welcome To The Jungle",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\01 Welcome To The Jungle.mp3",
@@ -5742,7 +6106,7 @@
   {
     "Numero": "2",
     "Titulo": "It's So Easy",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\02 It's So Easy.mp3",
@@ -5756,7 +6120,7 @@
   {
     "Numero": "3",
     "Titulo": "Nightrain",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\03 Nightrain.mp3",
@@ -5770,7 +6134,7 @@
   {
     "Numero": "4",
     "Titulo": "Out ta Get Me",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\04 Out ta Get Me.mp3",
@@ -5784,7 +6148,7 @@
   {
     "Numero": "5",
     "Titulo": "Mr. Brownstone",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\05 Mr. Brownstone.mp3",
@@ -5798,7 +6162,7 @@
   {
     "Numero": "6",
     "Titulo": "Paradise City",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\06 Paradise City.mp3",
@@ -5812,7 +6176,7 @@
   {
     "Numero": "7",
     "Titulo": "My Michelle",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\07 My Michelle.mp3",
@@ -5826,7 +6190,7 @@
   {
     "Numero": "8",
     "Titulo": "Think About You",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\08 Think About You.mp3",
@@ -5840,7 +6204,7 @@
   {
     "Numero": "9",
     "Titulo": "Sweet Child O'Mine",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\09 Sweet Child O'Mine.mp3",
@@ -5854,7 +6218,7 @@
   {
     "Numero": "10",
     "Titulo": "You're Crazy",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\10 You're Crazy.mp3",
@@ -5868,7 +6232,7 @@
   {
     "Numero": "11",
     "Titulo": "Anything Goes",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\11 Anything Goes.mp3",
@@ -5882,7 +6246,7 @@
   {
     "Numero": "12",
     "Titulo": "Rocket Queen",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "AFD",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Appetite for Destruction\\12 Rocket Queen.mp3",
@@ -5896,7 +6260,7 @@
   {
     "Numero": "1",
     "Titulo": "Reckless Life",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "LIES",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\G N' R Lies\\01 Reckless Life.mp3",
@@ -5910,7 +6274,7 @@
   {
     "Numero": "2",
     "Titulo": "Nice Boys",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "LIES",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\G N' R Lies\\02 Nice Boys.mp3",
@@ -5924,7 +6288,7 @@
   {
     "Numero": "3",
     "Titulo": "Move to the City",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "LIES",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\G N' R Lies\\03 Move to the City.mp3",
@@ -5938,7 +6302,7 @@
   {
     "Numero": "4",
     "Titulo": "Mama Kin",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "LIES",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\G N' R Lies\\04 Mama Kin.mp3",
@@ -5952,7 +6316,7 @@
   {
     "Numero": "5",
     "Titulo": "Patience",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "LIES",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\G N' R Lies\\05 Patience.mp3",
@@ -5966,7 +6330,7 @@
   {
     "Numero": "6",
     "Titulo": "Used to Love Her",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "LIES",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\G N' R Lies\\06 Used to Love Her.mp3",
@@ -5980,7 +6344,7 @@
   {
     "Numero": "7",
     "Titulo": "You're Crazy",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "LIES",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\G N' R Lies\\07 You're Crazy.mp3",
@@ -5994,7 +6358,7 @@
   {
     "Numero": "8",
     "Titulo": "One in a Million",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "LIES",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\G N' R Lies\\08 One in a Million.mp3",
@@ -6008,7 +6372,7 @@
   {
     "Numero": "1",
     "Titulo": "Since I Don't Have You",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\01. Since I Don't Have You.mp3",
@@ -6022,7 +6386,7 @@
   {
     "Numero": "2",
     "Titulo": "New Rose",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\02. New Rose.mp3",
@@ -6036,7 +6400,7 @@
   {
     "Numero": "3",
     "Titulo": "Down On The Farm",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\03. Down On The Farm.mp3",
@@ -6050,7 +6414,7 @@
   {
     "Numero": "4",
     "Titulo": "Human Being",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\04. Human Being.mp3",
@@ -6064,7 +6428,7 @@
   {
     "Numero": "5",
     "Titulo": "Raw Power",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\05. Raw Power.mp3",
@@ -6078,7 +6442,7 @@
   {
     "Numero": "6",
     "Titulo": "Ain't It Fun",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\06. Ain't It Fun.mp3",
@@ -6092,7 +6456,7 @@
   {
     "Numero": "7",
     "Titulo": "Buick Makane",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\07. Buick Makane.mp3",
@@ -6106,7 +6470,7 @@
   {
     "Numero": "8",
     "Titulo": "Hair Of The Dog",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\08. Hair Of The Dog.mp3",
@@ -6120,7 +6484,7 @@
   {
     "Numero": "9",
     "Titulo": "Attitude",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\09. Attitude.mp3",
@@ -6134,7 +6498,7 @@
   {
     "Numero": "10",
     "Titulo": "Black Leather",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\10. Black Leather.mp3",
@@ -6148,7 +6512,7 @@
   {
     "Numero": "11",
     "Titulo": "You Can't Put Your Arms Around",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\11. You Can't Put Your Arms Around A Memory.mp3",
@@ -6162,7 +6526,7 @@
   {
     "Numero": "12",
     "Titulo": "I Don't Care About You",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "THE SPAGHETTI INCIDE...",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\The Spaghetti Incident\\12. I Don't Care About You.mp3",
@@ -6176,7 +6540,7 @@
   {
     "Numero": "1",
     "Titulo": "Right Next Door To Hell",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\01 Right Next Door To Hell.mp3",
@@ -6190,7 +6554,7 @@
   {
     "Numero": "2",
     "Titulo": "Dust N' Bones",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\02 Dust N' Bones.mp3",
@@ -6204,7 +6568,7 @@
   {
     "Numero": "3",
     "Titulo": "Live And Let Die",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\03 Live And Let Die.mp3",
@@ -6218,7 +6582,7 @@
   {
     "Numero": "4",
     "Titulo": "Don't Cry (Original)",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\04 Don't Cry (Original).mp3",
@@ -6232,7 +6596,7 @@
   {
     "Numero": "5",
     "Titulo": "Perfect Crime",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\05 Perfect Crime.mp3",
@@ -6246,7 +6610,7 @@
   {
     "Numero": "6",
     "Titulo": "You Ain't The First",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\06 You Ain't The First.mp3",
@@ -6260,7 +6624,7 @@
   {
     "Numero": "7",
     "Titulo": "Bad Obsession",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\07 Bad Obsession.mp3",
@@ -6274,7 +6638,7 @@
   {
     "Numero": "8",
     "Titulo": "Back Off Bitch",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\08 Back Off Bitch.mp3",
@@ -6288,7 +6652,7 @@
   {
     "Numero": "9",
     "Titulo": "Double Talkin' Jive",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\09 Double Talkin' Jive.mp3",
@@ -6302,7 +6666,7 @@
   {
     "Numero": "10",
     "Titulo": "November Rain",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\10 November Rain.mp3",
@@ -6316,7 +6680,7 @@
   {
     "Numero": "11",
     "Titulo": "The Garden",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\11 The Garden.mp3",
@@ -6330,7 +6694,7 @@
   {
     "Numero": "12",
     "Titulo": "Garden Of Eden",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\12 Garden Of Eden.mp3",
@@ -6344,7 +6708,7 @@
   {
     "Numero": "13",
     "Titulo": "Don't Damn Me",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\13 Don't Damn Me.mp3",
@@ -6358,7 +6722,7 @@
   {
     "Numero": "14",
     "Titulo": "Bad apples",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\14 Bad Apples.mp3",
@@ -6372,7 +6736,7 @@
   {
     "Numero": "15",
     "Titulo": "Dead horse",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\15 Dead Horse.mp3",
@@ -6386,7 +6750,7 @@
   {
     "Numero": "16",
     "Titulo": "Coma",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI1",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion I\\16 Coma.mp3",
@@ -6400,7 +6764,7 @@
   {
     "Numero": "1",
     "Titulo": "Civil War",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\01 Civil War.mp3",
@@ -6414,7 +6778,7 @@
   {
     "Numero": "2",
     "Titulo": "14 Years",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\02 14 Years.mp3",
@@ -6428,7 +6792,7 @@
   {
     "Numero": "3",
     "Titulo": "Yesterdays",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\03 Yesterdays.mp3",
@@ -6442,7 +6806,7 @@
   {
     "Numero": "4",
     "Titulo": "Knockin' On Heaven's Door",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\04 Knockin' On Heaven's Door.mp3",
@@ -6456,7 +6820,7 @@
   {
     "Numero": "5",
     "Titulo": "Get In The Ring",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\05 Get In The Ring.mp3",
@@ -6470,7 +6834,7 @@
   {
     "Numero": "6",
     "Titulo": "Shotgun Blues",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\06 Shotgun Blues.mp3",
@@ -6484,7 +6848,7 @@
   {
     "Numero": "7",
     "Titulo": "Breakdown",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\07 Breakdown.mp3",
@@ -6498,7 +6862,7 @@
   {
     "Numero": "8",
     "Titulo": "Pretty Tied Up",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\08 Pretty Tied Up.mp3",
@@ -6512,7 +6876,7 @@
   {
     "Numero": "9",
     "Titulo": "Locomotive",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\09 Locomotive.mp3",
@@ -6526,7 +6890,7 @@
   {
     "Numero": "10",
     "Titulo": "So Fine",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\10 So Fine.mp3",
@@ -6540,7 +6904,7 @@
   {
     "Numero": "11",
     "Titulo": "Estranged",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\11 Estranged.mp3",
@@ -6554,7 +6918,7 @@
   {
     "Numero": "12",
     "Titulo": "You Could Be Mine",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\12 You Could Be Mine.mp3",
@@ -6568,7 +6932,7 @@
   {
     "Numero": "13",
     "Titulo": "Don't Cry",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\13 Don't Cry.mp3",
@@ -6582,7 +6946,7 @@
   {
     "Numero": "14",
     "Titulo": "My World",
-    "Artista": "GNR",
+    "Artista": "GUNS AND ROSES",
     "Album": "UYI2",
     "Genero": "HARD ROCK",
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\GunsNRoses\\Use Your Illusion II\\14 My World.mp3",
@@ -8817,7 +9181,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3608555102,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "8",
@@ -8859,7 +9223,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3218808163,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "11",
@@ -9097,7 +9461,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2908473469,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "5",
@@ -9825,7 +10189,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2387069387,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "15",
@@ -12401,7 +12765,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1445616326,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "3",
@@ -12681,7 +13045,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2576457142,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "12",
@@ -12933,7 +13297,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2656130612,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "5",
@@ -13101,7 +13465,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3497326282,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "4",
@@ -21865,7 +22229,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2518440000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "8",
@@ -22033,7 +22397,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2334070000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "8",
@@ -24440,6 +24804,426 @@
     "FechaLanzamiento": "1988",
     "EstadoColor": "White",
     "DuracionLong": 4405760000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "1",
+    "Titulo": "Donde Estés Llegaré",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Alexis y Fido - Donde Estés Llegaré.mp3",
+    "Duracion": "04:33",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2732942948,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Mis Ojos Lloran Por Ti (Lyrics)",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Big Boy - Mis Ojos Lloran Por Ti (Lyrics).mp3",
+    "Duracion": "05:02",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 3023103205,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "3",
+    "Titulo": "Tocarte Toa",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Big Yamo Ft. Natya - Tocarte Toa (Video Oficial).mp3",
+    "Duracion": "03:26",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2068762820,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Rompe",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Daddy Yankee   Rompe  Official HD Music Video.mp3",
+    "Duracion": "06:38",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 3989232051,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "5",
+    "Titulo": "Gasolina",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Daddy Yankee - Gasolina (Video Oficial).mp3",
+    "Duracion": "04:20",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2604072435,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "6",
+    "Titulo": "Dile",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Don Omar - Dile.mp3",
+    "Duracion": "04:01",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2414383333,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "7",
+    "Titulo": "Dutty Love ft. Natti Natasha",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Don Omar - Dutty Love (Lyric Video) ft. Natti Natasha.mp3",
+    "Duracion": "04:53",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2936028205,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "8",
+    "Titulo": "Hasta Abajo",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Don Omar - Hasta Abajo.mp3",
+    "Duracion": "06:09",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 3697196153,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "9",
+    "Titulo": "Salio El Sol",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Don Omar - Salio El Sol (Official Music Video).mp3",
+    "Duracion": "05:39",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 3390960897,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "10",
+    "Titulo": "Taboo",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Don Omar - Taboo.mp3",
+    "Duracion": "04:59",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2998990384,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "11",
+    "Titulo": "Bandolero",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Don Omar ft. Tego Calderon - Bandolero.mp3",
+    "Duracion": "05:13",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 3138577564,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "12",
+    "Titulo": "Dile",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Don Omar _ Dile (Video Oficial ).mp3",
+    "Duracion": "04:01",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2414919230,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "13",
+    "Titulo": "Pobre Diabla",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Don Omar _ Pobre Diabla (Video Oficial) ❌.mp3",
+    "Duracion": "05:00",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 3009171153,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "14",
+    "Titulo": "Sin Ti",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\INNA - Sin Ti _ Official Music Video.mp3",
+    "Duracion": "02:48",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 1688312820,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "15",
+    "Titulo": "Yo Quiero Bailar",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Ivy Queen - Yo Quiero Bailar     ORIGINAL  [!!!].mp3",
+    "Duracion": "03:15",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 1954628205,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "16",
+    "Titulo": "Perdoname",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\La Factoria - Perdoname ft. Eddy Lover.mp3",
+    "Duracion": "03:52",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2323825641,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "17",
+    "Titulo": "Mariola ",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Minelli - Mariola _ Official Video.mp3",
+    "Duracion": "03:10",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 1907473717,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "18",
+    "Titulo": "Noche de Entierro",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Noche de Entierro - Los Benjamins, Wisin & Yandel, Daddy Yankee & Hector _El Father_.mp3",
+    "Duracion": "04:24",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2645332692,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "19",
+    "Titulo": "Es un secreto",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Plan B - Es un secreto [Official Video].mp3",
+    "Duracion": "03:39",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2198973717,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "20",
+    "Titulo": "Guatauba",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Plan B - Guatauba [ClasicoReggaetonero].mp3",
+    "Duracion": "02:46",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 1667415384,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "21",
+    "Titulo": "Si no le contesto",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Plan B - Si no le contesto ft. Tony Dize and Zion y Lennox (Remix) [Official Video].mp3",
+    "Duracion": "04:38",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2785991666,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "22",
+    "Titulo": "Propuesta Indecente",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Romeo Santos - Propuesta Indecente (Official Video).mp3",
+    "Duracion": "04:34",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2749822435,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "23",
+    "Titulo": "Patrón",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Tito _El Bambino_ El Patrón - Flow Natural ft. Beenie Man, Ines.mp3",
+    "Duracion": "03:03",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 1837278205,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "24",
+    "Titulo": "Abusadora",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Wisin & Yandel - Abusadora (Official Video).mp3",
+    "Duracion": "03:31",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2111630769,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "25",
+    "Titulo": "Me Estás Tentando",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Wisin & Yandel - Me Estás Tentando (Official Video).mp3",
+    "Duracion": "03:58",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2385447435,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "26",
+    "Titulo": "Sexy Movimiento",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Wisin & Yandel - Sexy Movimiento (Official Video).mp3",
+    "Duracion": "04:29",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2694898076,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "27",
+    "Titulo": "Llámame",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\wrs - Llámame _ official music video.mp3",
+    "Duracion": "03:13",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 1939624358,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "28",
+    "Titulo": "Yo Voy",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Yo Voy (feat. Daddy Yankee).mp3",
+    "Duracion": "03:56",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2369908333,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "29",
+    "Titulo": "Zun Da Da",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Zion - Zun Da Da (Official Video).mp3",
+    "Duracion": "04:06",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2467432051,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "30",
+    "Titulo": "Baila Morena",
+    "Artista": "VARIOS REGUETON",
+    "Album": "REGUETON VIEJO",
+    "Genero": "REGUETON",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Regueton\\Zucchero  -  Baila Morena.mp3",
+    "Duracion": "04:15",
+    "FechaLanzamiento": "2013",
+    "EstadoColor": "White",
+    "DuracionLong": 2551559615,
     "Imagen": null,
     "Cantidad": 0
   },
@@ -27647,7 +28431,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2076995918,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "",
@@ -30251,7 +31035,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2267951020,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "",
@@ -30334,6 +31118,202 @@
     "FechaLanzamiento": "1987",
     "EstadoColor": "White",
     "DuracionLong": 1921306122,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "1",
+    "Titulo": "Animal Instinct (Acoustic Version)",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\Animal Instinct (Acoustic Version).mp3",
+    "Duracion": "03:44",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2247467307,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Dreams (Acoustic Version)",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\Dreams (Acoustic Version).mp3",
+    "Duracion": "04:31",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2711776923,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "3",
+    "Titulo": "Free to Decide (Acoustic Version)",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\Free to Decide (Acoustic Version).mp3",
+    "Duracion": "03:22",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "red",
+    "DuracionLong": 2022144230,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Just My Imagination (Acoustic Version)",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\Just My Imagination (Acoustic Version).mp3",
+    "Duracion": "04:08",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2487794230,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "5",
+    "Titulo": "Linger (Acoustic Version)",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\Linger (Acoustic Version).mp3",
+    "Duracion": "05:03",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3034891666,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "6",
+    "Titulo": "Ode to My Family (Acoustic Version)",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\Ode to My Family (Acoustic Version).mp3",
+    "Duracion": "04:50",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2904681410,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "7",
+    "Titulo": "Ridiculous Thoughts (Acoustic Version)",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\Ridiculous Thoughts (Acoustic Version).mp3",
+    "Duracion": "03:12",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 1925692307,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "8",
+    "Titulo": "Rupture",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\Rupture.mp3",
+    "Duracion": "04:23",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2632472435,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "9",
+    "Titulo": "The Glory",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\The Glory.mp3",
+    "Duracion": "05:22",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3228332051,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "10",
+    "Titulo": "When You're Gone (Acoustic Version)",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\When You're Gone (Acoustic Version).mp3",
+    "Duracion": "04:17",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2570582051,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "11",
+    "Titulo": "Why",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\Why.mp3",
+    "Duracion": "05:09",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3096514102,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "12",
+    "Titulo": "You & Me (Acoustic Version)",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\You & Me (Acoustic Version).mp3",
+    "Duracion": "03:38",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2188524358,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "13",
+    "Titulo": "Zombie (Acoustic Version)",
+    "Artista": "THE CRANBERRIES",
+    "Album": "SOMETHING ELSE",
+    "Genero": "ROCK ALTERNATIVO",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\The Cranberries\\Something else\\Zombie (Acoustic Version).mp3",
+    "Duracion": "04:07",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2478416666,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "",
+    "Titulo": "Los Piojos - Ando ganas (Con letra)",
+    "Artista": "Desconocido",
+    "Album": "Desconocido",
+    "Genero": "Desconocido",
+    "Path": "C:\\Users\\feder\\OneDrive\\Escritorio\\Los Piojos - Ando ganas (Con letra).mp3",
+    "Duracion": "05:39",
+    "FechaLanzamiento": "0",
+    "EstadoColor": "White",
+    "DuracionLong": 3394443589,
     "Imagen": null,
     "Cantidad": 0
   }

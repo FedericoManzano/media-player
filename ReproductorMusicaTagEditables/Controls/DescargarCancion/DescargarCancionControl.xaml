@@ -12,11 +12,11 @@
 
     <StackPanel Orientation="Horizontal">
         <campo:CampoTextoControl
-            PlaceholderTexto="Ruta"
+            PlaceholderTexto="URL"
             PlaceholderColor="#ccc"
             ColorTexto="White"
             Fondo="#2A2E32"
-            Ancho="300"
+            Ancho="550"
             Texto="{Binding ElementName=descarga, Path=Texto,Mode=TwoWay}"/>
         <Button Style="{StaticResource btnGeneral}" 
                 Margin="10 0 0 0"

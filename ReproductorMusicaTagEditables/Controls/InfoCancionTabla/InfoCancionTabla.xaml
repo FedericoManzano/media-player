@@ -58,7 +58,7 @@
             <Button Style="{StaticResource btnArtista}"
                     Grid.Column="6"
                     Grid.ColumnSpan="2"  
-                    HorizontalAlignment="Right"
+                    HorizontalAlignment="Center"
                     Click="OnArtistaClick"
                     Content="{Binding ElementName=infoCancion, Path=ArtistaInfo}"
                     Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
@@ -66,16 +66,16 @@
             
             <Button Style="{StaticResource btnArtista}" Grid.Column="8" Grid.ColumnSpan="3"  
                     Click="OnAlbumClick"
+                    HorizontalAlignment="Center"
                     Content="{Binding ElementName=infoCancion, Path=AlbumInfo}"
-                    Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"
-                    HorizontalAlignment="Left"/>
+                    Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
 
 
             <TextBlock Style="{StaticResource txtInfoCancion}" 
                        Grid.Column="11"
                        Grid.ColumnSpan="2"
                        Text="{Binding ElementName=infoCancion, Path=GeneroInfo}" 
-                       HorizontalAlignment="Left"
+                       HorizontalAlignment="Center"
                        Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
 
             <TextBlock Style="{StaticResource txtInfoCancion}" 

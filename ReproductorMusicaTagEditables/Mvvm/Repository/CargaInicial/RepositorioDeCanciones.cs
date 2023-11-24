@@ -1,12 +1,11 @@
 ﻿using Newtonsoft.Json;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+
 
 namespace ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial
 {
@@ -72,6 +71,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial
             
             
             return listadoLeido;
+        }
+        public static void AgregarCanciones(List<Cancion> canciones)
+        {
+            if (!ExisteArchivo())
+            {
+                CrearArchivo();
+            }
+            List<Cancion> l = LeerTodasLasCanciones();
+            l.AddRange(canciones);
+            GuardarCanciones(l);
+            InfoReproductor.DameInstancia().Canciones = LeerTodasLasCanciones();
         }
     }
 }
