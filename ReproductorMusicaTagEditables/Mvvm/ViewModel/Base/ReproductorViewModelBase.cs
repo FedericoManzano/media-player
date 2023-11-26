@@ -111,9 +111,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                     Duracion = infoCancionTabla.DuracionInfo,
                     Genero = infoCancionTabla.GeneroInfo,
                 };
-                int index = _cancionesSeleccionadas.IndexOf(c);
-                if(index == -1)
+
+
+                List<Cancion> la = _cancionesSeleccionadas.Where(cs => cs.Titulo == c.Titulo && cs.Artista == c.Artista && c.Album == cs.Album).ToList();
+                
+                if(la.Count == 0)
+                {
                     _cancionesSeleccionadas.Add(c);
+                }
             }
         }
 
@@ -130,9 +135,20 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                     Duracion = infoCancionTabla.DuracionInfo,
                     Genero = infoCancionTabla.GeneroInfo,
                 };
+
+                List<Cancion> ar = _cancionesSeleccionadas.Where(cl =>
+                {
+                   return cl.Titulo == c.Titulo && cl.Artista == c.Artista && cl.Album == c.Album;
+                }).ToList();
+
+                if(ar.Count >= 1) {
+
+                    ar = Irg.Canciones.Where(clist => clist.Titulo == ar[0].Titulo && clist.Artista == ar[0].Artista && clist.Album == ar[0].Album).ToList();
+                    _cancionesSeleccionadas = _cancionesSeleccionadas.Where(cs => cs.Titulo != ar[0].Titulo || cs.Artista != ar[0].Artista || ar[0].Album != cs.Album).ToList();
+                }
+
+               
                 
-              
-                _cancionesSeleccionadas.Remove(c);
             }
         }
 

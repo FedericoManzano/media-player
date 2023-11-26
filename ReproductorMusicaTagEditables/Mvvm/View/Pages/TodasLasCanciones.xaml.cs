@@ -71,6 +71,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             }
             else
             {
+
                 panelPrincipal.DeseleccionarCancion(i);
                 if(panelPrincipal.CantidadSeleccionado() == 0 && agregarControl.Visibilidad == System.Windows.Visibility.Visible)
                 {

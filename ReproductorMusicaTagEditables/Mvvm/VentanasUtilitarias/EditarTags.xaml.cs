@@ -1,6 +1,7 @@
 ﻿using ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -46,6 +47,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
                 Genero = i.Genero,
             };
 
+            
             if(!i.Seleccionado)
             {
                 if(!_todosSeleccionados)
@@ -53,15 +55,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
             }
             else
             {
-                if(editorTags.CancionesSeleccionadas.IndexOf(c) == -1 )
+                if(editorTags.IndiceDe(c) )
                 {
-                    foreach (Cancion co in editorTags.Canciones)
-                    {
-                        if (co.Equals(c))
-                        {
-                            c = co;
-                        }
-                    }
+                    c = editorTags.DameCancionPorClave(c);
                     editorTags.CancionesSeleccionadas.Add(c);
                     CargarCancionCampos(c);
                 }

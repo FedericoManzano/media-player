@@ -8,7 +8,7 @@
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:avatar="clr-namespace:ReproductorMusicaTagEditables.Controls.AvatarAlbum"
       xmlns:btnPag="clr-namespace:ReproductorMusicaTagEditables.Controls.Paginador"
-      Title="TodosLosAlbumes">
+      Title="TodosLosAlbumes" Cursor="">
 
     <Page.DataContext>
         <viewModel:TodosLosAlbumesViewModel x:Name="todosLosAlbumes"/>

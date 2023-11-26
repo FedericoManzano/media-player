@@ -39,7 +39,7 @@
             <Button Style="{StaticResource btnNavegacion}" 
                     Click="Button_Click"
                     ToolTip="Página anterior"
-                    IsEnabled="{Binding BtnNavegacion}">
+                    IsEnabled="{Binding Irg.BtnNavegacion}">
                 <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
                                 Style="{StaticResource btnIcon}" 
                                 IsEnabled="{Binding BtnNavegacion}"/>

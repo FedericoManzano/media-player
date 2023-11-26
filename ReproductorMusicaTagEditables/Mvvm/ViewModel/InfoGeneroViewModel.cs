@@ -27,17 +27,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         public ICommand PlayCommandGenero { get; }
 
 
-        private bool _btnNavegacion = true;
-
-        public bool BtnNavegacion
-        {
-            get => _btnNavegacion;
-            set
-            {
-                _btnNavegacion = value;
-                OnPropertyChanged(nameof(BtnNavegacion));
-            }
-        }
+   
 
         public InfoGeneroViewModel() 
         {
@@ -84,7 +74,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public async void CargarInfoGenero(string genero) 
         {
-            BtnNavegacion = false;
+            Irg.BtnNavegacion = false;
             InfoGenero = await CargarInfoGeneroAsync(genero);
         }
 
@@ -109,7 +99,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     Imagen3 = DameImagenNumero(l,l.IndexRan()),
                     Imagen4 = DameImagenNumero(l,l.IndexRan()),
                 };
-                BtnNavegacion = true;
+                Irg.BtnNavegacion = true;
                 return rp;
             }, CancellationToken.None, TaskCreationOptions.None, context);
             return r;

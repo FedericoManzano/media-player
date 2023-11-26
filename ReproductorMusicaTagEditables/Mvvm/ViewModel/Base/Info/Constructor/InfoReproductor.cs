@@ -34,5 +34,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                 _ins = new InfoReproductor();
             return _ins;
         }
+
+        public Cancion DameCancionPorClave(Cancion c)
+        {
+          
+            foreach(Cancion cl in Canciones)
+            {
+                if (cl.Titulo == c.Titulo && cl.Album == c.Album && cl.Artista == c.Artista)
+                    return cl;
+            }
+            return c;
+        }
     }
 }

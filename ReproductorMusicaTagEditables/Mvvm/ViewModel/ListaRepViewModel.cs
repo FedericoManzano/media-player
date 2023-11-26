@@ -41,10 +41,28 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             ListaRep = await CrearInfoListaRep(listaAvatarControl);
             FechaCreacion = ListasReproduccion.FechaCreacion(ListaRep.Nombre);
             Irg.Presentacion = new ObservableCollection<Cancion>(DameListaPorPartes(ListaRep.Nombre,0,10));
-            Irg.Presentacion = new ObservableCollection<Cancion>(await ListadoCancionesFiltrado());
+            MantenerSeleccionPrevia();
+            ///Irg.Presentacion = new ObservableCollection<Cancion>(await ListadoCancionesFiltrado());
         }
 
-          
+
+        private void MantenerSeleccionPrevia()
+        {
+            Irg.Presentacion.Deseleccionar();
+            foreach (var cf in Irg.CancionesFiltradas)
+            {
+                foreach (var cp in Irg.Presentacion)
+                {
+                    if (cp.Equals(cf))
+                    {
+                        if (cf.EstadoColor == "Red")
+                        {
+                            cp.EstadoColor = "Red";
+                        }
+                    }
+                }
+            }
+        }
         private List<Cancion> DameListaPorPartes(string nombre, int inicio, int final)
         {
             List<Cancion> l = ListasReproduccion.DameListadoCanciones(nombre);

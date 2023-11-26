@@ -37,7 +37,8 @@
         <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 20 0 0">
             <Button Style="{StaticResource btnNavegacion}" 
                     Click="Button_Click"
-                    ToolTip="Página anterior">
+                    ToolTip="Página anterior"
+                    IsEnabled="{Binding Irg.BtnNavegacion}">
                 <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
                                         Style="{StaticResource btnIcon}"/>
             </Button>

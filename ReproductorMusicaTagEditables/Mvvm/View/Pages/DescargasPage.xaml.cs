@@ -89,6 +89,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         private async void Editar_Tags_Canciones(object sender, RoutedEventArgs e)
         {
             List<Cancion> l = await descargarViewModel.DameListadoCanciones();
+
+            foreach(Cancion c in l)
+            {
+                
+            }
+
+
             EditarTags ed = new EditarTags(new ObservableCollection<Cancion>(l));
             ed.ShowDialog();
         }

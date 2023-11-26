@@ -22,6 +22,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public void CargarListasReproduccion()
         {
+            Irg.BtnNavegacion = false;
             Irg.IsMensajeVisible = System.Windows.Visibility.Visible;
             
             List<string> listasNombre = ListasReproduccion.ListadoNombres();
@@ -29,11 +30,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
             if(PaginadorAvanzado.Tamano() > 0 )
                 Irg.IsMensajeVisible = System.Windows.Visibility.Collapsed;
+            Irg.BtnNavegacion = true;
         }
 
         public void ActualizarListas(string letra)
         {
+            Irg.BtnNavegacion = false;
             PaginadorAvanzado.ActualizarListasReproduccion(letra);
+            Irg.BtnNavegacion = true;
         }
 
         public void Limpiar()

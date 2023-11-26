@@ -262,7 +262,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="System\Windows\Forms\MessageBoxButton.cs" />
     <Page Include="Controls\AgregarALista\AgregarAListaControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

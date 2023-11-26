@@ -83,6 +83,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public async void CargarInfoArtista(string artista)
         {
+            Irg.BtnNavegacion = false;
             Albumes =  await CargarListadoAlbumes(artista);
 
             if (Albumes.Count == 0)
@@ -98,7 +99,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         private async Task<Artista> BuildArtista(string artista)
         {
             var uiContext = TaskScheduler.FromCurrentSynchronizationContext();
-            return await Task<Artista>.Factory.StartNew(()=> {
+
+            Artista a =  await Task<Artista>.Factory.StartNew(()=> {
                return new Artista()
                {
                    Nombre = artista,
@@ -110,6 +112,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 
                 
             }, CancellationToken.None, TaskCreationOptions.None, uiContext);
+            if (a != null)
+                Irg.BtnNavegacion = true;
+            return a;
         }
 
         private async void OrdenarPorFechaAlbumes()

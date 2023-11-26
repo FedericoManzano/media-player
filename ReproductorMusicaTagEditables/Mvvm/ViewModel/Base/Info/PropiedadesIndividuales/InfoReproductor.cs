@@ -33,12 +33,25 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
         private  Visibility _isMensajeVisible = Visibility.Visible;
         private  Visibility _islistadoVisible = Visibility.Collapsed;
 
+        private bool _btnNavegacion = true;
+
+        public bool BtnNavegacion
+        {
+            get => _btnNavegacion;
+            set
+            {
+                _btnNavegacion = value;
+                OnPropertyChanged(nameof(BtnNavegacion));
+            }
+        }
 
         public Visibility IsMensajeVisible
         {
             get => _isMensajeVisible;
             set { _isMensajeVisible = value; OnPropertyChanged(nameof(IsMensajeVisible)); }
         }
+
+
         public Visibility IslistadoVisible
         {
             get => _islistadoVisible;

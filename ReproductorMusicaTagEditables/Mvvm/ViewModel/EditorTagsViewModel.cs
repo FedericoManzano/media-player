@@ -126,8 +126,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             InfoReproductor ir = InfoReproductor.DameInstancia();
             foreach (var c in CancionesSeleccionadas)
             {
+               
                 try
                 {
+                    
+                    System.Windows.MessageBox.Show(c.Path);
                     if (File.Exists(c.Path))
                     {
                         var t = TagLib.File.Create(c.Path);
@@ -172,6 +175,27 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             Canciones = new ObservableCollection<Cancion>(Canciones);
             RepositorioDeCanciones.GuardarCanciones(ir.Canciones);
             CancionesSeleccionadas.Clear();
+        }
+
+
+        public bool IndiceDe(Cancion c)
+        {
+            foreach(Cancion cl in Canciones)
+            {
+                if(cl.Titulo == c.Titulo && cl.Album == c.Album && cl.Artista == c.Artista)
+                    return true;
+            }
+            return false;   
+        }
+
+        public Cancion DameCancionPorClave(Cancion c)
+        {
+            foreach(Cancion cl in Canciones)
+            {
+                if (cl.Titulo == c.Titulo && cl.Album == c.Album && cl.Artista == c.Artista)
+                    return cl;
+            }
+            return c;
         }
 
         public void EstablecerNumerosDeAlbumes ()

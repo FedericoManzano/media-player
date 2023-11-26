@@ -42,16 +42,17 @@
                     Orientation="Horizontal" >
             <Button Style="{StaticResource btnNavegacion}" 
                     Click="Button_Click"
-                    ToolTip="Página anterior">
+                    ToolTip="Página anterior"
+                    IsEnabled="{Binding Irg.BtnNavegacion}">
                 <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
                                 Style="{StaticResource btnIcon}"/>
             </Button>
             <TextBlock 
-               Text="Canciones de la lista" 
-               Foreground="White" 
-               Margin="10 15 0 0" 
-               FontWeight="SemiBold" 
-               FontSize="20"/>
+                   Text="Canciones de la lista" 
+                   Foreground="White" 
+                   Margin="10 15 0 0" 
+                   FontWeight="SemiBold" 
+                   FontSize="20"/>
         </StackPanel>
 
         <ScrollViewer x:Name="scrollCanciones" Grid.Row="2" 

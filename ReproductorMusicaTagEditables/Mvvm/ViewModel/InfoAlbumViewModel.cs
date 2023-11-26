@@ -32,18 +32,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         }
 
 
-        private bool _btnNavegacion = true;
-
-        public bool BtnNavegacion
-        {
-            get => _btnNavegacion;
-            set 
-            { 
-                _btnNavegacion = value;
-                OnPropertyChanged(nameof(BtnNavegacion)); 
-            }
-        }
-
         public ICommand PlayAlbumCommand { get; }
 
         public InfoAlbumViewModel ()
@@ -75,9 +63,30 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public async void CargarInfoAlbum(string album)
         {
+            Irg.BtnNavegacion = false;
             Irg.Presentacion = new ObservableCollection<Cancion>(await CargarCancionesAlbum(album));
+            MantenerSeleccionPrevia();
             AlbumSeleccionado = await CrearInfoAlbum(album);
         }
+
+        private void MantenerSeleccionPrevia()
+        {
+            Irg.Presentacion.Deseleccionar();
+            foreach (var cf in Irg.CancionesFiltradas)
+            {
+               foreach (var cp in Irg.Presentacion)
+                {
+                    if (cp.Equals(cf))
+                    {
+                        if(cf.EstadoColor == "Red")
+                        {
+                            cp.EstadoColor = "Red";
+                        }
+                    }
+                }
+            }
+        }
+
 
         public async Task<List<Cancion>> CargarCancionesAlbum(string titulo)
         {
@@ -116,7 +125,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             var uiContext = TaskScheduler.FromCurrentSynchronizationContext();
             Album a =  await Task<Album>.Factory.StartNew(() => 
             {
-                BtnNavegacion = false;
+                
                 Cancion c = Irg.Presentacion.Count > 0 ? Irg.Presentacion[0] : new Cancion();
                 return new Album
                 {
@@ -130,7 +139,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     PathImagen = c.Path
                 };
             },CancellationToken.None, TaskCreationOptions.None, uiContext );
-            BtnNavegacion = true;
+            if(a != null)
+            {
+                Irg.BtnNavegacion = true;
+            }
             return a;
         }
 

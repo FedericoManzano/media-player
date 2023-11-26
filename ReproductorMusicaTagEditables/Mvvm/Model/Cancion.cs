@@ -132,9 +132,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             Cancion n = obj as Cancion;
 
             return
-                this.Titulo == n.Titulo &&
-                this.Artista == n.Artista &&
-                this.Album == n.Album;
+                this.Path == n.Path;
         }
         public override int GetHashCode()
         {
