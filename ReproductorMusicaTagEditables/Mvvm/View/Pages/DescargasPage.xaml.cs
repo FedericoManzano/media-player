@@ -104,5 +104,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         {
             descargarViewModel.MoverArchivosDescargados();
         }
+
+        private void Borrar_Todos_Archivos(object sender, RoutedEventArgs e)
+        {
+            descargarViewModel.EliminarTodosLosArchivos();
+        }
     }
 }

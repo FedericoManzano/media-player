@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:control="http://metro.mahapps.com/winfx/xaml/controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DescargasPage">
@@ -26,6 +27,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="5"/>
+
         </Grid.RowDefinitions>
 
 
@@ -119,10 +122,24 @@
 
 
                 <StackPanel>
-                    <TextBlock Text="URLs de videos a convertir" 
-                               Foreground="White"
-                               FontSize="18" 
-                               Margin="0 15"/>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="URLs de videos a convertir" 
+                                   Foreground="White"
+                                   FontSize="18" 
+                                   Margin="0 15"/>
+                        <TextBlock Text="Descargado..."
+                                   Foreground="Red"
+                                   FontSize="18" Margin="7 0 0 0"
+                                   VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding CantidadDescargando}"
+                                   Foreground="Red"
+                                   FontSize="18" Margin="7 0 0 0"
+                                   VerticalAlignment="Center"/>
+                        
+                    </StackPanel>
+                    
+                    
                     <ScrollViewer VerticalScrollBarVisibility="Auto"
                                 Height="200">
                         <ItemsControl x:Name="itemDescargas">
@@ -138,7 +155,7 @@
                 <StackPanel Orientation="Horizontal" 
                             Margin="0 30 0 0">
                     <Button Style="{StaticResource btnGeneral}"
-                            Background="Red"
+                            Background="Coral"
                             Foreground="White"
                             Click="Editar_Tags_Canciones"
                             IsEnabled="{Binding HabilitarBotones}"
@@ -161,14 +178,38 @@
                             <TextBlock Text="Mover" Foreground="Black" Margin="5 0 0 0"/>
                         </StackPanel>
                     </Button>
-                    <StackPanel>
+                    <Button Style="{StaticResource btnGeneral}"
+                            Background="Red"
+                            Foreground="White"
+                            Click="Borrar_Todos_Archivos"
+                            IsEnabled="{Binding HabilitarBotones}"
+                            ToolTip="Borrar todos los archivos">
+                        <StackPanel Orientation="Horizontal">
+                            <fa:PackIconFontAwesome Style="{StaticResource btnIcon}" Kind="BroomSolid"/>
+                            <TextBlock Text="Eliminar" Foreground="White" Margin="5 0 0 0"/>
+                        </StackPanel>
+                    </Button>
+                    <StackPanel Margin="10 0 0 0">
                         <TextBlock Text="No Cambie de página mientras el proceso de descarga está activo."
                                    Foreground="Red"
                                    FontSize="15"
-                                   Visibility="{Binding MjeDescargaActivado}"/>
+                                   Visibility="{Binding MjeDescargaActivado}"
+                                   />
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
         </Grid>
+        <Border Grid.Row="1" Width="250" Height="600"  
+                Margin="-327 -20 0 0" 
+                Background="Black" 
+                Opacity="0.8" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center"
+                Visibility="{Binding MjeDescargaActivado}">
+            <control:ProgressRing Foreground="red" 
+                                  Width="70" 
+                                  Height="70"/>
+        </Border>
     </Grid>
+    
 </Page>

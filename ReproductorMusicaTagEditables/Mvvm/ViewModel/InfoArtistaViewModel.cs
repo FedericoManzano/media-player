@@ -1,12 +1,9 @@
 ﻿using Reproductor_Musica.Core;
-using ReproductorMusicaTagEditables.Controls.InfoArtista;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
-using ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;

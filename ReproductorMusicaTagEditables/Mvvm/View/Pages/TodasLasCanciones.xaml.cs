@@ -98,5 +98,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             EditarTags editor = new EditarTags();
             editor.ShowDialog();
         }
+
     }
 }

@@ -146,9 +146,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                     ar = Irg.Canciones.Where(clist => clist.Titulo == ar[0].Titulo && clist.Artista == ar[0].Artista && clist.Album == ar[0].Album).ToList();
                     _cancionesSeleccionadas = _cancionesSeleccionadas.Where(cs => cs.Titulo != ar[0].Titulo || cs.Artista != ar[0].Artista || ar[0].Album != cs.Album).ToList();
                 }
-
-               
-                
             }
         }
 
@@ -169,6 +166,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                 MainWindow.agregarCancionesListas.AgregarListaCanciones(_cancionesSeleccionadas);
                 MainWindow.agregarCancionesListas.Show();
             }
+        }
+
+        public void BuscarCancion(string inicialCancion)
+        {
+            Irg.BuscarCancion(inicialCancion);
         }
     }
 }

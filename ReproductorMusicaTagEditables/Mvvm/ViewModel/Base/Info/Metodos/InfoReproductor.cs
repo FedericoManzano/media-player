@@ -3,7 +3,9 @@ using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos;
 using ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Forms;
@@ -188,6 +190,21 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                         Presentacion.Insert(i, CancionActual.Cancion);
                     }
                 }
+            }
+        }
+        public async void BuscarCancion(string inicialCancion)
+        {
+            List<Cancion> l = await Task<List<Cancion>>.Run(() =>
+            {
+                return Canciones.Where(c =>
+                {
+                    return c.Titulo.ToUpper().Contains(inicialCancion.ToUpper());
+                }).ToList();
+            });
+            Partes.Clear();
+            foreach(var c in l)
+            {
+                Partes.Add(c);
             }
         }
         public double SetScroll()

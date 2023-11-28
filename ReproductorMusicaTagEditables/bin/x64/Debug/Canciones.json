@@ -11,7 +11,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2710726530,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 2
   },
   {
     "Numero": "2",
@@ -25,7 +25,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2726922448,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "3",
@@ -137,7 +137,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2708114285,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "1",
@@ -361,7 +361,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2084832653,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "2",
@@ -431,7 +431,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2029453061,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "7",
@@ -445,7 +445,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1545142857,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "8",
@@ -501,7 +501,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3178120000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 2
   },
   {
     "Numero": "2",
@@ -515,7 +515,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2169210000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "3",
@@ -543,7 +543,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2143670000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "5",
@@ -585,7 +585,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2637790000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "8",
@@ -599,7 +599,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2139720000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 2
   },
   {
     "Numero": "9",
@@ -613,7 +613,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2536090000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "10",
@@ -627,7 +627,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2388870000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 2
   },
   {
     "Numero": "11",
@@ -641,7 +641,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2625250000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 2
   },
   {
     "Numero": "12",
@@ -683,7 +683,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2089570000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 2
   },
   {
     "Numero": "1",
@@ -4043,7 +4043,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2576490000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "2",
@@ -4057,7 +4057,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2383300000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "3",
@@ -4071,7 +4071,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2545610000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "4",
@@ -4085,7 +4085,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2776180000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "5",
@@ -4099,7 +4099,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1754500000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "6",
@@ -4113,7 +4113,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3139110000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "7",
@@ -4127,7 +4127,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2532610000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "8",
@@ -4141,7 +4141,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2480130000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "9",
@@ -4155,7 +4155,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2990500000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "10",
@@ -4169,7 +4169,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2180130000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "11",
@@ -4183,7 +4183,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2472930000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "12",
@@ -4197,7 +4197,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2563720000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "13",
@@ -4211,7 +4211,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3179885714,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "14",
@@ -4771,7 +4771,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3150490000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 2
   },
   {
     "Numero": "2",
@@ -4785,7 +4785,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2310620000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "3",
@@ -4981,7 +4981,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3080360000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "17",
@@ -6829,11 +6829,11 @@
     "EstadoColor": "White",
     "DuracionLong": 4382040816,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 3
   },
   {
-    "Numero": "",
-    "Titulo": "1 Prowler (2015 Remaster)",
+    "Numero": "1",
+    "Titulo": "Prowler",
     "Artista": "IRON MAIDEN",
     "Album": "IRON MAIDEN",
     "Genero": "HEAVY METAL",
@@ -6846,8 +6846,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "2 Remember Tomorrow (2015 Remaster)",
+    "Numero": "2",
+    "Titulo": "Remember Tomorrow",
     "Artista": "IRON MAIDEN",
     "Album": "IRON MAIDEN",
     "Genero": "HEAVY METAL",
@@ -6860,8 +6860,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "3 Running Free (2015 Remaster)",
+    "Numero": "3",
+    "Titulo": "Running Free",
     "Artista": "IRON MAIDEN",
     "Album": "IRON MAIDEN",
     "Genero": "HEAVY METAL",
@@ -6874,8 +6874,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "4 Phantom of the Opera (2015 Remaster)",
+    "Numero": "4",
+    "Titulo": "Phantom of the Opera",
     "Artista": "IRON MAIDEN",
     "Album": "IRON MAIDEN",
     "Genero": "HEAVY METAL",
@@ -6888,8 +6888,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "5 Transylvania (2015 Remaster)",
+    "Numero": "5",
+    "Titulo": "Transylvania",
     "Artista": "IRON MAIDEN",
     "Album": "IRON MAIDEN",
     "Genero": "HEAVY METAL",
@@ -6902,8 +6902,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "6 Strange World (2015 Remaster)",
+    "Numero": "6",
+    "Titulo": "Strange World",
     "Artista": "IRON MAIDEN",
     "Album": "IRON MAIDEN",
     "Genero": "HEAVY METAL",
@@ -6916,8 +6916,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "7 Charlotte the Harlot (2015 Remaster)",
+    "Numero": "7",
+    "Titulo": "Charlotte the Harlot",
     "Artista": "IRON MAIDEN",
     "Album": "IRON MAIDEN",
     "Genero": "HEAVY METAL",
@@ -6930,8 +6930,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "8 Iron Maiden (2015 Remaster)",
+    "Numero": "8",
+    "Titulo": "Iron Maiden",
     "Artista": "IRON MAIDEN",
     "Album": "IRON MAIDEN",
     "Genero": "HEAVY METAL",
@@ -6944,8 +6944,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "01 Senjutsu",
+    "Numero": "1",
+    "Titulo": "Senjutsu",
     "Artista": "IRON MAIDEN",
     "Album": "SENJUTSU",
     "Genero": "HEAVY METAL",
@@ -6958,8 +6958,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "02 Stratego",
+    "Numero": "2",
+    "Titulo": "Stratego",
     "Artista": "IRON MAIDEN",
     "Album": "SENJUTSU",
     "Genero": "HEAVY METAL",
@@ -6972,8 +6972,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "03 The Writing On The Wall",
+    "Numero": "3",
+    "Titulo": "The Writing On The Wall",
     "Artista": "IRON MAIDEN",
     "Album": "SENJUTSU",
     "Genero": "HEAVY METAL",
@@ -6986,8 +6986,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "04 Lost In A Lost World",
+    "Numero": "4",
+    "Titulo": "Lost In A Lost World",
     "Artista": "IRON MAIDEN",
     "Album": "SENJUTSU",
     "Genero": "HEAVY METAL",
@@ -7000,8 +7000,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "05 Days Of Future Past",
+    "Numero": "5",
+    "Titulo": "Days Of Future Past",
     "Artista": "IRON MAIDEN",
     "Album": "SENJUTSU",
     "Genero": "HEAVY METAL",
@@ -7014,8 +7014,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "06 The Time Machine",
+    "Numero": "6",
+    "Titulo": "The Time Machine",
     "Artista": "IRON MAIDEN",
     "Album": "SENJUTSU",
     "Genero": "HEAVY METAL",
@@ -7028,8 +7028,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "07 Darkest Hour",
+    "Numero": "7",
+    "Titulo": "Darkest Hour",
     "Artista": "IRON MAIDEN",
     "Album": "SENJUTSU",
     "Genero": "HEAVY METAL",
@@ -7042,8 +7042,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "08 Death Of The Celts",
+    "Numero": "8",
+    "Titulo": "Death Of The Celts",
     "Artista": "IRON MAIDEN",
     "Album": "SENJUTSU",
     "Genero": "HEAVY METAL",
@@ -7056,8 +7056,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "09 The Parchment",
+    "Numero": "9",
+    "Titulo": "The Parchment",
     "Artista": "IRON MAIDEN",
     "Album": "SENJUTSU",
     "Genero": "HEAVY METAL",
@@ -7070,8 +7070,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "10 Hell On Earth",
+    "Numero": "10",
+    "Titulo": "Hell On Earth",
     "Artista": "IRON MAIDEN",
     "Album": "SENJUTSU",
     "Genero": "HEAVY METAL",
@@ -12261,7 +12261,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2873208163,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "2",
@@ -12275,7 +12275,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2223804081,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "3",
@@ -12401,7 +12401,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2493126530,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "12",
@@ -12415,7 +12415,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3381028571,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "13",
@@ -13661,7 +13661,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3315810000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "2",
@@ -16488,272 +16488,6 @@
     "FechaLanzamiento": "1994",
     "EstadoColor": "White",
     "DuracionLong": 2014040816,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "1",
-    "Titulo": "Hardwired (Live I...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\01 Hardwired (Live In Buenos Aires, Argentina - March 31st, 2017).mp3",
-    "Duracion": "03:51",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 2316016326,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "2",
-    "Titulo": "No Remorse (Live ...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\02 No Remorse (Live In Cordoba, Argentina - January 24th, 2010).mp3",
-    "Duracion": "04:10",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 2506187755,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "3",
-    "Titulo": "Holier Than Thou ...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\03 Holier Than Thou (Live In Cordoba, Argentina - January 24th, 2010).mp3",
-    "Duracion": "04:22",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 2620081632,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "4",
-    "Titulo": "Of Wolf And Man (...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\04 Of Wolf And Man (Live In Buenos Aires, Argentina - May 14th, 1999).mp3",
-    "Duracion": "04:11",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 2515591836,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "5",
-    "Titulo": "Fade To Black (Li...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\05 Fade To Black (Live In Buenos Aires, Argentina - March 30th, 2014).mp3",
-    "Duracion": "07:23",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4434808163,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "6",
-    "Titulo": "Now That We're De...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\06 Now That We're Dead (Live In Buenos Aires, Argentina - March 31st, 2017).mp3",
-    "Duracion": "07:47",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4673044897,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "7",
-    "Titulo": "Fuel (Live In Bue...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\07 Fuel (Live In Buenos Aires, Argentina - March 29th, 2014).mp3",
-    "Duracion": "03:58",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 2381322448,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "8",
-    "Titulo": "The Unforgiven (L...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\08 The Unforgiven (Live In Buenos Aires, Argentina - May 8th, 1993).mp3",
-    "Duracion": "06:47",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4077975510,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "9",
-    "Titulo": "…And Justice For ...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\09 …And Justice For All (Live In Buenos Aires, Argentina - March 29th, 2014).mp3",
-    "Duracion": "09:16",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 5569567346,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "11",
-    "Titulo": "Sad But True (Liv...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\10 Sad But True (Live In Buenos Aires, Argentina - March 29th, 2014).mp3",
-    "Duracion": "06:41",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4010057142,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "12",
-    "Titulo": "Cyanide (Live In ...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\11 Cyanide (Live In Buenos Aires, Argentina - January 21st, 2010).mp3",
-    "Duracion": "06:30",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 3908440816,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "13",
-    "Titulo": "All Nightmare Lon...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\12 All Nightmare Long (Live In Buenos Aires, Argentina - January 21st, 2010).mp3",
-    "Duracion": "07:52",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4721632653,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "14",
-    "Titulo": "One (Live In Buen...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\13 One (Live In Buenos Aires, Argentina - January 22nd, 2010).mp3",
-    "Duracion": "08:36",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 5162579591,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "15",
-    "Titulo": "Master Of Puppets...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\14 Master Of Puppets (Live In Cordoba, Argentina - January 24th, 2010).mp3",
-    "Duracion": "08:00",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4804963265,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "16",
-    "Titulo": "Damage, Inc. (Liv...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\15 Damage, Inc. (Live In Cordoba, Argentina - January 24th, 2010).mp3",
-    "Duracion": "05:24",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 3249893877,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "17",
-    "Titulo": "Creeping Death (L...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\16 Creeping Death (Live In Buenos Aires, Argentina - March 30th, 2014).mp3",
-    "Duracion": "06:30",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 3906351020,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "18",
-    "Titulo": "Nothing Else Matt...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\17 Nothing Else Matters (Live In Buenos Aires, Argentina - March 31st, 2017).mp3",
-    "Duracion": "06:20",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 3809959183,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "19",
-    "Titulo": "Enter Sandman (Li...",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\18 Enter Sandman (Live In Buenos Aires, Argentina - January 21st, 2010).mp3",
-    "Duracion": "08:05",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4850677551,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "20",
-    "Titulo": "Seek & Destroy",
-    "Artista": "METALLICA",
-    "Album": "LIVE-METALLICA-ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\19 Seek & Destroy.mp3",
-    "Duracion": "18:08",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 10884179591,
     "Imagen": null,
     "Cantidad": 0
   },
@@ -21613,7 +21347,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1762170000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "1",
@@ -22859,7 +22593,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3088260000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "5",
@@ -28753,7 +28487,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2247467307,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "2",
@@ -28767,7 +28501,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2711776923,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "3",
@@ -28781,7 +28515,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2022144230,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "4",
@@ -28795,7 +28529,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2487794230,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "5",
@@ -28809,7 +28543,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3034891666,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "6",
@@ -28837,7 +28571,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1925692307,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 2
   },
   {
     "Numero": "8",
@@ -28865,7 +28599,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3228332051,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "10",
@@ -28893,7 +28627,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3096514102,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 3
   },
   {
     "Numero": "12",
@@ -28921,7 +28655,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2478416666,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "16",
@@ -30909,7 +30643,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3962260000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 2
   },
   {
     "Numero": "2",
@@ -30937,7 +30671,7 @@
     "EstadoColor": "White",
     "DuracionLong": 4152660000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 2
   },
   {
     "Numero": "4",
@@ -30951,7 +30685,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2849560000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "5",
@@ -30993,7 +30727,7 @@
     "EstadoColor": "White",
     "DuracionLong": 5352670000,
     "Imagen": null,
-    "Cantidad": 0
+    "Cantidad": 1
   },
   {
     "Numero": "8",
@@ -31006,6 +30740,258 @@
     "FechaLanzamiento": "1984",
     "EstadoColor": "White",
     "DuracionLong": 2444830000,
+    "Imagen": null,
+    "Cantidad": 1
+  },
+  {
+    "Numero": "1",
+    "Titulo": "All Nightmare Long",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\All Nightmare Long (Live In Buenos Aires, Argentina - January 21st, 2010).m4a",
+    "Duracion": "07:52",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4721320000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Creeping Death",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Creeping Death (Live In Buenos Aires, Argentina - March 30th, 2014).m4a",
+    "Duracion": "06:30",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3906300000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "3",
+    "Titulo": "Cyanide",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Cyanide (Live In Buenos Aires, Argentina - January 21st, 2010).m4a",
+    "Duracion": "06:30",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3908159999,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Damage, Inc.",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Damage, Inc. (Live In Cordoba, Argentina - January 24th, 2010).m4a",
+    "Duracion": "05:24",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3249640000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "5",
+    "Titulo": "Enter Sandman",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Enter Sandman (Live In Buenos Aires, Argentina - January 21st, 2010).m4a",
+    "Duracion": "08:04",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4849960000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "6",
+    "Titulo": "Fade To Black",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Fade To Black (Live In Buenos Aires, Argentina - March 30th, 2014).m4a",
+    "Duracion": "07:23",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4433860000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "7",
+    "Titulo": "Fuel",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Fuel (Live In Buenos Aires, Argentina - March 29th, 2014).m4a",
+    "Duracion": "03:58",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2380280000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "8",
+    "Titulo": "Hardwired",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Hardwired (Live In Buenos Aires, Argentina - March 31st, 2017).m4a",
+    "Duracion": "03:51",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2315270000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "9",
+    "Titulo": "Holier Than Thou",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Holier Than Thou (Live In Cordoba, Argentina - January 24th, 2010).m4a",
+    "Duracion": "04:21",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2619450000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "10",
+    "Titulo": "Master Of Puppets",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Master Of Puppets (Live In Cordoba, Argentina - January 24th, 2010).m4a",
+    "Duracion": "08:00",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4804450000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "11",
+    "Titulo": "No Remorse",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\No Remorse (Live In Cordoba, Argentina - January 24th, 2010).m4a",
+    "Duracion": "04:10",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2505670000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "12",
+    "Titulo": "Nothing Else Matters",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Nothing Else Matters (Live In Buenos Aires, Argentina - March 31st, 2017).m4a",
+    "Duracion": "06:20",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3809240000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "13",
+    "Titulo": "Now That We're Dead",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Now That We're Dead (Live In Buenos Aires, Argentina - March 31st, 2017).m4a",
+    "Duracion": "07:47",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4672560000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "14",
+    "Titulo": "Of Wolf And Man",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Of Wolf And Man (Live In Buenos Aires, Argentina - May 14th, 1999).m4a",
+    "Duracion": "04:11",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2514960000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "15",
+    "Titulo": "One",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\One (Live In Buenos Aires, Argentina - January 22nd, 2010).m4a",
+    "Duracion": "08:36",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 5162030000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "16",
+    "Titulo": "Sad But True",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Sad But True (Live In Buenos Aires, Argentina - March 29th, 2014).m4a",
+    "Duracion": "06:40",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4009390000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "17",
+    "Titulo": "The Unforgiven",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\The Unforgiven (Live In Buenos Aires, Argentina - May 8th, 1993).m4a",
+    "Duracion": "06:47",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4077660000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "18",
+    "Titulo": "…And Justice For All",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\…And Justice For All (Live In Buenos Aires, Argentina - March 29th, 2014).m4a",
+    "Duracion": "09:16",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 5569310000,
     "Imagen": null,
     "Cantidad": 0
   }

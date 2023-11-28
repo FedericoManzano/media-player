@@ -1,9 +1,7 @@
 ﻿using Reproductor_Musica.Core;
-using ReproductorMusicaTagEditables.Controls.ListaAvatar;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
-using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System;
@@ -21,13 +19,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     {
         private ListaRep _infoGenero = new ListaRep();
 
-
         public ListaRep InfoGenero { get => _infoGenero; set { _infoGenero = value; OnPropertyChanged(nameof(InfoGenero)); } }
       
         public ICommand PlayCommandGenero { get; }
-
-
-   
 
         public InfoGeneroViewModel() 
         {
@@ -78,7 +72,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             InfoGenero = await CargarInfoGeneroAsync(genero);
         }
 
-
         public async Task<ListaRep> CargarInfoGeneroAsync (string genero) 
         {
             
@@ -126,8 +119,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             if(ts.Days > 0)
             {
                 return ts.ToString(@"dd\:hh\:mm\:ss") + " Días";
+            } else if(ts.Hours > 0)
+            {
+                return ts.ToString(@"hh\:mm\:ss") + " Horas";
+            } else if(ts.Minutes > 0)
+            {
+                return ts.ToString(@"mm\:ss") + " Minutos";
+            } else
+            {
+                return ts.ToString(@"mm\:ss") + " Segundos";
             }
-            return TimeSpan.FromTicks((long)tiempo.GetValueOrDefault(0UL)).ToString(@"hh\:mm\:ss") + " Horas";
         }
 
         private string DameCantidadCanciones(string genero)
@@ -158,7 +159,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             }
             Irg.Seleccionar();
         }
-
 
         public void Limpiar()
         {

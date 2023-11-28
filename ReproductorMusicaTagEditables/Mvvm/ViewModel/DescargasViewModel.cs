@@ -18,40 +18,40 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
     public class DescargasViewModel: ReproductorViewModelBase
     {
-
+        private bool _habilitarBotones;
         private string _uriVideo;
+        private readonly string _pathVideo;
+        private string _extensionAudio;
+        private int _cantidadDescargado;
+        private Visibility _mjeDescargaActivado;
+        private Visibility _notificacionCancion;
+
         public string UriVideo { get => _uriVideo; set { _uriVideo = value; OnPropertyChanged(nameof(UriVideo)); } }
-
-        private string _pathVideo =  Environment.CurrentDirectory + @"/Descargas/";
-        public string PathVideo { get => _pathVideo; set { _pathVideo = value; OnPropertyChanged(nameof(PathVideo)); } }
-
-        private string _extensionAudio = ".mp3";
+        public string PathVideo { get => _pathVideo; }
         public string ExtensionAudio { get => _extensionAudio; set { _extensionAudio = value; OnPropertyChanged(nameof(ExtensionAudio)); } }
-
-        public int CantidadDescargando { get; set; } = 0;
-
-
-        public bool _habilitarBotones = true;
-
-
-
-        private Visibility _mjeDescargaActivado = Visibility.Collapsed;
+        public int CantidadDescargando 
+        {
+            get => _cantidadDescargado;
+            set 
+            { 
+                _cantidadDescargado = value;
+                OnPropertyChanged(nameof(CantidadDescargando));
+            } 
+        }
         public Visibility MjeDescargaActivado 
         { 
             get => _mjeDescargaActivado; 
             set { _mjeDescargaActivado = value; OnPropertyChanged(nameof(MjeDescargaActivado)) ; } 
-        }
-
-        private Visibility _notificacionCancion = Visibility.Collapsed;
+        }        
         public Visibility NotificacionCancion
         {
             get => _notificacionCancion;
             set { _notificacionCancion = value; OnPropertyChanged(nameof(NotificacionCancion)); }
         }
-
-
         public bool HabilitarBotones 
-        { get => _habilitarBotones; set
+        { 
+            get => _habilitarBotones; 
+            set
             {
                 _habilitarBotones = value;
                 OnPropertyChanged(nameof(HabilitarBotones));
@@ -63,6 +63,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         public DescargasViewModel() 
         {
             Irg.TitutloVentana = "Descargas";
+
+            _habilitarBotones = true;
+            _uriVideo = string.Empty;
+            _pathVideo = Environment.CurrentDirectory + @"/Descargas/";
+            _extensionAudio = ".mp3";
+            _cantidadDescargado = 0;
+            _mjeDescargaActivado = Visibility.Collapsed;
+            _notificacionCancion = Visibility.Collapsed;
+
             if(!Directory.Exists(PathVideo))
             {
                 Directory.CreateDirectory(PathVideo);
@@ -209,13 +218,37 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             }    
         }
 
-
         public async void ActualizarListadoCanciones(string path)
         {
             CargarMusica cargarMusica = new CargarMusicaDesdeDirectorio();
             List<string> listPath = await cargarMusica.IniciarCargaReproductor(path);
             List<Cancion> listCanciones = await cargarMusica.CargarListadoDeCancionesAsync(listPath);
             RepositorioDeCanciones.AgregarCanciones(listCanciones);
+        }
+
+        public async void EliminarTodosLosArchivos()
+        {
+
+            CargarMusica cargarMusica = new CargarMusicaDesdeDirectorio();
+            List<string> lp = await cargarMusica.IniciarCargaReproductor(PathVideo);
+
+            if(lp == null || lp.Count == 0)
+            {
+                System.Windows.Forms.MessageBox.Show("No hay archivos para borrar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            DialogResult r = System.Windows.Forms.MessageBox.Show("Seguro que quiere eliminar los archivos descargados ?","Eliminar archivos", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if(DialogResult.Yes == r)
+            {
+                foreach (string p in lp)
+                {
+                    if (File.Exists(p))
+                        File.Delete(p);
+                }
+                NotificacionCancion = Visibility.Collapsed;
+                System.Windows.Forms.MessageBox.Show("Archivos eliminados con exito.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

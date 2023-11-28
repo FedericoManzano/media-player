@@ -15,6 +15,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             CantidadCanciones = " (" + Irg.Canciones.Count + " Canciones)";
         }
 
+
+
+
+
         public string CantidadCanciones { get => _cantidadCanciones; set { _cantidadCanciones = value;OnPropertyChanged(nameof(CantidadCanciones)); } }
     }
 }
