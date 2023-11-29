@@ -11,7 +11,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2710726530,
     "Imagen": null,
-    "Cantidad": 2
+    "Cantidad": 0
   },
   {
     "Numero": "2",
@@ -25,7 +25,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2726922448,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "3",
@@ -137,7 +137,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2708114285,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "1",
@@ -361,7 +361,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2084832653,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "2",
@@ -431,7 +431,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2029453061,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "7",
@@ -445,7 +445,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1545142857,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "8",
@@ -501,7 +501,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3178120000,
     "Imagen": null,
-    "Cantidad": 2
+    "Cantidad": 0
   },
   {
     "Numero": "2",
@@ -515,7 +515,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2169210000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "3",
@@ -543,7 +543,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2143670000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "5",
@@ -585,7 +585,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2637790000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "8",
@@ -599,7 +599,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2139720000,
     "Imagen": null,
-    "Cantidad": 2
+    "Cantidad": 0
   },
   {
     "Numero": "9",
@@ -613,7 +613,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2536090000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "10",
@@ -627,7 +627,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2388870000,
     "Imagen": null,
-    "Cantidad": 2
+    "Cantidad": 0
   },
   {
     "Numero": "11",
@@ -641,7 +641,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2625250000,
     "Imagen": null,
-    "Cantidad": 2
+    "Cantidad": 0
   },
   {
     "Numero": "12",
@@ -683,7 +683,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2089570000,
     "Imagen": null,
-    "Cantidad": 2
+    "Cantidad": 0
   },
   {
     "Numero": "1",
@@ -4043,7 +4043,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2576490000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "2",
@@ -4057,7 +4057,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2383300000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "3",
@@ -4071,7 +4071,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2545610000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "4",
@@ -4085,7 +4085,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2776180000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "5",
@@ -4099,7 +4099,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1754500000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "6",
@@ -4113,7 +4113,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3139110000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "7",
@@ -4127,7 +4127,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2532610000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "8",
@@ -4141,7 +4141,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2480130000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "9",
@@ -4155,7 +4155,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2990500000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "10",
@@ -4169,7 +4169,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2180130000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "11",
@@ -4183,7 +4183,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2472930000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "12",
@@ -4197,7 +4197,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2563720000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "13",
@@ -4211,7 +4211,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3179885714,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "14",
@@ -4771,7 +4771,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3150490000,
     "Imagen": null,
-    "Cantidad": 2
+    "Cantidad": 0
   },
   {
     "Numero": "2",
@@ -4785,7 +4785,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2310620000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "3",
@@ -4981,7 +4981,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3080360000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "17",
@@ -6829,7 +6829,7 @@
     "EstadoColor": "White",
     "DuracionLong": 4382040816,
     "Imagen": null,
-    "Cantidad": 3
+    "Cantidad": 0
   },
   {
     "Numero": "1",
@@ -12261,7 +12261,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2873208163,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "3",
@@ -12275,7 +12275,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2223804081,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "2",
@@ -12401,7 +12401,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2493126530,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "12",
@@ -12415,7 +12415,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3381028571,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "13",
@@ -13661,7 +13661,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3315810000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "2",
@@ -16493,6 +16493,258 @@
   },
   {
     "Numero": "1",
+    "Titulo": "All Nightmare Long",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\All Nightmare Long (Live In Buenos Aires, Argentina - January 21st, 2010).m4a",
+    "Duracion": "07:52",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4721320000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Creeping Death",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Creeping Death (Live In Buenos Aires, Argentina - March 30th, 2014).m4a",
+    "Duracion": "06:30",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3906300000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "3",
+    "Titulo": "Cyanide",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Cyanide (Live In Buenos Aires, Argentina - January 21st, 2010).m4a",
+    "Duracion": "06:30",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3908159999,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Damage, Inc.",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Damage, Inc. (Live In Cordoba, Argentina - January 24th, 2010).m4a",
+    "Duracion": "05:24",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3249640000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "5",
+    "Titulo": "Enter Sandman",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Enter Sandman (Live In Buenos Aires, Argentina - January 21st, 2010).m4a",
+    "Duracion": "08:04",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4849960000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "6",
+    "Titulo": "Fade To Black",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Fade To Black (Live In Buenos Aires, Argentina - March 30th, 2014).m4a",
+    "Duracion": "07:23",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4433860000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "7",
+    "Titulo": "Fuel",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Fuel (Live In Buenos Aires, Argentina - March 29th, 2014).m4a",
+    "Duracion": "03:58",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2380280000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "8",
+    "Titulo": "Hardwired",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Hardwired (Live In Buenos Aires, Argentina - March 31st, 2017).m4a",
+    "Duracion": "03:51",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2315270000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "9",
+    "Titulo": "Holier Than Thou",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Holier Than Thou (Live In Cordoba, Argentina - January 24th, 2010).m4a",
+    "Duracion": "04:21",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2619450000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "10",
+    "Titulo": "Master Of Puppets",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Master Of Puppets (Live In Cordoba, Argentina - January 24th, 2010).m4a",
+    "Duracion": "08:00",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4804450000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "11",
+    "Titulo": "No Remorse",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\No Remorse (Live In Cordoba, Argentina - January 24th, 2010).m4a",
+    "Duracion": "04:10",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2505670000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "12",
+    "Titulo": "Nothing Else Matters",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Nothing Else Matters (Live In Buenos Aires, Argentina - March 31st, 2017).m4a",
+    "Duracion": "06:20",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 3809240000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "13",
+    "Titulo": "Now That We're Dead",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Now That We're Dead (Live In Buenos Aires, Argentina - March 31st, 2017).m4a",
+    "Duracion": "07:47",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4672560000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "14",
+    "Titulo": "Of Wolf And Man",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Of Wolf And Man (Live In Buenos Aires, Argentina - May 14th, 1999).m4a",
+    "Duracion": "04:11",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 2514960000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "15",
+    "Titulo": "One",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\One (Live In Buenos Aires, Argentina - January 22nd, 2010).m4a",
+    "Duracion": "08:36",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 5162030000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "16",
+    "Titulo": "Sad But True",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Sad But True (Live In Buenos Aires, Argentina - March 29th, 2014).m4a",
+    "Duracion": "06:40",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4009390000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "17",
+    "Titulo": "The Unforgiven",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\The Unforgiven (Live In Buenos Aires, Argentina - May 8th, 1993).m4a",
+    "Duracion": "06:47",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 4077660000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "18",
+    "Titulo": "…And Justice For All",
+    "Artista": "METALLICA",
+    "Album": "LIVE METALLICA ARG",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\…And Justice For All (Live In Buenos Aires, Argentina - March 29th, 2014).m4a",
+    "Duracion": "09:16",
+    "FechaLanzamiento": "2017",
+    "EstadoColor": "White",
+    "DuracionLong": 5569310000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "1",
     "Titulo": "Ain't My B_tch",
     "Artista": "METALLICA",
     "Album": "LOAD",
@@ -16978,6 +17230,118 @@
     "FechaLanzamiento": "1997",
     "EstadoColor": "White",
     "DuracionLong": 4952555102,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "1",
+    "Titulo": "Creeping Death",
+    "Artista": "METALLICA",
+    "Album": "RIDE THE LIGHTNING",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Creeping Death (Studio Version).m4a",
+    "Duracion": "06:36",
+    "FechaLanzamiento": "1984",
+    "EstadoColor": "White",
+    "DuracionLong": 3962260000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Escape",
+    "Artista": "METALLICA",
+    "Album": "RIDE THE LIGHTNING",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Escape (Studio Version).m4a",
+    "Duracion": "04:24",
+    "FechaLanzamiento": "1984",
+    "EstadoColor": "White",
+    "DuracionLong": 2643600000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "3",
+    "Titulo": "Fade To Black",
+    "Artista": "METALLICA",
+    "Album": "RIDE THE LIGHTNING",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Fade To Black (Studio Version).m4a",
+    "Duracion": "06:55",
+    "FechaLanzamiento": "1984",
+    "EstadoColor": "White",
+    "DuracionLong": 4152660000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Fight Fire With Fire",
+    "Artista": "METALLICA",
+    "Album": "RIDE THE LIGHTNING",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Fight Fire With Fire (Studio Version).m4a",
+    "Duracion": "04:44",
+    "FechaLanzamiento": "1984",
+    "EstadoColor": "White",
+    "DuracionLong": 2849560000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "5",
+    "Titulo": "For Whom The Bell Tolls",
+    "Artista": "METALLICA",
+    "Album": "RIDE THE LIGHTNING",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - For Whom The Bell Tolls (Studio Version).m4a",
+    "Duracion": "05:11",
+    "FechaLanzamiento": "1984",
+    "EstadoColor": "White",
+    "DuracionLong": 3112640000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "6",
+    "Titulo": "Ride The Lightning",
+    "Artista": "METALLICA",
+    "Album": "RIDE THE LIGHTNING",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Ride The Lightning (Studio Version).m4a",
+    "Duracion": "06:37",
+    "FechaLanzamiento": "1984",
+    "EstadoColor": "White",
+    "DuracionLong": 3978050000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "7",
+    "Titulo": "The Call Of Ktulu",
+    "Artista": "METALLICA",
+    "Album": "RIDE THE LIGHTNING",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - The Call Of Ktulu (Studio Version).m4a",
+    "Duracion": "08:55",
+    "FechaLanzamiento": "1984",
+    "EstadoColor": "White",
+    "DuracionLong": 5352670000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "8",
+    "Titulo": "Trapped Under Ice",
+    "Artista": "METALLICA",
+    "Album": "RIDE THE LIGHTNING",
+    "Genero": "HEAVY METAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Trapped Under Ice (Studio Version).m4a",
+    "Duracion": "04:04",
+    "FechaLanzamiento": "1984",
+    "EstadoColor": "White",
+    "DuracionLong": 2444830000,
     "Imagen": null,
     "Cantidad": 0
   },
@@ -21347,7 +21711,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1762170000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "1",
@@ -22593,7 +22957,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3088260000,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "5",
@@ -27734,8 +28098,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "01 Nada Personal (Remasterizado 2007)",
+    "Numero": "1",
+    "Titulo": "Nada Personal",
     "Artista": "SODA STEREO",
     "Album": "NADA PERSONAL",
     "Genero": "ROCK NACIONAL",
@@ -27748,8 +28112,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "02 Si No Fuera Por... (Remasterizado 2007)",
+    "Numero": "2",
+    "Titulo": "Si No Fuera Por...",
     "Artista": "SODA STEREO",
     "Album": "NADA PERSONAL",
     "Genero": "ROCK NACIONAL",
@@ -27762,8 +28126,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "03 Cuando Pase El Temblor (Remasterizado 2007)",
+    "Numero": "3",
+    "Titulo": "Cuando Pase El Temblor",
     "Artista": "SODA STEREO",
     "Album": "NADA PERSONAL",
     "Genero": "ROCK NACIONAL",
@@ -27776,8 +28140,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "04 Danza Rota (Remasterizado 2007)",
+    "Numero": "4",
+    "Titulo": "Danza Rota",
     "Artista": "SODA STEREO",
     "Album": "NADA PERSONAL",
     "Genero": "ROCK NACIONAL",
@@ -27790,8 +28154,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "05 El Cuerpo Del Delito (Remasterizado 2007)",
+    "Numero": "5",
+    "Titulo": "El Cuerpo Del Delito",
     "Artista": "SODA STEREO",
     "Album": "NADA PERSONAL",
     "Genero": "ROCK NACIONAL",
@@ -27804,8 +28168,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "06 Juegos De Seducción (Remasterizado 2007)",
+    "Numero": "6",
+    "Titulo": "Juegos De Seducción",
     "Artista": "SODA STEREO",
     "Album": "NADA PERSONAL",
     "Genero": "ROCK NACIONAL",
@@ -27818,8 +28182,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "07 Estoy Azulado (Remasterizado 2007)",
+    "Numero": "7",
+    "Titulo": "Estoy Azulado",
     "Artista": "SODA STEREO",
     "Album": "NADA PERSONAL",
     "Genero": "ROCK NACIONAL",
@@ -27832,8 +28196,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "08 Observándonos (Satélites) (Remasterizado 2007)",
+    "Numero": "8",
+    "Titulo": "Observándonos",
     "Artista": "SODA STEREO",
     "Album": "NADA PERSONAL",
     "Genero": "ROCK NACIONAL",
@@ -27846,8 +28210,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "09 Imágenes Retro (Remasterizado 2007)",
+    "Numero": "9",
+    "Titulo": "Imágenes Retro",
     "Artista": "SODA STEREO",
     "Album": "NADA PERSONAL",
     "Genero": "ROCK NACIONAL",
@@ -27860,8 +28224,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "10 Ecos (Remasterizado 2007)",
+    "Numero": "10",
+    "Titulo": "Ecos",
     "Artista": "SODA STEREO",
     "Album": "NADA PERSONAL",
     "Genero": "ROCK NACIONAL",
@@ -27874,8 +28238,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "1 Sin Sobresaltos (Remasterizado 2007)",
+    "Numero": "1",
+    "Titulo": "Sin Sobresaltos",
     "Artista": "SODA STEREO",
     "Album": "SIGNOS",
     "Genero": "ROCK NACIONAL",
@@ -27888,8 +28252,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "2 El Rito (Remasterizado 2007)",
+    "Numero": "2",
+    "Titulo": "El Rito",
     "Artista": "SODA STEREO",
     "Album": "SIGNOS",
     "Genero": "ROCK NACIONAL",
@@ -27902,8 +28266,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "3 Prófugos (Remasterizado 2007)",
+    "Numero": "3",
+    "Titulo": "Prófugos",
     "Artista": "SODA STEREO",
     "Album": "SIGNOS",
     "Genero": "ROCK NACIONAL",
@@ -27916,8 +28280,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "4 No Existes (Remasterizado 2007)",
+    "Numero": "4",
+    "Titulo": "No Existes",
     "Artista": "SODA STEREO",
     "Album": "SIGNOS",
     "Genero": "ROCK NACIONAL",
@@ -27930,8 +28294,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "5 Persiana Americana (Remasterizado 2007)",
+    "Numero": "5",
+    "Titulo": "Persiana Americana",
     "Artista": "SODA STEREO",
     "Album": "SIGNOS",
     "Genero": "ROCK NACIONAL",
@@ -27944,8 +28308,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "6 En Camino (Remasterizado 2007)",
+    "Numero": "6",
+    "Titulo": "En Camino",
     "Artista": "SODA STEREO",
     "Album": "SIGNOS",
     "Genero": "ROCK NACIONAL",
@@ -27958,8 +28322,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "7 Signos (Remasterizado 2007)",
+    "Numero": "7",
+    "Titulo": "Signos",
     "Artista": "SODA STEREO",
     "Album": "SIGNOS",
     "Genero": "ROCK NACIONAL",
@@ -27972,8 +28336,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "8 Final Caja Negra (Remasterizado 2007)",
+    "Numero": "8",
+    "Titulo": "Final Caja Negra",
     "Artista": "SODA STEREO",
     "Album": "SIGNOS",
     "Genero": "ROCK NACIONAL",
@@ -28487,7 +28851,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2247467307,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "2",
@@ -28501,7 +28865,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2711776923,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "3",
@@ -28515,7 +28879,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2022144230,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "4",
@@ -28529,7 +28893,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2487794230,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "5",
@@ -28543,7 +28907,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3034891666,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "6",
@@ -28571,7 +28935,7 @@
     "EstadoColor": "White",
     "DuracionLong": 1925692307,
     "Imagen": null,
-    "Cantidad": 2
+    "Cantidad": 0
   },
   {
     "Numero": "8",
@@ -28599,7 +28963,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3228332051,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "10",
@@ -28627,7 +28991,7 @@
     "EstadoColor": "White",
     "DuracionLong": 3096514102,
     "Imagen": null,
-    "Cantidad": 3
+    "Cantidad": 0
   },
   {
     "Numero": "12",
@@ -28655,7 +29019,7 @@
     "EstadoColor": "White",
     "DuracionLong": 2478416666,
     "Imagen": null,
-    "Cantidad": 1
+    "Cantidad": 0
   },
   {
     "Numero": "16",
@@ -30633,365 +30997,169 @@
   },
   {
     "Numero": "1",
-    "Titulo": "Creeping Death",
-    "Artista": "METALLICA",
-    "Album": "RIDE THE LIGHTNING",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Creeping Death (Studio Version).m4a",
-    "Duracion": "06:36",
-    "FechaLanzamiento": "1984",
-    "EstadoColor": "White",
-    "DuracionLong": 3962260000,
-    "Imagen": null,
-    "Cantidad": 2
-  },
-  {
-    "Numero": "2",
-    "Titulo": "Escape",
-    "Artista": "METALLICA",
-    "Album": "RIDE THE LIGHTNING",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Escape (Studio Version).m4a",
-    "Duracion": "04:24",
-    "FechaLanzamiento": "1984",
-    "EstadoColor": "White",
-    "DuracionLong": 2643600000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "3",
-    "Titulo": "Fade To Black",
-    "Artista": "METALLICA",
-    "Album": "RIDE THE LIGHTNING",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Fade To Black (Studio Version).m4a",
-    "Duracion": "06:55",
-    "FechaLanzamiento": "1984",
-    "EstadoColor": "White",
-    "DuracionLong": 4152660000,
-    "Imagen": null,
-    "Cantidad": 2
-  },
-  {
-    "Numero": "4",
-    "Titulo": "Fight Fire With Fire",
-    "Artista": "METALLICA",
-    "Album": "RIDE THE LIGHTNING",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Fight Fire With Fire (Studio Version).m4a",
-    "Duracion": "04:44",
-    "FechaLanzamiento": "1984",
-    "EstadoColor": "White",
-    "DuracionLong": 2849560000,
-    "Imagen": null,
-    "Cantidad": 1
-  },
-  {
-    "Numero": "5",
-    "Titulo": "For Whom The Bell Tolls",
-    "Artista": "METALLICA",
-    "Album": "RIDE THE LIGHTNING",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - For Whom The Bell Tolls (Studio Version).m4a",
-    "Duracion": "05:11",
-    "FechaLanzamiento": "1984",
-    "EstadoColor": "White",
-    "DuracionLong": 3112640000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "6",
-    "Titulo": "Ride The Lightning",
-    "Artista": "METALLICA",
-    "Album": "RIDE THE LIGHTNING",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Ride The Lightning (Studio Version).m4a",
-    "Duracion": "06:37",
-    "FechaLanzamiento": "1984",
-    "EstadoColor": "White",
-    "DuracionLong": 3978050000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "7",
-    "Titulo": "The Call Of Ktulu",
-    "Artista": "METALLICA",
-    "Album": "RIDE THE LIGHTNING",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - The Call Of Ktulu (Studio Version).m4a",
-    "Duracion": "08:55",
-    "FechaLanzamiento": "1984",
-    "EstadoColor": "White",
-    "DuracionLong": 5352670000,
-    "Imagen": null,
-    "Cantidad": 1
-  },
-  {
-    "Numero": "8",
-    "Titulo": "Trapped Under Ice",
-    "Artista": "METALLICA",
-    "Album": "RIDE THE LIGHTNING",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Ride the Lightning (1984)\\Metallica - Trapped Under Ice (Studio Version).m4a",
-    "Duracion": "04:04",
-    "FechaLanzamiento": "1984",
-    "EstadoColor": "White",
-    "DuracionLong": 2444830000,
-    "Imagen": null,
-    "Cantidad": 1
-  },
-  {
-    "Numero": "1",
-    "Titulo": "All Nightmare Long",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\All Nightmare Long (Live In Buenos Aires, Argentina - January 21st, 2010).m4a",
-    "Duracion": "07:52",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4721320000,
+    "Titulo": "Burning Heart ",
+    "Artista": "SURVIVOR",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\BURNING HEART   -   SURVIVOR.mp3",
+    "Duracion": "04:03",
+    "FechaLanzamiento": "1988",
+    "EstadoColor": "red",
+    "DuracionLong": 2432601923,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "2",
-    "Titulo": "Creeping Death",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Creeping Death (Live In Buenos Aires, Argentina - March 30th, 2014).m4a",
-    "Duracion": "06:30",
-    "FechaLanzamiento": "2017",
+    "Titulo": "Double Or Nothing",
+    "Artista": "Kenny Loggins & Glad...",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\DOUBLE OR NOTHING   -   Kenny Loggins & Gladys Knight.mp3",
+    "Duracion": "03:53",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 3906300000,
+    "DuracionLong": 2338292948,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "3",
-    "Titulo": "Cyanide",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Cyanide (Live In Buenos Aires, Argentina - January 21st, 2010).m4a",
-    "Duracion": "06:30",
-    "FechaLanzamiento": "2017",
+    "Titulo": "Eye Of The Tiger",
+    "Artista": "SURVIVOR",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\EYE OF THE TIGER   -   SURVIVOR.mp3",
+    "Duracion": "03:59",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 3908159999,
+    "DuracionLong": 2394289102,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "4",
-    "Titulo": "Damage, Inc.",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Damage, Inc. (Live In Cordoba, Argentina - January 24th, 2010).m4a",
-    "Duracion": "05:24",
-    "FechaLanzamiento": "2017",
+    "Titulo": "Heart's On Fire",
+    "Artista": "John Cafferty",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\HEART'S ON FIRE   -   John Cafferty.mp3",
+    "Duracion": "04:19",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 3249640000,
+    "DuracionLong": 2593623076,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "5",
-    "Titulo": "Enter Sandman",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Enter Sandman (Live In Buenos Aires, Argentina - January 21st, 2010).m4a",
-    "Duracion": "08:04",
-    "FechaLanzamiento": "2017",
+    "Titulo": "Heart's on Fire",
+    "Artista": "John Cafferty & Vinc...",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\John Cafferty & Vince DiCola - Heart's on Fire_Up the Mountain (Movie Version - Fan Edit).mp3",
+    "Duracion": "05:19",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 4849960000,
+    "DuracionLong": 3199128205,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "6",
-    "Titulo": "Fade To Black",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Fade To Black (Live In Buenos Aires, Argentina - March 30th, 2014).m4a",
-    "Duracion": "07:23",
-    "FechaLanzamiento": "2017",
+    "Titulo": "Living In America  ",
+    "Artista": "James Brown",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\LIVING IN AMERICA   -   James Brown.mp3",
+    "Duracion": "04:56",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 4433860000,
+    "DuracionLong": 2962552564,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "7",
-    "Titulo": "Fuel",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Fuel (Live In Buenos Aires, Argentina - March 29th, 2014).m4a",
-    "Duracion": "03:58",
-    "FechaLanzamiento": "2017",
+    "Titulo": "No Easy Way Out",
+    "Artista": "Robert Tepper",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\NO EASY WAY OUT   -   Robert Tepper.mp3",
+    "Duracion": "04:34",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 2380280000,
+    "DuracionLong": 2747410897,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "8",
-    "Titulo": "Hardwired",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Hardwired (Live In Buenos Aires, Argentina - March 31st, 2017).m4a",
-    "Duracion": "03:51",
-    "FechaLanzamiento": "2017",
+    "Titulo": "One Way Street",
+    "Artista": "GO WEST",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\ONE WAY STREET   -   GO WEST.mp3",
+    "Duracion": "04:45",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 2315270000,
+    "DuracionLong": 2852972435,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "9",
-    "Titulo": "Holier Than Thou",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Holier Than Thou (Live In Cordoba, Argentina - January 24th, 2010).m4a",
-    "Duracion": "04:21",
-    "FechaLanzamiento": "2017",
+    "Titulo": "Man Against The World",
+    "Artista": "SURVIVOR",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\Survivor - Man Against The World.mp3",
+    "Duracion": "03:46",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 2619450000,
+    "DuracionLong": 2266757692,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "10",
-    "Titulo": "Master Of Puppets",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Master Of Puppets (Live In Cordoba, Argentina - January 24th, 2010).m4a",
-    "Duracion": "08:00",
-    "FechaLanzamiento": "2017",
+    "Titulo": "The Sweetest Victory",
+    "Artista": "TOUCH",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\THE SWEETEST VICTORY   -   TOUCH.mp3",
+    "Duracion": "04:36",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 4804450000,
+    "DuracionLong": 2769380769,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "11",
-    "Titulo": "No Remorse",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\No Remorse (Live In Cordoba, Argentina - January 24th, 2010).m4a",
-    "Duracion": "04:10",
-    "FechaLanzamiento": "2017",
+    "Titulo": "Training Montage",
+    "Artista": "Vince DiCola",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\TRAINING MONTAGE   -   Vince DiCola.mp3",
+    "Duracion": "03:48",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 2505670000,
+    "DuracionLong": 2282297435,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "12",
-    "Titulo": "Nothing Else Matters",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Nothing Else Matters (Live In Buenos Aires, Argentina - March 31st, 2017).m4a",
-    "Duracion": "06:20",
-    "FechaLanzamiento": "2017",
+    "Titulo": "War",
+    "Artista": "Vince DiCola",
+    "Album": "ROCKY 4",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Rocky4\\WAR   -   Vince DiCola.mp3",
+    "Duracion": "06:08",
+    "FechaLanzamiento": "1988",
     "EstadoColor": "White",
-    "DuracionLong": 3809240000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "13",
-    "Titulo": "Now That We're Dead",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Now That We're Dead (Live In Buenos Aires, Argentina - March 31st, 2017).m4a",
-    "Duracion": "07:47",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4672560000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "14",
-    "Titulo": "Of Wolf And Man",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Of Wolf And Man (Live In Buenos Aires, Argentina - May 14th, 1999).m4a",
-    "Duracion": "04:11",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 2514960000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "15",
-    "Titulo": "One",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\One (Live In Buenos Aires, Argentina - January 22nd, 2010).m4a",
-    "Duracion": "08:36",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 5162030000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "16",
-    "Titulo": "Sad But True",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\Sad But True (Live In Buenos Aires, Argentina - March 29th, 2014).m4a",
-    "Duracion": "06:40",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4009390000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "17",
-    "Titulo": "The Unforgiven",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\The Unforgiven (Live In Buenos Aires, Argentina - May 8th, 1993).m4a",
-    "Duracion": "06:47",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 4077660000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "18",
-    "Titulo": "…And Justice For All",
-    "Artista": "METALLICA",
-    "Album": "LIVE METALLICA ARG",
-    "Genero": "HEAVY METAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Live Argentina 1993 2017\\…And Justice For All (Live In Buenos Aires, Argentina - March 29th, 2014).m4a",
-    "Duracion": "09:16",
-    "FechaLanzamiento": "2017",
-    "EstadoColor": "White",
-    "DuracionLong": 5569310000,
+    "DuracionLong": 3689426282,
     "Imagen": null,
     "Cantidad": 0
   }

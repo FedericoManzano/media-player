@@ -12,6 +12,8 @@
         xmlns:view="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View"
         mc:Ignorable="d"
         Title="Reproductor de Música" Height="740" Width="1250"
+        MinHeight="740"
+        MinWidth="1250"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         ResizeMode="CanResizeWithGrip"

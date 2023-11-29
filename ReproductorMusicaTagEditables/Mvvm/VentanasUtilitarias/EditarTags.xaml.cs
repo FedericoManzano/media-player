@@ -105,6 +105,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
         private void Formatear_Numeros(object sender, RoutedEventArgs e)
         {
             editorTags.EstablecerNumerosDeAlbumes();
+            editorTags.DeseleccionarTodasLasCanciones();
             editorTags.TodosLosItems.ForEach(i =>
             {
                 i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;

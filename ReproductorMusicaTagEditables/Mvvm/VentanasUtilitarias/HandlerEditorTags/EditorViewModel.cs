@@ -328,7 +328,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias.HandlerEditorTa
                     LimpiarNumero();
                     DeshabilitarNumero();
                     Cancion c = DameCancionPorClave(i);
-                    Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path);
+                    if(c != null)
+                        Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path)??
+                        ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
+                    else ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
                     Album = i.Album;
                 }
 
@@ -385,7 +388,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias.HandlerEditorTa
         }
         public Cancion DameCancionPorClave(InfoCancionTablaTagsControl infoCancion)
         {
-            List<Cancion> lu =  Irg.Canciones.Where(c => c.Titulo == infoCancion.Titulo && c.Album == infoCancion.Album && c.Artista == infoCancion.Artista).ToList();
+            List<Cancion> lu = Canciones.Where(c => c.Titulo == infoCancion.Titulo && c.Album == infoCancion.Album && c.Artista == infoCancion.Artista).ToList();
             if(lu != null && lu.Count == 1) 
             {
                 return lu[0];
