@@ -18,7 +18,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     public class ListaRepViewModel:ReproductorViewModelBase , IRecolector.IRecolector
     {
         private ListaRep _listaRep = new ListaRep();
-        public ListaRep ListaRep { get => _listaRep; set { _listaRep = value; OnPropertyChanged(nameof(ListaRep)); } }
+        public ListaRep ListaRep 
+        { 
+            get => _listaRep; 
+            set 
+            {  _listaRep = value; 
+                OnPropertyChanged(nameof(ListaRep)); 
+            } 
+        }
 
         private string _fechaCreacion = "";
         public string FechaCreacion 
@@ -28,52 +35,27 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         }
         public ICommand PlayCommandLista { get; }
        
-
         public ListaRepViewModel ()
         {
             PlayCommandLista = new RelayCommand(PlayActionLista, CanPlayAction);
         }
-
-
-
         public async void CargarInfoLista(ListaAvatarControl listaAvatarControl)
         {
             ListaRep = await CrearInfoListaRep(listaAvatarControl);
             FechaCreacion = ListasReproduccion.FechaCreacion(ListaRep.Nombre);
             Irg.Presentacion = new ObservableCollection<Cancion>(DameListaPorPartes(ListaRep.Nombre,0,10));
-            MantenerSeleccionPrevia();
-            ///Irg.Presentacion = new ObservableCollection<Cancion>(await ListadoCancionesFiltrado());
-        }
-
-
-        private void MantenerSeleccionPrevia()
-        {
-            Irg.Presentacion.Deseleccionar();
-            foreach (var cf in Irg.CancionesFiltradas)
-            {
-                foreach (var cp in Irg.Presentacion)
-                {
-                    if (cp.Equals(cf))
-                    {
-                        if (cf.EstadoColor == "Red")
-                        {
-                            cp.EstadoColor = "Red";
-                        }
-                    }
-                }
-            }
         }
         private List<Cancion> DameListaPorPartes(string nombre, int inicio, int final)
         {
             List<Cancion> l = ListasReproduccion.DameListadoCanciones(nombre);
+            l = l.Select(c =>
+            {
+                if (c.Equals(Irg.CancionActual.Cancion))
+                    return Irg.CancionActual.Cancion;
+                else return c;
+            }).ToList();
             return l.Count > final-inicio ? l.GetRange(inicio,final):l;
         }
-        private async Task<List<Cancion>> CargarListadoCanciones()
-        {
-            List<Cancion> cancions = await Task.Run(() => Irg.Presentacion.Select(c => c.Clone()).ToList());
-            return cancions;
-        }
-
         private async Task<List<Cancion>> ListadoCancionesFiltrado()
         {
             return await Task.Run(() =>
@@ -90,7 +72,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 }).ToList();
             });
         }
-
         private async Task<ListaRep> CrearInfoListaRep(ListaAvatarControl listaAvatarControl)
         {
             var context = TaskScheduler.FromCurrentSynchronizationContext();
@@ -109,12 +90,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             }, CancellationToken.None, TaskCreationOptions.None, context);
             return r;
         }
-
         private bool CanPlayAction(object arg)
         {
             return true;
         }
-
         private  void PlayActionLista(object obj)
         {
             Irg.Deseleccionar();
@@ -138,7 +117,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                         .Ejecutar(irg, Irg.CancionActual.Cancion);
             }
         }
-
         public void ActualizarFiltro ()
         {
             List<Cancion> l = ListasReproduccion.DameListadoCanciones(ListaRep.Nombre);
@@ -162,7 +140,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             }
             Irg.Seleccionar();
         }
-
         public void Limpiar()
         {
            ListaRep = new ListaRep();

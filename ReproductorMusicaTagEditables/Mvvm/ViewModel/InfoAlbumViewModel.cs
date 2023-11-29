@@ -65,27 +65,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         {
             Irg.BtnNavegacion = false;
             Irg.Presentacion = new ObservableCollection<Cancion>(await CargarCancionesAlbum(album));
-            MantenerSeleccionPrevia();
             AlbumSeleccionado = await CrearInfoAlbum(album);
-        }
-
-        private void MantenerSeleccionPrevia()
-        {
-            Irg.Presentacion.Deseleccionar();
-            foreach (var cf in Irg.CancionesFiltradas)
-            {
-               foreach (var cp in Irg.Presentacion)
-                {
-                    if (cp.Equals(cf))
-                    {
-                        if(cf.EstadoColor == "Red")
-                        {
-                            cp.EstadoColor = "Red";
-                        }
-                    }
-                }
-            }
-        }
+        }    
 
 
         public async Task<List<Cancion>> CargarCancionesAlbum(string titulo)
@@ -95,7 +76,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 { 
                     return Irg.Canciones
                         .Where(c => c.Album == titulo)
-                        .Select(c => c.Clone()).ToList(); 
+                        .Select(c =>
+                        {
+                            if (c.Equals(Irg.CancionActual.Cancion))
+                                return Irg.CancionActual.Cancion.Clone();
+                            return c.Clone();
+                        }).ToList(); 
                 } 
             });
             l.Sort(delegate (Cancion c1, Cancion c2)
