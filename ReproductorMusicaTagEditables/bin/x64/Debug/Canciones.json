@@ -799,7 +799,7 @@
   },
   {
     "Numero": "1",
-    "Titulo": "Thunderstruck (Li...",
+    "Titulo": "Thunderstruck",
     "Artista": "ACDC",
     "Album": "LIVE ACDC",
     "Genero": "HARD ROCK",
@@ -911,7 +911,7 @@
   },
   {
     "Numero": "9",
-    "Titulo": "Dirty Deeds Done ...",
+    "Titulo": "Dirty Deeds Done",
     "Artista": "ACDC",
     "Album": "LIVE ACDC",
     "Genero": "HARD ROCK",
@@ -939,7 +939,7 @@
   },
   {
     "Numero": "11",
-    "Titulo": "You Shook Me All ...",
+    "Titulo": "You Shook Me All Long",
     "Artista": "ACDC",
     "Album": "LIVE ACDC",
     "Genero": "HARD ROCK",
@@ -12250,7 +12250,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "1",
+    "Numero": "4",
     "Titulo": "Al Atardecer",
     "Artista": "LOS PIOJOS",
     "Album": "3 ARCO",
@@ -12264,7 +12264,7 @@
     "Cantidad": 1
   },
   {
-    "Numero": "2",
+    "Numero": "3",
     "Titulo": "Don't Say Tomorrow",
     "Artista": "LOS PIOJOS",
     "Album": "3 ARCO",
@@ -12278,7 +12278,7 @@
     "Cantidad": 1
   },
   {
-    "Numero": "3",
+    "Numero": "2",
     "Titulo": "El Farolito",
     "Artista": "LOS PIOJOS",
     "Album": "3 ARCO",
@@ -12292,7 +12292,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "4",
+    "Numero": "1",
     "Titulo": "Esquina Libertad",
     "Artista": "LOS PIOJOS",
     "Album": "3 ARCO",
@@ -27594,7 +27594,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "1",
     "Titulo": "01 [En] El Séptimo Día (Remasterizado 2007)",
     "Artista": "SODA STEREO",
     "Album": "CANCION ANIMAL",
@@ -27608,7 +27608,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "2",
     "Titulo": "02 Un Millón De Años Luz (Remasterizado 2007)",
     "Artista": "SODA STEREO",
     "Album": "CANCION ANIMAL",
@@ -27622,7 +27622,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "3",
     "Titulo": "03 Canción Animal (Remasterizado 2007)",
     "Artista": "SODA STEREO",
     "Album": "CANCION ANIMAL",
@@ -27636,7 +27636,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "4",
     "Titulo": "04 1990 (Mil Nueve Noventa) (Remasterizado 2007)",
     "Artista": "SODA STEREO",
     "Album": "CANCION ANIMAL",
@@ -27650,7 +27650,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "5",
     "Titulo": "05 Sueles Dejarme Solo (Remasterizado 2007)",
     "Artista": "SODA STEREO",
     "Album": "CANCION ANIMAL",
@@ -27664,7 +27664,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "6",
     "Titulo": "06 De Música Ligera (Remasterizado 2007)",
     "Artista": "SODA STEREO",
     "Album": "CANCION ANIMAL",
@@ -27678,7 +27678,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "7",
     "Titulo": "07 Hombre Al Agua (Remasterizado 2007)",
     "Artista": "SODA STEREO",
     "Album": "CANCION ANIMAL",
@@ -27692,7 +27692,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "8",
     "Titulo": "08 Entre Caníbales (Remasterizado 2007)",
     "Artista": "SODA STEREO",
     "Album": "CANCION ANIMAL",
@@ -27706,7 +27706,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "9",
     "Titulo": "09 Té Para 3 (Remasterizado 2007)",
     "Artista": "SODA STEREO",
     "Album": "CANCION ANIMAL",
@@ -27720,7 +27720,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "10",
     "Titulo": "10 Cae El Sol (Remasterizado 2007)",
     "Artista": "SODA STEREO",
     "Album": "CANCION ANIMAL",
@@ -27986,8 +27986,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "01 Por Qué No Puedo Ser Del Jet Set (Remasterizado 2007)",
+    "Numero": "1",
+    "Titulo": "Por Qué No Puedo Ser Del Jet Set",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",
@@ -28000,8 +28000,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "02 Sobredosis de T.V. (Remasterizado 2007)",
+    "Numero": "2",
+    "Titulo": "Sobredosis de T.V.",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",
@@ -28014,8 +28014,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "03 Te Hacen Falta Vitaminas (Remasterizado 2007)",
+    "Numero": "3",
+    "Titulo": "Te Hacen Falta Vitaminas",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",
@@ -28028,8 +28028,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "04 Trátame Suavemente (Remasterizado 2007)",
+    "Numero": "4",
+    "Titulo": "Trátame Suavemente",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",
@@ -28042,8 +28042,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "05 Dietético (Remasterizado 2007)",
+    "Numero": "5",
+    "Titulo": "Dietético",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",
@@ -28056,8 +28056,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "06 Tele-Ka (Remasterizado 2007)",
+    "Numero": "6",
+    "Titulo": "Tele-Ka",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",
@@ -28070,8 +28070,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "07 Ni Un Segundo (Remasterizado 2007)",
+    "Numero": "7",
+    "Titulo": "Ni Un Segundo",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",
@@ -28084,8 +28084,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "08 Un Misil En Mi Placard (Remasterizado 2007)",
+    "Numero": "8",
+    "Titulo": "Un Misil En Mi Placard",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",
@@ -28098,8 +28098,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "09 El Tiempo Es Dinero (Remasterizado 2007)",
+    "Numero": "9",
+    "Titulo": "El Tiempo Es Dinero",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",
@@ -28112,8 +28112,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "10 Afrodisíacos (Remasterizado 2007)",
+    "Numero": "10",
+    "Titulo": "Afrodisíacos",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",
@@ -28126,8 +28126,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "11 Mi Novia Tiene Bíceps (Remasterizado 2007)",
+    "Numero": "11",
+    "Titulo": "Mi Novia Tiene Bíceps",
     "Artista": "SODA STEREO",
     "Album": "SODA STEREO",
     "Genero": "ROCK NACIONAL",

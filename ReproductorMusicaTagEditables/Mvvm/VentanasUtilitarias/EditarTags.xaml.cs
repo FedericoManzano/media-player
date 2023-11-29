@@ -1,10 +1,9 @@
-﻿using ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags;
+﻿
+using ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
-using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
@@ -15,6 +14,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
 
     public partial class EditarTags : Window
     {
+        private bool _todosSeleccionados = false;
         public EditarTags()
         {
             InitializeComponent();
@@ -24,129 +24,37 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
         public EditarTags(ObservableCollection<Cancion> cancionesAlbum)
         {
             InitializeComponent();
-            editorTags.Canciones = new ObservableCollection<Cancion>(cancionesAlbum);
+            editorTags.Canciones = new List<Cancion>(cancionesAlbum);
+            editorTags.CargarTodosLosItems();
+            editorTags.TodosLosItems.ForEach(i =>
+            {
+                i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;
+            });
             editorTags.MjeVacio = Visibility.Collapsed;
         }
 
-        private bool _todosSeleccionados = false;
-        private void Button_Click(object sender, RoutedEventArgs e)
+    
+        private void Limpiar_Campos(object sender, RoutedEventArgs e)
         {
-            editorTags.CargarCancionesAEditar();
+            editorTags.LimpiarCampos();
+            editorTags.HabilitarEdicionCampos();
         }
-
         private void InfoCancionTablaTagsControl_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             InfoCancionTablaTagsControl i = (InfoCancionTablaTagsControl)sender;
-            Cancion c = new Cancion()
-            {
-                Numero = i.Numero,
-                Titulo = i.Titulo,
-                Album = i.Album,
-                Artista = i.Artista,
-                FechaLanzamiento = i.Ano,
-                Genero = i.Genero,
-            };
-
-            
-            if(!i.Seleccionado)
-            {
-                if(!_todosSeleccionados)
-                    editorTags.CancionesSeleccionadas.Remove(c);
-            }
-            else
-            {
-                if(editorTags.IndiceDe(c) )
-                {
-                    c = editorTags.DameCancionPorClave(c);
-                    editorTags.CancionesSeleccionadas.Add(c);
-                    CargarCancionCampos(c);
-                }
-            }
+            editorTags.SeleccionaroDeseleccionar(i);
         }
-
-       private void CargarCancionCampos (Cancion c)
-       {
-            SetearNumero(c.Numero);
-            SetearTitulo(c.Titulo);
-            SetearArtista(c.Artista);
-            SetearAlbum(c.Album);
-            SetearGenero(c.Genero);
-            SetearAno(c.FechaLanzamiento);
-         
-            imagenAlbum.Background = 
-                ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path) ??
-                ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
-            FormatearSeleccion();
-        }
-        
-       private void FormatearSeleccion()
-       {
-            if(editorTags.CancionesSeleccionadas.Count > 1)
-            {
-                LimpiarCampoNumero();
-                DeshabilitarCampoNumero();
-                
-                LimpiarCampoTitulo();
-                DeshabilitarCampoTitulo();
-
-                List<string> lAlbum = new SortedSet<string>(
-                    editorTags.CancionesSeleccionadas.Select(c => c.Album).ToList()
-                ).ToList() ; 
-                if(lAlbum.Count > 1)
-                {
-                    LimpiarCampoAlbum();
-                    LimpiarCampoGenero();
-                    LimpiarCampoAno();
-                    imagenAlbum.Background = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();   
-                }
-                List<string> lArtista = new SortedSet<string>(
-                    editorTags.CancionesSeleccionadas.Select(c => c.Artista).ToList()
-                ).ToList();
-
-
-                if(lArtista.Count > 1) 
-                {
-                    LimpiarCampoArtista();
-                }
-            }
-       }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Editar_Tags(object sender, RoutedEventArgs e)
         {
-            EditarCamposTags();
+            editorTags.Editar();
+            editorTags.DeseleccionarTodasLasCanciones();
+            editorTags.TodosLosItems.ForEach(i =>
+            {
+                i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;
+            });
+           
         }
-        private void EditarCamposTags ()
-        {
-            editorTags.EditarTags();
-            LimpiarYHabilitarTodosLosCampos();
-        }
-
-        private void LimpiarYHabilitarTodosLosCampos ()
-        {
-            LimpiarCampoNumero();
-            HabilitarCampoNumero();
-
-            LimpiarCampoTitulo();
-            HabilitarCampoTitulo();
-
-            LimpiarCampoArtista();
-            HabilitarCampoArtista();
-
-            LimpiarCampoAlbum();
-            HabilitarCampoAlbum();
-
-            LimpiarCampoGenero();
-            HabilitarCampoGenero();
-
-            LimpiarCampoAno();  
-            HabilitarCampoAno();
-
-            imagenAlbum.Background = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
-            editorTags.IconoMarcado = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.SquareRegular;
-            _todosSeleccionados = false;
-        }
-
-        private void imagenAlbum_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        private void Seleccionar_Imagen_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             OpenFileDialog fs = new OpenFileDialog();
             if(fs.ShowDialog() == System.Windows.Forms.DialogResult.OK)
@@ -155,181 +63,38 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
                 imagenAlbum.Background = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.NUEVA_IMAGEN).DameImagen(fs.FileName);
             }
         }
-
-        private void SetearNumero(string numero)
-        {
-            txtNumero.Texto = numero;
-            txtNumero.DesaparecerPlaceholder();
-        }
-
-
-        private void SetearTitulo(string numero)
-        {
-            txtTitulo.Texto = numero;
-            txtTitulo.DesaparecerPlaceholder();
-        }
-
-        private void SetearArtista(string numero)
-        {
-            txtArtista.Texto = numero;
-            txtArtista.DesaparecerPlaceholder();
-        }
-
-
-        private void SetearAlbum(string numero)
-        {
-            txtAlbum.Texto = numero;
-            txtAlbum.DesaparecerPlaceholder();
-        }
-
-
-        private void SetearGenero(string numero)
-        {
-            txtGenero.Texto = numero;
-            txtGenero.DesaparecerPlaceholder();
-        }
-
-        private void SetearAno(string numero)
-        {
-            txtAno.Texto = numero;
-            txtAno.DesaparecerPlaceholder();
-        }
-
-
-        private void LimpiarCampoNumero()
-        {
-            txtNumero.Texto = "";
-            txtNumero.AparecerPlaceholder();
-        }
-
-        private void DeshabilitarCampoNumero ()
-        {
-            txtNumero.Habilitado = false;
-        }
-        private void HabilitarCampoNumero()
-        {
-            txtNumero.Habilitado = true;
-        }
-
-        private void LimpiarCampoTitulo()
-        {
-            txtTitulo.Texto = "";
-            txtTitulo.AparecerPlaceholder();
-        }
-
-        private void DeshabilitarCampoTitulo()
-        {
-            txtTitulo.Habilitado = false;
-        }
-        private void HabilitarCampoTitulo()
-        {
-            txtTitulo.Habilitado = true;
-        }
-
-        private void LimpiarCampoArtista()
-        {
-            txtArtista.Texto = "";
-            txtArtista.AparecerPlaceholder();
-        }
-
-        private void DeshabilitarCampoArtista()
-        {
-            txtArtista.Habilitado = false;
-        }
-        private void HabilitarCampoArtista()
-        {
-            txtArtista.Habilitado = true;
-        }
-
-
-        private void LimpiarCampoAlbum()
-        {
-            txtAlbum.Texto = "";
-            txtAlbum.AparecerPlaceholder();
-        }
-
-        private void DeshabilitarCampoAlbum()
-        {
-            txtAlbum.Habilitado = false;
-        }
-        private void HabilitarCampoAlbum()
-        {
-            txtAlbum.Habilitado = true;
-        }
-
-
-        private void LimpiarCampoGenero()
-        {
-            txtGenero.Texto = "";
-            txtGenero.AparecerPlaceholder();
-        }
-
-        private void DeshabilitarCampoGenero()
-        {
-            txtGenero.Habilitado = false;
-        }
-        private void HabilitarCampoGenero()
-        {
-            txtGenero.Habilitado = true;
-        }
-
-        private void LimpiarCampoAno()
-        {
-            txtAno.Texto = "";
-            txtAno.AparecerPlaceholder();
-        }
-
-        private void DeshabilitarCampoAno()
-        {
-            txtAno.Habilitado = false;
-        }
-        private void HabilitarCampoAno()
-        {
-            txtAno.Habilitado = true;
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            
-            LimpiarYHabilitarTodosLosCampos();
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void Seleccionar_Todas(object sender, RoutedEventArgs e)
         {
             _todosSeleccionados = !_todosSeleccionados;
-            editorTags.CancionesSeleccionadas.Clear();
             if(_todosSeleccionados)
             {
-                editorTags.IconoMarcado = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.CheckSquareSolid;
-                foreach(var i in itemList.Items)
+                editorTags.SeleccionarTodasLasCanciones();
+                editorTags.TodosLosItems.ForEach(i =>
                 {
-                    Cancion c = (Cancion)i;
-                    editorTags.CancionesSeleccionadas.Add(c);
-                }
-                if(editorTags.CancionesSeleccionadas.Count > 0)
-                {
-                    editorTags.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(editorTags.CancionesSeleccionadas[0].Path)??
-                        ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
-                    DeshabilitarCampoNumero();
-                    DeshabilitarCampoTitulo();
-                }
-                
+                    i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;
+                });
             } else
             {
-                editorTags.IconoMarcado = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.SquareRegular;
-                editorTags.CancionesSeleccionadas.Clear();
-                LimpiarYHabilitarTodosLosCampos();
+                editorTags.DeseleccionarTodasLasCanciones();
+                editorTags.TodosLosItems.ForEach(i =>
+                {
+                    i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;
+                });
             }
         }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void Cerrar_Ventana(object sender, RoutedEventArgs e)
         {
-            editorTags.CancionesSeleccionadas.Clear();
-            editorTags.Canciones.Clear();
-            LimpiarYHabilitarTodosLosCampos();
+            if(editorTags.Canciones.Count > 0)
+            {
+                editorTags.Canciones.Clear();
+                editorTags.TodosLosItems.Clear();
+                editorTags.Seleccionadas.Clear();
+                editorTags.LimpiarCampos();
+                editorTags.HabilitarEdicionCampos();
+                
+            }
             Hide();
         }
-
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if(e.LeftButton == MouseButtonState.Pressed)
@@ -337,19 +102,38 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
                 DragMove();
             }
         }
-
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void Formatear_Numeros(object sender, RoutedEventArgs e)
         {
             editorTags.EstablecerNumerosDeAlbumes();
-            LimpiarYHabilitarTodosLosCampos();
+            editorTags.TodosLosItems.ForEach(i =>
+            {
+                i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;
+            });
         }
-
         private void Window_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
         {
             if(e.Key == Key.Enter) 
             {
-                EditarCamposTags();
+                editorTags.Editar();
+                editorTags.DeseleccionarTodasLasCanciones();
+                editorTags.TodosLosItems.ForEach(i =>
+                {
+                    i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;
+                });
             }
+        }
+        private async void Seleccionar_Directorio(object sender, RoutedEventArgs e)
+        {
+       
+            if(await editorTags.CargarCancionesAEditar())
+            {
+                editorTags.TodosLosItems.ForEach(i =>
+                {
+                    i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;
+                });
+                editorTags.MjeVacio = Visibility.Collapsed;
+            }
+            
         }
     }
 }

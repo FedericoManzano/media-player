@@ -44,6 +44,20 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags
             InitializeComponent();
         }
 
+        public InfoCancionTablaTagsControl(bool Seleccionado)
+        {
+            InitializeComponent();
+            this.Seleccionado = Seleccionado;
+            if (Seleccionado)
+            {
+                IconMarcado = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.CheckSquareSolid;
+            }
+            else
+            {
+                IconMarcado = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.SquareRegular;
+            }
+        }
+
         public static DependencyProperty NumeroProperty =
             DependencyProperty.Register("Numero", typeof(string), typeof(InfoCancionTablaTagsControl), new PropertyMetadata(string.Empty) );
 
@@ -111,8 +125,13 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            SeleccionarODeseleccionar();
+        }
+
+        public void SeleccionarODeseleccionar()
+        {
             Seleccionado = !Seleccionado;
-            if(Seleccionado) 
+            if (Seleccionado)
             {
                 IconMarcado = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.CheckSquareSolid;
             }
@@ -120,6 +139,11 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTablaTags
             {
                 IconMarcado = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.SquareRegular;
             }
+        }
+
+        public bool Equals(InfoCancionTablaTagsControl other)
+        {
+            return other.Titulo == this.Titulo && other.Artista == this.Artista && other.Album == this.Album;
         }
     }
 }

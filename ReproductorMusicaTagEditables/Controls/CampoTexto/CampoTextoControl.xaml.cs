@@ -128,6 +128,14 @@ namespace ReproductorMusicaTagEditables.Controls.CampoTexto
         private void OnTextChanged(object sender, TextChangedEventArgs e)
         {
             Texto = txtBox.Text;
+            if (string.IsNullOrEmpty(txtBox.Text))
+            {
+                txtPlaceholder.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                txtPlaceholder.Visibility = Visibility.Collapsed;
+            }
             RaiseEvent(new RoutedEventArgs(CambiandoTextoEvent));
         }
 

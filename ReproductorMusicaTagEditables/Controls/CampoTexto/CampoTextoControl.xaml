@@ -10,7 +10,8 @@
         <TextBlock x:Name="txtPlaceholder" 
                    Text="{Binding ElementName=campoTexto, Path=PlaceholderTexto}" 
                    Style="{StaticResource placeholder}"
-                   Foreground="{Binding ElementName=campoTexto, Path=PlaceholderColor}"/>
+                   Foreground="{Binding ElementName=campoTexto, Path=PlaceholderColor}"
+                  />
       
         <TextBox x:Name="txtBox" 
                  Style="{StaticResource campoTextoBox}"

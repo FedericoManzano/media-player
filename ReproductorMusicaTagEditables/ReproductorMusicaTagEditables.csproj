@@ -596,6 +596,7 @@
     <Compile Include="Mvvm\VentanasUtilitarias\EditarTags.xaml.cs">
       <DependentUpon>EditarTags.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mvvm\VentanasUtilitarias\HandlerEditorTags\EditorViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\AlbumesViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Base\CancionActual.cs" />
@@ -606,7 +607,6 @@
     <Compile Include="Mvvm\ViewModel\Base\Info\PropiedadesListados\InfoReproductor.cs" />
     <Compile Include="Mvvm\ViewModel\Base\ReproductorViewModelBase.cs" />
     <Compile Include="Mvvm\ViewModel\DescargasViewModel.cs" />
-    <Compile Include="Mvvm\ViewModel\EditorTagsViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\FavoritosViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Filtros\PaginadorAvanzado.cs" />
     <Compile Include="Mvvm\ViewModel\GenerosViewModel.cs" />
