@@ -3,6 +3,7 @@ using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos;
 using ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -60,14 +61,27 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
         }
         public async void CargaDesdeElRepositorioCanciones()
         {
-
+            
             await Task.Run(() => {
                 Preloader = true;
                 if (RepositorioDeCanciones.ExisteArchivo() && !RepositorioDeCanciones.EstaVacio())
                 {
                     Canciones = RepositorioDeCanciones.LeerTodasLasCanciones();
                     Partes = new ObservableCollection<Cancion>(Canciones);
-                    CancionesFiltradas = new ObservableCollection<Cancion>(Canciones);
+
+                    ReproductorViewModelBase.infoNavegacion = Navegacion.LevantarInfo();
+                    if (ReproductorViewModelBase.infoNavegacion.CancionActual.Cancion != null)
+                    {
+                        CancionActual = ReproductorViewModelBase.infoNavegacion.CancionActual;
+                    }
+
+                    if (ReproductorViewModelBase.infoNavegacion.CancionesFiltradas.Count > 0)
+                    {
+                        CancionesFiltradas = ReproductorViewModelBase.infoNavegacion.CancionesFiltradas;
+                    }else
+                        CancionesFiltradas = new ObservableCollection<Cancion>(Canciones);
+
+              
                     if (Canciones.Count > 50)
                     {
                         Partes = new ObservableCollection<Cancion>(Canciones.GetRange(0, 50));

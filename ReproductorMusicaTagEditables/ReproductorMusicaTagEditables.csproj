@@ -590,6 +590,8 @@
     <Compile Include="Mvvm\CalculoTiempo\AgregarCancionesListas.xaml.cs">
       <DependentUpon>AgregarCancionesListas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mvvm\Repository\Navegacion\InfoNavegacion.cs" />
+    <Compile Include="Mvvm\Repository\Navegacion\Navegacion.cs" />
     <Compile Include="Mvvm\VentanasUtilitarias\CrearListaReproduccion.xaml.cs">
       <DependentUpon>CrearListaReproduccion.xaml</DependentUpon>
     </Compile>
@@ -638,6 +640,7 @@
     <Compile Include="Mvvm\View\FavoritosView.xaml.cs">
       <DependentUpon>FavoritosView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mvvm\View\Generador\FabricaPage.cs" />
     <Compile Include="Mvvm\View\GenerosView.xaml.cs">
       <DependentUpon>GenerosView.xaml</DependentUpon>
     </Compile>

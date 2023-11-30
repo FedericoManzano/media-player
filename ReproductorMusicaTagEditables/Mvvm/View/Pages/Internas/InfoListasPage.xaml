@@ -3,8 +3,6 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas"
-      xmlns:infoLista="clr-namespace:ReproductorMusicaTagEditables.Controls.ListaAvatar"
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       xmlns:infoCancion="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoCancionTabla"

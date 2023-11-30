@@ -78,7 +78,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                         .Where(c => c.Album == titulo)
                         .Select(c =>
                         {
-                            if (c.Equals(Irg.CancionActual.Cancion))
+                            if (Irg.CancionActual.Cancion != null && c.Equals(Irg.CancionActual.Cancion))
                                 return Irg.CancionActual.Cancion.Clone();
                             return c.Clone();
                         }).ToList(); 

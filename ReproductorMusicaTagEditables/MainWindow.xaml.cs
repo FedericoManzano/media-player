@@ -1,8 +1,11 @@
 ﻿
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
 using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
+using ReproductorMusicaTagEditables.Mvvm.View.Generador;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows;
@@ -32,13 +35,16 @@ namespace ReproductorMusicaTagEditables
             CargarImagenPorDefectoArtista();
            
             reproViewModel.CargarReproductor(mediaReproductor);
-            
+
+            InfoReproductor infoReproductor = InfoReproductor.DameInstancia();
+            infoReproductor.CancionActual = ReproductorViewModelBase.infoNavegacion.CancionActual;
+            CargarInfoArtista();
             timer = new DispatcherTimer()
             {
                 Interval = TimeSpan.FromSeconds(1)
             };
             timer.Tick += new EventHandler(Time_Track);
-
+            GuardarNavegacion();
             
         }
 
@@ -110,23 +116,41 @@ namespace ReproductorMusicaTagEditables
         private void CargarInfoArtista ()
         {
             ImageBrush bImagen = DameImagenCancion();
+            GuardarNavegacion();
             infoArtista.ImagenArtista = bImagen;
             if (reproViewModel.CancionActual() != null)
             {
+                
                 infoArtista.NombreArtista = reproViewModel.CancionActual().Artista;
                 infoArtista.NombreAlbum = reproViewModel.CancionActual().Album;
                 infoArtista.TituloCancion = reproViewModel.CancionActual().Titulo;
             }
         }
 
+        private void GuardarNavegacion()
+        {
+            InfoReproductor ir = InfoReproductor.DameInstancia();
+            ReproductorViewModelBase.infoNavegacion.CancionActual = ir.CancionActual;
+            ReproductorViewModelBase.infoNavegacion.CancionesFiltradas = ir.CancionesFiltradas;
+            Navegacion.GuardarInfo(ReproductorViewModelBase.infoNavegacion);
+        }
+
+
         private ImageBrush DameImagenCancion()
         {
-            ImageBrush bImagen = ArchivoImagenBase
+            ImageBrush bImagen;
+            if (reproViewModel.CancionActual() != null)
+            {
+                bImagen = ArchivoImagenBase
                                    .archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO)
                                    .DameImagen(reproViewModel.CancionActual().Path) ?? ArchivoImagenBase
                                    .archivoImagenFabrica(ArchivoImagenBase.DEFAULT)
                                    .DameImagen();
-            return bImagen;
+                return bImagen;
+            } 
+            
+            return ArchivoImagenBase
+                                   .archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
         }
 
 

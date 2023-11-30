@@ -11,7 +11,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial
 {
     public class RepositorioDeCanciones
     {
-
         public static readonly string PATH_ARCHIVO_CANCIONES = "Canciones.json";
         public RepositorioDeCanciones() 
         {

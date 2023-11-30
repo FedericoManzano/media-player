@@ -2,6 +2,8 @@
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
+using ReproductorMusicaTagEditables.Mvvm.View.Generador;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System.Collections.Generic;
@@ -15,7 +17,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 {
     public abstract class ReproductorViewModelBase : ViewModelBase
     {
+
+        public static InfoNavegacion infoNavegacion = new InfoNavegacion();
+
         protected InfoReproductor irg;
+
         private static double _scrollVertical = 0;
         private List<Cancion> _cancionesSeleccionadas = new List<Cancion>();
         public  InfoReproductor Irg
@@ -45,10 +51,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             SiguienteCommand = new RelayCommand(SiguienteAction, CanSiguienteAction);
             AnteriorCommand = new RelayCommand(AnteriorAction, CanAnteriorAction);
             PlayCommand = new RelayCommand(PlayAction);
+            Navegacion.Crear();
             if(irg.Canciones.Count == 0)
                 Irg.CargaDesdeElRepositorioCanciones();
-            
 
+            
+           
         }
 
         public bool CanAnteriorAction(object arg)

@@ -1,6 +1,7 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
@@ -12,7 +13,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
     {
         public override void Ejecutar(InfoReproductor Irg, Cancion c = null)
         {
-            
+            if(ReproductorViewModelBase.infoNavegacion.CancionActual.Index > -1)
+            {
+                Irg.Reproductor.Source =new Uri( ReproductorViewModelBase.infoNavegacion.CancionActual.Cancion.Path);
+            }
             if (c != null)
             {
                 if (!System.IO.File.Exists(c.Path))
@@ -27,6 +31,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 }
                 Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexOf(c);
                 Irg.CancionActual.Cancion = c;
+
+                
+
                 Irg.Reproductor.Source = new Uri(c.Path);
                 Irg.Reproductor.Play();
                 Irg.Seleccionar();
@@ -64,12 +71,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                         }
                         else
                         {
+                            Irg.Seleccionar();
                             Irg.Reproductor.Play();
                             Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
                             EstadosControl.PLAY = true;
                         }
                     }
                 }
+                
+                Navegacion.GuardarInfo(ReproductorViewModelBase.infoNavegacion);
             }
         }
     }
