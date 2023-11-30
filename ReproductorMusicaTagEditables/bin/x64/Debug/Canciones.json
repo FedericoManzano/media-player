@@ -1,6 +1,146 @@
 [
   {
     "Numero": "1",
+    "Titulo": "Back In Black",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Back In Black.mp3",
+    "Duracion": "04:22",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2620951282,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Givin the Dog a Bone",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Givin the Dog a Bone.mp3",
+    "Duracion": "03:37",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2172449358,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "3",
+    "Titulo": "Have a Drink on Me",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Have a Drink on Me.mp3",
+    "Duracion": "04:04",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2445998076,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Hells Bells",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Hells Bells.mp3",
+    "Duracion": "05:20",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 3203415384,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "5",
+    "Titulo": "Let Me Put My Love Into You",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Let Me Put My Love Into You.mp3",
+    "Duracion": "04:21",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2618540384,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "6",
+    "Titulo": "Rock and Roll Ain't Noise Pollution",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Rock and Roll Ain't Noise Pollution.mp3",
+    "Duracion": "04:32",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2729192307,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "7",
+    "Titulo": "Shake a Leg",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Shake a Leg.mp3",
+    "Duracion": "04:11",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2519944871,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "8",
+    "Titulo": "Shoot to Thrill",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Shoot to Thrill.mp3",
+    "Duracion": "05:25",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 3256195512,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "9",
+    "Titulo": "What Do You Do for Money Honey",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\What Do You Do for Money Honey.mp3",
+    "Duracion": "03:41",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2211030128,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "10",
+    "Titulo": "You Shook Me All Night Long",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\You Shook Me All Night Long.mp3",
+    "Duracion": "03:35",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2156105769,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "1",
     "Titulo": "Hard as a Rock",
     "Artista": "ACDC",
     "Album": "BALLBREAKER",
@@ -5013,7 +5153,7 @@
   },
   {
     "Numero": "1",
-    "Titulo": "Bad Moon Rising (Remastered 1985)",
+    "Titulo": "Bad Moon Rising",
     "Artista": "CREEDENCE",
     "Album": "CLEAR WATHER REVIVAL",
     "Genero": "ROCK INTERNACIONAL",
@@ -5083,7 +5223,7 @@
   },
   {
     "Numero": "6",
-    "Titulo": "Green River (Remastered 1985)",
+    "Titulo": "Green River",
     "Artista": "CREEDENCE",
     "Album": "CLEAR WATHER REVIVAL",
     "Genero": "ROCK INTERNACIONAL",
@@ -5111,7 +5251,7 @@
   },
   {
     "Numero": "8",
-    "Titulo": "Lodi (Remastered 1985)",
+    "Titulo": "Lodi",
     "Artista": "CREEDENCE",
     "Album": "CLEAR WATHER REVIVAL",
     "Genero": "ROCK INTERNACIONAL",
@@ -5181,7 +5321,7 @@
   },
   {
     "Numero": "13",
-    "Titulo": "Susie Q (Pt.",
+    "Titulo": "Susie Q",
     "Artista": "CREEDENCE",
     "Album": "CLEAR WATHER REVIVAL",
     "Genero": "ROCK INTERNACIONAL",
@@ -5237,7 +5377,7 @@
   },
   {
     "Numero": "17",
-    "Titulo": "I Heard It Through The Grapevine (Edit)",
+    "Titulo": "I Heard It Through The Grapevine",
     "Artista": "CREEDENCE",
     "Album": "CLEAR WATHER REVIVAL",
     "Genero": "ROCK INTERNACIONAL",
@@ -10500,7 +10640,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "1",
     "Titulo": "01 Whole Lotta Love (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10514,7 +10654,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "2",
     "Titulo": "02 What Is and What Should Never Be (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10528,7 +10668,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "3",
     "Titulo": "03 The Lemon Song (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10542,7 +10682,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "4",
     "Titulo": "04 Thank You (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10556,7 +10696,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "5",
     "Titulo": "05 Heartbreaker (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10570,7 +10710,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "6",
     "Titulo": "06 Living Loving Maid (She's Just a Woman) (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10584,7 +10724,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "7",
     "Titulo": "07 Ramble On (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10598,7 +10738,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "8",
     "Titulo": "08 Moby Dick (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10612,7 +10752,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "9",
     "Titulo": "09 Bring It on Home (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10626,7 +10766,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "10",
     "Titulo": "10 Whole Lotta Love (Rough Mix with Vocal)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10640,7 +10780,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "11",
     "Titulo": "11 What Is and What Should Never Be (Rough Mix with Vocal)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10654,7 +10794,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "12",
     "Titulo": "12 Thank You (Backing Track)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10668,7 +10808,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "13",
     "Titulo": "13 Heartbreaker (Rough Mix with Vocal)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10682,7 +10822,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "14",
     "Titulo": "14 Living Loving Maid (She's Just a Woman) (Backing Track)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10696,7 +10836,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "15",
     "Titulo": "15 Ramble On (Rough Mix with Vocal)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10710,7 +10850,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "16",
     "Titulo": "16 Moby Dick (Intro _ Outro Rough Mix)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10724,7 +10864,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "17",
     "Titulo": "17 La La (Backing Track)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 2",
@@ -10738,7 +10878,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "1",
     "Titulo": "01 Immigrant Song (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 3",
@@ -10752,7 +10892,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "2",
     "Titulo": "02 Friends (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 3",
@@ -10766,7 +10906,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "3",
     "Titulo": "03 Celebration Day (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 3",
@@ -10780,7 +10920,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "4",
     "Titulo": "04 Since I've Been Loving You (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 3",
@@ -10794,7 +10934,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "5",
     "Titulo": "05 Out on the Tiles (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 3",
@@ -10808,7 +10948,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "6",
     "Titulo": "06 Gallows Pole (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 3",
@@ -10822,7 +10962,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "7",
     "Titulo": "07 Tangerine (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 3",
@@ -10836,7 +10976,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "8",
     "Titulo": "08 That's the Way (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 3",
@@ -10850,7 +10990,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "9",
     "Titulo": "09 Bron-Y-Aur Stomp (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 3",
@@ -10864,7 +11004,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "10",
     "Titulo": "10 Hats off To (Roy) Harper (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 3",
@@ -10878,8 +11018,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "1 Black Dog (Remaster)",
+    "Numero": "1",
+    "Titulo": "Black Dog",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 4",
     "Genero": "ROCK INTERNACIONAL",
@@ -10892,8 +11032,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "2 Rock and Roll (Remaster)",
+    "Numero": "2",
+    "Titulo": "Rock and Roll",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 4",
     "Genero": "ROCK INTERNACIONAL",
@@ -10906,8 +11046,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "3 The Battle of Evermore (Remaster)",
+    "Numero": "3",
+    "Titulo": "The Battle of Evermore",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 4",
     "Genero": "ROCK INTERNACIONAL",
@@ -10920,8 +11060,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "4 Stairway to Heaven (Remaster)",
+    "Numero": "4",
+    "Titulo": "Stairway to Heaven",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 4",
     "Genero": "ROCK INTERNACIONAL",
@@ -10934,8 +11074,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "5 Misty Mountain Hop (Remaster)",
+    "Numero": "5",
+    "Titulo": "Misty Mountain Hop",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 4",
     "Genero": "ROCK INTERNACIONAL",
@@ -10948,8 +11088,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "6 Four Sticks (Remaster)",
+    "Numero": "6",
+    "Titulo": "Four Sticks",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 4",
     "Genero": "ROCK INTERNACIONAL",
@@ -10962,8 +11102,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "7 Going to California (Remaster)",
+    "Numero": "7",
+    "Titulo": "Going to California",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 4",
     "Genero": "ROCK INTERNACIONAL",
@@ -10976,8 +11116,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "8 When the Levee Breaks (Remaster)",
+    "Numero": "8",
+    "Titulo": "When the Levee Breaks",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN 4",
     "Genero": "ROCK INTERNACIONAL",
@@ -10990,7 +11130,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "1",
     "Titulo": "01 Immigrant Song (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11004,7 +11144,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "2",
     "Titulo": "02 Rock and Roll (Sunset Sound Mix)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11018,7 +11158,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "3",
     "Titulo": "03 Whole Lotta Love (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11032,7 +11172,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "4",
     "Titulo": "04 Black Dog (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11046,7 +11186,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "5",
     "Titulo": "05 Stairway to Heaven (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11060,7 +11200,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "6",
     "Titulo": "06 Good Times Bad Times (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11074,7 +11214,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "7",
     "Titulo": "07 Going to California (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11088,7 +11228,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "8",
     "Titulo": "08 Ramble On (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11102,7 +11242,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "9",
     "Titulo": "09 Kashmir (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11116,7 +11256,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "10",
     "Titulo": "10 Over the Hills and Far Away (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11130,7 +11270,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "11",
     "Titulo": "11 Hey, Hey, What Can I Do (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11144,7 +11284,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "12",
     "Titulo": "12 D'yer Mak'er (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11158,7 +11298,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "13",
     "Titulo": "13 When the Levee Breaks (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11172,7 +11312,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "14",
     "Titulo": "14 All My Love (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11186,7 +11326,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "15",
     "Titulo": "15 Babe I'm Gonna Leave You (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11200,7 +11340,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "16",
     "Titulo": "16 Heartbreaker (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11214,7 +11354,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "17",
     "Titulo": "17 Dazed and Confused (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11228,7 +11368,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "18",
     "Titulo": "18 The Song Remains the Same (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11242,7 +11382,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "19",
     "Titulo": "19 Fool in the Rain (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11256,7 +11396,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "20",
     "Titulo": "20 The Ocean (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11270,7 +11410,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "21",
     "Titulo": "21 What Is and What Should Never Be (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11284,7 +11424,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "22",
     "Titulo": "22 Houses of the Holy (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11298,7 +11438,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "23",
     "Titulo": "23 Since I've Been Loving You (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11312,7 +11452,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "24",
     "Titulo": "24 Misty Mountain Hop (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11326,7 +11466,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "25",
     "Titulo": "25 Communication Breakdown (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11340,7 +11480,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "26",
     "Titulo": "26 Thank You (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11354,7 +11494,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "27",
     "Titulo": "27 No Quarter (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11368,7 +11508,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "28",
     "Titulo": "28 Trampled Under Foot (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11382,7 +11522,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "29",
     "Titulo": "29 I Can't Quit You Baby (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11396,7 +11536,7 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "30",
     "Titulo": "30 In the Evening (Remaster)",
     "Artista": "LED ZEPPELIN",
     "Album": "LED ZEPPELIN X LED Z...",
@@ -11410,352 +11550,338 @@
     "Cantidad": 0
   },
   {
-    "Numero": "6",
-    "Titulo": "Stairway to Heaven",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\ Stairway to Heaven.mp3",
-    "Duracion": "08:05",
-    "FechaLanzamiento": "2012",
-    "EstadoColor": "White",
-    "DuracionLong": 4850938775,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
     "Numero": "1",
-    "Titulo": "Good Times Bad Times ",
+    "Titulo": "Achilles Last Stand",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\01 Good Times Bad Times.mp3",
-    "Duracion": "02:47",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Achilles Last Stand (Remaster).mp3",
+    "Duracion": "10:47",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 1677600000,
+    "DuracionLong": 6471266666,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "2",
-    "Titulo": "Communication Breakdown ",
+    "Titulo": "All My Love",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\02 Communication Breakdown.mp3",
-    "Duracion": "02:28",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\All My Love (Remaster).mp3",
+    "Duracion": "06:05",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 1486367346,
+    "DuracionLong": 3650577564,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "3",
-    "Titulo": "Dazed and Confused",
+    "Titulo": "Babe I'm Gonna Leave You",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\03 Dazed and Confused.mp3",
-    "Duracion": "06:28",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Babe I'm Gonna Leave You (Remaster).mp3",
+    "Duracion": "06:53",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 3884880000,
+    "DuracionLong": 4133106410,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "4",
-    "Titulo": "Babe I'm Gonna Leave You",
+    "Titulo": "Black Dog",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\04 Babe I'm Gonna Leave You.mp3",
-    "Duracion": "06:42",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Black Dog (Remaster).mp3",
+    "Duracion": "05:03",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 4029600000,
+    "DuracionLong": 3031141025,
     "Imagen": null,
     "Cantidad": 0
   },
   {
     "Numero": "5",
-    "Titulo": "Whole Lotta Love",
+    "Titulo": "Communication Breakdown",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\05 Whole Lotta Love.mp3",
-    "Duracion": "05:29",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Communication Breakdown (Remaster).mp3",
+    "Duracion": "02:32",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 3297840000,
+    "DuracionLong": 1524344230,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "Ramble On",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\06 Ramble On.mp3",
-    "Duracion": "04:28",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 2689200000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "Heartbreaker",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\07 Heartbreaker.mp3",
-    "Duracion": "04:15",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 2555520000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "Immigrant Song",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\08 Immigrant Song.mp3",
-    "Duracion": "02:26",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 1468342857,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "Since I've Been Loving You",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\09 Since I've Been Loving You.mp3",
-    "Duracion": "07:24",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 4448400000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "Rock and Roll ",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\10 Rock and Roll.mp3",
-    "Duracion": "03:40",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 2209697959,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "Black Dog",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\11 Black Dog.mp3",
-    "Duracion": "04:55",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 2955755102,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "When the Levee Breaks ",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\12 When the Levee Breaks.mp3",
-    "Duracion": "07:10",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 4303440000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "Stairway to Heaven",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\13 Stairway to Heaven.mp3",
-    "Duracion": "08:05",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 4850400000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "The Song Remains the Same",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\14 The Song Remains the Same.mp3",
-    "Duracion": "05:31",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 3313920000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "Over the Hills and Far Away",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\15 Over the Hills and Far Away.mp3",
-    "Duracion": "04:50",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 2909760000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
+    "Numero": "6",
     "Titulo": "D'yer Mak'er",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\16 D'yer Mak'er.mp3",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\D'yer Mak'er (Remaster).mp3",
+    "Duracion": "04:29",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2695701923,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "7",
+    "Titulo": "Dazed and Confused",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Dazed and Confused (Remaster).mp3",
+    "Duracion": "06:38",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 3984677564,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "8",
+    "Titulo": "Good Times Bad Times",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Good Times Bad Times (Remaster).mp3",
+    "Duracion": "02:52",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 1720999358,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "9",
+    "Titulo": "Heartbreaker",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Heartbreaker (Remaster).mp3",
     "Duracion": "04:22",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 2628440816,
+    "DuracionLong": 2620951282,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "No Quarter ",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\17 No Quarter.mp3",
-    "Duracion": "07:02",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 4227120000,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
-    "Titulo": "Trampled Under Foot",
-    "Artista": "LED ZEPPELIN",
-    "Album": "MOTHERSHIP",
-    "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\18 Trampled Under Foot.mp3",
-    "Duracion": "05:36",
-    "FechaLanzamiento": "2007",
-    "EstadoColor": "White",
-    "DuracionLong": 3367444897,
-    "Imagen": null,
-    "Cantidad": 0
-  },
-  {
-    "Numero": "",
+    "Numero": "10",
     "Titulo": "Houses of the Holy",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\19 Houses of the Holy.mp3",
-    "Duracion": "04:04",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Houses of the Holy (Remaster).mp3",
+    "Duracion": "04:11",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 2447673469,
+    "DuracionLong": 2510299358,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
+    "Numero": "11",
+    "Titulo": "Immigrant Song",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Immigrant Song (Remaster).mp3",
+    "Duracion": "02:30",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 1505321794,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "12",
+    "Titulo": "In the Evening",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\In the Evening (Remaster).mp3",
+    "Duracion": "07:04",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 4246169871,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "13",
     "Titulo": "Kashmir",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\20 Kashmir.mp3",
-    "Duracion": "08:37",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Kashmir (Remaster).mp3",
+    "Duracion": "08:50",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 5171520000,
+    "DuracionLong": 5304463461,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "Nobody's Fault but Mine ",
+    "Numero": "14",
+    "Titulo": "No Quarter",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\21 Nobody's Fault but Mine.mp3",
-    "Duracion": "06:28",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\No Quarter (Remaster).mp3",
+    "Duracion": "07:13",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 3888848979,
+    "DuracionLong": 4335923717,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "Achilles Last Stand",
+    "Numero": "15",
+    "Titulo": "Nobody's Fault but Mine",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\22 Achilles Last Stand.mp3",
-    "Duracion": "10:30",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Nobody's Fault but Mine (Remaster).mp3",
+    "Duracion": "06:38",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 6309120000,
+    "DuracionLong": 3987892307,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "In the Evening ",
+    "Numero": "16",
+    "Titulo": "Over the Hills and Far Away",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\23 In the Evening.mp3",
-    "Duracion": "06:54",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Over the Hills and Far Away (Remaster).mp3",
+    "Duracion": "04:58",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 4140146938,
+    "DuracionLong": 2984254487,
     "Imagen": null,
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "All My Love ",
+    "Numero": "17",
+    "Titulo": "Ramble On",
     "Artista": "LED ZEPPELIN",
     "Album": "MOTHERSHIP",
     "Genero": "ROCK INTERNACIONAL",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\24 All My Love.mp3",
-    "Duracion": "05:55",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Ramble On (Remaster).mp3",
+    "Duracion": "04:35",
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
-    "DuracionLong": 3559200000,
+    "DuracionLong": 2758395512,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "18",
+    "Titulo": "Rock and Roll",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Rock and Roll (Remaster).mp3",
+    "Duracion": "03:46",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 2265953846,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "19",
+    "Titulo": "Since I've Been Loving You",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Since I've Been Loving You (Remaster).mp3",
+    "Duracion": "07:36",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 4562585897,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "20",
+    "Titulo": "Stairway to Heaven",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Stairway to Heaven (Remaster).mp3",
+    "Duracion": "08:17",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 4975187179,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "21",
+    "Titulo": "The Song Remains the Same",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\The Song Remains the Same (Remaster).mp3",
+    "Duracion": "05:39",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 3399266666,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "22",
+    "Titulo": "Trampled Under Foot",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Trampled Under Foot (Remaster).mp3",
+    "Duracion": "05:45",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 3453386538,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "23",
+    "Titulo": "When the Levee Breaks",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\When the Levee Breaks (Remaster).mp3",
+    "Duracion": "07:21",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 4414157051,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "24",
+    "Titulo": "Whole Lotta Love",
+    "Artista": "LED ZEPPELIN",
+    "Album": "MOTHERSHIP",
+    "Genero": "ROCK INTERNACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\MOTHERSHIP\\Whole Lotta Love (Remaster).mp3",
+    "Duracion": "05:38",
+    "FechaLanzamiento": "2007",
+    "EstadoColor": "White",
+    "DuracionLong": 3382655128,
     "Imagen": null,
     "Cantidad": 0
   },
@@ -18396,8 +18522,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "01 The Hindu Times",
+    "Numero": "1",
+    "Titulo": "The Hindu Times",
     "Artista": "OASIS",
     "Album": "HEATHEN CHEMISTRY",
     "Genero": "ROCK INTERNACIONAL",
@@ -18410,8 +18536,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "02 Force Of Nature",
+    "Numero": "2",
+    "Titulo": "Force Of Nature",
     "Artista": "OASIS",
     "Album": "HEATHEN CHEMISTRY",
     "Genero": "ROCK INTERNACIONAL",
@@ -18424,8 +18550,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "03 Hung In A Bad Place",
+    "Numero": "3",
+    "Titulo": "Hung In A Bad Place",
     "Artista": "OASIS",
     "Album": "HEATHEN CHEMISTRY",
     "Genero": "ROCK INTERNACIONAL",
@@ -18438,8 +18564,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "04 Stop Crying Your Heart Out",
+    "Numero": "4",
+    "Titulo": "Stop Crying Your Heart Out",
     "Artista": "OASIS",
     "Album": "HEATHEN CHEMISTRY",
     "Genero": "ROCK INTERNACIONAL",
@@ -18452,8 +18578,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "05 Songbird",
+    "Numero": "5",
+    "Titulo": "Songbird",
     "Artista": "OASIS",
     "Album": "HEATHEN CHEMISTRY",
     "Genero": "ROCK INTERNACIONAL",
@@ -18466,8 +18592,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "06 Little By Little",
+    "Numero": "6",
+    "Titulo": "Little By Little",
     "Artista": "OASIS",
     "Album": "HEATHEN CHEMISTRY",
     "Genero": "ROCK INTERNACIONAL",
@@ -18480,8 +18606,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "08 [Probably] All In The Mind",
+    "Numero": "7",
+    "Titulo": "[Probably] All In The Mind",
     "Artista": "OASIS",
     "Album": "HEATHEN CHEMISTRY",
     "Genero": "ROCK INTERNACIONAL",
@@ -18494,8 +18620,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "09 She Is Love",
+    "Numero": "8",
+    "Titulo": "She Is Love",
     "Artista": "OASIS",
     "Album": "HEATHEN CHEMISTRY",
     "Genero": "ROCK INTERNACIONAL",
@@ -18508,8 +18634,8 @@
     "Cantidad": 0
   },
   {
-    "Numero": "",
-    "Titulo": "10 Born On A Different Cloud",
+    "Numero": "9",
+    "Titulo": "Born On A Different Cloud",
     "Artista": "OASIS",
     "Album": "HEATHEN CHEMISTRY",
     "Genero": "ROCK INTERNACIONAL",
@@ -19587,7 +19713,7 @@
   },
   {
     "Numero": "1",
-    "Titulo": "A Kind Of Magic (Remastered 2011)",
+    "Titulo": "A Kind Of Magic",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19601,7 +19727,7 @@
   },
   {
     "Numero": "2",
-    "Titulo": "Under Pressure (Remastered 2011)",
+    "Titulo": "Under Pressure",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19615,7 +19741,7 @@
   },
   {
     "Numero": "3",
-    "Titulo": "Radio Ga Ga (Remastered 2011)",
+    "Titulo": "Radio Ga Ga",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19629,7 +19755,7 @@
   },
   {
     "Numero": "4",
-    "Titulo": "I Want It All (Remastered 2011)",
+    "Titulo": "I Want It All",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19643,7 +19769,7 @@
   },
   {
     "Numero": "5",
-    "Titulo": "I Want To Break Free (Remastered 2011)",
+    "Titulo": "I Want To Break Free",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19657,7 +19783,7 @@
   },
   {
     "Numero": "6",
-    "Titulo": "Innuendo (Remastered 2011)",
+    "Titulo": "Innuendo",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19671,7 +19797,7 @@
   },
   {
     "Numero": "7",
-    "Titulo": "It's A Hard Life (Remastered 2011)",
+    "Titulo": "It's A Hard Life",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19685,7 +19811,7 @@
   },
   {
     "Numero": "8",
-    "Titulo": "Breakthru (Remastered 2011)",
+    "Titulo": "Breakthru",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19699,7 +19825,7 @@
   },
   {
     "Numero": "9",
-    "Titulo": "Who Wants To Live Forever (Remastered 2011)",
+    "Titulo": "Who Wants To Live Forever",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19713,7 +19839,7 @@
   },
   {
     "Numero": "10",
-    "Titulo": "Headlong (Remastered 2011)",
+    "Titulo": "Headlong",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19727,7 +19853,7 @@
   },
   {
     "Numero": "11",
-    "Titulo": "The Miracle (Remastered 2011)",
+    "Titulo": "The Miracle",
     "Artista": "QUEEN",
     "Album": "GRATEST HITS II",
     "Genero": "POP",
@@ -19825,7 +19951,7 @@
   },
   {
     "Numero": "1",
-    "Titulo": "The Show Must Go On (Live _ Theatre National de Chaillot, Paris _ 1997)",
+    "Titulo": "The Show Must Go On",
     "Artista": "QUEEN",
     "Album": "GREATEST HITS III",
     "Genero": "POP",
@@ -19839,7 +19965,7 @@
   },
   {
     "Numero": "2",
-    "Titulo": "Under Pressure (Rah Mix)",
+    "Titulo": "Under Pressure",
     "Artista": "QUEEN",
     "Album": "GREATEST HITS III",
     "Genero": "POP",
@@ -23852,6 +23978,20 @@
     "FechaLanzamiento": "2007",
     "EstadoColor": "White",
     "DuracionLong": 2461518367,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "1",
+    "Titulo": "Recital - Patricio Rey",
+    "Artista": "PATRICIO REY",
+    "Album": "RECITAL RACING",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Redondos\\Racing 1998\\Los Redondos en Racing 98 Completo.mp3",
+    "Duracion": "17:07",
+    "FechaLanzamiento": "1998",
+    "EstadoColor": "White",
+    "DuracionLong": 82278613461,
     "Imagen": null,
     "Cantidad": 0
   },
@@ -28122,6 +28262,160 @@
     "FechaLanzamiento": "2011",
     "EstadoColor": "White",
     "DuracionLong": 3153763265,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "1",
+    "Titulo": "A Change Is Gonna Come",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\A Change Is Gonna Come.mp3",
+    "Duracion": "03:59",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 2396700000,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Crazy",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\Crazy.mp3",
+    "Duracion": "04:36",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 2766969230,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "3",
+    "Titulo": "Don't Cry",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\Don't Cry.mp3",
+    "Duracion": "04:37",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 2773667307,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Fly Like an Eagle",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\Fly Like an Eagle.mp3",
+    "Duracion": "04:21",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 2613449358,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "5",
+    "Titulo": "Killer",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\Killer.mp3",
+    "Duracion": "04:24",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 2648815384,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "6",
+    "Titulo": "Kiss from a Rose",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\Kiss from a Rose.mp3",
+    "Duracion": "04:55",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 2956122435,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "7",
+    "Titulo": "My Girl",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\My Girl.mp3",
+    "Duracion": "03:19",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 1990261538,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "8",
+    "Titulo": "Prayer for the Dying",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\Prayer for the Dying.mp3",
+    "Duracion": "04:21",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 2614521153,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "9",
+    "Titulo": "Thank You",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\Thank You.mp3",
+    "Duracion": "03:53",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 2331862820,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "10",
+    "Titulo": "The Beginning",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\The Beginning.mp3",
+    "Duracion": "04:14",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 2548344230,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "11",
+    "Titulo": "Waiting for You",
+    "Artista": "SEAL",
+    "Album": "HITS SEAL",
+    "Genero": "SOUL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Seal\\Waiting for You.mp3",
+    "Duracion": "03:50",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "White",
+    "DuracionLong": 2300783974,
     "Imagen": null,
     "Cantidad": 0
   },

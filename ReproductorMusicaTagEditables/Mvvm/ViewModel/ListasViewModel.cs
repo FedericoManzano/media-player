@@ -18,8 +18,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         public PaginadorAvanzado PaginadorAvanzado => _paginadorAvanzado;
 
-
-
         public void CargarListasReproduccion()
         {
             Irg.BtnNavegacion = false;

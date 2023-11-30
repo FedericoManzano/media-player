@@ -56,8 +56,20 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             if(ts.Days > 0)
             {
                 return ts.ToString(@"dd\:hh\:mm\:ss") + " Días";
+            } 
+            if(ts.Hours > 0)
+            {
+                return ts.ToString(@"hh\:mm\:ss") + " Horas";
             }
-            return ts.ToString(formato) + " Horas";
+            if(ts.Minutes > 0)
+            {
+                return ts.ToString(@"mm\:ss") + " Minutos";
+            }
+            if (ts.Seconds > 0)
+            {
+                return ts.ToString(@"ss") + " Segundos";
+            }
+            return "00:00:00";
         }
 
         public static string DuracionString(this List<Cancion> cancions)

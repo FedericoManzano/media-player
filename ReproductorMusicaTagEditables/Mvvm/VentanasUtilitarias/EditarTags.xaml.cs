@@ -48,6 +48,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
         {
             editorTags.Editar();
             editorTags.DeseleccionarTodasLasCanciones();
+            _todosSeleccionados = false;
             editorTags.TodosLosItems.ForEach(i =>
             {
                 i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;
@@ -106,6 +107,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
         {
             editorTags.EstablecerNumerosDeAlbumes();
             editorTags.DeseleccionarTodasLasCanciones();
+            _todosSeleccionados = false;
             editorTags.TodosLosItems.ForEach(i =>
             {
                 i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;
@@ -117,6 +119,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
             {
                 editorTags.Editar();
                 editorTags.DeseleccionarTodasLasCanciones();
+                _todosSeleccionados = false;
                 editorTags.TodosLosItems.ForEach(i =>
                 {
                     i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;

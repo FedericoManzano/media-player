@@ -42,6 +42,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial
 
             using(StreamWriter sw = new StreamWriter(File.Create(PATH_ARCHIVO_CANCIONES)))
             {
+                foreach (Cancion c in canciones)
+                {
+                    c.EstadoColor = Cancion.COLOR_TEXTO_DEFAULT;
+                }
                 string output = JsonConvert.SerializeObject(canciones, Formatting.Indented);
                 sw.Write(output);   
             }

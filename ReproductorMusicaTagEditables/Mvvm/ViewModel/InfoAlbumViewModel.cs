@@ -20,7 +20,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
         private Album _album;
         
-
         public Album AlbumSeleccionado 
         { 
             get => _album; 
@@ -30,7 +29,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 OnPropertyChanged(nameof(AlbumSeleccionado));
             } 
         }
-
 
         public ICommand PlayAlbumCommand { get; }
 
@@ -67,7 +65,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             Irg.Presentacion = new ObservableCollection<Cancion>(await CargarCancionesAlbum(album));
             AlbumSeleccionado = await CrearInfoAlbum(album);
         }    
-
 
         public async Task<List<Cancion>> CargarCancionesAlbum(string titulo)
         {

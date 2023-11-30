@@ -61,14 +61,16 @@
                     HorizontalAlignment="Center"
                     Click="OnArtistaClick"
                     Content="{Binding ElementName=infoCancion, Path=ArtistaInfo}"
-                    Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
+                    Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"
+                    IsEnabled="{Binding ElementName=infoCancion, Path=HabilitadoCarga}"/>
             
             
             <Button Style="{StaticResource btnArtista}" Grid.Column="8" Grid.ColumnSpan="3"  
                     Click="OnAlbumClick"
                     HorizontalAlignment="Center"
                     Content="{Binding ElementName=infoCancion, Path=AlbumInfo}"
-                    Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"/>
+                    Foreground="{Binding ElementName=infoCancion, Path=ColorTexto}"
+                    IsEnabled="{Binding ElementName=infoCancion, Path=HabilitadoCarga}"/>
 
 
             <TextBlock Style="{StaticResource txtInfoCancion}" 

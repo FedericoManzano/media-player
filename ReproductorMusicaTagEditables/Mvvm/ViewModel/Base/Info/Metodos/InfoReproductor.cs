@@ -22,13 +22,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
             Reproductor = me;
         }
 
-        public async void CargarMusicaSeleccion()
+        public async void CargarMusicaSeleccion(ReproductorViewModelBase reproductorViewModelBase)
         {
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
             CargarMusica cargarMusica = new CargarMusicaDesdeDirectorio();
 
             if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
+                reproductorViewModelBase.Habilitados = false;
+                reproductorViewModelBase.CapaProtectora = System.Windows.Visibility.Visible;
                 if (System.IO.Directory.Exists(folderBrowserDialog.SelectedPath))
                 {
                     Preloader = true;
@@ -50,6 +52,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                     {
                         IslistadoVisible = System.Windows.Visibility.Visible;
                         IsMensajeVisible = System.Windows.Visibility.Collapsed;
+                        reproductorViewModelBase.Habilitados = true;
+                        reproductorViewModelBase.CapaProtectora = System.Windows.Visibility.Collapsed;
                     }
 
                     Preloader = false;
@@ -101,6 +105,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
         }
         public void AgregarElementosAlFiltro()
         {
+            if(Canciones.Count > 0)
+            {
+                IsMensajeVisible = System.Windows.Visibility.Collapsed;
+            }
             int diferencia = Canciones.Count - Partes.Count;
             if (diferencia <= 0)
                 return;

@@ -76,6 +76,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         {
             
             Irg.Presentacion = new ObservableCollection<Cancion> (await DameCancionesDelGenero(genero));
+            
             List<Cancion> l = await DameTodasCancionesDelGenero(genero);
 
             

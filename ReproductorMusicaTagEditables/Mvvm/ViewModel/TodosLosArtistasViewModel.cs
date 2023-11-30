@@ -37,10 +37,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             set { paginador = value; OnPropertyChanged(nameof(Paginador)); } 
         }
 
-        public TodosLosArtistasViewModel() { 
-            
-        }
-
         public  void CargarListaDeAvataresArtistas()
         {
             Irg.IsMensajeVisible = Visibility.Visible;

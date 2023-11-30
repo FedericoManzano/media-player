@@ -13,13 +13,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     public class FavoritosViewModel:ReproductorViewModelBase
     {
         private ListaRep _listaRep = new ListaRep();
-
         public ListaRep ListaRep { 
             get => _listaRep; 
             set { _listaRep = value; OnPropertyChanged(nameof(ListaRep)); } 
         }
-
-
         public void CrearAvatarFavoritos()
         {
             List<Cancion> l = ListasReproduccion.DameListatoFavoritos();

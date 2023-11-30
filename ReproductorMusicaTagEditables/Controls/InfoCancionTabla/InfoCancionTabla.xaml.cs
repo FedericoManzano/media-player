@@ -191,8 +191,17 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
             get => (bool)GetValue(EncendidoProperty);
             set=> SetValue(EncendidoProperty, value);
         }
-        
-        
+
+        public static DependencyProperty HabilitadoCargaProperty =
+            DependencyProperty.Register("HabilitadoCarga", typeof(bool), typeof(InfoCancionTabla), new PropertyMetadata(true));
+
+
+        public bool HabilitadoCarga
+        {
+            get => (bool)GetValue(HabilitadoCargaProperty);
+            set => SetValue(HabilitadoCargaProperty, value);
+        }
+
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {

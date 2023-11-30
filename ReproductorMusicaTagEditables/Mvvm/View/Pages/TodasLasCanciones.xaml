@@ -31,7 +31,7 @@
         <Grid Grid.Row="0" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="650"/>
             </Grid.ColumnDefinitions>
             
             <TextBlock Style="{StaticResource tituloPrincipalPaginas}" 
@@ -47,7 +47,9 @@
                 <Button  Style="{StaticResource btnSeleccionar}"
                          Margin="0 0 10 0"
                          Command="{Binding CargarMusicaCommand}"
-                         ToolTip="Seleccionar directorio">
+                         Background="Red"
+                         ToolTip="Seleccionar directorio"
+                         IsEnabled="{Binding Habilitados}">
                     <StackPanel Orientation="Horizontal">
                         <fa:PackIconFontAwesome Style="{StaticResource btnIconSelecionar}" Kind="FolderPlusSolid"/>
                         <TextBlock Text="Seleccionar"></TextBlock>
@@ -55,13 +57,25 @@
                 </Button>
                 <Button  Style="{StaticResource btnSeleccionar}"
                          ToolTip="Editar tags"
-                         Click="Button_Click">
+                         Margin="0 0 10 0"
+                         Click="Button_Click"
+                         IsEnabled="{Binding Habilitados}">
                     <StackPanel Orientation="Horizontal">
                         <fa:PackIconFontAwesome Style="{StaticResource btnIconSelecionar}" Kind="TagSolid"/>
-                        <TextBlock Text="Tags"></TextBlock>
+                        <TextBlock Text="Tags"/>
                     </StackPanel>
                 </Button>
-                
+
+                <Button  Style="{StaticResource btnSeleccionar}"
+                         ToolTip="Agregar canciones a las ya existentes"
+                         Command="{Binding AgregarCommand}"
+                         IsEnabled="{Binding Habilitados}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Style="{StaticResource btnIconSelecionar}" 
+                                                Kind="PlusSolid"/>
+                        <TextBlock Text="Agregar"></TextBlock>
+                    </StackPanel>
+                </Button>
             </StackPanel>
             
         </Grid>
@@ -99,6 +113,11 @@
             
         </Grid>
 
+        <Border Grid.Row="2" Width="3500" Background="Black" Opacity="0.5"
+                Margin="-1300 0 0 0 "
+                Visibility="{Binding CapaProtectora}">
+            
+        </Border>
 
         <TextBlock x:Name="txtSinCanciones" 
                    Text="No hay canciones cargadas" 
@@ -136,6 +155,7 @@
                                                 AnoInfo="{Binding FechaLanzamiento}"
                                                 DuracionInfo="{Binding Duracion}"
                                                 ColorTexto="{Binding EstadoColor}"
+                                                HabilitadoCarga="{Binding ElementName=panelPrincipal, Path=Habilitados}"
                                                 Habilitado="False">
                         </tupla:InfoCancionTabla>
                     </DataTemplate>

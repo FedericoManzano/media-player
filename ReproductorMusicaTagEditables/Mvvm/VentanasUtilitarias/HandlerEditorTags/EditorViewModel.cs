@@ -11,7 +11,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
@@ -216,8 +215,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias.HandlerEditorTa
 
         #endregion
 
-
-
         public EditorViewModel ()
         {
             Seleccionadas = new List<InfoCancionTablaTagsControl> ();
@@ -305,7 +302,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias.HandlerEditorTa
                 Genero = i.Genero;
                 Ano = i.Ano;
                 Cancion c = DameCancionPorClave(i);
-                Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path);
+                Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path) ??
+                    ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
             } else if(Seleccionadas.Count > 1)
             {
                 SortedSet<string> artista = new SortedSet<string>(  Seleccionadas.Select(s => s.Artista).ToList());
@@ -512,7 +510,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias.HandlerEditorTa
             EditarAno = false;
         }
         #endregion
-
 
         public void LimpiarImagen ()
         {
@@ -743,7 +740,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias.HandlerEditorTa
             return null;
         }
         #endregion
-
 
         public async Task<bool> CargarCancionesAEditar()
         {

@@ -20,10 +20,33 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 
         public static InfoNavegacion infoNavegacion = new InfoNavegacion();
 
+
+
         protected InfoReproductor irg;
 
         private static double _scrollVertical = 0;
         private List<Cancion> _cancionesSeleccionadas = new List<Cancion>();
+
+
+        private bool _habilitados = true;
+        private Visibility _capaProtectora = Visibility.Collapsed;
+        public bool Habilitados
+        {
+            get => _habilitados;
+            set
+            {
+                _habilitados = value; OnPropertyChanged(nameof(Habilitados));
+            }
+        }
+        public Visibility CapaProtectora
+        {
+            get => _capaProtectora;
+            set
+            {
+                _capaProtectora = value; OnPropertyChanged(nameof(CapaProtectora));
+            }
+        }
+
         public  InfoReproductor Irg
         {
             get => irg;  
@@ -53,10 +76,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             PlayCommand = new RelayCommand(PlayAction);
             Navegacion.Crear();
             if(irg.Canciones.Count == 0)
-                Irg.CargaDesdeElRepositorioCanciones();
-
-            
-           
+                Irg.CargaDesdeElRepositorioCanciones();  
         }
 
         public bool CanAnteriorAction(object arg)
@@ -98,7 +118,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 
         private void CargarMusicaAction(object obj)
         {
-            Irg.CargarMusicaSeleccion();            
+            
+            Irg.CargarMusicaSeleccion(this);
+            
         }
 
         public void AgregarElementosAlFiltro()

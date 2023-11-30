@@ -56,22 +56,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             }).ToList();
             return l.Count > final-inicio ? l.GetRange(inicio,final):l;
         }
-        private async Task<List<Cancion>> ListadoCancionesFiltrado()
-        {
-            return await Task.Run(() =>
-            {
-                return Irg.Presentacion.Select(c =>
-                {
-                    if (c.Titulo == Irg.CancionActual.Cancion.Titulo
-                    && c.Artista == Irg.CancionActual.Cancion.Artista
-                    && c.Album == Irg.CancionActual.Cancion.Album)
-                    {
-                        return Irg.CancionActual.Cancion.Clone();
-                    }
-                    return c;
-                }).ToList();
-            });
-        }
         private async Task<ListaRep> CrearInfoListaRep(ListaAvatarControl listaAvatarControl)
         {
             var context = TaskScheduler.FromCurrentSynchronizationContext();

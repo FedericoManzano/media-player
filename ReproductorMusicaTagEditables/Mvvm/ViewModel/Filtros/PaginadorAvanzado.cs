@@ -1,12 +1,10 @@
 ﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Filtros
 {
@@ -15,8 +13,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Filtros
         public static readonly int LISTA_GENEROS = 0;
         public static readonly int LISTA_REPRODUCCION = 1;
         
-
-
         private Dictionary<string, List<string>> _diccionarioLista = new Dictionary<string, List<string>>();
         private Dictionary<string, bool> _paginador = new Dictionary<string, bool>();
 
@@ -33,7 +29,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Filtros
             get => _listas;
             set { _listas = value; OnPropertyChanged(nameof(Listas)); }
         }
-
 
         public void CrearDiccionarioDeRecursos(List<string> listadoNombres, int tipoListado)
         {
@@ -65,7 +60,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Filtros
                 }
             }
         }
-
         
         public void ActualizarListasGeneros(string letra)
         {
@@ -74,14 +68,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Filtros
             Listas = _diccionarioLista.DameListadoGeneros(letra);
         }
 
-
         public void ActualizarListasReproduccion(string letra)
         {
             Paginador.DesmarcarTodos();
             Paginador = Paginador.MarcarClave(letra);
             Listas = _diccionarioLista.DameListadoReproduccion(letra);
         }
-
 
         public int Tamano ()
         {

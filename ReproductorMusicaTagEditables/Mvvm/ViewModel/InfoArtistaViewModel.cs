@@ -38,8 +38,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             set { _albumes = value; OnPropertyChanged(nameof(Albumes)); } 
         }
 
-        
-
         public InfoArtistaViewModel()
         {
             PlayArtistaCommand = new RelayCommand(PlayArtistaAction, CanPlayArtistaAction);

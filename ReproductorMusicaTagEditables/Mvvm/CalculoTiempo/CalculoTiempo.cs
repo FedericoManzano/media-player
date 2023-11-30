@@ -8,7 +8,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.CalculoTiempo
 {
     public class CalculoTiempo
     {
-
         public static ulong? CalcularDuracionCancion(string path)
         {
             if(!System.IO.File.Exists(path))
@@ -20,7 +19,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.CalculoTiempo
             ulong? du = shellObj.Properties.System.Media.Duration.Value;
             return du;
         }
-
         public static ulong? CalcularDuracionAlbum (List<Cancion> canciones, string tituloAlbum)
         {
             ulong?[] timepoAlbum = canciones.Where(c => tituloAlbum == c.Album)
