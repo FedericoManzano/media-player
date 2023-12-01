@@ -5,7 +5,7 @@
 ## Indice de contenidos
 
 * [Seleccionar Directorio](#item1)
-* [Seleccionar Directorio](#item1)
+* [Agregar Canciones](#item2)
 
 <a Name=#item1></a>
 ### Seleccionar Directorio
@@ -22,3 +22,6 @@ Los formatos de archivos permitidos son:
 > Si en el directorio seleccionado existen otros tipos de archivo o subdirectorios el programa toma todos los archivos validos existentes desde el directorio seleccionado sólo los archivos de audio.
 
 ![Canciones Cargadas](file:///C:/Users/feder/source/repos/ReproductorMusicaTagEditables/ReproductorMusicaTagEditables/Manual/Imagenes/cancionesCargadas.png)
+
+<a Name=#item2></a>
+### Agregar Canciones
