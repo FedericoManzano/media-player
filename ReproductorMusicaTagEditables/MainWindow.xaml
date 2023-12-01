@@ -75,7 +75,8 @@
                          CommandListas="{Binding ListasCommand}"
                          CommandFavoritos="{Binding FavoritosCommand}"
                          CommandGeneros="{Binding GenerosCommand}"
-                         CommandDescargas="{Binding DescargasCommand}"/>
+                         CommandDescargas="{Binding DescargasCommand}"
+                         DocClick="Menu_DocClick"/>
 
                 <!-- Main Section -->
                 <Grid Grid.Column="1">

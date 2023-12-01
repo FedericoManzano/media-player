@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -78,5 +79,18 @@ namespace ReproductorMusicaTagEditables.Controls.Menu
             set => SetValue(CommandDescargasProperty, value);
         }
 
+        public static RoutedEvent DocClickEvent =
+            EventManager.RegisterRoutedEvent("DocClick", RoutingStrategy.Bubble, typeof(EventHandler), typeof(Menu));
+
+        public event EventHandler DocClick
+        {
+            add => AddHandler(DocClickEvent, value);
+            remove => RemoveHandler(DocClickEvent, value);
+        }
+
+        public void OnClickDoc(object sender, RoutedEventArgs e)
+        {
+            RaiseEvent(new RoutedEventArgs(DocClickEvent));
+        }
     }
 }

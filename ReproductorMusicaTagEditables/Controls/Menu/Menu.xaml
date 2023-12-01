@@ -107,6 +107,16 @@
                                Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
             </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}"
+              Click="OnClickDoc"
+              ToolTip="Manual de uso del reproductor">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="GithubBrands"
+                                 Style="{StaticResource iconoItemMenu}"/>
+                    <TextBlock Text="Manual" 
+                    Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
         </StackPanel>
     </Border>
 </UserControl>

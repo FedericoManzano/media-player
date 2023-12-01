@@ -1,4 +1,5 @@
 ﻿
+using MediaToolkit.Options;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
@@ -187,6 +188,11 @@ namespace ReproductorMusicaTagEditables
         {
             posicionInicialSlider = mediaReproductor.Position.TotalSeconds;
             timer.Stop();
+        }
+
+        private void Menu_DocClick(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.google.com");
         }
     }
 }

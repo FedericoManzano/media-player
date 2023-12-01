@@ -700,6 +700,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Manual\Manual.md" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -736,6 +737,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\albumDefault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Manual\Imagenes\seleccionar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Manual\Imagenes\cancionesCargadas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Manual\Imagenes\seleccionDirectorio.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
