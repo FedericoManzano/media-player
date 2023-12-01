@@ -10,7 +10,7 @@
 <a Name=#item1></a>
 ### Seleccionar Directorio
 
-![Seleccionar directorio](file:///C:/Users/feder/source/repos/ReproductorMusicaTagEditables/ReproductorMusicaTagEditables/Manual/Imagenes/seleccionar.png)
+![Seleccionar directorio](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/seleccionar.png?raw=true)
 
 Desde el botón que se muestra en la imágen seleccionamos el directorio en el cual tenemos nuestra cancines.
 Los formatos de archivos permitidos son: 
@@ -25,3 +25,5 @@ Los formatos de archivos permitidos son:
 
 <a Name=#item2></a>
 ### Agregar Canciones
+
+
