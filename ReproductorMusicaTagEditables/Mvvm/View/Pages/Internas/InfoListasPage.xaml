@@ -79,6 +79,7 @@
                                         DuracionInfo="{Binding Duracion}"
                                         ColorTexto="{Binding EstadoColor}"
                                         BorrarClick="InfoCancionTabla_BorrarClick"
+                                        CheckEnabled="False"
                                         Habilitado="True">
                         </infoCancion:InfoCancionTabla>
                     </DataTemplate>

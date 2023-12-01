@@ -203,6 +203,16 @@ namespace ReproductorMusicaTagEditables.Controls.InfoCancionTabla
         }
 
 
+        public static DependencyProperty CheckEnabledProperty =
+            DependencyProperty.Register("CheckEnabled", typeof(bool), typeof(InfoCancionTabla), new PropertyMetadata(true));
+
+
+        public bool CheckEnabled
+        {
+            get => (bool)GetValue(CheckEnabledProperty);
+            set => SetValue(CheckEnabledProperty, value);
+        }
+
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
            if( MainWindow.agregarCancionesListas.AgregarCancion(new Mvvm.Model.Cancion()

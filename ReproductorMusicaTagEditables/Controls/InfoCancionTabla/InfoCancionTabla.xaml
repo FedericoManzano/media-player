@@ -31,7 +31,8 @@
             </Grid.ColumnDefinitions>
 
             <Button x:Name="btnCheck" Grid.Column="0" Style="{StaticResource btnPlay}"
-                    Click="Check_Click">
+                    Click="Check_Click"
+                    IsEnabled="{Binding ElementName=infoCancion, Path=CheckEnabled}">
                 <fa:PackIconFontAwesome x:Name="iconCheck" Kind="SquareRegular" Width="15" Height="15"/>
             </Button>
             <Button Style="{StaticResource btnPlay}"
