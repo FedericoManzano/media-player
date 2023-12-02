@@ -4,9 +4,9 @@
 
 ## Indice de contenidos
 
-* [Seleccionar Directorio](#item1)
-* [Agregar Canciones](#item2)
-* [Editar Tags](#item2)
+* [Seleccionar Directorio](#seleccionar-directorio)
+* [Agregar Canciones](#agregar-canciones)
+* [Editar Tags](#editar-tags)
 
 ### Seleccionar Directorio
 
