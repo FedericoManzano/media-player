@@ -7,7 +7,7 @@
 * [Editar Tags](#editar-tags)
 	* [Seleccionar directorio a editar](#seleccionar-directorio-a-editar)
 		* [Ejemplo 1](#ejemplo)
-	* [Enumerar Automáticamente](#enumerar-automaticamente)
+	* [Enumerar Automáticamente](#enumerar-automáticamente)
 
 ### Seleccionar Directorio
 
@@ -31,7 +31,7 @@ Para agregar canciones desde otro directorio simplemento los hacemos desde el bo
 ### Editar Tags
 
 Dispone de las funcionalidades necesarias para editar los metadatos de los archivos de audio, a partir de esto podemos filtrar el contenido y discriminar a los archivos de audio
-por Artista, Género, Álbum y Año de lanzamiento, junto con una imágen de la portada del álbum al cual pertenece el archivo de audio.
+por Artista, Género, Álbum y Año de lanzamiento, junto con una imágen de la portada del álbum al cual pertenece el track contenido dentro del archivo de audio.
 
 ![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editorTags.png?raw=true)
 
@@ -59,7 +59,7 @@ Para modificar varios tracks simplmente seleccionamos varias canciones y luego e
 
 ![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editarVariosTracks.png?raw=true)
 
-Si lo que buscamos es editar todos los tracks seleccionados hay que pulsar el botón `Marcar todos`. Notaremos que todas las canciones quedarán seleccionadas y luego el mismo procedimiento alterior simplemente editamos la información en el panel de la derecha y pulsamos el botón `Editar`.
+Si lo que buscamos es editar todos los tracks seleccionados hay que pulsar el botón `Marcar todos`. Notaremos que todas las canciones quedarán seleccionadas y luego el mismo procedimiento anterior. Simplemente editamos la información en el panel de la derecha y pulsamos el botón `Editar`.
 
 #### Enumerar Automáticamente
 
