@@ -5,7 +5,7 @@
 * [Seleccionar Directorio](#seleccionar-directorio)
 * [Agregar Canciones](#agregar-canciones)
 * [Editar Tags](#editar-tags)
-	* [Seleccionar directorio a editar]() 
+	* [Seleccionar directorio a editar](#ejemplo) 
 
 ### Seleccionar Directorio
 
@@ -46,3 +46,13 @@ Otra recomendación que la edición sea por álbum, lo que facilita la tarea y p
 
 ![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editorMuestra.png?raw=true)
 
+Para modificar los tags de una única canción simplemente la marcamos y modificamos los campos que se encuentran a la derecha.
+Luego presionamos editar para que se lleve a cabo la modificación.
+
+![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/modificarUnaCancion.png?raw=true)
+
+De esta forma el programa va a discriminar la información cargada y va a filtrar el track en función de los campos suministrados por el usuario.
+
+Para modificar varios tracks simplmente seleccionamos varias canciones y luego editamos la información en los campos de texto.
+
+![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editarVariosTracks.png?raw=true)
