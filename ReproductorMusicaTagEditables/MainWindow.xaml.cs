@@ -192,7 +192,7 @@ namespace ReproductorMusicaTagEditables
 
         private void Menu_DocClick(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.google.com");
+            System.Diagnostics.Process.Start("https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Manual.md");
         }
     }
 }
