@@ -5,7 +5,8 @@
 * [Seleccionar Directorio](#seleccionar-directorio)
 * [Agregar Canciones](#agregar-canciones)
 * [Editar Tags](#editar-tags)
-	* [Seleccionar directorio a editar](#ejemplo) 
+	* [Seleccionar directorio a editar](##seleccionar-directorio-a-editar)
+		* [Ejemplo 1](#ejemplo)
 
 ### Seleccionar Directorio
 
