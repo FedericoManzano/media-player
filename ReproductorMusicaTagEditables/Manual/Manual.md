@@ -5,8 +5,9 @@
 * [Seleccionar Directorio](#seleccionar-directorio)
 * [Agregar Canciones](#agregar-canciones)
 * [Editar Tags](#editar-tags)
-	* [Seleccionar directorio a editar](##seleccionar-directorio-a-editar)
+	* [Seleccionar directorio a editar](#seleccionar-directorio-a-editar)
 		* [Ejemplo 1](#ejemplo)
+	* [Enumerar Automáticamente](#enumerar-automaticamente)
 
 ### Seleccionar Directorio
 
@@ -57,3 +58,15 @@ De esta forma el programa va a discriminar la información cargada y va a filtra
 Para modificar varios tracks simplmente seleccionamos varias canciones y luego editamos la información en los campos de texto.
 
 ![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editarVariosTracks.png?raw=true)
+
+Si lo que buscamos es editar todos los tracks seleccionados hay que pulsar el botón `Marcar todos`. Notaremos que todas las canciones quedarán seleccionadas y luego el mismo procedimiento alterior simplemente editamos la información en el panel de la derecha y pulsamos el botón `Editar`.
+
+#### Enumerar Automáticamente
+
+Si queremos enumerar los tracks de manera automática simplmente seleccionamos todos los tracks y luego presionamos el botón `Números`.
+
+![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/formatearCampos.png?raw=true)
+
+Y el resultado a esta operación es la siguiente:
+
+![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/formateados.png?raw=true)

@@ -131,6 +131,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias
        
             if(await editorTags.CargarCancionesAEditar())
             {
+                _todosSeleccionados = false;
                 editorTags.TodosLosItems.ForEach(i =>
                 {
                     i.MouseLeave += InfoCancionTablaTagsControl_MouseLeave;
