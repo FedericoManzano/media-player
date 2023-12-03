@@ -31568,5 +31568,47 @@
     "DuracionLong": 1921306122,
     "Imagen": null,
     "Cantidad": 0
+  },
+  {
+    "Numero": "1",
+    "Titulo": "A La Carga Mi Rock'n Roll",
+    "Artista": "LA RENGA-DESC",
+    "Album": "DESPEDAZADOS POR MIL...",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\OneDrive\\Escritorio\\DESCARGADAS\\La Renga - A La Carga Mi Rock'n Roll.mp3",
+    "Duracion": "03:53",
+    "FechaLanzamiento": "1990",
+    "EstadoColor": "White",
+    "DuracionLong": 2333470512,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Desnudo Para Siempre",
+    "Artista": "LA RENGA-DESC",
+    "Album": "DESPEDAZADOS POR MIL...",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\OneDrive\\Escritorio\\DESCARGADAS\\La Renga - Desnudo Para Siempre (O Despedazado).mp3",
+    "Duracion": "04:16",
+    "FechaLanzamiento": "1990",
+    "EstadoColor": "White",
+    "DuracionLong": 2562544230,
+    "Imagen": null,
+    "Cantidad": 0
+  },
+  {
+    "Numero": "3",
+    "Titulo": "El Final Es En Donde Partí",
+    "Artista": "LA RENGA-DESC",
+    "Album": "DESPEDAZADOS POR MIL...",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\OneDrive\\Escritorio\\DESCARGADAS\\La Renga - El Final Es En Donde Partí.mp3",
+    "Duracion": "04:45",
+    "FechaLanzamiento": "1990",
+    "EstadoColor": "White",
+    "DuracionLong": 2854044230,
+    "Imagen": null,
+    "Cantidad": 0
   }
 ]

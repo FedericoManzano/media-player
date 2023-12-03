@@ -18,7 +18,7 @@
 	* [Eliminar canción de una lista](#borrar-una-canción-de-la-lista)
 * [Navegación por la aplicación](#navegación-por-la-aplicación)
 * [Reproducción](#reproducción)
-* [Reproducción](#descargas)
+* [Descargas](#descargas)
 
 ### Seleccionar Directorio
 
@@ -217,12 +217,12 @@ Lo mismo aplica para los álbumes, listas o géneros cargados.
 
 ### Descargas
 
-Para descargar videos de `Youtube` y convertirlos en audio el programa dispone de un apartado para realizar esto. En la sección descargas disponemos de los controles necesarios para realizar la/s descargas.
+Para descargar videos de `Youtube` y quedarnos sólo con el audio, el programa dispone de un apartado para realizar esta tarea.
 
 ![Descargas1](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/descargas1.png?raw=true)
 
 La cantidad de videos simultaneos que podemos descargar varía según las necesidades del usuario. 
-Por ejemplo si queremos descargar todo un album sumplemente agregamos los enlaces de los videos en el campo URL y luego pulsamos `Convertir`.
+Por ejemplo si queremos descargar todo un album simplemente agregamos los enlaces de los videos en el campo URL y luego pulsamos `Convertir`.
 
 #### Ejemplo 3
 
@@ -238,6 +238,33 @@ Una vez finalizada la descarga de todos los videos la pantalla se vería de esta
 
 Ahora, en este estado, las canciones están almacenadas en un directorio dedicado. Para poder disponer de las mismas hay que editarlas y moverlas a un directorio seleccionado por el usuario.
 Podemos mover los archivos sin editar, pero en este caso, el programa no va a poder reconocer la información de los metadatos del archivo.
+
+Pulsamos el botón editar y se abrirá el editor de tags de la aplicación ya visto en secciones anteriores.
+
+![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editorDescargas.png?raw=true)
+
+Como podemos ver en la imágen los metadatos son desconocidos. Para cambiar este situación y formatear los campos vamos a editarlos.
+
+![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editorDescargasInfo.png?raw=true)
+
+Cuando seleccionemos todas las pistas vamos a poder editar (Artista, Álbum, Género, Año de lanzamiento e imágen).
+
+![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editadosDescargas.png?raw=true)
+
+Ahora vamos a editar los números de pistas.
+
+![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editarNumeros.png?raw=true)
+
+Por último editamos los nombres de las canciones selecciondo las mismas de a una a la vez.
+
+![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editarTitulos.png?raw=true)
+
+![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/finEdicion.png?raw=true)
+
+Una vez editadas las canciones sólo queda moverlas a un directorio seleccionado por el usuario. Esto lo hacemos con el botón `Mover`.
+
+![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/audioMovido.png?raw=true)
+
 
 
 
