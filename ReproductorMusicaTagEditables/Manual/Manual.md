@@ -16,6 +16,8 @@
 	* [Agregar varias canciones](#agregar-varias-canciones-a-la-lista)
 	* [Eliminar lista de reproducción](#borrar-lista-de-reproducción)
 	* [Eliminar canción de una lista](#borrar-una-canción-de-la-lista)
+* [Navegación por la aplicación]()
+
 
 ### Seleccionar Directorio
 
@@ -104,7 +106,7 @@ Si accedemos a la página del álbum se vería de la siguiente forma:
 Existen varias maneras de agregar canciones a las listas de reproducción que vayamos generando.
 Para empezar nos tenemos que ir a la opción `+ Mis Listas` del menú lateral. En este punto simplemente creamos la lista que queremos desde el botón `+ Agregar Lista` desde la esquina superior derecha.
 Una vez creada la lista nos va aparecer el logo de una lista vacia con el nombre de la misma por debajo.
-El paso siguiente es ir a las canciones que queremos agregar y utilizar los direrentes medios proveistos para agregar dichas canciones al la lista.
+El paso siguiente es ir a las canciones que queremos agregar y utilizar los direrentes medios provistos para agregar dichas canciones al la lista.
 
 ![Crear Lista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/crearLista.png?raw=true)
 
@@ -163,4 +165,23 @@ Para borrar una lista completa de reproducción simplmente vamos a la pestaña `
 Para eliminar una sola canción de la lista, simplemente accedemos a la lista, luego en la canción que queremos eliminar hacemos clic derecho y seleccionamos la opción eliminar de la lista.
 
 ![Eliminar lista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/eliminarCancion.png?raw=true)
+
+### Navegación por la aplicación
+
+La navegación se realiza a través del menú principal que se encuentra en la parte lateral izquierda. A través de las opciones allí expuestas podemos acceder al contenido buscado de manera sencilla.
+Se puede navegar también a través de los enlaces internos de cada una de las páginas que permiten un rápido acceso al contenido buscado. 
+Para llevar a cabo una navegación sencilla, en las páginas `Artista`, `Álbumes`, `Géneros` y `Mis Listas` existe un elemento paginador en la parte inferior de las páginas, a través de este elemento podemos encontrar el contenido buscado por su inicial.
+
+Por ejemplo: 
+
+Si buscamos el artista `ACDC` nos vamos a la pestaña `Artistas` y en la parte inferior seleccionamos la letra `A`, a partir de esto se mostrarán por pantalla todos los artistas cuya inicial es la letra `A`.
+Lo mismo para las otras páginas, buscamos por su inicial y encontramos el contenido filtrado.
+
+![Navegación 1](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/navegacion1.png?raw=true)
+
+Dentro de las páginas internas tambien disponemos de elementos para navegar de manera eficiente. Uno de ellos es el botón para ir a la página anterior que se encuentra en todas las páginas internas
+como se muestra en la siguiente imágen.
+
+![Navegación 2](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/navegacion2.png?raw=true)
+
 
