@@ -2,9 +2,9 @@
 
 ## Indice de contenidos
 
-* [Seleccionar Directorio](#seleccionar-directorio)
-* [Agregar Canciones](#agregar-canciones)
-* [Editar Tags](#editar-tags)
+* [Seleccionar directorio](#seleccionar-directorio)
+* [Agregar canciones](#agregar-canciones)
+* [Editar tags](#editar-tags)
 	* [Seleccionar directorio a editar](#seleccionar-directorio-a-editar)
 		* [Ejemplo 1](#ejemplo)
 	* [Enumerar Automáticamente](#enumerar-automáticamente)
@@ -12,7 +12,8 @@
 	* [Página del artista](#página-del-artista)
 	* [Página del álbum](#página-del-álbum)
 * [Listas de reproducción](#listas-de-reproducción)
-	* [Agregar Canción](#agregar-una-cación-a-la-lista)
+	* [Agregar canción](#agregar-una-cación-a-la-lista)
+	* [Agregar varias canciones](#agregar-varias-canciones-a-la-lista)
 
 ### Seleccionar Directorio
 
@@ -119,3 +120,24 @@ Una vez agregada la canción, si nos dirijimos a `+ Mis Listas` notaremos que ah
 
 ![Página de la lista con una canción](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaListaConUnaCancion.png?raw=true)
 
+#### Agregar varias canciones a la lista
+
+Aquí hay varias manera para obtener el resultado esperado.
+Uno de ellos, es marcar cada una de las canciones que queremos agregar y utilizar el menú de botones emergente que nos permite acceder al paner de agregar canciones antes visto.
+
+![Agregar menu emergente](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarMenuEmergente.png?raw=true)
+
+Luego desde el panel que nos aparece, seleccionamos la lista de reprucción que deseamos y damos clic en el botón agregar y listo.
+
+La segunda forma es desde el panel superior de la página de un álbum donde presionamos agregar, automáticamente se nos abrirá el panel antes visto para agregar canciones a las lista de reproducción con las canciones del álbum cargadas y listas para ser agregagadas.
+
+![Agregar álbum género](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarAlbumGenero.png?raw=true)
+
+Otra forma es de la página de todos los álbumes, accediendo a ella a través del menú principal en la opción `Álbumes` del menú lateral.
+En esta página buscamos el álbum que nos interesa y hacemos clic derecho sobre el mismo. De esta forma se nos abrirá el panel para agregar canciones a la lista con 
+
+![Agregar álbum género](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarAlbum.png?raw=true)
+
+Otra forma desde la página de artistas haciendo clic derecho sobre el álbum y realizando el mismo procedimiento visto.
+
+![Agregar álbum género](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarDesdeArtista.png?raw=true)
