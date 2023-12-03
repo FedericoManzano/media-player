@@ -14,6 +14,8 @@
 * [Listas de reproducción](#listas-de-reproducción)
 	* [Agregar canción](#agregar-una-cación-a-la-lista)
 	* [Agregar varias canciones](#agregar-varias-canciones-a-la-lista)
+	* [Eliminar lista de reproducción](#borrar-lista-de-reproducción)
+	* [Eliminar canción de una lista](#borrar-una-canción-de-la-lista)
 
 ### Seleccionar Directorio
 
@@ -149,3 +151,16 @@ El resultado a todo los visto sobre la creación de las listas de reproducción 
 Y dentro de la página de la lista: 
 
 ![Página lista creada](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaListaCreada.png?raw=true)
+
+#### Borrar lista de reproducción
+
+Para borrar una lista completa de reproducción simplmente vamos a la pestaña `+ Mis Listas` del mnú principal y con un clic derecho sobre la lista a eliminar seleccionamos eliminar lista.
+
+![Eliminar lista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/eliminarLista.png?raw=true)
+
+#### Borrar una canción de la lista
+
+Para eliminar una sola canción de la lista, simplemente accedemos a la lista, luego en la canción que queremos eliminar hacemos clic derecho y seleccionamos la opción eliminar de la lista.
+
+![Eliminar lista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/eliminarCancion.png?raw=true)
+
