@@ -111,7 +111,11 @@ Una vez creada la lista nos aparecerá referenciada desde su inicial en la parte
 
 #### Agregar una cación a la lista
 
-Para agregar una sola canción a la lista simplemente hacemos clic derecho sobre la pista de audio que deseamos agregar y luego, en el menú emergente seleccionamos la opción `Agregar a lista`.
+Para agregar una sola canción a la lista simplemente hacemos clic derecho sobre la pista de audio que deseamos agregar y luego, en el menú emergente, seleccionamos la opción `Agregar a lista`. Esto nos abrirá un panel con las siguientes opciones.
 
 ![Agregar canción a lista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/panelAgregarLista.png?raw=true)
+
+Una vez agregada la canción, si nos dirijimos a `+ Mis Listas` notaremos que ahora la lista recién creada cuenta con una canción. Si hacemos clic en ella nos enviará a la página recién creada de la lista con la cación recién agregada.
+
+![Página de la lista con una canción](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaListaConUnaCancion.png?raw=true)
 
