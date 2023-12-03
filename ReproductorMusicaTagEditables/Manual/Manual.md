@@ -134,10 +134,18 @@ La segunda forma es desde el panel superior de la página de un álbum donde pre
 ![Agregar álbum género](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarAlbumGenero.png?raw=true)
 
 Otra forma es de la página de todos los álbumes, accediendo a ella a través del menú principal en la opción `Álbumes` del menú lateral.
-En esta página buscamos el álbum que nos interesa y hacemos clic derecho sobre el mismo. De esta forma se nos abrirá el panel para agregar canciones a la lista con 
+En esta página buscamos el álbum que nos interesa y hacemos clic derecho sobre el mismo. De esta forma se nos abrirá el panel para agregar canciones a la lista.
 
-![Agregar álbum género](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarAlbum.png?raw=true)
+![Agregar álbum](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarAlbum.png?raw=true)
 
-Otra forma desde la página de artistas haciendo clic derecho sobre el álbum y realizando el mismo procedimiento visto.
+Otra forma desde la página de artistas haciendo clic derecho sobre el álbum y realizando el mismo procedimiento antes visto.
 
-![Agregar álbum género](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarDesdeArtista.png?raw=true)
+![Agregar álbum](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/agregarDesdeArtista.png?raw=true)
+
+El resultado a todo los visto sobre la creación de las listas de reproducción es el siguiente:
+
+![Miniatura de la lista creada](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/resultadoListaCreada.png?raw=true)
+
+Y dentro de la página de la lista: 
+
+![Página lista creada](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaListaCreada.png?raw=true)
