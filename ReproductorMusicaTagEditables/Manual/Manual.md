@@ -18,6 +18,7 @@
 	* [Eliminar canción de una lista](#borrar-una-canción-de-la-lista)
 * [Navegación por la aplicación](#navegación-por-la-aplicación)
 * [Reproducción](#reproducción)
+* [Reproducción](#descargas)
 
 ### Seleccionar Directorio
 
@@ -213,6 +214,30 @@ Lo mismo pasa con los géneros.
 ![Play artista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/playArtista.png?raw=true)
 
 Lo mismo aplica para los álbumes, listas o géneros cargados.
+
+### Descargas
+
+Para descargar videos de `Youtube` y convertirlos en audio el programa dispone de un apartado para realizar esto. En la sección descargas disponemos de los controles necesarios para realizar la/s descargas.
+
+![Descargas1](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/descargas1.png?raw=true)
+
+La cantidad de videos simultaneos que podemos descargar varía según las necesidades del usuario. 
+Por ejemplo si queremos descargar todo un album sumplemente agregamos los enlaces de los videos en el campo URL y luego pulsamos `Convertir`.
+
+#### Ejemplo 3
+
+En este ejemplo vamos a descargar 3 canciones de 3 videos de Youtube.
+
+![Descargando](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/descargando.png?raw=true)
+
+En esta imágen hay 3 videos en proceso de descarga, a la espera de su finalización los controles quedan bloqueados.
+
+Una vez finalizada la descarga de todos los videos la pantalla se vería de esta manera.
+
+![Descarga Finalizada](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/descargaFinalizada.png?raw=true)
+
+Ahora, en este estado, las canciones están almacenadas en un directorio dedicado. Para poder disponer de las mismas hay que editarlas y moverlas a un directorio seleccionado por el usuario.
+Podemos mover los archivos sin editar, pero en este caso, el programa no va a poder reconocer la información de los metadatos del archivo.
 
 
 
