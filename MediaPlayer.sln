@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReproductorMusicaTagEditables", "ReproductorMusicaTagEditables\ReproductorMusicaTagEditables.csproj", "{A44C9CB7-BA26-48AB-A03A-FED98D7A07DD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaPlayer", "ReproductorMusicaTagEditables\MediaPlayer.csproj", "{A44C9CB7-BA26-48AB-A03A-FED98D7A07DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

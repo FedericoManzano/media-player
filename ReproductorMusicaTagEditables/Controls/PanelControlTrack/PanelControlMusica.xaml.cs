@@ -168,5 +168,18 @@ namespace ReproductorMusicaTagEditables.Controls.PanelControlTrack
                 iconRandom.Foreground = Brushes.White;
             }
         }
+
+        private void Circulos_On_Off(object sender, RoutedEventArgs e)
+        {
+            EstadosControl.CIRCULOS = !EstadosControl.CIRCULOS;
+            if (EstadosControl.CIRCULOS)
+            {
+                iconCirculo.Foreground = Brushes.Red;
+            }
+            else
+            {
+                iconCirculo.Foreground = Brushes.White;
+            }
+        }
     }
 }

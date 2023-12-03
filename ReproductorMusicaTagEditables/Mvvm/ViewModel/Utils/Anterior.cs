@@ -37,6 +37,21 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
             }
+            else
+            {
+                if (EstadosControl.CIRCULOS)
+                {
+                    Irg.CancionActual.Index = Irg.CancionesFiltradas.Count - 1;
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+                    if (!System.IO.File.Exists(Irg.CancionActual.Cancion.Path))
+                    {
+                        MessageBox.Show($"El Archivo {Irg.CancionActual.Cancion.Path} fué eliminado en tiempo de ejecucion.");
+                        return;
+                    }
+                    Irg.Seleccionar();
+                    ReproducirCancion(Irg);
+                }
+            }
             
             ListasReproduccion.AgregarCancionAFavoritos(Irg.CancionActual.Cancion);
         }

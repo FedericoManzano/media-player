@@ -14,4 +14,7 @@
   <PropertyGroup>
     <ReferencePath>C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Controls\Menu\;C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\ViewModel\;C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\Mvvm\View\</ReferencePath>
   </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
 </Project>

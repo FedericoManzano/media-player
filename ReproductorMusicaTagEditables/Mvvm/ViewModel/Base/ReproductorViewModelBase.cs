@@ -3,7 +3,6 @@ using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
-using ReproductorMusicaTagEditables.Mvvm.View.Generador;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System.Collections.Generic;
@@ -12,15 +11,12 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
 {
     public abstract class ReproductorViewModelBase : ViewModelBase
     {
 
         public static InfoNavegacion infoNavegacion = new InfoNavegacion();
-
-
 
         protected InfoReproductor irg;
 
@@ -78,56 +74,56 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             if(irg.Canciones.Count == 0)
                 Irg.CargaDesdeElRepositorioCanciones();  
         }
-
         public bool CanAnteriorAction(object arg)
         {
             if (EstadosControl.RANDOM)
             {
                 return Irg.CancionesFiltradas.Count > 0;
             }
+            if (EstadosControl.CIRCULOS)
+            {
+                return true;
+            }
             return Irg.CancionesFiltradas.Count > 0 && Irg.CancionActual.Index > 0;
         }
-
         public void AnteriorAction(object obj = null)
         { 
             AccionReproductor.Fabrica(AccionReproductor.ATRAS_ACCION)?.Ejecutar(Irg);
             ScrollVertical = irg.SetScroll();
         }
-
         private bool CanSiguienteAction(object arg)
         {
             if(EstadosControl.RANDOM)
             {
                 return Irg.CancionesFiltradas.Count > 0;
             }
-            return Irg.CancionesFiltradas.Count > 0 && Irg.CancionActual.Index < Irg.Canciones.Count - 1;
+            if (EstadosControl.CIRCULOS)
+            {
+                return true;
+            }
+            return Irg.CancionesFiltradas.Count > 0 && Irg.CancionActual.Index < Irg.CancionesFiltradas.Count - 1;
         }
-
         public void SiguienteAction(object obj = null)
         {
             AccionReproductor.Fabrica(AccionReproductor.SIGUIENTE_ACCION)?.Ejecutar(Irg);
             ScrollVertical = irg.SetScroll();
         }
-
         protected void PlayAction(object obj)
         {
             Cancion c = (Cancion)obj;
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);
             ScrollVertical = irg.SetScroll();
         }
-
         private void CargarMusicaAction(object obj)
         {
             
             Irg.CargarMusicaSeleccion(this);
             
         }
-
         public void AgregarElementosAlFiltro()
         {
             Irg.AgregarElementosAlFiltro();
         }
-
         public void SeleccionarCancion(InfoCancionTabla infoCancionTabla)
         {
             if(infoCancionTabla != null) 
@@ -151,8 +147,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                 }
             }
         }
-
-     
         public void DeseleccionarCancion(InfoCancionTabla infoCancionTabla)
         {
             if (infoCancionTabla != null)
@@ -178,17 +172,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                 }
             }
         }
-
         public int CantidadSeleccionado ()
         {
             return _cancionesSeleccionadas.Count;
         }
-         
         public void DeseleccionarTodas ()
         {
             _cancionesSeleccionadas.Clear();    
         }
-
         public void CargarListadoEneditorListas ()
         {
             if(_cancionesSeleccionadas != null && _cancionesSeleccionadas.Count > 0)
@@ -197,7 +188,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                 MainWindow.agregarCancionesListas.Show();
             }
         }
-
         public void BuscarCancion(string inicialCancion)
         {
             Irg.BuscarCancion(inicialCancion);

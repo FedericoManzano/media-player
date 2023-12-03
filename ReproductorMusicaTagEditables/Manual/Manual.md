@@ -278,11 +278,3 @@ Y el interior de las descargas es:
 En este caso, las canciones quedan disponibles hasta borremos los enlaces con el botón seleccionar desde la aplicación. Si no reiniciamos el directorio raíz las canciones van a estar disponibles.
 
 
-
-
-
-
-
-
-
-

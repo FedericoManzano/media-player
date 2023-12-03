@@ -66,9 +66,11 @@
                         ToolTip="Reprodución aleatoria">
                     <fa:PackIconFontAwesome x:Name="iconRandom" Kind="RandomSolid"/>
                 </Button>
-                <Button Style="{StaticResource btnPanel}"
-                        ToolTip="Repetir en circulos">
-                    <fa:PackIconFontAwesome Kind="ReplyAllSolid"/>
+                <Button x:Name="btnCirculo"
+                        Style="{StaticResource btnPanel}"
+                        ToolTip="Repetir en circulos"
+                        Click="Circulos_On_Off">
+                    <fa:PackIconFontAwesome x:Name="iconCirculo" Kind="ReplyAllSolid"/>
                 </Button>
             </StackPanel>
         </StackPanel>

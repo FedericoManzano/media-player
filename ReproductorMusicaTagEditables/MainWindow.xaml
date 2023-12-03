@@ -19,7 +19,8 @@
         ResizeMode="CanResizeWithGrip"
         AllowsTransparency="True"
         Background="Transparent"
-        MouseDown="Arrastrar_Ventana">
+        MouseDown="Arrastrar_Ventana"
+        Icon="/Icono/nota-musical.ico">
 
 
     <!-- Data context ../ViewModel/ReproductorViewModel.cs -->
