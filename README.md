@@ -24,7 +24,7 @@ Toda la información de la utilización del reproductoror aquí.
 
 Desde este enlace podemos descargar el instalador del reproductor.
 
-[Instalador]()
+[Instalador](https://mega.nz/file/UAEVEQTI#iPNuwvtsf-5aEXAzz1UmEV2msngMP6E_u0eCp1Z5vDc)
 
 ### Compatibilidad
 
