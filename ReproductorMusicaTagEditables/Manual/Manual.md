@@ -245,7 +245,7 @@ Pulsamos el botón editar y se abrirá el editor de tags de la aplicación ya vi
 
 Como podemos ver en la imágen los metadatos son desconocidos. Para cambiar este situación y formatear los campos vamos a editarlos.
 
-![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editorDescargasInfo.png?raw=true)
+![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editarDescargasInfo.png?raw=true)
 
 Cuando seleccionemos todas las pistas vamos a poder editar (Artista, Álbum, Género, Año de lanzamiento e imágen).
 
@@ -264,6 +264,24 @@ Por último editamos los nombres de las canciones selecciondo las mismas de a un
 Una vez editadas las canciones sólo queda moverlas a un directorio seleccionado por el usuario. Esto lo hacemos con el botón `Mover`.
 
 ![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/audioMovido.png?raw=true)
+
+El resultado de todo lo que hicimos es el siguiente.
+
+> Importante: Todos los archivos movidos desde la sección descargas son añadidos a las canciones que ya teniamos anteriormente sin necesidad de incorporarlas desde el directorio seleccionado.
+
+![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/artistaDesc.png?raw=true)
+
+Y el interior de las descargas es:
+
+![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/cancionesDesc.png?raw=true)
+
+En este caso, las canciones quedan disponibles hasta borremos los enlaces con el botón seleccionar desde la aplicación. Si no reiniciamos el directorio raíz las canciones van a estar disponibles.
+
+
+
+
+
+
 
 
 
