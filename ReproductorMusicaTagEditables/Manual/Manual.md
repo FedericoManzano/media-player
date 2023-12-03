@@ -9,6 +9,7 @@
 		* [Ejemplo 1](#ejemplo)
 	* [Enumerar Automáticamente](#enumerar-automáticamente)
 * [Pista de audio](#pista)
+	* [Página del artista](#página-del-artista)
 
 ### Seleccionar Directorio
 
@@ -79,3 +80,9 @@ El track se representa en forma de cuadricula en la que cada tupla contiene la i
 ![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/pistaAudio.png?raw=true)
 
 A través de este elemento podemos acceder a la página del artista o a la pagina del álbum al cual pertenece.
+
+#### Página del Artista 
+
+Si accedemos a la página del artista se vería como lo que se muestra a continuación.
+
+![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaArtista.png?raw=true)
