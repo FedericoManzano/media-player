@@ -16,8 +16,8 @@
 	* [Agregar varias canciones](#agregar-varias-canciones-a-la-lista)
 	* [Eliminar lista de reproducción](#borrar-lista-de-reproducción)
 	* [Eliminar canción de una lista](#borrar-una-canción-de-la-lista)
-* [Navegación por la aplicación]()
-* [Reproducción]()
+* [Navegación por la aplicación](#navegación-por-la-aplicación)
+* [Reproducción](#reproducción)
 
 ### Seleccionar Directorio
 
@@ -196,7 +196,23 @@ Apenas inicia la aplicación desde el botón `Play` en la zona inferior en el co
 
 ![Reproducir 1](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/reproducir1.png?raw=true)
 
-Desde el botón Play podemos reproducir la canción carga actualmente. Si la app fué cerrada, y luego, vuelta a ejecutar la canción en curso, álbum o lista a la cual pertenezca se recupera.
+Desde el botón Play podemos reproducir la canción cargada actualmente. Si la app fué cerrada, y luego, se vuelve a ejecutar, la canción en curso, álbum o lista a la cual pertenezca se recuperará.
 
 > Desde el botón `Random` la reproducción no será secuencial, irá saltando de canciones cuendo la misma cambie.
+
+Otra cosa importante:
+
+> Desde los botones `>>` y `<<` podemos pasar a la canción siguiente o anterior respectivamente. Pero cual sería la canción actual, anterior o siguiente ?.
+Bueno, esto va a depender del listado que tengamos cargado, si pusimos a reproducir un álbum, entonces las canciones que se iran reproduciendo serán las del álbum. 
+Si por el contrario, las canciones pertenecen a una lista de reproducción, se van a reproducir las canciones de la lista de reproducción.
+En el caso que estemos reproduciendo las canciones de un artista (y no sólo un álbum) el resultado es que se van reproducir todas las canciones de determinado artista.
+Lo mismo pasa con los géneros.
+
+#### Ejemplo 2
+
+![Play artista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/playArtista.png?raw=true)
+
+Lo mismo aplica para los álbumes, listas o géneros cargados.
+
+
 

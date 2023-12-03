@@ -1,17 +1,17 @@
 {
   "CancionActual": {
-    "Index": 9,
+    "Index": 11,
     "Cancion": {
-      "Numero": "10",
-      "Titulo": "Prince Charming",
+      "Numero": "12",
+      "Titulo": "12 Attitude",
       "Artista": "METALLICA",
       "Album": "RELOAD",
       "Genero": "HEAVY METAL",
-      "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Reload\\10 Prince Charming.mp3",
-      "Duracion": "06:05",
+      "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Reload\\12 Attitude.mp3",
+      "Duracion": "05:16",
       "FechaLanzamiento": "1997",
       "EstadoColor": "red",
-      "DuracionLong": 3652440816,
+      "DuracionLong": 3165779591,
       "Imagen": null,
       "Cantidad": 1
     }
@@ -153,7 +153,7 @@
       "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Reload\\10 Prince Charming.mp3",
       "Duracion": "06:05",
       "FechaLanzamiento": "1997",
-      "EstadoColor": "red",
+      "EstadoColor": "White",
       "DuracionLong": 3652440816,
       "Imagen": null,
       "Cantidad": 1
@@ -170,7 +170,7 @@
       "EstadoColor": "White",
       "DuracionLong": 4572734693,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "12",
@@ -181,10 +181,10 @@
       "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Reload\\12 Attitude.mp3",
       "Duracion": "05:16",
       "FechaLanzamiento": "1997",
-      "EstadoColor": "White",
+      "EstadoColor": "red",
       "DuracionLong": 3165779591,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "13",
