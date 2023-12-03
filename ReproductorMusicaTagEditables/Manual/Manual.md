@@ -8,6 +8,7 @@
 	* [Seleccionar directorio a editar](#seleccionar-directorio-a-editar)
 		* [Ejemplo 1](#ejemplo)
 	* [Enumerar Automáticamente](#enumerar-automáticamente)
+* [Pista de audio](#pista)
 
 ### Seleccionar Directorio
 
@@ -70,3 +71,11 @@ Si queremos enumerar los tracks de manera automática simplmente seleccionamos t
 Y el resultado a esta operación es la siguiente:
 
 ![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/formateados.png?raw=true)
+
+### Pista
+
+El track se representa en forma de cuadricula en la que cada tupla contiene la información del la canción a la cual hace referencia.
+
+![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/pistaAudio.png?raw=true)
+
+A través de este elemento podemos acceder a la página del artista o a la pagina del álbum al cual pertenece.
