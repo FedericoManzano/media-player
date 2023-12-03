@@ -10,6 +10,9 @@
 	* [Enumerar Automáticamente](#enumerar-automáticamente)
 * [Pista de audio](#pista)
 	* [Página del artista](#página-del-artista)
+	* [Página del álbum](#página-del-álbum)
+* [Listas de reproducción](#listas-de-reproducción)
+	* [Agregar Canción](#agregar-una-cación-a-la-lista)
 
 ### Seleccionar Directorio
 
@@ -85,9 +88,30 @@ A través de este elemento podemos acceder a la página del artista o a la pagin
 
 Si accedemos a la página del artista se vería como lo que se muestra a continuación.
 
-![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaArtista.png?raw=true)
+![Página del artista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaArtista.png?raw=true)
+
+#### Página del Álbum
 
 Si accedemos a la página del álbum se vería de la siguiente forma:
 
-![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaAlbum.png?raw=true)
+![Página del álbum](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaAlbum.png?raw=true)
+
+### Listas de reproducción
+
+Existen varias maneras de agregar canciones a las listas de reproducción que vayamos generando.
+Para empezar nos tenemos que ir a la opción `+ Mis Listas` del menú lateral. En este punto simplemente creamos la lista que queremos desde el botón `+ Agregar Lista` desde la esquina superior derecha.
+Una vez creada la lista nos va aparecer el logo de una lista vacia con el nombre de la misma por debajo.
+El paso siguiente es ir a las canciones que queremos agregar y utilizar los direrentes medios proveistos para agregar dichas canciones al la lista.
+
+![Crear Lista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/crearLista.png?raw=true)
+
+Una vez creada la lista nos aparecerá referenciada desde su inicial en la parte inferior con el logo de lista vacía.
+
+![Panel crear lista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/listaCreada.png?raw=true)
+
+#### Agregar una cación a la lista
+
+Para agregar una sola canción a la lista simplemente hacemos clic derecho sobre la pista de audio que deseamos agregar y luego, en el menú emergente seleccionamos la opción `Agregar a lista`.
+
+![Agregar canción a lista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/panelAgregarLista.png?raw=true)
 
