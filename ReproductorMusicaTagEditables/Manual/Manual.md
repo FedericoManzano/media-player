@@ -86,3 +86,8 @@ A través de este elemento podemos acceder a la página del artista o a la pagin
 Si accedemos a la página del artista se vería como lo que se muestra a continuación.
 
 ![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaArtista.png?raw=true)
+
+Si accedemos a la página del álbum se vería de la siguiente forma:
+
+![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/paginaAlbum.png?raw=true)
+
