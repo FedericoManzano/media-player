@@ -1,17 +1,17 @@
 {
   "CancionActual": {
-    "Index": 0,
+    "Index": 9,
     "Cancion": {
-      "Numero": "1",
-      "Titulo": "Fuel",
+      "Numero": "10",
+      "Titulo": "Prince Charming",
       "Artista": "METALLICA",
       "Album": "RELOAD",
       "Genero": "HEAVY METAL",
-      "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Reload\\01 Fuel.mp3",
-      "Duracion": "04:29",
+      "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Reload\\10 Prince Charming.mp3",
+      "Duracion": "06:05",
       "FechaLanzamiento": "1997",
       "EstadoColor": "red",
-      "DuracionLong": 2697665306,
+      "DuracionLong": 3652440816,
       "Imagen": null,
       "Cantidad": 1
     }
@@ -27,7 +27,7 @@
       "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Reload\\01 Fuel.mp3",
       "Duracion": "04:29",
       "FechaLanzamiento": "1997",
-      "EstadoColor": "red",
+      "EstadoColor": "White",
       "DuracionLong": 2697665306,
       "Imagen": null,
       "Cantidad": 1
@@ -44,7 +44,7 @@
       "EstadoColor": "White",
       "DuracionLong": 2792751020,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "3",
@@ -58,7 +58,7 @@
       "EstadoColor": "White",
       "DuracionLong": 3189551020,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "4",
@@ -72,7 +72,7 @@
       "EstadoColor": "White",
       "DuracionLong": 3964865306,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "5",
@@ -86,7 +86,7 @@
       "EstadoColor": "White",
       "DuracionLong": 3216457142,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "6",
@@ -100,7 +100,7 @@
       "EstadoColor": "White",
       "DuracionLong": 3132604081,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "7",
@@ -114,7 +114,7 @@
       "EstadoColor": "White",
       "DuracionLong": 3722448979,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "8",
@@ -128,7 +128,7 @@
       "EstadoColor": "White",
       "DuracionLong": 2453681632,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "9",
@@ -142,7 +142,7 @@
       "EstadoColor": "White",
       "DuracionLong": 4141714285,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "10",
@@ -153,10 +153,10 @@
       "Path": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\Reload\\10 Prince Charming.mp3",
       "Duracion": "06:05",
       "FechaLanzamiento": "1997",
-      "EstadoColor": "White",
+      "EstadoColor": "red",
       "DuracionLong": 3652440816,
       "Imagen": null,
-      "Cantidad": 0
+      "Cantidad": 1
     },
     {
       "Numero": "11",

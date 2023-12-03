@@ -17,7 +17,7 @@
 	* [Eliminar lista de reproducción](#borrar-lista-de-reproducción)
 	* [Eliminar canción de una lista](#borrar-una-canción-de-la-lista)
 * [Navegación por la aplicación]()
-
+* [Reproducción]()
 
 ### Seleccionar Directorio
 
@@ -184,4 +184,19 @@ como se muestra en la siguiente imágen.
 
 ![Navegación 2](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/navegacion2.png?raw=true)
 
+Otra forma de acceder de manera rápida al contenido es a través del bloque de información en la página de un álbum, más especificamente el enlace con el nombre del artista.
+
+![Navegación 3](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/navegacion3.png?raw=true)
+
+### Reproducción
+
+Es uno de los apartados más sencillos pero no menos importantes. En este caso, existen varias formas de cargar canciones para reproducir.
+
+Apenas inicia la aplicación desde el botón `Play` en la zona inferior en el controlador de reproducción del reproductor.
+
+![Reproducir 1](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/reproducir1.png?raw=true)
+
+Desde el botón Play podemos reproducir la canción carga actualmente. Si la app fué cerrada, y luego, vuelta a ejecutar la canción en curso, álbum o lista a la cual pertenezca se recupera.
+
+> Desde el botón `Random` la reproducción no será secuencial, irá saltando de canciones cuendo la misma cambie.
 
