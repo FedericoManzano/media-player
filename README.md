@@ -1,5 +1,6 @@
-
-![Icono](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Icono/nota-musical.ico)
+<p align="center">
+  <img src="https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Icono/nota-musical.ico" />
+</p>
 
 # Reproductor de música
 
