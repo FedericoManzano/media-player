@@ -13,10 +13,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
     {
         public override void Ejecutar(InfoReproductor Irg, Cancion c = null)
         {
-            if(ReproductorViewModelBase.infoNavegacion.CancionActual.Index > -1)
-            {
-                Irg.Reproductor.Source =new Uri( ReproductorViewModelBase.infoNavegacion.CancionActual.Cancion.Path);
-            }
+            
             if (c != null)
             {
                 if (!System.IO.File.Exists(c.Path))
@@ -24,6 +21,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                     MessageBox.Show($"El Archivo {c.Path} fué eliminado en tiempo de ejecucion.");
                     return;
                 }
+                
+
 
                 if (Irg.CancionActual.Index >= 0)
                 {
@@ -43,6 +42,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
             }
             else
             {
+                
                 if (EstadosControl.PLAY)
                 {
                     EstadosControl.PLAY = !EstadosControl.PLAY;
@@ -72,7 +72,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                         else
                         {
                             Irg.Seleccionar();
-                            Irg.Reproductor.Play();
+                            if(Irg.Reproductor.Source != null)
+                            {
+                                Irg.Reproductor.Play();
+                            }
+                            else
+                            {
+                                Irg.Reproductor.Source = new Uri(Irg.CancionActual.Cancion.Path);
+                                Irg.Reproductor.Play();
+                            }
+                            
                             Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
                             EstadosControl.PLAY = true;
                         }

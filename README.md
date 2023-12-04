@@ -22,13 +22,13 @@ Reproductor de música realizado en un proyecto en WPF (Windows Platform Fundati
 
 Toda la información de la utilización del reproductoror aquí.
 
-[Manual de usuario](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Manual.md)
+:books: [Manual de usuario](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Manual.md)
 
 ### Descarga del instalador
 
 Desde este enlace podemos descargar el instalador del reproductor.
 
-[Instalador](https://mega.nz/file/UAEVEQTI#iPNuwvtsf-5aEXAzz1UmEV2msngMP6E_u0eCp1Z5vDc)
+:arrow_down: [Descarga Instalador](https://mega.nz/folder/4I0WUaBT#DUz35GsKR34m8m0pvFHAlg)
 
 ### Compatibilidad
 

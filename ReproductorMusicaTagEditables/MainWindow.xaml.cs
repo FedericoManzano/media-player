@@ -55,8 +55,7 @@ namespace ReproductorMusicaTagEditables
 
         private void Time_Track(object sender, EventArgs e)
         {
-            
-            if (EstadosControl.PLAY && !EstadosControl.SLIDER_MOVE)
+            if ( EstadosControl.PLAY && !EstadosControl.SLIDER_MOVE)
             {
                 sliderLineTime.Value = mediaReproductor.Position.TotalSeconds;
                 controlTiempo.TiempoTranscurrido = mediaReproductor.Position.TiempoFormato();
