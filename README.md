@@ -1,3 +1,6 @@
+
+![](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Icono/nota-musical.ico)
+
 # Reproductor de música
 
 

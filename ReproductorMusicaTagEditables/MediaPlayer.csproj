@@ -769,5 +769,8 @@
   <ItemGroup>
     <Resource Include="nota-musical.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icono\nota-musical.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
