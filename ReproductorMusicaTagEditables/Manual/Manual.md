@@ -27,7 +27,7 @@
 
 Para descargar el reproductor lo podemos hacer desde el siguiente enlace:
 
-[Descarga :musical_note:](https://mega.nz/file/UAEVEQTI#iPNuwvtsf-5aEXAzz1UmEV2msngMP6E_u0eCp1Z5vDc)
+:musical_note: [Descarga Reproductor](https://mega.nz/file/VU8wVKSb#cVcLv2Ho7dcYRrKjGHDkV1Crl7KUKrSFwd8JrK0ZbQ0)
 
 El resultado de la descarga nos va a dejar un archivo llamado `MediaPlayer.zip`.
 
