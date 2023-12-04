@@ -1,24 +1,51 @@
-# Manual Media Player
+# :books: Manual Media Player
 
-## Indice de contenidos
+## :link: Indice de contenidos
 
-* [Seleccionar directorio](#seleccionar-directorio)
-* [Agregar canciones](#agregar-canciones)
-* [Editar tags](#editar-tags)
-	* [Seleccionar directorio a editar](#seleccionar-directorio-a-editar)
-		* [Ejemplo 1](#ejemplo)
-	* [Enumerar Automáticamente](#enumerar-automáticamente)
-* [Pista de audio](#pista)
-	* [Página del artista](#página-del-artista)
-	* [Página del álbum](#página-del-álbum)
-* [Listas de reproducción](#listas-de-reproducción)
-	* [Agregar canción](#agregar-una-cación-a-la-lista)
-	* [Agregar varias canciones](#agregar-varias-canciones-a-la-lista)
-	* [Eliminar lista de reproducción](#borrar-lista-de-reproducción)
-	* [Eliminar canción de una lista](#borrar-una-canción-de-la-lista)
-* [Navegación por la aplicación](#navegación-por-la-aplicación)
-* [Reproducción](#reproducción)
-* [Descargas](#descargas)
+* :earth_americas: [Descargar](#descargar-reproductor)
+* :dvd: [Instalar reproductor](#instalación)
+* :open_file_folder: [Seleccionar directorio](#seleccionar-directorio)
+* :heavy_plus_sign: [Agregar canciones](#agregar-canciones)
+* :pencil: [Editar tags](#editar-tags)
+	* :open_file_folder: [Seleccionar directorio a editar](#seleccionar-directorio-a-editar)
+		* :pencil2: [Ejemplo 1](#ejemplo)
+	* :1234: [Enumerar Automáticamente](#enumerar-automáticamente)
+* :musical_note: [Pista de audio](#pista)
+	* :construction_worker: [Página del artista](#página-del-artista)
+	* :cd: [Página del álbum](#página-del-álbum)
+* :arrow_forward: [Listas de reproducción](#listas-de-reproducción)
+	* :heavy_plus_sign: [Agregar canción](#agregar-una-cación-a-la-lista)
+	* :heavy_plus_sign: [Agregar varias canciones](#agregar-varias-canciones-a-la-lista)
+	* :x: [Eliminar lista de reproducción](#borrar-lista-de-reproducción)
+	* :x: [Eliminar canción de una lista](#borrar-una-canción-de-la-lista)
+* :airplane: [Navegación por la aplicación](#navegación-por-la-aplicación)
+* :arrow_forward: [Reproducción](#reproducción)
+* :arrow_down: [Descargas](#descargas)
+
+
+### Descargar Reproductor
+
+Para descargar el reproductor lo podemos hacer desde el siguiente enlace:
+
+[Descarga :musical_note:](https://mega.nz/file/UAEVEQTI#iPNuwvtsf-5aEXAzz1UmEV2msngMP6E_u0eCp1Z5vDc)
+
+El resultado de la descarga nos va a dejar un archivo llamado `MediaPlayer.zip`.
+
+```txt
+MediaPlayer
+	| Application Files
+		| Todos los archivos de la aplicación
+    | ReproductorMusicaTagEditables.application
+	| setup.exe       
+```
+
+### Instalación
+
+Ejecutamos el archivo :dvd:`setup.exe` y aceptamos en el asistente de instalación.
+Con esto ya estaría instalado.
+
+![Ejecutar App](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/ejecutarApp.png?raw=true)
+
 
 ### Seleccionar Directorio
 
