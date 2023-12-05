@@ -73,19 +73,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                     Canciones = RepositorioDeCanciones.LeerTodasLasCanciones();
                     Partes = new ObservableCollection<Cancion>(Canciones);
 
-                    ReproductorViewModelBase.infoNavegacion = Navegacion.LevantarInfo();
-                    if (ReproductorViewModelBase.infoNavegacion.CancionActual.Cancion != null)
-                    {
-                        CancionActual = ReproductorViewModelBase.infoNavegacion.CancionActual;
-                    }
-
-                    if (ReproductorViewModelBase.infoNavegacion.CancionesFiltradas.Count > 0)
-                    {
-                        CancionesFiltradas = ReproductorViewModelBase.infoNavegacion.CancionesFiltradas;
-                    }else
-                        CancionesFiltradas = new ObservableCollection<Cancion>(Canciones);
-
-              
+                    if(CancionesFiltradas.Count == 0) { CancionesFiltradas = new ObservableCollection<Cancion>(Canciones); }
+          
                     if (Canciones.Count > 50)
                     {
                         Partes = new ObservableCollection<Cancion>(Canciones.GetRange(0, 50));

@@ -1,10 +1,8 @@
 ﻿
-using MediaToolkit.Options;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
 using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
-using ReproductorMusicaTagEditables.Mvvm.View.Generador;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
@@ -31,21 +29,7 @@ namespace ReproductorMusicaTagEditables
         public MainWindow()
         {
             InitializeComponent();
-            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
-            agregarCancionesListas = new AgregarCancionesListas(reproViewModel);
-            CargarImagenPorDefectoArtista();
-           
-            reproViewModel.CargarReproductor(mediaReproductor);
-
-            InfoReproductor infoReproductor = InfoReproductor.DameInstancia();
-            infoReproductor.CancionActual = ReproductorViewModelBase.infoNavegacion.CancionActual;
-            CargarInfoArtista();
-            timer = new DispatcherTimer()
-            {
-                Interval = TimeSpan.FromSeconds(1)
-            };
-            timer.Tick += new EventHandler(Time_Track);
-            GuardarNavegacion();
+            
             
         }
 
@@ -115,15 +99,14 @@ namespace ReproductorMusicaTagEditables
 
         private void CargarInfoArtista ()
         {
-            ImageBrush bImagen = DameImagenCancion();
+ 
             GuardarNavegacion();
-            infoArtista.ImagenArtista = bImagen;
             if (reproViewModel.CancionActual() != null)
             {
-                
-                infoArtista.NombreArtista = reproViewModel.CancionActual().Artista;
-                infoArtista.NombreAlbum = reproViewModel.CancionActual().Album;
-                infoArtista.TituloCancion = reproViewModel.CancionActual().Titulo;
+                infoArtista.ImagenArtista = DameImagenCancion();
+                infoArtista.NombreArtista = reproViewModel.ArtistaActual();
+                infoArtista.NombreAlbum = reproViewModel.AlbumActual();
+                infoArtista.TituloCancion = reproViewModel.TituloActual();
             }
         }
 
@@ -134,7 +117,6 @@ namespace ReproductorMusicaTagEditables
             ReproductorViewModelBase.infoNavegacion.CancionesFiltradas = ir.CancionesFiltradas;
             Navegacion.GuardarInfo(ReproductorViewModelBase.infoNavegacion);
         }
-
 
         private ImageBrush DameImagenCancion()
         {
@@ -152,7 +134,6 @@ namespace ReproductorMusicaTagEditables
             return ArchivoImagenBase
                                    .archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
         }
-
 
         private void ReiniciarCamposTiempo ()
         {
@@ -192,6 +173,23 @@ namespace ReproductorMusicaTagEditables
         private void Menu_DocClick(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Manual.md");
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+            agregarCancionesListas = new AgregarCancionesListas(reproViewModel);
+            CargarImagenPorDefectoArtista();
+
+            reproViewModel.CargarReproductor(mediaReproductor);
+
+            CargarInfoArtista();
+            timer = new DispatcherTimer()
+            {
+                Interval = TimeSpan.FromSeconds(1)
+            };
+            timer.Tick += new EventHandler(Time_Track);
+            GuardarNavegacion();
         }
     }
 }

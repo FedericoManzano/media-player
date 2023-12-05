@@ -21,5 +21,50 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             return origen.Irg.CancionActual.Index;
         }
 
+
+        public static string ArtistaActual(this ReproductorViewModelBase origen)
+        {
+            Cancion c = origen.Irg.CancionActual.Cancion;
+
+            if(c != null)
+            {
+                return string.IsNullOrEmpty(c.Artista) ? "Desconocido" : c.Artista;
+            }
+            else
+            {
+                return "Desconocido";
+            } 
+        }
+
+
+        public static string AlbumActual(this ReproductorViewModelBase origen)
+        {
+            Cancion c = origen.Irg.CancionActual.Cancion;
+
+            if (c != null)
+            {
+                return string.IsNullOrEmpty(c.Album) ? "Desconocido" : c.Album;
+            }
+            else
+            {
+                return "Desconocido";
+            }
+        }
+
+
+        public static string TituloActual(this ReproductorViewModelBase origen)
+        {
+            Cancion c = origen.Irg.CancionActual.Cancion;
+
+            if (c != null)
+            {
+                return string.IsNullOrEmpty(c.Titulo) ? "..." : c.Titulo;
+            }
+            else
+            {
+                return "...";
+            }
+        }
+
     }
 }

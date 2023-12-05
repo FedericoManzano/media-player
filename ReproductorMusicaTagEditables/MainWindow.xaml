@@ -20,7 +20,8 @@
         AllowsTransparency="True"
         Background="Transparent"
         MouseDown="Arrastrar_Ventana"
-        Icon="/Icono/nota-musical.ico">
+        Icon="/Icono/nota-musical.ico"
+        Loaded="Window_Loaded">
 
 
     <!-- Data context ../ViewModel/ReproductorViewModel.cs -->

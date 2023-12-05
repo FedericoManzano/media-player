@@ -70,9 +70,39 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             SiguienteCommand = new RelayCommand(SiguienteAction, CanSiguienteAction);
             AnteriorCommand = new RelayCommand(AnteriorAction, CanAnteriorAction);
             PlayCommand = new RelayCommand(PlayAction);
-            Navegacion.Crear();
+            CargarInfoNavegacion();
+
             if(irg.Canciones.Count == 0)
                 Irg.CargaDesdeElRepositorioCanciones();  
+        }
+
+
+        private void CargarInfoNavegacion()
+        {
+            if (!Navegacion.Existe())
+                Navegacion.Crear();
+            else
+            {
+                infoNavegacion = Navegacion.LevantarInfo();
+                if (infoNavegacion != null)
+                {
+                    if (infoNavegacion.CancionActual.Cancion != null)
+                    {
+                        Irg.CancionActual = infoNavegacion.CancionActual;
+                    }
+
+                    if (infoNavegacion.CancionesFiltradas.Count > 0)
+                    {
+                        Irg.CancionesFiltradas = infoNavegacion.CancionesFiltradas;
+                    }
+                }
+                else
+                {
+                    infoNavegacion = new InfoNavegacion();
+                    
+                }
+
+            }
         }
         public bool CanAnteriorAction(object arg)
         {

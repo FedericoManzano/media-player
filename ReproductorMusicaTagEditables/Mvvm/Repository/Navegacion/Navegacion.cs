@@ -29,7 +29,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion
                 try
                 {
                     string output = JsonConvert.SerializeObject(infoNavegacion, Formatting.Indented);
-                    File.WriteAllText(INFO_USUARIO, output);
+                    using(StreamWriter sw = new StreamWriter(INFO_USUARIO))
+                    {
+                        sw.Write(output);
+                    }
                 }
                 catch
                 {
@@ -42,21 +45,20 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion
         public static InfoNavegacion LevantarInfo()
         {
             InfoNavegacion ina;
-            if (!Existe())
+            
+            if(Existe()) 
             {
-                Crear();
+                try
+                {
+                    ina = JsonConvert.DeserializeObject<InfoNavegacion>(File.ReadAllText(INFO_USUARIO));
+                    return ina;
+                }
+                catch (IOException e)
+                {
+                    return null;
+                }
             }
-            try
-            {
-                ina = JsonConvert.DeserializeObject<InfoNavegacion>(File.ReadAllText(INFO_USUARIO));
-                if (ina == null)
-                    return new InfoNavegacion();
-                else return  ina;
-            }
-            catch (IOException e)
-            {
-                return new InfoNavegacion();
-            }
+            return null;
 
         }
     }

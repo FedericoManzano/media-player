@@ -1,4 +1,4 @@
-﻿using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
+﻿
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
@@ -21,8 +21,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                     MessageBox.Show($"El Archivo {c.Path} fué eliminado en tiempo de ejecucion.");
                     return;
                 }
-                
-
 
                 if (Irg.CancionActual.Index >= 0)
                 {
@@ -30,8 +28,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 }
                 Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexOf(c);
                 Irg.CancionActual.Cancion = c;
-
-                
 
                 Irg.Reproductor.Source = new Uri(c.Path);
                 Irg.Reproductor.Play();

@@ -16,7 +16,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
         public InfoReproductor()
         {
             TitutloVentana = string.Empty;
-            CancionActual = new CancionActual { Index = -1, Cancion = new Cancion() };
+            CancionActual = new CancionActual();
             Raiz = string.Empty;
             Preloader = false;
             IconoPlay = PackIconFontAwesomeKind.PlaySolid;

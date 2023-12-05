@@ -10,6 +10,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
     public class CancionActual
     {
         public int Index { get; set; } = -1;
-        public Cancion Cancion { get; set; } = null;
+        public Cancion Cancion { get; set; } = new Cancion()
+        {
+            Artista = "Descanocido",
+            Album = "Desconocido",
+            Titulo = "...",
+            Path = "",
+
+        };
     }
 }

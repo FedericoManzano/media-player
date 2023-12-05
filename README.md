@@ -38,6 +38,14 @@ Sistemas operativos Windows a partir de la versión 7 en adelante con arquitectu
 
 256 MB de memoría.
 
+
+### Mejoras desde la versión BETA 1.0.0
+
+* Recupera de manera correcta la canción en curso cuando se cierra y se inicia la aplicación nuevamente.
+* Limpieza y documentación del código.
+* Se redujo el código de las vistas.
+* Se habilita una página para buscar contenido.
+
 ### Autor
 
 [Federico Manzano](https://github.com/FedericoManzano)
