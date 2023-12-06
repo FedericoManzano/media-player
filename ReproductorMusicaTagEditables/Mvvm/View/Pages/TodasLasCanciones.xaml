@@ -113,7 +113,7 @@
             
         </Grid>
 
-        <Border Grid.Row="2" Width="3500" Background="Black" Opacity="0.5"
+        <Border Grid.Row="2" Width="3500" Background="Black" Opacity="0"
                 Margin="-1300 0 0 0 "
                 Visibility="{Binding CapaProtectora}">
             
