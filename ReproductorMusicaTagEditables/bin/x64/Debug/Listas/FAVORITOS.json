@@ -68,5 +68,19 @@
     "DuracionLong": 2445998076,
     "Imagen": null,
     "Cantidad": 1
+  },
+  {
+    "Numero": "4",
+    "Titulo": "Hells Bells",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Hells Bells.mp3",
+    "Duracion": "05:20",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 3203415384,
+    "Imagen": null,
+    "Cantidad": 1
   }
 ]

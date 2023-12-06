@@ -144,6 +144,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             if(c != null)
             {
                 Irg.CancionesFiltradas = new ObservableCollection<Cancion>(irg.Canciones);
+                int index = Irg.CancionesFiltradas.IndexOf(c);
+                Irg.Deseleccionar();
+                Irg.CancionActual.Index = index;
+                Irg.CancionActual.Cancion = c;
             }
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);
             ScrollVertical = irg.SetScroll();
