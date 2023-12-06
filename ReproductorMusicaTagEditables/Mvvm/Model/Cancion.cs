@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Media;
+using ControlTiempoMultimedia.MetodosExtendidos;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Model
@@ -63,8 +64,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                     Artista = ExtraerArtista(tag).Longitud(20),
                     Genero = ExtraerGenero(tag).Longitud(20),
                     Album = ExtraerAlbum(tag).Longitud(20),
-                    DuracionLong = this.DuracionLong(path),
-                    Duracion = TimeSpan.FromTicks((long) CalculoTiempo.CalculoTiempo.CalcularDuracionCancion(path).GetValueOrDefault(0UL)).ToString(@"mm\:ss"),
+                    DuracionLong =(ulong) path.DuracionLong(),
+                    Duracion = path.DuracionString(),
                     FechaLanzamiento = ExtraerFechaLanzamiento(tag),
                     EstadoColor = COLOR_TEXTO_DEFAULT,
                 };

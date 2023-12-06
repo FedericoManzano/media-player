@@ -1,4 +1,5 @@
-﻿using Reproductor_Musica.Core;
+﻿using ControlTiempoMultimedia.MetodosExtendidos;
+using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
@@ -116,7 +117,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     Titulo = album,
                     Ano = c.FechaLanzamiento,
                     Genero = c.Genero,
-                    Duracion = Irg.Presentacion.DuracionString(),
+                    Duracion = CalcularTiempoConjuntoCanciones(Irg.Presentacion.ToList()),
                     CantidadPistas = Irg.Presentacion.Count + " Canciones",
                     Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(c.Path),
                     PathImagen = c.Path
@@ -127,6 +128,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 Irg.BtnNavegacion = true;
             }
             return a;
+        }
+
+
+        private string CalcularTiempoAlbum ()
+        {
+            List<string> paths = Irg.Presentacion.Select(c => c.Path).ToList();
+            return ControlTiempoMultimedia.ControlTiempo.DuracionDelConjunto(paths).DuracionLongAStringConDescripcion();
         }
 
         public void Limpiar()

@@ -87,6 +87,9 @@
     <ApplicationIcon>nota-musical.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ControlTiempoMultimedia">
+      <HintPath>..\..\ControlTiempoMultimedia\ControlTiempoMultimedia\bin\Debug\ControlTiempoMultimedia.dll</HintPath>
+    </Reference>
     <Reference Include="ControlzEx, Version=4.0.0.0, Culture=neutral, PublicKeyToken=69f1c32f803d307e, processorArchitecture=MSIL">
       <HintPath>..\packages\ControlzEx.4.4.0\lib\net462\ControlzEx.dll</HintPath>
     </Reference>
@@ -579,7 +582,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mvvm\CalculoTiempo\CalculoTiempo.cs" />
     <Compile Include="Mvvm\ExtensionMetodos\ControlTiempo.cs" />
     <Compile Include="Mvvm\ExtensionMetodos\FormatoCampos.cs" />
     <Compile Include="Mvvm\ExtensionMetodos\PaginadorExtension.cs" />

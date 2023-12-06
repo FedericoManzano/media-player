@@ -1,4 +1,5 @@
-﻿using Reproductor_Musica.Core;
+﻿using ControlTiempoMultimedia.MetodosExtendidos;
+using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
@@ -116,20 +117,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 if(c.Genero == genero)
                     tiempo += c.DuracionLong;
             }
-            TimeSpan ts = TimeSpan.FromTicks((long)tiempo.GetValueOrDefault(0UL));
-            if(ts.Days > 0)
-            {
-                return ts.ToString(@"dd\:hh\:mm\:ss") + " Días";
-            } else if(ts.Hours > 0)
-            {
-                return ts.ToString(@"hh\:mm\:ss") + " Horas";
-            } else if(ts.Minutes > 0)
-            {
-                return ts.ToString(@"mm\:ss") + " Minutos";
-            } else
-            {
-                return ts.ToString(@"mm\:ss") + " Segundos";
-            }
+            return ((long)tiempo).DuracionLongAStringConDescripcion();
         }
 
         private string DameCantidadCanciones(string genero)

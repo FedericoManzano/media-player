@@ -1,4 +1,5 @@
-﻿using Reproductor_Musica.Core;
+﻿using ControlTiempoMultimedia.MetodosExtendidos;
+using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
@@ -6,6 +7,7 @@ using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -141,6 +143,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         protected void PlayAction(object obj)
         {
             Cancion c = (Cancion)obj;
+            if(c != null)
+            {
+                Irg.CancionesFiltradas = new ObservableCollection<Cancion>(irg.Canciones);
+            }
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);
             ScrollVertical = irg.SetScroll();
         }
@@ -222,5 +228,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         {
             Irg.BuscarCancion(inicialCancion);
         }
+
+        protected string CalcularTiempoConjuntoCanciones(List<Cancion> canciones)
+        {
+            List<string> paths = canciones.Select(c => c.Path).ToList();
+            return ControlTiempoMultimedia.ControlTiempo.DuracionDelConjunto(paths).DuracionLongAStringConDescripcion();
+        }
+       
     }
 }

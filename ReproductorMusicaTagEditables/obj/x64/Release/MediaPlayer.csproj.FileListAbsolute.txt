@@ -148,3 +148,5 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\MediaPlayer.csproj.CopyComplete
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\ReproductorMusicaTagEditables.exe
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\ReproductorMusicaTagEditables.pdb
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ControlTiempoMultimedia.dll
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ControlTiempoMultimedia.pdb

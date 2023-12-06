@@ -154,6 +154,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             {
                 tiempoTotalRepro += album.DuracionAlbum();
             }
+
             return tiempoTotalRepro.DuracionString(@"hh\:mm\:ss");
         }
 
