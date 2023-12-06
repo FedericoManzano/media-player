@@ -38,7 +38,7 @@ Desde este enlace podemos descargar el instalador del reproductor.
 
 ### Formatos de audio (Esta versión)
 
-`wav`, `mp3` y `m4a`. (Próximas versiones mas formatos de audio).
+`wav`, `mp3`, `m4a`, `wma` y `ACC`.
 
 ### Compatibilidad
 

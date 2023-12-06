@@ -62,7 +62,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         public ICommand SiguienteCommand { get; }
         public ICommand AnteriorCommand { get; }
        
-
         public ReproductorViewModelBase ()
         {
             irg = InfoReproductor.DameInstancia();
@@ -77,7 +76,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             if(irg.Canciones.Count == 0)
                 Irg.CargaDesdeElRepositorioCanciones();  
         }
-
 
         private void CargarInfoNavegacion()
         {
@@ -228,12 +226,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
         {
             Irg.BuscarCancion(inicialCancion);
         }
-
         protected string CalcularTiempoConjuntoCanciones(List<Cancion> canciones)
         {
             List<string> paths = canciones.Select(c => c.Path).ToList();
             return ControlTiempoMultimedia.ControlTiempo.DuracionDelConjunto(paths).DuracionLongAStringConDescripcion();
         }
-       
     }
 }

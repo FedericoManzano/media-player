@@ -15,11 +15,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos
         public static readonly string[] Extensiones = new string[]
         {
             ".mp3",
-            ".MP3",
             ".wav",
-            ".WAV",
-            ".m4a",
-            ".M4A"
+            ".ACC",
+            ".wma",
+            ".m4a"
         };
 
         public async Task<List<Cancion>> CargarListadoDeCancionesAsync(List<string> listPath)
@@ -61,7 +60,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos
                 var ext = System.IO.Path.GetExtension(path);
                 foreach (string e in Extensiones)
                 {
-                    if (e == ext)
+                    if (e.ToUpper() == ext.ToUpper())
                     {
                         list.Add(path);
                     }
