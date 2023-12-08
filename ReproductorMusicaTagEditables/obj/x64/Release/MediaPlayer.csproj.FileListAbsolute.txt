@@ -3,6 +3,7 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ReproductorMusicaTagEditables.application
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ReproductorMusicaTagEditables.exe
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ReproductorMusicaTagEditables.pdb
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ControlTiempoMultimedia.dll
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ControlzEx.dll
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\FontAwesome.WPF.dll
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\libvideo.dll
@@ -16,6 +17,7 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\Newtonsoft.Json.dll
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\System.Diagnostics.DiagnosticSource.dll
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\TagLibSharp.dll
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ControlTiempoMultimedia.pdb
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ControlzEx.pdb
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ControlzEx.xml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\FontAwesome.WPF.xml
@@ -41,6 +43,7 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\CampoBuscador\CampoBuscadorControl.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\CampoTexto\CampoTextoControl.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\CampoTexto\CampoTextoTheme.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\Historial\AlbumHistorialControl.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\InfoAlbumPagina\InfoAlbumPaginaControl.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\InfoAlbumPagina\InfoAlbumPaginaTheme.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\InfoAlbum\InfoAlbumControl.baml
@@ -74,6 +77,8 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\CampoBuscador\CampoBuscadorControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\CampoTexto\CampoTextoControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\DescargarCancion\DescargarCancionControl.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\Historial\AlbumHistorialControl.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\Historial\ListasHistorialControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\InfoAlbumPagina\InfoAlbumPaginaControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\InfoAlbum\InfoAlbumControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\InfoArtistaPagina\InfoArtistaPageControl.g.cs
@@ -96,9 +101,11 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\DescargasView.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\FavoritosView.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\GenerosView.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\HistorialView.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\ListasView.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\DescargasPage.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\FavoritosPage.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\HistorialPage.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\Internas\InfoAlbumPage.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\Internas\InfoArtistaPage.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\Internas\InfoGeneroPage.g.cs
@@ -114,6 +121,7 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\ReproductorMusicaTagEditables_MarkupCompile.cache
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\ReproductorMusicaTagEditables_MarkupCompile.lref
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\DescargarCancion\DescargarCancionControl.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\Historial\ListasHistorialControl.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\InfoCancionTablaTags\InfoCancionTablaTagsControl.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\InfoListaPagina\InfoListaPaginaControl.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\ManejadorVentana\ManejadorVentana.baml
@@ -128,8 +136,10 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\DescargasView.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\FavoritosView.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\GenerosView.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\HistorialView.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\DescargasPage.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\FavoritosPage.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\HistorialPage.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\Internas\InfoAlbumPage.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\Internas\InfoArtistaPage.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\Internas\InfoGeneroPage.baml
@@ -148,5 +158,3 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\MediaPlayer.csproj.CopyComplete
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\ReproductorMusicaTagEditables.exe
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\ReproductorMusicaTagEditables.pdb
-C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ControlTiempoMultimedia.dll
-C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\bin\x64\Release\ControlTiempoMultimedia.pdb

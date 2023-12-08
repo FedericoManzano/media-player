@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="ReproductorMusicaTagEditables.exe" version="1.0.0.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
+  <asmv1:assemblyIdentity name="ReproductorMusicaTagEditables.exe" version="1.0.0.13" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="amd64" type="win32" />
   <description asmv2:iconFile="nota-musical.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlTiempoMultimedia.dll" size="8192">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ControlTiempoMultimedia.dll" size="8704">
       <assemblyIdentity name="ControlTiempoMultimedia" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>akHKn1o0D9j0ol6BbrgR5f+VF+JuRJvgIqEn8Rf0AC8=</dsig:DigestValue>
+        <dsig:DigestValue>O4fu/bH3iUC1I04/IP8Q5JnqUp4LnLd8QVodlDxB8ns=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -199,14 +199,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReproductorMusicaTagEditables.exe" size="886200">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReproductorMusicaTagEditables.exe" size="901048">
       <assemblyIdentity name="ReproductorMusicaTagEditables" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5DphS5/xN6ZuVDIM7FL9d3iUWqrH+7pRh3cugc9tGOg=</dsig:DigestValue>
+        <dsig:DigestValue>UGaX7OpF17YaSl1CfOH4z0hnfJIK3y/65llbS/YV5j8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

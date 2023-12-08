@@ -6,48 +6,21 @@
              mc:Ignorable="d" 
              MinHeight="140" MinWidth="100"
              x:Name="infoLista">
-    <Grid>
+    <Grid MaxWidth="130">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-    
-        <Grid HorizontalAlignment="Center">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50"/>
-            <ColumnDefinition Width="50"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="50"/>
-        </Grid.RowDefinitions>
 
-        <Border>
-            <Border.Background>
-                <ImageBrush ImageSource="{Binding ElementName=infoLista, Path=ImagenUno}"/>
-            </Border.Background>
-        </Border>
 
-        <Border Grid.Column="1">
-            <Border.Background>
-                <ImageBrush ImageSource="{Binding ElementName=infoLista, Path=ImagenDos}"/>
-            </Border.Background>
-        </Border>
-        <Border Grid.Column="0" Grid.Row="1">
-            <Border.Background>
-                <ImageBrush ImageSource="{Binding ElementName=infoLista, Path=ImagenTres}"/>
-            </Border.Background>
-        </Border>
-        <Border Grid.Column="1" Grid.Row="1">
-            <Border.Background>
-                <ImageBrush ImageSource="{Binding ElementName=infoLista, Path=ImagenCuatro}"/>
-            </Border.Background>
-        </Border>
-    </Grid>
+
+
+        <Border Background="{Binding ElementName=infoLista, Path=ImagenUno}" Width="100" Height="100"/>
+        
+
         <StackPanel Grid.Row="1" Margin="0 5 0 0">
             <TextBlock Text="{Binding ElementName=infoLista, Path=Nombre}" FontWeight="SemiBold" Foreground="White"/>
-            <TextBlock Text="Lista de Reproducción" FontSize="10" Foreground="Gray"/>
-            <TextBlock Text="{Binding ElementName=infoLista, Path=Cantidad}" FontSize="10" Foreground="Gray"/>
+            <TextBlock Text="{Binding ElementName=infoLista, Path=Artista}" FontSize="10" Foreground="Gray"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -34,22 +34,35 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+            
             <StackPanel>
-                <TextBlock Foreground="White" Text="Álbumes escuchados recientemente" FontSize="16" FontWeight="SemiBold"/>
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <ItemsControl>
+                <TextBlock Margin="0 0 0 10" Foreground="White" Text="Álbumes escuchados recientemente" FontSize="16" FontWeight="SemiBold"/>
+                <TextBlock x:Name="albumesVacio" Text="No hay álbumes escuchados recientemente." Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40" FontSize="20"/>
+                <ScrollViewer x:Name="itemsAlbumes" VerticalScrollBarVisibility="Auto">
+                    <ItemsControl ItemsSource="{Binding ListasAlbumes}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
-                                <controls:AlbumHistorialControl/>
+                                <controls:AlbumHistorialControl
+                                    Nombre="{Binding Titulo}"
+                                    Artista="{Binding Artista}"
+                                    ImagenUno="{Binding Imagen}"
+                                    MouseLeftButtonUp="AlbumHistorialControl_MouseLeftButtonUp"
+                                    Margin="0 0 20 0"/>
                             </DataTemplate>
                         </ItemsControl.ItemTemplate>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
                     </ItemsControl>
                 </ScrollViewer>
             </StackPanel>
 
             <StackPanel Grid.Row="1">
                 <TextBlock Foreground="White" Margin="0 0 0 10" Text="Listas de reproducción escuchadas recientemente" FontSize="16" FontWeight="SemiBold"/>
-                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="listasVacio" Text="No hay listas de reproducción escuchadas recientemente." Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40" FontSize="20"/>
+                <ScrollViewer x:Name="listasRepro" VerticalScrollBarVisibility="Auto">
                     <ItemsControl ItemsSource="{Binding ListasRep}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>

@@ -24,40 +24,6 @@ namespace ReproductorMusicaTagEditables.Controls.Historial
         }
         #endregion
 
-        #region Imagen2
-        public static DependencyProperty ImagenDosProperty =
-            DependencyProperty.Register("ImagenDos", typeof(ImageBrush), typeof(AlbumHistorialControl));
-
-        public ImageBrush ImagenDos
-        {
-            get => (ImageBrush)GetValue(ImagenDosProperty);
-            set => SetValue(ImagenDosProperty, value);
-        }
-        #endregion
-
-        #region Imagen3
-        public static DependencyProperty ImagenTresProperty =
-            DependencyProperty.Register("ImagenTres", typeof(ImageBrush), typeof(AlbumHistorialControl));
-
-        public ImageBrush ImagenTres
-        {
-            get => (ImageBrush)GetValue(ImagenTresProperty);
-            set => SetValue(ImagenTresProperty, value);
-        }
-        #endregion
-
-        #region Imagen4
-        public static DependencyProperty ImagenCuatroProperty =
-            DependencyProperty.Register("ImagenCuatro", typeof(ImageBrush), typeof(AlbumHistorialControl));
-
-        public ImageBrush ImagenCuatro
-        {
-            get => (ImageBrush)GetValue(ImagenCuatroProperty);
-            set => SetValue(ImagenCuatroProperty, value);
-        }
-        #endregion
-
-
 
         public static DependencyProperty NombreProperty = 
             DependencyProperty.Register("Nombre", typeof(string), typeof(AlbumHistorialControl), new PropertyMetadata(string.Empty));   
@@ -70,14 +36,13 @@ namespace ReproductorMusicaTagEditables.Controls.Historial
 
 
 
-        public static DependencyProperty CantidadProperty =
-            DependencyProperty.Register("Cantidad", typeof(string), typeof(AlbumHistorialControl), new PropertyMetadata(string.Empty));
+        public static DependencyProperty ArtistaProperty =
+            DependencyProperty.Register("Artista", typeof(string), typeof(AlbumHistorialControl), new PropertyMetadata(string.Empty));
 
-        public string Cantidad
+        public string Artista
         {
-            get => (string)GetValue(CantidadProperty);
-            set => SetValue(CantidadProperty, value);
+            get => (string)GetValue(ArtistaProperty);
+            set => SetValue(ArtistaProperty, value);
         }
-
     }
 }

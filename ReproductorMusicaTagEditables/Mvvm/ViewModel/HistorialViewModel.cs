@@ -18,7 +18,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     {
 
         private ObservableCollection<ListaRep> _listasRep;
-
+        private ObservableCollection<Album> _listasAlbumes;
         public ObservableCollection<ListaRep> ListasRep
         {
             get => _listasRep;
@@ -28,11 +28,20 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 OnPropertyChanged(nameof(ListasRep));
             }
         }
-
+        public ObservableCollection<Album> ListasAlbumes
+        {
+            get => _listasAlbumes;
+            set
+            {
+                _listasAlbumes = value;
+                OnPropertyChanged(nameof(ListasAlbumes));
+            }
+        }
 
         public HistorialViewModel() {
             Irg.TitutloVentana = "Historial";
             _listasRep = new ObservableCollection<ListaRep>();
+            _listasAlbumes = new ObservableCollection<Album>();
         }
 
         public void CargarListasHistorial()
@@ -57,9 +66,21 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             }
         }
 
+        public void CargarAlbumesHistorial()
+        {
+            List<Album> la = Historial.DameHistorialAlbum();
+
+            foreach (var al in la)
+            { 
+                al.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(al.PathImagen);
+                ListasAlbumes.Add(al);
+            }
+        }
+
         public void Limpiar()
         {
             ListasRep.Clear();
+            ListasAlbumes.Clear();
             System.GC.Collect();
         }
     }
