@@ -2,6 +2,7 @@
 using ReproductorMusicaTagEditables.Controls.ListaAvatar;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
@@ -88,6 +89,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
                         .Ejecutar(irg, Irg.CancionesFiltradas[0]);
+                Historial.AgregarAHistorialListas(ListaRep.Nombre);
             } else
             {
                 Cancion c = (Cancion)obj;
@@ -99,6 +101,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
                         .Ejecutar(irg, Irg.CancionActual.Cancion);
+                Historial.AgregarAHistorialListas(ListaRep.Nombre);
             }
         }
         public void ActualizarFiltro ()
@@ -123,6 +126,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 }
             }
             Irg.Seleccionar();
+
         }
         public void Limpiar()
         {

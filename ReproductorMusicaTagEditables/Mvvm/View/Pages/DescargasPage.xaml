@@ -193,8 +193,7 @@
                         <TextBlock Text="No Cambie de página mientras el proceso de descarga está activo."
                                    Foreground="Red"
                                    FontSize="15"
-                                   Visibility="{Binding MjeDescargaActivado}"
-                                   />
+                                   Visibility="{Binding MjeDescargaActivado}"/>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>

@@ -309,6 +309,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Historial\AlbumHistorialControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Historial\ListasHistorialControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\InfoAlbumPagina\InfoAlbumPaginaControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -426,6 +434,12 @@
     </Compile>
     <Compile Include="Controls\DescargarCancion\DescargarCancionControl.xaml.cs">
       <DependentUpon>DescargarCancionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Historial\AlbumHistorialControl.xaml.cs">
+      <DependentUpon>AlbumHistorialControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Historial\ListasHistorialControl.xaml.cs">
+      <DependentUpon>ListasHistorialControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\InfoAlbumPagina\InfoAlbumPaginaControl.xaml.cs">
       <DependentUpon>InfoAlbumPaginaControl.xaml</DependentUpon>
@@ -603,6 +617,7 @@
     <Compile Include="Mvvm\Repository\CargaArchivos\IMusica\ICargarMusicaDirectorio.cs" />
     <Compile Include="Mvvm\Repository\CargaArchivos\IMusica\ICargarMusicaDragDrop.cs" />
     <Compile Include="Mvvm\Repository\CargaInicial\RepositorioDeCanciones.cs" />
+    <Compile Include="Mvvm\Repository\Historial\Historial.cs" />
     <Compile Include="Mvvm\Repository\Listas\ListasExtends.cs" />
     <Compile Include="Mvvm\Repository\Listas\ListasReproduccion.cs" />
     <Compile Include="Mvvm\CalculoTiempo\AgregarCancionesListas.xaml.cs">

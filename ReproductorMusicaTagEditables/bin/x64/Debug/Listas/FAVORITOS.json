@@ -82,5 +82,33 @@
     "DuracionLong": 3203415384,
     "Imagen": null,
     "Cantidad": 1
+  },
+  {
+    "Numero": "1",
+    "Titulo": "Héroe del Whisky",
+    "Artista": "PATRICIO REY",
+    "Album": "BANG BANG",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Redondos\\BangBang\\Héroe del Whisky.m4a",
+    "Duracion": "03:42",
+    "FechaLanzamiento": "1989",
+    "EstadoColor": "White",
+    "DuracionLong": 2226100000,
+    "Imagen": null,
+    "Cantidad": 1
+  },
+  {
+    "Numero": "1",
+    "Titulo": "Esquina Libertad",
+    "Artista": "LOS PIOJOS",
+    "Album": "3 ARCO",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Los Piojos\\3 Arco\\Esquina Libertad.mp3",
+    "Duracion": "04:41",
+    "FechaLanzamiento": "1996",
+    "EstadoColor": "White",
+    "DuracionLong": 2811559183,
+    "Imagen": null,
+    "Cantidad": 1
   }
 ]

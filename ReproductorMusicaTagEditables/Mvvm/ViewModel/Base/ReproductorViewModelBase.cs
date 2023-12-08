@@ -2,6 +2,7 @@
 using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
@@ -71,8 +72,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             SiguienteCommand = new RelayCommand(SiguienteAction, CanSiguienteAction);
             AnteriorCommand = new RelayCommand(AnteriorAction, CanAnteriorAction);
             PlayCommand = new RelayCommand(PlayAction);
+            Historial.CrearHistorial();
             CargarInfoNavegacion();
-
             if(irg.Canciones.Count == 0)
                 Irg.CargaDesdeElRepositorioCanciones();  
         }

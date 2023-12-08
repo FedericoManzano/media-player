@@ -11,9 +11,6 @@ using System.Windows;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 {
-    /// <summary>
-    /// Gestor de lista de reproducción 
-    /// </summary>
     public  class ListasReproduccion
     {
 
