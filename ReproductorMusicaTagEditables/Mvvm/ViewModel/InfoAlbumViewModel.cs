@@ -50,7 +50,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 Irg.CancionActual.Cancion = c;
                 Irg.CancionesFiltradas = Irg.Presentacion;
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionActual.Cancion);
-                Historial.AgregarAHistorialAlbumes(AlbumSeleccionado.Titulo);
+                Historial.AgregarAHistorialAlbumes(AlbumSeleccionado);
             }
             else
             {
@@ -59,7 +59,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 Irg.CancionActual.Index = 0;
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
-                Historial.AgregarAHistorialAlbumes(AlbumSeleccionado.Titulo);
+                Historial.AgregarAHistorialAlbumes(AlbumSeleccionado);
             }
         }
 

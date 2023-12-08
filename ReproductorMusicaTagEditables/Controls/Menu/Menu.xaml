@@ -47,6 +47,16 @@
                             Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
             </RadioButton>
+            <RadioButton Style="{StaticResource btnMenu}" 
+                         Command="{Binding ElementName=menuLateral,Path=CommandHistorial}"
+                         ToolTip="Historial">
+                <StackPanel Orientation="Horizontal">
+                    <fa:PackIconFontAwesome Kind="HistorySolid"
+                                            Style="{StaticResource iconoItemMenu}"/>
+                    <TextBlock Text="Historial" 
+                               Style="{StaticResource textoItemMenu}"/>
+                </StackPanel>
+            </RadioButton>
             <RadioButton Style="{StaticResource btnMenu}"
                          Command="{Binding ElementName=menuLateral,Path=CommandArtistas}"
                          ToolTip="Todos los artistas">
@@ -62,7 +72,7 @@
                          ToolTip="Todos los albumes">
                 <StackPanel Orientation="Horizontal">
                     <fa:PackIconFontAwesome Kind="MusicSolid"
-                               Style="{StaticResource iconoItemMenu}"></fa:PackIconFontAwesome>
+                               Style="{StaticResource iconoItemMenu}"/>
                     <TextBlock Text="Albumes" 
                             Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>

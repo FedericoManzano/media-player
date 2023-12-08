@@ -53,6 +53,9 @@
         <DataTemplate DataType="{x:Type viewModel:DescargasViewModel}">
             <view:DescargasView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type viewModel:HistorialViewModel}">
+            <view:HistorialView/>
+        </DataTemplate>
     </Window.Resources>
 
     <Border CornerRadius="10" 
@@ -78,6 +81,7 @@
                          CommandFavoritos="{Binding FavoritosCommand}"
                          CommandGeneros="{Binding GenerosCommand}"
                          CommandDescargas="{Binding DescargasCommand}"
+                         CommandHistorial="{Binding HistorialCommand}"
                          DocClick="Menu_DocClick"/>
 
                 <!-- Main Section -->

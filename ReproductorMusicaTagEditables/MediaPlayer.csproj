@@ -522,6 +522,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\HistorialView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\ListasView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -531,6 +535,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Mvvm\View\Pages\FavoritosPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mvvm\View\Pages\HistorialPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -645,6 +653,7 @@
     <Compile Include="Mvvm\ViewModel\FavoritosViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\Filtros\PaginadorAvanzado.cs" />
     <Compile Include="Mvvm\ViewModel\GenerosViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\HistorialViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoAlbumViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoArtistaViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\InfoGeneroViewModel.cs" />
@@ -677,6 +686,9 @@
     <Compile Include="Mvvm\View\GenerosView.xaml.cs">
       <DependentUpon>GenerosView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Mvvm\View\HistorialView.xaml.cs">
+      <DependentUpon>HistorialView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Mvvm\View\ListasView.xaml.cs">
       <DependentUpon>ListasView.xaml</DependentUpon>
     </Compile>
@@ -685,6 +697,9 @@
     </Compile>
     <Compile Include="Mvvm\View\Pages\FavoritosPage.xaml.cs">
       <DependentUpon>FavoritosPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\Pages\HistorialPage.xaml.cs">
+      <DependentUpon>HistorialPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\Pages\Internas\InfoAlbumPage.xaml.cs">
       <DependentUpon>InfoAlbumPage.xaml</DependentUpon>

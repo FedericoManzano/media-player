@@ -3,6 +3,7 @@ using ReproductorMusicaTagEditables.Mvvm.View;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
 using System;
+using System.Windows;
 using System.Windows.Input;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
@@ -29,6 +30,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         public ICommand FavoritosCommand { get; }
         public ICommand GenerosCommand { get; }
         public ICommand DescargasCommand { get; }
+        public ICommand HistorialCommand { get; }
 
         public ReproductorViewModelBase CurrentView
         {
@@ -49,7 +51,23 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             FavoritosCommand = new RelayCommand(MostrarFavoritosView);
             GenerosCommand = new RelayCommand(MostrarGenerosView);
             DescargasCommand = new RelayCommand(MostrarDescargasView);
+            HistorialCommand = new RelayCommand(MostrarHistorialView);
             this.CurrentView = new PrincipalViewModel();
+        }
+
+        private void MostrarHistorialView(object obj)
+        {
+            if(InfoReproductor.PAGINA_ACTUAL != InfoReproductor.HISTORIAL)
+            {
+                InfoReproductor.PAGINA_ACTUAL = InfoReproductor.HISTORIAL;
+                LimpiarInfoDePaginas();
+                if (!Irg.Preloader)
+                {
+                    Irg.Partes.Clear();
+                    this.CurrentView = new HistorialViewModel();
+                }
+            }
+            
         }
 
         private void MostrarDescargasView(object obj)

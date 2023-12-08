@@ -79,6 +79,16 @@ namespace ReproductorMusicaTagEditables.Controls.Menu
             set => SetValue(CommandDescargasProperty, value);
         }
 
+
+        public static readonly DependencyProperty CommandHistorialProperty =
+            DependencyProperty.Register("CommandHistorial", typeof(ICommand), typeof(Menu));
+
+        public ICommand CommandHistorial
+        {
+            get => (ICommand)GetValue(CommandHistorialProperty);
+            set => SetValue(CommandHistorialProperty, value);
+        }
+
         public static RoutedEvent DocClickEvent =
             EventManager.RegisterRoutedEvent("DocClick", RoutingStrategy.Bubble, typeof(EventHandler), typeof(Menu));
 

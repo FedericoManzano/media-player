@@ -1,3 +1,13 @@
 [
-  "3 ARCO"
+  {
+    "Artista": "LOS PIOJOS",
+    "Titulo": "3 ARCO",
+    "Ano": "1996",
+    "Genero": "ROCK NACIONAL",
+    "CantidadPistas": "13 Canciones",
+    "Duracion": "56:45 Minutos",
+    "DuracionLong": null,
+    "Imagen": "System.Windows.Media.ImageBrush",
+    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Los Piojos\\3 Arco\\Esquina Libertad.mp3"
+  }
 ]

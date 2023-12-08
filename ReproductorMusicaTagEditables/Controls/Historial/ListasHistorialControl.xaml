@@ -5,8 +5,35 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.Historial"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             MinHeight="140" MinWidth="100"
+             x:Name="infoLista">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Border Background="{Binding ElementName=infoLista, Path=ImagenUno}"/>
+            <Border Grid.Column="1" Background="{Binding ElementName=infoLista, Path=ImagenDos}"/>
+            <Border Grid.Column="0" Grid.Row="1" Background="{Binding ElementName=infoLista, Path=ImagenTres}"/>
+            <Border Grid.Column="1" Grid.Row="1" Background="{Binding ElementName=infoLista, Path=ImagenCuatro}"/>
+
+
+        </Grid>
+        <StackPanel Grid.Row="1" Margin="0 5 0 0">
+            <TextBlock Text="{Binding ElementName=infoLista, Path=Nombre}" FontWeight="SemiBold" Foreground="White"/>
+            <TextBlock Text="Lista de Reproducción" FontSize="10" Foreground="Gray"/>
+            <TextBlock Text="{Binding ElementName=infoLista, Path=Cantidad}" FontSize="10" Foreground="Gray"/>
+        </StackPanel>
     </Grid>
 </UserControl>

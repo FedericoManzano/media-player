@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
+using ReproductorMusicaTagEditables.Mvvm.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.ConstrainedExecution;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
 {
@@ -60,6 +60,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
                             return true;
                         }
                     }
+                    else
+                    {
+                        listadoHistorialListas.Remove(nombreLista);
+                        listadoHistorialListas.Insert(0, nombreLista);
+                        string ser = JsonConvert.SerializeObject(listadoHistorialListas, Formatting.Indented);
+                        using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_LISTAS))
+                        {
+                            sw.Write(ser);
+                            return true;
+                        }
+                    }
                 } else
                 {
                     listadoHistorialListas = new List<string>
@@ -73,24 +84,23 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
                         return true;
                     }
                 }
-                
             }
             return false;
         }
 
 
-        public static bool AgregarAHistorialAlbumes(string nombreAlbum)
+        public static bool AgregarAHistorialAlbumes(Album album)
         {
             if (ExisteHistorialAlbumes())
             {
                 
-                List<string> listadoNombresAlbumes = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(ARCHIVO_HISTORIAL_ALBUMES));
+                List<Album> listadoNombresAlbumes = JsonConvert.DeserializeObject<List<Album>>(File.ReadAllText(ARCHIVO_HISTORIAL_ALBUMES));
                 
                 if(listadoNombresAlbumes != null)
                 {
-                    if (!listadoNombresAlbumes.Contains(nombreAlbum))
+                    if (!listadoNombresAlbumes.Contains(album))
                     {
-                        listadoNombresAlbumes.Insert(0, nombreAlbum);
+                        listadoNombresAlbumes.Insert(0, album);
                         string ser = JsonConvert.SerializeObject(listadoNombresAlbumes, Formatting.Indented);
                         using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_ALBUMES))
                         {
@@ -100,9 +110,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
                     }
                 } else
                 {
-                    listadoNombresAlbumes = new List<string>()
+                    listadoNombresAlbumes = new List<Album>()
                     {
-                        nombreAlbum
+                        album
                     };
                     string ser = JsonConvert.SerializeObject(listadoNombresAlbumes, Formatting.Indented);
                     using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_ALBUMES))
@@ -114,6 +124,28 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
                 
             }
             return false;
+        }
+
+        public static List<string> DameHistorialListas()
+        {
+            List<string> listas = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(ARCHIVO_HISTORIAL_LISTAS));
+
+            if (listas != null)
+            {
+                return listas;
+            }
+            return new List<string>();
+        }
+
+        public static List<Album> DameHistorialAlbum ()
+        {
+            List<Album> albums = JsonConvert.DeserializeObject<List<Album>>(File.ReadAllText(ARCHIVO_HISTORIAL_ALBUMES));
+
+            if(albums != null)
+            {
+                return albums;
+            }
+            return new List<Album>();
         }
     }
 }
