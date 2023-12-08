@@ -3,6 +3,7 @@ using ReproductorMusicaTagEditables.Mvvm.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.ConstrainedExecution;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
 {
@@ -167,6 +168,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
                 return albums;
             }
             return new List<Album>();
+        }
+
+        public static void BorrarHistorial()
+        {
+            using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_ALBUMES))
+            {
+                sw.Write("");
+            }
+
+            using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_LISTAS))
+            {
+                sw.Write("");
+            }
         }
     }
 }

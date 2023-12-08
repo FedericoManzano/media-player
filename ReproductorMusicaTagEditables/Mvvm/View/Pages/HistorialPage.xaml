@@ -3,15 +3,18 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Mvvm.View.Pages"
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:controls="clr-namespace:ReproductorMusicaTagEditables.Controls.Historial"
+      xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="HistorialPage"
       Loaded="Page_Loaded"
       Unloaded="Page_Unloaded">
 
+    <Page.Resources>
+        <ResourceDictionary Source="/Mvvm/View/Pages/Theme/generalesPageTheme.xaml"/>
+    </Page.Resources>
 
     <Page.DataContext>
         <viewModel:HistorialViewModel x:Name="historialViewModel"/>
@@ -22,11 +25,18 @@
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel>
+        <StackPanel Orientation="Horizontal">
             <TextBlock Text="Historial" 
                        Foreground="White"
                        FontSize="25"
                        VerticalAlignment="Center"/>
+            <Button Style="{StaticResource btnEliminarHistorial}" 
+                    Margin="5 0 0 0"
+                    ToolTip="Eliminar el historial"
+                    Click="Eliminar_Historial">
+                <fa:PackIconFontAwesome Style="{StaticResource iconEliminarHistorial}" Kind="TrashAltSolid"/>
+            </Button>
+            
         </StackPanel>
 
         <Grid Grid.Row="1">

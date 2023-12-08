@@ -1,6 +1,7 @@
 ﻿
 using ReproductorMusicaTagEditables.Controls.Historial;
 using ReproductorMusicaTagEditables.Controls.ListaAvatar;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,21 +18,28 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            CargarPagina();
+        }
+
+
+        private void CargarPagina()
+        {
             historialViewModel.Limpiar();
             historialViewModel.CargarAlbumesHistorial();
             historialViewModel.CargarListasHistorial();
 
-            if(historialViewModel.ListasAlbumes.Count == 0)
+            if (historialViewModel.ListasAlbumes.Count == 0)
             {
                 albumesVacio.Visibility = Visibility.Visible;
                 itemsAlbumes.Visibility = Visibility.Collapsed;
-            } else
+            }
+            else
             {
                 albumesVacio.Visibility = Visibility.Collapsed;
                 itemsAlbumes.Visibility = Visibility.Visible;
             }
 
-            if(historialViewModel.ListasRep.Count == 0)
+            if (historialViewModel.ListasRep.Count == 0)
             {
                 listasVacio.Visibility = Visibility.Visible;
                 listasRepro.Visibility = Visibility.Collapsed;
@@ -69,6 +77,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             AlbumHistorialControl i = (AlbumHistorialControl)sender;
             historialViewModel.Limpiar();
             this.NavigationService.Navigate(new InfoAlbumPage(i.Nombre));
+        }
+
+        private void Eliminar_Historial(object sender, RoutedEventArgs e)
+        {
+            Historial.BorrarHistorial();
+            CargarPagina();
         }
     }
 }

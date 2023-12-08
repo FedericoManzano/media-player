@@ -2,6 +2,7 @@
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System.Collections.Generic;
@@ -56,7 +57,21 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 Irg.Deseleccionar();
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
                 ScrollVertical = irg.SetScroll();
+                Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionesFiltradas[0]));
             }
+        }
+
+        private Album GenerarAlbum (Cancion c)
+        {
+            return new Album()
+            {
+                Titulo = c.Album,
+                Artista = c.Artista,
+                PathImagen = c.Path,
+                Genero = c.Genero,
+                Ano = c.FechaLanzamiento,
+                Imagen = null,
+            };
         }
 
         private bool CanPlayArtistaAction(object arg)

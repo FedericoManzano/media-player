@@ -15,6 +15,20 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         public ulong? DuracionLong { get; set; }
         public ImageBrush Imagen {  get; set; }
         public string PathImagen {  get; set; } 
+
+
+        public override bool Equals(object otro)
+        {
+            if (otro == null)
+                return false;
+            if (otro.GetType() != typeof(Album)) return false;
+            if (otro == this) return true;
+
+            Album n = otro as Album;
+
+            return this.Titulo == n.Titulo && this.Artista == n.Artista;
+        }
+
         public int CompareTo(Album other)
         {
             return Titulo.CompareTo(other.Titulo);

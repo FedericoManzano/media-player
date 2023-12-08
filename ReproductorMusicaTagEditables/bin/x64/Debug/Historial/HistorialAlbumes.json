@@ -1,79 +1,24 @@
 [
   {
-    "Artista": "INDIO SOLARI",
-    "Titulo": "RUISEÑOR, EL AMOR Y ...",
+    "Artista": "LED ZEPPELIN",
+    "Titulo": "LED ZEPPELIN 3",
+    "Ano": "1970",
+    "Genero": "ROCK INTERNACIONAL",
+    "CantidadPistas": "10 Canciones",
+    "Duracion": "43:09 Minutos",
+    "DuracionLong": null,
+    "Imagen": null,
+    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\Led Zeppelin 3\\01 Immigrant Song (Remaster).mp3"
+  },
+  {
+    "Artista": "LED ZEPPELIN",
+    "Titulo": "LED ZEPPELIN X LED Z...",
     "Ano": "2018",
-    "Genero": "ROCK NACIONAL",
-    "CantidadPistas": "14 Canciones",
-    "Duracion": "50:44 Minutos",
+    "Genero": "ROCK INTERNACIONAL",
+    "CantidadPistas": "30 Canciones",
+    "Duracion": "02:36:33 Horas",
     "DuracionLong": null,
     "Imagen": null,
-    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Redondos\\Ruiseñor amor y muerte\\01 Pinturas de Guerra.mp3"
-  },
-  {
-    "Artista": "QUEEN",
-    "Titulo": "GRATEST HITS II",
-    "Ano": "1991",
-    "Genero": "POP",
-    "CantidadPistas": "17 Canciones",
-    "Duracion": "01:15:51 Horas",
-    "DuracionLong": null,
-    "Imagen": null,
-    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Queen\\Queen GH 2\\01 A Kind Of Magic (Remastered 2011).mp3"
-  },
-  {
-    "Artista": "ATTAQUE 77",
-    "Titulo": "BEST ATTAQUE 77",
-    "Ano": "2023",
-    "Genero": "ROCK NACIONAL",
-    "CantidadPistas": "23 Canciones",
-    "Duracion": "01:28:35 Horas",
-    "DuracionLong": null,
-    "Imagen": null,
-    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Attaque77\\Angel Attaque 77 Nuevas Versiones.mp3"
-  },
-  {
-    "Artista": "SINÉAD O'CONNOR",
-    "Titulo": "BALADAS 80 90",
-    "Ano": "2022",
-    "Genero": "BALADAS",
-    "CantidadPistas": "14 Canciones",
-    "Duracion": "01:02:16 Horas",
-    "DuracionLong": null,
-    "Imagen": null,
-    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Baladas 80 90\\01 Sinéad O'Connor - Nothing Compares 2 U (Official Music Video).mp3"
-  },
-  {
-    "Artista": "METALLICA",
-    "Titulo": "KILL EM ALL",
-    "Ano": "1983",
-    "Genero": "HEAVY METAL",
-    "CantidadPistas": "9 Canciones",
-    "Duracion": "46:59 Minutos",
-    "DuracionLong": null,
-    "Imagen": null,
-    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Metallica\\kill 'Em All\\01 Hit The Lights.mp3"
-  },
-  {
-    "Artista": "DEEP PURPLE",
-    "Titulo": "BEST DEEP PURPLE",
-    "Ano": "2022",
-    "Genero": "HEAVY METAL",
-    "CantidadPistas": "12 Canciones",
-    "Duracion": "01:02:56 Horas",
-    "DuracionLong": null,
-    "Imagen": null,
-    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Deep Purple\\01 Black Night.mp3"
-  },
-  {
-    "Artista": "ROXETTE",
-    "Titulo": "30 BIGGEST HITS",
-    "Ano": "2015",
-    "Genero": "POP",
-    "CantidadPistas": "26 Canciones",
-    "Duracion": "01:46:28 Horas",
-    "DuracionLong": null,
-    "Imagen": null,
-    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Roxette\\30 BIGGEST HITS\\01 The Look.mp3"
+    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\LED ZEPPELIN\\Led Zeppelin x Led Zeppelin\\01 Immigrant Song (Remaster).mp3"
   }
 ]
