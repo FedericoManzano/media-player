@@ -98,7 +98,14 @@
                            Foreground="#ccc" 
                            FontSize="12"
                            Margin="0 4 0 0 "/>
-                
+                <Button Style="{StaticResource btnEliminarHistorial}" Click="Ver_Historial"
+                        ToolTip="Últimos escuchados." Margin="15 0 0 0"
+                        Visibility="{Binding HayHistorial}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Style="{StaticResource iconEliminarHistorial}" Kind="HistorySolid"/>
+                        <TextBlock Style="{StaticResource txtEliminacion}" Text="Más Recientes" Margin="5 0 0 0"/>
+                    </StackPanel>
+                </Button>
             </StackPanel>
 
 

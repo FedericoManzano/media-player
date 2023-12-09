@@ -42,7 +42,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
             return File.Exists(ARCHIVO_HISTORIAL_ALBUMES);
         }
 
-
         public static bool AgregarAHistorialListas(string nombreLista)
         {
             if (ExisteHistorialListas())
@@ -93,7 +92,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
             }
             return false;
         }
-
 
         public static bool AgregarAHistorialAlbumes(Album album)
         {
@@ -181,6 +179,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
             {
                 sw.Write("");
             }
+        }
+
+        public static bool HayHistorial()
+        {
+            List<Album> albums = JsonConvert.DeserializeObject<List<Album>>(File.ReadAllText(ARCHIVO_HISTORIAL_ALBUMES));
+            List<string> listas = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(ARCHIVO_HISTORIAL_LISTAS));
+
+            return listas != null || albums != null;
         }
     }
 }

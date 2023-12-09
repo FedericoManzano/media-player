@@ -2,6 +2,7 @@
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos;
 using ReproductorMusicaTagEditables.Mvvm.Repository.CargaInicial;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
     public class PrincipalViewModel : ReproductorViewModelBase
     {
+        private Visibility _hayHistorial = Visibility.Collapsed;
+
+
         private string _cantidadCanciones = string.Empty;
      
         public ICommand AgregarCommand { get; }
@@ -23,6 +27,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             Irg.TitutloVentana = "Página Principal";
             CantidadCanciones = " (" + Irg.Canciones.Count + " Canciones)";
             AgregarCommand = new RelayCommand(AgregarAction);
+            HayHistorialMusica();
+        }
+
+        public void HayHistorialMusica ()
+        {
+            if (Historial.HayHistorial())
+            {
+                HayHistorial = Visibility.Visible;
+            }
+            else
+            {
+                HayHistorial = Visibility.Collapsed;
+            }
         }
 
         private async void AgregarAction(object obj)
@@ -57,6 +74,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         }
 
         public string CantidadCanciones { get => _cantidadCanciones; set { _cantidadCanciones = value; OnPropertyChanged(nameof(CantidadCanciones)); } }
-        
+
+        public Visibility HayHistorial { get => _hayHistorial; set { _hayHistorial = value; OnPropertyChanged(nameof(HayHistorial)); } }
     }
 }

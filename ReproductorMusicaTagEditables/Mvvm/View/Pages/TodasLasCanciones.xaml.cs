@@ -1,6 +1,5 @@
 ﻿
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
-using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
@@ -29,11 +28,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         {
             panelPrincipal.ScrollVertical = scrollCanciones.VerticalOffset;
             panelPrincipal.AgregarElementosAlFiltro();
-        }
-
-        private void Cargar_Archivos_Directorio(object sender, System.Windows.RoutedEventArgs e)
-        {
-            
         }
 
         private void InfoCancionTabla_ArtistaClick(object sender, EventArgs e)
@@ -99,5 +93,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             editor.ShowDialog();
         }
 
+        private void Ver_Historial(object sender, System.Windows.RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new HistorialPage());
+        }
     }
 }

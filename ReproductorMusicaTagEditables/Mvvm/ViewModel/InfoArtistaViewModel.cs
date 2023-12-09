@@ -61,19 +61,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             }
         }
 
-        private Album GenerarAlbum (Cancion c)
-        {
-            return new Album()
-            {
-                Titulo = c.Album,
-                Artista = c.Artista,
-                PathImagen = c.Path,
-                Genero = c.Genero,
-                Ano = c.FechaLanzamiento,
-                Imagen = null,
-            };
-        }
-
         private bool CanPlayArtistaAction(object arg)
         {
             return Irg.Canciones.Count > 0;

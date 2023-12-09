@@ -84,5 +84,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
             Historial.BorrarHistorial();
             CargarPagina();
         }
+
+        private void Pagina_Anterior(object sender, RoutedEventArgs e)
+        {
+            if (this.NavigationService.CanGoBack)
+            {
+                historialViewModel.Limpiar();
+                this.NavigationService.GoBack();
+            }
+        }
     }
 }

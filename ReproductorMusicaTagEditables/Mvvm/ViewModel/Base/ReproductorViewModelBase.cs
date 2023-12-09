@@ -152,6 +152,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
             }
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);
             ScrollVertical = irg.SetScroll();
+            Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
+        }
+        protected Album GenerarAlbum(Cancion c)
+        {
+            return new Album()
+            {
+                Titulo = c.Album,
+                Artista = c.Artista,
+                PathImagen = c.Path,
+                Genero = c.Genero,
+                Ano = c.FechaLanzamiento,
+                Imagen = null,
+            };
         }
         private void CargarMusicaAction(object obj)
         {
