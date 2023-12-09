@@ -1,4 +1,7 @@
-# :books: Manual Media Player
+# :books: Manual Media Player 
+
+![Badge en Desarollo](https://img.shields.io/badge/LICENCE-%20MIT-green)
+![Badge en Desarollo](https://img.shields.io/badge/VERSIÓN-%20V1.5.0-purple)
 
 ## :link: Indice de contenidos
 
@@ -23,11 +26,12 @@
 * :arrow_down: [Descargas](#descargas)
 
 
+
 ### Descargar Reproductor
 
 Para descargar el reproductor lo podemos hacer desde el siguiente enlace:
 
-:musical_note: [Descarga Reproductor](https://mega.nz/file/VU8wVKSb#cVcLv2Ho7dcYRrKjGHDkV1Crl7KUKrSFwd8JrK0ZbQ0)
+:arrow_down: [Descarga Instalador](https://mega.nz/file/RI8iwCSb#X-6GgJhYMpbZ-N4p1uDMPDuRHe_b7AYwLsLnnZ-zmuU) V1.5.0
 
 El resultado de la descarga nos va a dejar un archivo llamado `MediaPlayer.zip`.
 
@@ -305,3 +309,9 @@ Y el interior de las descargas es:
 En este caso, las canciones quedan disponibles hasta borremos los enlaces con el botón seleccionar desde la aplicación. Si no reiniciamos el directorio raíz las canciones van a estar disponibles.
 
 
+### Historial de navegación
+
+En la versión 1.5.0 se incorpora el historial de navegación.
+Guarda los últimos siete álbumes escuchados y las siete últimas listas de reproducción escuchadas.
+
+![Historial](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/historial.png?raw=true)
