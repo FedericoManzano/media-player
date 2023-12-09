@@ -26,7 +26,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
 
             Album n = otro as Album;
 
-            return this.Titulo == n.Titulo && this.Artista == n.Artista;
+            return this.Titulo == n.Titulo;
         }
 
         public int CompareTo(Album other)

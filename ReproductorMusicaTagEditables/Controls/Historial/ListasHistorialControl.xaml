@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              MinHeight="140" MinWidth="100"
              x:Name="infoLista">
-    <Grid>
+    <Grid Cursor="Hand">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
