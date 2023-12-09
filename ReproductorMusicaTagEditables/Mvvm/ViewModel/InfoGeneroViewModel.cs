@@ -3,6 +3,7 @@ using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System;
@@ -39,6 +40,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
                         .Ejecutar(irg, Irg.CancionesFiltradas[0]);
+                Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionesFiltradas[0]));
             }
             else
             {
@@ -51,6 +53,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
                         .Ejecutar(irg, Irg.CancionActual.Cancion);
+                Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
             }
         }
 

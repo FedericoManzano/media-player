@@ -45,5 +45,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
             }
             return null;
         }
+
+
+        protected Album GenerarAlbum(Cancion c)
+        {
+            return new Album()
+            {
+                Titulo = c.Album,
+                Artista = c.Artista,
+                PathImagen = c.Path,
+                Genero = c.Genero,
+                Ano = c.FechaLanzamiento,
+                Imagen = null,
+            };
+        }
     }
 }

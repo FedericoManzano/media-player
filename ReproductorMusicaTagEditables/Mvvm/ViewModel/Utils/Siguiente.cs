@@ -1,5 +1,6 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
@@ -27,7 +28,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                    
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
-
+                Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
             }
             else if (Irg.CancionesFiltradas.Count > Irg.CancionActual.Index + 1)
             {
@@ -40,6 +41,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 }
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
+                Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
             } else
             {
                 if (EstadosControl.CIRCULOS)
@@ -53,6 +55,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                     }
                     Irg.Seleccionar();
                     ReproducirCancion(Irg);
+                    Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
                 }
             }
             ListasReproduccion.AgregarCancionAFavoritos(Irg.CancionActual.Cancion);
