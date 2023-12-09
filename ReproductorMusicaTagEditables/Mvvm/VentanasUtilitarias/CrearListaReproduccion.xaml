@@ -52,7 +52,8 @@
                                  PlaceholderColor="#ccc"
                                  Fondo="#2A2E32"
                                  ColorTexto="White"
-                                 CambiandoTexto="CampoTextoControl_CambiandoTexto"/>
+                                 CambiandoTexto="CampoTextoControl_CambiandoTexto"
+                                 Ancho="440"/>
 
                     <Button Grid.Column="0" Grid.Row="1" 
                             Style="{StaticResource btnGeneral}" 

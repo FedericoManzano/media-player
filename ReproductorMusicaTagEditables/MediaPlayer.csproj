@@ -486,7 +486,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Mvvm\CalculoTiempo\AgregarCancionesListas.xaml">
+    <Page Include="Mvvm\VentanasUtilitarias\AgregarCancionesListas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -628,7 +628,7 @@
     <Compile Include="Mvvm\Repository\Historial\Historial.cs" />
     <Compile Include="Mvvm\Repository\Listas\ListasExtends.cs" />
     <Compile Include="Mvvm\Repository\Listas\ListasReproduccion.cs" />
-    <Compile Include="Mvvm\CalculoTiempo\AgregarCancionesListas.xaml.cs">
+    <Compile Include="Mvvm\VentanasUtilitarias\AgregarCancionesListas.xaml.cs">
       <DependentUpon>AgregarCancionesListas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\Repository\Navegacion\InfoNavegacion.cs" />
@@ -760,6 +760,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Mvvm\CalculoTiempo\" />
     <Folder Include="Mvvm\View\Utils\" />
   </ItemGroup>
   <ItemGroup>

@@ -116,20 +116,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             }
         }
 
-        public bool EliminarLista(string nombreLista)
-        {
-            try
-            {
-                File.Delete(nombreLista.Ruta());
-            }
-            catch
-            {
-                return false;
-            }
-            
-            return true;
-        }
-
         public static bool AgregarCancion(string nombreLista, Cancion c)
         {  
             if(string.IsNullOrEmpty(nombreLista)) return false;
@@ -173,6 +159,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             return true;
         }
 
+        private static bool LaMismaCancion(Cancion c1, Cancion c2)
+        {
+            return c1.Titulo == c2.Titulo && c1.Artista == c2.Artista && c1.Album == c2.Album;
+        }
+
         public static bool RemoverCancion(string nombreLista, Cancion c)
         {
             if (string.IsNullOrEmpty(nombreLista)) return false;
@@ -180,8 +171,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             if (!ExisteLista(nombreLista)) return false;
 
             List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta())) ?? new List<Cancion>();
-
-            listado.Remove(c);
+            listado = listado.Where(cl => !LaMismaCancion(cl,c)).ToList();
+          
             try
             {
                 string ser = JsonConvert.SerializeObject(listado, Formatting.Indented);

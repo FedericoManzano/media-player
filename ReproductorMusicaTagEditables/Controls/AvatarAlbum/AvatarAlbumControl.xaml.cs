@@ -68,7 +68,7 @@ namespace ReproductorMusicaTagEditables.Controls.AvatarAlbum
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             InfoReproductor i = InfoReproductor.DameInstancia();
-            List<Cancion> albums = i.Canciones.Where(c => c.Album == NombreAlbum && c.Artista == NombreArtista).ToList();
+            List<Cancion> albums = i.Canciones.Where(c => c.Album == NombreAlbum).ToList();
             MainWindow.agregarCancionesListas.AgregarListaCanciones(albums);
             MainWindow.agregarCancionesListas.Show();
         }

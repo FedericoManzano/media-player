@@ -76,6 +76,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
         private void InfoCancionTabla_BorrarClick(object sender, EventArgs e)
         {
             InfoCancionTabla i = (InfoCancionTabla)sender;
+            
             Cancion c = new Cancion()
             {
                 Titulo = i.TituloInfo,
@@ -84,6 +85,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
                 Duracion = i.DuracionInfo,  
                 Genero = i.GeneroInfo,
             };
+
+
             if(ListasReproduccion.RemoverCancion(infoLista.Nombre, c))
             {
                 int cantidad = int.Parse(Regex.Match( _listaAvatarControl.Cantidad, "^[0-9]+").Value);
