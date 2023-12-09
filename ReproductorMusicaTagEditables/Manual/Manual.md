@@ -309,9 +309,16 @@ Y el interior de las descargas es:
 En este caso, las canciones quedan disponibles hasta borremos los enlaces con el botón seleccionar desde la aplicación. Si no reiniciamos el directorio raíz las canciones van a estar disponibles.
 
 
-### Historial de navegación
+### Historial de reproducción
 
-En la versión 1.5.0 se incorpora el historial de navegación.
+En la versión 1.5.0 se incorpora el historial de reproducción.
 Guarda los últimos siete álbumes escuchados y las siete últimas listas de reproducción escuchadas.
+Se puede acceder a él desde la pestaña historial del menú lateral o desde la página principal.
+Para eliminar el historial de reproducción simplemente hay que darle al botón que está en la parte superior de la página 
+simbolizado con un bote de basura.
+
+> Para que el historial funcione, los álbumes, listas de reproducción y/o canciones que se reproduzcan tienen que disponer de la información de los metadatos. Sin esta información no se cargarán en el historial.
+Para cargar esta información revise las secciones previas de esta documentación donde se muestra como editar los metadatos de las canciones.
+
 
 ![Historial](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/historial.png?raw=true)
