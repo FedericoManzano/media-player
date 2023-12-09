@@ -51,18 +51,21 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             foreach (var ln in listaHistorial)
             {
                 List<Cancion> lcan = ListasReproduccion.DameListadoCanciones(ln);
-                
-                ListaRep r = new ListaRep
+
+                if (lcan.Any())
                 {
-                    Nombre = ln,
-                    CantidadCanciones = lcan.Count + " Canciones",
-                    Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lcan.ElementoRandon().Path),
-                    Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lcan.ElementoRandon().Path),
-                    Imagen3 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lcan.ElementoRandon().Path),
-                    Imagen4 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lcan.ElementoRandon().Path),
-                };
-                
-                ListasRep.Add(r);
+                    ListaRep r = new ListaRep
+                    {
+                        Nombre = ln,
+                        CantidadCanciones = lcan.Count + " Canciones",
+                        Imagen1 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lcan.ElementoRandon().Path),
+                        Imagen2 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lcan.ElementoRandon().Path),
+                        Imagen3 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lcan.ElementoRandon().Path),
+                        Imagen4 = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(lcan.ElementoRandon().Path),
+                    };
+
+                    ListasRep.Add(r);
+                }
             }
         }
 
@@ -70,10 +73,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         {
             List<Album> la = Historial.DameHistorialAlbum();
 
-            foreach (var al in la)
-            { 
-                al.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(al.PathImagen);
-                ListasAlbumes.Add(al);
+            if (la.Any())
+            {
+                foreach (var al in la)
+                {
+                    al.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(al.PathImagen);
+
+                    ListasAlbumes.Add(al);
+                }
             }
         }
 
