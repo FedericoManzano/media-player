@@ -3,7 +3,6 @@ using ReproductorMusicaTagEditables.Mvvm.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.ConstrainedExecution;
 
 namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
 {
@@ -18,17 +17,24 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
 
         public static void CrearHistorial()
         {
-            if (!Directory.Exists(PATH_HISTORIAL))
+            try
             {
-                Directory.CreateDirectory(PATH_HISTORIAL);
+                if (!Directory.Exists(PATH_HISTORIAL))
+                {
+                    Directory.CreateDirectory(PATH_HISTORIAL);
+                }
+                if (!File.Exists(ARCHIVO_HISTORIAL_LISTAS))
+                {
+                    File.Create(ARCHIVO_HISTORIAL_LISTAS);
+                }
+                if (!File.Exists(ARCHIVO_HISTORIAL_ALBUMES))
+                {
+                    File.Create(ARCHIVO_HISTORIAL_ALBUMES);
+                }
             }
-            if(!File.Exists(ARCHIVO_HISTORIAL_LISTAS))
+            catch
             {
-                File.Create(ARCHIVO_HISTORIAL_LISTAS);
-            }
-            if(!File.Exists(ARCHIVO_HISTORIAL_ALBUMES))
-            {
-                File.Create(ARCHIVO_HISTORIAL_ALBUMES);
+
             }
         }
 
@@ -46,29 +52,45 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
         {
             if (ExisteHistorialListas())
             {
-                List<string> listadoHistorialListas = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(ARCHIVO_HISTORIAL_LISTAS));
-                if(listadoHistorialListas != null)
+                try
                 {
-                    if (!listadoHistorialListas.Contains(nombreLista))
+                    List<string> listadoHistorialListas = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(ARCHIVO_HISTORIAL_LISTAS));
+                    if (listadoHistorialListas != null)
                     {
-                        listadoHistorialListas.Insert(0,nombreLista);
-                        
-                        if (listadoHistorialListas.Count > 7)
+                        if (!listadoHistorialListas.Contains(nombreLista))
                         {
-                            listadoHistorialListas.RemoveAt(7);
+                            listadoHistorialListas.Insert(0, nombreLista);
+
+                            if (listadoHistorialListas.Count > 7)
+                            {
+                                listadoHistorialListas.RemoveAt(7);
+                            }
+                            string ser = JsonConvert.SerializeObject(listadoHistorialListas, Formatting.Indented);
+                            using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_LISTAS))
+                            {
+                                sw.Write(ser);
+                                return true;
+                            }
                         }
-                        string ser = JsonConvert.SerializeObject(listadoHistorialListas, Formatting.Indented);
-                        using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_LISTAS))
+                        else
                         {
-                            sw.Write(ser);
-                            return true;
+                            listadoHistorialListas.Remove(nombreLista);
+                            listadoHistorialListas.Insert(0, nombreLista);
+
+                            string ser = JsonConvert.SerializeObject(listadoHistorialListas, Formatting.Indented);
+                            using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_LISTAS))
+                            {
+                                sw.Write(ser);
+                                return true;
+                            }
                         }
                     }
                     else
                     {
-                        listadoHistorialListas.Remove(nombreLista);
-                        listadoHistorialListas.Insert(0,nombreLista);
-                        
+                        listadoHistorialListas = new List<string>
+                    {
+                        nombreLista
+                    };
                         string ser = JsonConvert.SerializeObject(listadoHistorialListas, Formatting.Indented);
                         using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_LISTAS))
                         {
@@ -76,51 +98,60 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
                             return true;
                         }
                     }
-                } else
-                {
-                    listadoHistorialListas = new List<string>
-                    {
-                        nombreLista
-                    };
-                    string ser = JsonConvert.SerializeObject(listadoHistorialListas, Formatting.Indented);
-                    using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_LISTAS))
-                    {
-                        sw.Write(ser);
-                        return true;
-                    }
                 }
+                catch
+                {
+
+                }
+                
             }
             return false;
         }
 
         public static bool AgregarAHistorialAlbumes(Album album)
         {
-            if (ExisteHistorialAlbumes())
+            if (ExisteHistorialAlbumes() && album.Titulo != "Desconocido")
             {
-                album.Imagen = null;       
-                List<Album> listadoNombresAlbumes = JsonConvert.DeserializeObject<List<Album>>(File.ReadAllText(ARCHIVO_HISTORIAL_ALBUMES));
-                
-                if(listadoNombresAlbumes != null)
+                album.Imagen = null; 
+                try 
                 {
-                    if (!listadoNombresAlbumes.Contains(album))
+                    List<Album> listadoNombresAlbumes = JsonConvert.DeserializeObject<List<Album>>(File.ReadAllText(ARCHIVO_HISTORIAL_ALBUMES));
+
+                    if (listadoNombresAlbumes != null)
                     {
-                        listadoNombresAlbumes.Insert(0,album);
-                        
-                        if(listadoNombresAlbumes.Count > 7)
+                        if (!listadoNombresAlbumes.Contains(album))
                         {
-                            listadoNombresAlbumes.RemoveAt(7);
+                            listadoNombresAlbumes.Insert(0, album);
+
+                            if (listadoNombresAlbumes.Count > 7)
+                            {
+                                listadoNombresAlbumes.RemoveAt(7);
+                            }
+                            string ser = JsonConvert.SerializeObject(listadoNombresAlbumes, Formatting.Indented);
+                            using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_ALBUMES))
+                            {
+                                sw.Write(ser);
+                                return true;
+                            }
                         }
-                        string ser = JsonConvert.SerializeObject(listadoNombresAlbumes, Formatting.Indented);
-                        using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_ALBUMES))
+                        else
                         {
-                            sw.Write(ser);
-                            return true;
+                            listadoNombresAlbumes.Remove(album);
+                            listadoNombresAlbumes.Insert(0, album);
+                            string ser = JsonConvert.SerializeObject(listadoNombresAlbumes, Formatting.Indented);
+                            using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_ALBUMES))
+                            {
+                                sw.Write(ser);
+                                return true;
+                            }
                         }
                     }
                     else
                     {
-                        listadoNombresAlbumes.Remove(album);
-                        listadoNombresAlbumes.Insert(0,album);
+                        listadoNombresAlbumes = new List<Album>()
+                    {
+                        album
+                    };
                         string ser = JsonConvert.SerializeObject(listadoNombresAlbumes, Formatting.Indented);
                         using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_ALBUMES))
                         {
@@ -128,19 +159,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
                             return true;
                         }
                     }
-                } else
-                {
-                    listadoNombresAlbumes = new List<Album>()
-                    {
-                        album
-                    };
-                    string ser = JsonConvert.SerializeObject(listadoNombresAlbumes, Formatting.Indented);
-                    using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_ALBUMES))
-                    {
-                        sw.Write(ser);
-                        return true;
-                    }
                 }
+                catch
+                {
+
+                }
+                
                 
             }
             return false;
@@ -148,45 +172,74 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Historial
 
         public static List<string> DameHistorialListas()
         {
-            List<string> listas = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(ARCHIVO_HISTORIAL_LISTAS));
-
-            if (listas != null)
+            try
             {
-                return listas;
+                List<string> listas = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(ARCHIVO_HISTORIAL_LISTAS));
+
+                if (listas != null)
+                {
+                    return listas;
+                }
             }
+            catch
+            {
+
+            }
+            
             return new List<string>();
         }
 
         public static List<Album> DameHistorialAlbum ()
         {
-            List<Album> albums = JsonConvert.DeserializeObject<List<Album>>(File.ReadAllText(ARCHIVO_HISTORIAL_ALBUMES));
-
-            if(albums != null)
+            try
             {
-                return albums;
+                List<Album> albums = JsonConvert.DeserializeObject<List<Album>>(File.ReadAllText(ARCHIVO_HISTORIAL_ALBUMES));
+
+                if (albums != null)
+                {
+                    return albums;
+                }
             }
+            catch
+            {
+
+            }
+            
             return new List<Album>();
         }
 
         public static void BorrarHistorial()
         {
-            using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_ALBUMES))
+            try
             {
-                sw.Write("");
-            }
+                using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_ALBUMES))
+                {
+                    sw.Write("");
+                }
 
-            using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_LISTAS))
+                using (StreamWriter sw = new StreamWriter(ARCHIVO_HISTORIAL_LISTAS))
+                {
+                    sw.Write("");
+                }
+            }
+            catch
             {
-                sw.Write("");
+
             }
         }
 
         public static bool HayHistorial()
         {
-            List<Album> albums = JsonConvert.DeserializeObject<List<Album>>(File.ReadAllText(ARCHIVO_HISTORIAL_ALBUMES));
-            List<string> listas = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(ARCHIVO_HISTORIAL_LISTAS));
-
-            return listas != null || albums != null;
+            try
+            {
+                List<Album> albums = JsonConvert.DeserializeObject<List<Album>>(File.ReadAllText(ARCHIVO_HISTORIAL_ALBUMES));
+                List<string> listas = JsonConvert.DeserializeObject<List<string>>(File.ReadAllText(ARCHIVO_HISTORIAL_LISTAS));
+                return listas != null || albums != null;
+            }
+            catch
+            {
+                return false;   
+            }
         }
     }
 }

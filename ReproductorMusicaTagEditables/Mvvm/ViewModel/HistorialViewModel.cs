@@ -77,8 +77,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             {
                 foreach (var al in la)
                 {
-                    al.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(al.PathImagen);
-
+                    al.Imagen = ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(al.PathImagen) ??
+                                ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
                     ListasAlbumes.Add(al);
                 }
             }

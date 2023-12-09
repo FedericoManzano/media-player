@@ -20,7 +20,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
         private static void CrearDirectorio()
         {
-            Directory.CreateDirectory(PATH_LISTAS);
+            try
+            {
+                Directory.CreateDirectory(PATH_LISTAS);
+            }
+            catch
+            {
+
+            }
         }
 
         public static bool ValidarNombre(string nombreLista)
@@ -31,59 +38,95 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
         public static bool ExisteLista(string nombreLista)
         {
-            if (!Directory.Exists(PATH_LISTAS))
-                CrearDirectorio();
-            if (string.IsNullOrEmpty(nombreLista)) { return false; }
-          
+            try
+            {
+                if (!Directory.Exists(PATH_LISTAS))
+                    CrearDirectorio();
+                if (string.IsNullOrEmpty(nombreLista)) { return false; }
+            }
+            catch
+            {
+
+            }
             return File.Exists(nombreLista.Ruta());
         }
 
         public static bool Crear(string nombreLista)
-        { 
+        {
+            try
+            {
+                if (!Directory.Exists(PATH_LISTAS))
+                    CrearDirectorio();
+                if (string.IsNullOrEmpty(nombreLista)) return false;
+                if (ExisteLista(nombreLista)) return false;
+                if (!ValidarNombre(nombreLista)) return false;
 
-            if (!Directory.Exists(PATH_LISTAS))
-                CrearDirectorio();
-            if(string.IsNullOrEmpty(nombreLista)) return false;
-            if (ExisteLista(nombreLista)) return false;
-            if (!ValidarNombre(nombreLista)) return false;
-
-            File.Create(nombreLista.Ruta()).Close();
+                File.Create(nombreLista.Ruta()).Close();
+            }
+            catch
+            {
+                return false;
+            }
+            
             return true;
         }
 
         public static bool Borrar(string nombreLista)
         {
-            if (string.IsNullOrEmpty(nombreLista))
-                if (ExisteLista(nombreLista))
-                    return false;
-            File.Delete(nombreLista.Ruta());
+            try
+            {
+                if (string.IsNullOrEmpty(nombreLista))
+                    if (ExisteLista(nombreLista))
+                        return false;
+                File.Delete(nombreLista.Ruta());
+            }
+            catch
+            {
+
+            }
             return true;
         }
 
         public static List<string> ListadoNombres()
         {
-            if(!Directory.Exists(PATH_LISTAS))
-                CrearDirectorio();
-            string[] archivos = Directory.GetFiles(PATH_LISTAS);
-            if (archivos.Length == 0)
-                return new List<string>();
-            List<string> nombresListas = archivos.Where(s =>
+            try
             {
-
-                FileInfo fi = new FileInfo(s);
-                if(Path.GetFileNameWithoutExtension(fi.Name) != "FAVORITOS")
+                if (!Directory.Exists(PATH_LISTAS))
+                    CrearDirectorio();
+                string[] archivos = Directory.GetFiles(PATH_LISTAS);
+                if (archivos.Length == 0)
+                    return new List<string>();
+                List<string> nombresListas = archivos.Where(s =>
                 {
-                    string e = fi.Extension;
-                    if (e != EXT) return false;
-                    return true;
-                } return false;
-            }).Select(s => Path.GetFileNameWithoutExtension(s)).ToList();
-            return nombresListas;
+
+                    FileInfo fi = new FileInfo(s);
+                    if (Path.GetFileNameWithoutExtension(fi.Name) != "FAVORITOS")
+                    {
+                        string e = fi.Extension;
+                        if (e != EXT) return false;
+                        return true;
+                    }
+                    return false;
+                }).Select(s => Path.GetFileNameWithoutExtension(s)).ToList();
+                return nombresListas;
+            }
+            catch
+            {
+                return new List<string>();
+            }
         }
 
         public bool EliminarLista(string nombreLista)
         {
-            File.Delete(nombreLista.Ruta());
+            try
+            {
+                File.Delete(nombreLista.Ruta());
+            }
+            catch
+            {
+                return false;
+            }
+            
             return true;
         }
 
@@ -91,24 +134,41 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         {  
             if(string.IsNullOrEmpty(nombreLista)) return false;
             if(c == null) return false;
+            if(c.Artista == "Desconocido" || c.Album == "Desconocido")
+            {
+                if(nombreLista != "FAVORITOS")
+                {
+                    System.Windows.Forms.MessageBox.Show($"No puede agregarse la cancion: {c.Titulo} a la lista {nombreLista} porque la canción no posee los metadatos adecuados. Puede editarlos desde el botón tags de la página principal.", "Error", System.Windows.Forms.MessageBoxButtons.OK, (System.Windows.Forms.MessageBoxIcon)MessageBoxImage.Information);
+                    return false;
+                }
+            }
 
             if(!ExisteLista(nombreLista)) return false;
-            List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta())) 
+
+            try
+            {
+                List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta()))
                                                         ?? new List<Cancion>();
-            if (listado.Count > 0)
+                if (listado.Count > 0)
+                {
+                    if (listado.Exists(cl => cl.Titulo.Equals(c.Titulo) && cl.Artista.Equals(c.Artista)))
+                        return false;
+                }
+
+
+                listado.Add(c);
+
+                string ser = JsonConvert.SerializeObject(listado, Formatting.Indented);
+                using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
+                {
+                    sw.Write(ser);
+                }
+            }
+            catch
             {
-                if (listado.Exists(cl => cl.Titulo.Equals(c.Titulo) && cl.Artista.Equals(c.Artista)))
-                    return false;
+                return false;
             }
             
-            
-            listado.Add(c);
-       
-            string ser = JsonConvert.SerializeObject(listado, Formatting.Indented);
-            using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
-            {
-                sw.Write(ser);
-            }
 
             return true;
         }
@@ -122,12 +182,20 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta())) ?? new List<Cancion>();
 
             listado.Remove(c);
-            MessageBox.Show(c.Titulo);
-            string ser = JsonConvert.SerializeObject(listado, Formatting.Indented);
-            using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
+            try
             {
-                sw.Write(ser);
+                string ser = JsonConvert.SerializeObject(listado, Formatting.Indented);
+                using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
+                {
+                    sw.Write(ser);
+                }
             }
+            catch
+            {
+                return false;
+            }
+
+            
             return true;
         }
 
@@ -136,8 +204,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             if (string.IsNullOrEmpty(nombreLista)) return new List<Cancion>();
             if (!ExisteLista(nombreLista)) return new List<Cancion>();
 
-            List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta())) ?? new List<Cancion>();
-            return listado;
+            try
+            {
+                List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta())) ?? new List<Cancion>();
+                return listado;
+            }
+            catch
+            {
+                return new List<Cancion>();
+            }
         }
 
         public static string CalcularDuracionLista(string nombreLista)
@@ -193,7 +268,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         public static bool AgregarCancionAFavoritos(Cancion c)
         {
             if(c == null) return false;
-            if(ExisteLista("FAVORITOS"))
+            if(ExisteLista("FAVORITOS") && (c.Artista != "Desconocido" && c.Album != "Desconocido") )
             {
                 List<Cancion> listaCanciones = DameListadoCanciones("FAVORITOS");
                 
@@ -212,11 +287,19 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 listaCanciones.Sort(delegate(Cancion c1, Cancion c2) {
                     return c2.Cantidad.CompareTo(c1.Cantidad);
                 });
-                string listaTxt = JsonConvert.SerializeObject(listaCanciones, Formatting.Indented);
-                using (StreamWriter sw = new StreamWriter("FAVORITOS".Ruta()))
+
+                try
                 {
-                    sw.Write(listaTxt);
-                    return true;
+                    string listaTxt = JsonConvert.SerializeObject(listaCanciones, Formatting.Indented);
+                    using (StreamWriter sw = new StreamWriter("FAVORITOS".Ruta()))
+                    {
+                        sw.Write(listaTxt);
+                        return true;
+                    }
+                }
+                catch
+                {
+                    
                 }
             }
             return false;
@@ -224,17 +307,32 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
         private static void GuardarListado (string nombreLista, List<Cancion> cancions)
         {
-            string listaTxt = JsonConvert.SerializeObject(cancions, Formatting.Indented);
-            using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
+            try
             {
-                sw.Write(listaTxt);
+                string listaTxt = JsonConvert.SerializeObject(cancions, Formatting.Indented);
+                using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
+                {
+                    sw.Write(listaTxt);
+                }
             }
+            catch
+            {
+
+            }
+            
         }
 
         public static List<Cancion> DameListatoFavoritos()
         {
-            List<Cancion> listaFav = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText("FAVORITOS".Ruta()));
-            return listaFav == null ? new List<Cancion>(): listaFav;
+            try
+            {
+                List<Cancion> listaFav = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText("FAVORITOS".Ruta()));
+                return listaFav == null ? new List<Cancion>() : listaFav;
+            }
+            catch
+            {
+                return new List<Cancion>();
+            }
         }
     }
 }

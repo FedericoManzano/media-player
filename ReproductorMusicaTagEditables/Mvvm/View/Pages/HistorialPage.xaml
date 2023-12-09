@@ -25,7 +25,7 @@
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal">
+        <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
             <Button Style="{StaticResource btnNavegacion}" 
                     Click="Pagina_Anterior"
                     ToolTip="Página anterior"
@@ -52,7 +52,7 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             
-            <StackPanel>
+            <StackPanel Margin="0 25 0 0">
                 <TextBlock Margin="0 0 0 10" Foreground="White" Text="Álbumes escuchados recientemente" FontSize="16" FontWeight="SemiBold"/>
                 <TextBlock x:Name="albumesVacio" Text="No hay álbumes escuchados recientemente." Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40" FontSize="20"/>
                 <ScrollViewer x:Name="itemsAlbumes" VerticalScrollBarVisibility="Auto">
@@ -76,7 +76,7 @@
                 </ScrollViewer>
             </StackPanel>
 
-            <StackPanel Grid.Row="1">
+            <StackPanel Grid.Row="1" Margin="0 25 0 0">
                 <TextBlock Foreground="White" Margin="0 0 0 10" Text="Listas de reproducción escuchadas recientemente" FontSize="16" FontWeight="SemiBold"/>
                 <TextBlock x:Name="listasVacio" Text="No hay listas de reproducción escuchadas recientemente." Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40" FontSize="20"/>
                 <ScrollViewer x:Name="listasRepro" VerticalScrollBarVisibility="Auto">
