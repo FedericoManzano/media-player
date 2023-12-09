@@ -24,6 +24,7 @@
 * :airplane: [Navegación por la aplicación](#navegación-por-la-aplicación)
 * :arrow_forward: [Reproducción](#reproducción)
 * :arrow_down: [Descargas](#descargas)
+* :clock1230: [Historial Reproducción](#historial-de-reproducción)
 
 
 
