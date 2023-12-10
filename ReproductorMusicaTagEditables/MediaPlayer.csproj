@@ -409,6 +409,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\TipsInfo\TipsInfoControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -479,6 +483,9 @@
     </Compile>
     <Compile Include="Controls\TiempoTrack\TiempoTrack.xaml.cs">
       <DependentUpon>TiempoTrack.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TipsInfo\TipsInfoControl.xaml.cs">
+      <DependentUpon>TipsInfoControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Core\ViewModelBase.cs" />

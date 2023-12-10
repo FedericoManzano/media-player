@@ -1,10 +1,16 @@
-﻿using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
+﻿using Reproductor_Musica.Core;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Input;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
@@ -40,6 +46,55 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 paginacion = value;
                 OnPropertyChanged(nameof(Paginacion)); 
             } 
+        }
+
+
+        public ICommand PlayCommandAlbum { get; }
+
+
+
+        public TodosLosAlbumesViewModel()
+        {
+            PlayCommandAlbum = new RelayCommand(PlayAlbumAction);
+        }
+
+        private void PlayAlbumAction(object obj)
+        {
+            Cancion c = (Cancion)obj;
+            if(c == null) { return; }
+            c.Imagen = null;
+            List<Cancion> l = Irg.Canciones.Where(cl=>cl.Album == c.Album && c.Artista == cl.Artista).ToList();
+            
+            if(l.Any())
+            {
+                OrdenarListadoCanciones(l);
+                Irg.CancionesFiltradas = new ObservableCollection<Cancion>(l);
+
+                Irg.Deseleccionar();
+                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(Irg, Irg.CancionesFiltradas[0]);
+                Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionesFiltradas[0]));
+            }
+            
+        }
+
+
+        private void OrdenarListadoCanciones(List<Cancion> l)
+        {
+            
+            l.Sort(delegate (Cancion c1, Cancion c2)
+            {
+                try
+                {
+                    int numero1 = int.Parse(c1.Numero);
+                    int numero2 = int.Parse(c2.Numero);
+                    return numero1.CompareTo(numero2);
+                }
+                catch (FormatException e)
+                {
+                    return c1.Titulo.CompareTo(c2.Titulo);
+                }
+
+            });
         }
 
         public  void CargarAvatarAlbumes()

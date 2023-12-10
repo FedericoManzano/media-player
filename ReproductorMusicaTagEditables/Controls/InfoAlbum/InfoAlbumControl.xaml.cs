@@ -86,5 +86,6 @@ namespace ReproductorMusicaTagEditables.Controls.InfoAlbum
             MainWindow.agregarCancionesListas.AgregarListaCanciones(albums);
             MainWindow.agregarCancionesListas.Show();
         }
+
     }
 }

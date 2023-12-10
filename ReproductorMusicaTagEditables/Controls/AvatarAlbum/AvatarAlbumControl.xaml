@@ -8,7 +8,8 @@
             Padding="5" 
             CornerRadius="10"
             MouseEnter="Border_MouseEnter"
-            MouseLeave="Border_MouseLeave">
+            MouseLeave="Border_MouseLeave"
+            Tag="{Binding ElementName=avatarAlbum}">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition/>
@@ -37,6 +38,14 @@
         </Grid>
         <Border.ContextMenu>
             <ContextMenu>
+                <MenuItem Header="Agregar a lista"
+                          Command="{Binding Parent.PlacementTarget.Tag.ComandoPlay, RelativeSource={RelativeSource Self}}"
+                          CommandParameter="{Binding Parent.PlacementTarget.Tag.ParametroComandoPlay, RelativeSource={RelativeSource Self}}">
+                    
+                    <MenuItem.Icon>
+                        <fa:PackIconFontAwesome Kind="PlaySolid" Foreground="Red"/>
+                    </MenuItem.Icon>
+                </MenuItem>
                 <MenuItem Header="Agregar a lista"
                           Click="MenuItem_Click">
                     <MenuItem.Icon>

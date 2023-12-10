@@ -65,6 +65,25 @@ namespace ReproductorMusicaTagEditables.Controls.AvatarAlbum
             set => SetValue(ArtistaProperty, value);
         }
 
+
+        public static DependencyProperty ComandoPlayProperty =
+            DependencyProperty.Register("ComandoPlay", typeof(ICommand), typeof(AvatarAlbumControl));
+
+        public ICommand ComandoPlay
+        {
+            get => (ICommand)GetValue(ComandoPlayProperty);
+            set => SetValue(ComandoPlayProperty, value);    
+        }
+
+        public static DependencyProperty ParametroComandoPlayProperty =
+            DependencyProperty.Register("ParametroComandoPlay", typeof(object), typeof(AvatarAlbumControl));
+
+        public object ParametroComandoPlay
+        {
+            get => GetValue(ParametroComandoPlayProperty);
+            set => SetValue(ParametroComandoPlayProperty, value);
+        }
+
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             InfoReproductor i = InfoReproductor.DameInstancia();
