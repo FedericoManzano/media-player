@@ -760,7 +760,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Mvvm\CalculoTiempo\" />
     <Folder Include="Mvvm\View\Utils\" />
   </ItemGroup>
   <ItemGroup>
@@ -804,6 +803,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Icono\nota-musical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Manual\Imagenes\agregarAlbum.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

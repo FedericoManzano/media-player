@@ -1,0 +1,16 @@
+[
+  {
+    "Numero": "1",
+    "Titulo": "Back In Black",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Back In Black.mp3",
+    "Duracion": "04:22",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2620951282,
+    "Imagen": null,
+    "Cantidad": 1
+  }
+]

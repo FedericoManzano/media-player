@@ -198,12 +198,22 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             try
             {
                 List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta())) ?? new List<Cancion>();
-                return listado;
+                if(listado != null)
+                {
+                    listado = FiltrarCancionesExistentes(listado);
+                    return listado;
+                }
+                return new List<Cancion>();
             }
             catch
             {
                 return new List<Cancion>();
             }
+        }
+
+        private static List<Cancion> FiltrarCancionesExistentes(List<Cancion> listado)
+        {
+            return listado.Where(c => File.Exists(c.Path)).ToList();
         }
 
         public static string CalcularDuracionLista(string nombreLista)
@@ -317,8 +327,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         {
             try
             {
+                
                 List<Cancion> listaFav = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText("FAVORITOS".Ruta()));
-                return listaFav == null ? new List<Cancion>() : listaFav;
+                if(listaFav != null)
+                {
+                    return FiltrarCancionesExistentes(listaFav);
+                }
+                return  new List<Cancion>();
             }
             catch
             {
