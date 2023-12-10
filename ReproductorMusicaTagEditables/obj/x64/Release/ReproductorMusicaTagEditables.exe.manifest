@@ -199,14 +199,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReproductorMusicaTagEditables.exe" size="904632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ReproductorMusicaTagEditables.exe" size="905144">
       <assemblyIdentity name="ReproductorMusicaTagEditables" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Id7W0/yZ+5/9cPcYIUExxDqS+GNZ+TX9cTOKrpB/j3k=</dsig:DigestValue>
+        <dsig:DigestValue>pmq22m/rCigtbn9Fcp/1cCYDh6BnFEpsOX+/vi5PTY8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
