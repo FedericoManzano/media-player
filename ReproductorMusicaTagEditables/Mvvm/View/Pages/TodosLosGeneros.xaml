@@ -61,6 +61,8 @@
                             ImagenCuatro="{Binding Imagen4}"
                             Nombre="{Binding Nombre}"
                             Cantidad="{Binding CantidadCanciones}"
+                            PlayComando="{Binding ElementName=todosLosGeneros, Path=PlayCommandGenero}"
+                            ParametroComando="{Binding Nombre}"
                             MouseLeftButtonUp="ListaAvatarControl_MouseLeftButtonUp"/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

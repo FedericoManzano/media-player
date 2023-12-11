@@ -1,9 +1,17 @@
-﻿using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
+﻿using Reproductor_Musica.Core;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Filtros;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
@@ -13,6 +21,29 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         private readonly PaginadorAvanzado _paginadorAvanzado = new PaginadorAvanzado();
 
         public PaginadorAvanzado PaginadorAvanzado => _paginadorAvanzado;
+
+
+        public ICommand PlayCommandLista { get; }
+
+
+        public ListasViewModel() {
+            PlayCommandLista = new RelayCommand(PlayCommandListaAction);
+        }
+
+        private void PlayCommandListaAction(object obj)
+        {
+            if (obj == null) return;
+
+            string nombreLista = (string) obj;
+            List<Cancion> listaCanciones = ListasReproduccion.DameListadoCanciones(nombreLista);
+            if(listaCanciones != null && listaCanciones.Any())
+            {
+                Irg.CancionesFiltradas = new ObservableCollection<Cancion>(listaCanciones);
+                Irg.Deseleccionar();
+                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(Irg, Irg.CancionesFiltradas[0]);
+                Historial.AgregarAHistorialListas(nombreLista);
+            }
+        }
 
         public void CargarListasReproduccion()
         {
@@ -25,6 +56,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             if(PaginadorAvanzado.Tamano() > 0 )
                 Irg.IsMensajeVisible = System.Windows.Visibility.Collapsed;
             Irg.BtnNavegacion = true;
+
+            
         }
 
         public void ActualizarListas(string letra)

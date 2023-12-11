@@ -86,7 +86,9 @@
                             ImagenDos="{Binding Imagen2}"
                             ImagenTres="{Binding Imagen3}"
                             ImagenCuatro="{Binding Imagen4}"
-                            MouseLeftButtonUp="ListaAvatarControl_MouseLeftButtonUp"/>
+                            MouseLeftButtonUp="ListaAvatarControl_MouseLeftButtonUp"
+                            PlayComando="{Binding ElementName=listasReproduccion, Path=PlayCommandLista}"
+                            ParametroComando="{Binding Nombre}"/>
                             
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

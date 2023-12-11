@@ -54,10 +54,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                     (
                         Irg.Canciones.Where(c => c.Album == a.Album).ToList()
                     );
-                Irg.Deseleccionar();
-                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
-                ScrollVertical = irg.SetScroll();
-                Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionesFiltradas[0]));
+
+                if (Irg.CancionesFiltradas.Any())
+                {
+                    Irg.Deseleccionar();
+                    AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
+                    ScrollVertical = irg.SetScroll();
+                    Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionesFiltradas[0]));
+                }
             }
         }
 
@@ -72,10 +76,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             {
                 return Irg.Canciones.Where(c => c.Artista == Artista.Nombre).ToList();
             }));
+            if (Irg.CancionesFiltradas.Any())
+            {
+                Irg.Deseleccionar();
 
-            Irg.Deseleccionar();
-
-            AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
+                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
+                Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionesFiltradas[0]));
+            }
         }
 
         public async void CargarInfoArtista(string artista)

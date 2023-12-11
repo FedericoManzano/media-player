@@ -1,6 +1,7 @@
 ﻿using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using System.Windows;
 using System.Windows.Forms;
+using System.Windows.Input;
 using System.Windows.Media;
 
 
@@ -72,6 +73,33 @@ namespace ReproductorMusicaTagEditables.Controls.ListaAvatar
             get => GetValue(CantidadProperty) as string;
             set => SetValue(CantidadProperty, value);
         }
+
+
+
+
+        public static DependencyProperty PlayComandoProperty =
+            DependencyProperty.Register("PlayComando", typeof(ICommand), typeof(ListaAvatarControl));
+
+
+
+        public ICommand PlayComando
+        {
+            get => (ICommand) GetValue(PlayComandoProperty);    
+            set => SetValue(PlayComandoProperty, value);
+        }
+
+
+        public static DependencyProperty ParametroComandoProperty =
+            DependencyProperty.Register("ParametroComando", typeof(object), typeof(ListaAvatarControl));
+
+
+
+        public object ParametroComando
+        {
+            get => GetValue(ParametroComandoProperty);
+            set => SetValue(ParametroComandoProperty, value);
+        }
+
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {

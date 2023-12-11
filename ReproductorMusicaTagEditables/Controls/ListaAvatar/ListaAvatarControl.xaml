@@ -12,7 +12,7 @@
             CornerRadius="10"
             MouseEnter="Border_MouseEnter"
             MouseLeave="Border_MouseLeave">
-        <Grid>
+        <Grid Tag="{Binding ElementName=visorListas}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="75"/>
                 <ColumnDefinition Width="75"/>
@@ -75,6 +75,13 @@
             </StackPanel>
             <Grid.ContextMenu>
                 <ContextMenu>
+                    <MenuItem Header="Play"
+                               Command="{Binding Parent.PlacementTarget.Tag.PlayComando, RelativeSource={RelativeSource Self}}"
+                               CommandParameter="{Binding Parent.PlacementTarget.Tag.ParametroComando, RelativeSource={RelativeSource Self}}">
+                        <MenuItem.Icon>
+                            <fa:PackIconFontAwesome Kind="PlaySolid" Foreground="Red"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
                     <MenuItem Header="Eliminar lista" Click="MenuItem_Click">
                         <MenuItem.Icon>
                             <fa:PackIconFontAwesome Kind="WindowCloseSolid"/>
