@@ -1,19 +1,5 @@
 [
   {
-    "Numero": "1",
-    "Titulo": "Back In Black",
-    "Artista": "ACDC",
-    "Album": "BACK IN BLACK",
-    "Genero": "HARD ROCK",
-    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Back In Black.mp3",
-    "Duracion": "04:22",
-    "FechaLanzamiento": "1980",
-    "EstadoColor": "Red",
-    "DuracionLong": 2620951282,
-    "Imagen": null,
-    "Cantidad": 4
-  },
-  {
     "Numero": "2",
     "Titulo": "Givin the Dog a Bone",
     "Artista": "ACDC",
@@ -25,7 +11,21 @@
     "EstadoColor": "Red",
     "DuracionLong": 2172449358,
     "Imagen": null,
-    "Cantidad": 2
+    "Cantidad": 1
+  },
+  {
+    "Numero": "1",
+    "Titulo": "Back In Black",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Back In Black.mp3",
+    "Duracion": "04:22",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "Red",
+    "DuracionLong": 2620951282,
+    "Imagen": null,
+    "Cantidad": 1
   },
   {
     "Numero": "3",
@@ -50,7 +50,7 @@
     "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Hells Bells.mp3",
     "Duracion": "05:20",
     "FechaLanzamiento": "1980",
-    "EstadoColor": "White",
+    "EstadoColor": "Red",
     "DuracionLong": 3203415384,
     "Imagen": null,
     "Cantidad": 1
@@ -80,6 +80,90 @@
     "FechaLanzamiento": "1980",
     "EstadoColor": "Red",
     "DuracionLong": 2729192307,
+    "Imagen": null,
+    "Cantidad": 1
+  },
+  {
+    "Numero": "12",
+    "Titulo": "Todo Pasa",
+    "Artista": "LOS PIOJOS",
+    "Album": "3 ARCO",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Los Piojos\\3 Arco\\Todo Pasa.mp3",
+    "Duracion": "05:38",
+    "FechaLanzamiento": "1996",
+    "EstadoColor": "Red",
+    "DuracionLong": 3381028571,
+    "Imagen": null,
+    "Cantidad": 1
+  },
+  {
+    "Numero": "13",
+    "Titulo": "Verano del 92",
+    "Artista": "LOS PIOJOS",
+    "Album": "3 ARCO",
+    "Genero": "ROCK NACIONAL",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Los Piojos\\3 Arco\\Verano del 92.mp3",
+    "Duracion": "07:11",
+    "FechaLanzamiento": "1996",
+    "EstadoColor": "Red",
+    "DuracionLong": 4310465306,
+    "Imagen": null,
+    "Cantidad": 1
+  },
+  {
+    "Numero": "1",
+    "Titulo": "The Look",
+    "Artista": "ROXETTE",
+    "Album": "30 BIGGEST HITS",
+    "Genero": "POP",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Roxette\\30 BIGGEST HITS\\01 The Look.mp3",
+    "Duracion": "03:57",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "Red",
+    "DuracionLong": 2373746938,
+    "Imagen": null,
+    "Cantidad": 1
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Dressed for Success",
+    "Artista": "ROXETTE",
+    "Album": "30 BIGGEST HITS",
+    "Genero": "POP",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Roxette\\30 BIGGEST HITS\\02 Dressed for Success (US Single Mix).mp3",
+    "Duracion": "04:11",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "Red",
+    "DuracionLong": 2517159183,
+    "Imagen": null,
+    "Cantidad": 1
+  },
+  {
+    "Numero": "3",
+    "Titulo": "Dangerous",
+    "Artista": "ROXETTE",
+    "Album": "30 BIGGEST HITS",
+    "Genero": "POP",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Roxette\\30 BIGGEST HITS\\03 Dangerous.mp3",
+    "Duracion": "03:50",
+    "FechaLanzamiento": "2015",
+    "EstadoColor": "Red",
+    "DuracionLong": 2300081632,
+    "Imagen": null,
+    "Cantidad": 1
+  },
+  {
+    "Numero": "3",
+    "Titulo": "D.T.",
+    "Artista": "ACDC",
+    "Album": "WHO MADE WHO",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Who made who\\3 D.T..mp3",
+    "Duracion": "02:53",
+    "FechaLanzamiento": "1986",
+    "EstadoColor": "Red",
+    "DuracionLong": 1737404081,
     "Imagen": null,
     "Cantidad": 1
   }

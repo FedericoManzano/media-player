@@ -33,9 +33,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             set { _fechaCreacion = value; OnPropertyChanged(nameof(FechaCreacion)); } 
         }
 
-
-
-
         public ICommand PlayCommandLista { get; }
        
         public ListaRepViewModel ()
@@ -66,7 +63,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             {
                 if (c.Equals(Irg.CancionActual.Cancion))
                     return Irg.CancionActual.Cancion;
-                else return c;
+                else
+                {
+                    c.EstadoColor = "White";
+                    return c;
+                };
             }).ToList();
             return l.Count > final-inicio ? l.GetRange(inicio,final):l;
         }
@@ -102,7 +103,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
                         .Ejecutar(irg, Irg.CancionesFiltradas[0]);
-                Historial.AgregarAHistorialListas(ListaRep.Nombre);
+                GuardarHistorial(ListaRep.Nombre, Irg.CancionesFiltradas[0]);
             } else
             {
                 Cancion c = (Cancion)obj;
@@ -110,12 +111,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                
                 Irg.CancionActual.Index = index;
                 Irg.CancionActual.Cancion = c;
-              
-
                 AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
                         .Ejecutar(irg, Irg.CancionActual.Cancion);
-                Historial.AgregarAHistorialListas(ListaRep.Nombre);
+                GuardarHistorial(ListaRep.Nombre, Irg.CancionActual.Cancion);
             }
+        }
+        private void GuardarHistorial(string nombreLista, Cancion cancionActual)
+        {
+            Historial.AgregarAHistorialListas(nombreLista);
+            Historial.AgregarAHistorialAlbumes(GenerarAlbum(cancionActual));
         }
         public void ActualizarFiltro ()
         {
