@@ -1,6 +1,5 @@
 ﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Controls.ListaAvatar;
-using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
@@ -11,7 +10,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls.WebParts;
 using System.Windows.Input;
 
 namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
@@ -34,6 +32,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             get => _fechaCreacion; 
             set { _fechaCreacion = value; OnPropertyChanged(nameof(FechaCreacion)); } 
         }
+
+
+
+
         public ICommand PlayCommandLista { get; }
        
         public ListaRepViewModel ()
@@ -45,6 +47,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             ListaRep = await CrearInfoListaRep(listaAvatarControl);
             FechaCreacion = ListasReproduccion.FechaCreacion(ListaRep.Nombre);
             Irg.Presentacion = new ObservableCollection<Cancion>(DameListaPorPartes(ListaRep.Nombre,0,10));
+            Irg.Presentacion = new ObservableCollection<Cancion>(BlanquearListado());
+        }
+        private List<Cancion> BlanquearListado()
+        {
+            return Irg.Presentacion.Select(c =>
+            {
+                if (c.Equals(Irg.CancionActual.Cancion))
+                    return Irg.CancionActual.Cancion;
+                c.EstadoColor = "White";
+                return c;
+            }).ToList();
         }
         private List<Cancion> DameListaPorPartes(string nombre, int inicio, int final)
         {
