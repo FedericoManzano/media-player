@@ -88,6 +88,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info
                         IslistadoVisible = System.Windows.Visibility.Visible;
                         IsMensajeVisible = System.Windows.Visibility.Collapsed;
                     }
+                    Partes = new ObservableCollection<Cancion>(Partes.Select(c =>
+                    {
+                        if (c.Equals(CancionActual.Cancion))
+                        {
+                            c.EstadoColor = "Red";
+                        }
+                        else
+                        {
+                            c.EstadoColor = "White";
+                        }
+                        return c;
+                    }));
                 }
                 Preloader = false;
             });

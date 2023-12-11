@@ -141,9 +141,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                         return false;
                 }
 
-
+                InfoReproductor i = InfoReproductor.DameInstancia();
+                if (c.Equals(i.CancionActual.Cancion))
+                {
+                    c.EstadoColor = "Red";
+                }
+                else { c.EstadoColor = "White";  }
+                
                 listado.Add(c);
-
                 string ser = JsonConvert.SerializeObject(listado, Formatting.Indented);
                 using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
                 {
@@ -275,7 +280,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 
                 c.Cantidad++;
                 Cancion cc = c.Clone();
-                cc.EstadoColor = "White";
+             
                 int index = 0;
                 if( (index = listaCanciones.IndexOf(cc)) == -1)
                 {  
@@ -284,6 +289,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 else
                 {
                     listaCanciones[index] = cc;
+                }
+                if (cc.Equals(InfoReproductor.DameInstancia().CancionActual.Cancion))
+                {
+                    cc.EstadoColor = "Red";
+                }
+                else
+                {
+                    cc.EstadoColor = "White";
                 }
                 listaCanciones.Sort(delegate(Cancion c1, Cancion c2) {
                     return c2.Cantidad.CompareTo(c1.Cantidad);
