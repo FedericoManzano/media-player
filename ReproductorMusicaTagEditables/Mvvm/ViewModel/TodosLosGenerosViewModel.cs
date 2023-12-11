@@ -32,8 +32,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         }
 
         private void PlayActionGenero(object obj)
-        {
-            MessageBox.Show((string)obj);
+        { 
             if (obj == null) return;
 
             string genero = (string)obj;
