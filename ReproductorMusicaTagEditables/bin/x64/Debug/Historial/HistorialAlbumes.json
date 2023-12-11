@@ -1,17 +1,6 @@
 [
   {
     "Artista": "ACDC",
-    "Titulo": "WHO MADE WHO",
-    "Ano": "1986",
-    "Genero": "HARD ROCK",
-    "CantidadPistas": null,
-    "Duracion": null,
-    "DuracionLong": null,
-    "Imagen": null,
-    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Who made who\\3 D.T..mp3"
-  },
-  {
-    "Artista": "ACDC",
     "Titulo": "BACK IN BLACK",
     "Ano": "1980",
     "Genero": "HARD ROCK",
@@ -20,6 +9,17 @@
     "DuracionLong": null,
     "Imagen": null,
     "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Back In Black.mp3"
+  },
+  {
+    "Artista": "ACDC",
+    "Titulo": "WHO MADE WHO",
+    "Ano": "1986",
+    "Genero": "HARD ROCK",
+    "CantidadPistas": null,
+    "Duracion": null,
+    "DuracionLong": null,
+    "Imagen": null,
+    "PathImagen": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Who made who\\3 D.T..mp3"
   },
   {
     "Artista": "LOS PIOJOS",

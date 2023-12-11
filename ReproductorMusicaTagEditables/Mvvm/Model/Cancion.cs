@@ -23,6 +23,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
         public ulong? DuracionLong { get; set; } = 0;
         public ImageBrush Imagen { get; set; }
         public int Cantidad { get; set; } = 0;
+        public DateTime UltimaReproduccion {  get; set; } = DateTime.Now;
+
 
 
         public Cancion()
@@ -49,6 +51,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             DuracionLong = c.DuracionLong;
             EstadoColor = c.EstadoColor;
             Genero = c.Genero;
+            UltimaReproduccion = c.UltimaReproduccion;
         }
         public Cancion CrearCancion(string path)
         {

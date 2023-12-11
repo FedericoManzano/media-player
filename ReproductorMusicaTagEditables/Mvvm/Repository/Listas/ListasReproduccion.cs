@@ -282,7 +282,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 Cancion cc = c.Clone();
              
                 int index = 0;
-                if( (index = listaCanciones.IndexOf(cc)) == -1)
+         
+                cc.UltimaReproduccion = DateTime.Now;
+                if ( (index = listaCanciones.IndexOf(cc)) == -1)
                 {  
                     listaCanciones.Add(cc);
                 }
@@ -290,14 +292,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 {
                     listaCanciones[index] = cc;
                 }
-                if (cc.Equals(InfoReproductor.DameInstancia().CancionActual.Cancion))
+
+                listaCanciones = listaCanciones.Select(cl =>
                 {
-                    cc.EstadoColor = "Red";
-                }
-                else
-                {
-                    cc.EstadoColor = "White";
-                }
+                    if (cl.Equals(cc))
+                        return cc;
+                    cl.EstadoColor = "White";
+                    return cl;
+                }).ToList();
+
+
                 listaCanciones.Sort(delegate(Cancion c1, Cancion c2) {
                     return c2.Cantidad.CompareTo(c1.Cantidad);
                 });
