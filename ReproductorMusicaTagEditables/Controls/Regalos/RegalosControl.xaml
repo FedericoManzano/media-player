@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="ReproductorMusicaTagEditables.Controls.Regalos.RegalosControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             MinWidth="100" 
+             MaxWidth="160"
+             x:Name="regalos">
+    <Border Cursor="Hand">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Background="{Binding ElementName=regalos, Path=ImagenUno}"/>
+
+            <Border Grid.Row="0" Grid.Column="1" Background="{Binding ElementName=regalos, Path=ImagenDos}"/>
+
+            <Border Grid.Row="1" Background="{Binding ElementName=regalos, Path=ImagenTres}"/>
+
+            <Border Grid.Column="1" Grid.Row="1" Background="{Binding ElementName=regalos, Path=ImagenDos}"/>
+            
+            <Border Grid.ColumnSpan="2" 
+                    Grid.RowSpan="2"
+                    Background="{Binding ElementName=regalos, Path=ColorFondo}"
+                    Opacity="0.4"/>
+            
+            
+            <TextBlock Grid.Row="2" 
+                       Grid.ColumnSpan="2" 
+                       Foreground="White" 
+                       FontSize="14" 
+                       Text="{Binding ElementName=regalos, Path=Texto}"
+                       FontWeight="SemiBold"
+                       Margin="0 5 0 0"/>
+        </Grid>
+    </Border>
+</UserControl>

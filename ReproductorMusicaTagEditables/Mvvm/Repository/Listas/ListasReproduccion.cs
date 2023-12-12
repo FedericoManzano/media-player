@@ -309,6 +309,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 try
                 {
                     string listaTxt = JsonConvert.SerializeObject(listaCanciones, Formatting.Indented);
+                    AgregarCancionRegalo(c);
                     using (StreamWriter sw = new StreamWriter("FAVORITOS".Ruta()))
                     {
                         sw.Write(listaTxt);
@@ -340,11 +341,55 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             
         }
 
+
+        public static Dictionary<string,List<Cancion>> GenerarListasDinamicasFavoritos ()
+        {
+            Dictionary<string, List<Cancion>> dicCanciones = new Dictionary<string, List<Cancion>>();
+            string[] paths = Directory.GetFiles(PATH_LISTAS + "Regalos");
+
+            foreach(string p in paths)
+            {
+                string nombre = ExtraerNombreArchivo(p);
+                List<Cancion> l = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(p));
+                if(l != null && l.Any())
+                {
+                    dicCanciones[nombre] = l;
+                }
+            }
+            return dicCanciones;
+        }
+
+        public static List<Cancion> DameListadoRegalo(string nombreLista)
+        {
+            nombreLista = StringAFecha(nombreLista);
+
+            string[] paths = Directory.GetFiles(PATH_LISTAS + "Regalos");
+            foreach(var p in paths)
+            {
+                string nombre = ExtraerNombreArchivo(p);
+                
+                if(nombreLista == nombre)
+                {
+                    List<Cancion> l = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(p));
+                    if (l != null)
+                    {
+                        if(l.Count > 50)
+                        {
+                            l = l.GetRange(0, 50);
+                        }
+                        return l;
+                    }
+                        
+                    else return new List<Cancion>();
+                }
+            }
+            return new List<Cancion>();
+        }
+
         public static List<Cancion> DameListatoFavoritos()
         {
             try
-            {
-                
+            {                
                 List<Cancion> listaFav = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText("FAVORITOS".Ruta()));
                 if(listaFav != null)
                 {
@@ -356,6 +401,154 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             {
                 return new List<Cancion>();
             }
+        }
+        
+        public static void AgregarCancionRegalo(Cancion c)
+        {
+            if(!Directory.Exists(PATH_LISTAS + "Regalos"))
+            {
+                Directory.CreateDirectory(PATH_LISTAS + "Regalos");
+            }
+            string[] paths = Directory.GetFiles(PATH_LISTAS + "Regalos");
+
+
+            string nombre = ConvertirFecha(c);
+            string nombreArchivoSeleccionado = "";
+            string pathSeleccionado = "";
+           
+
+            foreach (string p in paths)
+            {
+                string na = ExtraerNombreArchivo(p);
+                if(na == nombre)
+                {
+                    nombreArchivoSeleccionado = na;
+                    pathSeleccionado = p;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(nombreArchivoSeleccionado))
+            {
+                List<Cancion> listadoCanciones = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(pathSeleccionado)) ?? new List<Cancion>();
+                listadoCanciones.Add(c);
+                listadoCanciones.Sort(delegate (Cancion c1, Cancion c2) {
+                    return c2.Cantidad.CompareTo(c1.Cantidad);
+                });
+                string output = JsonConvert.SerializeObject(listadoCanciones, Formatting.Indented);
+                using (StreamWriter sw = new StreamWriter(pathSeleccionado))
+                {
+                    sw.Write(output);
+                }
+            }
+            else
+            {
+                File.Create(PATH_LISTAS + "Regalos/" + nombre + ".json");
+                List<Cancion> l = new List<Cancion> { c };
+                string output = JsonConvert.SerializeObject(l, Formatting.Indented);
+                using (StreamWriter sw = new StreamWriter(pathSeleccionado))
+                {
+                    sw.Write(output);
+                    
+                }
+            }
+        }
+        
+        public static string ExtraerNombreArchivo(string path)
+        {
+            if (File.Exists(path))
+            {
+                FileInfo fi = new FileInfo(path);
+                return Path.GetFileNameWithoutExtension(fi.FullName);
+            }
+            return "";
+        } 
+
+        public static string ConvertirFecha(Cancion c)
+        {
+            int ano = c.UltimaReproduccion.Year;
+            int mes = c.UltimaReproduccion.Month;
+            return mes + "-" + ano;
+        }
+
+        public static string StringAFecha(string nombre)
+        {
+            if (!string.IsNullOrEmpty(nombre))
+            {
+                if(Regex.IsMatch(nombre, "^([A-Za-z]+ {1}[0-9]{4})$"))
+                {
+                    string mes = nombre.Split(' ')[0];
+                    string ano = nombre.Split(' ')[1];
+                    mes = NumeroMes(mes);
+                    return mes + "-" + ano;
+                }
+                return "";
+            }
+            return "";
+        }
+
+        public static string NumeroMes(string mes)
+        {
+            switch(mes)
+            {
+                case "Enero": return "1";
+                case "Febrero": return "2";
+                case "Marzo": return "3";
+                case "Abril": return "4";
+                case "Mayo": return "5";
+                case "Junio": return "6";
+                case "Julio": return "7";
+                case "Agosto": return "8";
+                case "Septiembre": return "9";
+                case "Octubre": return "10";
+                case "Noviembre": return "11";
+                case "Diciembre": return "12";
+                default: return "0";
+            }
+        }
+
+        public static List<string> ConvertirFecha(List<Cancion> cancionesFavoritas)
+        {
+            List<string> ret = cancionesFavoritas.Select(c =>
+            {
+                int ano = c.UltimaReproduccion.Year;
+                int mes = c.UltimaReproduccion.Month;
+                return mes + "-" + ano;
+            }).ToList();
+            return ret;
+        }
+
+
+        public static bool EsMenorFecha(string fecha)
+        {
+            if(fecha == null)
+                return false;
+            if(Regex.IsMatch(fecha, "^([0-9]{2}-[0-9])$"))
+            {
+                DateTime dateTime = DateTime.Now;
+                string mes = fecha.Split(new char[] { '-' })[0];
+                string ano = fecha.Split(new char[] { '-' })[1];
+
+                try
+                {
+                    int anoInt = int.Parse(ano);
+                    int mesInt = int.Parse(mes);
+
+                    if (dateTime.Year > anoInt)
+                        return true;
+                    else if (dateTime.Year == anoInt)
+                    {
+                        if(dateTime.Month > mesInt) 
+                            return true;
+                    } 
+                    return false;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+
+            return false;
         }
     }
 }

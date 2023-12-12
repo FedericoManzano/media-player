@@ -76,6 +76,7 @@
                         <TextBlock Text="Agregar"></TextBlock>
                     </StackPanel>
                 </Button>
+                
             </StackPanel>
             
         </Grid>
@@ -104,6 +105,13 @@
                     <StackPanel Orientation="Horizontal">
                         <fa:PackIconFontAwesome Style="{StaticResource iconEliminarHistorial}" Kind="HistorySolid"/>
                         <TextBlock Style="{StaticResource txtEliminacion}" Text="Más Recientes" Margin="5 0 0 0"/>
+                    </StackPanel>
+                </Button>
+                <Button Style="{StaticResource btnEliminarHistorial}" Click="Ver_Regalos"
+                        ToolTip="Listas de regalo." Margin="15 0 0 0"
+                        Visibility="{Binding RegalosVisibilidad}">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:PackIconFontAwesome Style="{StaticResource iconEliminarHistorial}" Kind="GiftSolid"/>
                     </StackPanel>
                 </Button>
             </StackPanel>

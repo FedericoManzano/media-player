@@ -160,3 +160,7 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\ReproductorMusicaTagEditables.pdb
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Controls\TipsInfo\TipsInfoControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Controls\TipsInfo\TipsInfoControl.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Controls\Regalos\RegalosControl.baml
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Controls\Regalos\RegalosControl.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Mvvm\View\Pages\Internas\RegalosPage.g.cs
+C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Debug\Mvvm\View\Pages\Internas\RegalosPage.baml

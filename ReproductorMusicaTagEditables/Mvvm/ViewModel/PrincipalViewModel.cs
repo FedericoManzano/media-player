@@ -16,9 +16,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     {
         private Visibility _hayHistorial = Visibility.Collapsed;
 
-
         private string _cantidadCanciones = string.Empty;
-     
+    
+        private Visibility _regalosVisibilidad = Visibility.Collapsed;
+
+        private Dictionary<string, List<Cancion>> _dicCanciones = new Dictionary<string, List<Cancion>>();
+
+
         public ICommand AgregarCommand { get; }
 
 
@@ -76,5 +80,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         public string CantidadCanciones { get => _cantidadCanciones; set { _cantidadCanciones = value; OnPropertyChanged(nameof(CantidadCanciones)); } }
 
         public Visibility HayHistorial { get => _hayHistorial; set { _hayHistorial = value; OnPropertyChanged(nameof(HayHistorial)); } }
+
+        public Visibility RegalosVisibilidad 
+        { 
+            get => _regalosVisibilidad; 
+            set 
+            { 
+                _regalosVisibilidad = value; 
+                OnPropertyChanged(nameof(RegalosVisibilidad)); 
+            } 
+        }
+
+        public Dictionary<string, List<Cancion>> DicCanciones { get => _dicCanciones; set => _dicCanciones = value; }
     }
 }

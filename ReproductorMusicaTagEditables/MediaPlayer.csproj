@@ -401,6 +401,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Controls\Regalos\RegalosControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\TiempoTrack\TiempoTrack.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -480,6 +484,9 @@
     </Compile>
     <Compile Include="Controls\PanelControlTrack\PanelControlMusica.xaml.cs">
       <DependentUpon>PanelControlMusica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Regalos\RegalosControl.xaml.cs">
+      <DependentUpon>RegalosControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\TiempoTrack\TiempoTrack.xaml.cs">
       <DependentUpon>TiempoTrack.xaml</DependentUpon>
@@ -565,6 +572,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Mvvm\View\Pages\Internas\RegaloListaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Mvvm\View\Pages\Internas\RegalosPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Mvvm\View\Pages\ListasPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -620,6 +635,7 @@
     <Compile Include="Mvvm\Model\Artista.cs" />
     <Compile Include="Mvvm\Model\Cancion.cs" />
     <Compile Include="Mvvm\Model\ListaRep.cs" />
+    <Compile Include="Mvvm\Model\RegalosRep.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\ArchivoImagenBase.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\IArchivoimagen\IArchivoImagen.cs" />
     <Compile Include="Mvvm\Repository\ArchivoImagen\ImagenDefault.cs" />
@@ -666,8 +682,10 @@
     <Compile Include="Mvvm\ViewModel\InfoGeneroViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\IRecolector\IRecolector.cs" />
     <Compile Include="Mvvm\ViewModel\ListaRepViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\ListasRegalosViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ListasViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\PrincipalViewModel.cs" />
+    <Compile Include="Mvvm\ViewModel\RegalosViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\ReproductorViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\TodosLosAlbumesViewModel.cs" />
     <Compile Include="Mvvm\ViewModel\TodosLosArtistasViewModel.cs" />
@@ -719,6 +737,12 @@
     </Compile>
     <Compile Include="Mvvm\View\Pages\Internas\InfoListasPage.xaml.cs">
       <DependentUpon>InfoListasPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\Pages\Internas\RegaloListaPage.xaml.cs">
+      <DependentUpon>RegaloListaPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Mvvm\View\Pages\Internas\RegalosPage.xaml.cs">
+      <DependentUpon>RegalosPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Mvvm\View\Pages\ListasPage.xaml.cs">
       <DependentUpon>ListasPage.xaml</DependentUpon>

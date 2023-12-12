@@ -1,8 +1,11 @@
 ﻿
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
+using ReproductorMusicaTagEditables.Mvvm.Model;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas;
 using System;
+using System.Collections.Generic;
 using System.Windows.Controls;
 using System.Windows.Forms;
 
@@ -17,6 +20,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
            
             panelPrincipal.AgregarElementosAlFiltro();
             scrollCanciones.ScrollToVerticalOffset(panelPrincipal.ScrollVertical);
+
+            Dictionary<string, List<Cancion>> dic = ListasReproduccion.GenerarListasDinamicasFavoritos();
+
+            if(dic.Count > 0)
+            {
+                panelPrincipal.RegalosVisibilidad = System.Windows.Visibility.Visible;
+                panelPrincipal.DicCanciones = dic;
+            }
         }
 
         private void InfoCancionTabla_PlayClick(object sender, EventArgs e)
@@ -96,6 +107,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages
         private void Ver_Historial(object sender, System.Windows.RoutedEventArgs e)
         {
             this.NavigationService.Navigate(new HistorialPage());
+        }
+
+        private void Ver_Regalos(object sender, System.Windows.RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new RegalosPage(panelPrincipal.DicCanciones));
         }
     }
 }
