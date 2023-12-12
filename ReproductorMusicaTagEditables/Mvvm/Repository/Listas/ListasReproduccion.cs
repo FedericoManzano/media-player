@@ -17,7 +17,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         public static readonly string PATH_LISTAS = Environment.CurrentDirectory +  @"/Listas/";
         public static readonly string EXT = ".json";
 
-
         private static void CrearDirectorio()
         {
             try
@@ -341,7 +340,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             
         }
 
-
         public static Dictionary<string,List<Cancion>> GenerarListasDinamicasFavoritos ()
         {
             Dictionary<string, List<Cancion>> dicCanciones = new Dictionary<string, List<Cancion>>();
@@ -516,7 +514,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             }).ToList();
             return ret;
         }
-
 
         public static bool EsMenorFecha(string fecha)
         {

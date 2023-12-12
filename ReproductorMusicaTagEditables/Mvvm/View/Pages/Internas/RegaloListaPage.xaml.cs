@@ -15,14 +15,12 @@ using System.Windows.Shapes;
 
 namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
 {
-    /// <summary>
-    /// Lógica de interacción para RegaloListaPage.xaml
-    /// </summary>
     public partial class RegaloListaPage : Page
     {
-        public RegaloListaPage()
+        public RegaloListaPage(string nombre)
         {
             InitializeComponent();
+            listasRegalo.CargarPaginaListadosRegalos(nombre);
         }
     }
 }

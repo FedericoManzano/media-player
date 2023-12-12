@@ -25,7 +25,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.View.Pages.Internas
         private void RegalosControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
             RegalosControl i = (RegalosControl)sender;
-            MessageBox.Show(i.Texto);
+            this.NavigationService.Navigate(new RegaloListaPage(i.Texto));
         }
     }
 }

@@ -11,8 +11,68 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RegaloListaPage">
+    <Page.DataContext>
+        <viewModel:ListasRegalosViewModel x:Name="listasRegalo"/>
+    </Page.DataContext>
 
-    <Grid>
-        
+    <Grid Margin="15 0 15 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="230"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <infoListaRep:InfoListaPaginaControl x:Name="infoLista"
+                ImagenUno="{Binding ListaRep.Imagen1}"
+                ImagenDos="{Binding ListaRep.Imagen2}"
+                ImagenTres="{Binding ListaRep.Imagen3}"
+                ImagenCuatro="{Binding ListaRep.Imagen4}"
+                Nombre="{Binding ListaRep.Nombre}"
+                CancidadCanciones="{Binding ListaRep.CantidadCanciones}"
+                DuracionHoras="{Binding ListaRep.Duracion}"/>
+
+        <StackPanel Grid.Row="1" 
+                    Orientation="Horizontal" >
+            <Button Style="{StaticResource btnNavegacion}" 
+                    ToolTip="Página anterior"
+                    IsEnabled="{Binding Irg.BtnNavegacion}">
+                <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
+                                Style="{StaticResource btnIcon}"/>
+            </Button>
+            <TextBlock 
+                   Text="Más escuchados" 
+                   Foreground="White" 
+                   Margin="10 15 0 0" 
+                   FontWeight="SemiBold" 
+                   FontSize="20"/>
+        </StackPanel>
+
+        <ScrollViewer x:Name="scrollCanciones" Grid.Row="2" 
+                      VerticalScrollBarVisibility="Auto"
+                      Visibility="{Binding Irg.IslistadoVisible}">
+            <ItemsControl  x:Name="itemList" ItemsSource="{Binding Irg.Presentacion}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <infoCancion:InfoCancionTabla
+                                        
+                                        NumeroInfo="{Binding Numero}"
+                                        TituloInfo="{Binding Titulo}"
+                                        ArtistaInfo="{Binding Artista}"
+                                        AlbumInfo="{Binding Album}"
+                                        GeneroInfo="{Binding Genero}"
+                                        AnoInfo="{Binding FechaLanzamiento}"
+                                        DuracionInfo="{Binding Duracion}"
+                                        ColorTexto="{Binding EstadoColor}"
+                                        CheckEnabled="False"
+                                        Habilitado="True">
+                        </infoCancion:InfoCancionTabla>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
     </Grid>
 </Page>

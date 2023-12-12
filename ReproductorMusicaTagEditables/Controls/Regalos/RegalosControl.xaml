@@ -31,7 +31,7 @@
             <Border Grid.ColumnSpan="2" 
                     Grid.RowSpan="2"
                     Background="{Binding ElementName=regalos, Path=ColorFondo}"
-                    Opacity="0.4"/>
+                    Opacity="0.2"/>
             
             
             <TextBlock Grid.Row="2" 

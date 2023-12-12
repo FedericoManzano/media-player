@@ -1,4 +1,5 @@
 ﻿
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using System.Collections.Generic;
@@ -67,7 +68,17 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 }
                 Paginador[ano] = false;
             }
-            ListadoRegalosRep = new ObservableCollection<RegalosRep>(_dicRegalosRep[primerAno]);
+            SeleccionarPagina(primerAno);
+            
+        }
+
+
+        private void SeleccionarPagina(string ano) 
+        {
+            ListadoRegalosRep = new ObservableCollection<RegalosRep>(_dicRegalosRep[ano]);
+            Paginador = Paginador.DesmarcarTodos();
+            Paginador = Paginador.MarcarClave(ano);
+
         }
 
         private RegalosRep GenerarRegalo(Dictionary<string,List<Cancion>> dic, string key)
