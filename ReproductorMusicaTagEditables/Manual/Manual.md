@@ -32,7 +32,7 @@
 
 Para descargar el reproductor lo podemos hacer desde el siguiente enlace:
 
-:arrow_down: [Descarga Instalador v2.0.0](https://mega.nz/file/FIlHTZDD#a65fA2cfq64moF7XCWzC4cCWczgyYpPTRNnxzs--v_w)
+:arrow_down: [Descarga Instalador v2.0.0](https://mega.nz/file/ZNV2SKQK#v2yEmqTcRC8iyV6DtOqx2K0cGxVHH_urKJeUed_Qw54)
 
 El resultado de la descarga nos va a dejar un archivo llamado `MediaPlayer.zip`.
 

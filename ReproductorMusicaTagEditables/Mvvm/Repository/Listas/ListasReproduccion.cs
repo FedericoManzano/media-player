@@ -302,6 +302,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 }
                 else
                 {
+                    listaCanciones = listaCanciones.Select(cl =>
+                    {
+                        cl.EstadoColor = "White";
+                        return cl;
+                    }).ToList();
                     listaCanciones.Add(cc);
                 }
 
@@ -448,6 +453,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 }
                 else
                 {
+                    listadoCanciones = listadoCanciones.Select(cl=>
+                    {
+                        cl.EstadoColor = "White";
+                        return cl;
+                    }).ToList();
                     listadoCanciones.Add(c);
                 }
 
