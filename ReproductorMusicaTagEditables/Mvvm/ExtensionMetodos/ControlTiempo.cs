@@ -23,7 +23,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
 
         public static TimeSpan TiempoTotalPista (this MediaElement origen)
         {
-            return origen.NaturalDuration.TimeSpan;
+            if (origen.NaturalDuration.HasTimeSpan)
+            {
+                return origen.NaturalDuration.TimeSpan;
+            }
+            return new TimeSpan();
         }
 
         public static bool TieneTimeSpan(this MediaElement origen)

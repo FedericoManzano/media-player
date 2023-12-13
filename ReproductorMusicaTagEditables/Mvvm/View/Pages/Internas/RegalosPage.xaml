@@ -9,7 +9,10 @@
       xmlns:regalos="clr-namespace:ReproductorMusicaTagEditables.Controls.Regalos"
       xmlns:viewModel="clr-namespace:ReproductorMusicaTagEditables.Mvvm.ViewModel"
       xmlns:paginacion="clr-namespace:ReproductorMusicaTagEditables.Controls.Paginador"
-      Title="RegalosPage">
+      xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      Title="RegalosPage"
+      Loaded="Page_Loaded"
+      Unloaded="Page_Unloaded">
 
     <Page.DataContext>
         <viewModel:RegalosViewModel x:Name="regalosViewModel"/>
@@ -32,24 +35,26 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Regalos" 
-                       Foreground="White"
-                       FontSize="25"
-                       VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="0 0 20 0">
+                <Button Style="{StaticResource btnNavegacion}" 
+                        Click="Ir_Atras"
+                        ToolTip="Página anterior">
+                    <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
+                                            Style="{StaticResource btnIcon}"/>
+                </Button>
+                <fa:PackIconFontAwesome Foreground="Red" Width="50" Height="50" Kind="GiftSolid"
+                                        Margin="7 0 7 0"/>
+                <TextBlock Text="Regalos de fin de mes" 
+                           Foreground="White"
+                           FontSize="25"
+                           VerticalAlignment="Center"/>
+            </StackPanel>
+            
         </Grid>
-
-        <TextBlock x:Name="txtSinCanciones" 
-                   Text="No hay canciones cargadas" 
-                   Foreground="#ccc" 
-                   Grid.Row="1"
-                   FontSize="22"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Visibility="{Binding Irg.IsMensajeVisible}"/>
 
         <ScrollViewer VerticalScrollBarVisibility="Auto" 
                       Grid.Row="1"
-                      Visibility="{Binding Irg.IslistadoVisible}">
+                      Margin="0 20">
             <ItemsControl ItemsSource="{Binding ListadoRegalosRep}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>

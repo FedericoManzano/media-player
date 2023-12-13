@@ -111,7 +111,7 @@
                         ToolTip="Listas de regalo." Margin="15 0 0 0"
                         Visibility="{Binding RegalosVisibilidad}">
                     <StackPanel Orientation="Horizontal">
-                        <fa:PackIconFontAwesome Style="{StaticResource iconEliminarHistorial}" Kind="GiftSolid"/>
+                        <fa:PackIconFontAwesome Style="{StaticResource iconEliminarHistorial}" Kind="GiftSolid" Foreground="Red"/>
                     </StackPanel>
                 </Button>
             </StackPanel>

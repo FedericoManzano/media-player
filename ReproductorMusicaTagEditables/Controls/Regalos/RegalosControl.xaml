@@ -3,44 +3,68 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              MinWidth="100" 
              MaxWidth="160"
              x:Name="regalos">
-    <Border Cursor="Hand">
+    <Border Cursor="Hand" CornerRadius="5">
 
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="75"/>
+                <ColumnDefinition Width="75"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="75"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Border Background="{Binding ElementName=regalos, Path=ImagenUno}"/>
+            <Border Background="{Binding ElementName=regalos, Path=ImagenUno}" CornerRadius="5 0 0 0"/>
 
-            <Border Grid.Row="0" Grid.Column="1" Background="{Binding ElementName=regalos, Path=ImagenDos}"/>
+            <Border CornerRadius="0 5 0 0" Grid.Row="0" Grid.Column="1" Background="{Binding ElementName=regalos, Path=ImagenDos}"/>
 
-            <Border Grid.Row="1" Background="{Binding ElementName=regalos, Path=ImagenTres}"/>
+            <Border CornerRadius="0 0 0 5" Grid.Row="1" Background="{Binding ElementName=regalos, Path=ImagenTres}"/>
 
-            <Border Grid.Column="1" Grid.Row="1" Background="{Binding ElementName=regalos, Path=ImagenDos}"/>
-            
+            <Border CornerRadius=" 0 0 5 0" Grid.Column="1" Grid.Row="1" Background="{Binding ElementName=regalos, Path=ImagenDos}"/>
+
             <Border Grid.ColumnSpan="2" 
+                    CornerRadius="130"
+                    Height="170"
+                    Width="200"
                     Grid.RowSpan="2"
+                    Margin="-80 30 0 0"
                     Background="{Binding ElementName=regalos, Path=ColorFondo}"
-                    Opacity="0.2"/>
-            
-            
-            <TextBlock Grid.Row="2" 
-                       Grid.ColumnSpan="2" 
+                    Opacity="0.8">
+                <StackPanel>
+                    <fa:PackIconFontAwesome Width="70" Height="70" Margin="70 0 0 0" Kind="GiftSolid" Foreground="White"/>
+                    <TextBlock Text="Regalo Mensual" 
+                               Foreground="White" 
+                               FontWeight="SemiBold"
+                               FontSize="16" 
+                               Margin="70 5 0 0"/>
+                    <TextBlock Text="Creado Automáticamente" 
+                               Foreground="White" 
+                               FontWeight="Normal"
+                               FontStyle="Italic"
+                               FontSize="11" 
+                               Margin="70 5 0 0"/>
+                </StackPanel>
+                
+            </Border>
+
+
+            <StackPanel Grid.Row="2" Grid.ColumnSpan="2" >
+                <TextBlock  
                        Foreground="White" 
                        FontSize="14" 
                        Text="{Binding ElementName=regalos, Path=Texto}"
                        FontWeight="SemiBold"
                        Margin="0 5 0 0"/>
+                <TextBlock Text="Creado por Media Player" Margin="0 5 0 0" FontSize="10" Foreground="Gray" FontStyle="Italic"/>
+            </StackPanel>
+            
         </Grid>
     </Border>
 </UserControl>

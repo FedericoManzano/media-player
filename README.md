@@ -5,7 +5,7 @@
 # Reproductor de música 
 
 ![Badge en Desarollo](https://img.shields.io/badge/LICENCE-%20MIT-green)
-![Badge en Desarollo](https://img.shields.io/badge/VERSIÓN-%20V1.5.0-purple)
+![Badge en Desarollo](https://img.shields.io/badge/VERSIÓN-%20V2.0.0-purple)
 
 Reproductor de música realizado en un proyecto en WPF (Windows Platform Fundation) de la plataforma .NET Core de Microsoft.
 
@@ -28,7 +28,7 @@ Toda la información de la utilización del reproductoror aquí.
 
 Desde este enlace podemos descargar el instalador del reproductor.
 
-:arrow_down: [Descarga Instalador v1.5.3](https://mega.nz/file/EccXHIiD#hfYqmPFmAP2P4SAzQ3mbw3PlmMeEK_u7L9eypVu96io)
+:arrow_down: [Descarga Instalador v2.0.0](https://mega.nz/file/FIlHTZDD#a65fA2cfq64moF7XCWzC4cCWczgyYpPTRNnxzs--v_w)
 
 
 ### Formatos de audio (Esta versión)
@@ -44,14 +44,11 @@ Sistemas operativos Windows a partir de la versión 7 en adelante con arquitectu
 256 MB de memoría.
 
 
-### V1.5.0 Mejoras desde la versión BETA 1.0.0
+### V2.0.0 Mejoras desde la versión V1.5.0
 
-* Historial de reproducción del usuario.
-* Más formatos de audio compatibles.
-* Recupera de manera correcta la canción en curso cuando se cierra y se inicia la aplicación nuevamente.
-* Retirada del la lista cargada en reproducción o álbum cuando se selecciona una canción de la página principal.
-* Limpieza y documentación del código.
-* Se redujo el código de las vistas.
+* Mejora la estabilidad.
+* Genera listas de reproducción automáticas según las preferencias del usuario.
+
 
 ### Autor
 

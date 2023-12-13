@@ -15,6 +15,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
     {
 
         public static readonly string PATH_LISTAS = Environment.CurrentDirectory +  @"/Listas/";
+        public static readonly string PATH_REGALOS = PATH_LISTAS+"Regalos/";
         public static readonly string EXT = ".json";
 
         private static void CrearDirectorio()
@@ -197,6 +198,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         public static List<Cancion> DameListadoCanciones (string nombreLista)
         {
             if (string.IsNullOrEmpty(nombreLista)) return new List<Cancion>();
+
+            if (nombreLista.EsUnRegalo())
+            {
+                if(File.Exists(PATH_LISTAS+"Regalos/" + nombreLista + ".json"))
+                {
+                    List<Cancion> l = DameListadoRegalo(nombreLista);
+                    return l;
+                }
+            }
+
             if (!ExisteLista(nombreLista)) return new List<Cancion>();
 
             try
@@ -262,14 +273,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             }
             if(nombreLista == "FAVORITOS")
             {
-                res.Sort(delegate (Cancion c1, Cancion c2) {
-                    return c2.Cantidad.CompareTo(c1.Cantidad);
-                });
+                res = res.OrdenarPorCantidadDecreciente();
             }
             GuardarListado(nombreLista, res);
             return true;
         }
-
         public static bool AgregarCancionAFavoritos(Cancion c)
         {
             if(c == null) return false;
@@ -280,30 +288,24 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 c.Cantidad++;
                 Cancion cc = c.Clone();
              
-                int index = 0;
-         
                 cc.UltimaReproduccion = DateTime.Now;
-                if ( (index = listaCanciones.IndexOf(cc)) == -1)
-                {  
-                    listaCanciones.Add(cc);
+                
+                if(listaCanciones.Exists(cl => cl.Titulo == cc.Titulo && cl.Artista == cc.Artista))
+                {
+                    listaCanciones = listaCanciones.Select(cl =>
+                    {
+                        if (cc.Equals(cl))
+                            return cc;
+                        cl.EstadoColor = "White";
+                        return cl;
+                    }).ToList();
                 }
                 else
                 {
-                    listaCanciones[index] = cc;
+                    listaCanciones.Add(cc);
                 }
 
-                listaCanciones = listaCanciones.Select(cl =>
-                {
-                    if (cl.Equals(cc))
-                        return cc;
-                    cl.EstadoColor = "White";
-                    return cl;
-                }).ToList();
-
-
-                listaCanciones.Sort(delegate(Cancion c1, Cancion c2) {
-                    return c2.Cantidad.CompareTo(c1.Cantidad);
-                });
+                listaCanciones = listaCanciones.OrdenarPorCantidadDecreciente();
 
                 try
                 {
@@ -322,7 +324,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             }
             return false;
         }
-
         private static void GuardarListado (string nombreLista, List<Cancion> cancions)
         {
             try
@@ -340,18 +341,24 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             
         }
 
+        #region Regalos
         public static Dictionary<string,List<Cancion>> GenerarListasDinamicasFavoritos ()
         {
             Dictionary<string, List<Cancion>> dicCanciones = new Dictionary<string, List<Cancion>>();
-            string[] paths = Directory.GetFiles(PATH_LISTAS + "Regalos");
+            if (!Directory.Exists(PATH_REGALOS))
+                Directory.CreateDirectory(PATH_REGALOS);
+            string[] paths = Directory.GetFiles(PATH_REGALOS);
 
             foreach(string p in paths)
             {
                 string nombre = ExtraerNombreArchivo(p);
-                List<Cancion> l = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(p));
-                if(l != null && l.Any())
+                if (EsMenorQueLAFechaActual(nombre))
                 {
-                    dicCanciones[nombre] = l;
+                    List<Cancion> l = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(p));
+                    if (l != null && l.Any())
+                    {
+                        dicCanciones[nombre] = l;
+                    }
                 }
             }
             return dicCanciones;
@@ -359,9 +366,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
         public static List<Cancion> DameListadoRegalo(string nombreLista)
         {
-            nombreLista = StringAFecha(nombreLista);
+            nombreLista = nombreLista.DameConFormatoFecha();
 
-            string[] paths = Directory.GetFiles(PATH_LISTAS + "Regalos");
+            string[] paths = Directory.GetFiles(PATH_REGALOS);
             foreach(var p in paths)
             {
                 string nombre = ExtraerNombreArchivo(p);
@@ -403,14 +410,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         
         public static void AgregarCancionRegalo(Cancion c)
         {
-            if(!Directory.Exists(PATH_LISTAS + "Regalos"))
+            if(!Directory.Exists(PATH_REGALOS))
             {
-                Directory.CreateDirectory(PATH_LISTAS + "Regalos");
+                Directory.CreateDirectory(PATH_REGALOS);
             }
-            string[] paths = Directory.GetFiles(PATH_LISTAS + "Regalos");
+            string[] paths = Directory.GetFiles(PATH_REGALOS);
 
 
-            string nombre = ConvertirFecha(c);
+            string nombre = c.ConvertirFecha();
             string nombreArchivoSeleccionado = "";
             string pathSeleccionado = "";
            
@@ -428,10 +435,24 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             if (!string.IsNullOrEmpty(nombreArchivoSeleccionado))
             {
                 List<Cancion> listadoCanciones = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(pathSeleccionado)) ?? new List<Cancion>();
-                listadoCanciones.Add(c);
-                listadoCanciones.Sort(delegate (Cancion c1, Cancion c2) {
-                    return c2.Cantidad.CompareTo(c1.Cantidad);
-                });
+        
+                if (listadoCanciones.Exists(cl => cl.Titulo == c.Titulo && cl.Artista == c.Artista))
+                {
+                    listadoCanciones = listadoCanciones.Select(cl =>
+                    {
+                        if (c.Equals(cl))
+                            return c;
+                        cl.EstadoColor = "White";
+                        return cl;
+                    }).ToList();
+                }
+                else
+                {
+                    listadoCanciones.Add(c);
+                }
+
+                listadoCanciones = listadoCanciones.OrdenarPorCantidadDecreciente();
+               
                 string output = JsonConvert.SerializeObject(listadoCanciones, Formatting.Indented);
                 using (StreamWriter sw = new StreamWriter(pathSeleccionado))
                 {
@@ -440,13 +461,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             }
             else
             {
-                File.Create(PATH_LISTAS + "Regalos/" + nombre + ".json");
+                File.Create(PATH_REGALOS + nombre + EXT);
                 List<Cancion> l = new List<Cancion> { c };
                 string output = JsonConvert.SerializeObject(l, Formatting.Indented);
                 using (StreamWriter sw = new StreamWriter(pathSeleccionado))
                 {
-                    sw.Write(output);
-                    
+                    sw.Write(output);    
                 }
             }
         }
@@ -461,69 +481,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             return "";
         } 
 
-        public static string ConvertirFecha(Cancion c)
-        {
-            int ano = c.UltimaReproduccion.Year;
-            int mes = c.UltimaReproduccion.Month;
-            return mes + "-" + ano;
-        }
-
-        public static string StringAFecha(string nombre)
-        {
-            if (!string.IsNullOrEmpty(nombre))
-            {
-                if(Regex.IsMatch(nombre, "^([A-Za-z]+ {1}[0-9]{4})$"))
-                {
-                    string mes = nombre.Split(' ')[0];
-                    string ano = nombre.Split(' ')[1];
-                    mes = NumeroMes(mes);
-                    return mes + "-" + ano;
-                }
-                return "";
-            }
-            return "";
-        }
-
-        public static string NumeroMes(string mes)
-        {
-            switch(mes)
-            {
-                case "Enero": return "1";
-                case "Febrero": return "2";
-                case "Marzo": return "3";
-                case "Abril": return "4";
-                case "Mayo": return "5";
-                case "Junio": return "6";
-                case "Julio": return "7";
-                case "Agosto": return "8";
-                case "Septiembre": return "9";
-                case "Octubre": return "10";
-                case "Noviembre": return "11";
-                case "Diciembre": return "12";
-                default: return "0";
-            }
-        }
-
-        public static List<string> ConvertirFecha(List<Cancion> cancionesFavoritas)
-        {
-            List<string> ret = cancionesFavoritas.Select(c =>
-            {
-                int ano = c.UltimaReproduccion.Year;
-                int mes = c.UltimaReproduccion.Month;
-                return mes + "-" + ano;
-            }).ToList();
-            return ret;
-        }
-
-        public static bool EsMenorFecha(string fecha)
+        public static bool EsMenorQueLAFechaActual(string fecha)
         {
             if(fecha == null)
                 return false;
-            if(Regex.IsMatch(fecha, "^([0-9]{2}-[0-9])$"))
+            if(Regex.IsMatch(fecha, "^([0-9]{1,2}-[0-9]{4})$"))
             {
                 DateTime dateTime = DateTime.Now;
-                string mes = fecha.Split(new char[] { '-' })[0];
-                string ano = fecha.Split(new char[] { '-' })[1];
+                string mes = fecha.MesString();
+                string ano = fecha.AnoString();
 
                 try
                 {
@@ -547,5 +513,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
             return false;
         }
+
+        public static string FechaCreacionDelRegalo(string nombre)
+        {
+            nombre = nombre.DameConFormatoFecha();
+            if (File.Exists(PATH_REGALOS + nombre + EXT))
+            {
+                return File.GetCreationTime(PATH_REGALOS + nombre + EXT).ToString(@"dd/MM/yyyy");
+            }
+            return "00/00/0000";
+        }
+        #endregion
     }
 }

@@ -2,6 +2,8 @@
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -12,22 +14,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 {
     public class RegalosViewModel : ReproductorViewModel, IRecolector.IRecolector
     {
-        private static readonly string[] MESES =
-        {
-            "Enero",
-            "Febrero",
-            "Marzo",
-            "Abril",
-            "Mayo",
-            "Junio",
-            "Julio",
-            "Agosto",
-            "Septiembre",
-            "Octubre",
-            "Noviembre",
-            "Diciembre"
-        };
 
+
+        private static readonly string[] COLORES =
+        {
+          
+            "Purple"
+        };
+        
         private Dictionary<string, List<RegalosRep>> _dicRegalosRep = new Dictionary<string, List<RegalosRep>>();
 
         private ObservableCollection<RegalosRep> _ListadoRegalosRep = new ObservableCollection<RegalosRep>();
@@ -54,10 +48,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             {
                 return;
             }
-            string primerAno = AnoString(dic.Keys.First());
+            string primerAno = dic.Keys.First().AnoString();
             foreach (var e in dic.Keys)
             {
-                string ano = AnoString(e);
+                string ano = e.AnoString();
                 if (_dicRegalosRep.ContainsKey(ano))
                 {
                     _dicRegalosRep[ano].Add(GenerarRegalo(dic, e));
@@ -73,7 +67,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
         }
 
 
-        private void SeleccionarPagina(string ano) 
+        public void SeleccionarPagina(string ano) 
         {
             ListadoRegalosRep = new ObservableCollection<RegalosRep>(_dicRegalosRep[ano]);
             Paginador = Paginador.DesmarcarTodos();
@@ -88,71 +82,34 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             {
                 RegalosRep r = new RegalosRep()
                 {
-                    Nombre = FormatearNombre(key) + " " + AnoString(key),
+                    Nombre = key.DameFormatoVisibleFecha(),
                     Imagen1 = DameImagen(0, listadoCanciones),
                     Imagen2 = DameImagen(1, listadoCanciones),
-                    Imagen3 = DameImagen(2,listadoCanciones),
+                    Imagen3 = DameImagen(2, listadoCanciones),
                     Imagen4 = DameImagen(3, listadoCanciones),
-                    Color = "Red"
+                    Color = DameColorRandom()
                 };
                 return r;
             }
             return new RegalosRep();
         }
 
+
+        private string DameColorRandom()
+        {
+            Random r = new Random();
+            return COLORES[r.Next(0, COLORES.Length)];
+        }
+
         private ImageBrush DameImagen(int index, List<Cancion> listado)
         {
-            if(listado == null)
+            if (listado == null)
                 return ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
             if (index >= listado.Count || index < 0)
                 return ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.DEFAULT).DameImagen();
             return ArchivoImagenBase.archivoImagenFabrica(ArchivoImagenBase.IMAGEN_DEL_ARCHIVO).DameImagen(listado[index].Path);
         }
 
-
-        private string FormatearNombre (string k)
-        {
-            string mes = MesString(k);
-            switch(mes)
-            {
-                case "1": return MESES[0];
-                case "2": return MESES[1];
-                case "3": return MESES[2];
-                case "4": return MESES[3];
-                case "5": return MESES[4];
-                case "6": return MESES[5];
-                case "7": return MESES[6];
-                case "8": return MESES[7];
-                case "9": return MESES[8];
-                case "10": return MESES[9];
-                case "11": return MESES[10];
-                case "12": return MESES[11];
-                default: return "0";
-            }
-        } 
-
-
-        private string AnoString(string fecha)
-        {
-            if (string.IsNullOrEmpty(fecha))
-                return "1600";
-            if(Regex.IsMatch(fecha, "^([0-9]{2}-[0-9]{4})$"))
-            {
-                return fecha.Split('-')[1];
-            }
-            return "1600";
-        }
-
-        private string MesString(string fecha)
-        {
-            if (string.IsNullOrEmpty(fecha))
-                return "0";
-            if (Regex.IsMatch(fecha, "^([0-9]{2}-[0-9]{4})$"))
-            {
-                return fecha.Split('-')[0];
-            }
-            return "0";
-        }
 
         public void Limpiar()
         {

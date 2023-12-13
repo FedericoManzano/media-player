@@ -63,7 +63,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                             Irg.Seleccionar();
                             Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
                             EstadosControl.PLAY = true;
-                            ListasReproduccion.AgregarCancionAFavoritos(Irg.CancionActual.Cancion);
+                            
                         }
                         else
                         {
@@ -80,7 +80,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                             
                             Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
                             EstadosControl.PLAY = true;
+                            
                         }
+                        ListasReproduccion.AgregarCancionAFavoritos(Irg.CancionActual.Cancion);
                     }
                 }
                 

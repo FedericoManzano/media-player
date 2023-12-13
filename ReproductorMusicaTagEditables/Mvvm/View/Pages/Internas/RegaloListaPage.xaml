@@ -10,7 +10,9 @@
       xmlns:infoListaRep="clr-namespace:ReproductorMusicaTagEditables.Controls.InfoListaPagina"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="RegaloListaPage">
+      Title="RegaloListaPage"
+      Loaded="Page_Loaded"
+      Unloaded="Page_Unloaded">
     <Page.DataContext>
         <viewModel:ListasRegalosViewModel x:Name="listasRegalo"/>
     </Page.DataContext>
@@ -28,13 +30,15 @@
                 ImagenCuatro="{Binding ListaRep.Imagen4}"
                 Nombre="{Binding ListaRep.Nombre}"
                 CancidadCanciones="{Binding ListaRep.CantidadCanciones}"
-                DuracionHoras="{Binding ListaRep.Duracion}"/>
+                DuracionHoras="{Binding ListaRep.Duracion}"
+                FechaCreacion="{Binding FechaCreacion}"
+                ComandoPlay="{Binding PlayRegalo}"/>
 
         <StackPanel Grid.Row="1" 
                     Orientation="Horizontal" >
             <Button Style="{StaticResource btnNavegacion}" 
                     ToolTip="Página anterior"
-                    IsEnabled="{Binding Irg.BtnNavegacion}">
+                    Click="Ir_Atras">
                 <fa:PackIconFontAwesome Kind="ArrowAltCircleLeftRegular"
                                 Style="{StaticResource btnIcon}"/>
             </Button>
@@ -47,8 +51,7 @@
         </StackPanel>
 
         <ScrollViewer x:Name="scrollCanciones" Grid.Row="2" 
-                      VerticalScrollBarVisibility="Auto"
-                      Visibility="{Binding Irg.IslistadoVisible}">
+                      VerticalScrollBarVisibility="Auto">
             <ItemsControl  x:Name="itemList" ItemsSource="{Binding Irg.Presentacion}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -58,7 +61,6 @@
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
                         <infoCancion:InfoCancionTabla
-                                        
                                         NumeroInfo="{Binding Numero}"
                                         TituloInfo="{Binding Titulo}"
                                         ArtistaInfo="{Binding Artista}"
@@ -67,8 +69,12 @@
                                         AnoInfo="{Binding FechaLanzamiento}"
                                         DuracionInfo="{Binding Duracion}"
                                         ColorTexto="{Binding EstadoColor}"
+                                        Comando="{Binding ElementName=listasRegalo, Path=PlayRegalo}"
+                                        ParametroComando="{Binding .}"
+                                        ArtistaClick="InfoCancionTabla_ArtistaClick"
+                                        AlbumClick="InfoCancionTabla_AlbumClick"
                                         CheckEnabled="False"
-                                        Habilitado="True">
+                                        Habilitado="False">
                         </infoCancion:InfoCancionTabla>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
