@@ -1,6 +1,6 @@
 # :books: Manual Media Player 
 
-![Badge en Desarollo](https://img.shields.io/badge/LICENCE-%20MIT-green)
+![Badge en Desarollo](https://img.shields.io/badge/LICENSE-%20MIT-green)
 ![Badge en Desarollo](https://img.shields.io/badge/VERSIÓN-%20V2.0.0-purple)
 
 ## :link: Indice de contenidos

@@ -4,7 +4,7 @@
 
 # Reproductor de música 
 
-![Badge en Desarollo](https://img.shields.io/badge/LICENCE-%20MIT-green)
+![Badge en Desarollo](https://img.shields.io/badge/LICENSE-%20MIT-green)
 ![Badge en Desarollo](https://img.shields.io/badge/VERSIÓN-%20V2.0.0-purple)
 
 Reproductor de música realizado en un proyecto en WPF (Windows Platform Fundation) de la plataforma .NET Core de Microsoft.
