@@ -4,6 +4,7 @@ using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Filtros;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System;
@@ -40,7 +41,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             {
                 Irg.CancionesFiltradas = new ObservableCollection<Cancion>(listaCanciones);
                 Irg.Deseleccionar();
-                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(Irg, Irg.CancionesFiltradas[0]);
+                if (EstadosControl.RANDOM)
+                {
+                    Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexRan();
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+                }
+                else
+                {
+                    Irg.CancionActual.Index = 0;
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
+                }
+
+                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(Irg, Irg.CancionActual.Cancion);
                 Historial.AgregarAHistorialListas(nombreLista);
             }
         }

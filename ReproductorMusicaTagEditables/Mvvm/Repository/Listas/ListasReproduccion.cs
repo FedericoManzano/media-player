@@ -135,20 +135,8 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
             {
                 List<Cancion> listado = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(nombreLista.Ruta()))
                                                         ?? new List<Cancion>();
-                if (listado.Count > 0)
-                {
-                    if (listado.Exists(cl => cl.Titulo.Equals(c.Titulo) && cl.Artista.Equals(c.Artista)))
-                        return false;
-                }
+                listado = AgregarYBlanquearCanciones(listado, c);
 
-                InfoReproductor i = InfoReproductor.DameInstancia();
-                if (c.Equals(i.CancionActual.Cancion))
-                {
-                    c.EstadoColor = "Red";
-                }
-                else { c.EstadoColor = "White";  }
-                
-                listado.Add(c);
                 string ser = JsonConvert.SerializeObject(listado, Formatting.Indented);
                 using (StreamWriter sw = new StreamWriter(nombreLista.Ruta()))
                 {
@@ -267,8 +255,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                         c.Cantidad = cl.Cantidad;
                         c.EstadoColor = "White";
                         res.Add(c);
-                    }
-                        
+                    }    
                 }
             }
             if(nombreLista == "FAVORITOS")
@@ -281,41 +268,25 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         public static bool AgregarCancionAFavoritos(Cancion c)
         {
             if(c == null) return false;
-            if(ExisteLista("FAVORITOS") && (c.Artista != "Desconocido" && c.Album != "Desconocido") )
+            if (!ExisteLista("FAVORITOS"))
+            {
+                Crear("FAVORITOS");
+            }
+            if(c.Artista != "Desconocido" && c.Album != "Desconocido")
             {
                 List<Cancion> listaCanciones = DameListadoCanciones("FAVORITOS");
                 
                 c.Cantidad++;
+                c.UltimaReproduccion = DateTime.Now;
                 Cancion cc = c.Clone();
-             
-                cc.UltimaReproduccion = DateTime.Now;
                 
-                if(listaCanciones.Exists(cl => cl.Titulo == cc.Titulo && cl.Artista == cc.Artista))
-                {
-                    listaCanciones = listaCanciones.Select(cl =>
-                    {
-                        if (cc.Equals(cl))
-                            return cc;
-                        cl.EstadoColor = "White";
-                        return cl;
-                    }).ToList();
-                }
-                else
-                {
-                    listaCanciones = listaCanciones.Select(cl =>
-                    {
-                        cl.EstadoColor = "White";
-                        return cl;
-                    }).ToList();
-                    listaCanciones.Add(cc);
-                }
-
+                listaCanciones = AgregarYBlanquearCanciones(listaCanciones, cc);
                 listaCanciones = listaCanciones.OrdenarPorCantidadDecreciente();
 
                 try
                 {
                     string listaTxt = JsonConvert.SerializeObject(listaCanciones, Formatting.Indented);
-                    AgregarCancionRegalo(c);
+                    AgregarCancionRegalo(cc);
                     using (StreamWriter sw = new StreamWriter("FAVORITOS".Ruta()))
                     {
                         sw.Write(listaTxt);
@@ -435,31 +406,14 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                     nombreArchivoSeleccionado = na;
                     pathSeleccionado = p;
                 }
+                
             }
 
             if (!string.IsNullOrEmpty(nombreArchivoSeleccionado))
             {
                 List<Cancion> listadoCanciones = JsonConvert.DeserializeObject<List<Cancion>>(File.ReadAllText(pathSeleccionado)) ?? new List<Cancion>();
-        
-                if (listadoCanciones.Exists(cl => cl.Titulo == c.Titulo && cl.Artista == c.Artista))
-                {
-                    listadoCanciones = listadoCanciones.Select(cl =>
-                    {
-                        if (c.Equals(cl))
-                            return c;
-                        cl.EstadoColor = "White";
-                        return cl;
-                    }).ToList();
-                }
-                else
-                {
-                    listadoCanciones = listadoCanciones.Select(cl=>
-                    {
-                        cl.EstadoColor = "White";
-                        return cl;
-                    }).ToList();
-                    listadoCanciones.Add(c);
-                }
+
+                listadoCanciones = AgregarYBlanquearCanciones(listadoCanciones, c);
 
                 listadoCanciones = listadoCanciones.OrdenarPorCantidadDecreciente();
                
@@ -470,17 +424,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 }
             }
             else
-            {
-                File.Create(PATH_REGALOS + nombre + EXT);
-                List<Cancion> l = new List<Cancion> { c };
-                string output = JsonConvert.SerializeObject(l, Formatting.Indented);
-                using (StreamWriter sw = new StreamWriter(pathSeleccionado))
+            { 
+                using (StreamWriter sw = new StreamWriter(PATH_REGALOS + nombre + EXT))
                 {
+                    List<Cancion> l = new List<Cancion> { c };
+                    string output = JsonConvert.SerializeObject(l, Formatting.Indented);
                     sw.Write(output);    
+                    sw.Close();
                 }
             }
         }
         
+
         public static string ExtraerNombreArchivo(string path)
         {
             if (File.Exists(path))
@@ -495,7 +450,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         {
             if(fecha == null)
                 return false;
-            if(Regex.IsMatch(fecha, "^([0-9]{1,2}-[0-9]{4})$"))
+            if(fecha.ValidarFormato())
             {
                 DateTime dateTime = DateTime.Now;
                 string mes = fecha.MesString();
@@ -532,6 +487,30 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 return File.GetCreationTime(PATH_REGALOS + nombre + EXT).ToString(@"dd/MM/yyyy");
             }
             return "00/00/0000";
+        }
+
+        private static List<Cancion> AgregarYBlanquearCanciones(List<Cancion> listado, Cancion c)
+        {
+            if (listado.Exists(cl => cl.Titulo == c.Titulo && cl.Artista == c.Artista))
+            {
+                listado = listado.Select(cl =>
+                {
+                    if (c.Equals(cl))
+                        return c;
+                    cl.EstadoColor = "White";
+                    return cl;
+                }).ToList();
+            }
+            else
+            {
+                listado = listado.Select(cl =>
+                {
+                    cl.EstadoColor = "White";
+                    return cl;
+                }).ToList();
+                listado.Add(c);
+            }
+            return listado;
         }
         #endregion
     }

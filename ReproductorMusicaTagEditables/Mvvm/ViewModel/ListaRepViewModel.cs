@@ -1,5 +1,6 @@
 ﻿using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Controls.ListaAvatar;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
@@ -99,11 +100,16 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             Irg.CancionesFiltradas = new ObservableCollection<Cancion>(ListasReproduccion.DameListadoCanciones(ListaRep.Nombre));
             if (obj == null)
             {
-                Irg.CancionActual.Index = 0;
-                Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
-                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
-                        .Ejecutar(irg, Irg.CancionesFiltradas[0]);
-                GuardarHistorial(ListaRep.Nombre, Irg.CancionesFiltradas[0]);
+                if (EstadosControl.RANDOM)
+                {
+                    Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexRan();
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+                }
+                else
+                {
+                    Irg.CancionActual.Index = 0;
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
+                }
             } else
             {
                 Cancion c = (Cancion)obj;
@@ -111,10 +117,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                
                 Irg.CancionActual.Index = index;
                 Irg.CancionActual.Cancion = c;
-                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
-                        .Ejecutar(irg, Irg.CancionActual.Cancion);
-                GuardarHistorial(ListaRep.Nombre, Irg.CancionActual.Cancion);
+            
             }
+
+            AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
+                        .Ejecutar(irg, Irg.CancionActual.Cancion);
+            GuardarHistorial(ListaRep.Nombre, Irg.CancionActual.Cancion);
         }
         private void GuardarHistorial(string nombreLista, Cancion cancionActual)
         {

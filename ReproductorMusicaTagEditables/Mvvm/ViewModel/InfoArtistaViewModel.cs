@@ -58,9 +58,21 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 if (Irg.CancionesFiltradas.Any())
                 {
                     Irg.Deseleccionar();
-                    AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
+
+                    if (EstadosControl.RANDOM)
+                    {
+                        Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexRan();
+                        Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+                    }
+                    else
+                    {
+                        Irg.CancionActual.Index = 0;
+                        Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+                    }
+
+                    AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionActual.Cancion);
                     ScrollVertical = irg.SetScroll();
-                    Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionesFiltradas[0]));
+                    Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
                 }
             }
         }
@@ -79,9 +91,18 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             if (Irg.CancionesFiltradas.Any())
             {
                 Irg.Deseleccionar();
-
-                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
-                Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionesFiltradas[0]));
+                if (EstadosControl.RANDOM)
+                {
+                    Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexRan();
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+                }
+                else
+                {
+                    Irg.CancionActual.Index = 0;
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
+                }
+                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionActual.Cancion);
+                Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
             }
         }
 

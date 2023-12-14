@@ -4,8 +4,8 @@
 
 # Reproductor de música 
 
-![Badge en Desarollo](https://img.shields.io/badge/LICENSE-%20MIT-green)
-![Badge en Desarollo](https://img.shields.io/badge/VERSIÓN-%20V2.0.0-purple)
+![License](https://img.shields.io/badge/LICENSE-%20MIT-green)
+![Version](https://img.shields.io/badge/VERSIÓN-%20V2.0.5-purple)
 
 Reproductor de música realizado en un proyecto en WPF (Windows Platform Fundation) de la plataforma .NET Core de Microsoft.
 
@@ -28,8 +28,9 @@ Toda la información de la utilización del reproductoror aquí.
 
 Desde este enlace podemos descargar el instalador del reproductor.
 
-:arrow_down: [Descarga Instalador v2.0.0](https://mega.nz/file/ZNV2SKQK#v2yEmqTcRC8iyV6DtOqx2K0cGxVHH_urKJeUed_Qw54)
+:arrow_down: [Descarga Instalador v2.0.5 32 Bits](https://mega.nz/file/5cFmjLgC#cZekzRiQBxKVC1k3ZSk-QLeTt285W8u4A_XnUo5hPi0)
 
+:arrow_down: [Descarga Instalador v2.0.5 64 Bits](https://mega.nz/file/oJ1CXZIK#dOWTSZvdNGHBpvuMWLajZPcXO9LUBfeQuJcH2ynlRR4)
 
 ### Formatos de audio (Esta versión)
 
@@ -44,10 +45,11 @@ Sistemas operativos Windows a partir de la versión 7 en adelante con arquitectu
 256 MB de memoría.
 
 
-### V2.0.0 Mejoras desde la versión V1.5.0
+### V2.5.0 Mejoras desde la versión V1.5.0
 
 * Mejora la estabilidad.
-* Genera listas de reproducción automáticas según las preferencias del usuario.
+* Se mejoró la reproducción random de los diferentes listados de canciones.
+* Generación de listas de reproducción de regalo al principio de cada mes.
 
 
 ### Autor

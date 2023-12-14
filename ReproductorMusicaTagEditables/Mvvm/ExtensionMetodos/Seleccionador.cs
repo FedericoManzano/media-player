@@ -32,5 +32,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos
             Random r = new Random();
             return r.Next(0,origen.Count);
         }
+        public static int IndexRan(this ObservableCollection<Cancion> origen)
+        {
+            Random r = new Random();
+            return r.Next(0, origen.Count);
+        }
     }
 }

@@ -6,7 +6,7 @@
              xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" 
              MinWidth="100" 
-             MaxWidth="160"
+             MaxWidth="150"
              x:Name="regalos">
     <Border Cursor="Hand" CornerRadius="5">
 
@@ -30,28 +30,26 @@
             <Border CornerRadius=" 0 0 5 0" Grid.Column="1" Grid.Row="1" Background="{Binding ElementName=regalos, Path=ImagenDos}"/>
 
             <Border Grid.ColumnSpan="2" 
-                    CornerRadius="130"
-                    Height="170"
-                    Width="200"
+                    CornerRadius="0 130 0 0"
                     Grid.RowSpan="2"
-                    Margin="-80 30 0 0"
+                    Margin="0,25,0,0"
                     Background="{Binding ElementName=regalos, Path=ColorFondo}"
-                    Opacity="0.8">
+                    Opacity="0.9">
                 <StackPanel>
-                    <fa:PackIconFontAwesome Width="70" Height="70" Margin="70 0 0 0" Kind="GiftSolid" Foreground="White"/>
+                    <fa:PackIconFontAwesome Width="70" Height="70" Margin="10 0 0 0" Kind="GiftSolid" Foreground="White"/>
                     <TextBlock Text="Regalo Mensual" 
                                Foreground="White" 
                                FontWeight="SemiBold"
                                FontSize="16" 
-                               Margin="70 5 0 0"/>
+                               Margin="5 5 0 0"/>
                     <TextBlock Text="Creado Automáticamente" 
                                Foreground="White" 
                                FontWeight="Normal"
                                FontStyle="Italic"
                                FontSize="11" 
-                               Margin="70 5 0 0"/>
+                               Margin="5 5 0 0"/>
                 </StackPanel>
-                
+
             </Border>
 
 
@@ -64,7 +62,7 @@
                        Margin="0 5 0 0"/>
                 <TextBlock Text="Creado por Media Player" Margin="0 5 0 0" FontSize="10" Foreground="Gray" FontStyle="Italic"/>
             </StackPanel>
-            
+
         </Grid>
     </Border>
 </UserControl>

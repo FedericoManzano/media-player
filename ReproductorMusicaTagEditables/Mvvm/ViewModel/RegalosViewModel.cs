@@ -15,11 +15,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
     public class RegalosViewModel : ReproductorViewModel, IRecolector.IRecolector
     {
 
-
+       
         private static readonly string[] COLORES =
         {
-          
-            "Purple"
+            "Purple",
+            "DarkRed",
+            "DarkBlue",
+            "DarkMagenta"
         };
         
         private Dictionary<string, List<RegalosRep>> _dicRegalosRep = new Dictionary<string, List<RegalosRep>>();

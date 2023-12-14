@@ -126,6 +126,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
                 DuracionLong = this.DuracionLong,
                 EstadoColor = this.EstadoColor,
                 Cantidad = this.Cantidad,
+                UltimaReproduccion = this.UltimaReproduccion,
             };
         }
         public override bool Equals(object obj)

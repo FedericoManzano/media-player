@@ -38,7 +38,7 @@
         </Grid>
         <Border.ContextMenu>
             <ContextMenu>
-                <MenuItem Header="Agregar a lista"
+                <MenuItem Header="Play"
                           Command="{Binding Parent.PlacementTarget.Tag.ComandoPlay, RelativeSource={RelativeSource Self}}"
                           CommandParameter="{Binding Parent.PlacementTarget.Tag.ParametroComandoPlay, RelativeSource={RelativeSource Self}}">
                     

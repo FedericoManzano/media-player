@@ -1,5 +1,6 @@
 ﻿using ControlTiempoMultimedia.MetodosExtendidos;
 using Reproductor_Musica.Core;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
@@ -48,18 +49,26 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
                 Irg.CancionActual.Index = index;
                 Irg.CancionActual.Cancion = c;
                 Irg.CancionesFiltradas = Irg.Presentacion;
-                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionActual.Cancion);
-                Historial.AgregarAHistorialAlbumes(AlbumSeleccionado);
             }
             else
             {
-                Irg.Deseleccionar();
-                Irg.CancionesFiltradas = Irg.Presentacion;
-                Irg.CancionActual.Index = 0;
-                Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
-                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionesFiltradas[0]);
-                Historial.AgregarAHistorialAlbumes(AlbumSeleccionado);
+                if (EstadosControl.RANDOM)
+                {
+                    Irg.CancionesFiltradas = new ObservableCollection<Cancion>(irg.Presentacion);
+                    Irg.Deseleccionar();
+                    Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexRan();
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+                }
+                else
+                {
+                    Irg.Deseleccionar();
+                    Irg.CancionesFiltradas = Irg.Presentacion;
+                    Irg.CancionActual.Index = 0;
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
+                }
             }
+            AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(irg, Irg.CancionActual.Cancion);
+            Historial.AgregarAHistorialAlbumes(AlbumSeleccionado);
         }
 
         public async void CargarInfoAlbum(string album)

@@ -35,7 +35,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         {
             if (string.IsNullOrEmpty(origen))
                 return "0";
-            if (Regex.IsMatch(origen, "^([0-9]{2}-[0-9]{4})$"))
+            if (origen.ValidarFormato())
             {
                 return origen.Split('-')[0];
             }
@@ -46,7 +46,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
         {
             if (string.IsNullOrEmpty(origen))
                 return "0";
-            if (Regex.IsMatch(origen, "^([0-9]{2}-[0-9]{4})$"))
+            if (origen.ValidarFormato())
             {
                 return origen.Split('-')[1];
             }
@@ -133,6 +133,11 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 return c2.Cantidad.CompareTo(c1.Cantidad);
             });
             return origen;
+        }
+
+        public static bool ValidarFormato(this string origen)
+        {
+            return Regex.IsMatch(origen, "^([0-9]{1,2}-[0-9]{4})$");
         }
     }
 }

@@ -1,7 +1,7 @@
 # :books: Manual Media Player 
 
-![Badge en Desarollo](https://img.shields.io/badge/LICENSE-%20MIT-green)
-![Badge en Desarollo](https://img.shields.io/badge/VERSIÓN-%20V2.0.0-purple)
+![License](https://img.shields.io/badge/LICENSE-%20MIT-green)
+![Version](https://img.shields.io/badge/VERSIÓN-%20V2.5.0-purple)
 
 ## :link: Indice de contenidos
 
@@ -32,7 +32,9 @@
 
 Para descargar el reproductor lo podemos hacer desde el siguiente enlace:
 
-:arrow_down: [Descarga Instalador v2.0.0](https://mega.nz/file/ZNV2SKQK#v2yEmqTcRC8iyV6DtOqx2K0cGxVHH_urKJeUed_Qw54)
+:arrow_down: [Descarga Instalador v2.0.5 32 Bits](https://mega.nz/file/5cFmjLgC#cZekzRiQBxKVC1k3ZSk-QLeTt285W8u4A_XnUo5hPi0)
+
+:arrow_down: [Descarga Instalador v2.0.5 64 Bits](https://mega.nz/file/oJ1CXZIK#dOWTSZvdNGHBpvuMWLajZPcXO9LUBfeQuJcH2ynlRR4)
 
 El resultado de la descarga nos va a dejar un archivo llamado `MediaPlayer.zip`.
 

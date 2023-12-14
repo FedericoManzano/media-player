@@ -54,11 +54,15 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
             Irg.CancionesFiltradas = Irg.Presentacion;
             if (obj == null)
             {
-                Irg.CancionActual.Index = 0;
-                Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
-                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
-                        .Ejecutar(irg, Irg.CancionesFiltradas[0]);
-                GuardarHistorial(ListaRep.Nombre, Irg.CancionesFiltradas[0]);
+                if (EstadosControl.RANDOM)
+                {
+                    Irg.CancionActual.Index = Irg.CancionesFiltradas.IndexRan();
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[Irg.CancionActual.Index];
+                } else
+                {
+                    Irg.CancionActual.Index = 0;
+                    Irg.CancionActual.Cancion = Irg.CancionesFiltradas[0];
+                }
             }
             else
             {
@@ -67,10 +71,10 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel
 
                 Irg.CancionActual.Index = index;
                 Irg.CancionActual.Cancion = c;
-                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
-                        .Ejecutar(irg, Irg.CancionActual.Cancion);
-                GuardarHistorial(ListaRep.Nombre, Irg.CancionActual.Cancion);
             }
+            AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)
+                        .Ejecutar(irg, Irg.CancionActual.Cancion);
+            GuardarHistorial(ListaRep.Nombre, Irg.CancionActual.Cancion);
         }
 
         private void GuardarHistorial(string nombreLista, Cancion cancionActual)

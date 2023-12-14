@@ -1,6 +1,7 @@
 ﻿using ControlTiempoMultimedia.MetodosExtendidos;
 using Reproductor_Musica.Core;
 using ReproductorMusicaTagEditables.Controls.InfoCancionTabla;
+using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Historial;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
@@ -10,6 +11,7 @@ using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -150,6 +152,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Base
                 Irg.CancionActual.Index = index;
                 Irg.CancionActual.Cancion = c;
             }
+            
             AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION)?.Ejecutar(Irg, c);
             ScrollVertical = irg.SetScroll();
             Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
