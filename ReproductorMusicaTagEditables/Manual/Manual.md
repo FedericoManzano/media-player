@@ -58,14 +58,18 @@ Con esto ya estaría instalado.
 
 ![Seleccionar directorio](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/seleccionar.png?raw=true)
 
-Desde el botón que se muestra en la imágen seleccionamos el directorio en el cual tenemos nuestra cancines.
+Desde el botón que se muestra en la imágen seleccionamos el directorio que contiene las canciones.
+Si queremos cargar varios directorios con canciones podemos utilizar el botón `+ Agregar` para añadir más canciones.
+
+> Siempre que utilizamos el botón `Seleccionar` va a reiniciar el listado de canciones precargadas no las va a añadir sino a reemplazar.
+
 Los formatos de archivos permitidos son: 
 
-`MP3`, `M4A`, `WAV`.
+`MP3`, `M4A`, `WAV`, `ACC`, `WMA`.
 
 ![Directorio raiz de la música](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/seleccionDirectorio.png?raw=true)
 
-> Si en el directorio seleccionado existen otros tipos de archivo o subdirectorios el programa toma todos los archivos validos existentes desde el directorio seleccionado sólo los archivos de audio.
+> Desde el directorio seleccionado se toman todas los archivos de audio pertenecientes al directorio seleccionado y a todos los subdirectorios que posea. Filtrando a los archivos que no son reconocidos por la aplicación.
 
 ![Canciones Cargadas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/cancionesCargadas.png?raw=true)
 
@@ -75,8 +79,8 @@ Para agregar canciones desde otro directorio simplemento los hacemos desde el bo
 
 ### Editar Tags
 
-Dispone de las funcionalidades necesarias para editar los metadatos de los archivos de audio, a partir de esto podemos filtrar el contenido y discriminar a los archivos de audio
-por Artista, Género, Álbum y Año de lanzamiento, junto con una imágen de la portada del álbum al cual pertenece el track contenido dentro del archivo de audio.
+Dispone de las funcionalidades necesarias para editar los metadatos de los archivos de audio, a partir de esto, podemos filtrar el contenido y discriminar a los archivos de audio
+por Artista, Género, Álbum y Año de lanzamiento, junto con una imágen de la portada del álbum al cual pertenece el track.
 
 ![Editor Tags](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/editorTags.png?raw=true)
 
@@ -84,7 +88,7 @@ por Artista, Género, Álbum y Año de lanzamiento, junto con una imágen de la 
 
 Desde el botón seleccionar podemos abrir el directorio que contiene las canciones que queremos editar, de esta forma, se van a enumerar el listado de canciones seleccionadas en el visor principal de la ventana de edición.
 
-> Recomendación: Seleccionar un directorio con menos de mil canciones, ya que, si la cantidad de archivos de audio es muy elevada puede demorarle mucho tiempo al usuario editar cada archivo individualmente.
+> Recomendación: Seleccionar un directorio con menos de mil canciones, si la cantidad de archivos de audio es muy elevada puede demorarle mucho tiempo al usuario editar cada archivo individualmente.
 Otra recomendación que la edición sea por álbum, lo que facilita la tarea y permite una rápida edición.
 
 ##### Ejemplo
@@ -140,7 +144,7 @@ Si accedemos a la página del álbum se vería de la siguiente forma:
 
 Existen varias maneras de agregar canciones a las listas de reproducción que vayamos generando.
 Para empezar nos tenemos que ir a la opción `+ Mis Listas` del menú lateral. En este punto simplemente creamos la lista que queremos desde el botón `+ Agregar Lista` desde la esquina superior derecha.
-Una vez creada la lista nos va aparecer el logo de una lista vacia con el nombre de la misma por debajo.
+Una vez creada la lista nos va a aparecer el logo de una lista vacia con el nombre de la misma por debajo.
 El paso siguiente es ir a las canciones que queremos agregar y utilizar los direrentes medios provistos para agregar dichas canciones al la lista.
 
 ![Crear Lista](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/crearLista.png?raw=true)
@@ -239,8 +243,7 @@ Otra cosa importante:
 
 > Desde los botones `>>` y `<<` podemos pasar a la canción siguiente o anterior respectivamente. Pero cual sería la canción actual, anterior o siguiente ?.
 Bueno, esto va a depender del listado que tengamos cargado, si pusimos a reproducir un álbum, entonces las canciones que se iran reproduciendo serán las del álbum. 
-Si por el contrario, las canciones pertenecen a una lista de reproducción, se van a reproducir las canciones de la lista de reproducción.
-En el caso que estemos reproduciendo las canciones de un artista (y no sólo un álbum) el resultado es que se van reproducir todas las canciones de determinado artista.
+Si por el contrario, las canciones pertenecen a una lista de reproducción, se van a reproducir las canciones de la lista de reproducción. En el caso que estemos reproduciendo las canciones de un artista (y no sólo un álbum) el resultado es que se van reproducir todas las canciones de determinado artista.
 Lo mismo pasa con los géneros.
 
 #### Ejemplo 2
@@ -309,7 +312,7 @@ Y el interior de las descargas es:
 
 ![Editor de descargas](https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/cancionesDesc.png?raw=true)
 
-En este caso, las canciones quedan disponibles hasta borremos los enlaces con el botón seleccionar desde la aplicación. Si no reiniciamos el directorio raíz las canciones van a estar disponibles.
+En este caso, las canciones quedan disponibles hasta que borremos los enlaces con el botón seleccionar desde la aplicación. Si no reiniciamos el directorio raíz las canciones van a estar disponibles.
 
 
 ### Historial de reproducción
@@ -320,7 +323,7 @@ Se puede acceder a él desde la pestaña historial del menú lateral o desde la 
 Para eliminar el historial de reproducción simplemente hay que darle al botón que está en la parte superior de la página 
 simbolizado con un bote de basura.
 
-> Para que el historial funcione, los álbumes, listas de reproducción y/o canciones que se reproduzcan tienen que disponer de la información de los metadatos. Sin esta información no se cargarán en el historial.
+> Para que el historial funcione, los álbumes, listas de reproducción y/o canciones que se reproduzcan tienen que disponer de la información de los metadatos, sin esta información no se cargarán en el historial.
 Para cargar esta información revise las secciones previas de esta documentación donde se muestra como editar los metadatos de las canciones.
 
 
