@@ -4,7 +4,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
-             xmlns:tips="clr-namespace:ReproductorMusicaTagEditables.Controls.TipsInfo"
              mc:Ignorable="d"
              x:Name="infoAlbum">
 
@@ -14,7 +13,7 @@
 
     <Border x:Name="bordePrincipal" 
             CornerRadius="10" 
-            Width="110" 
+            MinWidth="110" 
             Height="160" 
             Margin="0 0 20 20"
             Padding="3"
@@ -30,14 +29,15 @@
                     MouseEnter="borderTrigger_MouseEnter"
                     MouseLeave="borderTrigger_MouseLeave"
                     Background="{Binding ElementName=infoAlbum, Path=ImagenAlbum}"
-                    >
+                    HorizontalAlignment="Center" 
+                    Width="110">
 
                 <Border x:Name="bordeCapa" >
                     <Button Style="{StaticResource btnMenu}" 
-                                Command="{Binding ElementName=infoAlbum, Path=PlayCommand}"
-                                CommandParameter="{Binding ElementName=infoAlbum, Path=PlayParameter}">
+                            Command="{Binding ElementName=infoAlbum, Path=PlayCommand}"
+                            CommandParameter="{Binding ElementName=infoAlbum, Path=PlayParameter}">
                         <fa:PackIconFontAwesome Kind="PlaySolid" 
-                                Style="{StaticResource btnIcon}"/>
+                                                Style="{StaticResource btnIcon}"/>
                     </Button>
                 </Border>
             </Border>
@@ -50,21 +50,20 @@
         </Grid>
         <Border.ContextMenu>
             <ContextMenu>
-
                 <MenuItem Header="Play"
                           Command="{Binding Parent.PlacementTarget.Tag.PlayCommand,RelativeSource={RelativeSource Self }}"
                           CommandParameter="{Binding Parent.PlacementTarget.Tag.PlayParameter, RelativeSource={RelativeSource Self}}">
                     <MenuItem.Icon>
-                        <fa:PackIconFontAwesome Kind="PlaySolid" Foreground="Red"/>
+                        <fa:PackIconFontAwesome Kind="PlaySolid" 
+                                                Foreground="Red"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Agregar a lista" Click="MenuItem_Click">
+                <MenuItem Header="Agregar a lista" 
+                          Click="MenuItem_Click">
                     <MenuItem.Icon>
                         <fa:PackIconFontAwesome Kind="ListAltRegular"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                
-                
             </ContextMenu>
         </Border.ContextMenu>
     </Border>

@@ -11,13 +11,8 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-
-
-
         <Border Background="{Binding ElementName=infoLista, Path=ImagenUno}" Width="100" Height="100"/>
         
-
         <StackPanel Grid.Row="1" Margin="0 5 0 0">
             <TextBlock Text="{Binding ElementName=infoLista, Path=Nombre}" FontWeight="SemiBold" Foreground="White"/>
             <TextBlock Text="{Binding ElementName=infoLista, Path=Artista}" FontSize="10" Foreground="Gray"/>

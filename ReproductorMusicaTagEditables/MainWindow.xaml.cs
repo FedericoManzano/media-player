@@ -1,13 +1,16 @@
 ﻿
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
+using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
 using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base.Info;
+using ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Interop;
 using System.Windows.Media;
@@ -182,14 +185,30 @@ namespace ReproductorMusicaTagEditables
             CargarImagenPorDefectoArtista();
 
             reproViewModel.CargarReproductor(mediaReproductor);
-
             CargarInfoArtista();
+
+
             timer = new DispatcherTimer()
             {
                 Interval = TimeSpan.FromSeconds(1)
             };
+
             timer.Tick += new EventHandler(Time_Track);
             GuardarNavegacion();
+
+            if (Environment.CommandLine.Contains("\" \""))
+            {
+                string path = Environment.CommandLine.Split(new char[] { '"' })[3];
+                
+                InfoReproductor i = InfoReproductor.DameInstancia();
+                Cancion cancion = Cancion.CrearCancion(path);
+                i.CancionesFiltradas.Add(cancion);
+                i.Partes.Add(cancion);
+                i.CancionActual.Cancion = cancion;
+                i.CancionActual.Index = 0;
+
+                AccionReproductor.Fabrica(AccionReproductor.PLAY_ACCION).Ejecutar(i, i.CancionActual.Cancion);
+            }
         }
     }
 }

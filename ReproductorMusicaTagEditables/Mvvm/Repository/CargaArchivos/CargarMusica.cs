@@ -24,9 +24,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.CargaArchivos
         public async Task<List<Cancion>> CargarListadoDeCancionesAsync(List<string> listPath)
         {
             List<Cancion> listCanciones = new List<Cancion>();
-            Cancion cancion = new Cancion();
+            
             listCanciones = await Task.Run(() => listPath
-                .Select(p => cancion.CrearCancion(p))
+                .Select(p => Cancion.CrearCancion(p))
                 .Where(p => p != null)
                 .ToList());
             return listCanciones;

@@ -98,7 +98,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                     return new List<string>();
                 List<string> nombresListas = archivos.Where(s =>
                 {
-
                     FileInfo fi = new FileInfo(s);
                     if (Path.GetFileNameWithoutExtension(fi.Name) != "FAVORITOS")
                     {
@@ -189,7 +188,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
 
             if (nombreLista.EsUnRegalo())
             {
-                if(File.Exists(PATH_LISTAS+"Regalos/" + nombreLista + ".json"))
+                if(File.Exists(PATH_REGALOS + nombreLista + ".json"))
                 {
                     List<Cancion> l = DameListadoRegalo(nombreLista);
                     return l;
@@ -252,8 +251,13 @@ namespace ReproductorMusicaTagEditables.Mvvm.Repository.Listas
                 {
                     if(cl.Path == c.Path)
                     {
+                        if (c.Equals(i.CancionActual.Cancion))
+                        {
+                            c.EstadoColor = i.CancionActual.Cancion.EstadoColor;
+                        }
+                        else c.EstadoColor = "White";
+
                         c.Cantidad = cl.Cantidad;
-                        c.EstadoColor = "White";
                         res.Add(c);
                     }    
                 }

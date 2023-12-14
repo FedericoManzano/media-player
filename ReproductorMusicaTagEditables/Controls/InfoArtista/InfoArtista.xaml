@@ -12,13 +12,11 @@
     <StackPanel Orientation="Horizontal" Cursor="Hand">
         <Border Style="{StaticResource bordeBanner}" 
                 Background="{Binding ElementName=infoArtista, Path=ImagenArtista}"/>
-
-
-        <StackPanel Margin="7 0 0 0" VerticalAlignment="Center"> 
+        <StackPanel Margin="7 0 0 0" 
+                    VerticalAlignment="Center">
             <TextBlock Style="{StaticResource textoBanner}" Text="{Binding ElementName=infoArtista, Path=NombreArtista}"/>
             <TextBlock Style="{StaticResource textoBanner}" Text="{Binding ElementName=infoArtista, Path=NombreAlbum}"/>
             <TextBlock Style="{StaticResource textoBanner}" Text="{Binding ElementName=infoArtista, Path=TituloCancion}"/>
         </StackPanel>
-        
     </StackPanel>
 </UserControl>

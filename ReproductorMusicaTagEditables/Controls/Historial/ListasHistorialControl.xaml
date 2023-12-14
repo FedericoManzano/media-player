@@ -3,10 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.Historial"
              mc:Ignorable="d" 
              MinHeight="140" MinWidth="100"
              x:Name="infoLista">
+    
+    
     <Grid Cursor="Hand">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"/>

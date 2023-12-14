@@ -69,11 +69,11 @@
             </RadioButton>
             <RadioButton Style="{StaticResource btnMenu}"
                          Command="{Binding ElementName=menuLateral,Path=CommandAlbumes}"
-                         ToolTip="Todos los albumes">
+                         ToolTip="Todos los álbumes">
                 <StackPanel Orientation="Horizontal">
                     <fa:PackIconFontAwesome Kind="MusicSolid"
                                Style="{StaticResource iconoItemMenu}"/>
-                    <TextBlock Text="Albumes" 
+                    <TextBlock Text="Álbumes" 
                             Style="{StaticResource textoItemMenu}"/>
                 </StackPanel>
             </RadioButton>

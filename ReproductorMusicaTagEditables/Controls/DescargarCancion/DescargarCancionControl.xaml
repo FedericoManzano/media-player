@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:ReproductorMusicaTagEditables.Controls.DescargarCancion"
              xmlns:campo="clr-namespace:ReproductorMusicaTagEditables.Controls.CampoTexto"
              xmlns:fa="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:control="http://metro.mahapps.com/winfx/xaml/controls"
@@ -32,8 +31,8 @@
                               Foreground="Red" 
                               Margin="10 0 0 0"
                               Width="15"
-                              Height="15"
-                              />
+                              Height="15"/>
+        
         <fa:PackIconFontAwesome Kind="{Binding ElementName=descarga, Path=IconoEstado}"
                                 Foreground="{Binding ElementName=descarga, Path=ColorEstado}"
                                 Margin="10"

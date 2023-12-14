@@ -53,7 +53,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             Genero = c.Genero;
             UltimaReproduccion = c.UltimaReproduccion;
         }
-        public Cancion CrearCancion(string path)
+        public static Cancion CrearCancion(string path)
         {
             if(System.IO.File.Exists(path))
             {
@@ -64,9 +64,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
 
                     Numero = ExtraerNumero(tag),
                     Titulo = ExtraerTitulo(tag, path),
-                    Artista = ExtraerArtista(tag).Longitud(20),
-                    Genero = ExtraerGenero(tag).Longitud(20),
-                    Album = ExtraerAlbum(tag).Longitud(20),
+                    Artista = ExtraerArtista(tag),
+                    Genero = ExtraerGenero(tag),
+                    Album = ExtraerAlbum(tag),
                     DuracionLong =(ulong) path.DuracionLong(),
                     Duracion = path.DuracionString(),
                     FechaLanzamiento = ExtraerFechaLanzamiento(tag),
@@ -75,12 +75,12 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             }
             return null;
         }
-        private string ExtraerNumero(TagLib.File tag)
+        private static string ExtraerNumero(TagLib.File tag)
         {
             string num = tag.Tag.Track > 0 ? tag.Tag.Track.ToString() : string.Empty;
             return num;
         }
-        private string ExtraerTitulo(TagLib.File tag, string path)
+        private static string ExtraerTitulo(TagLib.File tag, string path)
         {
             string tit = tag.Tag.Title ?? string.Empty;
             if(tit == string.Empty)
@@ -90,24 +90,24 @@ namespace ReproductorMusicaTagEditables.Mvvm.Model
             }
             return tit;
         }
-        private string ExtraerArtista(TagLib.File tag)
+        private static string ExtraerArtista(TagLib.File tag)
         {
 #pragma warning disable CS0618 // El tipo o el miembro están obsoletos
             string tit = tag.Tag.Artists != null && tag.Tag.Artists.Length > 0 ? tag.Tag.Artists[0]: "Desconocido";
 #pragma warning restore CS0618 // El tipo o el miembro están obsoletos
             return tit;
         }
-        private string ExtraerGenero(TagLib.File tag)
+        private static string ExtraerGenero(TagLib.File tag)
         {
             string tit = tag.Tag.Genres != null && tag.Tag.Genres.Length > 0? tag.Tag.Genres[0] : "Desconocido";
             return tit;
         }
-        private string ExtraerAlbum(TagLib.File tag)
+        private static string ExtraerAlbum(TagLib.File tag)
         {
             string tit = tag.Tag.Album ?? "Desconocido";
             return tit;
         }
-        private string ExtraerFechaLanzamiento (TagLib.File tag)
+        private static string ExtraerFechaLanzamiento (TagLib.File tag)
         {
             return tag.Tag.Year.ToString();
         }

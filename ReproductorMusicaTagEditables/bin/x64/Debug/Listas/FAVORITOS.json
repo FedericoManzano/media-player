@@ -1,0 +1,32 @@
+[
+  {
+    "Numero": "1",
+    "Titulo": "Back In Black",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Back In Black.mp3",
+    "Duracion": "04:22",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "White",
+    "DuracionLong": 2620951282,
+    "Imagen": null,
+    "Cantidad": 1,
+    "UltimaReproduccion": "2023-12-14T04:56:43.4507976-03:00"
+  },
+  {
+    "Numero": "2",
+    "Titulo": "Givin the Dog a Bone",
+    "Artista": "ACDC",
+    "Album": "BACK IN BLACK",
+    "Genero": "HARD ROCK",
+    "Path": "C:\\Users\\feder\\Music\\MUSICA\\Acdc\\Back in black\\Givin the Dog a Bone.mp3",
+    "Duracion": "03:37",
+    "FechaLanzamiento": "1980",
+    "EstadoColor": "Red",
+    "DuracionLong": 2172449358,
+    "Imagen": null,
+    "Cantidad": 1,
+    "UltimaReproduccion": "2023-12-14T04:55:40.3499706-03:00"
+  }
+]
