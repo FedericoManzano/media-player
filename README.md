@@ -28,9 +28,9 @@ Toda la información de la utilización del reproductoror aquí.
 
 Desde este enlace podemos descargar el instalador del reproductor.
 
-:arrow_down: [Descarga Instalador v2.0.5 32 Bits](https://mega.nz/file/5cFmjLgC#cZekzRiQBxKVC1k3ZSk-QLeTt285W8u4A_XnUo5hPi0)
+:arrow_down: [Descarga Instalador v2.5.1 32 Bits](https://mega.nz/file/5JMGRDiL#i-PEDNRmrM_ZVCU1Q33HdocEDHzTJVwMftwjOCBxZ7o)
 
-:arrow_down: [Descarga Instalador v2.0.5 64 Bits](https://mega.nz/file/oJ1CXZIK#dOWTSZvdNGHBpvuMWLajZPcXO9LUBfeQuJcH2ynlRR4)
+:arrow_down: [Descarga Instalador v2.5.1 64 Bits](https://mega.nz/file/wY02BQZA#fkdAq4mAtbd6Yxux5u6FRM97cSkIKhXF0CO-rF-JkvY)
 
 ### Formatos de audio (Esta versión)
 
