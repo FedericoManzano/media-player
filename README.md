@@ -18,6 +18,13 @@ Reproductor de música realizado en un proyecto en WPF (Windows Platform Fundati
 - [https://www.nuget.org/packages/MediaToolkit](https://www.nuget.org/packages/MediaToolkit)
 - [https://github.com/omansak/libvideo](https://github.com/omansak/libvideo)
 
+### Presentación 
+
+<p align="center">
+  <img src="https://github.com/FedericoManzano/media-player/blob/master/ReproductorMusicaTagEditables/Manual/Imagenes/presentacion2.png?raw=true" />
+</p>
+
+
 ### Manual
 
 Toda la información de la utilización del reproductoror aquí.
@@ -28,9 +35,9 @@ Toda la información de la utilización del reproductoror aquí.
 
 Desde este enlace podemos descargar el instalador del reproductor.
 
-:arrow_down: [Descarga Instalador v2.5.1 32 Bits](https://mega.nz/file/5JMGRDiL#i-PEDNRmrM_ZVCU1Q33HdocEDHzTJVwMftwjOCBxZ7o)
+:arrow_down: [Descarga Instalador v2.5.1 32 Bits](https://mega.nz/file/pZ83SQzY#oL8X5hHzqSVruBdEEZtrDnuWTa2ZcDz6e7X5xVwKO4Q)
 
-:arrow_down: [Descarga Instalador v2.5.1 64 Bits](https://mega.nz/file/wY02BQZA#fkdAq4mAtbd6Yxux5u6FRM97cSkIKhXF0CO-rF-JkvY)
+:arrow_down: [Descarga Instalador v2.5.1 64 Bits](https://mega.nz/file/JJsDRLzT#wEPwgCRSq7X37wtJv18I4kCaheNuMNWRit6ZbocrcO4)
 
 ### Formatos de audio (Esta versión)
 
