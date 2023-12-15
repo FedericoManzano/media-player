@@ -2,6 +2,7 @@
 using ReproductorMusicaTagEditables.Mvvm.ExtensionMetodos;
 using ReproductorMusicaTagEditables.Mvvm.Model;
 using ReproductorMusicaTagEditables.Mvvm.Repository.ArchivoImagen;
+using ReproductorMusicaTagEditables.Mvvm.Repository.Listas;
 using ReproductorMusicaTagEditables.Mvvm.Repository.Navegacion;
 using ReproductorMusicaTagEditables.Mvvm.VentanasUtilitarias;
 using ReproductorMusicaTagEditables.Mvvm.ViewModel.Base;
@@ -22,6 +23,7 @@ namespace ReproductorMusicaTagEditables
 { 
     public partial class MainWindow : Window
     {
+        private bool cancionGuardada = false;
         private DispatcherTimer timer;
       
         private TimeSpan tiempoTotalPista = new TimeSpan();
@@ -48,6 +50,11 @@ namespace ReproductorMusicaTagEditables
                 controlTiempo.TiempoTranscurrido = mediaReproductor.Position.TiempoFormato();
                 tiempoTotalPista = tiempoTotalPista.Subtract(TimeSpan.FromSeconds(1));
                 controlTiempo.TiempoFaltante = tiempoTotalPista.TiempoFormato();
+                if(mediaReproductor.Position.TotalSeconds > 5 && !cancionGuardada)
+                {
+                    ListasReproduccion.AgregarCancionAFavoritos(reproViewModel.CancionActual());
+                    cancionGuardada = true;
+                }
             }
         }
 
@@ -82,6 +89,7 @@ namespace ReproductorMusicaTagEditables
             {
                 timer.Stop();
                 sliderLineTime.Value = 0;
+                cancionGuardada = false;
             }
             if (mediaReproductor.TieneTimeSpan())
             {

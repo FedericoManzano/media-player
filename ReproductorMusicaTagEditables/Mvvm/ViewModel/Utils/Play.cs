@@ -34,7 +34,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 Irg.Seleccionar();
                 Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PauseSolid;
                 EstadosControl.PLAY = true;
-                ListasReproduccion.AgregarCancionAFavoritos(c);
+                
             }
             else
             {
@@ -44,6 +44,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                     EstadosControl.PLAY = !EstadosControl.PLAY;
                     Irg.IconoPlay = MahApps.Metro.IconPacks.PackIconFontAwesomeKind.PlaySolid;
                     Irg.Reproductor.Pause();
+                    return;
                 }
                 else
                 {
@@ -82,10 +83,9 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                             EstadosControl.PLAY = true;
                             
                         }
-                        ListasReproduccion.AgregarCancionAFavoritos(Irg.CancionActual.Cancion);
                     }
                 }
-                
+               
                 Navegacion.GuardarInfo(ReproductorViewModelBase.infoNavegacion);
             }
         }

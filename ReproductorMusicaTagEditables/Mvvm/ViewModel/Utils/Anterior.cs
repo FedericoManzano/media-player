@@ -56,8 +56,6 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                     Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
                 }
             }
-            
-            ListasReproduccion.AgregarCancionAFavoritos(Irg.CancionActual.Cancion);
         }
     }
 }

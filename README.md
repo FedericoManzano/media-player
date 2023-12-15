@@ -35,9 +35,9 @@ Toda la información de la utilización del reproductoror aquí.
 
 Desde este enlace podemos descargar el instalador del reproductor.
 
-:arrow_down: [Descarga Instalador v2.5.1 32 Bits](https://mega.nz/file/pZ83SQzY#oL8X5hHzqSVruBdEEZtrDnuWTa2ZcDz6e7X5xVwKO4Q)
+:arrow_down: [Descarga Instalador v2.5.2 32 Bits](https://mega.nz/file/NQcmnCpC#tIPPM9OpC2_BZmC1upqW5ueloOQvDPA1Sax5QJ8YTXQ)
 
-:arrow_down: [Descarga Instalador v2.5.1 64 Bits](https://mega.nz/file/JJsDRLzT#wEPwgCRSq7X37wtJv18I4kCaheNuMNWRit6ZbocrcO4)
+:arrow_down: [Descarga Instalador v2.5.2 64 Bits](https://mega.nz/file/wA9UTIxD#Bzkcs2_649L520f8KJEAHvLXCwhVUf_-EyZ3bCR7Kfw)
 
 ### Formatos de audio (Esta versión)
 
@@ -57,6 +57,7 @@ Sistemas operativos Windows a partir de la versión 7 en adelante con arquitectu
 * Mejora la estabilidad.
 * Se mejoró la reproducción random de los diferentes listados de canciones.
 * Generación de listas de reproducción de regalo al principio de cada mes.
+* V2.5.2 mejora en la gestión de favoritos.
 
 
 ### Autor
