@@ -26,6 +26,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
                 Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
+                EstadosControl.CANCION_GUARDADA = false;
             }
             else if (Irg.CancionesFiltradas.Count > 0 && Irg.CancionActual.Index > 0)
             {
@@ -39,6 +40,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                 Irg.Seleccionar();
                 ReproducirCancion(Irg);
                 Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
+                EstadosControl.CANCION_GUARDADA = false;
             }
             else
             {
@@ -54,6 +56,7 @@ namespace ReproductorMusicaTagEditables.Mvvm.ViewModel.Utils
                     Irg.Seleccionar();
                     ReproducirCancion(Irg);
                     Historial.AgregarAHistorialAlbumes(GenerarAlbum(Irg.CancionActual.Cancion));
+                    EstadosControl.CANCION_GUARDADA = false;
                 }
             }
         }

@@ -93,7 +93,6 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Controls\PanelControlTrack\PanelControlMusica.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Controls\Regalos\RegalosControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Controls\TiempoTrack\TiempoTrack.g.cs
-C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Controls\TipsInfo\TipsInfoControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\MainWindow.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Mvvm\VentanasUtilitarias\AgregarCancionesListas.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Mvvm\VentanasUtilitarias\CrearListaReproduccion.g.cs
@@ -133,7 +132,6 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Controls\Paginador\BotonPaginador.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Controls\PanelControlTrack\PanelControlMusica.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Controls\TiempoTrack\TiempoTrack.baml
-C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Controls\TipsInfo\TipsInfoControl.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\MainWindow.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Mvvm\VentanasUtilitarias\CrearListaReproduccion.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\Release\Mvvm\VentanasUtilitarias\EditarTags.baml

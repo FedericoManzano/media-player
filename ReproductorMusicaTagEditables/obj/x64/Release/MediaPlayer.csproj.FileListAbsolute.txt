@@ -158,8 +158,6 @@ C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEd
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\ReproductorMusicaTagEditables.pdb
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\VentanasUtilitarias\AgregarCancionesListas.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\VentanasUtilitarias\AgregarCancionesListas.g.cs
-C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\TipsInfo\TipsInfoControl.g.cs
-C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\TipsInfo\TipsInfoControl.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\Regalos\RegalosControl.baml
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Controls\Regalos\RegalosControl.g.cs
 C:\Users\feder\source\repos\ReproductorMusicaTagEditables\ReproductorMusicaTagEditables\obj\x64\Release\Mvvm\View\Pages\Internas\RegaloListaPage.g.cs

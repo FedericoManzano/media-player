@@ -27,7 +27,7 @@
                     <TextBlock Text="Media Player" 
                             Style="{StaticResource tituloPrincipalLogo}"/>
 
-                    <TextBlock Text="Versión 2.5.1" 
+                    <TextBlock Text="Versión 2.5.3" 
                             Style="{StaticResource tituloSecundarioLogo}"/>
                 </StackPanel>
             </StackPanel>

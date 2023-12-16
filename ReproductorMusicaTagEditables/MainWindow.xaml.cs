@@ -23,7 +23,7 @@ namespace ReproductorMusicaTagEditables
 { 
     public partial class MainWindow : Window
     {
-        private bool cancionGuardada = false;
+  
         private DispatcherTimer timer;
       
         private TimeSpan tiempoTotalPista = new TimeSpan();
@@ -50,10 +50,10 @@ namespace ReproductorMusicaTagEditables
                 controlTiempo.TiempoTranscurrido = mediaReproductor.Position.TiempoFormato();
                 tiempoTotalPista = tiempoTotalPista.Subtract(TimeSpan.FromSeconds(1));
                 controlTiempo.TiempoFaltante = tiempoTotalPista.TiempoFormato();
-                if(mediaReproductor.Position.TotalSeconds > 5 && !cancionGuardada)
+                if(mediaReproductor.Position.TotalSeconds > 13 && !EstadosControl.CANCION_GUARDADA)
                 {
                     ListasReproduccion.AgregarCancionAFavoritos(reproViewModel.CancionActual());
-                    cancionGuardada = true;
+                    EstadosControl.CANCION_GUARDADA = true;
                 }
             }
         }
@@ -89,7 +89,7 @@ namespace ReproductorMusicaTagEditables
             {
                 timer.Stop();
                 sliderLineTime.Value = 0;
-                cancionGuardada = false;
+              
             }
             if (mediaReproductor.TieneTimeSpan())
             {
